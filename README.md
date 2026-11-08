@@ -8,8 +8,7 @@
 > bathymetry for seven theatres, real periscopes, a radio room, damage and flooding, and an AI that sees and does what
 > the player does. Around it come a career with briefings and debriefings, playable as the US Navy or the Soviet Navy,
 > and an in-game museum and encyclopedia. Linux x86-64 for now. The first preview package (`v0.1.0-anteprima`) is
-> self-contained: binaries, data, FM and MT-32 music, and a four-volume PDF manual. **This is a private repository:**
-> `data/` contains files derived from the original game (listed in `LICENZE/PROPRIETARI.txt`), for personal use only.
+> self-contained: binaries, data, FM and MT-32 music, and a four-volume PDF manual.
 > Not affiliated with or endorsed by Electronic Arts, who own the *688 Attack Sub* trademark. Documentation and code
 > comments are in Italian.
 
