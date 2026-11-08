@@ -1,0 +1,62 @@
+# Maschere tracciate a mano per le foto della classe Sacramento (tools/navi/maschera_manuale.py, metodo colore).
+# Coordinate in pixel di ciascuna foto. Il lato inferiore di ogni inviluppo segue il galleggiamento
+# (sotto il bagnasciuga nero), cosi' schiuma e onda di prua restano fuori.
+---
+# USS Sacramento (AOE-1), 1988, fianco sinistro: file originale 3000 x 2067 senza le prime 540 righe di cielo
+# (3000 x 1527; vedi RAPPORTO.md, centro dell'immagine all'altezza dell'orizzonte)
+metodo: colore
+file: extracted/navi/sacramento/foto/fianco_sinistro_1988_ritaglio.jpg
+uscita: extracted/navi/sacramento/foto/fianco_sinistro_1988_ritaglio_maschera.png
+soglia_blu: 20
+inviluppo: [[245, 900], [700, 860], [760, 610], [1050, 340], [1150, 340], [1210, 610], [1700, 640],
+            [2000, 320], [2130, 320], [2170, 610], [2600, 610], [2765, 880], [2735, 1000], [2720, 1006],
+            [2480, 1033], [2280, 1064], [1880, 1093], [1480, 1118], [1230, 1132], [1030, 1140], [830, 1147],
+            [630, 1144], [360, 1134], [335, 1128], [262, 928]]
+escludi:
+  - [[1940, 500], [2105, 500], [2105, 565], [1940, 565]]     # bandiera nazionale
+  - [[1035, 598], [1072, 598], [1072, 682], [1035, 682]]     # bandiere di segnalazione a proravia dell'albero
+  - [[1175, 588], [1212, 588], [1212, 686], [1175, 686]]     # bandiere di segnalazione a poppavia dell'albero
+includi:
+  - [[778, 758], [1048, 758], [1048, 906], [778, 906]]       # fianco della sovrastruttura prodiera in ombra (bluastro)
+  - [[268, 933], [469, 945], [938, 962], [1406, 946], [2344, 915], [2722, 903], [2733, 1000], [2720, 1006],
+     [2480, 1033], [2280, 1064], [1880, 1093], [1480, 1118], [1230, 1132], [1030, 1140], [830, 1147],
+     [630, 1144], [360, 1134], [335, 1128]]                    # murata intera (prua in ombra bluastra)
+---
+# USS Camden (AOE-2), agosto 1987, fianco dritto, miniatura 1920 x 1434 dell'originale 2822 x 2108,
+# senza le prime 650 righe (1920 x 784): centro dell'immagine sotto l'orizzonte, vedi RAPPORTO.md
+metodo: colore
+file: extracted/navi/sacramento/foto/fianco_dritta_camden_1987_ritaglio.jpg
+uscita: extracted/navi/sacramento/foto/fianco_dritta_camden_1987_ritaglio_maschera.png
+soglia_blu: -3
+orizzonte_y: 144
+soglia_cielo: 140
+inviluppo: [[332, 310], [330, 250], [600, 230], [620, 190], [698, 50], [714, 50], [720, 190], [1100, 190],
+            [1150, 110], [1262, 90], [1272, 230], [1400, 275], [1560, 300], [1600, 305], [1600, 312],
+            [1560, 412], [1180, 413], [1000, 400], [853, 394], [700, 384], [587, 376], [450, 364], [347, 354]]
+escludi:
+  - [[376, 272], [440, 272], [440, 307], [376, 307]]       # elicottero CH-46 sul ponte di volo
+  - [[1160, 172], [1218, 172], [1218, 242], [1160, 242]]   # bandiere di segnalazione
+includi:
+  - [[340, 312], [520, 318], [1000, 319], [1180, 325], [1547, 318], [1590, 314], [1558, 410], [1180, 412],
+     [1000, 399], [853, 393], [700, 383], [587, 375], [450, 363], [347, 353]]   # murata intera
+---
+# USS Seattle (AOE-3), ottobre 1983, prua di dritta dall'alto, miniatura 1920 x 1441
+metodo: colore
+file: extracted/navi/sacramento/foto/prua_dritta_seattle_1983_1920.jpg
+uscita: extracted/navi/sacramento/foto/prua_dritta_seattle_1983_maschera.png
+soglia_blu: 20
+inviluppo: [[40, 575], [40, 520], [300, 480], [480, 300], [520, 300], [560, 420], [900, 400], [1180, 370],
+            [1215, 370], [1260, 500], [1400, 560], [1600, 700], [1765, 780], [1765, 800], [1700, 906],
+            [1560, 896], [1260, 871], [960, 831], [900, 813], [750, 793], [600, 769], [450, 746], [300, 719],
+            [200, 691], [100, 656], [50, 630]]
+---
+# USS Seattle (AOE-3), ottobre 1983, poppa di dritta dall'alto, miniatura 1920 x 1536
+metodo: colore
+file: extracted/navi/sacramento/foto/poppa_dritta_seattle_1983_1920.jpg
+uscita: extracted/navi/sacramento/foto/poppa_dritta_seattle_1983_maschera.png
+soglia_blu: 2           # mare grigio-azzurro (indice ~11), nave calda (indice < -5)
+inviluppo: [[428, 925], [428, 880], [700, 820], [760, 700], [975, 600], [1000, 600], [1100, 720], [1350, 640],
+            [1420, 600], [1460, 700], [1605, 800], [1600, 832], [1580, 862], [1480, 921], [1280, 961],
+            [1080, 986], [820, 1016], [570, 1031], [480, 1027], [462, 1020]]
+escludi:
+  - [[500, 880], [610, 880], [610, 935], [500, 935]]       # elicottero sul ponte di volo

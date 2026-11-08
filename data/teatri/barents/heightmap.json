@@ -1,0 +1,53 @@
+{
+  "teatro": "barents",
+  "nome": "Mare di Barents (approcci a Kola)",
+  "creato": "2026-10-22",
+  "proiezione": {
+    "proj4": "+proj=aeqd +lat_0=70.15 +lon_0=35 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs",
+    "tipo": "azimutale equidistante",
+    "datum": "WGS84",
+    "centro_lat": 70.15,
+    "centro_lon": 35.0
+  },
+  "griglia": {
+    "cella_m": 200.0,
+    "larghezza": 1515,
+    "altezza": 1562,
+    "estensione_m": [
+      303000.0,
+      312400.0
+    ],
+    "origine": "riga 0 = nord, colonna 0 = ovest; centro griglia = centro della proiezione",
+    "coordinate_cella": "x = (col + 0.5) * cella - larghezza*cella/2 ; y = altezza*cella/2 - (riga + 0.5) * cella"
+  },
+  "codifica": {
+    "formato": "PNG grigio 16 bit",
+    "formula": "z_m = valore * 0.25 - 11000",
+    "scala": 0.25,
+    "offset": -11000.0,
+    "errore_max_m": 0.1255
+  },
+  "fonti": [
+    {
+      "id": 1,
+      "nome": "EMODnet Bathymetry DTM (release corrente, 1/16 di primo)",
+      "accesso": "https://ows.emodnet-bathymetry.eu/wcs coverage emodnet__mean",
+      "licenza": "CC-BY 4.0",
+      "attribuzione": "EMODnet Bathymetry Consortium (2024): EMODnet Digital Bathymetry (DTM)"
+    },
+    {
+      "id": 2,
+      "nome": "NOAA NCEI ETOPO 2022 15 secondi d'arco",
+      "accesso": "ERDDAP ETOPO_2022_v1_15s",
+      "licenza": "dati del governo USA, uso libero",
+      "attribuzione": "NOAA NCEI (2022), doi:10.25921/fd45-gt74"
+    }
+  ],
+  "statistiche": {
+    "z_min": -477.0,
+    "z_max": 495.6,
+    "frazione_terra": 0.1781,
+    "frazione_emodnet": 1.0,
+    "celle_riempite_bordo": 0
+  }
+}

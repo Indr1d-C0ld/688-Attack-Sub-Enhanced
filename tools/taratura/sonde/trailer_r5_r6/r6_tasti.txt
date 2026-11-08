@@ -1,0 +1,2 @@
+# R6: emersione d emergenza del giocatore da 150 m (PROVA_S4_DUE_SSN)
+5 emersione_emergenza

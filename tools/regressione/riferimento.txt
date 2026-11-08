@@ -1,0 +1,18 @@
+istantanea c1.bmp dopo 600 s simulati (impronta 6b64cc7476bf3d46, contatti 732317a9e5bef855)
+8e3ef1773b3e
+  ESITO 2
+istantanea c2.bmp dopo 900 s simulati (impronta 280a4587fdde08c7, contatti 0000000000000000)
+b93fb05e9130
+istantanea e1.bmp dopo 600 s simulati (impronta e61957ab290fbe73, contatti b721e9ea1ef9a2f4)
+8a304a1d79b6
+istantanea e2.bmp dopo 900 s simulati (impronta 07e65492da9425f5, contatti 49f193beba54944c)
+4783cd6a0af1
+istantanea e3.bmp dopo 30 s simulati (impronta 7f374c7b74d7cfbb, contatti 46dec718b441c531)
+d98d1ee7cc82
+istantanea e4.bmp dopo 500 s simulati (impronta ec502ccd7da9b6d6, contatti d3f69271c5d65299)
+2ad84aad8cdb
+istantanea e5.bmp dopo 900 s simulati (impronta 05a48f17ca7f7b3f, contatti d5c4d807ffcb5e26)
+348c994c0903
+istantanea p1.bmp dopo 20 s simulati (impronta 68d2e1bd6dfa955c, contatti 0000000000000000)
+d9ee8ad31654
+manuale: tabelle aggiornate se 0 -> 0

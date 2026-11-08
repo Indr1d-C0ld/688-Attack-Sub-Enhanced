@@ -1,0 +1,182 @@
+# Cacciatorpediniere antisommergibile classe Spruance (DD-963), configurazione 1989 "originale":
+# lanciatore ASROC Mk 16 a prua (senza ABL Tomahawk e senza VLS Mk 41).
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua (x = L/2 - d).
+# Scafo e macchine come la Kidd (tools/navi/classi/kidd.yaml): scafo, mack, Mk45 e hangar ripresi da li'.
+nome: Spruance (DD-963)
+uscita: extracted/navi/spruance
+moduli_parti: [spruance_parti.py]
+
+scafo: &scafo
+  L: 171.7
+  B: 16.8
+  bordo: [[0, 9.4], [6, 8.8], [12, 8.2], [28, 7.1], [45, 6.4], [60, 6.0], [149.0, 5.85], [150.0, 4.45], [171.7, 4.45]]
+  slancio: 9.0
+  finezza_prua: 50
+  specchio: 0.83
+  svasatura: 0.06
+  pienezza: [0.8, 0.5]
+
+parti:
+  # Misure: scafo, torri, cime degli alberi e radome da triangolazione su cinque foto (tools/navi/triangola.py,
+  # vedi RAPPORTO.md); il resto per retroproiezione dalle foto calibrate (Leftwich 1987 di fianco, Caron 1987,
+  # Ingersoll 1982). La Spruance galleggia circa 0,75 m piu' alta della Kidd (piu' leggera): quote della Kidd + 0,75.
+  # superficie inclinata sotto il dritto slanciato (nelle viste di prua restava un cuneo scuro)
+  - {tipo: chiusura_dritto, nome: chiusura_dritto, <<: *scafo}
+  # --- prua: Mk45 prodiero e ASROC Mk 16
+  - {tipo: cannone_mk45, nome: mk45_prodiero, x: {prua: 31.9}, z0: 7.1, altezza: 2.8, lunghezza: 4.8, verso: 1}
+  - {tipo: asroc_mk16, nome: asroc, x: {prua: 47.4}, z0: 6.4, altezza: 2.6, base_larga: [6.0, 4.6]}
+  # --- sovrastruttura: blocco prodiero (plancia, mack prodiero), tuga bassa fra gli alberi, blocco poppiero e hangar
+  - {tipo: tuga, nome: tuga_prodiera, x0: {prua: 77.4}, x1: {prua: 51.0}, y0: -6.9, y1: 6.9, z0: 5.5, z1: 13.95, rastrema: 0.99}
+  - {tipo: tuga, nome: plancia, x0: {prua: 62.0}, x1: {prua: 51.0}, y0: -6.6, y1: 6.6, z0: 13.95, z1: 16.1, rastrema: 0.98}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 51.3}, x1: {prua: 50.8}, y0: -6.0, y1: 6.0, z0: 14.6, z1: 15.4, mat: nero, rastrema: 0.99}
+  - {tipo: tuga, nome: tuga_sotto_albero_prodiero, x0: {prua: 66.0}, x1: {prua: 56.5}, y0: -4.2, y1: 4.2, z0: 13.95, z1: 18.0, rastrema: 0.97}
+  - {tipo: tuga, nome: tuga_centrale, x0: {prua: 98.0}, x1: {prua: 77.4}, y0: -6.9, y1: 6.9, z0: 5.5, z1: 12.2, rastrema: 0.99}
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 117.2}, x1: {prua: 98.0}, y0: -6.8, y1: 6.8, z0: 5.5, z1: 14.65, rastrema: 0.99}
+  - {tipo: scatola, nome: bordo_tetto_hangar, x0: {prua: 117.4}, x1: {prua: 113.0}, y0: -6.6, y1: 6.6, z0: 14.65, z1: 15.5, mat: traliccio}
+  # --- mack prodiero e albero prodiero (SPS-55 in cima, antenna rotante e radome SATCOM a sbalzo verso prua)
+  - {tipo: mack, nome: mack_prodiero, x0: {prua: 76.3}, x1: {prua: 67.3}, y0: -0.2, y1: 6.2, z0: 13.95, z1: 20.1, cappello: 2.0}
+  - {tipo: traliccio, nome: albero_prodiero_basso, x: {prua: 60.7}, base: 7.0, cima: 5.0, z0: 18.0, z1: 28.3, piani: [28.3], spessore: 0.5}
+  - {tipo: traliccio, nome: albero_prodiero_alto, x: {prua: 60.7}, base: 3.0, cima: 1.6, z0: 28.3, z1: 34.7, spessore: 0.5}
+  - {tipo: scatola, nome: piattaforma_alta_prodiera, x0: {prua: 65.0}, x1: {prua: 57.0}, y0: -3.2, y1: 3.2, z0: 34.5, z1: 34.9, mat: traliccio}
+  - {tipo: pennone, nome: pennone_prodiero, x: {prua: 60.7}, z: 34.9, semilunghezza: 6.5}
+  - {tipo: asta, nome: alberetto_prodiero, da: [{prua: 60.7}, 0, 34.7], a: [{prua: 60.7}, 0, 42.7], spessore: 0.45}
+  - {tipo: scatola, nome: sps55, x0: {prua: 61.6}, x1: {prua: 59.8}, y0: -1.0, y1: 1.0, z0: 36.3, z1: 37.6, mat: scuro}
+  - {tipo: scatola, nome: piattaforma_radome, x0: {prua: 61.5}, x1: {prua: 52.5}, y0: -2.2, y1: 2.2, z0: 22.4, z1: 22.8, mat: traliccio}
+  - {tipo: sfera, nome: radome_satcom, x: {prua: 53.9}, y: 0, z: 24.4, r: 1.5}
+  - {tipo: scatola, nome: antenna_albero_prodiero, x0: {prua: 63.8}, x1: {prua: 62.6}, y0: -1.3, y1: 1.3, z0: 29.0, z1: 31.0, mat: scuro}
+  - {tipo: ciws, nome: phalanx_prodiero, x: {prua: 57.5}, y: -4.5, z0: 16.1}
+  # --- Harpoon sulla tuga centrale (due lanciatori quadrupli)
+  - {tipo: harpoon, nome: harpoon_dritta, x: {prua: 81.5}, y: -4.6, z0: 12.6, verso: -1}
+  - {tipo: harpoon, nome: harpoon_sinistra, x: {prua: 81.5}, y: 4.6, z0: 12.6, verso: 1}
+  # --- mack poppiero, Phalanx poppiero davanti al mack, albero poppiero con SPS-40 a sbalzo verso prua
+  - {tipo: mack, nome: mack_poppiero, x0: {prua: 110.5}, x1: {prua: 102.5}, y0: -6.4, y1: 0.0, z0: 14.65, z1: 20.2, cappello: 2.2}
+  - {tipo: tuga, nome: piedistallo_phalanx_poppiero, x0: {prua: 102.5}, x1: {prua: 99.8}, y0: -1.4, y1: 1.4, z0: 14.65, z1: 17.2}
+  - {tipo: ciws, nome: phalanx_poppiero, x: {prua: 101.2}, y: 0.0, z0: 17.2}
+  - {tipo: traliccio, nome: albero_poppiero_basso, x: {prua: 92.0}, base: 7.2, cima: 4.4, z0: 12.2, z1: 25.8, piani: [18.6, 25.8], spessore: 0.5}
+  - {tipo: traliccio, nome: albero_poppiero_alto, x: {prua: 92.0}, base: 2.8, cima: 1.4, z0: 25.8, z1: 33.5, spessore: 0.5}
+  - {tipo: scatola, nome: piattaforma_alta_poppiera, x0: {prua: 95.6}, x1: {prua: 88.6}, y0: -3.0, y1: 3.0, z0: 33.3, z1: 33.7, mat: traliccio}
+  - {tipo: pennone, nome: pennone_poppiero, x: {prua: 92.0}, z: 33.7, semilunghezza: 7.0}
+  - {tipo: asta, nome: frusta_pennone_dritta, da: [{prua: 92.0}, -7.0, 33.7], a: [{prua: 92.0}, -7.0, 37.5], spessore: 0.4}
+  - {tipo: asta, nome: frusta_pennone_sinistra, da: [{prua: 92.0}, 7.0, 33.7], a: [{prua: 92.0}, 7.0, 37.5], spessore: 0.4}
+  - {tipo: asta, nome: alberetto_poppiero, da: [{prua: 92.0}, 0, 33.5], a: [{prua: 92.0}, 0, 39.6], spessore: 0.5}
+  - {tipo: cilindro, nome: tacan, x: {prua: 92.0}, y: 0, r: 0.7, z0: 39.0, z1: 40.6, mat: scuro}
+  - {tipo: scatola, nome: piattaforma_sps40, x0: {prua: 92.0}, x1: {prua: 87.0}, y0: -2.4, y1: 2.4, z0: 25.4, z1: 25.8, mat: traliccio}
+  - {tipo: sps40, nome: sps40, x: {prua: 89.2}, z0: 25.8, larghezza: 5.6, altezza: 3.4, orientamento: 30, sostegno: 0.6}
+  - {tipo: asta, nome: frusta_1, da: [{prua: 111.6}, -2.0, 20.2], a: [{prua: 111.6}, -2.0, 30.3], spessore: 0.35}
+  - {tipo: asta, nome: frusta_2, da: [{prua: 109.0}, -2.0, 20.2], a: [{prua: 109.0}, -2.0, 29.8], spessore: 0.35}
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 101.0}, x1: {prua: 93.5}, y: -7.4, z0: 8.2}
+  - {tipo: imbarcazione, nome: lancia_sinistra, x0: {prua: 101.0}, x1: {prua: 93.5}, y: 7.4, z0: 8.2}
+  # --- ponte di volo
+  - {tipo: tuga, nome: ponte_di_volo, x0: {prua: 137.0}, x1: {prua: 117.2}, y0: -7.6, y1: 7.6, z0: 5.85, z1: 9.05}
+  # --- poppa: Sea Sparrow Mk29 (cima a 8,8 m: piedistallo affondato nel ponte) e Mk45 poppiero sul ponte ribassato
+  - {tipo: sea_sparrow, nome: sea_sparrow, x: {prua: 146.0}, y: 0, z0: 4.2, orientamento: 180}
+  - {tipo: cannone_mk45, nome: mk45_poppiero, x: {prua: 157.4}, z0: 4.45, altezza: 2.7, lunghezza: 4.8, verso: -1}
+
+foto:
+  - nome: fianco_dritto
+    file: extracted/navi/spruance/foto/fianco_dritto_leftwich_1987_corretta.jpg   # altezza x 0,90 (vedi RAPPORTO.md)
+    nave: USS Leftwich (DD-984), 1987
+    maschera_file: extracted/navi/spruance/foto/fianco_dritto_leftwich_1987_maschera.png   # a mano (classi/spruance_maschere.yaml)
+    qualita: 1.0
+    specchiabile: true
+    qualita_speculare: 0.5
+    orizzonte_y: 0
+    soglia_cielo: 0
+    cancella: [[1732, 898, 1805, 922]]   # numero di scafo 984
+    # orizzonte non usato: la nave beccheggia (mare formato) rispetto all'orizzonte
+    prior_fotocamera: {elevazione: 0.5, sigma_el: 1.0, distanza: 1200, sigma_logD: 0.3}   # teleobiettivo (prospettiva piatta)
+    limiti_fotocamera: {azimut: [-100, -80], distanza: [300, 6000]}   # "starboard beam view"
+    fotocamera_iniziale: {posizione: [100, -900, 10], bersaglio: [0, 0, 10], f: 7400}
+    punti:
+      - [[{prua: 0}, 0, 9.4], [1898, 880]]           # dritto di prua in coperta
+      - [[{prua: 171.7}, -7.0, 4.45], [477, 890]]    # specchio, spigolo di dritta in coperta
+      - [[{prua: 171.7}, -6.6, 0], [478, 924]]       # specchio, spigolo di dritta al galleggiamento
+      - [[{prua: 31.8}, 0, 9.8], [1628, 862]]        # tetto della torre Mk45 prodiera
+      - [[{prua: 157.4}, 0, 7.1], [618, 873]]        # tetto della torre Mk45 poppiera
+      - [[{prua: 60.7}, 0, 42.7], [1389, 588]]       # cima dell'alberetto prodiero
+      - [[{prua: 92.0}, 0, 40.6], [1132, 599]]       # cima dell'albero poppiero (TACAN)
+      - [[{prua: 53.9}, 0, 24.4], [1440, 747]]       # centro del radome SATCOM
+  - nome: fianco_sinistro
+    file: extracted/navi/spruance/foto/fianco_sinistro_caron_1987.jpg
+    nave: USS Caron (DD-970), 1987
+    maschera_file: extracted/navi/spruance/foto/fianco_sinistro_caron_1987_maschera.png   # a mano (classi/spruance_maschere.yaml)
+    qualita: 1.0
+    specchiabile: true
+    qualita_speculare: 0.5
+    orizzonte_y: 0
+    soglia_cielo: 0
+    cancella: [[280, 1240, 378, 1284], [2455, 1328, 2490, 1350]]   # numeri di scafo 970 (prua e poppa)
+    fotocamera_iniziale: {posizione: [-140, 840, 64], bersaglio: [-14, 0, 11], f: 14000}
+    orizzonte_punti: [[100, 505], [1500, 517], [2900, 535]]
+    punti:
+      - [[{prua: 0}, 0, 9.4], [147, 1195]]           # dritto di prua in coperta
+      - [[{prua: 9.0}, 0, 0], [274, 1332]]           # piede del dritto al galleggiamento
+      - [[{prua: 171.7}, 7.0, 4.45], [2502, 1322]]   # specchio, spigolo di sinistra in coperta
+      - [[{prua: 171.7}, 6.6, 0], [2496, 1380]]      # specchio, spigolo di sinistra al galleggiamento
+      - [[{prua: 31.9}, 0, 9.8], [574, 1200]]        # tetto della torre Mk45 prodiera
+      - [[{prua: 157.4}, 0, 7.1], [2305, 1265]]      # tetto della torre Mk45 poppiera
+      - [[{prua: 60.7}, 0, 42.7], [969, 750]]        # cima dell'alberetto prodiero
+      - [[{prua: 92.0}, 0, 40.6], [1398, 787]]       # cima dell'albero poppiero (TACAN)
+      - [[{prua: 53.9}, 0, 24.4], [875, 1005]]       # centro del radome SATCOM
+  - nome: prua_sinistra
+    file: extracted/navi/spruance/foto/prua_sinistra_ingersoll_1982.jpg
+    nave: USS Ingersoll (DD-990), 1982
+    qualita: 0.9
+    specchiabile: true
+    qualita_speculare: 0.35
+    orizzonte_y: 0
+    soglia_cielo: 0
+    cancella: [[550, 1415, 735, 1508]]   # numero di scafo 990
+    soglie_mare_sigma: 1.0     # mare grigio chiaro simile alla murata a prua
+    fotocamera_iniziale: {posizione: [169, 126, 42], bersaglio: [27, 0, 11], f: 4440}
+    orizzonte_punti: [[100, 421], [2400, 419], [2800, 419]]
+    punti:
+      - [[{prua: 0}, 0, 9.4], [278, 1412]]           # dritto di prua in coperta
+      - [[{prua: 9.0}, 0, 0], [500, 1610]]           # piede del dritto al galleggiamento
+      - [[{prua: 171.7}, 7.0, 4.45], [2743, 1027]]   # specchio, spigolo di sinistra in coperta
+      - [[{prua: 31.9}, 0, 9.8], [980, 1250]]        # tetto della torre Mk45 prodiera
+      - [[{prua: 60.7}, 0, 42.7], [1470, 405]]       # cima dell'alberetto prodiero
+      - [[{prua: 92.8}, 0, 37.4], [1907, 505]]       # cupola in cima all'albero poppiero (1982-83, poi tolta)
+      - [[{prua: 53.9}, 0, 24.4], [1360, 845]]       # centro del radome SATCOM
+  - nome: prua_dritta
+    file: extracted/navi/spruance/foto/prua_dritta_caron_1983.jpg
+    nave: USS Caron (DD-970), 1983
+    qualita: 0.9
+    specchiabile: true
+    qualita_speculare: 0.35
+    orizzonte: [[100, 798], [2700, 802]]   # 3 px sopra l'orizzonte vero
+    scarto_cielo: 28                     # alberi scuri e sovrastrutture chiare contro il cielo azzurro
+    cancella: [[1860, 1370, 2005, 1462]]   # numero di scafo 970
+    soglia_schiuma: 252        # murata al sole quasi bianca: con 200 veniva scartata come schiuma
+    soglie_mare_sigma: 1.0     # faccia prodiera della sovrastruttura in ombra, scura come il mare
+    fotocamera_iniziale: {posizione: [224, -95, 28], bersaglio: [23, 0, 12], f: 4855}
+    orizzonte_punti: [[100, 801], [700, 803], [2000, 802], [2700, 805]]
+    punti:
+      - [[{prua: 0}, 0, 9.4], [2183, 1329]]          # dritto di prua in coperta
+      - [[{prua: 9.0}, 0, 0], [2033, 1567]]          # piede del dritto al galleggiamento
+      - [[{prua: 31.9}, 0, 9.8], [1720, 1238]]       # tetto della torre Mk45 prodiera
+      - [[{prua: 60.7}, 0, 42.7], [1418, 467]]       # cima dell'alberetto prodiero
+      - [[{prua: 92.8}, 0, 37.4], [1143, 602]]       # cupola in cima all'albero poppiero (1982-83)
+      - [[{prua: 53.9}, 0, 24.4], [1486, 879]]       # centro del radome SATCOM
+  - nome: poppa_sinistra
+    file: extracted/navi/spruance/foto/poppa_sinistra_oldendorf_1984.jpg
+    nave: USS Oldendorf (DD-972), 1984
+    maschera_file: extracted/navi/spruance/foto/poppa_sinistra_oldendorf_1984_maschera.png   # a mano, elicottero escluso
+    cancella: [[2061, 1508, 2108, 1535], [2285, 1528, 2470, 1560]]   # numero 972 e nome sullo specchio
+    qualita: 1.0
+    specchiabile: true
+    qualita_speculare: 0.35
+    orizzonte_y: 0
+    soglia_cielo: 0
+    fotocamera_iniziale: {posizione: [-259, 111, 28], bersaglio: [-31, 0, 15], f: 8757}
+    orizzonte_punti: [[1300, 471], [1700, 471], [2300, 467], [2650, 464]]
+    punti:
+      - [[{prua: 0}, 0, 9.4], [112, 890]]            # dritto di prua in coperta
+      - [[{prua: 171.7}, 7.0, 4.45], [2133, 1467]]   # specchio, spigolo di sinistra in coperta
+      - [[{prua: 171.7}, -7.0, 4.45], [2615, 1447]]  # specchio, spigolo di dritta in coperta
+      - [[{prua: 171.7}, 6.6, 0], [2144, 1662]]      # specchio, spigolo di sinistra al galleggiamento
+      - [[{prua: 157.4}, 0, 7.1], [2067, 1295]]      # tetto della torre Mk45 poppiera
+      - [[{prua: 60.7}, 0, 42.7], [650, 32]]         # cima dell'alberetto prodiero
+      - [[{prua: 116.5}, 6.5, 15.5], [1153, 883]]    # hangar, spigolo poppiero di sinistra in alto
+      - [[{prua: 116.5}, -6.5, 15.5], [1545, 878]]   # hangar, spigolo poppiero di dritta in alto

@@ -1,0 +1,40 @@
+# build e prodotti della compilazione (engine/costruisci.sh, cmake -B engine/build_*)
+/engine/build*/
+build/
+*.o
+*.a
+*.so
+# strumenti scaricati o generati, che il repository non porta
+/tools/venv/
+/tools/node/
+/tools/pdf/node_modules/
+/tools/jdk*/
+/tools/ghidra/
+/tools/dosbox/*
+!/tools/dosbox/*.py
+/tools/rea/
+/tools/deps/
+/tools/dl/
+/tools/*_dl/
+/tools/mt32/build/
+/tools/mt32/munt/
+/tools/mt32/installato/
+/tools/mt32/rendi_mt32
+/tools/toponimi/grezzi/naturalearth/
+# materiale del gioco originale e ROM: mai nel repository
+/original-game/
+/extracted/
+/re/
+/roland-mt32/
+*.rom
+# pacchetti di rilascio: vanno come allegati della release, non nel repository
+/rilascio/
+*.tar.xz
+# Python, registri, editor
+__pycache__/
+*.pyc
+*.log
+.mcp.json
+*~
+.vscode/
+.idea/

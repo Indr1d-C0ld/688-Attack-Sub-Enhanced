@@ -1,0 +1,329 @@
+# Testi dell'enciclopedia: le classi civili generiche del traffico (lotto del 31/10/2026).
+# Stesso formato di navi.yaml: it, en (storia e impiego), uso_it, uso_en (che cosa significa per il sottomarino del
+# giocatore), fonti; niente armi_tipiche (navi civili). Scritti a mano, in parafrasi dal dossier 26 e dai suoi appunti
+# (docs/ricerca/26_note), da tools/pipeline/civili.py, dai RAPPORTO dei modelli (extracted/navi/<classe>) e dai dati
+# di data/motore; nessun testo copiato. Le misure sono quelle della classe del gioco (classi.toml); i dislocamenti sono
+# STIMA del kit (scafi e RAPPORTO).
+
+nave.bmrt:
+  it: >-
+    Il BMRT è il grande peschereccio sovietico a rampa poppiera, la nave con cui l'URSS pescava sui banchi lontani. Il
+    tipo più diffuso è il Progetto 1288 «Pulkovskiy Meridian», costruito dal 1974 in circa 113 unità: lungo circa 104
+    metri, ha due diesel da 3.500 cavalli a 520 giri su un riduttore e un'elica a quattro pale a passo variabile in un
+    mantello Kort, e fila a 16 nodi. I BMRT più vecchi, come il Progetto 394 e il tipo Atlantik, sono lunghi circa 84
+    metri e fanno 12-13 nodi. Il modello del gioco viene dalla foto di un BMRT a fumaioli affiancati, ripreso a
+    Paljassaare nel 1992: castello alto, sovrastruttura a piani, due alberi gemelli e il portale sopra la rampa; la
+    classe è lunga 94,5 metri e sposta circa 4.240 tonnellate (stima). Nel 1989 i BMRT della flotta di Murmansk
+    lavorano sui banchi della costa del Murman, e altri pescano il melù sulla scarpata delle Faroe e il merluzzo
+    dell'Alaska nell'Okhotsk, ai margini del ghiaccio.
+  en: >-
+    The BMRT is the large Soviet stern trawler, the ship with which the USSR fished distant banks. The most common
+    type is Project 1288 «Pulkovskiy Meridian», built from 1974 in about 113 units: about 104 metres long, it has two
+    3,500 horsepower diesels at 520 rpm on a reduction gear and a four-bladed controllable-pitch propeller in a Kort
+    nozzle, and makes 16 knots. Older BMRTs, such as Project 394 and the Atlantik type, are about 84 metres long and
+    make 12-13 knots. The game's model comes from a photograph of a BMRT with side-by-side funnels, taken at
+    Paljassaare in 1992: high forecastle, tiered superstructure, twin masts and the gantry over the ramp; the class
+    is 94.5 metres long and displaces about 4,240 tonnes (estimate). In 1989 the BMRTs of the Murmansk fleet work the
+    banks off the Murman coast, and others fish blue whiting on the Faroe slope and Alaska pollock in the Okhotsk, at
+    the edge of the ice.
+  uso_it: >-
+    È un peschereccio civile, fuori dalle regole d'ingaggio, e nel traffico del gioco non ha né armi né sonar. Fra 2 e
+    5,5 nodi tira la rete a strascico, che gli sta dietro a tre volte il fondale, fra 300 e 1.500 metri, 2 metri sopra
+    il fondo: se la coda della vostra schiera rimorchiata vi passa vicino, la schiera si danneggia o si perde. Con
+    l'elica a passo variabile l'asse gira a giri costanti e le righe di asse e pala non dicono la velocità; la rete di
+    bordo è sempre a 50 Hz. All'ESM mostra il radar di navigazione sovietico (Don-2), lo stesso delle navi da guerra del Patto: da solo non dice se è un peschereccio o una scorta.
+  uso_en: >-
+    It is a civilian fishing vessel, outside the rules of engagement, and in the game's traffic it has neither
+    weapons nor sonar. Between 2 and 5.5 knots it tows its trawl, which streams astern at three times the water depth,
+    between 300 and 1,500 metres, 2 metres above the bottom: if the tail of your towed array passes close to it, the
+    array is damaged or lost. With the controllable-pitch propeller the shaft turns at constant revolutions and the
+    shaft and blade lines do not reveal the speed; the ship's electrical supply is always 50 Hz. On ESM it shows the
+    Soviet navigation radar (Don-2), the same as the Warsaw Pact warships: on its own it does not tell a trawler
+    from an escort.
+  fonti: ['extracted/navi/bmrt/RAPPORTO.md (classi.toml [bmrt]; foto Paljassaare 1992)',
+    'dossier 26 §1; appunti 26_note/rumore_navi.md §3 [korabel.ru] [FAO]',
+    'appunti 26_note/rotte_traffico.md §5.3, §6.3, §7.3', 'tools/pipeline/civili.py (TIPI bmrt)',
+    'acustica.toml (civili.bmrt)', 'emettitori.toml (suite.bmrt)', 'manuale C6 §2.9 (le reti)']
+
+nave.cianciolo:
+  it: >-
+    Il cianciolo pesca a circuizione: cala attorno al branco una rete lunga, la chiude dal basso come una borsa e la
+    issa a bordo col verricello del braccio. I ciancioli degli anni '80 sono lunghi da 30 a 70 metri e filano a 12-15
+    nodi, con un diesel medio, un'elica a passo variabile e l'elica di manovra a prua. Il modello del gioco è un
+    tonniero a circuizione francese, un «senneur thonier» fotografato nel 1982: scafo nero col castello alto,
+    sovrastruttura bianca, torre di vedetta col radar e la coffa, braccio lungo con la power block e, sul cielo della
+    plancia, l'elicottero per avvistare i branchi. La nave vera è più lunga; la classe del gioco è riportata a 50
+    metri e circa 1.860 tonnellate (stima). Nei teatri del gioco i ciancioli cercano sardine e acciughe nel Golfo di
+    Cadice e lungo la costa di Malaga, soprattutto di notte, e lavorano anche sulla piattaforma pugliese e, con le
+    lampare, sul lato greco del Canale d'Otranto.
+  en: >-
+    The purse seiner encircles a school with a long net, closes it from below like a purse and hauls it aboard with
+    the winch on its boom. Purse seiners of the 1980s are 30 to 70 metres long and make 12-15 knots, with a
+    medium-speed diesel, a controllable-pitch propeller and a bow thruster. The game's model is a French tuna purse
+    seiner, a «senneur thonier» photographed in 1982: black hull with a high forecastle, white superstructure, a
+    lookout tower with radar and crow's nest, a long boom with the power block and, on top of the bridge, the
+    helicopter for spotting schools. The real ship is longer; the game's class is scaled to 50 metres and about 1,860
+    tonnes (estimate). In the game's theatres purse seiners hunt sardines and anchovies in the Gulf of Cadiz and
+    along the Malaga coast, mostly at night, and they also work on the Apulian shelf and, with lamps, on the Greek
+    side of the Strait of Otranto.
+  uso_it: >-
+    È una nave civile, fuori dalle regole d'ingaggio, senza armi né sonar. Sulla zona di pesca va piano, a pochi nodi,
+    e non tira una rete a strascico: non minaccia la schiera rimorchiata come i pescherecci a rampa. Di notte una
+    flotta di ciancioli è un campo di luci, e in pesca mostra il rosso sopra il bianco delle pesche diverse dallo
+    strascico. L'elica a passo variabile gira costante, quindi asse e pala non dicono la velocità; all'ESM ha il radar
+    di navigazione civile come tutto il traffico.
+  uso_en: >-
+    It is a civilian ship, outside the rules of engagement, with no weapons or sonar. On the fishing grounds it moves
+    slowly, at a few knots, and does not tow a trawl: it does not threaten the towed array as stern trawlers do. At
+    night a fleet of purse seiners is a field of lights, and when fishing it shows the red over white of fishing other
+    than trawling. The controllable-pitch propeller turns at constant speed, so shaft and blade lines do not reveal the
+    speed; on ESM it has the civilian navigation radar like all the traffic.
+  fonti: ['extracted/navi/cianciolo/RAPPORTO.md (classi.toml [cianciolo]; foto 1982)',
+    'appunti 26_note/rumore_navi.md §3', 'appunti 26_note/rotte_traffico.md §1.3, §2.3',
+    'tools/pipeline/civili.py (TIPI cianciolo)', 'teatri/*.traffico.toml (zone di pesca)',
+    'acustica.toml (civili.cianciolo)', 'emettitori.toml (suite.cianciolo)', 'luci.toml (classe.cianciolo)',
+    'docs/27_luci_navigazione.md (regola 26)']
+
+nave.nave_ricerca:
+  it: >-
+    Le navi oceanografiche lavorano per gli istituti di ricerca e per la pesca: misurano le acque, sondano il fondo con
+    gli ecoscandagli e calano gli strumenti dal portale di poppa. Sono lunghe da 50 a 100 metri e fanno 10-14 nodi,
+    con un diesel medio, un riduttore e un'elica a passo variabile, oppure col diesel-elettrico. Il modello del gioco è
+    la Johan Hjort dell'Istituto di ricerca marina di Bergen, del 1990: scafo alto col ponte di riparo fino allo
+    specchio, sovrastruttura lunga a tre piani, albero a traliccio dietro la plancia, fumaiolo col radome e il
+    portale ad A a poppa. La nave vera è lunga 64,4 metri; la classe del gioco è di 75 metri e circa 2.450 tonnellate
+    (stima). Le raccomandazioni dell'ICES per le navi da ricerca silenziose sono del 1995: nel 1989 le navi costruite
+    per il silenzio sono ancora rare.
+  en: >-
+    Oceanographic ships work for research institutes and fisheries: they measure the water, sound the bottom with
+    echo sounders and lower instruments from the stern gantry. They are 50 to 100 metres long and make 10-14 knots,
+    with a medium-speed diesel, a reduction gear and a controllable-pitch propeller, or with diesel-electric drive.
+    The game's model is Johan Hjort of the Institute of Marine Research in Bergen, from 1990: high hull with the
+    shelter deck running to the transom, long three-deck superstructure, lattice mast behind the bridge, funnel with
+    a radome and the A-frame aft. The real ship is 64.4 metres long; the game's class is 75 metres and about 2,450
+    tonnes (estimate). The ICES recommendations for quiet research ships date from 1995: in 1989 ships built for
+    silence are still rare.
+  uso_it: >-
+    È civile e disarmata, e non dà la caccia ai sottomarini: nel traffico del gioco non ha sonar. Su navi come la
+    Johan Hjort sotto 1 kHz domina il motore, e con il passo variabile asse e pala girano costanti e non dicono la
+    velocità. Le
+    misure moderne danno alle navi da ricerca in media 167 dB, meno di un mercantile ma più di un peschereccio. All'ESM
+    ha il radar di navigazione civile come tutto il traffico; con 5 metri di pescaggio, a quota periscopica può
+    prendere la vela.
+  uso_en: >-
+    It is civilian and unarmed, and does not hunt submarines: in the game's traffic it has no sonar. On ships like
+    Johan Hjort the engine dominates below 1 kHz, and with controllable pitch the shaft and blades turn at constant
+    speed and do not reveal the speed. Modern measurements give research ships an average of 167 dB, less than a merchant ship but
+    more than a fishing vessel. On ESM it has the civilian navigation radar like all the traffic; with a 5 metre
+    draught, at periscope depth it can strike the sail.
+  fonti: ['extracted/navi/nave_ricerca/RAPPORTO.md (classi.toml [nave_ricerca]; foto Adventfjorden)',
+    'dossier 26 §1 (Veirs 2016)', 'appunti 26_note/rumore_navi.md §3 e §4 [Eurofleets2] [ICES CRR 209]',
+    'tools/pipeline/civili.py (TIPI nave_ricerca)', 'acustica.toml (civili.nave_ricerca)',
+    'emettitori.toml (suite.nave_ricerca)', 'dossier 16 §2.7']
+
+nave.peschereccio_costiero:
+  it: >-
+    Il peschereccio costiero è la barca da pesca più piccola del traffico: palangari, che calano lenze lunghe cariche di
+    ami, e barche con le reti da posta, fisse sul fondo sotto costa. Sono lunghi da 15 a 45 metri e filano a 9-12 nodi
+    con un diesel veloce e un riduttore. Il modello del gioco è il palangaro argentino Argenova XXI: castello alto, tuga
+    e timoneria a prua, albero a torre con le antenne, gru a braccio snodato a mezzanave e portale a poppa; la classe è
+    di 30 metri e circa 360 tonnellate (stima). Barche così ci sono in quasi tutti i teatri: le reti da posta nella
+    baia di Kiel e attorno a Bornholm, i palangari faroesi sulla piattaforma delle isole e gli spagnoli sul Gran Sol,
+    le barche giapponesi di Nemuro attorno a Kunashir.
+  en: >-
+    The coastal fishing boat is the smallest fishing vessel in the traffic: longliners, which set long lines loaded
+    with hooks, and boats with gillnets, fixed on the bottom close inshore. They are 15 to 45 metres long and make 9-12
+    knots with a high-speed diesel and a reduction gear. The game's model is the Argentine longliner Argenova XXI:
+    high forecastle, deckhouse and wheelhouse forward, tower mast with antennas, knuckle-boom crane amidships and a
+    gantry aft; the class is 30 metres and about 360 tonnes (estimate). Boats like these are found in almost every
+    theatre: gillnets in Kiel Bay and around Bornholm, Faroese longliners on the islands' shelf and Spaniards on the
+    Gran Sol, the Japanese boats of Nemuro around Kunashir.
+  uso_it: >-
+    È civile, piccolo e fuori dalle regole d'ingaggio. Al lavoro va piano o resta quasi fermo, e si sente poco: le
+    misure moderne danno ai pescherecci in media 164 dB, con uno scarto molto ampio, e il diesel veloce mette le sue
+    righe più in alto di quelle dei mercantili. Nel gioco non tira una rete a strascico e non prende la schiera
+    rimorchiata. Il pericolo è l'urto: a quota periscopica ogni nave può prendere la vela, e una barca così è facile
+    da non sentire. All'ESM ha il radar di navigazione civile.
+  uso_en: >-
+    It is civilian, small and outside the rules of engagement. At work it moves slowly or almost stops, and it is
+    hard to hear: modern measurements give fishing vessels an average of 164 dB, with a very wide spread, and the
+    high-speed diesel puts its lines higher than those of merchant ships. In the game it does not tow a trawl and
+    does not catch the towed array. The danger is collision: at periscope depth any ship can strike the sail, and a
+    boat like this is easy to miss. On ESM it has the civilian navigation radar.
+  fonti: ['extracted/navi/peschereccio_costiero/RAPPORTO.md (classi.toml [peschereccio_costiero]; foto Argenova XXI)',
+    'dossier 26 §1 (Veirs 2016)', 'appunti 26_note/rumore_navi.md §3',
+    'appunti 26_note/rotte_traffico.md §0, §3.3, §4.4, §6.3, §7.3', 'tools/pipeline/civili.py (TIPI peschereccio_costiero)',
+    'acustica.toml (civili.peschereccio_costiero)', 'emettitori.toml (suite.peschereccio_costiero)', 'dossier 16 §2.7']
+
+nave.petroliera_costiera:
+  it: >-
+    Le petroliere costiere, le petroliere per prodotti raffinati e le chimichiere portano carburanti e prodotti
+    chimici fra le raffinerie e i porti; con le grandi petroliere le cisterne sono negli anni '80 fra il 15 e il 25%
+    del traffico di transito. Lunghe da 60 a 180 metri, filano a 12-15 nodi su un'elica sola, col diesel lento a due
+    tempi o, come nel gioco, con un diesel medio e un riduttore. La classe del gioco è di 120 metri per 19,2, con 7,5
+    metri di pescaggio e circa 12.100 tonnellate (stima). Il modello del gioco viene dalla foto di una piccola
+    petroliera prodotti, la Pegasus, riportata alle misure della classe: castello e albero a prua, la coperta bassa
+    con la passerella e le tubolature del carico, la gru del manifold, e a poppa la sovrastruttura a quattro piani con
+    l'albero radar e il fumaiolo.
+  en: >-
+    Coastal tankers, product tankers and chemical tankers carry fuels and chemicals between refineries and ports;
+    together with the large tankers, tank ships are between 15 and 25% of through traffic in the 1980s. From 60 to 180
+    metres long, they make 12-15 knots on a single propeller, with a slow-speed two-stroke diesel or, as in the game,
+    a medium-speed diesel with a reduction gear. The game's class is 120 by 19.2 metres, with a 7.5 metre draught and
+    about 12,100 tonnes (estimate). The game's model comes from a photograph of a small product tanker, Pegasus,
+    brought to the class dimensions: forecastle and foremast, the low deck with the catwalk and the cargo piping, the
+    manifold crane, and aft the four-deck superstructure with the radar mast and the funnel.
+  uso_it: >-
+    È civile e disarmata, senza sonar, e una delle navi più comuni sulle rotte. Le chimichiere misurate hanno l'energia
+    sotto i 100 Hz e sono un po' più forti delle altre cisterne sopra i 500 Hz. Nel modello dei danni è una petroliera,
+    divisa in 19 celle stagne. Con 7,5 metri di pescaggio, a quota periscopica può prendere la vela; all'ESM ha il radar
+    di navigazione civile come tutto il traffico.
+  uso_en: >-
+    It is civilian and unarmed, with no sonar, and one of the commonest ships on the shipping lanes. Measured chemical
+    tankers have their energy below 100 Hz and are a little louder than other tank ships above 500 Hz. In the damage
+    model it is a tanker, divided into 19 watertight cells. With a 7.5 metre draught, at periscope depth it can strike
+    the sail; on ESM it has the civilian navigation radar like all the traffic.
+  fonti: ['extracted/navi/petroliera_costiera/RAPPORTO.md (classi.toml [petroliera_costiera]; modello sulla Pegasus)',
+    'appunti 26_note/rumore_navi.md §1.5 [McKenna 2012] e §3', 'appunti 26_note/rotte_traffico.md §0',
+    'tools/pipeline/civili.py (TIPI petroliera_costiera)', 'acustica.toml (civili.petroliera_costiera)',
+    'emettitori.toml (suite.petroliera_costiera)', 'manuale E2 (scafi delle navi)', 'dossier 16 §2.7']
+
+nave.portarinfuse:
+  it: >-
+    Le portarinfuse portano merci sciolte, come minerali e cereali, nelle stive sotto grandi boccaporti; negli anni '80
+    la loro flotta cresce, mentre calano le petroliere. Sono lunghe da 150 a 300 metri e filano a 13-15 nodi con un
+    diesel lento a due tempi in presa diretta su un'elica sola. La più studiata è la Overseas Harriette, di 173 metri,
+    costruita nel 1978 da Hitachi Zosen: a 16 nodi irradia circa 192 dB; a 8 nodi il suo rumore viene dalle macchine,
+    a 16 dalla cavitazione dell'elica. Il modello del gioco è una portarinfuse con le gru, cinque stive e quattro gru a
+    palo sulla mezzeria, castello a prua e sovrastruttura a poppa, una sagoma che non è cambiata dagli anni '80; la
+    classe è di 225 metri, 12 di pescaggio e circa 60.000 tonnellate (stima).
+  en: >-
+    Bulk carriers carry loose cargo, such as ore and grain, in holds under large hatches; in the 1980s their fleet
+    grows while tankers decline. They are 150 to 300 metres long and make 13-15 knots with a slow-speed two-stroke
+    diesel in direct drive on a single propeller. The best studied is Overseas Harriette, 173 metres, built in 1978
+    by Hitachi Zosen: at 16 knots it radiates about 192 dB; at 8 knots its noise comes from the machinery, at 16 from
+    propeller cavitation. The game's model is a geared bulk carrier, five holds and four pedestal cranes on the
+    centreline, forecastle forward and superstructure aft, a profile that has not changed since the 1980s; the class
+    is 225 metres, 12 metres draught and about 60,000 tonnes (estimate).
+  uso_it: >-
+    È civile e disarmata, e fra le navi più rumorose: le portarinfuse misurate stanno fra 184 e 187 dB, con un picco
+    netto vicino ai 100 Hz. Col diesel in presa diretta le accensioni del motore seguono l'asse, e il loro rapporto con
+    la riga di pala resta fisso a ogni velocità: è un indizio per classificarla. Cavita già a 7-10 nodi, quindi in
+    servizio dà la sua modulazione al DEMON. Con 12 metri di pescaggio, a quota periscopica può urtare non solo la vela
+    ma il dorso dello scafo: se vi passa sopra, scendete. All'ESM ha il radar di navigazione civile.
+  uso_en: >-
+    It is civilian and unarmed, and among the noisiest ships: measured bulk carriers are between 184 and 187 dB, with
+    a sharp peak near 100 Hz. With a direct-drive diesel the engine firing follows the shaft, and its ratio to the
+    blade line stays fixed at every speed: it is a clue for classification. It cavitates already at 7-10 knots, so at
+    service speed it gives its modulation to DEMON. With a 12 metre draught, at periscope depth it can strike not only
+    the sail but the top of the hull: if it passes over you, go deep. On ESM it has the civilian navigation radar.
+  fonti: ['extracted/navi/portarinfuse/RAPPORTO.md (classi.toml [portarinfuse]; foto Bulk Destiny)',
+    'dossier 26 §1; appunti 26_note/rumore_navi.md §1.5 [McKenna 2012], §1.7 [Hildebrand 2009], §2.1 [Arveson e Vendittis 2000], §3, §4',
+    'tools/pipeline/civili.py (TIPI portarinfuse)', 'acustica.toml (civili.portarinfuse)',
+    'emettitori.toml (suite.portarinfuse)', 'manuale C4 §2.10', 'dossier 16 §2.7']
+
+nave.rimorchiatore:
+  it: >-
+    I rimorchiatori d'altura prendono a rimorchio le navi in mare aperto e le assistono all'uscita dei porti e dei
+    canali. Hanno due eliche, spesso in un mantello Kort, mosse da due o più diesel con riduttore: negli Stati Uniti
+    erano comuni due EMD 645 per 3.000-4.200 cavalli in tutto, in Europa le eliche Voith-Schneider e Schottel. Il
+    modello del gioco viene dalla foto del 1983 di un rimorchiatore d'altura della US Navy della classe Powhatan
+    (T-ATF, 73,2 metri): castello alto, plancia a prua, fumaiolo con l'albero e un lungo cassero basso di lavoro a
+    poppa. La classe del gioco è un rimorchiatore più piccolo con la stessa sagoma, di 50 metri e circa 1.800
+    tonnellate (stima), che fila a 11-15 nodi.
+  en: >-
+    Ocean-going tugs tow ships on the open sea and assist them out of harbours and canals. They have two propellers,
+    often in a Kort nozzle, driven by two or more diesels through reduction gears: in the United States two EMD 645s
+    of 3,000-4,200 horsepower in all were common, in Europe Voith-Schneider and Schottel propulsors. The game's model
+    comes from a 1983 photograph of a US Navy Powhatan class fleet tug (T-ATF, 73.2 metres): high forecastle, bridge
+    forward, funnel with mast and a long low working deck aft. The game's class is a smaller tug with the same
+    profile, 50 metres and about 1,800 tonnes (estimate), making 11-15 knots.
+  uso_it: >-
+    È civile e senza armi, ma rumoroso per la sua taglia: le misure danno ai rimorchiatori in media 170 dB, più delle
+    navi da pesca e da ricerca, e a tiro pieno l'elica cavita anche da ferma; nel gioco cavita già a 4-7 nodi. Per un
+    sottomarino il pericolo è il cavo di rimorchio: il 14 giugno 1989, a Long Beach, l'USS Houston agganciò il cavo del
+    rimorchiatore Barcona, che affondò con un morto. All'ESM ha il radar di navigazione civile come tutto il traffico.
+  uso_en: >-
+    It is civilian and unarmed, but noisy for its size: measurements give tugs an average of 170 dB, more than fishing
+    and research vessels, and at full bollard pull the propeller cavitates even when stationary; in the game it
+    cavitates already at 4-7 knots. For a submarine the danger is the tow line: on 14 June 1989, off Long Beach, USS
+    Houston snagged the tow line of the tug Barcona, which sank with one dead. On ESM it has the civilian
+    navigation radar like all the traffic.
+  fonti: ['extracted/navi/rimorchiatore/RAPPORTO.md (classi.toml [rimorchiatore]; foto Powhatan 1983)',
+    'dossier 26 §1 (Veirs 2016; correzione +13 dB)', 'appunti 26_note/rumore_navi.md §3 [tugboatinformation] e §4',
+    'tools/pipeline/civili.py (TIPI rimorchiatore)', 'acustica.toml (civili.rimorchiatore)',
+    'emettitori.toml (suite.rimorchiatore)', 'dossier 16 §1.3 [PT89]']
+
+nave.rompighiaccio:
+  it: >-
+    I rompighiaccio aprono le rotte d'inverno nei mari gelati. Negli anni '80 l'URSS ha le unità nucleari con base a
+    Murmansk e circa un centinaio fra rompighiaccio diesel minori e mercantili rinforzati, costruiti in URSS e in
+    Finlandia fra il 1959 e il 1989. Il modello del gioco è la classe Kapitan Sorokin (1977-1981), quattro unità:
+    Kapitan Sorokin, Nikolayev, Dranitsyn e Khlebnikov, quest'ultima dell'Okhotsk. Hanno la prua da ghiaccio, il
+    blocco bianco degli alloggi con la plancia in alto, il fumaiolo e la gru sul castello, e sono diesel-elettriche:
+    sei diesel-generatori per 18 MW in tutto alimentano tre motori a corrente continua su tre assi. La classe del gioco
+    è di 130 metri per 26, con 9,5 metri di pescaggio, circa 15.000 tonnellate (stima) e 14-19 nodi in servizio.
+  en: >-
+    Icebreakers open the routes through frozen seas in winter. In the 1980s the USSR has the nuclear units based at
+    Murmansk and about a hundred smaller diesel icebreakers and ice-strengthened merchant ships, built in the USSR
+    and Finland between 1959 and 1989. The game's model is the Kapitan Sorokin class (1977-1981), four units:
+    Kapitan Sorokin, Nikolayev, Dranitsyn and Khlebnikov, the last one in the Okhotsk. They have an icebreaking bow,
+    the white accommodation block with the bridge on top, the funnel and a crane on the forecastle, and they are
+    diesel-electric: six diesel generators totalling 18 MW feed three DC motors on three shafts. The game's class is
+    130 by 26 metres, with a 9.5 metre draught, about 15,000 tonnes (estimate) and 14-19 knots in service.
+  uso_it: >-
+    È una sorgente fortissima: nella realtà, rompendo il ghiaccio, il rumore sale di circa 10 dB fra 20 Hz e 2 kHz, e
+    quando sperona o va in retromarcia la cavitazione arriva a 190-203 dB. Spesso non è solo: nel Barents passa da
+    novembre a giugno sulle rotte verso il Mar Bianco e la Rotta del Mare del Nord, spesso in testa a un convoglio di
+    mercantili, e nel Baltico compare da gennaio a marzo. I diesel-generatori girano a giri fissi, con la rete a 50 Hz, e non dicono la velocità; all'ESM ha
+    il radar di navigazione civile. Con 9,5 metri di pescaggio, a quota periscopica può urtare il dorso dello scafo.
+  uso_en: >-
+    It is a very loud source: in reality, breaking ice raises its noise by about 10 dB between 20 Hz and 2 kHz, and
+    when ramming or going astern cavitation reaches 190-203 dB. It is often not alone: in the Barents it passes from
+    November to June on the routes to the White Sea and the Northern Sea Route, often leading a convoy of merchant
+    ships, and in the Baltic it appears from January to March. The diesel generators run at fixed revolutions, on a 50 Hz supply, and do not reveal the
+    speed; on ESM it has the civilian navigation radar. With a 9.5 metre draught, at periscope depth it can strike
+    the top of the hull.
+  fonti: ['extracted/navi/rompighiaccio/RAPPORTO.md (classi.toml [rompighiaccio]; foto Kapitan Dranitsyn 2006)',
+    'appunti 26_note/rumore_navi.md §1.7 [DOSITS] e §3', 'appunti 26_note/rotte_traffico.md §4.5 e §5.4 [USNI 1999]',
+    'manuale E10 §2.1', 'tools/pipeline/civili.py (TIPI rompighiaccio)', 'acustica.toml (civili.rompighiaccio)',
+    'emettitori.toml (suite.rompighiaccio)', 'dossier 16 §2.7']
+
+nave.traghetto:
+  it: >-
+    I traghetti ro-ro e passeggeri fanno le linee fisse attraverso gli stretti e i mari chiusi: imbarcano auto, camion
+    e a volte treni, e partono all'ora dell'orario. Hanno di solito due assi con eliche a passo variabile, mossi da due
+    a quattro diesel medi con riduttore, e filano a 17-23 nodi; la Herald of Free Enterprise del 1980, di 132 metri,
+    aveva tre diesel Sulzer su tre assi e faceva 22 nodi. Il modello del gioco è la Pride of Dover della P&O (1987,
+    169,6 metri), fotografata a Calais nel 1993: scafo scuro fino al ponte garage, sovrastruttura bianca quasi lunga
+    quanto la nave, l'albero alto sopra la plancia e il fumaiolo largo coi quattro scarichi; la classe è di 150 metri e
+    circa 14.000 tonnellate (stima). Nei teatri del gioco le linee più fitte sono nel Baltico, fra Puttgarden e Rødby e
+    sul Grande Belt, e attraverso lo Stretto di Gibilterra; d'estate si moltiplicano le corse fra Brindisi e la Grecia.
+  en: >-
+    Ro-ro and passenger ferries run fixed routes across straits and enclosed seas: they load cars, lorries and
+    sometimes trains, and sail on the hour of the timetable. They usually have two shafts with controllable-pitch
+    propellers, driven by two to four medium-speed diesels through reduction gears, and make 17-23 knots; Herald of
+    Free Enterprise of 1980, 132 metres, had three Sulzer diesels on three shafts and made 22 knots. The game's model
+    is P&O's Pride of Dover (1987, 169.6 metres), photographed at Calais in 1993: dark hull up to the vehicle deck,
+    white superstructure almost as long as the ship, a tall mast above the bridge and the wide funnel with four
+    uptakes; the class is 150 metres and about 14,000 tonnes (estimate). In the game's theatres the busiest routes are
+    in the Baltic, between Puttgarden and Rødby and across the Great Belt, and across the Strait of Gibraltar; in
+    summer the sailings between Brindisi and Greece multiply.
+  uso_it: >-
+    È neutrale e carico di passeggeri: le regole d'ingaggio lo proteggono, salvo una guerra coi neutrali, ma un
+    missile in ricerca può agganciarlo al posto del bersaglio. È veloce, ma passa all'ora dell'orario ed è un contatto prevedibile; con le eliche a passo
+    variabile i giri restano costanti e asse e pala non dicono la velocità. Le misure moderne danno ai traghetti e alle
+    navi passeggeri in media 166 dB, con uno scarto ampio. Di notte si riconosce dai fanali, all'ESM ha il radar di
+    navigazione civile; i grandi ponti garage senza paratie lo espongono ad allagamenti rapidi e al capovolgimento.
+  uso_en: >-
+    It is neutral and full of passengers: the rules of engagement protect it, except in a war with neutrals, but a
+    homing missile can lock on to it instead of the target. It is fast, but it passes on the hour of the timetable and is a predictable contact; with
+    controllable-pitch propellers the revolutions stay constant and shaft and blade lines do not reveal the speed.
+    Modern measurements give ferries and passenger ships an average of 166 dB, with a wide spread. At night it is
+    recognised by its lights, on ESM it has the civilian navigation radar; the large vehicle decks without bulkheads
+    expose it to rapid flooding and capsizing.
+  fonti: ['extracted/navi/traghetto/RAPPORTO.md (classi.toml [traghetto]; foto Pride of Dover, Calais 1993)',
+    'dossier 26 §1 (Veirs 2016)', 'appunti 26_note/rumore_navi.md §3',
+    'appunti 26_note/rotte_traffico.md §0, §1.4, §2.4, §4.3', 'tools/pipeline/civili.py (TIPI traghetto)',
+    'acustica.toml (civili.traghetto)', 'emettitori.toml (suite.traghetto)', 'manuale E10 §2.3 (ROE)',
+    'dossier 07 §5.5']

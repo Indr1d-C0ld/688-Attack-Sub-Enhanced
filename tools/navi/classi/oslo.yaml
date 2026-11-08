@@ -1,0 +1,80 @@
+# Fregata norvegese classe Oslo (F300, 1966, su progetto derivato dai Dealey), come negli anni '80: il castello alto
+# con lo slancio e la svasatura, il binato da 76/50 Mk 33 prodiero, il deposito e il lanciarazzi antisom Terne III
+# davanti alla plancia, la plancia col direttore, il radar di scoperta aerea, l'albero a traliccio scuro col radar di
+# navigazione, il fumaiolo inclinato subito a poppa dell'albero, le lance, la sovrastruttura poppiera col direttore
+# Mk 91 e il binato poppiero, il Sea Sparrow Mk 29 e sul cassero i lanciatori dei Penguin.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure: 96,6 x 11,2 m (Jane's); posizioni e quote dalla foto di sinistra della KNM
+# Trondheim (US Navy, 1993, ~19,7 px/m a centro nave), affinate con gli scarti della calibrazione (STIMA dove la foto
+# non arriva). Modello proprio (blocco C del kit, 30/10/2026).
+nome: Oslo (F300)
+uscita: extracted/navi/oslo
+
+scafo:
+  L: 96.6
+  B: 11.2
+  bordo: [[0, 7.7], [16, 5.9], [30, 4.5], [40, 3.8], [64, 3.2], [96.6, 3.0]]
+  slancio: 2.5
+  finezza_prua: 45
+  specchio: 0.82
+  svasatura: 0.07
+  pienezza: [0.8, 0.45]
+
+parti:
+  # ---------------- il castello: il binato prodiero, il deposito e il lanciarazzi Terne
+  - {tipo: impianto_binato, nome: mk33_prodiero, x: {prua: 24.25}, y: 0, z0: 5.4, lunghezza: 4.1, larghezza: 3.4, altezza: 2.8, canna: 3.2, smusso: 1.0}
+  - {tipo: tuga, nome: deposito_terne, x0: {prua: 36.0}, x1: {prua: 28.6}, y0: -2.4, y1: 2.4, z0: 4.3, z1: 6.9}
+  - {tipo: lanciarazzi_rbu, nome: terne, x: {prua: 30.5}, z0: 6.9, tubi: [2, 3], elevazione: 35}
+  # ---------------- la sovrastruttura prodiera, la plancia, il direttore e il radar di scoperta aerea
+  - {tipo: tuga, nome: tuga_prodiera, x0: {prua: 52.0}, x1: {prua: 36.9}, y0: -5.0, y1: 5.0, z0: 3.6, z1: 9.9, rastrema: 0.98}
+  - {tipo: tuga, nome: plancia, x0: {prua: 46.0}, x1: {prua: 40.0}, y0: -5.2, y1: 5.2, z0: 9.9, z1: 11.9, rastrema: 0.96}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 40.4}, x1: {prua: 39.9}, y0: -4.6, y1: 4.6, z0: 10.9, z1: 11.5, mat: nero, rastrema: 0.97}
+  - {tipo: direttore_tiro, nome: direttore_prodiero, x: {prua: 41.7}, z0: 11.9, altezza_base: 0.6, larghezza: 1.6, disco: 1.0}
+  - {tipo: tuga, nome: tuga_alta, x0: {prua: 52.0}, x1: {prua: 46.0}, y0: -4.6, y1: 4.6, z0: 9.9, z1: 11.4}
+  - {tipo: cilindro, nome: colonna_radar_aereo, x: {prua: 46.0}, y: 0, r: 0.8, z0: 11.4, z1: 13.6}
+  - {tipo: antenna_radar, nome: radar_aereo, x: {prua: 46.0}, z0: 13.6, larghezza: 4.2, altezza: 1.9, orientamento: 60}
+  # ---------------- l'albero a traliccio col radar di navigazione
+  - {tipo: traliccio, nome: albero, x: {prua: 53.2}, base: 2.4, cima: 0.8, z0: 11.4, z1: 23.7, piani: [17.6], mat: nero}
+  - {tipo: antenna_radar, nome: radar_navigazione, x: {prua: 51.0}, z0: 17.6, larghezza: 3.6, altezza: 0.5, orientamento: 0}
+  - {tipo: asta, nome: alberetto, da: [{prua: 53.0}, 0, 22.0], a: [{prua: 54.6}, 0, 24.5], spessore: 0.3}
+  # ---------------- il fumaiolo inclinato, la tuga centrale con le lance
+  - {tipo: fumaiolo, nome: fumaiolo, x0: {prua: 56.0}, x1: {prua: 52.5}, semilarghezza: 1.6, z0: 9.0, z1: 12.4, rastrema: 0.85}
+  - {tipo: tuga, nome: tuga_centrale, x0: {prua: 61.4}, x1: {prua: 52.0}, y0: -5.0, y1: 5.0, z0: 3.2, z1: 8.3}
+  - {tipo: imbarcazione, nome: lancia_sinistra, x0: {prua: 60.0}, x1: {prua: 55.0}, y: 5.4, z0: 5.6}
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 60.0}, x1: {prua: 55.0}, y: -5.4, z0: 5.6}
+  # ---------------- la sovrastruttura poppiera: il direttore Mk 91, il radome, il binato poppiero, il Sea Sparrow
+  - {tipo: tuga, nome: tuga_poppiera_bassa, x0: {prua: 80.8}, x1: {prua: 61.4}, y0: -4.8, y1: 4.8, z0: 3.0, z1: 5.4}
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 72.0}, x1: {prua: 61.4}, y0: -4.6, y1: 4.6, z0: 5.4, z1: 8.4, rastrema: 0.98}
+  - {tipo: tuga, nome: tuga_direttore, x0: {prua: 67.9}, x1: {prua: 61.4}, y0: -3.0, y1: 3.0, z0: 8.4, z1: 10.3}
+  - {tipo: direttore_mk91, nome: mk91, x: {prua: 64.4}, z0: 10.3, altezza: 2.9, r: 0.9}
+  - {tipo: radome, nome: radome, x: {prua: 67.5}, z: 12.0, r: 0.7}
+  - {tipo: impianto_binato, nome: mk33_poppiero, x: {prua: 70.6}, y: 0, z0: 8.4, verso: -1, lunghezza: 3.6, larghezza: 3.2, altezza: 2.0, canna: 3.0, smusso: 0.8}
+  - {tipo: sea_sparrow, nome: sea_sparrow, x: {prua: 75.5}, y: 0, z0: 5.4, orientamento: 180}
+  # ---------------- i Penguin sul cassero
+  - {tipo: harpoon, nome: penguin_sinistra, x: {prua: 87.5}, y: 2.8, z0: 3.0, verso: 1, elevazione: 15, lunghezza: 3.0}
+  - {tipo: harpoon, nome: penguin_dritta, x: {prua: 87.5}, y: -2.8, z0: 3.0, verso: -1, elevazione: 15, lunghezza: 3.0}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 30/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: sinistra_trondheim
+    file: extracted/navi/oslo/foto/2400px-Frigate_knm_trondheim.jpg
+    nave: KNM Trondheim (F302), 2/3/1993 (US Navy, pubblico dominio), di sinistra quasi al traverso
+    qualita: 1.0
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 3 px (contorno_modello.py --maschera)
+    maschera_file: extracted/navi/oslo/foto/sinistra_trondheim_maschera.png
+    solo_punti: true
+    # numero, nome e stemma veri tolti (come sulle altre classi): l'F302, la targa sulla tuga, lo stemma del direttore
+    cancella: [[540, 978, 702, 1032], [1326, 875, 1378, 893], [1578, 805, 1604, 831]]
+    riquadro: [250, 500, 2300, 1120]
+    fotocamera_iniziale: {posizione: [0, 1200, 8], bersaglio: [0, 0, 6], f: 20000}
+    limiti_fotocamera: {elevazione: [-5, 15], distanza: [100, 8000], focale: [1000, 200000]}
+    punti:
+      - [[{prua: 0}, 0, 7.7], [325, 930]]            # dritto di prua in coperta
+      - [[{prua: 2.5}, 0, 0.0], [375, 1082]]         # piede del dritto al galleggiamento
+      - [[{prua: 96.6}, 4.6, 3.0], [2224, 950]]      # specchio, spigolo di sinistra in coperta
+      - [[{prua: 36.9}, 5.0, 9.9], [1067, 862]]      # spigolo prodiero alto di sinistra della sovrastruttura
+      - [[{prua: 53.2}, 0, 23.7], [1369, 580]]       # cima del traliccio
+      - [[{prua: 64.4}, 0, 14.6], [1591, 747]]       # cima del direttore Mk 91
+      - [[{prua: 52.5}, 0, 12.4], [1364, 796]]       # spigolo prodiero del cielo del fumaiolo
+      - [[{prua: 22.2}, 1.7, 8.2], [770, 900]]      # spigolo prodiero alto di sinistra del binato prodiero

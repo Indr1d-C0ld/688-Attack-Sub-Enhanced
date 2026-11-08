@@ -1,0 +1,240 @@
+# Testi dell'enciclopedia, voci campione (docs/00_ROADMAP.md, requisito 14; il Museo esteso): una voce per id dell'indice
+# (tools/pipeline/enciclopedia.py). Scritti a mano, in parafrasi dai dossier di docs/ricerca (nessun testo copiato), con
+# le fonti: il paragrafo del dossier e, dove serve, la sigla della fonte del dossier.
+# Campi: it, en (2-6 frasi, storia e impiego); uso_it, uso_en (armi e sensori: come si usano nel gioco, il manuale di
+# bordo); fonti (elenco).
+
+sottomarino.los_angeles:
+  it: >-
+    Il sottomarino d'attacco a propulsione nucleare più numeroso della US Navy della Guerra Fredda: la prima unità
+    entrò in servizio nel 1976. Costruito per scortare i gruppi di portaerei e per cacciare i sottomarini sovietici,
+    unisce un reattore S6G, una sfera sonar BQQ-5 con più di mille idrofoni e una schiera rimorchiata TB-16. I quattro
+    tubi lanciano siluri Mk 48, missili Harpoon e Tomahawk e mine. Nel 1989 era il battello del giocatore: veloce oltre
+    30 nodi, ma silenzioso solo sotto gli 8 nodi; i Flight I, coi timoni sulla vela, non potevano emergere nel ghiaccio.
+  en: >-
+    The most numerous nuclear attack submarine of the Cold War US Navy; the first boat commissioned in 1976. Built to
+    escort carrier groups and to hunt Soviet submarines, it combines an S6G reactor, a BQQ-5 sonar sphere with over a
+    thousand hydrophones and a TB-16 towed array. Its four tubes fire Mk 48 torpedoes, Harpoon and Tomahawk missiles
+    and mines. In 1989 it was the player's boat: faster than 30 knots, but quiet only below 8 knots; Flight I boats,
+    with sail planes, could not surface through ice.
+  fonti: ['dossier 01 §2.1 [FAS688] [WP688]', 'dossier 14 §1.2', 'dossier 20 §2.1']
+
+sottomarino.alfa:
+  it: >-
+    Il Progetto 705 «Lira» fu il sottomarino d'attacco più veloce della Guerra Fredda: scafo in titanio e reattore
+    raffreddato a piombo-bismuto, 41 nodi in servizio. Per l'automazione bastavano poco più di trenta uomini, tutti
+    ufficiali e sottufficiali. In Occidente si credeva scendesse a 600-900 metri: le fonti russe danno 320-350 metri di
+    lavoro e 400 di limite, ma quella paura spinse il programma del siluro Mk 48 ADCAP. Accelerava e virava in modo
+    eccezionale, ma ad alta velocità era molto rumoroso; nel 1989 quasi tutte le unità erano ferme.
+  en: >-
+    Project 705 «Lira» was the fastest attack submarine of the Cold War: titanium hull and a lead-bismuth cooled
+    reactor, 41 knots in service. Automation cut the crew to just over thirty men, all officers and warrant officers.
+    The West believed it could dive to 600-900 metres; Russian sources give 320-350 metres operating and 400 maximum,
+    but that fear drove the Mk 48 ADCAP torpedo programme. It accelerated and turned exceptionally well but was very
+    noisy at speed; by 1989 almost all boats were laid up.
+  fonti: ['dossier 01 §2.4 [DS705] [WPAlfa] [GS705]', 'dossier 20 §4.4']
+
+nave.perry:
+  it: >-
+    Le fregate della classe Oliver Hazard Perry (FFG-7) furono costruite in gran numero per scortare convogli e gruppi
+    anfibi a basso costo: due turbine LM2500 su un solo asse, 29 nodi. Portano il sonar di scafo SQS-56 a media
+    frequenza e, sulle unità LAMPS III, la schiera rimorchiata SQR-19 e due elicotteri SH-60B, che sono la loro arma
+    antisommergibile più temibile. Le armi proprie sono il lanciatore Mk 13 (missili SM-1 e Harpoon), il cannone da 76
+    mm e i tubi Mk 32 per i siluri leggeri Mk 46.
+  en: >-
+    The Oliver Hazard Perry class (FFG-7) frigates were built in large numbers to escort convoys and amphibious groups
+    cheaply: two LM2500 gas turbines on a single shaft, 29 knots. They carry the medium-frequency SQS-56 hull sonar and,
+    on LAMPS III ships, the SQR-19 towed array and two SH-60B helicopters, their most dangerous anti-submarine weapon.
+    Their own weapons are the Mk 13 launcher (SM-1 and Harpoon), the 76 mm gun and Mk 32 tubes for Mk 46 light
+    torpedoes.
+  fonti: ['dossier 01 §4.1 (tabella delle navi USA)', 'dossier 17 §2.1-2.2 (LAMPS III)']
+
+aereo.p3c:
+  it: >-
+    Il pattugliatore marittimo della US Navy e degli alleati, nato dall'aereo di linea Electra. Nel 1989 vola nelle
+    versioni Update II e III, col radar APS-115, il magnetometro ASQ-81 nella coda e fino a 87 boe sonore. Una missione
+    dura circa 9 ore, fino a 13 spegnendo un motore; lontano 500 miglia resta in zona circa 5 ore. Nel varco GIUK,
+    insieme ai sottomarini, teneva i battelli sovietici sotto controllo con turni continui di 4 ore in zona.
+  en: >-
+    The maritime patrol aircraft of the US Navy and its allies, derived from the Electra airliner. In 1989 it flies as
+    Update II and III, with the APS-115 radar, the ASQ-81 magnetometer in the tail and up to 87 sonobuoys. A mission
+    lasts about 9 hours, up to 13 with one engine shut down; 500 miles out it stays on station about 5 hours. In the
+    GIUK gap, together with submarines, it kept Soviet boats in check with continuous 4-hour shifts on station.
+  fonti: ['dossier 17 §2.4 [FASP3] [HARP3] [AGC13H] [HOLLER]', 'dossier 11 §1.4 [WPAPS]']
+
+elicottero.ka27:
+  it: >-
+    L'elicottero antisommergibile imbarcato della marina sovietica dal 1981, coi due rotori coassiali tipici della
+    Kamov: niente rotore di coda, quindi ingombro minimo sul ponte. Il sistema «Osminog» comprende il sonar a
+    immersione VGS-3, che scende fino a 150 metri, 36 boe, il radar Initsiativa e un magnetometro rimorchiato. In una
+    prova del 1977 il sonar trovò un sottomarino diesel a 8 km in ascolto passivo; il suo ping attivo però si usava di
+    rado, perché tradiva l'elicottero.
+  en: >-
+    The Soviet navy's shipborne anti-submarine helicopter from 1981, with Kamov's typical coaxial rotors: no tail rotor,
+    so a minimal deck footprint. The «Osminog» system includes the VGS-3 dipping sonar, lowered down to 150 metres, 36
+    sonobuoys, the Initsiativa radar and a towed magnetometer. In a 1977 trial the sonar found a diesel submarine at 8
+    km listening passively; its active ping was rarely used, as it gave the helicopter away.
+  fonti: ['dossier 17 §3.2 [ART-Ka27] [RW-Ka27]']
+
+siluro.mk48:
+  it: >-
+    Il siluro pesante da 533 mm della US Navy: il Mk 48 entrò in servizio nel 1972 e il Mod 4, la versione del 1989,
+    nacque per raggiungere sottomarini veloci e profondi come l'Alfa. È filoguidato dal battello e poi cerca da solo
+    il bersaglio con la testa attiva o passiva. Le cifre ufficiali dicevano solo «oltre 28 nodi, oltre 5 miglia»: le
+    stime della letteratura danno 55 nodi e 38 km, o 50 km a 40 nodi. La testata da 293 kg esplode per prossimità sotto
+    la chiglia.
+  en: >-
+    The US Navy's 533 mm heavyweight torpedo: the Mk 48 entered service in 1972 and the Mod 4, the 1989 version, was
+    built to catch fast, deep submarines like the Alfa. It is wire-guided from the boat and then searches on its own
+    with an active or passive homing head. Official figures only said «over 28 knots, over 5 miles»: published
+    estimates give 55 knots and 38 km, or 50 km at 40 knots. The 293 kg warhead detonates by proximity under the keel.
+  uso_it: >-
+    Si lancia dalla stazione Armi da un tubo carico e allagato con la porta aperta. Prima del lancio si impostano
+    rotta, modo della testa (attivo, passivo o tutti e due), velocità (alta: 55 nodi e 38 km; bassa: 40 nodi e 50 km),
+    distanza d'attivazione (RTE), tetto e schema di ricerca, e l'anticircolare. Finché il filo regge (fino a 30 km dal
+    siluro, 3 km dal battello) si può correggere la rotta; tagliato il filo il siluro va da solo. Scende fino a circa
+    760 metri.
+  uso_en: >-
+    It is fired from the Weapons station from a loaded, flooded tube with the door open. Before launch you set course,
+    seeker mode (active, passive or both), speed (high: 55 knots and 38 km; low: 40 knots and 50 km), run-to-enable
+    distance (RTE), ceiling and search pattern, and the anti-circular run. While the wire holds (up to 30 km from the
+    torpedo, 3 km from the boat) you can steer it; once the wire is cut the torpedo runs on its own. It dives to about
+    760 metres.
+  fonti: ['dossier 14 §2.1 [WPMk48]', 'dossier 01 §6.1', 'siluri.toml (tools/pipeline/siluri.py)']
+
+mina.mk67:
+  it: >-
+    La mina mobile lanciata da sottomarino (SLMM) della US Navy, in servizio dagli anni '80: un siluro Mk 37 modificato
+    fa da veicolo. Esce dal tubo, percorre circa 13 km lungo la rotta impostata e si posa sul fondo, così il battello
+    può minare un porto o uno stretto senza avvicinarsi. La testata è di 150 kg; è lunga circa 4 metri e pesa 750-800
+    kg.
+  en: >-
+    The US Navy's submarine-launched mobile mine (SLMM), in service from the 1980s: a modified Mk 37 torpedo is the
+    vehicle. It leaves the tube, runs about 13 km along the set course and settles on the bottom, so the boat can mine
+    a harbour or a strait without closing in. The warhead is 150 kg; it is about 4 metres long and weighs 750-800 kg.
+  uso_it: >-
+    Si carica nei tubi come un siluro (configurazione «minamento» del carico) e si lancia con rotta e distanza di
+    posa. Dopo l'armamento (10 minuti) resta sul fondo, fra 10 e 100 metri, e scoppia per influenza al passaggio di
+    navi o sottomarini entro circa 60 metri (raggio STIMA). Non si può più comandare: va posata dove passerà il nemico,
+    lontano dalle rotte amiche.
+  uso_en: >-
+    It is loaded into the tubes like a torpedo (the «mining» load) and launched with a course and laying distance.
+    After arming (10 minutes) it lies on the bottom, between 10 and 100 metres, and fires by influence when ships or
+    submarines pass within about 60 metres (radius is an estimate). It can no longer be controlled: lay it where the
+    enemy will pass, away from friendly routes.
+  fonti: ['dossier 14 §2.6 [WPSLMM] [FASMk67]', 'carico.toml (mine.mk67)']
+
+esca.adc_mk2:
+  it: >-
+    La contromisura acustica espendibile da 3 pollici dei sottomarini statunitensi del 1989, lanciata dall'eiettore
+    interno. In acqua si mette in verticale a una quota preimpostata e, con motore ed eliche intubate, imita il rumore
+    del battello per attirare il siluro nemico mentre il sottomarino si allontana. I lanciatori esterni da 6 pollici
+    e i disturbatori più potenti arrivarono probabilmente dopo il 1989.
+  en: >-
+    The 3-inch expendable acoustic countermeasure of 1989 US submarines, launched from the internal signal ejector. In
+    the water it hangs vertically at a preset depth and, with a motor and ducted propellers, mimics the boat's noise to
+    lure the enemy torpedo while the submarine moves away. The 6-inch external launchers and the stronger jammers
+    probably came after 1989.
+  uso_it: >-
+    Si lancia dai due eiettori (6 esche a bordo del 688) quando un siluro nemico è in acqua. Resta a circa 60 metri e
+    fa rumore per circa 10 minuti, più forte del battello: un siluro che non l'ha ancora scartata la insegue. Funziona
+    meglio se subito dopo il battello cambia rotta e quota e rallenta per diventare silenzioso.
+  uso_en: >-
+    Fire it from the two ejectors (the 688 carries 6 decoys) when an enemy torpedo is in the water. It stays at about
+    60 metres and makes noise for about 10 minutes, louder than the boat: a torpedo that has not yet rejected it will
+    chase it. It works best if right after launch the boat changes course and depth and slows down to go quiet.
+  fonti: ['dossier 05 §0.1 punto 6 e §5.1 [GOVT] [ADC]', 'siluri.toml (esche.adc_mk2)', 'carico.toml (locali.los_angeles)']
+
+boa.ssq53b:
+  it: >-
+    La boa sonora passiva direzionale (DIFAR) più usata dagli aerei antisommergibile americani, in produzione dal
+    1969. Dopo l'ammaraggio cala un idrofono a una quota scelta e trasmette via radio all'aereo sia il suono sia la
+    direzione da cui arriva, con un errore misurato in mare di 5-9 gradi. Si posa a schemi, a decine per volta: un P-3C
+    in caccia su un contatto del SOSUS ne porta 40-50.
+  en: >-
+    The passive directional (DIFAR) sonobuoy most used by American anti-submarine aircraft, in production since 1969.
+    After splashdown it lowers a hydrophone to a selected depth and radios to the aircraft both the sound and the
+    direction it comes from, with a bearing error measured at sea of 5-9 degrees. It is laid in patterns, dozens at a
+    time: a P-3C hunting a SOSUS contact carries 40-50.
+  fonti: ['dossier 17 §4.1 [HOLLER] [AAD-DIFAR]', 'dossier 17 §2.4 e §6.2']
+
+sonar.bqq5:
+  it: >-
+    Il sistema sonar integrato dei 688: una sfera di prua da 4,6 metri (BQS-13) con più di mille idrofoni, una schiera
+    conforme lungo lo scafo e la schiera rimorchiata. In passivo ascolta a bassa frequenza e con l'analisi LOFAR
+    riconosce le righe di macchina dei battelli; in attivo emette impulsi a media frequenza, ma tradisce chi li usa.
+    Sopra i 20-25 nodi il rumore del flusso lo rende sordo, e dietro la poppa c'è un settore cieco.
+  en: >-
+    The 688's integrated sonar system: a 4.6-metre bow sphere (BQS-13) with over a thousand hydrophones, a conformal
+    hull array and the towed array. In passive mode it listens at low frequency and with LOFAR analysis recognises
+    the machinery lines of boats; in active mode it transmits medium-frequency pings, but gives the user away. Above
+    20-25 knots flow noise deafens it, and there is a blind sector astern.
+  uso_it: >-
+    Nella stazione Sonar si sceglie il modo: la sfera in passivo con la cascata a banda larga e il LOFAR per le righe,
+    la schiera rimorchiata per l'ascolto lontano, l'attivo per la distanza a un colpo solo. Per sentire bene si va
+    piano: a 5-8 nodi il rumore proprio è minimo. I contatti nel settore di poppa si scoprono solo cambiando rotta.
+  uso_en: >-
+    At the Sonar station you choose the mode: the sphere in passive with the broadband waterfall and LOFAR for the
+    lines, the towed array for long-range listening, active for a single-shot range. To hear well, go slow: at 5-8
+    knots self-noise is lowest. Contacts in the stern sector are found only by changing course.
+  fonti: ['dossier 01 §2.1 [FAS688] [WP688]', 'acustica.toml (sensori.bqq5_sfera, bqq5_attivo)']
+
+radar.aps115:
+  it: >-
+    Il radar di ricerca del P-3C Orion nel 1989: due antenne, nel muso e nella coda, danno una copertura a 360 gradi in
+    banda X. Deriva dall'APS-80 dei primi Orion e vede una nave grande a oltre cento miglia; contro un periscopio
+    alzato la portata cala molto, e col mare grosso quasi scompare. Il successore APS-137 arriva sugli Orion solo negli
+    anni '90.
+  en: >-
+    The P-3C Orion's search radar in 1989: two antennas, in the nose and the tail, give 360-degree X-band coverage. It
+    derives from the APS-80 of the first Orions and sees a large ship beyond a hundred miles; against a raised periscope
+    the range drops sharply, and in heavy seas it almost vanishes. The APS-137 successor reached the Orions only in the
+    1990s.
+  fonti: ['dossier 11 §1.4 [WPAPS] [RTAPS] [APL97]', 'dossier 11 §6.4', 'emettitori.toml (radar.aps115)']
+
+periscopio.type18:
+  it: >-
+    Il periscopio di ricerca dei 688 e degli Sturgeon, costruito dalla Kollmorgen dal 1975: testa grossa con tre
+    ingrandimenti (1,5, 6 e 12×), il modo a bassa luminosità, la telecamera e la fotocamera, e le antenne ESM per
+    ascoltare i radar mentre è alzato. Proprio per questo espone più del periscopio d'attacco Type 2: sezione radar e
+    piuma maggiori. Nel 1989 la sua TV era quasi certamente in bianco e nero.
+  en: >-
+    The search periscope of the 688 and Sturgeon classes, built by Kollmorgen from 1975: a large head with three
+    magnifications (1.5, 6 and 12×), low-light mode, TV and photo cameras, and ESM antennas to listen for radars while
+    raised. For that very reason it is more exposed than the Type 2 attack periscope: larger radar cross-section and
+    feather. In 1989 its TV was almost certainly black and white.
+  uso_it: >-
+    Nella stazione Periscopio si sceglie il Type 18 e lo si alza (8 secondi). Gli ingrandimenti girano a 1,5, 6 e 12×;
+    la notte si passa alla bassa luminosità; il tasto della foto mette l'immagine nel registro della missione. Si tiene
+    alzato poco, a bassa velocità: sopra i 6 nodi la piuma si vede e l'immagine trema, oltre i 15 si rischia il danno.
+  uso_en: >-
+    At the Periscope station select the Type 18 and raise it (8 seconds). Magnifications cycle through 1.5, 6 and 12×;
+    at night switch to low light; the photo key puts the image in the mission log. Keep it up briefly and slow: above
+    6 knots the feather shows and the image shakes, beyond 15 it may be damaged.
+  fonti: ['dossier 20 §2.1 [PAT] [K18] [NSL2] [NOVA-P] e §8.1', 'periscopi.toml (periscopi.type18)']
+
+marcatore.mk25:
+  it: >-
+    Il marcatore marino degli aerei antisommergibile statunitensi: caduto in mare accende una fiamma gialla e un fumo
+    bianco che durano 10-20 minuti. Segna il punto di un contatto o di un attacco, così l'equipaggio ritrova la
+    posizione a vista. Non si lancia dall'elicottero in volo stazionario.
+  en: >-
+    The marine marker of American anti-submarine aircraft: once in the water it lights a yellow flame and white smoke
+    that last 10-20 minutes. It marks a contact or attack point so the crew can find the position again by eye. It is
+    not dropped from a hovering helicopter.
+  fonti: ['dossier 17 §4.3 [AUS-MK25]', 'asw_aereo.toml (marcatori.mk25)']
+
+teatro.faroe:
+  it: >-
+    Il varco fra le Isole Faroe e il Mar di Norvegia, sulla dorsale che va dalla Groenlandia alla Scozia: di qui
+    dovevano passare i sottomarini sovietici diretti nell'Atlantico, ed era il teatro principale della caccia della
+    NATO. Il fondo alterna la piattaforma delle Faroe, sotto i 200 metri, a canali profondi come quello Faroe-Shetland
+    e la soglia del Faroe Bank Channel a circa 840 metri. D'inverno è il mare più duro del gioco: onde medie di 4 metri,
+    una burrasca circa ogni 6 giorni.
+  en: >-
+    The gap between the Faroe Islands and the Norwegian Sea, on the ridge running from Greenland to Scotland: Soviet
+    submarines heading into the Atlantic had to pass here, and it was NATO's main hunting ground. The seabed alternates
+    the Faroe shelf, under 200 metres, with deep channels such as the Faroe-Shetland Channel and the Faroe Bank Channel
+    sill at about 840 metres. In winter it is the roughest sea in the game: average waves of 4 metres, a gale about
+    every 6 days.
+  fonti: ['dossier 03 §A1', 'dossier 21 §3.1 (nota A §2.1, ERA5)']

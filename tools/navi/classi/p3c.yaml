@@ -1,0 +1,112 @@
+# Lockheed P-3C Orion (Update II/III), US Navy, configurazione 1989. Oggetto in volo.
+# Coordinate del kit: x verso il muso (origine a meta' lunghezza fuori tutto), y verso sinistra, z verso l'alto.
+# {prua: d} = punto a d metri dal muso (x = L/2 - d). Asse della fusoliera a z = 10 m.
+# Misure pubbliche: lunghezza 35,61 m (con il boma MAD), apertura 30,38 m, altezza 10,27 m (a terra),
+# superficie alare 120,77 m^2, eliche Hamilton Standard 54H60 a 4 pale da 4,11 m.
+nome: Lockheed P-3C Orion (1989)
+uscita: extracted/navi/p3c
+moduli_parti: [aerei_parti.py]
+vista: {volante: true, elevazioni: [0, 10, 25], centro: [0, 0, 10]}
+# dischi delle eliche ('traliccio') piu' chiari: pale sfocate contro il cielo, come nelle foto
+albedo: {traliccio: 0.72}
+
+scafo:
+  generatore: fusoliera
+  L: 35.61
+  z: 10.0
+  # [d dal muso, semilarghezza, semialtezza, spostamento verticale del centro]
+  profilo:
+    - [0.0, 0.0, 0.0, -0.35]
+    - [0.3, 0.50, 0.52, -0.35]
+    - [0.9, 0.90, 0.95, -0.35]
+    - [1.8, 1.25, 1.33, -0.35]
+    - [3.0, 1.55, 1.64, -0.35]
+    - [4.5, 1.71, 1.78, -0.33]
+    - [6.0, 1.74, 1.82, -0.32]
+    - [20.0, 1.74, 1.82, -0.32]
+    - [21.5, 1.70, 1.80, -0.30]
+    - [24.0, 1.50, 1.52, -0.10]
+    - [26.5, 1.15, 1.10, 0.20]
+    - [28.5, 0.80, 0.75, 0.45]
+    - [30.3, 0.50, 0.48, 0.65]
+    - [31.2, 0.32, 0.32, 0.75]
+    - [34.6, 0.27, 0.27, 0.80]
+    - [35.2, 0.20, 0.20, 0.80]
+    - [35.61, 0.0, 0.0, 0.80]
+
+parti:
+  # misure triangolate da tre foto (tools/navi/classi/p3c_triangolazione.yaml): estremita' alari (b.a.) a 11,7 m dal
+  # muso e 0,2 m sopra l'asse; ogive a 7,5-7,7 m, motori a y = 4,7 e 9,1 m; deriva alta 6,3 m sull'asse a 27,8 m;
+  # estremita' del piano orizzontale a 27,8 m, 1,7 m sopra l'asse
+  # ala bassa, diedro ~5 gradi, rastremata (corda 5,5 -> 2,3 m)
+  - {tipo: ala, nome: ala, radice: [{prua: 10.9}, 1.2, 8.7, 5.5], estremita: [{prua: 11.7}, 15.19, 10.2, 2.3], spessore: 0.14, spessore_estremita: 0.12}
+  # gondole dei motori (Allison T56): sopra e sotto l'ala, oltre il bordo d'uscita
+  - {tipo: corpo, nome: gondola_interna, x_naso: {prua: 8.1}, y: 4.7, z: 9.8, simmetrico: true,
+     profilo: [[0, 0.35, 0.40], [0.5, 0.60, 0.72], [1.5, 0.72, 0.95, -0.05], [4.5, 0.74, 1.0, -0.1], [6.6, 0.50, 0.65, 0.0], [7.8, 0.20, 0.25, 0.1]]}
+  - {tipo: corpo, nome: gondola_esterna, x_naso: {prua: 8.3}, y: 9.1, z: 10.2, simmetrico: true,
+     profilo: [[0, 0.35, 0.40], [0.5, 0.60, 0.72], [1.5, 0.72, 0.95, -0.05], [4.5, 0.74, 1.0, -0.1], [6.4, 0.50, 0.65, 0.0], [7.5, 0.20, 0.25, 0.1]]}
+  - {tipo: elica, nome: elica_interna, x: {prua: 8.1}, y: 4.7, z: 9.8, r: 2.055, ogiva: [0.6, 0.35]}
+  - {tipo: elica, nome: elica_esterna, x: {prua: 8.3}, y: 9.1, z: 10.2, r: 2.055, ogiva: [0.6, 0.35]}
+  # impennaggi: piano orizzontale (apertura 13,06 m) con diedro, deriva con pinna dorsale
+  - {tipo: ala, nome: piano_orizzontale, radice: [{prua: 26.5}, 0.5, 11.0, 3.9], estremita: [{prua: 27.8}, 6.53, 11.7, 1.6], spessore: 0.12, spessore_estremita: 0.10}
+  - {tipo: ala, nome: deriva, verticale: true, simmetrica: false, radice: [{prua: 24.0}, 0, 11.3, 5.0], estremita: [{prua: 26.7}, 0, 16.3, 2.2], spessore: 0.12, spessore_estremita: 0.10}
+  - {tipo: ala, nome: pinna_dorsale, verticale: true, simmetrica: false, radice: [{prua: 20.0}, 0, 11.6, 4.3], estremita: [{prua: 24.2}, 0, 12.4, 0.8], spessore: 0.08}
+
+# Foto (pubblico dominio, US Navy / DoD; metadati in extracted/navi/p3c/foto/fonti.json).
+# Punti: muso, punta del boma MAD, sommita' della deriva, estremita' alari (bordo d'attacco), estremita' del piano
+# orizzontale (bordo d'attacco), punte delle ogive (s = sinistra, d = dritta; 1 = motore interno, 2 = esterno).
+foto:
+  - nome: sinistro_basso_1988
+    file: extracted/navi/p3c/foto/sinistro_basso_1988.jpg
+    nave: P-3 Orion, esercitazione Gallant Eagle '88 (1988)
+    qualita: 1.0
+    specchiabile: true
+    maschera_file: extracted/navi/p3c/maschere/sinistro_basso_1988.png
+    maschera_calibrazione: extracted/navi/p3c/maschere/sinistro_basso_1988_cal.png
+    limiti_fotocamera: {elevazione: [-70, 10], distanza: [30, 5000]}
+    fotocamera_iniziale: {posizione: [-116.7, 339.6, -186.5], bersaglio: [8.4, 0.0, 11.6], f: 12931}
+    punti:
+      - [[{prua: 0}, 0, 9.65], [672, 690]]          # muso
+      - [[{prua: 35.61}, 0, 10.8], [1752, 660]]     # punta del boma MAD
+      - [[{prua: 27.8}, 0, 16.3], [1540, 506]]      # sommita' della deriva
+      - [[{prua: 11.7}, 15.19, 10.2], [894, 433]]  # estremita' alare sinistra (vicina)
+      - [[{prua: 11.7}, -15.19, 10.2], [1140, 905]] # estremita' alare destra (lontana)
+      - [[{prua: 27.8}, 6.53, 11.7], [1468, 532]]  # piano orizzontale sinistro
+      - [[{prua: 27.8}, -6.53, 11.7], [1563, 738]] # piano orizzontale destro
+      - [[{prua: 7.7}, 9.1, 10.2], [820, 539]]      # ogiva s2
+      - [[{prua: 7.5}, 4.7, 9.8], [855, 618]]      # ogiva s1
+      - [[{prua: 7.5}, -4.7, 9.8], [933, 775]]     # ogiva d1
+      - [[{prua: 7.7}, -9.1, 10.2], [982, 833]]     # ogiva d2
+  - nome: prua_2003
+    file: extracted/navi/p3c/foto/prua_2003.jpg
+    nave: P-3C del VP-4 in decollo, North Island (2003)
+    qualita: 0.8
+    specchiabile: true
+    maschera_file: extracted/navi/p3c/maschere/prua_2003.png
+    maschera_calibrazione: extracted/navi/p3c/maschere/prua_2003_cal.png
+    limiti_fotocamera: {elevazione: [-40, 15]}
+    fotocamera_iniziale: {posizione: [196.8, 8.5, -6.7], bersaglio: [8.5, 0.0, 9.2], f: 8542}
+    punti:
+      - [[{prua: 0}, 0, 9.65], [937, 632]]
+      - [[{prua: 27.8}, 0, 16.3], [993, 458]]
+      - [[{prua: 11.7}, 15.19, 10.2], [1645, 648]]
+      - [[{prua: 11.7}, -15.19, 10.2], [290, 650]]
+      - [[{prua: 7.7}, 9.1, 10.2], [1370, 630]]
+      - [[{prua: 7.5}, 4.7, 9.8], [1172, 648]]
+      - [[{prua: 7.5}, -4.7, 9.8], [742, 648]]
+      - [[{prua: 7.7}, -9.1, 10.2], [548, 635]]
+  - nome: dritto_1991
+    file: extracted/navi/p3c/foto/dritto_1991.jpg
+    nave: P-3C del VP-22, Giappone (1991)
+    qualita: 1.0
+    specchiabile: true
+    maschera_file: extracted/navi/p3c/maschere/dritto_1991.png
+    maschera_calibrazione: extracted/navi/p3c/maschere/dritto_1991_cal.png
+    limiti_fotocamera: {elevazione: [-10, 50], distanza: [30, 3000]}
+    fotocamera_iniziale: {posizione: [-25.5, -63.8, 27.4], bersaglio: [0.5, 0.0, 11.0], f: 3498}
+    punti:
+      - [[{prua: 0}, 0, 9.65], [1683, 448]]
+      - [[{prua: 35.61}, 0, 10.8], [37, 612]]
+      - [[{prua: 27.8}, 0, 16.3], [440, 272]]
+      - [[{prua: 11.7}, 15.19, 10.2], [935, 362]]   # estremita' alare sinistra (lontana)
+      - [[{prua: 11.7}, -15.19, 10.2], [1612, 668]] # estremita' alare destra (vicina)

@@ -1,0 +1,4792 @@
+# Firme di rumore e sensori dell'Enhanced (generato da tools/pipeline/acustica.py: non modificare a mano).
+
+[firme.los_angeles]
+punti = [[4.5, 112.5], [8.0, 116.0], [15.0, 128.0], [32.0, 143.0]]
+v_cavitazione_kn = 5.0
+tonale_db = 110.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [42.3, -3, "pompa", 0, 15], [84.6, -2, "pompa", 15, 1000000000.0], [97.5, -4, "turbina", 0.0, 1000000000.0], [168, -8, "riduttore", 0.0, 1000000000.0], [23.0, -18, "turbina", 0.0, 1000000000.0, 23.0], [78.0, -15, "riduttore", 0.0, 1000000000.0, 78.0], [375.0, -20, "riduttore", 0.0, 1000000000.0, 375.0]]
+pale = 7
+assi = 1
+giri_per_nodo = 6.0
+nazionalita = "usa"
+tipo_unita = "ssn"
+ts_prua_db = 12.0
+ts_traverso_db = 25.0
+snorkel_db = 0.0
+fonte = "01 §3.2: 688 Flight I, 60 Hz"
+
+[firme.sturgeon]
+punti = [[4.5, 117.5], [8.0, 122.0], [15.0, 135.0], [26.0, 145.0]]
+v_cavitazione_kn = 4.5
+tonale_db = 114.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [38.1, -3, "pompa", 0, 12], [76.2, -2, "pompa", 12, 1000000000.0], [112.0, -4, "turbina", 0.0, 1000000000.0], [150, -7, "riduttore", 0.0, 1000000000.0], [24.5, -17, "turbina", 0.0, 1000000000.0, 21.0], [84.0, -14, "riduttore", 0.0, 1000000000.0, 72.0], [385.0, -20, "riduttore", 0.0, 1000000000.0, 330.0]]
+pale = 5
+assi = 1
+giri_per_nodo = 7.0
+nazionalita = "usa"
+tipo_unita = "ssn"
+ts_prua_db = 12.0
+ts_traverso_db = 25.0
+snorkel_db = 0.0
+fonte = "01 §3.2"
+
+[firme.trafalgar]
+punti = [[4.5, 110.5], [8.0, 114.0], [15.0, 126.0], [32.0, 140.0]]
+v_cavitazione_kn = 5.5
+tonale_db = 107.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [47.0, -3, "pompa", 0, 14], [94.0, -2, "pompa", 14, 1000000000.0], [104.0, -4, "turbina", 0.0, 1000000000.0], [140, -8, "riduttore", 0.0, 1000000000.0], [27.08, -19, "turbina", 0.0, 1000000000.0, 25.0], [87.75, -16, "riduttore", 0.0, 1000000000.0, 81.0], [433.33, -21, "riduttore", 0.0, 1000000000.0, 400.0]]
+pale = 0
+assi = 1
+giri_per_nodo = 6.5
+nazionalita = "uk"
+tipo_unita = "ssn"
+ts_prua_db = 12.0
+ts_traverso_db = 25.0
+snorkel_db = 0.0
+fonte = "01 §3.2: pump-jet"
+
+[firme.victor3]
+punti = [[4.5, 122.5], [8.0, 127.0], [15.0, 140.0], [30.0, 150.0]]
+v_cavitazione_kn = 4.5
+tonale_db = 118.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [36.0, -2, "pompa", 0.0, 1000000000.0], [88.0, -4, "turbina", 0.0, 1000000000.0], [132, -6, "riduttore", 0.0, 1000000000.0], [185, -9, "ausiliario", 0.0, 1000000000.0], [25.33, -15, "turbina", 0.0, 1000000000.0, 19.0], [88.0, -13, "riduttore", 0.0, 1000000000.0, 66.0], [386.67, -19, "riduttore", 0.0, 1000000000.0, 290.0]]
+pale = 4
+assi = 1
+giri_per_nodo = 8.0
+nazionalita = "urss"
+tipo_unita = "ssn"
+ts_prua_db = 2.0
+ts_traverso_db = 15.0
+snorkel_db = 0.0
+fonte = "01 §3.2; anecoico (02 §1.4)"
+
+[firme.alfa]
+punti = [[4.5, 127.5], [8.0, 135.0], [15.0, 145.0], [40.0, 160.0]]
+v_cavitazione_kn = 4.0
+tonale_db = 125.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [400, -3, "ausiliario", 0.0, 1000000000.0], [29.0, 0, "pompa", 0.0, 1000000000.0], [120.0, -4, "turbina", 0.0, 1000000000.0], [210, -7, "riduttore", 0.0, 1000000000.0], [20.25, -14, "turbina", 0.0, 1000000000.0, 27.0], [66.0, -12, "riduttore", 0.0, 1000000000.0, 88.0], [315.0, -18, "riduttore", 0.0, 1000000000.0, 420.0]]
+pale = 7
+assi = 1
+giri_per_nodo = 4.5
+nazionalita = "urss"
+tipo_unita = "ssn"
+ts_prua_db = 2.0
+ts_traverso_db = 15.0
+snorkel_db = 0.0
+fonte = "01 §3.2: pompe Pb-Bi; anecoico"
+
+[firme.akula]
+punti = [[4.5, 112.5], [8.0, 117.0], [15.0, 130.0], [33.0, 145.0]]
+v_cavitazione_kn = 5.5
+tonale_db = 108.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [44.0, -3, "pompa", 0, 12], [88.5, -2, "pompa", 12, 1000000000.0], [93.0, -4, "turbina", 0.0, 1000000000.0], [155, -8, "riduttore", 0.0, 1000000000.0], [22.0, -17, "turbina", 0.0, 1000000000.0, 22.0], [74.0, -15, "riduttore", 0.0, 1000000000.0, 74.0], [350.0, -20, "riduttore", 0.0, 1000000000.0, 350.0]]
+pale = 7
+assi = 1
+giri_per_nodo = 6.0
+nazionalita = "urss"
+tipo_unita = "ssn"
+ts_prua_db = 2.0
+ts_traverso_db = 15.0
+snorkel_db = 0.0
+fonte = "01 §3.2 (Miasnikov 110); anecoico"
+
+[firme.oscar]
+punti = [[4.5, 120.5], [8.0, 125.0], [15.0, 138.0], [32.0, 150.0]]
+v_cavitazione_kn = 4.0
+tonale_db = 112.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [33.0, -3, "pompa", 0, 14], [66.0, -2, "pompa", 14, 1000000000.0], [79.0, -4, "turbina", 0.0, 1000000000.0], [142, -8, "riduttore", 0.0, 1000000000.0], [16.67, -16, "turbina", 0.0, 1000000000.0, 20.0], [58.33, -14, "riduttore", 0.0, 1000000000.0, 70.0], [258.33, -19, "riduttore", 0.0, 1000000000.0, 310.0]]
+pale = 7
+assi = 2
+giri_per_nodo = 5.0
+nazionalita = "urss"
+tipo_unita = "ssgn"
+ts_prua_db = 15.0
+ts_traverso_db = 30.0
+snorkel_db = 0.0
+fonte = "01 §3.2: scafo grande, 2 assi"
+
+[firme.charlie2]
+punti = [[4.5, 132.5], [8.0, 138.0], [15.0, 148.0], [24.0, 155.0]]
+v_cavitazione_kn = 3.5
+tonale_db = 135.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [31.0, -1, "pompa", 0.0, 1000000000.0], [72.0, -3, "turbina", 0.0, 1000000000.0], [118, -6, "riduttore", 0.0, 1000000000.0], [196, -9, "ausiliario", 0.0, 1000000000.0], [24.0, -14, "turbina", 0.0, 1000000000.0, 18.0], [85.33, -12, "riduttore", 0.0, 1000000000.0, 64.0], [373.33, -18, "riduttore", 0.0, 1000000000.0, 280.0]]
+pale = 5
+assi = 1
+giri_per_nodo = 8.0
+nazionalita = "urss"
+tipo_unita = "ssgn"
+ts_prua_db = 12.0
+ts_traverso_db = 25.0
+snorkel_db = 0.0
+fonte = "01 §3.2: 2a generazione, 50 Hz"
+
+[firme.typhoon]
+punti = [[6.0, 125.0], [8.0, 125.5], [15.0, 140.0], [25.0, 148.0]]
+v_cavitazione_kn = 4.0
+tonale_db = 114.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [27.0, -3, "pompa", 0, 12], [54.0, -2, "pompa", 12, 1000000000.0], [69.0, -4, "turbina", 0.0, 1000000000.0], [126, -7, "riduttore", 0.0, 1000000000.0], [11.33, -17, "turbina", 0.0, 1000000000.0, 17.0], [40.0, -15, "riduttore", 0.0, 1000000000.0, 60.0], [180.0, -20, "riduttore", 0.0, 1000000000.0, 270.0]]
+pale = 7
+assi = 2
+giri_per_nodo = 4.0
+nazionalita = "urss"
+tipo_unita = "ssbn"
+ts_prua_db = 15.0
+ts_traverso_db = 30.0
+snorkel_db = 0.0
+fonte = "01 §3.2 (Miasnikov 125)"
+
+[firme.foxtrot]
+punti = [[4.5, 122.5], [8.0, 128.0], [15.0, 140.0]]
+v_cavitazione_kn = 3.0
+tonale_db = 110.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [68.0, -4, "ausiliario", 0.0, 1000000000.0], [11.0, 0, "diesel", 0.0, 1000000000.0], [22.0, -3, "diesel", 0.0, 1000000000.0], [33.0, -6, "diesel", 0.0, 1000000000.0]]
+pale = 6
+assi = 3
+giri_per_nodo = 14.0
+nazionalita = "urss"
+tipo_unita = "ssk"
+ts_prua_db = 12.0
+ts_traverso_db = 25.0
+snorkel_db = 22.5
+fonte = "01 §3.2: a batteria; snorkel +20-25"
+
+[firme.kilo]
+punti = [[4.5, 114.5], [8.0, 120.0], [15.0, 132.0], [20.0, 138.0]]
+v_cavitazione_kn = 3.5
+tonale_db = 100.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [75.0, -4, "ausiliario", 0.0, 1000000000.0], [12.5, 0, "diesel", 0.0, 1000000000.0], [25.0, -3, "diesel", 0.0, 1000000000.0], [37.5, -6, "diesel", 0.0, 1000000000.0]]
+pale = 6
+assi = 1
+giri_per_nodo = 12.0
+nazionalita = "urss"
+tipo_unita = "ssk"
+ts_prua_db = 12.0
+ts_traverso_db = 25.0
+snorkel_db = 22.5
+fonte = "01 §3.2 (Miasnikov); snorkel +20-25"
+
+[firme.victor1]
+punti = [[4.5, 135.0], [8.0, 141.0], [15.0, 151.0], [32.0, 160.0]]
+v_cavitazione_kn = 3.0
+tonale_db = 138.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [34.0, 0, "pompa", 0.0, 1000000000.0], [68.0, -2, "pompa", 0.0, 1000000000.0], [83.0, -3, "turbina", 0.0, 1000000000.0], [124, -5, "riduttore", 0.0, 1000000000.0], [176, -8, "ausiliario", 0.0, 1000000000.0], [25.5, -13, "turbina", 0.0, 1000000000.0, 18.0], [87.83, -11, "riduttore", 0.0, 1000000000.0, 62.0], [382.5, -17, "riduttore", 0.0, 1000000000.0, 270.0]]
+pale = 5
+assi = 1
+giri_per_nodo = 8.5
+nazionalita = "urss"
+tipo_unita = "ssn"
+ts_prua_db = 10.0
+ts_traverso_db = 22.0
+snorkel_db = 0.0
+fonte = "31 §1: 1a generazione, «il piu' rumoroso» (Conway), sopra il Charlie II; senza rafting"
+
+[firme.delta3]
+punti = [[4.5, 127.5], [8.0, 132.0], [15.0, 144.0], [24.0, 152.0]]
+v_cavitazione_kn = 3.5
+tonale_db = 120.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [29.0, -2, "pompa", 0, 12], [58.0, -1, "pompa", 12, 1000000000.0], [74.0, -3, "turbina", 0.0, 1000000000.0], [137, -6, "riduttore", 0.0, 1000000000.0], [205, -9, "ausiliario", 0.0, 1000000000.0], [18.42, -15, "turbina", 0.0, 1000000000.0, 17.0], [65.0, -13, "riduttore", 0.0, 1000000000.0, 60.0], [287.08, -19, "riduttore", 0.0, 1000000000.0, 265.0]]
+pale = 5
+assi = 2
+giri_per_nodo = 6.5
+nazionalita = "urss"
+tipo_unita = "ssbn"
+ts_prua_db = 15.0
+ts_traverso_db = 30.0
+snorkel_db = 0.0
+fonte = "31 §2: Miasnikov 125-130 dB a 4 kn; 2 assi, eliche a 5 pale"
+
+[firme.sierra]
+punti = [[4.5, 117.5], [8.0, 122.0], [15.0, 134.0], [35.0, 148.0]]
+v_cavitazione_kn = 5.0
+tonale_db = 112.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [41.0, -3, "pompa", 0, 12], [82.0, -2, "pompa", 12, 1000000000.0], [97.0, -4, "turbina", 0.0, 1000000000.0], [161, -8, "riduttore", 0.0, 1000000000.0], [21.0, -17, "turbina", 0.0, 1000000000.0, 21.0], [72.0, -15, "riduttore", 0.0, 1000000000.0, 72.0], [340.0, -20, "riduttore", 0.0, 1000000000.0, 340.0]]
+pale = 7
+assi = 1
+giri_per_nodo = 6.0
+nazionalita = "urss"
+tipo_unita = "ssn"
+ts_prua_db = 2.0
+ts_traverso_db = 15.0
+snorkel_db = 0.0
+fonte = "31 §3: fra Delta III e Akula; rafting e anecoico; «come i primi Los Angeles»"
+
+[firme.ohio]
+punti = [[4.5, 105.0], [8.0, 108.0], [15.0, 117.0], [20.0, 123.0], [25.0, 130.0]]
+v_cavitazione_kn = 6.0
+tonale_db = 100.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [31.0, -6, "pompa", 10, 1000000000.0], [62.0, -5, "pompa", 18, 1000000000.0], [88.0, -6, "turbina", 0.0, 1000000000.0], [132, -10, "riduttore", 0.0, 1000000000.0], [18.0, -20, "turbina", 0.0, 1000000000.0, 24.0], [60.0, -17, "riduttore", 0.0, 1000000000.0, 80.0], [285.0, -22, "riduttore", 0.0, 1000000000.0, 380.0]]
+pale = 7
+assi = 1
+giri_per_nodo = 4.5
+nazionalita = "usa"
+tipo_unita = "ssbn"
+ts_prua_db = 15.0
+ts_traverso_db = 32.0
+snorkel_db = 0.0
+fonte = "32 §1: il piu' silenzioso degli USA, circolazione naturale del S8G, 7 pale"
+
+[firme.type206]
+punti = [[4.5, 110.0], [8.0, 116.0], [15.0, 128.0], [17.0, 131.0]]
+v_cavitazione_kn = 3.5
+tonale_db = 98.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [70.0, -4, "ausiliario", 0.0, 1000000000.0], [16.5, 0, "diesel", 0.0, 1000000000.0], [33.0, -3, "diesel", 0.0, 1000000000.0], [49.5, -6, "diesel", 0.0, 1000000000.0]]
+pale = 5
+assi = 1
+giri_per_nodo = 12.0
+nazionalita = "germania"
+tipo_unita = "ssk"
+ts_prua_db = 8.0
+ts_traverso_db = 18.0
+snorkel_db = 22.5
+fonte = "32 §5: SSK di 48 m, amagnetico; snorkel +20-25 come Kilo e Foxtrot"
+
+[firme.nacken]
+punti = [[4.5, 108.0], [8.0, 114.0], [15.0, 125.0], [20.0, 132.0]]
+v_cavitazione_kn = 3.5
+tonale_db = 96.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [65.0, -4, "ausiliario", 0.0, 1000000000.0], [25.0, 0, "diesel", 0.0, 1000000000.0], [12.5, -3, "diesel", 0.0, 1000000000.0], [75.0, -6, "diesel", 0.0, 1000000000.0]]
+pale = 5
+assi = 1
+giri_per_nodo = 11.0
+nazionalita = "svezia"
+tipo_unita = "ssk"
+ts_prua_db = 9.0
+ts_traverso_db = 20.0
+snorkel_db = 22.5
+fonte = "35: SSK svedese come il 206 ma piu' grande (STIMA); snorkel +22,5 come gli altri diesel"
+
+[firme.sottomarino_generico]
+punti = [[4.5, 120.0], [8.0, 125.0], [15.0, 138.0], [30.0, 150.0]]
+v_cavitazione_kn = 4.5
+tonale_db = 112.0
+tonale_hz = 300.0
+nazionalita = "ignota"
+tipo_unita = "generica"
+ts_prua_db = 12.0
+ts_traverso_db = 25.0
+snorkel_db = 0.0
+fonte = "classe senza firma: SSN medio"
+
+[firme.perry]
+punti = [[5.0, 135.0], [15.0, 150.0], [29.0, 165.0]]
+nave = true
+v_cavitazione_kn = 11.0
+tonale_db = 130.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [115.0, -2, "turbina", 0.0, 1000000000.0], [230, -6, "riduttore", 0.0, 1000000000.0]]
+pale = 5
+assi = 1
+giri_per_nodo = 6.0
+nazionalita = "usa"
+tipo_unita = "fregata"
+ts_prua_db = 20.0
+ts_traverso_db = 32.0
+fonte = "01 §3.2 fregate 150-170, Prairie-Masker -10"
+
+[firme.kidd]
+punti = [[5.0, 138.0], [15.0, 152.0], [33.0, 168.0]]
+nave = true
+v_cavitazione_kn = 11.0
+tonale_db = 132.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [118.0, -2, "turbina", 0.0, 1000000000.0], [236, -6, "riduttore", 0.0, 1000000000.0]]
+pale = 5
+assi = 2
+giri_per_nodo = 5.5
+nazionalita = "usa"
+tipo_unita = "cacciatorpediniere"
+ts_prua_db = 20.0
+ts_traverso_db = 34.0
+fonte = "01 §3.2, turbine a gas, Prairie-Masker"
+
+[firme.spruance]
+punti = [[5.0, 138.0], [15.0, 152.0], [32.5, 168.0]]
+nave = true
+v_cavitazione_kn = 11.0
+tonale_db = 132.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [118.0, -2, "turbina", 0.0, 1000000000.0], [177, -6, "riduttore", 0.0, 1000000000.0]]
+pale = 5
+assi = 2
+giri_per_nodo = 5.5
+nazionalita = "usa"
+tipo_unita = "cacciatorpediniere"
+ts_prua_db = 20.0
+ts_traverso_db = 34.0
+fonte = "01 §3.2, turbine a gas, Prairie-Masker"
+
+[firme.krivak2]
+punti = [[5.0, 145.0], [15.0, 160.0], [32.0, 172.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 140.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [105.0, -2, "turbina", 0.0, 1000000000.0], [210, -6, "riduttore", 0.0, 1000000000.0]]
+pale = 5
+assi = 2
+giri_per_nodo = 6.0
+nazionalita = "urss"
+tipo_unita = "fregata"
+ts_prua_db = 20.0
+ts_traverso_db = 32.0
+fonte = "01 §3.2 fregate senza Masker"
+
+[firme.kara]
+punti = [[5.0, 145.0], [15.0, 160.0], [34.0, 173.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 140.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [110.0, -2, "turbina", 0.0, 1000000000.0], [165, -6, "riduttore", 0.0, 1000000000.0]]
+pale = 5
+assi = 2
+giri_per_nodo = 5.5
+nazionalita = "urss"
+tipo_unita = "incrociatore"
+ts_prua_db = 22.0
+ts_traverso_db = 35.0
+fonte = "01 §3.2"
+
+[firme.slava]
+punti = [[5.0, 145.0], [15.0, 160.0], [32.0, 172.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 140.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [98.0, -2, "turbina", 0.0, 1000000000.0], [196, -6, "riduttore", 0.0, 1000000000.0]]
+pale = 5
+assi = 2
+giri_per_nodo = 5.5
+nazionalita = "urss"
+tipo_unita = "incrociatore"
+ts_prua_db = 22.0
+ts_traverso_db = 35.0
+fonte = "01 §3.2"
+
+[firme.koni]
+punti = [[5.0, 145.0], [15.0, 160.0], [27.0, 170.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 140.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [14.0, -2, "diesel", 0.0, 1000000000.0], [28.0, -5, "diesel", 0.0, 1000000000.0], [125.0, -4, "turbina", 0.0, 1000000000.0]]
+pale = 4
+assi = 3
+giri_per_nodo = 7.0
+nazionalita = "urss"
+tipo_unita = "fregata"
+ts_prua_db = 18.0
+ts_traverso_db = 30.0
+fonte = "01 §3.2"
+
+[firme.nanuchka]
+punti = [[5.0, 145.0], [15.0, 160.0], [33.0, 172.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 140.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [17.0, -2, "diesel", 0.0, 1000000000.0], [34.0, -5, "diesel", 0.0, 1000000000.0]]
+pale = 4
+assi = 3
+giri_per_nodo = 9.0
+nazionalita = "urss"
+tipo_unita = "corvetta"
+ts_prua_db = 15.0
+ts_traverso_db = 28.0
+fonte = "01 §3.2 (piccola)"
+
+[firme.oslo]
+punti = [[5.0, 140.0], [15.0, 155.0], [25.0, 165.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 134.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [98.0, -2, "turbina", 0.0, 1000000000.0], [196, -6, "riduttore", 0.0, 1000000000.0], [29.0, -4, "pompa", 0.0, 1000000000.0]]
+pale = 5
+assi = 1
+giri_per_nodo = 7.0
+nazionalita = "norvegia"
+tipo_unita = "fregata"
+ts_prua_db = 18.0
+ts_traverso_db = 30.0
+fonte = "35: fregata norvegese (Dealey modificata), 1.760 t, turbina a vapore su 1 asse, 20.000 shp, 25 nodi"
+
+[firme.stockholm]
+punti = [[5.0, 135.0], [15.0, 150.0], [32.0, 163.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 130.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [31.7, -2, "diesel", 0.0, 1000000000.0], [63.3, -5, "diesel", 0.0, 1000000000.0], [140.0, -4, "turbina", 0.0, 1000000000.0]]
+pale = 4
+assi = 3
+giri_per_nodo = 12.0
+nazionalita = "svezia"
+tipo_unita = "corvetta"
+ts_prua_db = 10.0
+ts_traverso_db = 20.0
+fonte = "35: corvetta svedese, 372 t, CODAG su 3 assi (2 MTU 16V396 e una Allison 570), 32 nodi"
+
+[firme.kitty_hawk]
+punti = [[5.0, 158.0], [15.0, 173.0], [32.0, 183.0]]
+nave = true
+v_cavitazione_kn = 11.0
+tonale_db = 153.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [80.0, -2, "turbina", 0.0, 1000000000.0], [160, -6, "riduttore", 0.0, 1000000000.0], [32.0, -3, "pompa", 0.0, 1000000000.0], [48.0, -5, "ausiliario", 0.0, 1000000000.0]]
+pale = 5
+assi = 4
+giri_per_nodo = 6.0
+nazionalita = "usa"
+tipo_unita = "portaerei"
+ts_prua_db = 25.0
+ts_traverso_db = 40.0
+fonte = "35: portaerei a vapore, 8 caldaie e 4 assi, 280.000 shp, 32 nodi; sopra la Nimitz (caldaie, ventilatori, pompe)"
+
+[firme.hauk]
+punti = [[5.0, 130.0], [20.0, 150.0], [34.0, 163.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 125.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [30.0, -2, "diesel", 0.0, 1000000000.0], [150.0, -4, "diesel", 0.0, 1000000000.0]]
+pale = 3
+assi = 2
+giri_per_nodo = 30.0
+nazionalita = "norvegia"
+tipo_unita = "pattugliatore"
+ts_prua_db = 8.0
+ts_traverso_db = 16.0
+fonte = "STIMA: motocannoniera norvegese Hauk, 36,5 m e 148 t, due diesel veloci su 2 assi, 34 nodi (kit, extracted/navi/hauk)"
+
+[firme.kirov]
+punti = [[5.0, 150.0], [15.0, 165.0], [32.0, 177.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 145.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [92.0, -2, "turbina", 0.0, 1000000000.0], [46.0, -4, "pompa", 0.0, 1000000000.0], [138, -6, "riduttore", 0.0, 1000000000.0]]
+pale = 5
+assi = 2
+giri_per_nodo = 5.0
+nazionalita = "urss"
+tipo_unita = "incrociatore"
+ts_prua_db = 25.0
+ts_traverso_db = 40.0
+fonte = "01 §3.2 portaerei/BB 170-180 (incrociatore nucleare)"
+
+[firme.iowa]
+punti = [[5.0, 155.0], [15.0, 170.0], [33.0, 180.0]]
+nave = true
+v_cavitazione_kn = 11.0
+tonale_db = 150.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [85.0, -2, "turbina", 0.0, 1000000000.0], [160, -6, "riduttore", 0.0, 1000000000.0]]
+pale = 4
+assi = 4
+giri_per_nodo = 6.0
+nazionalita = "usa"
+tipo_unita = "corazzata"
+ts_prua_db = 25.0
+ts_traverso_db = 40.0
+fonte = "01 §3.2 portaerei/BB 170-180"
+
+[firme.nimitz]
+punti = [[5.0, 155.0], [15.0, 170.0], [30.0, 180.0]]
+nave = true
+v_cavitazione_kn = 11.0
+tonale_db = 150.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [82.0, -2, "turbina", 0.0, 1000000000.0], [41.0, -4, "pompa", 0.0, 1000000000.0], [164, -6, "riduttore", 0.0, 1000000000.0]]
+pale = 5
+assi = 4
+giri_per_nodo = 6.0
+nazionalita = "usa"
+tipo_unita = "portaerei"
+ts_prua_db = 25.0
+ts_traverso_db = 40.0
+fonte = "01 §3.2 portaerei/BB 170-180"
+
+[firme.sacramento]
+punti = [[5.0, 150.0], [15.0, 168.0], [26.0, 177.0]]
+nave = true
+v_cavitazione_kn = 11.0
+tonale_db = 145.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [78.0, -2, "turbina", 0.0, 1000000000.0], [156, -6, "riduttore", 0.0, 1000000000.0]]
+pale = 5
+assi = 2
+giri_per_nodo = 6.0
+nazionalita = "usa"
+tipo_unita = "rifornitrice"
+ts_prua_db = 25.0
+ts_traverso_db = 38.0
+fonte = "01 §3.2"
+
+[firme.mercantile]
+punti = [[5.0, 160.0], [12.0, 175.0], [18.0, 183.0]]
+nave = true
+v_cavitazione_kn = 6.0
+tonale_db = 138.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [8.3, 12, "diesel", 0.0, 1000000000.0], [16.7, 10, "diesel", 0.0, 1000000000.0], [25.0, 8, "diesel", 0.0, 1000000000.0]]
+pale = 4
+assi = 1
+giri_per_nodo = 6.0
+nazionalita = "civile"
+tipo_unita = "mercantile"
+ts_prua_db = 25.0
+ts_traverso_db = 38.0
+fonte = "01 §3.2 mercantili 175-185"
+
+[firme.cargo]
+punti = [[5.0, 162.0], [12.0, 177.0], [16.4, 183.0]]
+nave = true
+v_cavitazione_kn = 6.0
+tonale_db = 140.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [9.5, 12, "diesel", 0.0, 1000000000.0], [19.0, 10, "diesel", 0.0, 1000000000.0], [28.5, 8, "diesel", 0.0, 1000000000.0]]
+pale = 6
+assi = 1
+giri_per_nodo = 5.5
+nazionalita = "civile"
+tipo_unita = "mercantile"
+ts_prua_db = 25.0
+ts_traverso_db = 40.0
+fonte = "01 §3.2 mercantili 175-185"
+
+[firme.ugra]
+punti = [[5.0, 148.0], [12.0, 160.0], [17.0, 168.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 143.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [12.5, -1, "diesel", 0.0, 1000000000.0], [25.0, -3, "diesel", 0.0, 1000000000.0], [37.5, -5, "diesel", 0.0, 1000000000.0], [60.0, -6, "ausiliario", 0.0, 1000000000.0]]
+pale = 4
+assi = 2
+giri_per_nodo = 8.0
+nazionalita = "urss"
+tipo_unita = "rifornitrice"
+ts_prua_db = 24.0
+ts_traverso_db = 38.0
+fonte = "STIMA: base galleggiante Progetto 1886, 141 m e 9.650 t, due diesel su 2 assi, 17 nodi (kit, extracted/navi/ugra); fra le combattenti diesel e i mercantili"
+
+[firme.petroliera]
+punti = [[5.0, 165.0], [12.0, 180.0], [15.0, 186.0]]
+nave = true
+v_cavitazione_kn = 6.0
+tonale_db = 143.0
+tonale_hz = 250.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [7.2, 12, "diesel", 0.0, 1000000000.0], [14.4, 10, "diesel", 0.0, 1000000000.0], [21.6, 8, "diesel", 0.0, 1000000000.0]]
+pale = 5
+assi = 1
+giri_per_nodo = 6.0
+nazionalita = "civile"
+tipo_unita = "petroliera"
+ts_prua_db = 25.0
+ts_traverso_db = 40.0
+fonte = "01 §3.2 petroliere 180-190"
+
+[firme.ticonderoga]
+punti = [[5.0, 138.0], [15.0, 152.0], [32.0, 168.0]]
+nave = true
+v_cavitazione_kn = 11.0
+tonale_db = 132.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [121.0, -2, "turbina", 0.0, 1000000000.0], [181.5, -6, "riduttore", 0.0, 1000000000.0]]
+pale = 5
+assi = 2
+giri_per_nodo = 5.5
+nazionalita = "usa"
+tipo_unita = "incrociatore"
+ts_prua_db = 22.0
+ts_traverso_db = 36.0
+fonte = "32 §2: scafo e macchine della Spruance, Prairie-Masker"
+
+[firme.knox]
+punti = [[5.0, 142.0], [15.0, 157.0], [27.0, 168.0]]
+nave = true
+v_cavitazione_kn = 11.0
+tonale_db = 136.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [93.0, -2, "turbina", 0.0, 1000000000.0], [186, -6, "riduttore", 0.0, 1000000000.0], [28.0, -4, "pompa", 0.0, 1000000000.0]]
+pale = 5
+assi = 1
+giri_per_nodo = 6.5
+nazionalita = "usa"
+tipo_unita = "fregata"
+ts_prua_db = 20.0
+ts_traverso_db = 33.0
+fonte = "32 §3: vapore su un asse, Prairie-Masker non confermato"
+
+[firme.type22]
+punti = [[5.0, 140.0], [15.0, 155.0], [30.0, 169.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 135.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [108.0, -2, "turbina", 0.0, 1000000000.0], [22.5, -1, "diesel", 0.0, 1000000000.0], [45.0, -4, "diesel", 0.0, 1000000000.0]]
+pale = 5
+assi = 2
+giri_per_nodo = 6.0
+nazionalita = "uk"
+tipo_unita = "fregata"
+ts_prua_db = 20.0
+ts_traverso_db = 33.0
+fonte = "32 §4: COGOG, Agouti; diesel dei generatori senza raft"
+
+[firme.type22b2]
+punti = [[5.0, 140.0], [15.0, 155.0], [30.0, 169.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 135.0
+tonale_hz = 300.0
+righe = [[60, -6, "rete", 0.0, 1000000000.0], [120, -9, "rete", 0.0, 1000000000.0], [180, -12, "rete", 0.0, 1000000000.0], [300, 0, "rete", 0.0, 1000000000.0], [108.0, -2, "turbina", 0.0, 1000000000.0], [22.5, -1, "diesel", 0.0, 1000000000.0], [45.0, -4, "diesel", 0.0, 1000000000.0]]
+pale = 5
+assi = 2
+giri_per_nodo = 6.0
+nazionalita = "uk"
+tipo_unita = "fregata"
+ts_prua_db = 20.0
+ts_traverso_db = 34.0
+fonte = "32 §4: il Batch 2, scafo allungato di 15 m per la 2031Z; le stesse macchine e i diesel senza raft (STIMA)"
+
+[firme.udaloy]
+punti = [[5.0, 145.0], [15.0, 160.0], [30.0, 172.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 140.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [102.0, -2, "turbina", 0.0, 1000000000.0], [204, -6, "riduttore", 0.0, 1000000000.0]]
+pale = 5
+assi = 2
+giri_per_nodo = 5.5
+nazionalita = "urss"
+tipo_unita = "cacciatorpediniere"
+ts_prua_db = 22.0
+ts_traverso_db = 36.0
+fonte = "31 §4: COGAG su 2 assi, nessuna cortina d'aria nota (come Kara)"
+
+[firme.grisha3]
+punti = [[5.0, 143.0], [15.0, 158.0], [32.0, 171.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 138.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [21.0, -2, "diesel", 0.0, 1000000000.0], [42.0, -5, "diesel", 0.0, 1000000000.0], [130.0, -4, "turbina", 0.0, 1000000000.0]]
+pale = 4
+assi = 3
+giri_per_nodo = 7.5
+nazionalita = "urss"
+tipo_unita = "corvetta"
+ts_prua_db = 15.0
+ts_traverso_db = 27.0
+fonte = "31 §5: CODAG su 3 assi, piccola (come Koni)"
+
+[firme.nave_generica]
+punti = [[5.0, 145.0], [15.0, 160.0], [30.0, 172.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 140.0
+tonale_hz = 300.0
+nazionalita = "ignota"
+tipo_unita = "generica"
+ts_prua_db = 20.0
+ts_traverso_db = 32.0
+fonte = "classe senza firma: fregata senza Masker"
+
+[firme.agi]
+punti = [[1.0, 135.0], [5.0, 150.0], [9.0, 158.0], [11.5, 163.0]]
+nave = true
+v_cavitazione_kn = 8.0
+tonale_db = 132.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [25.0, -2, "diesel", 0.0, 1000000000.0], [8.3, -6, "diesel", 0.0, 1000000000.0], [15.3, 0, "diesel", 1, 1000000000.0], [30.6, -3, "diesel", 1, 1000000000.0], [3.8, -8, "diesel", 1, 1000000000.0]]
+pale = 4
+assi = 1
+giri_per_nodo = 26.0
+nazionalita = "urss"
+tipo_unita = "agi"
+ts_prua_db = 15.0
+ts_traverso_db = 28.0
+fonte = "STIMA: AGI Okean, diesel da 540 CV; in deriva il solo generatore (kit, extracted/navi/agi)"
+
+[firme.peschereccio]
+punti = [[1.0, 148.0], [2.5, 166.0], [5.0, 167.0], [7.0, 161.0], [10.0, 167.0], [14.0, 174.0]]
+nave = true
+v_cavitazione_kn = 6.0
+tonale_db = 135.0
+tonale_hz = 250.0
+righe = [[50, -6, "rete", 0.0, 1000000000.0], [100, -9, "rete", 0.0, 1000000000.0], [150, -12, "rete", 0.0, 1000000000.0], [250, 0, "rete", 0.0, 1000000000.0], [75.0, 0, "diesel", 0.0, 1000000000.0], [112.5, -5, "diesel", 0.0, 1000000000.0], [37.5, -6, "diesel", 0.0, 1000000000.0], [12.5, -5, "diesel", 0.0, 1000000000.0], [10.7, -2, "elica", 0.0, 1000000000.0], [21.3, -6, "elica", 0.0, 1000000000.0], [32.0, -9, "elica", 0.0, 1000000000.0], [14.0, -6, "ausiliario", 2, 5.5], [28.0, -10, "ausiliario", 2, 5.5], [42.0, -14, "ausiliario", 2, 5.5], [225.0, -8, "ausiliario", 2, 5.5]]
+pale = 0
+assi = 1
+giri_per_nodo = 0.0
+nazionalita = "civile"
+tipo_unita = "peschereccio"
+ts_prua_db = 18.0
+ts_traverso_db = 32.0
+fonte = "STIMA: peschereccio a rampa poppiera, diesel da 4000 CV, passo variabile; al lavoro a 2-5,5 kn (kit, extracted/navi/peschereccio)"
+
+[firme.biologico]
+punti = [[1.0, 140.0], [10.0, 140.0]]
+nave = true
+v_cavitazione_kn = 0.0
+tonale_db = 150.0
+tonale_hz = 300.0
+righe = [[20.0, 0, "biologico", 0.0, 1000000000.0], [40.0, -8, "biologico", 0.0, 1000000000.0]]
+pale = 0
+assi = 0
+giri_per_nodo = 0.0
+nazionalita = "biologico"
+tipo_unita = "biologico"
+ts_prua_db = 0.0
+ts_traverso_db = 10.0
+fonte = "02 §4.5: balenottere 180-190 dB a 10-40 Hz (impulsi); STIMA in banda"
+
+[firme.adc_mk2]
+punti = [[0.1, 150.0], [10.0, 150.0]]
+nave = true
+v_cavitazione_kn = 0.0
+tonale_db = 140.0
+tonale_hz = 300.0
+nazionalita = "arma"
+tipo_unita = "esca"
+ts_prua_db = 10.0
+ts_traverso_db = 10.0
+fonte = "05 §5.1: esca ADC Mk 2, 150 dB, eco puntuale (C6b)"
+
+[firme.mk48]
+punti = [[28.0, 140.0], [40.0, 150.0], [55.0, 160.0]]
+nave = true
+v_cavitazione_kn = 0.0
+tonale_db = 140.0
+tonale_hz = 300.0
+righe = [[660, 2, "elica", 0, 47], [1320, -4, "elica", 0, 47], [132, -4, "riduttore", 0, 47], [1188, -4, "riduttore", 0, 47], [264, -4, "turbina", 0, 47], [907.5, 12, "elica", 47, 1000000000.0], [1815, 6, "elica", 47, 1000000000.0], [181.5, 6, "riduttore", 47, 1000000000.0], [1633.5, 6, "riduttore", 47, 1000000000.0], [363, 6, "turbina", 47, 1000000000.0]]
+pale = 0
+assi = 1
+giri_per_nodo = 0.0
+nazionalita = "arma"
+tipo_unita = "siluro"
+ts_prua_db = -25.0
+ts_traverso_db = -20.0
+fonte = "STIMA: siluro pesante, 150-160 dB a 45 kn"
+
+[firme.mk48_adcap]
+punti = [[28.0, 138.0], [40.0, 148.0], [60.0, 158.0]]
+nave = true
+v_cavitazione_kn = 0.0
+tonale_db = 138.0
+tonale_hz = 300.0
+righe = [[660, -1, "elica", 0, 47], [1320, -7, "elica", 0, 47], [264, -10, "turbina", 0, 47], [907.5, 9, "elica", 47, 1000000000.0], [1815, 3, "elica", 47, 1000000000.0], [363, 0, "turbina", 47, 1000000000.0]]
+pale = 0
+assi = 1
+giri_per_nodo = 0.0
+nazionalita = "arma"
+tipo_unita = "siluro"
+ts_prua_db = -25.0
+ts_traverso_db = -20.0
+fonte = "STIMA: ADCAP piu' silenzioso"
+
+[firme.tigerfish]
+punti = [[24.0, 138.0], [35.0, 148.0]]
+nave = true
+v_cavitazione_kn = 0.0
+tonale_db = 138.0
+tonale_hz = 300.0
+nazionalita = "arma"
+tipo_unita = "siluro"
+ts_prua_db = -25.0
+ts_traverso_db = -20.0
+fonte = "STIMA"
+
+[firme.spearfish]
+punti = [[30.0, 140.0], [60.0, 160.0]]
+nave = true
+v_cavitazione_kn = 0.0
+tonale_db = 140.0
+tonale_hz = 300.0
+nazionalita = "arma"
+tipo_unita = "siluro"
+ts_prua_db = -25.0
+ts_traverso_db = -20.0
+fonte = "STIMA"
+
+[firme.uset80]
+punti = [[35.0, 145.0], [45.0, 155.0]]
+nave = true
+v_cavitazione_kn = 0.0
+tonale_db = 145.0
+tonale_hz = 300.0
+righe = [[154, -12, "elica", 0, 40], [308, -16, "elica", 0, 40], [385, -14, "turbina", 0, 40], [198, -2, "elica", 40, 1000000000.0], [396, -6, "elica", 40, 1000000000.0], [495, -4, "turbina", 40, 1000000000.0]]
+pale = 0
+assi = 1
+giri_per_nodo = 0.0
+nazionalita = "arma"
+tipo_unita = "siluro"
+ts_prua_db = -25.0
+ts_traverso_db = -20.0
+fonte = "STIMA; anche il type53 delle missioni"
+
+[firme.test71m]
+punti = [[24.0, 140.0], [40.0, 152.0]]
+nave = true
+v_cavitazione_kn = 0.0
+tonale_db = 140.0
+tonale_hz = 300.0
+righe = [[105.6, -12, "elica", 0, 32], [211, -16, "elica", 0, 32], [264, -14, "turbina", 0, 32], [176, 0, "elica", 32, 1000000000.0], [352, -4, "elica", 32, 1000000000.0], [440, -2, "turbina", 32, 1000000000.0]]
+pale = 0
+assi = 1
+giri_per_nodo = 0.0
+nazionalita = "arma"
+tipo_unita = "siluro"
+ts_prua_db = -25.0
+ts_traverso_db = -20.0
+fonte = "STIMA"
+
+[firme.type53_65k]
+punti = [[44.0, 158.0], [46.0, 158.0]]
+nave = true
+v_cavitazione_kn = 0.0
+tonale_db = 150.0
+tonale_hz = 300.0
+righe = [[180, -2, "elica", 0.0, 1000000000.0], [360, -6, "elica", 0.0, 1000000000.0], [5000, 0, "turbina", 0.0, 1000000000.0]]
+pale = 0
+assi = 1
+giri_per_nodo = 0.0
+nazionalita = "arma"
+tipo_unita = "siluro"
+ts_prua_db = -25.0
+ts_traverso_db = -20.0
+fonte = "STIMA: segui-scia a vapore-gas, rumoroso"
+
+[firme.mk46]
+punti = [[30.0, 140.0], [45.0, 152.0]]
+nave = true
+v_cavitazione_kn = 0.0
+tonale_db = 140.0
+tonale_hz = 300.0
+righe = [[157, -10, "elica", 0, 36], [235, -10, "elica", 0, 36], [392, -16, "elica", 0, 36], [252, 2, "elica", 36, 1000000000.0], [378, 2, "elica", 36, 1000000000.0], [630, -4, "elica", 36, 1000000000.0]]
+pale = 0
+assi = 1
+giri_per_nodo = 0.0
+nazionalita = "arma"
+tipo_unita = "siluro"
+ts_prua_db = -28.0
+ts_traverso_db = -23.0
+fonte = "STIMA: leggero"
+
+[firme.at1]
+punti = [[26.0, 145.0], [28.0, 145.0]]
+nave = true
+v_cavitazione_kn = 0.0
+tonale_db = 140.0
+tonale_hz = 300.0
+righe = [[140, -10, "elica", 0.0, 1000000000.0], [280, -14, "elica", 0.0, 1000000000.0], [350, -12, "turbina", 0.0, 1000000000.0]]
+pale = 0
+assi = 1
+giri_per_nodo = 0.0
+nazionalita = "arma"
+tipo_unita = "siluro"
+ts_prua_db = -28.0
+ts_traverso_db = -23.0
+fonte = "STIMA"
+
+[firme.siluro_generico]
+punti = [[28.0, 140.0], [45.0, 155.0]]
+nave = true
+v_cavitazione_kn = 0.0
+tonale_db = 140.0
+tonale_hz = 300.0
+nazionalita = "arma"
+tipo_unita = "siluro"
+ts_prua_db = -25.0
+ts_traverso_db = -20.0
+fonte = "arma senza firma"
+
+[sensori.bqq5_sfera]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 4.6
+bande_hz = [150.0, 300.0, 1000.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 45.0
+nl_flusso_db = 50.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 25.0
+baffles_gradi = 35.0
+baffles_db = 15.0
+lofar_bin_hz = 0.1
+lofar_integrazione_s = 60.0
+isolamento_proprio_db = 30.0
+nota = "688: sfera BQS-13 del BQQ-5 in passivo a bassa frequenza (FAS) con il LOFAR; sorda oltre 20-25 kn"
+
+[sensori.bqq5_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 4.6
+bande_hz = [3500.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 45.0
+nl_flusso_db = 50.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 25.0
+baffles_gradi = 35.0
+sl_attivo_db = 225.0
+impulso_s = 0.5
+nota = "688: BQQ-5 attivo, ~3,5 kHz, SL 220-230"
+
+[sensori.tb16]
+modo = "passivo"
+antenna = "lineare"
+dimensione_m = 73.0
+bande_hz = [50.0, 150.0, 300.0, 1000.0]
+integrazione_s = 30.0
+indice_rilevazione = 14.0
+nl_macchina_db = 35.0
+nl_flusso_db = 45.0
+v0_flusso_kn = 12.0
+velocita_max_kn = 17.0
+baffles_gradi = 0.0
+virata_max_deg_s = 0.3
+raddrizzamento_s = 120.0
+endfire_gradi = 25.0
+conico = true
+lofar_bin_hz = 0.05
+lofar_integrazione_s = 120.0
+cavo_diametro_m = 0.0094
+nota = "schiera trainata TB-16, apertura 73 m; inutilizzabile oltre 15-18 kn; cieca in virata oltre 0,3 gradi/s, poi si raddrizza in 2 min (docs/07 §3.4); endfire verso il battello cieco"
+
+[sensori.skat]
+modo = "passivo"
+antenna = "lineare"
+dimensione_m = 80.0
+bande_hz = [50.0, 150.0, 300.0]
+integrazione_s = 10.0
+indice_rilevazione = 100.0
+nl_macchina_db = 50.0
+nl_flusso_db = 58.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 14.0
+baffles_gradi = 0.0
+virata_max_deg_s = 0.3
+raddrizzamento_s = 150.0
+endfire_gradi = 25.0
+conico = true
+lofar_bin_hz = 0.1
+lofar_integrazione_s = 120.0
+cavo_diametro_m = 0.012
+nota = "schiera trainata sovietica (Skat-KS «Barrakuda» del Victor III, «Pelamida» dell'Akula): dossier 04 §3 e §6.2, tutto STIMA; 200 m (80 di apertura efficace), 5-400 Hz, sorda verso 12-14 kn; il rumore proprio e l'elaborazione peggiori delle schiere USA (STIMA tarata perche' il vantaggio di scoperta fra le classi del dossier 24 §5.1 resti entro 4 dB)"
+
+[sensori.wlr9]
+modo = "passivo"
+antenna = "scafo"
+dimensione_m = 0.3
+bande_hz = [3500.0, 10000.0, 25000.0]
+integrazione_s = 1.0
+indice_rilevazione = 14.0
+nl_macchina_db = 50.0
+nl_flusso_db = 52.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+di_fisso_db = 0.0
+nota = "WLR-9: intercettazione degli impulsi attivi (contro-scoperta, 02 §5.3); idrofoni a larga apertura, nessun guadagno d'antenna (06 §2: STIMA)"
+
+[sensori.intercettazione_sov]
+modo = "passivo"
+antenna = "scafo"
+dimensione_m = 0.3
+bande_hz = [3500.0, 10000.0, 25000.0]
+integrazione_s = 1.0
+indice_rilevazione = 14.0
+nl_macchina_db = 55.0
+nl_flusso_db = 55.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+di_fisso_db = 0.0
+nota = "intercettazione sovietica (stesso modello del WLR-9, Enisej sull'Alfa): STIMA"
+
+[sensori.nave_sovietica]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 4.0
+bande_hz = [1000.0, 3500.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 64.0
+nl_flusso_db = 58.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 30.0
+baffles_gradi = 30.0
+baffles_db = 15.0
+lofar_bin_hz = 1.0
+lofar_integrazione_s = 30.0
+nota = "navi sovietiche: sonar di prua in passivo, STIMA; LOFAR grossolano (1 Hz, 30 s: STIMA, come i sonobe di prima generazione) per le righe forti delle navi veloci"
+
+[sensori.sovietico_3gen]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 4.0
+bande_hz = [150.0, 300.0, 1000.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 50.0
+nl_flusso_db = 52.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 25.0
+baffles_gradi = 40.0
+baffles_db = 15.0
+lofar_bin_hz = 0.2
+lofar_integrazione_s = 60.0
+isolamento_proprio_db = 28.0
+nota = "MGK-400/503 (Victor III, Akula, Oscar, Typhoon): STIMA; LOFAR piu' grossolano"
+
+[sensori.sovietico_2gen]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 3.0
+bande_hz = [300.0, 1000.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 56.0
+nl_flusso_db = 55.0
+v0_flusso_kn = 7.0
+velocita_max_kn = 22.0
+baffles_gradi = 45.0
+baffles_db = 15.0
+lofar_bin_hz = 1.0
+lofar_integrazione_s = 30.0
+isolamento_proprio_db = 24.0
+nota = "MG-200/Kerch (Charlie, Foxtrot, Alfa): STIMA; LOFAR grossolano (1 Hz, 30 s: STIMA, come i sonobe di prima generazione): le righe forti delle navi veloci passano, quelle dei sottomarini quieti no"
+
+[sensori.sovietico_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 4.0
+bande_hz = [3500.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 50.0
+nl_flusso_db = 52.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 25.0
+baffles_gradi = 40.0
+sl_attivo_db = 222.0
+impulso_s = 0.5
+nota = "attivo dei sottomarini sovietici: STIMA"
+
+[sensori.sqs53]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 5.0
+bande_hz = [1000.0, 3500.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 60.0
+nl_flusso_db = 56.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 30.0
+baffles_gradi = 30.0
+baffles_db = 15.0
+lofar_bin_hz = 1.0
+lofar_integrazione_s = 30.0
+nota = "nave: sonar di prua in passivo (SQS-53/26); LOFAR grossolano (1 Hz, 30 s: STIMA, come i sonobe di prima generazione)"
+
+[sensori.sqs53_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 5.0
+bande_hz = [3500.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 60.0
+nl_flusso_db = 56.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 30.0
+baffles_gradi = 30.0
+sl_attivo_db = 235.0
+impulso_s = 1.0
+nota = "SQS-53 attivo, ~3 kHz, SL 235 nominale (02 §1.5)"
+
+[sensori.type2016]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 4.0
+bande_hz = [1000.0, 3500.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 60.0
+nl_flusso_db = 56.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 30.0
+baffles_gradi = 30.0
+baffles_db = 15.0
+lofar_bin_hz = 1.0
+lofar_integrazione_s = 30.0
+nota = "Type 22: Type 2016 in passivo; STIMA come l'SQS-53 piu' piccolo"
+
+[sensori.type2016_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 4.0
+bande_hz = [10000.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 60.0
+nl_flusso_db = 56.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 30.0
+baffles_gradi = 30.0
+sl_attivo_db = 228.0
+impulso_s = 0.5
+nota = "Type 2016 attivo: media frequenza (banda di 10 kHz) e SL 228, STIMA"
+
+[sensori.sqs56_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 2.5
+bande_hz = [10000.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 60.0
+nl_flusso_db = 56.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 30.0
+baffles_gradi = 30.0
+sl_attivo_db = 222.0
+impulso_s = 0.5
+nota = "FFG-7: SQS-56, 6,8-8,2 kHz (banda di 10 kHz), SL 220-225"
+
+[sensori.titan2_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 4.0
+bande_hz = [3500.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 62.0
+nl_flusso_db = 58.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 30.0
+baffles_gradi = 30.0
+sl_attivo_db = 228.0
+impulso_s = 0.5
+nota = "navi sovietiche: MG-332 Titan-2 e simili, 3-8 kHz"
+
+[sensori.polinom]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 7.0
+bande_hz = [300.0, 1000.0, 3500.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 64.0
+nl_flusso_db = 58.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 30.0
+baffles_gradi = 30.0
+baffles_db = 15.0
+lofar_bin_hz = 0.5
+lofar_integrazione_s = 60.0
+nota = "Udaloy: MGK-355 Polinom in passivo, cupola di prua «Horse Jaw» a bassa frequenza (STIMA)"
+
+[sensori.polinom_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 7.0
+bande_hz = [3500.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 64.0
+nl_flusso_db = 58.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 30.0
+baffles_gradi = 30.0
+sl_attivo_db = 232.0
+impulso_s = 1.0
+nota = "Udaloy: MGK-355 Polinom attivo a bassa frequenza navale (2-4 kHz come l'SQS-53), SL 232, cupola grande (STIMA; «90 km» nel capitolato)"
+
+[sensori.sqs35_vds]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 4.8
+bande_hz = [3500.0, 10000.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 50.0
+nl_flusso_db = 52.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 20.0
+baffles_gradi = 0.0
+isolamento_proprio_db = 45.0
+nota = "Knox: AN/SQS-35 IVDS in ascolto («listen»), pesce di 4,8 m fino a 180 m (33 §1)"
+
+[sensori.sqs35_vds_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 4.8
+bande_hz = [10000.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 50.0
+nl_flusso_db = 52.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 20.0
+baffles_gradi = 0.0
+sl_attivo_db = 220.0
+impulso_s = 0.5
+nota = "Knox: AN/SQS-35 attivo a 13 kHz (banda di 10 kHz), SL 220 (STIMA)"
+
+[sensori.sqr18a]
+modo = "passivo"
+antenna = "lineare"
+dimensione_m = 200.0
+bande_hz = [50.0, 150.0, 300.0, 1000.0]
+integrazione_s = 30.0
+indice_rilevazione = 14.0
+nl_macchina_db = 42.0
+nl_flusso_db = 50.0
+v0_flusso_kn = 12.0
+velocita_max_kn = 20.0
+baffles_gradi = 0.0
+virata_max_deg_s = 0.3
+raddrizzamento_s = 150.0
+endfire_gradi = 25.0
+conico = true
+lofar_bin_hz = 0.1
+lofar_integrazione_s = 120.0
+cavo_diametro_m = 0.02
+nota = "Knox: AN/SQR-18A TACTAS trainata dal pesce dell'SQS-35 (33 §1); misure STIMA"
+
+[sensori.sqr19]
+modo = "passivo"
+antenna = "lineare"
+dimensione_m = 242.0
+bande_hz = [50.0, 150.0, 300.0, 1000.0]
+integrazione_s = 30.0
+indice_rilevazione = 14.0
+nl_macchina_db = 40.0
+nl_flusso_db = 48.0
+v0_flusso_kn = 12.0
+velocita_max_kn = 25.0
+baffles_gradi = 0.0
+virata_max_deg_s = 0.3
+raddrizzamento_s = 150.0
+endfire_gradi = 25.0
+conico = true
+lofar_bin_hz = 0.05
+lofar_integrazione_s = 120.0
+cavo_diametro_m = 0.0254
+nota = "Spruance, Perry, Ticonderoga: AN/SQR-19 TACTAS dell'SQQ-89, 1.700-1.800 m di cavo, fino a 335-360 m (33 §1); rumore e LOFAR come le schiere USA, un po' sopra la TB-16 (STIMA)"
+
+[sensori.type2031z]
+modo = "passivo"
+antenna = "lineare"
+dimensione_m = 500.0
+bande_hz = [50.0, 150.0, 300.0]
+integrazione_s = 30.0
+indice_rilevazione = 14.0
+nl_macchina_db = 46.0
+nl_flusso_db = 50.0
+v0_flusso_kn = 12.0
+velocita_max_kn = 20.0
+baffles_gradi = 0.0
+virata_max_deg_s = 0.3
+raddrizzamento_s = 180.0
+endfire_gradi = 25.0
+conico = true
+lofar_bin_hz = 0.05
+lofar_integrazione_s = 120.0
+cavo_diametro_m = 0.03
+nota = "Type 22 Batch 2: Type 2031Z passiva VLF, circa 500 m (04 §4); il rumore proprio sopra la SQR-19 per i diesel senza raft (32 §4); tutto il resto STIMA"
+
+[sensori.sqs36]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 3.0
+bande_hz = [3500.0, 10000.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 60.0
+nl_flusso_db = 56.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 25.0
+baffles_gradi = 30.0
+baffles_db = 15.0
+nota = "Oslo: AN/SQS-36 di scafo in ascolto (35); STIMA"
+
+[sensori.sqs36_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 3.0
+bande_hz = [10000.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 60.0
+nl_flusso_db = 56.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 25.0
+baffles_gradi = 30.0
+sl_attivo_db = 218.0
+impulso_s = 0.5
+nota = "Oslo: SQS-36 attivo a 13 kHz (banda di 10 kHz), col Terne III (35)"
+
+[sensori.sa950]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 1.5
+bande_hz = [10000.0, 25000.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 60.0
+nl_flusso_db = 58.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 25.0
+baffles_gradi = 30.0
+baffles_db = 15.0
+nota = "Stockholm: Simrad SA950 di scafo, alta frequenza (35); STIMA"
+
+[sensori.sa950_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 1.5
+bande_hz = [25000.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 60.0
+nl_flusso_db = 58.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 25.0
+baffles_gradi = 30.0
+sl_attivo_db = 212.0
+impulso_s = 0.2
+nota = "Stockholm: SA950 attivo (35); STIMA"
+
+[sensori.salmon_vds]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 1.5
+bande_hz = [3500.0, 10000.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 50.0
+nl_flusso_db = 54.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 18.0
+baffles_gradi = 0.0
+isolamento_proprio_db = 45.0
+nota = "Stockholm: TSM 2643 «Salmon», VDS leggero (35); STIMA"
+
+[sensori.salmon_vds_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 1.5
+bande_hz = [10000.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 50.0
+nl_flusso_db = 54.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 18.0
+baffles_gradi = 0.0
+sl_attivo_db = 215.0
+impulso_s = 0.3
+nota = "Stockholm: Salmon attivo (35); STIMA"
+
+[sensori.csu83]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 1.6
+bande_hz = [300.0, 1000.0, 3500.0, 10000.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 45.0
+nl_flusso_db = 50.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 18.0
+baffles_gradi = 40.0
+baffles_db = 15.0
+lofar_bin_hz = 0.2
+lofar_integrazione_s = 60.0
+isolamento_proprio_db = 28.0
+nota = "CSU-83 / DBQS-21: il cilindro di prua 0,3-12 kHz (35 §4); STIMA"
+
+[sensori.csu83_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 1.6
+bande_hz = [10000.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 45.0
+nl_flusso_db = 50.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 18.0
+baffles_gradi = 40.0
+sl_attivo_db = 215.0
+impulso_s = 0.1
+nota = "CSU-83 attivo a 8 kHz (banda di 10 kHz), settori di 30 gradi (35 §4)"
+
+[sensori.fas3]
+modo = "passivo"
+antenna = "scafo"
+dimensione_m = 12.0
+bande_hz = [1000.0, 3500.0]
+integrazione_s = 20.0
+indice_rilevazione = 14.0
+nl_macchina_db = 45.0
+nl_flusso_db = 50.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 15.0
+baffles_gradi = 30.0
+baffles_db = 10.0
+di_fisso_db = 15.0
+lofar_bin_hz = 0.1
+lofar_integrazione_s = 60.0
+isolamento_proprio_db = 24.0
+nota = "FAS 3-1: la schiera di fianco del CSU-83, 2-8 kHz, LOFAR e DEMON (35 §4); STIMA"
+
+[sensori.polinom_vds]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 4.0
+bande_hz = [1000.0, 3500.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 54.0
+nl_flusso_db = 54.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 20.0
+baffles_gradi = 0.0
+isolamento_proprio_db = 45.0
+lofar_bin_hz = 0.5
+lofar_integrazione_s = 60.0
+nota = "Udaloy: «Horse Tail», il VDS del Polinom (33 §1), fino a 200 m (STIMA)"
+
+[sensori.polinom_vds_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 4.0
+bande_hz = [3500.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 54.0
+nl_flusso_db = 54.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 20.0
+baffles_gradi = 0.0
+sl_attivo_db = 226.0
+impulso_s = 1.0
+nota = "Udaloy: «Horse Tail» attivo (STIMA)"
+
+[sensori.vega_vds]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 2.5
+bande_hz = [3500.0, 10000.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 54.0
+nl_flusso_db = 55.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 18.0
+baffles_gradi = 0.0
+isolamento_proprio_db = 45.0
+nota = "Kara, Krivak II: MG-325 «Vega» («Mare Tail»), a poppa, fino a 100 m (33 §1)"
+
+[sensori.vega_vds_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 2.5
+bande_hz = [3500.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 54.0
+nl_flusso_db = 55.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 18.0
+baffles_gradi = 0.0
+sl_attivo_db = 222.0
+impulso_s = 0.5
+nota = "MG-325 «Vega» attivo, media frequenza (STIMA)"
+
+[sensori.bronza_vds]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 3.0
+bande_hz = [1000.0, 3500.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 54.0
+nl_flusso_db = 55.0
+v0_flusso_kn = 10.0
+velocita_max_kn = 18.0
+baffles_gradi = 0.0
+isolamento_proprio_db = 45.0
+nota = "Krivak III: MG-345 «Bronza» rimorchiata, come VDS (STIMA dichiarata, 33 §1: le fonti discordano); nessuna classe del gioco per ora"
+
+[sensori.shelon_vds]
+modo = "passivo"
+antenna = "sfera"
+dimensione_m = 1.5
+bande_hz = [3500.0, 10000.0]
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 50.0
+nl_flusso_db = 55.0
+v0_flusso_kn = 3.0
+velocita_max_kn = 3.0
+baffles_gradi = 0.0
+isolamento_proprio_db = 45.0
+nota = "Grisha III: «Shelon» («Elk Tail»), calabile a nave ferma (31 §5), fino a 150 m (STIMA)"
+
+[sensori.shelon_vds_attivo]
+modo = "attivo"
+antenna = "sfera"
+dimensione_m = 1.5
+bande_hz = [10000.0]
+indice_rilevazione = 14.0
+nl_macchina_db = 50.0
+nl_flusso_db = 55.0
+v0_flusso_kn = 3.0
+velocita_max_kn = 3.0
+baffles_gradi = 0.0
+sl_attivo_db = 215.0
+impulso_s = 0.1
+nota = "«Shelon» attivo (STIMA)"
+
+[sensori.ssq41b]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [50.0, 150.0, 300.0, 1000.0, 3500.0]
+gamma_hz = [10.0, 10000.0]
+di_fisso_db = 0.0
+omni = true
+lofar_bin_hz = 1.0
+lofar_integrazione_s = 60.0
+nota = "LOFAR omni, 10 Hz-10 kHz: solo «contatto nel cerchio» (17 §4.1)"
+
+[sensori.ssq53b]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [50.0, 150.0, 300.0, 1000.0]
+gamma_hz = [10.0, 2400.0]
+di_fisso_db = 3.0
+sigma_rilevamento_deg = 7.0
+lofar_bin_hz = 1.0
+lofar_integrazione_s = 60.0
+nota = "DIFAR 10 Hz-2,4 kHz; sigma del rilevamento 5-9 gradi in mare (17 §4.1 [AAD-DIFAR])"
+
+[sensori.ssq77a]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [50.0, 150.0, 300.0, 1000.0]
+gamma_hz = [10.0, 2400.0]
+di_fisso_db = 15.0
+sigma_rilevamento_deg = 7.0
+lofar_bin_hz = 1.0
+lofar_integrazione_s = 60.0
+nota = "VLAD: DIFAR a schiera verticale, +10-15 dB contro il traffico orizzontale (17 §4.1 [HOLLER])"
+
+[sensori.ssq57a]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [50.0, 150.0, 300.0, 1000.0]
+di_fisso_db = 0.0
+omni = true
+nota = "passiva tarata: misura del rumore ambiente (17 §4.1)"
+
+[sensori.ssq47b]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "attivo"
+bande_hz = [16000.0]
+di_fisso_db = 3.0
+omni = true
+sl_attivo_db = 195.0
+impulso_s = 0.1
+sigma_distanza_m = 50.0
+nota = "attiva, solo distanza: CW ogni 10 s a 13-19 kHz (17 §4.1); SL e durata STIMA"
+
+[sensori.ssq62b]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "attivo"
+bande_hz = [8500.0]
+di_fisso_db = 10.0
+sigma_rilevamento_deg = 5.0
+sl_attivo_db = 200.0
+impulso_s = 0.25
+risoluzione_s = 0.01
+sigma_distanza_m = 30.0
+nota = "DICASS 6,5-9,5 kHz a comando: distanza, rilevamento, Doppler (17 §4.1, §8.3: 200 dB); in FM la compressione da' una risoluzione di ~10 ms (banda 100 Hz, STIMA) per la riverberazione"
+
+[sensori.rgb_nm]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 1.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [8500.0]
+di_fisso_db = 0.0
+omni = true
+nota = "RGB-NM e NM-1: 7-10 kHz a orecchio, con la soglia (17 §4.2 [ART-Be12] [CIA72])"
+
+[sensori.rgb1]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 2.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [300.0, 1000.0, 3500.0, 10000.0]
+di_fisso_db = 0.0
+omni = true
+nota = "RGB-1: schiera di 5 idrofoni, omni, con la soglia (17 §4.2); bande STIMA"
+
+[sensori.rgb2]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 2.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [300.0, 1000.0, 3500.0]
+di_fisso_db = 8.0
+sigma_rilevamento_deg = 6.0
+nota = "RGB-2: antenna di 13 elementi che ruota a 8 giri/min, errore 5-7 gradi (17 §4.2)"
+
+[sensori.rgb75]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 60.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [20.0, 50.0]
+gamma_hz = [2.0, 60.0]
+di_fisso_db = 0.0
+omni = true
+lofar_bin_hz = 0.05
+lofar_integrazione_s = 600.0
+nota = "RGB-75: infrasonora 2-60 Hz, continua fino a 5 h (17 §4.2 [ART-Tu142]): righe di pala in un LOFAR stretto (bin 0,05 Hz in 10 min, STIMA del trattamento del Korshun)"
+
+[sensori.rgb15]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 2.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [50.0, 150.0, 300.0, 1000.0, 3500.0]
+gamma_hz = [2.0, 5000.0]
+di_fisso_db = 0.0
+omni = true
+nota = "RGB-15: 2-5000 Hz, anche ricevitore dell'eco esplosiva (17 §4.2)"
+
+[sensori.rgb25]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 2.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [150.0, 300.0, 1000.0, 3500.0]
+di_fisso_db = 6.0
+sigma_rilevamento_deg = 6.0
+nota = "RGB-25: direzionale, idrofono fino a 150 m (17 §4.2); bande e guadagno STIMA"
+
+[sensori.rgb55a]
+antenna = "sfera"
+dimensione_m = 0.124
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 20.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "attivo"
+bande_hz = [8500.0]
+di_fisso_db = 0.0
+omni = true
+sl_attivo_db = 200.0
+impulso_s = 0.1
+sigma_distanza_m = 90.0
+nota = "RGB-55A: attiva omni comandata, errore di distanza 75-100 m (17 §4.2); frequenza e SL STIMA"
+
+[sensori.aqs13b]
+antenna = "sfera"
+dimensione_m = 0.5
+di_fisso_db = 12.0
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 30.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "attivo"
+bande_hz = [10000.0]
+sl_attivo_db = 211.0
+impulso_s = 0.035
+sigma_distanza_m = 25.0
+nota = "AQS-13B (SH-3H): ~10 kHz, >= 211 dB, 3,5 o 35 ms (17 §6.4, §8.3 [MILAQS13B])"
+
+[sensori.aqs13b_passivo]
+antenna = "sfera"
+dimensione_m = 0.5
+di_fisso_db = 12.0
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 30.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [10000.0]
+nota = "AQS-13B in passivo: banda stretta a 10 kHz, solo contro la cavitazione vicina (17 §6.4)"
+
+[sensori.aqs13f]
+antenna = "sfera"
+dimensione_m = 0.5
+di_fisso_db = 12.0
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 30.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "attivo"
+bande_hz = [10000.0]
+sl_attivo_db = 215.0
+impulso_s = 0.035
+sigma_distanza_m = 25.0
+nota = "AQS-13F (SH-60F): 215 dB come nella tabella dell'asimmetria (17 §8.3)"
+
+[sensori.aqs13f_passivo]
+antenna = "sfera"
+dimensione_m = 0.5
+di_fisso_db = 12.0
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 30.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [10000.0]
+nota = "AQS-13F in passivo (17 §6.4)"
+
+[sensori.hs73]
+antenna = "sfera"
+dimensione_m = 0.5
+di_fisso_db = 12.0
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 30.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "attivo"
+bande_hz = [10000.0]
+sl_attivo_db = 205.0
+impulso_s = 0.035
+sigma_distanza_m = 30.0
+nota = "HS-73 dell'Hkp 4 svedese (35): 5,6 km nelle fonti; frequenza e livello STIMA"
+
+[sensori.hs73_passivo]
+antenna = "sfera"
+dimensione_m = 0.5
+di_fisso_db = 12.0
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 30.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [10000.0]
+nota = "HS-73 in passivo (35): STIMA"
+
+[sensori.vgs3]
+antenna = "sfera"
+dimensione_m = 0.5
+di_fisso_db = 12.0
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 30.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "attivo"
+bande_hz = [8500.0]
+sl_attivo_db = 205.0
+impulso_s = 0.1
+sigma_distanza_m = 50.0
+nota = "VGS-3 (Ka-27PL): l'attivo solo con un contatto (17 §6.5); frequenza e SL STIMA"
+
+[sensori.vgs3_passivo]
+antenna = "sfera"
+dimensione_m = 0.6
+di_fisso_db = 12.0
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 30.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [1000.0, 3500.0]
+nota = "VGS-3 in passivo: un giro <= 30 s per 3-10 min (17 §6.5); bande STIMA"
+
+[sensori.vgs2]
+antenna = "sfera"
+dimensione_m = 0.5
+di_fisso_db = 12.0
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 30.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "attivo"
+bande_hz = [8000.0]
+sl_attivo_db = 200.0
+impulso_s = 0.1
+sigma_distanza_m = 60.0
+nota = "VGS-2 (Ka-25): STIMA"
+
+[sensori.vgs2_passivo]
+antenna = "sfera"
+dimensione_m = 0.5
+di_fisso_db = 12.0
+integrazione_s = 10.0
+indice_rilevazione = 14.0
+nl_macchina_db = 30.0
+nl_flusso_db = 40.0
+v0_flusso_kn = 8.0
+velocita_max_kn = 30.0
+baffles_gradi = 0.0
+baffles_db = 0.0
+mare_proprio_db = 0.0
+modo = "passivo"
+bande_hz = [1000.0, 3500.0]
+nota = "VGS-2 in passivo: STIMA"
+
+[suite]
+los_angeles = ["bqq5_sfera", "tb16", "bqq5_attivo", "wlr9"]
+sturgeon = ["bqq5_sfera", "tb16", "bqq5_attivo", "wlr9"]
+trafalgar = ["bqq5_sfera", "tb16", "bqq5_attivo", "wlr9"]
+victor3 = ["sovietico_3gen", "sovietico_attivo", "intercettazione_sov", "skat"]
+akula = ["sovietico_3gen", "sovietico_attivo", "intercettazione_sov", "skat"]
+oscar = ["sovietico_3gen", "sovietico_attivo", "intercettazione_sov", "skat"]
+typhoon = ["sovietico_3gen", "sovietico_attivo", "intercettazione_sov", "skat"]
+kilo = ["sovietico_3gen", "sovietico_attivo", "intercettazione_sov"]
+alfa = ["sovietico_2gen", "sovietico_attivo", "intercettazione_sov"]
+charlie2 = ["sovietico_2gen", "sovietico_attivo", "intercettazione_sov"]
+foxtrot = ["sovietico_2gen", "sovietico_attivo", "intercettazione_sov"]
+victor1 = ["sovietico_2gen", "sovietico_attivo", "intercettazione_sov"]
+delta3 = ["sovietico_3gen", "sovietico_attivo", "intercettazione_sov"]
+sierra = ["sovietico_3gen", "sovietico_attivo", "intercettazione_sov"]
+ohio = ["bqq5_sfera", "tb16", "bqq5_attivo", "wlr9"]
+type206 = ["csu83", "csu83_attivo", "fas3", "wlr9"]
+ticonderoga = ["sqs53", "sqs53_attivo", "sqr19"]
+type22 = ["type2016", "type2016_attivo"]
+type22b2 = ["type2016", "type2016_attivo", "type2031z"]
+knox = ["sqs53", "sqs53_attivo", "sqs35_vds", "sqs35_vds_attivo", "sqr18a"]
+udaloy = ["polinom", "polinom_attivo", "polinom_vds", "polinom_vds_attivo"]
+grisha3 = ["nave_sovietica", "titan2_attivo", "shelon_vds", "shelon_vds_attivo"]
+perry = ["sqs53", "sqs56_attivo", "sqr19"]
+kidd = ["sqs53", "sqs53_attivo"]
+spruance = ["sqs53", "sqs53_attivo", "sqr19"]
+krivak2 = ["nave_sovietica", "titan2_attivo", "vega_vds", "vega_vds_attivo"]
+kara = ["nave_sovietica", "titan2_attivo", "vega_vds", "vega_vds_attivo"]
+slava = ["nave_sovietica", "titan2_attivo"]
+kirov = ["nave_sovietica", "titan2_attivo"]
+koni = ["nave_sovietica", "titan2_attivo"]
+nanuchka = ["nave_sovietica"]
+ugra = ["nave_sovietica"]
+nimitz = []
+kitty_hawk = []
+iowa = []
+sacramento = []
+hauk = []
+cargo = []
+mercantile = []
+petroliera = []
+peschereccio = []
+portarinfuse = []
+petroliera_costiera = []
+traghetto = []
+rimorchiatore = []
+rompighiaccio = []
+nave_ricerca = []
+bmrt = []
+peschereccio_costiero = []
+cianciolo = []
+bqm74 = []
+oslo = ["sqs36", "sqs36_attivo"]
+stockholm = ["sa950", "sa950_attivo", "salmon_vds", "salmon_vds_attivo"]
+nacken = ["csu83", "csu83_attivo", "fas3", "wlr9"]
+
+[sorgenti.balenottera_comune]
+nome = "Balenottera comune (Balaenoptera physalus)"
+nome_breve = "Comune"
+categoria = "biologico"
+sottocategoria = "misticeto"
+teatri = ["faroe", "celtica", "gibilterra", "otranto"]
+mesi = [10, 11, 12, 1, 2, 3]
+ore = []
+densita = 0.5
+profondita_m = [10, 60]
+velocita_kn = [1, 6]
+estensione_m = 0.0
+livello_db = 185.0
+livello_tipo = "rms"
+ts_db = 10.0
+componenti = [{ tipo = "sweep", f_da = 40, f_a = 15, durata_s = 0.9, livello_rel_db = 0.0 }]
+ritmo = { processo = "treno", intervallo_s = [12, 25], gruppi = [1, 2], intervallo_interno_s = [6, 12], serie_min = 12, pausa_s = 135 }
+indizi = ["impulsi discendenti a ~20 Hz molto regolari", "doppiette e terzine", "nessuna riga d'elica", "nessun DEMON"]
+confonde_con = ["sottomarino_generico"]
+aurale = "tonfi profondi e regolari (accelerare x10)"
+fonte = "09 §5.3: DOSITS, Watkins 1987, Miksis-Olds 2019"
+confidenza = "alta"
+
+[sorgenti.balenottera_azzurra]
+nome = "Balenottera azzurra (Balaenoptera musculus)"
+nome_breve = "Azzurra"
+categoria = "biologico"
+sottocategoria = "misticeto"
+teatri = ["faroe"]
+mesi = [9, 10, 11, 12, 1, 2]
+ore = []
+densita = 0.05
+profondita_m = [10, 50]
+velocita_kn = [1, 5]
+estensione_m = 0.0
+livello_db = 189.0
+livello_tipo = "rms"
+ts_db = 12.0
+componenti = [{ tipo = "sweep", f_da = 28, f_a = 16, durata_s = 17, livello_rel_db = 0.0 }]
+ritmo = { processo = "treno", intervallo_s = [60, 90], gruppi = [1, 1], intervallo_interno_s = [0, 0], serie_min = 60, pausa_s = 600 }
+indizi = ["unita' lunghe 15-20 s fra 15 e 40 Hz", "frasi ripetute"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.3: DOSITS"
+confidenza = "alta"
+
+[sorgenti.megattera]
+nome = "Megattera (Megaptera novaeangliae)"
+nome_breve = "Megattera"
+categoria = "biologico"
+sottocategoria = "misticeto"
+teatri = ["faroe", "barents"]
+mesi = [5, 6, 7, 8, 9]
+ore = []
+densita = 0.3
+profondita_m = [5, 40]
+velocita_kn = [1, 5]
+estensione_m = 0.0
+livello_db = 137.0
+livello_tipo = "rms"
+ts_db = 10.0
+componenti = [{ tipo = "sweep", f_da = 550, f_a = 450, durata_s = 2.5, livello_rel_db = 0.0 }, { tipo = "impulso", f_lo = 30, f_hi = 8000, durata_s = 1.0, picco_hz = 400, pendenza_db_ott = 3, livello_rel_db = -6 }]
+ritmo = { processo = "periodico", intervallo_s = [4, 10], gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["chiamate ritmiche di ~2,5 s a ~500 Hz (alimentazione)", "canto d'inverno raro"]
+confonde_con = []
+aurale = "richiami lamentosi"
+fonte = "09 §5.3: DOSITS, Fournet 2018"
+confidenza = "media"
+
+[sorgenti.balenottera_minore]
+nome = "Balenottera minore (Balaenoptera acutorostrata)"
+nome_breve = "Minore"
+categoria = "biologico"
+sottocategoria = "misticeto"
+teatri = ["faroe", "celtica", "gibilterra", "barents"]
+mesi = [9, 10, 11, 12, 1, 2, 3, 4, 5]
+ore = []
+densita = 0.3
+profondita_m = [5, 50]
+velocita_kn = [1, 6]
+estensione_m = 0.0
+livello_db = 165.0
+livello_tipo = "rms"
+ts_db = 5.0
+componenti = [{ tipo = "impulso", f_lo = 50, f_hi = 300, durata_s = 0.25, picco_hz = 120, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "treno", intervallo_s = [0.9, 1.1], gruppi = [1, 1], intervallo_interno_s = [0, 0], serie_min = 1, pausa_s = 300 }
+indizi = ["treni d'impulsi a ~1 s"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.3: Minke 2014; livello STIMA"
+confidenza = "bassa"
+
+[sorgenti.balenottera_minore_pacifica]
+nome = "Balenottera minore del Pacifico settentrionale (Balaenoptera acutorostrata)"
+nome_breve = "Minore (boing)"
+categoria = "biologico"
+sottocategoria = "misticeto"
+teatri = ["kunashir"]
+mesi = [10, 11, 12, 1, 2, 3]
+ore = []
+densita = 0.2
+profondita_m = [5, 50]
+velocita_kn = [1, 6]
+estensione_m = 0.0
+livello_db = 150.0
+livello_tipo = "rms"
+ts_db = 5.0
+componenti = [{ tipo = "impulso", f_lo = 1300, f_hi = 8000, durata_s = 2.6, picco_hz = 1400, pendenza_db_ott = 6, livello_rel_db = 0.0 }]
+ritmo = { processo = "periodico", intervallo_s = [240, 480], gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["«boing» di ~2,5 s a 1,4 kHz con armoniche", "Pacifico settentrionale, d'inverno"]
+confonde_con = []
+aurale = "un boing metallico"
+fonte = "M, 29_note: banda e durata misurate sulla registrazione SWFSC (Rankin e Barlow 2005); cadenza e livello STIMA"
+confidenza = "bassa"
+
+[sorgenti.capodoglio]
+nome = "Capodoglio (Physeter macrocephalus)"
+nome_breve = "Capodoglio"
+categoria = "biologico"
+sottocategoria = "odontoceto"
+teatri = ["faroe", "gibilterra", "otranto", "kunashir"]
+mesi = []
+ore = []
+densita = 0.1
+profondita_m = [300, 1000]
+velocita_kn = [1, 4]
+estensione_m = 0.0
+livello_db = 230.0
+livello_tipo = "pp"
+ts_db = 10.0
+componenti = [{ tipo = "impulso", f_lo = 5000, f_hi = 25000, durata_s = 0.01, picco_hz = 12000, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "treno", intervallo_s = [0.5, 1.5], gruppi = [1, 1], intervallo_interno_s = [0, 0], serie_min = 40, pausa_s = 600 }
+indizi = ["clic regolari 5-25 kHz", "creak alla cattura", "immersioni di 40 min"]
+confonde_con = []
+aurale = "ticchettio regolare come un orologio"
+fonte = "09 §5.3: DOSITS; 02 §4.5"
+confidenza = "alta"
+
+[sorgenti.orca]
+nome = "Orca (Orcinus orca)"
+nome_breve = "Orca"
+categoria = "biologico"
+sottocategoria = "odontoceto"
+teatri = ["faroe", "kunashir", "barents"]
+mesi = []
+ore = []
+densita = 0.1
+profondita_m = [5, 50]
+velocita_kn = [2, 8]
+estensione_m = 300.0
+livello_db = 155.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 1000, f_hi = 6000, durata_s = 1.0, picco_hz = 2500, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "poisson", tasso_h = 600, gruppi = [1, 3], intervallo_interno_s = [1, 4] }
+indizi = ["chiamate impulsive 1-6 kHz in gruppi"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.3: Holt 2011 (135-176 dB)"
+confidenza = "media"
+
+[sorgenti.delfini]
+nome = "Branco di delfini (delfino comune, globicefali)"
+nome_breve = "Delfini"
+categoria = "biologico"
+sottocategoria = "odontoceto"
+teatri = ["celtica", "gibilterra", "faroe", "otranto"]
+mesi = []
+ore = []
+densita = 1.0
+profondita_m = [2, 30]
+velocita_kn = [4, 15]
+estensione_m = 500.0
+livello_db = 160.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 2000, f_hi = 20000, durata_s = 0.5, picco_hz = 8000, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "poisson", tasso_h = 3600, gruppi = [1, 3], intervallo_interno_s = [0.2, 1] }
+indizi = ["fischi 2-20 kHz", "clic oltre la banda", "branchi in moto veloce"]
+confonde_con = []
+aurale = "fischi e cinguettii"
+fonte = "09 §5.3: ADA037620; livello dei fischi STIMA"
+confidenza = "media"
+
+[sorgenti.foca_barbata]
+nome = "Foca barbata (Erignathus barbatus)"
+nome_breve = "Foca barbata"
+categoria = "biologico"
+sottocategoria = "pinnipede"
+teatri = ["barents", "kunashir"]
+mesi = [3, 4, 5, 6]
+ore = []
+densita = 0.3
+profondita_m = [5, 30]
+velocita_kn = [0, 2]
+estensione_m = 0.0
+livello_db = 170.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "sweep", f_da = 4000, f_a = 400, durata_s = 60, livello_rel_db = 0.0 }]
+ritmo = { processo = "periodico", intervallo_s = [90, 240], gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["trilli discendenti lunghi (10 s-3 min)", "primavera"]
+confonde_con = []
+aurale = "trillo che scende"
+fonte = "09 §5.3: Frouin 2016; livello STIMA"
+confidenza = "media"
+
+[sorgenti.tricheco]
+nome = "Tricheco (Odobenus rosmarus)"
+nome_breve = "Tricheco"
+categoria = "biologico"
+sottocategoria = "pinnipede"
+teatri = ["barents"]
+mesi = [1, 2, 3, 4]
+ore = []
+densita = 0.1
+profondita_m = [5, 40]
+velocita_kn = [0, 2]
+estensione_m = 0.0
+livello_db = 170.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 240, f_hi = 2000, durata_s = 0.03, picco_hz = 500, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "treno", intervallo_s = [0.2, 0.3], gruppi = [1, 1], intervallo_interno_s = [0, 0], serie_min = 10, pausa_s = 300 }
+indizi = ["colpi regolari a ~4 al secondo fra 0,2 e 2 kHz", "serie lunghe d'inverno (il canto dei maschi)"]
+confonde_con = []
+aurale = "un picchiettio di nocche sul legno"
+fonte = "M, 29_note: banda e cadenza misurate sulla registrazione AFSC; livello e stagione STIMA"
+confidenza = "bassa"
+
+[sorgenti.merluzzo]
+nome = "Merluzzo (Gadus morhua) in riproduzione"
+nome_breve = "Merluzzo"
+categoria = "biologico"
+sottocategoria = "pesce"
+teatri = ["barents", "faroe"]
+mesi = [2, 3, 4]
+ore = []
+densita = 1.0
+profondita_m = [50, 200]
+velocita_kn = [0, 0]
+estensione_m = 1000.0
+livello_db = 123.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "famiglia", hz = 50, armoniche = 2, decadimento_db = 6, livello_rel_db = 0.0, durata_s = 0.2, ritmata = true }]
+ritmo = { processo = "poisson", tasso_h = 360, gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["grugniti a 50 Hz con la seconda armonica"]
+confonde_con = ["rete 50 Hz"]
+aurale = ""
+fonte = "09 §5.3: Cod 2011"
+confidenza = "alta"
+
+[sorgenti.eglefino]
+nome = "Eglefino (Melanogrammus aeglefinus): coro"
+nome_breve = "Eglefino"
+categoria = "biologico"
+sottocategoria = "pesce"
+teatri = ["barents", "faroe", "celtica"]
+mesi = [2, 3, 4, 5]
+ore = []
+densita = 0.5
+profondita_m = [50, 200]
+velocita_kn = [0, 0]
+estensione_m = 2000.0
+livello_db = 115.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "banda", f_lo = 30, f_hi = 400, picco_hz = 150, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "continuo" }
+indizi = ["coro notturno 30-400 Hz (+12 dB)"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.3: Haddock; livello STIMA"
+confidenza = "media"
+diurno_db = 12.0
+diurno_ore = "notte"
+
+[sorgenti.aringa]
+nome = "Aringa (Clupea harengus): banco"
+nome_breve = "Aringa"
+categoria = "biologico"
+sottocategoria = "pesce"
+teatri = ["faroe", "barents"]
+mesi = []
+ore = []
+densita = 0.5
+profondita_m = [20, 200]
+velocita_kn = [0, 3]
+estensione_m = 1000.0
+livello_db = 140.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 1700, f_hi = 22000, durata_s = 4.0, picco_hz = 4000, pendenza_db_ott = 2, livello_rel_db = 0.0 }]
+ritmo = { processo = "poisson", tasso_h = 120, gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["treni a larga banda 1,7-22 kHz di notte"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.3: Wilson 2004; livello STIMA"
+confidenza = "media"
+diurno_db = 6.0
+diurno_ore = "notte"
+
+[sorgenti.coro_pesci]
+nome = "Coro di pesci (sciaenidi)"
+nome_breve = "Coro"
+categoria = "biologico"
+sottocategoria = "pesce"
+teatri = ["otranto", "gibilterra"]
+mesi = [5, 6, 7, 8, 9]
+ore = []
+densita = 1.0
+profondita_m = [5, 50]
+velocita_kn = [0, 0]
+estensione_m = 5000.0
+livello_db = 110.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "banda", f_lo = 100, f_hi = 800, picco_hz = 400, pendenza_db_ott = 4, livello_rel_db = 0.0 }]
+ritmo = { processo = "continuo" }
+indizi = ["fondo +20-30 dB in 100-800 Hz al tramonto", "settore largo verso costa"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.3: Hild09, Chorus"
+confidenza = "alta"
+diurno_db = 20.0
+diurno_ore = "crepuscolo"
+
+[sorgenti.gamberi]
+nome = "Gamberi schioccatori (Alpheidae): colonia"
+nome_breve = "Gamberi"
+categoria = "biologico"
+sottocategoria = "crostaceo"
+teatri = ["otranto", "gibilterra"]
+mesi = []
+ore = []
+densita = 0.5
+profondita_m = [2, 40]
+velocita_kn = [0, 0]
+estensione_m = 3000.0
+livello_db = 160.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "banda", f_lo = 2000, f_hi = 20000, picco_hz = 4000, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "continuo" }
+indizi = ["crepitio continuo 2-20 kHz in acqua bassa"]
+confonde_con = []
+aurale = "friggere di pancetta"
+fonte = "09 §5.3: Hild09 (183-189 dB pp per schiocco); colonia STIMA"
+confidenza = "media"
+diurno_db = 3.0
+diurno_ore = "notte"
+
+[sorgenti.t_phase_tettonico]
+nome = "T-phase di un terremoto"
+nome_breve = "T-phase"
+categoria = "geofisico"
+sottocategoria = "sismica"
+teatri = ["faroe", "kunashir", "otranto", "gibilterra"]
+mesi = []
+ore = []
+densita = 0.2
+profondita_m = [800, 1200]
+velocita_kn = [0, 0]
+estensione_m = 0.0
+livello_db = 185.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 2.5, f_hi = 20, durata_s = 60, picco_hz = 5, pendenza_db_ott = 6, livello_rel_db = 0.0 }]
+ritmo = { processo = "poisson", tasso_h = 0.2, gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["fuso lungo decine di secondi sotto 20 Hz", "nessuna riga"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.4: Fox, Volc99; livello alla distanza di gioco STIMA"
+confidenza = "bassa"
+
+[sorgenti.t_phase_vulcanico]
+nome = "T-phase vulcanico"
+nome_breve = "T-phase vulc."
+categoria = "geofisico"
+sottocategoria = "vulcano"
+teatri = ["kunashir", "otranto"]
+mesi = []
+ore = []
+densita = 0.1
+profondita_m = [500, 1500]
+velocita_kn = [0, 0]
+estensione_m = 0.0
+livello_db = 180.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 3, f_hi = 15, durata_s = 20, picco_hz = 6, pendenza_db_ott = 6, livello_rel_db = 0.0 }]
+ritmo = { processo = "poisson", tasso_h = 0.5, gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["impulsi piu' brevi e acuti, picco a ~6 Hz"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.4: Volc99, Monowai16"
+confidenza = "bassa"
+
+[sorgenti.vulcano_sottomarino]
+nome = "Vulcano sottomarino attivo"
+nome_breve = "Vulcano"
+categoria = "geofisico"
+sottocategoria = "vulcano"
+teatri = ["kunashir"]
+mesi = []
+ore = []
+densita = 0.05
+profondita_m = [200, 800]
+velocita_kn = [0, 0]
+estensione_m = 0.0
+livello_db = 170.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "tonale", hz = 125, livello_rel_db = 0.0 }, { tipo = "famiglia", hz = 50, armoniche = 6, decadimento_db = 2, livello_rel_db = -3 }, { tipo = "banda", f_lo = 500, f_hi = 5000, picco_hz = 2000, pendenza_db_ott = 0.0, livello_rel_db = -10 }]
+ritmo = { processo = "continuo" }
+indizi = ["rombo con tono a 125 Hz e armoniche di 50 Hz", "sibili"]
+confonde_con = ["rete 50 Hz"]
+aurale = ""
+fonte = "09 §5.4: Barcena"
+confidenza = "media"
+
+[sorgenti.distacco_iceberg]
+nome = "Distacco di un iceberg"
+nome_breve = "Distacco"
+categoria = "geofisico"
+sottocategoria = "ghiaccio"
+teatri = ["barents"]
+mesi = [5, 6, 7, 8, 9]
+ore = []
+densita = 0.2
+profondita_m = [0, 20]
+velocita_kn = [0, 0]
+estensione_m = 0.0
+livello_db = 220.0
+livello_tipo = "pp"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 1, f_hi = 440, durata_s = 5, picco_hz = 50, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "poisson", tasso_h = 0.3, gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["colpo a larga banda 1-440 Hz, fortissimo"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.4: PMEL-ice, Podolskiy22"
+confidenza = "alta"
+
+[sorgenti.tremore_iceberg]
+nome = "Tremore armonico d'iceberg"
+nome_breve = "Tremore"
+categoria = "geofisico"
+sottocategoria = "ghiaccio"
+teatri = ["barents"]
+mesi = [4, 5, 6, 7, 8, 9, 10]
+ore = []
+densita = 0.2
+profondita_m = [20, 150]
+velocita_kn = [0, 0]
+estensione_m = 0.0
+livello_db = 180.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "famiglia", hz = 40, armoniche = 8, decadimento_db = 2, livello_rel_db = 0.0, durata_s = 300, ritmata = true }]
+ritmo = { processo = "poisson", tasso_h = 2, gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["famiglia armonica perfetta a 40 Hz", "episodi di minuti"]
+confonde_con = ["sottomarino_generico"]
+aurale = ""
+fonte = "09 §5.4: PMEL-ice; livello STIMA"
+confidenza = "alta"
+
+[sorgenti.incaglio_iceberg]
+nome = "Iceberg che s'incaglia"
+nome_breve = "Incaglio"
+categoria = "geofisico"
+sottocategoria = "ghiaccio"
+teatri = ["barents"]
+mesi = [5, 6, 7, 8, 9]
+ore = []
+densita = 0.1
+profondita_m = [50, 200]
+velocita_kn = [0, 0]
+estensione_m = 0.0
+livello_db = 175.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "sweep", f_da = 60, f_a = 20, durata_s = 420, livello_rel_db = 0.0 }]
+ritmo = { processo = "poisson", tasso_h = 0.2, gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["suono che scende di frequenza in ~7 minuti"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.4: PMEL-ice; livello STIMA"
+confidenza = "alta"
+
+[sorgenti.fessurazione_ghiaccio]
+nome = "Fessurazione del ghiaccio"
+nome_breve = "Fessure"
+categoria = "geofisico"
+sottocategoria = "ghiaccio"
+teatri = ["barents", "kunashir", "baltico"]
+mesi = [12, 1, 2, 3, 4]
+ore = []
+densita = 1.0
+profondita_m = [0, 5]
+velocita_kn = [0, 0]
+estensione_m = 5000.0
+livello_db = 150.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 40, f_hi = 2000, durata_s = 0.2, picco_hz = 300, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "poisson", tasso_h = 600, gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["crepitii impulsivi sopra 40 Hz, piu' forti nelle notti fredde"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.4; 02 §4.6"
+confidenza = "media"
+diurno_db = 6.0
+diurno_ore = "notte"
+
+[sorgenti.fusione_ghiaccio]
+nome = "Ghiaccio glaciale che fonde"
+nome_breve = "Fusione"
+categoria = "geofisico"
+sottocategoria = "ghiaccio"
+teatri = ["barents"]
+mesi = [5, 6, 7, 8, 9]
+ore = []
+densita = 0.3
+profondita_m = [0, 10]
+velocita_kn = [0, 0]
+estensione_m = 3000.0
+livello_db = 140.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "banda", f_lo = 1000, f_hi = 3000, picco_hz = 1800, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "continuo" }
+indizi = ["frizzare continuo 1-3 kHz"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.4: IGF; livello STIMA"
+confidenza = "media"
+
+[sorgenti.risacca]
+nome = "Risacca e frangenti su costa e bassifondi"
+nome_breve = "Risacca"
+categoria = "meteo"
+sottocategoria = "costa"
+teatri = []
+mesi = []
+ore = []
+densita = 0.2
+profondita_m = [0, 5]
+velocita_kn = [0, 0]
+estensione_m = 5000.0
+livello_db = 165.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "banda", f_lo = 50, f_hi = 1000, picco_hz = 150, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "continuo" }
+indizi = ["fondo a larga banda dal settore della costa"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.5; livello STIMA"
+confidenza = "bassa"
+
+[sorgenti.airgun]
+nome = "Nave sismica con cannoni ad aria"
+nome_breve = "Airgun"
+categoria = "industriale"
+sottocategoria = "sismica"
+teatri = ["faroe", "celtica"]
+mesi = [4, 5, 6, 7, 8, 9, 10]
+ore = []
+densita = 0.05
+profondita_m = [5, 10]
+velocita_kn = [4, 6]
+estensione_m = 0.0
+livello_db = 250.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 5, f_hi = 300, durata_s = 0.1, picco_hz = 50, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "periodico", intervallo_s = [10, 20], gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["colpi ogni 10-20 s per giorni", "udibili a migliaia di km"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.6: Hild09 (260 dB equivalente; STIMA 250 rms)"
+confidenza = "alta"
+
+[sorgenti.battitura_pali]
+nome = "Battitura di pali (cantiere portuale o piattaforma)"
+nome_breve = "Pali"
+categoria = "industriale"
+sottocategoria = "cantiere"
+teatri = ["baltico", "celtica", "otranto"]
+mesi = []
+ore = []
+densita = 0.05
+profondita_m = [5, 20]
+velocita_kn = [0, 0]
+estensione_m = 0.0
+livello_db = 220.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 100, f_hi = 1000, durata_s = 0.04, picco_hz = 300, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "treno", intervallo_s = [2, 4], gruppi = [1, 1], intervallo_interno_s = [0, 0], serie_min = 120, pausa_s = 3600 }
+indizi = ["impulsi di 30-50 ms ogni 2-4 s", "fermi di notte"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.6: Hild09 (205,9 + 10,2 log kJ)"
+confidenza = "alta"
+
+[sorgenti.ecoscandaglio_profondo]
+nome = "Ecoscandaglio multifascio di una nave oceanografica"
+nome_breve = "Multifascio"
+categoria = "civile"
+sottocategoria = "ecoscandaglio"
+teatri = []
+mesi = []
+ore = []
+densita = 0.05
+profondita_m = [5, 10]
+velocita_kn = [8, 12]
+estensione_m = 0.0
+livello_db = 230.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 11500, f_hi = 12500, durata_s = 0.01, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "periodico", intervallo_s = [5, 15], gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["impulsi brevi a 12 kHz"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.2: Hild09 (245 dB, fascio verso il fondo)"
+confidenza = "alta"
+
+[sorgenti.profilatore]
+nome = "Profilatore del sottofondo"
+nome_breve = "Profilatore"
+categoria = "civile"
+sottocategoria = "ecoscandaglio"
+teatri = []
+mesi = []
+ore = []
+densita = 0.05
+profondita_m = [5, 10]
+velocita_kn = [4, 8]
+estensione_m = 0.0
+livello_db = 220.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 3000, f_hi = 7000, durata_s = 0.01, picco_hz = 5000, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "periodico", intervallo_s = [1, 2], gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["impulsi brevi regolari a 3-7 kHz"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.2: Hild09 (230 dB)"
+confidenza = "alta"
+
+[sorgenti.peschereccio_strascico]
+nome = "Peschereccio a strascico al lavoro"
+nome_breve = "Strascico"
+categoria = "civile"
+sottocategoria = "pesca"
+teatri = ["celtica", "otranto", "kunashir", "faroe", "barents"]
+mesi = []
+ore = []
+densita = 1.0
+profondita_m = [0, 2]
+velocita_kn = [2, 4]
+estensione_m = 0.0
+livello_db = 160.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "famiglia", hz = 25, armoniche = 6, decadimento_db = 2, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 50, f_hi = 2000, picco_hz = 200, pendenza_db_ott = 3, livello_rel_db = -6 }]
+ritmo = { processo = "continuo" }
+indizi = ["righe del diesel a 25 Hz", "rumore di strascico (verricelli, cavi, rete)", "elica a passo variabile"]
+confonde_con = ["mercantile"]
+aurale = ""
+fonte = "09 §5.2: Hild09, RN-aural; livelli STIMA"
+confidenza = "bassa"
+
+[sorgenti.rete_strascico]
+nome = "Rete a strascico sul fondo"
+nome_breve = "Rete"
+categoria = "civile"
+sottocategoria = "pesca"
+teatri = []
+mesi = []
+ore = []
+densita = 0.0
+profondita_m = [0, 0]
+velocita_kn = [2, 5.5]
+estensione_m = 0.0
+livello_db = 152.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "banda", f_lo = 100, f_hi = 5000, picco_hz = 500, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "impulso", f_lo = 80, f_hi = 4000, durata_s = 0.03, picco_hz = 600, pendenza_db_ott = 3, livello_rel_db = 8 }, { tipo = "famiglia", hz = 14, armoniche = 3, decadimento_db = 4, livello_rel_db = -10 }]
+ritmo = { processo = "poisson", tasso_h = 1800, gruppi = [1, 3], intervallo_interno_s = [0.05, 0.2] }
+indizi = ["fruscio largo 100 Hz-5 kHz con colpi fitti, sul fondo", "centinaia di metri dietro un peschereccio lento"]
+confonde_con = ["peschereccio_strascico"]
+aurale = ""
+fonte = "09 §5.2: Hild09, RN-aural (attrezzi da fondo); livelli e ritmo STIMA"
+confidenza = "bassa"
+
+[sorgenti.peschereccio_piccolo]
+nome = "Peschereccio piccolo in moto"
+nome_breve = "Peschereccio"
+categoria = "civile"
+sottocategoria = "pesca"
+teatri = []
+mesi = []
+ore = []
+densita = 1.5
+profondita_m = [0, 2]
+velocita_kn = [6, 10]
+estensione_m = 0.0
+livello_db = 150.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "famiglia", hz = 18, armoniche = 5, decadimento_db = 2, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 50, f_hi = 1000, picco_hz = 100, pendenza_db_ott = 3, livello_rel_db = -3 }]
+ritmo = { processo = "continuo" }
+indizi = ["armoniche del motore 10-50 Hz", "continuo sopra 50 Hz dall'elica"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.2: Hild09, Suisan95"
+confidenza = "media"
+
+[sorgenti.fuoribordo]
+nome = "Imbarcazione con fuoribordo"
+nome_breve = "Fuoribordo"
+categoria = "civile"
+sottocategoria = "diporto"
+teatri = ["otranto", "gibilterra", "baltico"]
+mesi = [5, 6, 7, 8, 9]
+ore = []
+densita = 0.5
+profondita_m = [0, 1]
+velocita_kn = [15, 25]
+estensione_m = 0.0
+livello_db = 165.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "banda", f_lo = 1000, f_hi = 5000, picco_hz = 3000, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "continuo" }
+indizi = ["ronzio 1-5 kHz veloce, molto locale"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.2: Hild09"
+confidenza = "alta"
+
+[sorgenti.piattaforma]
+nome = "Piattaforma di perforazione fissa"
+nome_breve = "Piattaforma"
+categoria = "industriale"
+sottocategoria = "petrolio"
+teatri = ["faroe", "celtica"]
+mesi = []
+ore = []
+densita = 0.02
+profondita_m = [0, 30]
+velocita_kn = [0, 0]
+estensione_m = 0.0
+livello_db = 184.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "banda", f_lo = 700, f_hi = 1400, picco_hz = 1000, pendenza_db_ott = 2, livello_rel_db = 0.0 }]
+ritmo = { processo = "continuo" }
+indizi = ["continuo a 700-1400 Hz, fermo"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.2: Hild09"
+confidenza = "alta"
+
+[sorgenti.esplosione]
+nome = "Esplosione d'esercitazione"
+nome_breve = "Esplosione"
+categoria = "industriale"
+sottocategoria = "esplosivo"
+teatri = []
+mesi = []
+ore = []
+densita = 0.02
+profondita_m = [10, 100]
+velocita_kn = [0, 0]
+estensione_m = 0.0
+livello_db = 280.0
+livello_tipo = "rms"
+ts_db = -10.0
+componenti = [{ tipo = "impulso", f_lo = 10, f_hi = 200, durata_s = 1.0, picco_hz = 50, pendenza_db_ott = 1, livello_rel_db = 0.0 }]
+ritmo = { processo = "poisson", tasso_h = 0.05, gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+indizi = ["un colpo fortissimo 10-200 Hz"]
+confonde_con = []
+aurale = ""
+fonte = "09 §5.1: SL = 269 + 7,53 log lb (Hild09)"
+confidenza = "alta"
+
+[transitori.aereo_p3c]
+nome = "P-3C Orion in sorvolo"
+nome_breve = "P-3"
+categoria = "asw"
+sottocategoria = "aereo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 158.0
+componenti = [{ tipo = "famiglia", hz = 68, armoniche = 14, decadimento_db = 1.5, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 50, f_hi = 1000, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = -8 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["68 Hz (4 pale x 17 Hz) e armoniche fino a ~1 kHz", "pochi secondi, Doppler +-5 Hz"]
+aurale = "rombo grave e breve"
+fonte = "17 §8.3 [AT-FERG19] [FMARS22]; livello STIMA"
+confidenza = "alta per i toni"
+
+[transitori.aereo_il38]
+nome = "Il-38 in sorvolo"
+nome_breve = "Il-38"
+categoria = "asw"
+sottocategoria = "aereo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 158.0
+componenti = [{ tipo = "famiglia", hz = 70, armoniche = 14, decadimento_db = 1.5, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 50, f_hi = 1000, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = -8 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["~70 Hz e armoniche"]
+aurale = ""
+fonte = "17 §8.3 [CALC]; livello STIMA"
+confidenza = "media"
+
+[transitori.aereo_be12]
+nome = "Be-12 in sorvolo"
+nome_breve = "Be-12"
+categoria = "asw"
+sottocategoria = "aereo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 155.0
+componenti = [{ tipo = "famiglia", hz = 70, armoniche = 12, decadimento_db = 1.5, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 50, f_hi = 1000, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = -8 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["~70 Hz e armoniche"]
+aurale = ""
+fonte = "17 §8.3 [CALC]; livello STIMA"
+confidenza = "media"
+
+[transitori.aereo_tu142]
+nome = "Tu-142 in sorvolo"
+nome_breve = "Tu-142"
+categoria = "asw"
+sottocategoria = "aereo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 162.0
+componenti = [{ tipo = "famiglia", hz = 49, armoniche = 20, decadimento_db = 1.5, livello_rel_db = 0.0 }, { tipo = "tonale", hz = 98, livello_rel_db = -2 }, { tipo = "banda", f_lo = 30, f_hi = 1000, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = -8 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["~49 e 98 Hz (eliche controrotanti)"]
+aurale = ""
+fonte = "17 §8.3 [CALC]; livello STIMA"
+confidenza = "media"
+
+[transitori.aereo_s3]
+nome = "S-3 Viking in sorvolo"
+nome_breve = "S-3"
+categoria = "asw"
+sottocategoria = "aereo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 145.0
+componenti = [{ tipo = "banda", f_lo = 50, f_hi = 2000, picco_hz = 200, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["turbofan: nessun tonale d'elica, soffio largo"]
+aurale = ""
+fonte = "17 §8.3 [CALC]; livello STIMA"
+confidenza = "media"
+
+[transitori.elicottero_sh60]
+nome = "SH-60 in volo"
+nome_breve = "SH-60"
+categoria = "asw"
+sottocategoria = "elicottero"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 150.0
+componenti = [{ tipo = "famiglia", hz = 17, armoniche = 8, decadimento_db = 2.0, livello_rel_db = 0.0 }, { tipo = "tonale", hz = 80, livello_rel_db = -3 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["~17 Hz del rotore principale", "80 Hz del rotore di coda"]
+aurale = ""
+fonte = "17 §8.3; giri e livello STIMA"
+confidenza = "STIMA"
+
+[transitori.elicottero_sh2]
+nome = "SH-2F Seasprite in volo"
+nome_breve = "SH-2"
+categoria = "asw"
+sottocategoria = "elicottero"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 148.0
+componenti = [{ tipo = "famiglia", hz = 20, armoniche = 8, decadimento_db = 2.0, livello_rel_db = 0.0 }, { tipo = "tonale", hz = 95, livello_rel_db = -3 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["~20 Hz del rotore principale a 4 pale", "circa 95 Hz del rotore di coda"]
+aurale = ""
+fonte = "17 §8.3 come l'SH-60; giri e livello STIMA (la Knox, 30/10/2026)"
+confidenza = "STIMA"
+
+[transitori.elicottero_lynx]
+nome = "Lynx HAS.3 in volo"
+nome_breve = "Lynx"
+categoria = "asw"
+sottocategoria = "elicottero"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 145.0
+componenti = [{ tipo = "famiglia", hz = 21, armoniche = 8, decadimento_db = 2.0, livello_rel_db = 0.0 }, { tipo = "tonale", hz = 100, livello_rel_db = -3 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["~21 Hz del rotore principale a 4 pale", "circa 100 Hz del rotore di coda"]
+aurale = ""
+fonte = "38: rotore a 4 pale; giri e livello STIMA, un po' sotto l'SH-2F piu' grande"
+confidenza = "STIMA"
+
+[transitori.elicottero_hkp4]
+nome = "Hkp 4 (Vertol 107) in volo"
+nome_breve = "Hkp 4"
+categoria = "asw"
+sottocategoria = "elicottero"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 150.0
+componenti = [{ tipo = "famiglia", hz = 13.2, armoniche = 10, decadimento_db = 2.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["~13 Hz, i due rotori in tandem a 3 pale"]
+aurale = ""
+fonte = "35: Vertol 107, 264 giri (STIMA); livello come il Sea King"
+confidenza = "STIMA"
+
+[transitori.elicottero_sh3]
+nome = "SH-3 Sea King in volo"
+nome_breve = "SH-3"
+categoria = "asw"
+sottocategoria = "elicottero"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 150.0
+componenti = [{ tipo = "famiglia", hz = 17, armoniche = 8, decadimento_db = 2.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["~17 Hz del rotore principale"]
+aurale = ""
+fonte = "17 §8.3; giri e livello STIMA"
+confidenza = "STIMA"
+
+[transitori.elicottero_ka25]
+nome = "Ka-25 in volo"
+nome_breve = "Ka-25"
+categoria = "asw"
+sottocategoria = "elicottero"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 150.0
+componenti = [{ tipo = "famiglia", hz = 11.9, armoniche = 10, decadimento_db = 2.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["11,9 Hz, rotori coassiali"]
+aurale = ""
+fonte = "17 §8.3; livello STIMA"
+confidenza = "STIMA"
+
+[transitori.elicottero_ka27]
+nome = "Ka-27 in volo"
+nome_breve = "Ka-27"
+categoria = "asw"
+sottocategoria = "elicottero"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 152.0
+componenti = [{ tipo = "famiglia", hz = 13.0, armoniche = 10, decadimento_db = 2.0, livello_rel_db = 0.0 }, { tipo = "famiglia", hz = 14.0, armoniche = 10, decadimento_db = 2.0, livello_rel_db = -1 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["~13-14 Hz con i battimenti dei rotori coassiali"]
+aurale = ""
+fonte = "17 §8.3; giri e livello STIMA"
+confidenza = "STIMA"
+
+[transitori.hover_spruzzi]
+nome = "Elicottero in hover: rotore e spruzzi"
+nome_breve = "Hover"
+categoria = "asw"
+sottocategoria = "elicottero"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 136.0
+componenti = [{ tipo = "banda", f_lo = 200, f_hi = 8000, picco_hz = 800, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "continuo" }
+vita_s = 0.0
+indizi = ["rumore di superficie localizzato entro 0,5-1 nm"]
+aurale = "fruscio continuo dalla superficie"
+fonte = "17 §8.3 (regola d'ascolto [GIOCO]); livello STIMA: la sfera del 688 lo sente entro ~1 nm"
+confidenza = "STIMA"
+
+[transitori.tonfo_boa]
+nome = "Tonfo di una sonoboa"
+nome_breve = "Tonfo boa"
+categoria = "asw"
+sottocategoria = "tonfo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 160.0
+componenti = [{ tipo = "impulso", f_lo = 500, f_hi = 10000, durata_s = 0.2, picco_hz = 2000, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 5.0
+indizi = ["colpo secco in superficie", "a intervalli regolari: una barriera di boe"]
+aurale = ""
+fonte = "17 §8.3 [ART-Be12] (2,8 km ai sonar sovietici) e [GIOCO]"
+confidenza = "media"
+
+[transitori.tonfo_trasduttore]
+nome = "Tonfo del trasduttore del sonar a immersione"
+nome_breve = "Tonfo dip"
+categoria = "asw"
+sottocategoria = "tonfo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 150.0
+componenti = [{ tipo = "impulso", f_lo = 300, f_hi = 5000, durata_s = 0.3, picco_hz = 1000, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 5.0
+indizi = ["tonfo, poi 1-3 min di silenzio e i ping"]
+aurale = ""
+fonte = "17 §8.3; livello STIMA"
+confidenza = "STIMA"
+
+[transitori.tonfo_siluro]
+nome = "Tonfo di un siluro aviolanciato"
+nome_breve = "Tonfo siluro"
+categoria = "asw"
+sottocategoria = "tonfo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 175.0
+componenti = [{ tipo = "impulso", f_lo = 200, f_hi = 10000, durata_s = 0.2, picco_hz = 1500, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 5.0
+indizi = ["tonfo forte, dopo 5-10 s il motore e la testa: siluro in acqua"]
+aurale = ""
+fonte = "17 §8.3 [GIOCO]"
+confidenza = "media"
+
+[transitori.ping_aqs13b]
+nome = "Ping del sonar a immersione AQS-13B"
+nome_breve = "AQS-13B"
+categoria = "asw"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 211.0
+componenti = [{ tipo = "impulso", f_lo = 9900, f_hi = 10100, durata_s = 0.035, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 2.0
+indizi = ["~10 kHz, ogni 6-10 s, 3-6 ping poi silenzio"]
+aurale = ""
+fonte = "17 §6.4 e §8.3 [MILAQS13B]"
+confidenza = "alta"
+
+[transitori.ping_aqs13f]
+nome = "Ping del sonar a immersione AQS-13F"
+nome_breve = "AQS-13F"
+categoria = "asw"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 215.0
+componenti = [{ tipo = "impulso", f_lo = 9900, f_hi = 10100, durata_s = 0.035, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 2.0
+indizi = ["~10 kHz, ogni 6-10 s"]
+aurale = ""
+fonte = "17 §8.3 (215 dB nella tabella dell'asimmetria)"
+confidenza = "media"
+
+[transitori.ping_hs73]
+nome = "Ping del sonar a immersione HS-73"
+nome_breve = "HS-73"
+categoria = "asw"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 205.0
+componenti = [{ tipo = "impulso", f_lo = 9900, f_hi = 10100, durata_s = 0.035, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 2.0
+indizi = ["~10 kHz, ogni 6-10 s: l'Hkp 4 svedese"]
+aurale = ""
+fonte = "35; frequenza e livello STIMA"
+confidenza = "STIMA"
+
+[transitori.ping_vgs3]
+nome = "Ping del sonar a immersione VGS-3"
+nome_breve = "VGS-3"
+categoria = "asw"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 205.0
+componenti = [{ tipo = "impulso", f_lo = 8400, f_hi = 8600, durata_s = 0.1, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 2.0
+indizi = ["raro: un contatto o un sospetto"]
+aurale = ""
+fonte = "17 §6.5 e §8.3; frequenza e livello STIMA"
+confidenza = "STIMA"
+
+[transitori.ping_vgs2]
+nome = "Ping del sonar a immersione VGS-2"
+nome_breve = "VGS-2"
+categoria = "asw"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 200.0
+componenti = [{ tipo = "impulso", f_lo = 7900, f_hi = 8100, durata_s = 0.1, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 2.0
+indizi = ["Ka-25: raro"]
+aurale = ""
+fonte = "17 §8.3; frequenza e livello STIMA"
+confidenza = "STIMA"
+
+[transitori.ping_dicass]
+nome = "Ping di una boa DICASS (SSQ-62B)"
+nome_breve = "DICASS"
+categoria = "asw"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 200.0
+componenti = [{ tipo = "impulso", f_lo = 8400, f_hi = 8600, durata_s = 0.25, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 2.0
+indizi = ["6,5-9,5 kHz, CW o FM, a comando"]
+aurale = ""
+fonte = "17 §4.1 e §8.3 [FASSSQ62]; durata STIMA"
+confidenza = "alta"
+
+[transitori.ping_ssq47b]
+nome = "Ping di una boa SSQ-47B"
+nome_breve = "SSQ-47B"
+categoria = "asw"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 195.0
+componenti = [{ tipo = "impulso", f_lo = 15900, f_hi = 16100, durata_s = 0.1, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "periodico", intervallo_s = [10, 10], gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+vita_s = 1800.0
+indizi = ["13-19 kHz ogni 10 s: inconfondibile"]
+aurale = ""
+fonte = "17 §4.1 e §8.3 [HOLLER]; livello e durata STIMA"
+confidenza = "alta per la cadenza"
+
+[transitori.ping_rgb55a]
+nome = "Ping di una boa RGB-55A"
+nome_breve = "RGB-55A"
+categoria = "asw"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 200.0
+componenti = [{ tipo = "impulso", f_lo = 8400, f_hi = 8600, durata_s = 0.1, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 2.0
+indizi = ["4 frequenze, a comando"]
+aurale = ""
+fonte = "17 §4.2 [ART-Tu142]; frequenza e livello STIMA"
+confidenza = "STIMA"
+
+[transitori.esplosione_mgab]
+nome = "Esplosiva MGAB"
+nome_breve = "MGAB"
+categoria = "asw"
+sottocategoria = "esplosiva"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 215.0
+componenti = [{ tipo = "impulso", f_lo = 50, f_hi = 5000, durata_s = 0.05, picco_hz = 200, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 3.0
+indizi = ["colpo singolo a 25, 150 o 400 m", "2-3 nello stesso punto a 3-4 min"]
+aurale = ""
+fonte = "17 §4.2 [ART-Tu142]; livello STIMA (100-800 g)"
+confidenza = "media"
+
+[transitori.treno_mgab]
+nome = "Spirale MGAB SZ: treno di colpi"
+nome_breve = "MGAB SZ"
+categoria = "asw"
+sottocategoria = "esplosiva"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 210.0
+componenti = [{ tipo = "impulso", f_lo = 50, f_hi = 5000, durata_s = 0.05, picco_hz = 200, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "periodico", intervallo_s = [0.25, 0.25], gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+vita_s = 8.0
+indizi = ["treno di colpi a 4 Hz"]
+aurale = ""
+fonte = "17 §4.2 [ART-Tu142]; livello e durata STIMA"
+confidenza = "media"
+
+[transitori.sus_mk84]
+nome = "SUS Mk 84"
+nome_breve = "SUS"
+categoria = "asw"
+sottocategoria = "segnale"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 170.0
+componenti = [{ tipo = "tonale", hz = 3000, livello_rel_db = 0.0, durata_s = 80.0, ritmata = true }, { tipo = "tonale", hz = 3400, livello_rel_db = -3, durata_s = 80.0, ritmata = true }]
+ritmo = { processo = "singolo" }
+vita_s = 80.0
+indizi = ["toni a ~3 kHz per 45-120 s: attacco simulato o codice d'ordine"]
+aurale = ""
+fonte = "17 §4.3 [PRC68SUS]; livello STIMA"
+confidenza = "media"
+
+[transitori.fulmine_mare]
+nome = "Fulmine che colpisce il mare"
+nome_breve = "Fulmine"
+categoria = "meteo"
+sottocategoria = "fulmine"
+densita = 0.0
+profondita_m = [0, 1]
+livello_db = 195.0
+componenti = [{ tipo = "impulso", f_lo = 40, f_hi = 400, durata_s = 0.05, picco_hz = 150, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "impulso", f_lo = 40, f_hi = 300, durata_s = 0.25, picco_hz = 120, pendenza_db_ott = 3, livello_rel_db = -12 }, { tipo = "impulso", f_lo = 500, f_hi = 5000, durata_s = 0.008, picco_hz = 1500, pendenza_db_ott = 3, livello_rel_db = -18 }]
+ritmo = { processo = "singolo" }
+vita_s = 3.0
+indizi = ["colpo secco e grave da un rilevamento qualsiasi, spesso 3-5 colpi in mezzo secondo", "nessuna traccia: dura troppo poco; con un temporale vicino, altri colpi da direzioni diverse"]
+aurale = "tonfo cupo e secco, a volte a raffica"
+fonte = "21e §1 e §5.2: [ABA84] (udibili a 30-40 km), [INPEX09] (+15 dB a 5-10 km), [HIL85] via [DOL09]; livello e forma STIMA tarate sul modello"
+confidenza = "media per l'esistenza, STIMA per i livelli"
+
+[transitori.tubo_allaga]
+nome = "Allagamento del tubo lanciasiluri"
+nome_breve = "Allaga tubo"
+categoria = "arma"
+sottocategoria = "lancio"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 128.0
+componenti = [{ tipo = "banda", f_lo = 100, f_hi = 3000, picco_hz = 400, pendenza_db_ott = 6, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 200, f_hi = 800, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = -6 }]
+ritmo = { processo = "singolo" }
+vita_s = 25.0
+indizi = ["gorgoglio di 20-30 s: un tubo si prepara"]
+aurale = ""
+fonte = "r7 §1.2 e §6.2; livello STIMA"
+confidenza = "STIMA"
+
+[transitori.tubo_equalizza]
+nome = "Equalizzazione del tubo"
+nome_breve = "Equalizza"
+categoria = "arma"
+sottocategoria = "lancio"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 125.0
+componenti = [{ tipo = "banda", f_lo = 500, f_hi = 5000, picco_hz = 2000, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "impulso", f_lo = 100, f_hi = 2000, durata_s = 0.08, picco_hz = 500, pendenza_db_ott = 3, livello_rel_db = 6 }]
+ritmo = { processo = "singolo" }
+vita_s = 10.0
+indizi = ["sibilo, poi un colpo secco"]
+aurale = ""
+fonte = "r7 §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.porta_tubo]
+nome = "Porta esterna del tubo"
+nome_breve = "Porta tubo"
+categoria = "arma"
+sottocategoria = "lancio"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 145.0
+componenti = [{ tipo = "impulso", f_lo = 50, f_hi = 4000, durata_s = 0.15, picco_hz = 500, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 120, f_hi = 700, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = -20 }]
+ritmo = { processo = "singolo" }
+vita_s = 5.0
+indizi = ["colpo metallico e ronzio idraulico: la porta si apre o si chiude"]
+aurale = ""
+fonte = "r7 §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.sparo_ram]
+nome = "Lancio: colpo del pistone ad acqua"
+nome_breve = "Lancio"
+categoria = "arma"
+sottocategoria = "lancio"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 172.0
+componenti = [{ tipo = "impulso", f_lo = 20, f_hi = 5000, durata_s = 0.08, picco_hz = 250, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "tonale", hz = 55, livello_rel_db = -6, durata_s = 1.2, ritmata = true }, { tipo = "banda", f_lo = 20, f_hi = 5000, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = -15 }]
+ritmo = { processo = "singolo" }
+vita_s = 1.5
+indizi = ["colpo forte e grave con la risonanza del tubo (~55 Hz): lancio"]
+aurale = ""
+fonte = "r7 §1.2 e §6.2 (risonanza c/4L con L ~7 m); STIMA, udibile a 10-40 km"
+confidenza = "STIMA"
+
+[transitori.ram_ritorno]
+nome = "Lancio: ritorno del pistone"
+nome_breve = "Ritorno ram"
+categoria = "arma"
+sottocategoria = "lancio"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 155.0
+componenti = [{ tipo = "impulso", f_lo = 20, f_hi = 5000, durata_s = 0.5, picco_hz = 250, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 1.0
+indizi = []
+aurale = ""
+fonte = "r7 §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.avvio_siluro]
+nome = "Avvio del motore del siluro"
+nome_breve = "Avvio siluro"
+categoria = "arma"
+sottocategoria = "lancio"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 155.0
+componenti = [{ tipo = "impulso", f_lo = 1000, f_hi = 10000, durata_s = 0.03, picco_hz = 3000, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 1000, f_hi = 10000, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = -10 }]
+ritmo = { processo = "singolo" }
+vita_s = 2.0
+indizi = ["scoppio breve e acuto, poi il fischio che sale: siluro in acqua"]
+aurale = ""
+fonte = "r7 §2.5 e §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.capsula_harpoon]
+nome = "Capsula dell'Harpoon: apertura dei tappi"
+nome_breve = "Tappi capsula"
+categoria = "arma"
+sottocategoria = "lancio"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 178.0
+componenti = [{ tipo = "impulso", f_lo = 20, f_hi = 10000, durata_s = 0.05, picco_hz = 500, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 1.0
+indizi = ["schiocco pirotecnico in superficie, 20-60 s dopo il lancio"]
+aurale = ""
+fonte = "r7 §1.3; STIMA"
+confidenza = "STIMA"
+
+[transitori.booster_sub]
+nome = "Booster del Tomahawk acceso in acqua"
+nome_breve = "Booster"
+categoria = "arma"
+sottocategoria = "lancio"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 200.0
+componenti = [{ tipo = "banda", f_lo = 20, f_hi = 10000, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }, { tipo = "famiglia", hz = 10, armoniche = 3, decadimento_db = 6, livello_rel_db = -10 }]
+ritmo = { processo = "singolo" }
+vita_s = 2.5
+indizi = ["ruggito a larga banda di 2 s: missile da sottomarino"]
+aurale = ""
+fonte = "r7 §1.3: 195-210 dB molto incerti (STIMA)"
+confidenza = "STIMA"
+
+[transitori.vls_portello]
+nome = "Portello di un pozzo VLS"
+nome_breve = "Portello VLS"
+categoria = "arma"
+sottocategoria = "lancio"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 145.0
+componenti = [{ tipo = "impulso", f_lo = 50, f_hi = 4000, durata_s = 0.15, picco_hz = 500, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 3.0
+indizi = []
+aurale = ""
+fonte = "r7 §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.ping_testa_mk48]
+nome = "Ping della testa attiva del Mk 48"
+nome_breve = "Testa Mk 48"
+categoria = "arma"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 210.0
+componenti = [{ tipo = "impulso", f_lo = 29500, f_hi = 30500, durata_s = 0.01, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 0.5
+indizi = ["ping acuto che accelera man mano che il siluro si avvicina"]
+aurale = ""
+fonte = "r7 §2.4 e §6.3; STIMA"
+confidenza = "STIMA"
+
+[transitori.ping_testa_mk46]
+nome = "Ping della testa attiva del Mk 46"
+nome_breve = "Testa Mk 46"
+categoria = "arma"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 205.0
+componenti = [{ tipo = "impulso", f_lo = 34500, f_hi = 35500, durata_s = 0.01, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 0.5
+indizi = ["ping acuto che accelera man mano che il siluro si avvicina"]
+aurale = ""
+fonte = "r7 §2.4 e §6.3; STIMA"
+confidenza = "STIMA"
+
+[transitori.ping_testa_uset80]
+nome = "Ping della testa attiva del USET-80"
+nome_breve = "Testa USET-80"
+categoria = "arma"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 210.0
+componenti = [{ tipo = "impulso", f_lo = 24500, f_hi = 25500, durata_s = 0.01, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 0.5
+indizi = ["ping acuto che accelera man mano che il siluro si avvicina"]
+aurale = ""
+fonte = "r7 §2.4 e §6.3; STIMA"
+confidenza = "STIMA"
+
+[transitori.ping_testa_set65]
+nome = "Ping della testa attiva del SET-65 / TEST-71"
+nome_breve = "Testa SET-65 / TEST-71"
+categoria = "arma"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 205.0
+componenti = [{ tipo = "impulso", f_lo = 24500, f_hi = 25500, durata_s = 0.01, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 0.5
+indizi = ["ping acuto che accelera man mano che il siluro si avvicina"]
+aurale = ""
+fonte = "r7 §2.4 e §6.3; STIMA"
+confidenza = "STIMA"
+
+[transitori.ping_testa_at1]
+nome = "Ping della testa attiva del AT-1"
+nome_breve = "Testa AT-1"
+categoria = "arma"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 200.0
+componenti = [{ tipo = "impulso", f_lo = 29500, f_hi = 30500, durata_s = 0.01, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 0.5
+indizi = ["ping acuto che accelera man mano che il siluro si avvicina"]
+aurale = ""
+fonte = "r7 §2.4 e §6.3; STIMA"
+confidenza = "STIMA"
+
+[transitori.ping_testa_tp42]
+nome = "Ping della testa attiva del Tp 42"
+nome_breve = "Testa Tp 42"
+categoria = "arma"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 200.0
+componenti = [{ tipo = "impulso", f_lo = 39500, f_hi = 40500, durata_s = 0.01, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 0.5
+indizi = ["ping acuto che accelera man mano che il siluro si avvicina"]
+aurale = ""
+fonte = "r7 §2.4 e §6.3; STIMA"
+confidenza = "STIMA"
+
+[transitori.ping_testa_stingray]
+nome = "Ping della testa attiva del Sting Ray"
+nome_breve = "Testa Sting Ray"
+categoria = "arma"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 205.0
+componenti = [{ tipo = "impulso", f_lo = 31500, f_hi = 32500, durata_s = 0.01, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 0.5
+indizi = ["ping acuto che accelera man mano che il siluro si avvicina"]
+aurale = ""
+fonte = "r7 §2.4 e §6.3; STIMA"
+confidenza = "STIMA"
+
+[transitori.ping_testa_adcap]
+nome = "Ping della testa attiva del Mk 48 ADCAP (FM)"
+nome_breve = "Testa ADCAP"
+categoria = "arma"
+sottocategoria = "ping"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 210.0
+componenti = [{ tipo = "sweep", f_da = 20000, f_a = 40000, durata_s = 0.02, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 0.5
+indizi = ["ping a larga banda FM"]
+aurale = ""
+fonte = "r7 §6.3; STIMA"
+confidenza = "STIMA"
+
+[transitori.esplosione_urto]
+nome = "Esplosione subacquea: onda d'urto (1 kg di TNT)"
+nome_breve = "Esplosione"
+categoria = "arma"
+sottocategoria = "esplosione"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 256.0
+componenti = [{ tipo = "impulso", f_lo = 20, f_hi = 20000, durata_s = 0.01, picco_hz = 2800, pendenza_db_ott = 6, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 3.0
+indizi = ["colpo violento, poi le pulsazioni della bolla"]
+aurale = ""
+fonte = "r7 §3.1 (Cole, Willis, dossier 07 §1); taratura STIMA"
+confidenza = "STIMA"
+
+[transitori.esplosione_bolla]
+nome = "Esplosione subacquea: pulsazione della bolla"
+nome_breve = "Bolla"
+categoria = "arma"
+sottocategoria = "esplosione"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 242.0
+componenti = [{ tipo = "impulso", f_lo = 2, f_hi = 500, durata_s = 0.02, picco_hz = 20, pendenza_db_ott = 6, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 1.0
+indizi = []
+aurale = ""
+fonte = "r7 §3.2: la prima bolla ~14 dB sotto l'urto"
+confidenza = "STIMA"
+
+[transitori.portello_sbatte]
+nome = "Portello che sbatte"
+nome_breve = "Portello"
+categoria = "scafo"
+sottocategoria = "scafo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 142.0
+componenti = [{ tipo = "impulso", f_lo = 50, f_hi = 5000, durata_s = 0.2, picco_hz = 600, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "tonale", hz = 700, livello_rel_db = -6, durata_s = 0.2, ritmata = true }]
+ritmo = { processo = "singolo" }
+vita_s = 0.5
+indizi = ["colpo metallico isolato: indisciplina a bordo"]
+aurale = ""
+fonte = "r7 §5 e §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.attrezzo_cade]
+nome = "Attrezzo che cade"
+nome_breve = "Attrezzo"
+categoria = "scafo"
+sottocategoria = "scafo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 138.0
+componenti = [{ tipo = "impulso", f_lo = 200, f_hi = 8000, durata_s = 0.2, picco_hz = 2000, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "tonale", hz = 2500, livello_rel_db = -6, durata_s = 0.2, ritmata = true }]
+ritmo = { processo = "singolo" }
+vita_s = 0.5
+indizi = []
+aurale = ""
+fonte = "r7 §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.piani_colpo]
+nome = "Colpo dei piani di profondita'"
+nome_breve = "Piani"
+categoria = "scafo"
+sottocategoria = "scafo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 128.0
+componenti = [{ tipo = "impulso", f_lo = 50, f_hi = 2000, durata_s = 0.05, picco_hz = 300, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 150, f_hi = 400, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = -6 }]
+ritmo = { processo = "singolo" }
+vita_s = 1.5
+indizi = []
+aurale = ""
+fonte = "r7 §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.pompa_avvio]
+nome = "Avvio di una pompa d'assetto o d'esaurimento"
+nome_breve = "Pompa"
+categoria = "scafo"
+sottocategoria = "scafo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 135.0
+componenti = [{ tipo = "banda", f_lo = 100, f_hi = 2000, picco_hz = 300, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "famiglia", hz = 60, armoniche = 4, decadimento_db = 3, livello_rel_db = -3 }]
+ritmo = { processo = "singolo" }
+vita_s = 3.0
+indizi = []
+aurale = ""
+fonte = "r7 §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.tdu]
+nome = "Espulsione dei rifiuti (TDU)"
+nome_breve = "TDU"
+categoria = "scafo"
+sottocategoria = "scafo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 148.0
+componenti = [{ tipo = "impulso", f_lo = 30, f_hi = 4000, durata_s = 0.05, picco_hz = 200, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 100, f_hi = 800, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = -10 }]
+ritmo = { processo = "singolo" }
+vita_s = 1.5
+indizi = ["colpo d'acqua e bolle, spesso al cambio di guardia"]
+aurale = ""
+fonte = "r7 §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.soffiata_emergenza]
+nome = "Soffiata d'emergenza delle casse"
+nome_breve = "Soffiata"
+categoria = "scafo"
+sottocategoria = "scafo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 175.0
+componenti = [{ tipo = "banda", f_lo = 20, f_hi = 5000, picco_hz = 200, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 20, f_hi = 100, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = -3 }]
+ritmo = { processo = "singolo" }
+vita_s = 30.0
+indizi = ["ruggito di 30 s con bolle grosse: risalita d'emergenza"]
+aurale = ""
+fonte = "r7 §4.1 (Thresher a ~30 nmi) e §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.scafo_scricchiola]
+nome = "Scafo che scricchiola al cambio di quota"
+nome_breve = "Scricchiolii"
+categoria = "scafo"
+sottocategoria = "scafo"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 128.0
+componenti = [{ tipo = "impulso", f_lo = 1000, f_hi = 5000, durata_s = 0.05, picco_hz = 2500, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "periodico", intervallo_s = [0.5, 2.0], gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+vita_s = 15.0
+indizi = []
+aurale = ""
+fonte = "r7 §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.cedimento_minore]
+nome = "Cedimento di un compartimento in discesa"
+nome_breve = "Cedimento"
+categoria = "scafo"
+sottocategoria = "affondamento"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 185.0
+componenti = [{ tipo = "impulso", f_lo = 10, f_hi = 2000, durata_s = 0.3, picco_hz = 100, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 1.0
+indizi = ["schianti cupi uno dopo l'altro, sempre piu' profondi"]
+aurale = ""
+fonte = "r7 §4.1-4.2 (Scorpion: 17 eventi in 200 s); STIMA"
+confidenza = "STIMA"
+
+[transitori.rottura_nave]
+nome = "Nave che si spezza e affonda"
+nome_breve = "Rottura"
+categoria = "scafo"
+sottocategoria = "affondamento"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 160.0
+componenti = [{ tipo = "impulso", f_lo = 50, f_hi = 3000, durata_s = 0.5, picco_hz = 300, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "poisson", tasso_h = 360.0, gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+vita_s = 450.0
+indizi = ["strappi, colpi e lamiere per 5-10 minuti"]
+aurale = ""
+fonte = "r7 §4.3 (MOL Comfort, CTBTO); livelli STIMA"
+confidenza = "STIMA"
+
+[transitori.allagamento]
+nome = "Allagamento di uno scafo"
+nome_breve = "Allagamento"
+categoria = "scafo"
+sottocategoria = "affondamento"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 150.0
+componenti = [{ tipo = "banda", f_lo = 50, f_hi = 5000, picco_hz = 300, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "tonale", hz = 47, livello_rel_db = -6 }, { tipo = "tonale", hz = 83, livello_rel_db = -7 }, { tipo = "tonale", hz = 131, livello_rel_db = -8 }, { tipo = "tonale", hz = 177, livello_rel_db = -9 }, { tipo = "tonale", hz = 233, livello_rel_db = -10 }, { tipo = "tonale", hz = 311, livello_rel_db = -11 }, { tipo = "tonale", hz = 389, livello_rel_db = -12 }, { tipo = "tonale", hz = 457, livello_rel_db = -13 }]
+ritmo = { processo = "singolo" }
+vita_s = 1800.0
+indizi = ["fruscio con molte righe strette: risonanze dello scafo che si riempie"]
+aurale = ""
+fonte = "r7 §4.3 ([Bry18]: oltre 100 righe nel LOFAR); frequenze e livelli STIMA"
+confidenza = "STIMA"
+
+[transitori.bolle_aria]
+nome = "Aria che sfugge dallo scafo"
+nome_breve = "Bolle"
+categoria = "scafo"
+sottocategoria = "affondamento"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 140.0
+componenti = [{ tipo = "impulso", f_lo = 30, f_hi = 700, durata_s = 0.005, picco_hz = 200, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "poisson", tasso_h = 36000.0, gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+vita_s = 60.0
+indizi = []
+aurale = ""
+fonte = "r7 §6.2 (bolle di Minnaert); STIMA"
+confidenza = "STIMA"
+
+[transitori.urto_fondo]
+nome = "Scafo che urta il fondo"
+nome_breve = "Urto sul fondo"
+categoria = "scafo"
+sottocategoria = "affondamento"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 190.0
+componenti = [{ tipo = "impulso", f_lo = 5, f_hi = 200, durata_s = 0.05, picco_hz = 40, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 5, f_hi = 200, picco_hz = 0.0, pendenza_db_ott = 0.0, livello_rel_db = -12 }]
+ritmo = { processo = "singolo" }
+vita_s = 20.0
+indizi = []
+aurale = ""
+fonte = "r7 §6.2; STIMA"
+confidenza = "STIMA"
+
+[transitori.art_scoppio_superficie]
+nome = "Proietto che scoppia sull'acqua (5\", 3,5 kg)"
+nome_breve = "Cannonata"
+categoria = "arma"
+sottocategoria = "artiglieria"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 244.0
+componenti = [{ tipo = "impulso", f_lo = 300, f_hi = 20000, durata_s = 0.005, picco_hz = 3000, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 1.0
+indizi = ["crack corto e secco, senza bolla: esplosione in superficie", "a cadenza regolare: tiro d'artiglieria (0,75 s Mk 75, 3 s Mk 45, doppiette AK-130 e AK-726)"]
+aurale = "schiocco secco e acuto"
+fonte = "22 §7.1 e §10 (Cole, specchio di Lloyd); taratura sul modello [CALC]"
+confidenza = "media-bassa"
+
+[transitori.art_scoppio_aria]
+nome = "Proietto con spoletta di prossimita' che scoppia in aria"
+nome_breve = "Scoppio VT"
+categoria = "arma"
+sottocategoria = "artiglieria"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 224.0
+componenti = [{ tipo = "impulso", f_lo = 300, f_hi = 20000, durata_s = 0.005, picco_hz = 2000, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 1.0
+indizi = ["come la cannonata, piu' debole: il suono entra in acqua solo sotto lo scoppio (finestra di Snell)"]
+aurale = ""
+fonte = "22 §3.5 e §7.1; 20 dB sotto lo scoppio sull'acqua (STIMA)"
+confidenza = "STIMA"
+
+[transitori.art_partenza]
+nome = "Colpo di partenza di un cannone navale"
+nome_breve = "Partenza"
+categoria = "arma"
+sottocategoria = "artiglieria"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 180.0
+componenti = [{ tipo = "impulso", f_lo = 40, f_hi = 150, durata_s = 0.07, picco_hz = 70, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 1.0
+indizi = ["tonfo sordo e ritmico alla cadenza del pezzo: la nave sta sparando", "arriva prima del proietto"]
+aurale = "tonfo cupo, ritmico"
+fonte = "22 §7.3: 165-180 dB a 1 m equivalente, picco a ~70 Hz [NOSC732]; si tiene il massimo perche' con la perdita del modello (sorgente a 3 m) si senta entro 5-10 km come nelle fonti della US Navy"
+confidenza = "STIMA"
+
+[transitori.art_tonfo]
+nome = "Proietto inerte o rimbalzato che entra in acqua"
+nome_breve = "Tonfo proietto"
+categoria = "arma"
+sottocategoria = "artiglieria"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 204.0
+componenti = [{ tipo = "impulso", f_lo = 100, f_hi = 5000, durata_s = 0.02, picco_hz = 800, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 1.0
+indizi = ["tonfo breve senza esplosione: colpo d'esercitazione o rimbalzo"]
+aurale = ""
+fonte = "22 §7.2: 30-50 dB sotto lo scoppio dello stesso calibro (STIMA; EIS non scaricabili)"
+confidenza = "STIMA"
+
+[transitori.art_raffica]
+nome = "Raffica di un cannone a canne rotanti (AK-630): mezzo secondo"
+nome_breve = "Raffica"
+categoria = "arma"
+sottocategoria = "artiglieria"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 240.0
+componenti = [{ tipo = "impulso", f_lo = 300, f_hi = 20000, durata_s = 0.004, picco_hz = 3000, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "periodico", intervallo_s = [0.0133, 0.0133], gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+vita_s = 0.5
+indizi = ["ronzio di micro-scoppi per 1-3 s: AK-630"]
+aurale = ""
+fonte = "22 §7.1 (30 mm, 48,5 g: 5 dB sotto il 5\"); 75 colpi al secondo (4500/min); STIMA"
+confidenza = "STIMA"
+
+[transitori.urto_colpo]
+nome = "Collisione: scafo contro scafo"
+nome_breve = "Collisione"
+categoria = "scafo"
+sottocategoria = "collisione"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 170.0
+componenti = [{ tipo = "impulso", f_lo = 10, f_hi = 3000, durata_s = 0.15, picco_hz = 120, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 20, f_hi = 1500, picco_hz = 150, pendenza_db_ott = 3, livello_rel_db = -14 }]
+ritmo = { processo = "singolo" }
+vita_s = 2.0
+indizi = ["colpo metallico forte e cupo, poi lo scafo che risuona: due scafi si sono toccati", "dopo l'urto entrambi sanno, chiunque fosse il piu' silenzioso"]
+aurale = "schianto sordo che rimbomba"
+fonte = "16 §2.6 (180-190 dB per un urto forte); STIMA"
+confidenza = "STIMA"
+
+[transitori.urto_lamiera]
+nome = "Collisione: vela, timoni o appendici"
+nome_breve = "Collisione"
+categoria = "scafo"
+sottocategoria = "collisione"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 170.0
+componenti = [{ tipo = "impulso", f_lo = 50, f_hi = 8000, durata_s = 0.08, picco_hz = 800, pendenza_db_ott = 3, livello_rel_db = 0.0 }, { tipo = "banda", f_lo = 200, f_hi = 5000, picco_hz = 1200, pendenza_db_ott = 3, livello_rel_db = -12 }]
+ritmo = { processo = "singolo" }
+vita_s = 2.0
+indizi = ["schianto squillante di lamiera: una vela, un timone o un albero colpiti"]
+aurale = "clangore acuto"
+fonte = "16 §2.6 e §2.3 (parti a lama); spettro STIMA"
+confidenza = "STIMA"
+
+[transitori.urto_stridio]
+nome = "Collisione: strisciamento di uno scafo sull'altro"
+nome_breve = "Stridio"
+categoria = "scafo"
+sottocategoria = "collisione"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 160.0
+componenti = [{ tipo = "banda", f_lo = 200, f_hi = 6000, picco_hz = 1000, pendenza_db_ott = 4, livello_rel_db = 0.0 }]
+ritmo = { processo = "singolo" }
+vita_s = 1.0
+indizi = ["stridio metallico continuo dopo il colpo (K-407 e Grayling, 1993)"]
+aurale = "stridore di lamiere"
+fonte = "16 §2.6 [WP-Kola93]; livello e spettro STIMA"
+confidenza = "STIMA"
+
+[transitori.urto_elica]
+nome = "Collisione: le pale di un'elica che colpiscono"
+nome_breve = "Elica"
+categoria = "scafo"
+sottocategoria = "collisione"
+densita = 0.0
+profondita_m = [0, 0]
+livello_db = 150.0
+componenti = [{ tipo = "impulso", f_lo = 30, f_hi = 3000, durata_s = 0.02, picco_hz = 400, pendenza_db_ott = 3, livello_rel_db = 0.0 }]
+ritmo = { processo = "periodico", intervallo_s = [0.07, 0.15], gruppi = [1, 1], intervallo_interno_s = [0, 0] }
+vita_s = 3.0
+indizi = ["colpi rapidi che rallentano: un'elica ha colpito qualcosa"]
+aurale = ""
+fonte = "16 §2.3 e §2.6; 20 dB sotto il colpo (STIMA)"
+confidenza = "STIMA"
+
+[civili.mercantile]
+nome = "Mercantile da carico generale"
+categoria = "mercantile"
+classe = "mercantile"
+lunghezza_m = [90.0, 180.0]
+pescaggio_m = [6.0, 9.0]
+velocita_servizio_kn = [13.0, 17.0]
+cavitazione_kn = [8.0, 11.0]
+larghezza_rel = 0.14
+echo_vc_kn = 13.9
+echo_d_lf = 0.8
+epoca_db = -1.0
+propulsione = "diesel_lento"
+passo_variabile = false
+assi = [1.0, 1.0]
+pale = [4.0, 4.0]
+giri_asse = [110.0, 160.0]
+motori = [1.0, 1.0]
+cilindri = [5.0, 9.0]
+giri_motore = [110.0, 160.0]
+generatori = [2.0, 3.0]
+cilindri_generatori = [6.0, 8.0]
+giri_generatori = [720.0, 1200.0]
+rete_60 = 0.5
+fonte = "26 §3 cargo generale; ECHO Bulker (V_C 13,9 kn)"
+confidenza = "media"
+
+[civili.cargo]
+nome = "Portacontainer"
+categoria = "mercantile"
+classe = "cargo"
+lunghezza_m = [150.0, 290.0]
+pescaggio_m = [9.0, 12.0]
+velocita_servizio_kn = [18.0, 23.0]
+cavitazione_kn = [9.0, 12.0]
+larghezza_rel = 0.13
+echo_vc_kn = 18.0
+echo_d_lf = 0.8
+epoca_db = 1.0
+propulsione = "diesel_lento"
+passo_variabile = false
+assi = [1.0, 1.0]
+pale = [5.0, 6.0]
+giri_asse = [80.0, 110.0]
+motori = [1.0, 1.0]
+cilindri = [6.0, 12.0]
+giri_motore = [80.0, 110.0]
+generatori = [3.0, 4.0]
+cilindri_generatori = [6.0, 9.0]
+giri_generatori = [720.0, 1200.0]
+rete_60 = 0.6
+fonte = "26 §3 portacontainer (Econship 7RLB90 a 98 giri); ECHO Containership"
+confidenza = "media"
+
+[civili.portarinfuse]
+nome = "Portarinfuse"
+categoria = "mercantile"
+classe = "portarinfuse"
+lunghezza_m = [150.0, 300.0]
+pescaggio_m = [9.0, 15.0]
+velocita_servizio_kn = [13.0, 15.0]
+cavitazione_kn = [7.0, 10.0]
+larghezza_rel = 0.15
+echo_vc_kn = 13.9
+echo_d_lf = 0.8
+epoca_db = 2.0
+propulsione = "diesel_lento"
+passo_variabile = false
+assi = [1.0, 1.0]
+pale = [4.0, 5.0]
+giri_asse = [80.0, 140.0]
+motori = [1.0, 1.0]
+cilindri = [4.0, 8.0]
+giri_motore = [80.0, 140.0]
+generatori = [2.0, 3.0]
+cilindri_generatori = [6.0, 8.0]
+giri_generatori = [720.0, 1200.0]
+rete_60 = 0.6
+fonte = "26 §2.1 Overseas Harriette, §3 portarinfuse; ECHO Bulker"
+confidenza = "media"
+
+[civili.petroliera]
+nome = "Petroliera grande (VLCC a turbina)"
+categoria = "petroliera"
+classe = "petroliera"
+lunghezza_m = [230.0, 370.0]
+pescaggio_m = [14.0, 22.0]
+velocita_servizio_kn = [14.0, 16.0]
+cavitazione_kn = [7.0, 10.0]
+larghezza_rel = 0.18
+echo_vc_kn = 12.4
+echo_d_lf = 1.0
+epoca_db = -3.0
+propulsione = "turbina"
+passo_variabile = false
+assi = [1.0, 1.0]
+pale = [5.0, 6.0]
+giri_asse = [75.0, 90.0]
+motori = [1.0, 1.0]
+cilindri = [0.0, 0.0]
+giri_motore = [4000.0, 6000.0]
+generatori = [1.0, 2.0]
+cilindri_generatori = [6.0, 8.0]
+giri_generatori = [720.0, 1200.0]
+rete_60 = 0.6
+fonte = "26 §3 VLCC (Mobil Hawk, turbina GE, elica a 90 giri); ECHO Tanker"
+confidenza = "media"
+
+[civili.petroliera_costiera]
+nome = "Petroliera costiera e chimichiera"
+categoria = "petroliera"
+classe = "petroliera_costiera"
+lunghezza_m = [60.0, 180.0]
+pescaggio_m = [5.0, 10.0]
+velocita_servizio_kn = [12.0, 15.0]
+cavitazione_kn = [8.0, 11.0]
+larghezza_rel = 0.16
+echo_vc_kn = 12.4
+echo_d_lf = 1.0
+epoca_db = 1.0
+propulsione = "diesel_medio"
+passo_variabile = false
+assi = [1.0, 1.0]
+pale = [4.0, 4.0]
+giri_asse = [150.0, 250.0]
+motori = [1.0, 1.0]
+cilindri = [6.0, 12.0]
+giri_motore = [500.0, 750.0]
+generatori = [2.0, 3.0]
+cilindri_generatori = [6.0, 6.0]
+giri_generatori = [1200.0, 1800.0]
+rete_60 = 0.4
+fonte = "26 §3 petroliera prodotti e chimica; McKenna 2012 chimichiere; ECHO Tanker"
+confidenza = "bassa"
+
+[civili.traghetto]
+nome = "Traghetto ro-ro e passeggeri"
+categoria = "traghetto"
+classe = "traghetto"
+lunghezza_m = [100.0, 200.0]
+pescaggio_m = [5.0, 7.0]
+velocita_servizio_kn = [17.0, 23.0]
+cavitazione_kn = [8.0, 12.0]
+larghezza_rel = 0.16
+echo_vc_kn = 9.7
+echo_d_lf = 0.0
+epoca_db = 0.0
+propulsione = "diesel_medio"
+passo_variabile = true
+assi = [2.0, 2.0]
+pale = [4.0, 4.0]
+giri_asse = [130.0, 250.0]
+motori = [2.0, 4.0]
+cilindri = [6.0, 16.0]
+giri_motore = [400.0, 750.0]
+generatori = [3.0, 4.0]
+cilindri_generatori = [6.0, 8.0]
+giri_generatori = [720.0, 1200.0]
+rete_60 = 0.3
+fonte = "26 §3 traghetti (Herald of Free Enterprise, Silja Serenade); ECHO Passenger"
+confidenza = "bassa"
+
+[civili.rimorchiatore]
+nome = "Rimorchiatore d'altura"
+categoria = "rimorchiatore"
+classe = "rimorchiatore"
+lunghezza_m = [30.0, 70.0]
+pescaggio_m = [4.0, 6.0]
+velocita_servizio_kn = [11.0, 15.0]
+cavitazione_kn = [4.0, 7.0]
+larghezza_rel = 0.27
+echo_vc_kn = 3.7
+echo_d_lf = 0.0
+epoca_db = 13.0
+propulsione = "diesel_medio"
+passo_variabile = false
+assi = [2.0, 2.0]
+pale = [4.0, 4.0]
+giri_asse = [150.0, 300.0]
+motori = [2.0, 2.0]
+cilindri = [8.0, 16.0]
+giri_motore = [750.0, 900.0]
+generatori = [1.0, 2.0]
+cilindri_generatori = [6.0, 6.0]
+giri_generatori = [1200.0, 1800.0]
+rete_60 = 0.5
+fonte = "26 §3 rimorchiatori (EMD 645, riduttore Falk); ECHO Tug; Veirs 2016 170 ± 5 dB"
+confidenza = "bassa"
+
+[civili.rompighiaccio]
+nome = "Rompighiaccio diesel-elettrico"
+categoria = "rompighiaccio"
+classe = "rompighiaccio"
+lunghezza_m = [120.0, 140.0]
+pescaggio_m = [8.0, 11.0]
+velocita_servizio_kn = [14.0, 19.0]
+cavitazione_kn = [8.0, 11.0]
+larghezza_rel = 0.2
+echo_vc_kn = 8.0
+echo_d_lf = 0.0
+epoca_db = 3.0
+propulsione = "diesel_elettrico"
+passo_variabile = false
+assi = [3.0, 3.0]
+pale = [4.0, 4.0]
+giri_asse = [120.0, 180.0]
+motori = [6.0, 9.0]
+cilindri = [9.0, 12.0]
+giri_motore = [500.0, 750.0]
+generatori = [1.0, 2.0]
+cilindri_generatori = [6.0, 6.0]
+giri_generatori = [1000.0, 1500.0]
+rete_60 = 0.0
+fonte = "26 §3 rompighiaccio (Krasin, Kapitan Khlebnikov); ECHO Government; DOSITS +10 dB nel ghiaccio"
+confidenza = "bassa"
+
+[civili.nave_ricerca]
+nome = "Nave oceanografica"
+categoria = "ricerca"
+classe = "nave_ricerca"
+lunghezza_m = [50.0, 100.0]
+pescaggio_m = [4.0, 6.0]
+velocita_servizio_kn = [10.0, 14.0]
+cavitazione_kn = [8.0, 11.0]
+larghezza_rel = 0.19
+echo_vc_kn = 8.0
+echo_d_lf = 0.0
+epoca_db = 0.0
+propulsione = "diesel_medio"
+passo_variabile = true
+assi = [1.0, 2.0]
+pale = [4.0, 5.0]
+giri_asse = [150.0, 250.0]
+motori = [1.0, 2.0]
+cilindri = [6.0, 12.0]
+giri_motore = [600.0, 1000.0]
+generatori = [2.0, 4.0]
+cilindri_generatori = [6.0, 8.0]
+giri_generatori = [1200.0, 1800.0]
+rete_60 = 0.5
+fonte = "26 §3 navi oceanografiche (Johan Hjort, Revelle); ECHO Government/Research"
+confidenza = "bassa"
+
+[civili.peschereccio]
+nome = "Peschereccio a rampa"
+categoria = "peschereccio"
+classe = "peschereccio"
+lunghezza_m = [40.0, 70.0]
+pescaggio_m = [4.0, 6.0]
+velocita_servizio_kn = [11.0, 14.0]
+cavitazione_kn = [3.0, 5.0]
+larghezza_rel = 0.23
+echo_vc_kn = 6.4
+echo_d_lf = 0.0
+epoca_db = 0.0
+propulsione = "diesel_medio"
+passo_variabile = true
+assi = [1.0, 1.0]
+pale = [4.0, 4.0]
+giri_asse = [150.0, 250.0]
+motori = [1.0, 1.0]
+cilindri = [6.0, 12.0]
+giri_motore = [600.0, 1000.0]
+generatori = [1.0, 2.0]
+cilindri_generatori = [6.0, 6.0]
+giri_generatori = [1200.0, 1800.0]
+rete_60 = 0.4
+strascico = true
+fonte = "26 §3 peschereccio a rampa occidentale; ECHO Fishing; Veirs 2016 164 ± 9 dB"
+confidenza = "bassa"
+
+[civili.bmrt]
+nome = "Grande peschereccio sovietico (BMRT)"
+categoria = "peschereccio"
+classe = "bmrt"
+lunghezza_m = [84.0, 105.0]
+pescaggio_m = [5.0, 6.0]
+velocita_servizio_kn = [12.0, 16.0]
+cavitazione_kn = [3.0, 5.0]
+larghezza_rel = 0.16
+echo_vc_kn = 6.4
+echo_d_lf = 0.0
+epoca_db = 2.0
+propulsione = "diesel_medio"
+passo_variabile = true
+assi = [1.0, 1.0]
+pale = [4.0, 4.0]
+giri_asse = [140.0, 200.0]
+motori = [2.0, 2.0]
+cilindri = [6.0, 8.0]
+giri_motore = [500.0, 750.0]
+generatori = [2.0, 3.0]
+cilindri_generatori = [6.0, 6.0]
+giri_generatori = [750.0, 1000.0]
+rete_60 = 0.0
+strascico = true
+fonte = "26 §3 BMRT Pulkovskiy Meridian (2 x 520 giri, CPP a 146 giri); ECHO Fishing"
+confidenza = "media"
+
+[civili.peschereccio_costiero]
+nome = "Peschereccio costiero (palangaro, reti da posta)"
+categoria = "peschereccio"
+classe = "peschereccio_costiero"
+lunghezza_m = [15.0, 45.0]
+pescaggio_m = [2.0, 4.0]
+velocita_servizio_kn = [9.0, 12.0]
+cavitazione_kn = [4.0, 7.0]
+larghezza_rel = 0.25
+echo_vc_kn = 6.4
+echo_d_lf = 0.0
+epoca_db = 0.0
+propulsione = "diesel_veloce"
+passo_variabile = false
+assi = [1.0, 1.0]
+pale = [3.0, 4.0]
+giri_asse = [300.0, 600.0]
+motori = [1.0, 1.0]
+cilindri = [6.0, 12.0]
+giri_motore = [1200.0, 1800.0]
+generatori = [1.0, 1.0]
+cilindri_generatori = [4.0, 6.0]
+giri_generatori = [1500.0, 1800.0]
+rete_60 = 0.5
+fonte = "26 §3 palangari e reti da posta; ECHO Fishing"
+confidenza = "bassa"
+
+[civili.cianciolo]
+nome = "Cianciolo"
+categoria = "peschereccio"
+classe = "cianciolo"
+lunghezza_m = [30.0, 70.0]
+pescaggio_m = [4.0, 7.0]
+velocita_servizio_kn = [12.0, 15.0]
+cavitazione_kn = [4.0, 6.0]
+larghezza_rel = 0.25
+echo_vc_kn = 6.4
+echo_d_lf = 0.0
+epoca_db = 0.0
+propulsione = "diesel_medio"
+passo_variabile = true
+assi = [1.0, 1.0]
+pale = [4.0, 4.0]
+giri_asse = [200.0, 350.0]
+motori = [1.0, 1.0]
+cilindri = [6.0, 12.0]
+giri_motore = [750.0, 1000.0]
+generatori = [1.0, 2.0]
+cilindri_generatori = [6.0, 6.0]
+giri_generatori = [1200.0, 1800.0]
+rete_60 = 0.5
+fonte = "26 §3 ciancioli; ECHO Fishing"
+confidenza = "bassa"
+
+[intercettatori.wlr9]
+bande = [[1000.0, 6000.0, 12.0], [6000.0, 15000.0, 6.0], [15000.0, 45000.0, 6.0], [45000.0, 100000.0, 8.0]]
+soglia_db = 10.0
+risoluzione_hz = 100.0
+misura_durata = true
+misura_fm = false
+falsi_allarmi_h = 0.1
+classi = ["los_angeles", "sturgeon", "trafalgar", "ohio"]
+fonte = "28 §1.3 (STIMA); Military Periscope"
+
+[intercettatori.skat_ogs]
+bande = [[1500.0, 12000.0, 8.0], [12000.0, 60000.0, 6.0]]
+soglia_db = 10.0
+risoluzione_hz = 100.0
+misura_durata = true
+misura_fm = true
+falsi_allarmi_h = 0.5
+classi = ["victor3", "akula", "oscar", "typhoon", "sierra"]
+fonte = "28 §2 (Kazakov 2019: Skat e Skat-3, falsi allarmi dal proprio battello)"
+
+[intercettatori.rubikon]
+bande = [[1500.0, 12000.0, 12.0], [12000.0, 40000.0, 10.0]]
+soglia_db = 12.0
+risoluzione_hz = 200.0
+misura_durata = true
+misura_fm = false
+falsi_allarmi_h = 1.0
+classi = ["kilo", "delta3"]
+fonte = "28 §2 (MGK-400 «Rubikon»: STIMA)"
+
+[intercettatori.rubin]
+bande = [[2000.0, 10000.0, 15.0], [10000.0, 40000.0, 15.0]]
+soglia_db = 12.0
+risoluzione_hz = 300.0
+misura_durata = false
+misura_fm = false
+falsi_allarmi_h = 2.0
+classi = ["alfa", "charlie2", "foxtrot", "victor1"]
+fonte = "28 §2 (Kazakov 2019: «Rubin», 2 bande, molti falsi allarmi); l'Alfa come il «Rubin» (STIMA)"
+
+[emissioni.sqs53_attivo]
+tipo = "scafo"
+f_hz = 3300.0
+durata_s = 1.5
+fm = true
+pri_s = 25.0
+
+[emissioni.sqs56_attivo]
+tipo = "scafo"
+f_hz = 7500.0
+durata_s = 0.1
+fm = false
+pri_s = 20.0
+
+[emissioni.type2016_attivo]
+tipo = "scafo"
+f_hz = 7000.0
+durata_s = 0.5
+fm = false
+pri_s = 20.0
+
+[emissioni.titan2_attivo]
+tipo = "scafo"
+f_hz = 5000.0
+durata_s = 0.5
+fm = false
+pri_s = 15.0
+
+[emissioni.sqs36_attivo]
+tipo = "scafo"
+f_hz = 13000.0
+durata_s = 0.5
+fm = false
+pri_s = 15.0
+
+[emissioni.csu83_attivo]
+tipo = "scafo"
+f_hz = 8000.0
+durata_s = 0.1
+fm = false
+pri_s = 60.0
+
+[emissioni.sa950_attivo]
+tipo = "scafo"
+f_hz = 24000.0
+durata_s = 0.2
+fm = false
+pri_s = 5.0
+
+[emissioni.salmon_vds_attivo]
+tipo = "scafo"
+f_hz = 12000.0
+durata_s = 0.3
+fm = false
+pri_s = 10.0
+
+[emissioni.sqs35_vds_attivo]
+tipo = "scafo"
+f_hz = 13000.0
+durata_s = 0.5
+fm = false
+pri_s = 15.0
+
+[emissioni.polinom_vds_attivo]
+tipo = "scafo"
+f_hz = 3000.0
+durata_s = 1.0
+fm = false
+pri_s = 25.0
+
+[emissioni.vega_vds_attivo]
+tipo = "scafo"
+f_hz = 7000.0
+durata_s = 0.5
+fm = false
+pri_s = 15.0
+
+[emissioni.shelon_vds_attivo]
+tipo = "scafo"
+f_hz = 10000.0
+durata_s = 0.1
+fm = false
+pri_s = 10.0
+
+[emissioni.bqq5_attivo]
+tipo = "scafo"
+f_hz = 3500.0
+durata_s = 0.5
+fm = false
+pri_s = 60.0
+
+[emissioni.sovietico_attivo]
+tipo = "scafo"
+f_hz = 4500.0
+durata_s = 0.3
+fm = false
+pri_s = 60.0
+
+[emissioni.bqs15]
+tipo = "ricerca_hf"
+f_hz = 25000.0
+durata_s = 0.01
+fm = false
+pri_s = 2.0
+
+[emissioni.ssq47b]
+tipo = "boa"
+f_hz = 16000.0
+durata_s = 0.1
+fm = false
+pri_s = 10.0
+
+[emissioni.ssq62b]
+tipo = "boa"
+f_hz = 8000.0
+durata_s = 0.1
+fm = true
+pri_s = 10.0
+
+[emissioni.rgb55a]
+tipo = "boa"
+f_hz = 10000.0
+durata_s = 0.1
+fm = false
+pri_s = 10.0
+
+[emissioni.aqs13b]
+tipo = "immersione"
+f_hz = 10000.0
+durata_s = 0.035
+fm = false
+pri_s = 8.0
+
+[emissioni.hs73]
+tipo = "immersione"
+f_hz = 10000.0
+durata_s = 0.035
+fm = false
+pri_s = 8.0
+
+[emissioni.aqs13f]
+tipo = "immersione"
+f_hz = 10000.0
+durata_s = 0.035
+fm = false
+pri_s = 8.0
+
+[emissioni.vgs3]
+tipo = "immersione"
+f_hz = 8000.0
+durata_s = 0.05
+fm = false
+pri_s = 8.0
+
+[emissioni.vgs2]
+tipo = "immersione"
+f_hz = 9000.0
+durata_s = 0.05
+fm = false
+pri_s = 8.0
+
+[emissioni.fathometer]
+tipo = "scafo"
+f_hz = 12000.0
+durata_s = 0.01
+fm = false
+pri_s = 60.0
+
+[emissioni.mg70]
+tipo = "ricerca_hf"
+f_hz = 20000.0
+durata_s = 0.01
+fm = false
+pri_s = 5.0
+
+[emissioni.bqs8]
+tipo = "ricerca_hf"
+f_hz = 40000.0
+durata_s = 0.005
+fm = false
+pri_s = 5.0
+
+[ecoscandagli.fathometer]
+cono_deg = 30.0
+portata_piena_m = 6000.0
+portata_bassa_m = 2000.0
+sl_piena_db = 210.0
+sl_bassa_db = 190.0
+f_hz = 12000.0
+errore_scala = 0.01
+rumore_rel = 0.002
+falso_fondo = 0.02
+dsl_min_m = 300.0
+dsl_max_m = 500.0
+scia_kn = 20.0
+falso_scia = 0.1
+fonte = "06 §1.2: AN/UQN-4A per analogia (12 kHz), cono di 30 gradi e Bowditch §2605-2608; livelli, portate e falsi fondi STIMA"
+confidenza = "bassa"
+
+[bqs15_fondo.bqs15]
+settore_az_deg = 60.0
+elevazione_min_deg = -30.0
+elevazione_max_deg = 45.0
+passo_az_deg = 7.5
+portata_parete_m = 3200.0
+portata_fondo_m = 1500.0
+pendenza_parete = 0.3
+velocita_media_kn = 15.0
+fattore_media = 0.7
+velocita_alta_kn = 20.0
+fattore_alta = 0.4
+errore_angolo_deg = 1.0
+errore_distanza_m = 5.0
+passo_m = 25.0
+margine_ostacolo_m = 30.0
+fattore_portata = 1.0
+mine = true
+emissione = "bqs15"
+classi = ["los_angeles"]
+fonte = "06 §1.1: calcolo di portata del compilatore (pareti 3,2 km); fondo radente e degrado STIMA"
+confidenza = "bassa"
+
+[bqs15_fondo.mg70]
+settore_az_deg = 60.0
+elevazione_min_deg = -30.0
+elevazione_max_deg = 45.0
+passo_az_deg = 7.5
+portata_parete_m = 3200.0
+portata_fondo_m = 1500.0
+pendenza_parete = 0.3
+velocita_media_kn = 15.0
+fattore_media = 0.7
+velocita_alta_kn = 20.0
+fattore_alta = 0.4
+errore_angolo_deg = 1.5
+errore_distanza_m = 8.0
+passo_m = 25.0
+margine_ostacolo_m = 30.0
+fattore_portata = 0.7
+mine = true
+emissione = "mg70"
+classi = ["victor3", "akula", "victor1", "sierra"]
+fonte = "docs/08 §3: MG-70 / MT-70, nessun dato pubblicato; le portate del BQS-15 ridotte (STIMA)"
+confidenza = "bassa"
+
+[bqs15_fondo.mg24]
+settore_az_deg = 60.0
+elevazione_min_deg = -30.0
+elevazione_max_deg = 45.0
+passo_az_deg = 7.5
+portata_parete_m = 3200.0
+portata_fondo_m = 1500.0
+pendenza_parete = 0.3
+velocita_media_kn = 15.0
+fattore_media = 0.7
+velocita_alta_kn = 20.0
+fattore_alta = 0.4
+errore_angolo_deg = 1.5
+errore_distanza_m = 8.0
+passo_m = 25.0
+margine_ostacolo_m = 30.0
+fattore_portata = 0.6
+mine = true
+emissione = "mg70"
+classi = ["alfa"]
+fonte = "docs/08 §3: MG-24 «Luč» dell'Alfa, sonar per mine; portate ridotte (STIMA)"
+confidenza = "bassa"
+
+[bqs15_fondo.bqs8]
+settore_az_deg = 45.0
+elevazione_min_deg = 0.0
+elevazione_max_deg = 60.0
+passo_az_deg = 7.5
+portata_parete_m = 1600.0
+portata_fondo_m = 750.0
+pendenza_parete = 0.3
+velocita_media_kn = 15.0
+fattore_media = 0.7
+velocita_alta_kn = 20.0
+fattore_alta = 0.4
+errore_angolo_deg = 1.5
+errore_distanza_m = 8.0
+passo_m = 25.0
+margine_ostacolo_m = 30.0
+fattore_portata = 0.5
+mine = false
+emissione = "bqs8"
+classi = ["sturgeon"]
+fonte = "34: AN/BQS-8 degli Sturgeon (Navypedia); portate, settore e frequenza STIMA"
+confidenza = "bassa"
+
+[schiere.tb16]
+schiera_m = 73.0
+cavo_max_m = 790.0
+cavo_diametro_m = 0.0094
+peso_cavo_n_m = 2.0
+cn = 1.2
+v_flessione_kn = 1.2
+filata_m_s = 0.9
+recupero_m_s = 0.75
+v_manovra_kn = 12.0
+v_max_kn = 20.0
+quota_max_m = 700.0
+fonte = "04 §1.5 [FAS-TB16] cavo e peso; §6.2 velocita' e quota (S)"
+
+[schiere.tb23]
+schiera_m = 290.0
+cavo_max_m = 2300.0
+cavo_diametro_m = 0.0094
+peso_cavo_n_m = 1.5
+cn = 1.2
+v_flessione_kn = 0.6
+filata_m_s = 1.0
+recupero_m_s = 0.85
+v_manovra_kn = 10.0
+v_max_kn = 16.0
+quota_max_m = 700.0
+fonte = "04 §6.2 (S): thin line, v0 circa 1 kn"
+
+[schiere.skat]
+schiera_m = 200.0
+cavo_max_m = 800.0
+cavo_diametro_m = 0.012
+peso_cavo_n_m = 3.0
+cn = 1.2
+v_flessione_kn = 1.2
+filata_m_s = 0.8
+recupero_m_s = 0.7
+v_manovra_kn = 10.0
+v_max_kn = 18.0
+quota_max_m = 600.0
+fonte = "04 §3 e §6.2 (S): Skat-KS, Skat-3"
+
+[schiere.sqr19]
+schiera_m = 242.0
+cavo_max_m = 1700.0
+cavo_diametro_m = 0.0254
+peso_cavo_n_m = 20.0
+cn = 1.2
+v_flessione_kn = 1.2
+filata_m_s = 1.2
+recupero_m_s = 1.0
+v_manovra_kn = 15.0
+v_max_kn = 25.0
+quota_max_m = 360.0
+fonte = "04 §1.5 e §4 (S): cavo da 1 pollice, 380 m di discesa a 10 kn"
+
+[schiere.type2031z]
+schiera_m = 500.0
+cavo_max_m = 1500.0
+cavo_diametro_m = 0.03
+peso_cavo_n_m = 25.0
+cn = 1.2
+v_flessione_kn = 1.2
+filata_m_s = 1.0
+recupero_m_s = 0.8
+v_manovra_kn = 12.0
+v_max_kn = 20.0
+quota_max_m = 300.0
+fonte = "04 §4 (circa 500 m, VLF); cavo, velocita' e quota (S)"
+
+[schiere.sqr18a]
+schiera_m = 200.0
+cavo_max_m = 1500.0
+cavo_diametro_m = 0.02
+peso_cavo_n_m = 10.0
+cn = 1.2
+v_flessione_kn = 1.2
+filata_m_s = 1.0
+recupero_m_s = 0.8
+v_manovra_kn = 12.0
+v_max_kn = 20.0
+quota_max_m = 360.0
+fonte = "33 §1 e §2 (S): trainata dal pesce dell'SQS-35, misure non trovate"
+
+[schiere.sqs35_vds]
+schiera_m = 4.8
+cavo_max_m = 250.0
+cavo_diametro_m = 0.04
+peso_cavo_n_m = 280.0
+cn = 1.0
+v_flessione_kn = 0.1
+filata_m_s = 1.0
+recupero_m_s = 0.8
+v_manovra_kn = 12.0
+v_max_kn = 20.0
+quota_max_m = 180.0
+fonte = "33 §1 (Knox-class: fino a 600 ft, 180 m); cavo, peso e velocita' (S)"
+
+[schiere.polinom_vds]
+schiera_m = 5.0
+cavo_max_m = 300.0
+cavo_diametro_m = 0.04
+peso_cavo_n_m = 250.0
+cn = 1.0
+v_flessione_kn = 0.1
+filata_m_s = 1.0
+recupero_m_s = 0.8
+v_manovra_kn = 12.0
+v_max_kn = 20.0
+quota_max_m = 200.0
+fonte = "33 §1 e §2 (S): «Horse Tail», nessun numero trovato"
+
+[schiere.salmon_vds]
+schiera_m = 2.0
+cavo_max_m = 150.0
+cavo_diametro_m = 0.03
+peso_cavo_n_m = 150.0
+cn = 1.0
+v_flessione_kn = 0.1
+filata_m_s = 1.0
+recupero_m_s = 0.8
+v_manovra_kn = 10.0
+v_max_kn = 18.0
+quota_max_m = 120.0
+fonte = "35 (S): il VDS leggero della Stockholm, nessun dato trovato"
+
+[schiere.vega_vds]
+schiera_m = 3.0
+cavo_max_m = 150.0
+cavo_diametro_m = 0.04
+peso_cavo_n_m = 150.0
+cn = 1.0
+v_flessione_kn = 0.1
+filata_m_s = 1.0
+recupero_m_s = 0.8
+v_manovra_kn = 12.0
+v_max_kn = 18.0
+quota_max_m = 100.0
+fonte = "33 §1 (Kara-class: fino a 100 m); cavo, peso e velocita' (S)"
+
+[schiere.bronza_vds]
+schiera_m = 4.0
+cavo_max_m = 200.0
+cavo_diametro_m = 0.04
+peso_cavo_n_m = 200.0
+cn = 1.0
+v_flessione_kn = 0.1
+filata_m_s = 1.0
+recupero_m_s = 0.8
+v_manovra_kn = 12.0
+v_max_kn = 18.0
+quota_max_m = 150.0
+fonte = "33 §1 (S): come VDS per decisione della principale, le fonti discordano"
+
+[schiere.shelon_vds]
+schiera_m = 1.5
+cavo_max_m = 200.0
+cavo_diametro_m = 0.03
+peso_cavo_n_m = 400.0
+cn = 1.0
+v_flessione_kn = 0.1
+filata_m_s = 1.5
+recupero_m_s = 1.2
+v_manovra_kn = 0.5
+v_max_kn = 3.0
+quota_max_m = 150.0
+fonte = "31 §5 e 33 §1 (S): calabile a nave ferma"

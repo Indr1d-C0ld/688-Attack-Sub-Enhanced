@@ -1,0 +1,84 @@
+# Testi dell'enciclopedia, lotto del 31/10/2026 (kit): il Lynx HAS.3 delle Type 22, il suo radar Seaspray e il siluro
+# Stingray. Stesso formato di campioni.yaml; scritti a mano, in parafrasi dal dossier 38 e dai dati di data/motore.
+
+elicottero.lynx:
+  it: >-
+    Il Westland Lynx HAS.2 e HAS.3 è l'elicottero delle fregate della Royal Navy degli anni '80: le Type 22 ne
+    imbarcano due. Riprende il ruolo del Wasp col concetto MATCH: la nave scopre il sottomarino col suo sonar e guida
+    l'elicottero, che porta l'arma sul punto. I Lynx britannici non hanno né sonar a immersione né boe; hanno il radar
+    Seaspray nel muso, il magnetometro per precisare il contatto prima dell'attacco e, dalla HAS.3, l'ESM «Orange
+    Crop». Contro i sottomarini portano due siluri, Mk 46 o Stingray, o due bombe di profondità; contro le navi quattro
+    missili Sea Skua. Nel 1989 la Royal Navy ne ha poco meno di ottanta, in buona parte HAS.2 convertite in HAS.3 coi
+    motori Gem 42.
+  en: >-
+    The Westland Lynx HAS.2 and HAS.3 is the Royal Navy's frigate helicopter of the 1980s: the Type 22s carry two. It
+    takes over the Wasp's role under the MATCH concept: the ship detects the submarine with its sonar and directs the
+    helicopter, which carries the weapon to the spot. British Lynxes have neither dipping sonar nor sonobuoys; they
+    have the Seaspray radar in the nose, the magnetometer to pin the contact before the attack and, from the HAS.3,
+    the «Orange Crop» ESM. Against submarines they carry two torpedoes, Mk 46 or Stingray, or two depth charges;
+    against ships four Sea Skua missiles. In 1989 the Royal Navy has just under eighty, many of them HAS.2s converted
+    to HAS.3 with Gem 42 engines.
+  uso_it: >-
+    Non vi cerca da solo: aspetta il contatto della sua fregata, ci vola sopra e vi cerca col magnetometro, passando
+    basso; poi lancia lo Stingray. Il suo Seaspray all'ESM è un radar d'elicottero in banda I, acceso a intervalli come
+    quello dell'SH-60B: se lo sentite, il Lynx è in volo e la Type 22 vi ha già in mano. Sotto lo strato e lontano
+    dalla nave il MAD non vi trova: il pericolo è restare vicini e poco profondi. Le cifre di velocità e autonomia
+    della HAS.3 non sono pubblicate: nel gioco crociera di 125 nodi, stima.
+  uso_en: >-
+    It does not search for you on its own: it waits for its frigate's contact, flies over it and hunts you with the
+    magnetometer, passing low; then it drops the Stingray. On ESM its Seaspray is a helicopter radar in I band, switched
+    on at intervals like the SH-60B's: if you hear it, the Lynx is airborne and the Type 22 already has you. Below the
+    layer and far from the ship the MAD will not find you: the danger is staying close and shallow. Speed and
+    endurance figures for the HAS.3 are not published: in the game 125 knots cruising, an estimate.
+  fonti: ['dossier 38 §1, §2 e §4 [Wikipedia Westland Lynx] [Navy Lookout] [scheda Revell HAS.3]',
+    'extracted/navi/lynx/RAPPORTO.md', 'classi.toml [lynx]', 'emettitori.toml (radar.seaspray, intermittente.lynx)']
+
+radar.seaspray:
+  it: >-
+    Il Seaspray è il radar che il Lynx porta nel muso: un radar di ricerca di superficie in banda I/J, pensato per
+    trovare bersagli piccoli sul mare, come le motocannoniere, e per guidare contro di loro i missili Sea Skua. È il
+    sensore che fa del Lynx una piccola nave da guerra volante contro le unità leggere, e serve anche a seguire la
+    superficie nella caccia ai sottomarini.
+  en: >-
+    The Seaspray is the radar the Lynx carries in its nose: a surface search radar in I/J band, designed to find small
+    targets on the sea, such as fast attack craft, and to guide Sea Skua missiles against them. It is the sensor that
+    turns the Lynx into a small flying warship against light units, and it also watches the surface during the
+    submarine hunt.
+  uso_it: >-
+    All'ESM si sente come un radar d'elicottero in banda I, a firma riconoscibile, acceso a cicli. È fatto per i
+    bersagli piccoli: nel gioco vede la testa del periscopio a circa 7 km con mare 2 e meno di 3 con mare 4, lo
+    snorkel fino a circa 18 km (stime, poco sotto l'APS-124 dell'SH-60B). Se lo sentite, abbassate il periscopio e
+    l'albero dello snorkel: è il segno che un Lynx è in volo da una Type 22.
+  uso_en: >-
+    On ESM it sounds like a helicopter radar in I band, with a recognisable signature, switched on in cycles. It is
+    built for small targets: in the game it sees the periscope head at about 7 km in sea state 2 and under 3 in sea
+    state 4, the snorkel out to about 18 km (estimates, a little below the SH-60B's APS-124). If you hear it, lower the
+    periscope and the snorkel mast: it means a Lynx is airborne from a Type 22.
+  fonti: ['dossier 38 §2 [Wikipedia Westland Lynx] [Seaspray]', 'emettitori.toml (radar.seaspray: portate STIMA)']
+
+siluro.stingray:
+  it: >-
+    Lo Stingray (Sting Ray) Mod 0 è il siluro leggero britannico entrato in servizio nel 1983; le prime unità furono
+    affrettate per le Falkland nel 1982. Ha il calibro di 324 mm, è lungo 2,6 m e pesa 267 kg, con una carica cava di
+    45 kg di Torpex pensata per bucare gli scafi doppi dei sottomarini sovietici. Le fonti gli danno 45 nodi, una
+    portata di 8-11 km e una quota fino a 800 m; dopo il lancio cerca in attivo e poi si guida da solo, in attivo e in
+    passivo. Lo lanciano gli elicotteri e gli aerei da pattugliamento; dai tubi STWS delle navi (il Mk 2, perché il Mk 1
+    è fatto per il Mk 46) entrò più tardi, forse dopo il 1989.
+  en: >-
+    The Stingray (Sting Ray) Mod 0 is the British lightweight torpedo that entered service in 1983; the first rounds
+    were rushed out for the Falklands in 1982. It is 324 mm in calibre, 2.6 m long and weighs 267 kg, with a 45 kg
+    Torpex shaped charge meant to pierce the double hulls of Soviet submarines. The sources give it 45 knots, a range of
+    8-11 km and a depth down to 800 m; after launch it searches actively and then homes on its own, actively and
+    passively. Helicopters and patrol aircraft drop it; from ships' STWS tubes (the Mk 2, since the Mk 1 is built for
+    the Mk 46) it came later, perhaps after 1989.
+  uso_it: >-
+    Nel gioco arriva dal Lynx, a due per volo. Va fino a 800 metri contro i 450 del Mk 46, alla stessa velocità di 45
+    nodi: la quota non vi salva, e non lo seminate. Il suo ping attivo si sente: quando lo sentite, lanciate l'esca e cambiate quota e rotta
+    insieme. La carica cava è forte ma piccola, e il modello dei danni per ora non la distingue da una carica normale.
+  uso_en: >-
+    In the game it comes from the Lynx, two per sortie. It goes down to 800 metres against the Mk 46's 450, at the same 45
+    knots: depth will not save you, and you will not outrun it. Its active ping can be heard: when you hear it, launch the decoy and
+    change depth and course together. The shaped charge is powerful but small, and the damage model does not yet treat
+    it differently from an ordinary charge.
+  fonti: ['dossier 38 §3 e §4 [seaforces] [Naval Technology] [Navy Lookout] [UK Defence Journal] [Wikipedia Sting Ray]',
+    'siluri.toml [siluri.stingray]']

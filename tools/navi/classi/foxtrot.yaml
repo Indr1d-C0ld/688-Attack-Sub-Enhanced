@@ -1,0 +1,117 @@
+# Sottomarino diesel-elettrico Progetto 641 (NATO: Foxtrot), configurazione 1989 (unita' sovietiche e di
+# esportazione I641K, esternamente uguali): scafo doppio con cassero stretto e piatto pieno di fori di
+# allagamento, prua tonda e alta, vela con la plancia a vetri sul fronte e la carenatura dei periscopi a poppavia,
+# in emersione normale (bordo libero ~2,3 m) con un albero alzato.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua. Quote assolute rispetto al galleggiamento in emersione normale.
+# Misure dalla foto di traverso del Foxtrot libico (1982) con lunghezza 91,3 m (scala ~21,4 px/m; la prua e' tagliata dal bordo della foto: dritto ricavato dalle foto dall'alto, ~60 px fuori), poi
+# verificate con le due foto dall'alto dei Foxtrot cubani (1986).
+nome: Foxtrot (Progetto 641)
+uscita: extracted/navi/foxtrot
+# scafo nero: livello medio e contrasto propri
+tono: 0.22
+contrasto: 0.12
+peso_ombra: 0.03
+
+scafo:
+  generatore: scafo_sottomarino
+  dz: &dz 0.5              # galleggiamento della foto di traverso a y = 420 (non 410): tutto il modello sale di 0,5 m
+  L: 91.3
+  B: 8.0                   # larghezza nominale 7,5 m; 8,0 per la larghezza apparente al galleggiamento nelle foto dall'alto (casse esterne)
+  raggio: [[0.0, 0.0], [0.3, 1.6], [0.8, 2.35], [1.5, 2.88], [2.5, 3.31], [4.0, 3.63], [6.0, 3.84], [9.0, 3.97], [12.0, 4.0],
+           [58.0, 4.0], [64.0, 3.84], [70.0, 3.52], [76.0, 3.04], [81.0, 2.51], [85.0, 2.03], [88.5, 1.55], [91.0, 1.07],
+           [91.3, 0.0]]
+  esponente_sezione: 2.6   # sezioni un po' squadrate: casse zavorra laterali, fianchi pieni al galleggiamento
+  bordo_libero: 1.5        # sommita' dello scafo resistente/esterno senza cassero
+  # cassero: coperta piatta stretta, alta a prua e in discesa negli ultimi 20 m fino al timone superiore
+  cassero: [[0.25, 2.6, 1.0], [1.0, 2.85, 1.3], [4.0, 2.85, 1.45], [12.0, 2.6, 1.5], [30.0, 2.35, 1.5], [62.0, 2.3, 1.5],
+            [72.0, 2.1, 1.35], [80.0, 1.8, 1.15], [86.0, 1.5, 0.95], [89.5, 1.2, 0.7], [91.2, 0.5, 0.4]]
+  stazioni: 90
+  punti_sezione: 48
+
+parti:
+  # vela: plancia a fronte tondo (pianta a profilo alare), cielo piatto a 9,05 m, dorso inclinato
+  - tipo: vela
+    nome: vela
+    pianta: naca
+    dz: *dz
+    livelli:
+      - [1.48, {prua: 35.8}, {prua: 49.4}, 1.35]
+      - [2.26, {prua: 35.9}, {prua: 49.0}, 1.35]
+      - [5.91, {prua: 36.0}, {prua: 48.2}, 1.3]
+      - [8.47, {prua: 36.2}, {prua: 47.5}, 1.25]
+      - [8.81, {prua: 36.6}, {prua: 47.3}, 1.05]
+  # carenatura di periscopi e alberi, piu' alta, sul dorso della vela
+  - tipo: vela
+    nome: carenatura_periscopi
+    pianta: ovale
+    esponente: 3.0
+    dz: *dz
+    livelli:
+      - [8.37, {prua: 43.6}, {prua: 47.5}, 0.8]
+      - [10.14, {prua: 43.6}, {prua: 47.9}, 0.8]
+  - {tipo: cilindro, nome: albero, x: {prua: 44.1}, y: 0, r: 0.18, z0: 10.54, z1: 16.25, n: 8, mat: scuro}
+  # tuga del verricello/ancora a prua
+  - {tipo: scatola, nome: tuga_prua, x0: {prua: 6.4}, x1: {prua: 4.1}, y0: -0.45, y1: 0.45, z0: 3.06, z1: 5.03, mat: scafo}
+  # timone superiore che emerge a poppa
+  - {tipo: timone_verticale, nome: timone, x: {prua: 87.5}, z0: -1.0, z1: 1.9, corda: 2.2, corda_estremita: 1.6, spessore: 0.4, freccia: 0.3, dz: *dz}
+
+foto:
+  - nome: fianco_sinistra
+    file: extracted/navi/foxtrot/foto/fianco_sinistra_libia_1982.jpg
+    nave: Foxtrot libico, 1982
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    maschera_file: extracted/navi/foxtrot/foto/fianco_sinistra_libia_1982_maschera.png   # classi/foxtrot_maschere.yaml
+    orizzonte_y: 274
+    soglia_cielo: 120
+    fotocamera_iniziale: {posizione: [0, 390, 6.5], bersaglio: [0, 0, 3], f: 8000}
+    orizzonte_punti: [[300, 274], [1300, 274], [1700, 274]]
+    punti:
+      - [[{prua: 35.9}, 0, 2.76], [706, 364]]       # fronte della vela in coperta
+      - [[{prua: 36.2}, 0, 9.31], [712, 224]]      # spigolo superiore prodiero della vela
+      - [[{prua: 43.6}, 0, 10.64], [872, 193]]     # carenatura dei periscopi, spigolo prodiero
+      - [[{prua: 47.9}, 0, 10.64], [963, 193]]     # carenatura dei periscopi, spigolo poppiero
+      - [[{prua: 49.0}, 0, 2.76], [985, 363]]       # piede poppiero della vela
+      - [[{prua: 91.1}, 0, 0.99], [1890, 402]]      # estremita' poppiera del cassero
+      - [[{prua: 6.4}, 0, 5.03], [80, 313]]         # tuga di prua, spigolo superiore poppiero
+  - nome: prua_dritta
+    file: extracted/navi/foxtrot/foto/fianco_dritta_cuba_1986.jpg
+    maschera_file: extracted/navi/foxtrot/foto/fianco_dritta_cuba_1986_maschera.png   # classi/foxtrot_maschere.yaml
+    nave: Foxtrot cubano, 1986
+    esponente_peso: 1.0
+    qualita: 0.9
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    fotocamera_iniziale: {posizione: [150, -250, 200], bersaglio: [0, 0, 3], f: 6000}
+    prior_fotocamera: {elevazione: 30, sigma_el: 10, distanza: 400, sigma_logD: 0.5}
+    limiti_fotocamera: {azimut: [-90, -10], elevazione: [5, 60]}
+    punti:
+      - [[{prua: 47.9}, 0, 10.64], [711, 446]]     # carenatura dei periscopi, spigolo poppiero superiore
+      - [[{prua: 36.2}, 0, 9.31], [961, 561]]      # fronte della plancia, in alto
+      - [[{prua: 35.9}, 0, 2.76], [969, 785]]       # fronte della vela in coperta
+      - [[{prua: 49.0}, 0, 2.76], [700, 669]]       # piede poppiero della vela
+      - [[{prua: 0.3}, 0, 3.1], [1766, 1110]]      # muso della prua, in coperta
+      - [[{prua: 5.2}, 0, 5.03], [1635, 980]]      # cima della tuga di prua
+  - nome: prua_sinistra
+    file: extracted/navi/foxtrot/foto/prua_sinistra_cuba_1986.jpg
+    maschera_file: extracted/navi/foxtrot/foto/prua_sinistra_cuba_1986_maschera.png   # classi/foxtrot_maschere.yaml
+    nave: Foxtrot cubano, 1986
+    esponente_peso: 1.0
+    qualita: 0.9
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    fotocamera_iniziale: {posizione: [150, 250, 200], bersaglio: [0, 0, 3], f: 6000}
+    prior_fotocamera: {elevazione: 30, sigma_el: 10, distanza: 400, sigma_logD: 0.5}
+    limiti_fotocamera: {azimut: [10, 90], elevazione: [5, 60]}
+    punti:
+      - [[{prua: 47.9}, 0, 10.64], [1012, 403]]    # carenatura dei periscopi, spigolo poppiero superiore
+      - [[{prua: 43.6}, 0, 10.64], [934, 431]]     # carenatura dei periscopi, spigolo prodiero superiore
+      - [[{prua: 36.2}, 0, 9.31], [766, 540]]      # fronte della plancia, in alto
+      - [[{prua: 35.9}, 0, 2.76], [762, 674]]       # fronte della vela in coperta
+      - [[{prua: 0.3}, 0, 3.1], [10, 1020]]        # muso della prua, in coperta
+      - [[{prua: 5.2}, 0, 5.03], [118, 935]]        # cima della tuga di prua
+      - [[{prua: 91.1}, 0, 0.99], [1862, 173]]      # estremita' poppiera del cassero

@@ -1,0 +1,52 @@
+# RGM/UGM-84A/C Harpoon in volo di crociera (booster sganciato: cellula del sostentatore, identica all'AGM-84).
+# Coordinate del kit: x verso il muso (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dal muso. Asse del corpo a z = 5 m.
+# Misure: lunghezza 3,84 m senza booster (4,63 m con il booster di lancio), diametro 0,343 m, apertura alare
+# 0,914 m (dossier 01 e 05, Wikipedia, designation-systems.net); ali e alette a 'X'; posizioni e corde misurate
+# sulla foto dell'F-16 (1992) calibrata.
+nome: RGM/UGM-84 Harpoon (crociera)
+uscita: extracted/navi/harpoon
+moduli_parti: [missili_parti.py]
+
+vista: {volante: true, elevazioni: [0, 5, 15], centro: [0, 0, 5.0]}
+
+scafo:
+  generatore: corpo_missile
+  L: 3.84
+  B: 0.02
+  bordo: [[0, 0.02], [3.84, 0.02]]
+  z: 5.0
+  n: 16
+  # radome ogivale (0,45 m), corpo cilindrico fino all'ugello
+  profilo: [[0, 0], [0.02, 0.06], [0.08, 0.115], [0.18, 0.148], [0.30, 0.165], [0.45, 0.1715], [3.78, 0.1715],
+            [3.84, 0.160]]
+
+parti:
+  # quattro ali a 'X' (delta troncata), apertura 0,914 m
+  - {tipo: pinne, nome: ali, x_ba: {prua: 1.82}, corda: 0.78, x_ba_estremo: {prua: 1.97}, corda_estremo: 0.45,
+     r0: 0.15, semiapertura: 0.457, angoli: [45, 135, 225, 315], spessore: 0.08}   # spessore maggiorato (linea di testa)
+  # quattro alette di coda a 'X', in linea con le ali
+  - {tipo: pinne, nome: alette_coda, x_ba: {prua: 3.40}, corda: 0.42, x_ba_estremo: {prua: 3.51}, corda_estremo: 0.30,
+     r0: 0.15, semiapertura: 0.47, angoli: [45, 135, 225, 315], spessore: 0.07}
+  # presa d'aria ventrale del turbogetto J402 (bassa, tra ali e coda)
+  - {tipo: presa_ventrale, nome: presa_aria, x_bocca: {prua: 2.70}, x_coda: {prua: 3.30}, larghezza: 0.20,
+     sporgenza: 0.06, z_attacco: 4.86, lunghezza_bocca: 0.25}
+
+# Foto di riferimento (pubblico dominio; metadati in extracted/navi/harpoon/foto/fonti.json).
+foto:
+  - nome: f16_fianco
+    specchiabile: true
+    file: extracted/navi/harpoon/foto/f16_fianco.jpg
+    nave: AGM-84 Harpoon sotto l'ala di un F-16 in volo (Eglin, 1992)
+    qualita: 1.0
+    maschera_file: extracted/navi/harpoon/maschere/f16_fianco.png   # tools/navi/classi/missili_maschere.py
+    fotocamera_iniziale: {posizione: [-60, 70, 5], bersaglio: [0, 0, 5], f: 30000}
+    limiti_fotocamera: {elevazione: [-45, 45], distanza: [5, 3000], rollio: [-60, 60]}
+    punti:
+      - [[{prua: 0}, 0, 5.0], [793, 760]]               # punta del radome
+      - [[{prua: 3.84}, 0, 5.0], [1233, 732]]           # centro dell'ugello
+      - [[{prua: 1.97}, 0.323, 5.323], [1020, 693]]     # ala superiore sinistra, estremita' sul bordo d'attacco
+      - [[{prua: 2.42}, -0.323, 5.323], [1072, 693]]    # ala superiore destra, estremita' sul bordo d'uscita
+      - [[{prua: 1.97}, 0.323, 4.677], [1020, 775]]     # ala inferiore sinistra, estremita' sul bordo d'attacco
+      - [[{prua: 3.51}, 0.332, 5.332], [1197, 678]]     # aletta superiore sinistra, estremita' sul bordo d'attacco
+      - [[{prua: 3.81}, -0.332, 4.668], [1237, 768]]    # aletta inferiore destra, estremita' sul bordo d'uscita

@@ -1,0 +1,7628 @@
+# Le luci di navigazione e di fonda per classe (docs/27): generato da tools/pipeline/luci.py, non modificare a mano.
+# Posizioni sul modello 3D (x a prua, y a sinistra, z sul galleggiamento, metri); settori in gradi dalla prua,
+# positivi a dritta, da settore[0] a settore[1] in senso orario; portate in miglia (COLREG 1972, regola 22).
+
+[portate]
+lunga_m = 50.0
+albero_lunga = 6.0
+altre_lunga = 3.0
+media_m = 12.0
+albero_media = 5.0
+albero_media_sotto20 = 3.0
+altre_media = 2.0
+coperta = 4.0
+faro_ambra = 3.0
+
+[classe.kirov]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 252.0
+modello = "modelli/kirov.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.kirov.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [-34.5, 0.0, 36.0]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [5.9, 6.0, 21.5]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [5.9, -6.0, 21.5]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-125.0, 0.0, 8.1]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [115.9, 0.0, 20.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-115.9, 0.0, 9.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-34.5, 0.0, 35.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-34.5, 0.0, 33.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-34.5, 0.0, 31.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-34.5, 0.0, 35.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-34.5, 0.0, 33.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-110.2, 0.0, 17.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-78.8, 0.0, 17.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-47.2, 0.0, 17.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-15.8, 0.0, 17.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [15.8, 0.0, 17.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [47.2, 0.0, 17.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [78.8, 0.0, 17.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kirov.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [110.2, 0.0, 17.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.slava]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 186.4
+modello = "modelli/slava.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.slava.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [15.4, 0.0, 27.7]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-7.5, 0.0, 32.2]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [21.3, 6.5, 19.0]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [21.3, -6.5, 19.0]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-92.2, 0.0, 4.6]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [85.7, 0.0, 17.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-85.7, 0.0, 5.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [15.4, 0.0, 32.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [15.4, 0.0, 30.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [15.4, 0.0, 28.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [15.4, 0.0, 32.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [15.4, 0.0, 30.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-81.5, 0.0, 14.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-58.2, 0.0, 14.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-34.9, 0.0, 14.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-11.7, 0.0, 14.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [11.7, 0.0, 14.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [34.9, 0.0, 14.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [58.2, 0.0, 14.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.slava.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [81.6, 0.0, 14.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.kara]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 173.2
+modello = "modelli/kara.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.kara.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [17.4, 0.0, 21.3]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [34.1, 5.0, 10.8]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [34.1, -5.0, 10.8]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-85.6, 0.0, 7.0]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [79.7, 0.0, 14.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-79.7, 0.0, 8.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [17.4, 0.0, 20.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [17.4, 0.0, 18.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [17.4, 0.0, 16.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [17.4, 0.0, 20.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [17.4, 0.0, 18.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-75.8, 0.0, 11.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-54.1, 0.0, 11.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-32.5, 0.0, 11.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-10.8, 0.0, 11.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [10.8, 0.0, 11.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [32.5, 0.0, 11.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [54.1, 0.0, 11.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kara.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [75.8, 0.0, 11.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.krivak2]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 123.5
+modello = "modelli/krivak2.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.krivak2.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [1.0, 0.0, 23.8]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [11.6, 4.5, 14.2]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [11.6, -4.5, 14.2]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-60.8, 0.0, 3.4]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [56.8, 0.0, 14.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-56.8, 0.0, 4.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-4.4, 0.0, 28.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-4.4, 0.0, 26.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-4.4, 0.0, 24.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-4.4, 0.0, 28.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-4.4, 0.0, 26.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-51.5, 0.0, 11.5]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-30.9, 0.0, 11.5]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-10.3, 0.0, 11.5]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [10.3, 0.0, 11.5]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [30.9, 0.0, 11.5]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.krivak2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [51.5, 0.0, 11.5]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.koni]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 95.0
+modello = "modelli/koni.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.koni.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [5.2, 0.0, 17.7]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.koni.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [12.6, 3.6, 12.0]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.koni.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [12.6, -3.6, 12.0]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.koni.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-47.2, 0.0, 4.8]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.koni.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [44.4, 0.0, 13.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.koni.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-44.4, 0.0, 5.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.koni.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [2.2, 0.0, 23.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.koni.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [2.2, 0.0, 21.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.koni.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [2.2, 0.0, 19.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.koni.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [2.2, 0.0, 23.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.koni.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [2.2, 0.0, 21.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.nanuchka]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 59.3
+modello = "modelli/nanuchka.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.nanuchka.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [-2.9, 0.0, 16.6]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.nanuchka.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [1.5, 2.4, 10.0]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.nanuchka.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [1.5, -2.4, 10.0]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.nanuchka.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-28.6, 0.0, 4.2]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.nanuchka.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [27.3, 0.0, 10.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nanuchka.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-27.3, 0.0, 5.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nanuchka.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-2.9, 0.0, 16.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.nanuchka.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-2.9, 0.0, 14.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.nanuchka.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-2.9, 0.0, 12.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.nanuchka.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-2.9, 0.0, 16.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.nanuchka.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-2.9, 0.0, 14.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.agi]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 50.8
+modello = "modelli/agi.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.agi.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [12.2, 0.0, 10.8]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.agi.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-17.8, 0.0, 17.7]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.agi.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [-3.0, 2.8, 6.8]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.agi.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [-3.0, -2.8, 6.8]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.agi.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-24.4, 0.0, 5.7]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.agi.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [23.4, 0.0, 11.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.agi.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-23.4, 0.0, 6.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.agi.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [11.7, 0.0, 17.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.agi.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [11.7, 0.0, 15.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.agi.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [11.7, 0.0, 13.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.agi.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [11.7, 0.0, 17.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.agi.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [11.7, 0.0, 15.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.nimitz]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 332.8
+modello = "modelli/nimitz.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.nimitz.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [-56.1, 0.0, 63.0]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [-41.4, 36.5, 32.2]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [-41.4, -36.5, 32.2]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-165.4, 0.0, 17.8]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [153.1, 0.0, 23.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-153.1, 0.0, 18.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-56.1, 0.0, 62.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-56.1, 0.0, 60.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-56.1, 0.0, 58.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-56.1, 0.0, 62.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-56.1, 0.0, 60.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-145.6, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-104.0, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-62.4, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-20.8, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [20.8, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [62.4, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [104.0, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nimitz.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [145.6, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.iowa]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 270.4
+modello = "modelli/iowa.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.iowa.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [6.7, 0.0, 42.0]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [67.6, 16.8, 15.0]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [67.6, -16.8, 15.0]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-134.2, 0.0, 8.9]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [124.4, 0.0, 19.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-124.4, 0.0, 9.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [6.7, 0.0, 41.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [6.7, 0.0, 39.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [6.7, 0.0, 37.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [6.7, 0.0, 41.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [6.7, 0.0, 39.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-118.3, 0.0, 16.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-84.5, 0.0, 16.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-50.7, 0.0, 16.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-16.9, 0.0, 16.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [16.9, 0.0, 16.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [50.7, 0.0, 16.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [84.5, 0.0, 16.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.iowa.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [118.3, 0.0, 16.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.sacramento]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 241.0
+modello = "modelli/sacramento.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.sacramento.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [56.2, 0.0, 46.5]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-45.3, 0.0, 69.9]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [82.8, 12.6, 26.2]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [82.8, -12.6, 26.2]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-119.8, 0.0, 15.1]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [111.2, 0.0, 21.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-111.2, 0.0, 16.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-45.3, 0.0, 69.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-45.3, 0.0, 67.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-45.3, 0.0, 65.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-45.3, 0.0, 69.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-45.3, 0.0, 67.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-105.7, 0.0, 18.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-75.5, 0.0, 18.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-45.3, 0.0, 18.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-15.1, 0.0, 18.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [15.1, 0.0, 18.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [45.3, 0.0, 18.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [75.5, 0.0, 18.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.sacramento.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [105.7, 0.0, 18.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.kidd]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 171.6
+modello = "modelli/kidd.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.kidd.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [23.2, 0.0, 30.7]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-5.2, 0.0, 35.2]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [31.8, 6.6, 11.6]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [31.8, -6.6, 11.6]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-84.8, 0.0, 4.7]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [79.0, 0.0, 13.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-79.0, 0.0, 5.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-5.2, 0.0, 34.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-5.2, 0.0, 32.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-5.2, 0.0, 30.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-5.2, 0.0, 34.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-5.2, 0.0, 32.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-75.1, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-53.7, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-32.2, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-10.7, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [10.7, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [32.2, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [53.7, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kidd.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [75.1, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.spruance]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 171.7
+modello = "modelli/spruance.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.spruance.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [25.1, 0.0, 29.1]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-6.2, 0.0, 33.6]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [29.3, 6.6, 15.1]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [29.3, -6.6, 15.1]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-84.8, 0.0, 5.4]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [79.0, 0.0, 15.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-79.0, 0.0, 6.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [25.1, 0.0, 34.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [25.1, 0.0, 32.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [25.1, 0.0, 30.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [25.1, 0.0, 34.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [25.1, 0.0, 32.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-75.1, 0.0, 12.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-53.7, 0.0, 12.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-32.2, 0.0, 12.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-10.7, 0.0, 12.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [10.7, 0.0, 12.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [32.2, 0.0, 12.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [53.7, 0.0, 12.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.spruance.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [75.1, 0.0, 12.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.perry]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 135.6
+modello = "modelli/perry.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.perry.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [5.2, 0.0, 35.8]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [27.9, 5.8, 11.8]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [27.9, -5.8, 11.8]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-68.1, 0.0, 6.8]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [63.5, 0.0, 14.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-63.5, 0.0, 7.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [5.2, 0.0, 35.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [5.2, 0.0, 33.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [5.2, 0.0, 31.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [5.2, 0.0, 35.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [5.2, 0.0, 33.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-57.5, 0.0, 11.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-34.5, 0.0, 11.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-11.5, 0.0, 11.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [11.5, 0.0, 11.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [34.5, 0.0, 11.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.perry.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [57.5, 0.0, 11.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.typhoon]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 175.0
+modello = "modelli/typhoon.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.typhoon.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [-9.2, 0.0, 14.6]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.typhoon.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [-9.2, 2.8, 13.3]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.typhoon.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [-9.2, -2.8, 13.3]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.typhoon.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-58.8, 0.0, 1.7]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.typhoon.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [-9.2, 0.0, 14.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.typhoon.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-9.2, 0.0, 12.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.typhoon.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-9.2, 0.0, 10.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.typhoon.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-9.2, 0.0, 8.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.typhoon.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-9.2, 0.0, 12.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.typhoon.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-9.2, 0.0, 10.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.oscar]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 154.0
+modello = "modelli/oscar.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.oscar.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [32.2, 0.0, 9.1]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.oscar.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [32.2, 3.1, 7.8]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.oscar.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [32.2, -3.1, 7.8]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.oscar.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-51.8, 0.0, 2.5]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.oscar.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [32.2, 0.0, 9.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.oscar.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [32.2, 0.0, 7.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.oscar.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [32.2, 0.0, 5.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.oscar.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [32.2, 0.0, 3.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.oscar.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [32.2, 0.0, 7.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.oscar.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [32.2, 0.0, 5.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.akula]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 110.3
+modello = "modelli/akula.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.akula.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [8.1, 0.0, 7.7]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.akula.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [8.1, 2.7, 6.4]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.akula.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [8.1, -2.7, 6.4]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.akula.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-31.3, 0.0, 1.3]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.akula.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [8.1, 0.0, 7.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.akula.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [8.1, 0.0, 5.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.akula.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [8.1, 0.0, 3.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.akula.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [8.1, 0.0, 1.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.akula.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [8.1, 0.0, 5.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.akula.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [8.1, 0.0, 3.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.victor3]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 106.0
+modello = "modelli/victor3.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.victor3.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [9.8, 0.0, 9.1]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.victor3.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [9.8, 2.1, 7.8]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.victor3.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [9.8, -2.1, 7.8]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.victor3.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-28.9, 0.0, 1.1]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.victor3.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [9.8, 0.0, 9.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.victor3.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [9.8, 0.0, 7.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.victor3.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [9.8, 0.0, 5.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.victor3.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [9.8, 0.0, 3.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.victor3.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [9.8, 0.0, 7.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.victor3.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [9.8, 0.0, 5.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.alfa]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 81.4
+modello = "modelli/alfa.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.alfa.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [10.7, 0.0, 7.3]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.alfa.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [10.7, 2.7, 6.0]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.alfa.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [10.7, -2.7, 6.0]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.alfa.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-31.6, 0.0, 1.2]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.alfa.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [10.7, 0.0, 7.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.alfa.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [10.7, 0.0, 5.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.alfa.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [10.7, 0.0, 3.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.alfa.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [10.7, 0.0, 1.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.alfa.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [10.7, 0.0, 5.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.alfa.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [10.7, 0.0, 3.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.charlie2]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 104.5
+modello = "modelli/charlie2.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.charlie2.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [4.3, 0.0, 7.3]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.charlie2.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [4.3, 2.1, 6.0]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.charlie2.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [4.3, -2.1, 6.0]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.charlie2.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-31.4, 0.0, 1.1]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.charlie2.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [4.3, 0.0, 7.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.charlie2.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [4.3, 0.0, 5.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.charlie2.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [4.3, 0.0, 3.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.charlie2.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [4.3, 0.0, 1.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.charlie2.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [4.3, 0.0, 5.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.charlie2.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [4.3, 0.0, 3.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.kilo]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 72.6
+modello = "modelli/kilo.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.kilo.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [8.8, 0.0, 9.7]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.kilo.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [8.8, 1.5, 8.4]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.kilo.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [8.8, -1.5, 8.4]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.kilo.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-30.5, 0.0, 2.5]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.kilo.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [8.8, 0.0, 9.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kilo.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [8.8, 0.0, 7.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kilo.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [8.8, 0.0, 5.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kilo.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [8.8, 0.0, 3.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kilo.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [8.8, 0.0, 7.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.kilo.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [8.8, 0.0, 5.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.foxtrot]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 91.3
+modello = "modelli/foxtrot.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.foxtrot.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [3.1, 0.0, 9.6]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.foxtrot.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [3.1, 1.0, 8.3]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.foxtrot.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [3.1, -1.0, 8.3]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.foxtrot.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-38.3, 0.0, 2.4]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.foxtrot.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [3.1, 0.0, 9.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.foxtrot.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [3.1, 0.0, 7.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.foxtrot.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [3.1, 0.0, 5.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.foxtrot.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [3.1, 0.0, 3.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.foxtrot.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [3.1, 0.0, 7.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.foxtrot.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [3.1, 0.0, 5.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.los_angeles]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 110.3
+modello = "modelli/los_angeles.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I; 32 CFR 707.7 per il faro ambra"
+conf = "media"
+
+[[classe.los_angeles.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [23.1, 0.0, 7.9]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.los_angeles.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [23.1, 0.8, 6.6]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.los_angeles.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [23.1, -0.8, 6.6]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.los_angeles.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-30.2, 0.0, 1.1]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.los_angeles.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [23.1, 0.0, 7.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.los_angeles.fanale]]
+ruolo = "faro_ambra"
+colore = "ambra"
+pos_m = [23.1, 0.0, 8.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["moto"]
+lampi = "707.7"
+
+[[classe.los_angeles.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [23.1, 0.0, 5.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.los_angeles.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [23.1, 0.0, 3.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.los_angeles.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [23.1, 0.0, 1.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.los_angeles.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [23.1, 0.0, 5.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.los_angeles.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [23.1, 0.0, 3.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.sturgeon]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 89.1
+modello = "modelli/sturgeon.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I; 32 CFR 707.7 per il faro ambra"
+conf = "media"
+
+[[classe.sturgeon.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [20.6, 0.0, 9.3]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.sturgeon.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [20.6, 1.5, 8.0]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.sturgeon.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [20.6, -1.5, 8.0]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.sturgeon.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-24.5, 0.0, 0.9]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.sturgeon.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [20.6, 0.0, 9.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.sturgeon.fanale]]
+ruolo = "faro_ambra"
+colore = "ambra"
+pos_m = [20.6, 0.0, 10.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["moto"]
+lampi = "707.7"
+
+[[classe.sturgeon.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [20.6, 0.0, 7.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.sturgeon.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [20.6, 0.0, 5.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.sturgeon.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [20.6, 0.0, 3.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.sturgeon.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [20.6, 0.0, 7.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.sturgeon.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [20.6, 0.0, 5.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.trafalgar]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 85.4
+modello = "modelli/trafalgar.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.trafalgar.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [10.8, 0.0, 7.3]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.trafalgar.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [10.8, 1.5, 6.0]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.trafalgar.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [10.8, -1.5, 6.0]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.trafalgar.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-26.7, 0.0, 1.1]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.trafalgar.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [10.8, 0.0, 7.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.trafalgar.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [10.8, 0.0, 5.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.trafalgar.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [10.8, 0.0, 3.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.trafalgar.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [10.8, 0.0, 1.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.trafalgar.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [10.8, 0.0, 5.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.trafalgar.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [10.8, 0.0, 3.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.victor1]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 93.0
+modello = "modelli/victor1.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.victor1.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [13.4, 0.0, 8.9]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.victor1.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [13.4, 2.0, 7.6]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.victor1.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [13.4, -2.0, 7.6]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.victor1.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-25.3, 0.0, 1.1]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.victor1.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [13.4, 0.0, 8.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.victor1.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [13.4, 0.0, 6.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.victor1.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [13.4, 0.0, 4.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.victor1.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [13.4, 0.0, 2.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.victor1.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [13.4, 0.0, 6.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.victor1.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [13.4, 0.0, 4.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.delta3]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 156.0
+modello = "modelli/delta3.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.delta3.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [40.0, 0.0, 10.6]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.delta3.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [40.0, 1.8, 9.3]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.delta3.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [40.0, -1.8, 9.3]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.delta3.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-56.7, 0.0, 1.9]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.delta3.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [40.0, 0.0, 10.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.delta3.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [40.0, 0.0, 8.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.delta3.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [40.0, 0.0, 6.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.delta3.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [40.0, 0.0, 4.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.delta3.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [40.0, 0.0, 8.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.delta3.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [40.0, 0.0, 6.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.sierra]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 107.2
+modello = "modelli/sierra.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.sierra.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [9.1, 0.0, 7.8]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.sierra.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [9.1, 2.5, 6.5]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.sierra.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [9.1, -2.5, 6.5]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.sierra.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-32.2, 0.0, 1.3]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.sierra.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [9.1, 0.0, 7.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.sierra.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [9.1, 0.0, 5.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.sierra.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [9.1, 0.0, 3.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.sierra.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [9.1, 0.0, 1.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.sierra.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [9.1, 0.0, 5.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.sierra.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [9.1, 0.0, 3.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.udaloy]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 163.5
+modello = "modelli/udaloy.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.udaloy.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [13.2, 0.0, 23.9]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-16.2, 0.0, 29.0]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [16.5, 5.6, 15.9]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [16.5, -5.6, 15.9]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-80.8, 0.0, 7.8]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [75.2, 0.0, 15.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-75.2, 0.0, 8.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-16.2, 0.0, 28.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-16.2, 0.0, 26.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-16.2, 0.0, 24.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-16.2, 0.0, 28.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-16.2, 0.0, 26.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-71.5, 0.0, 12.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-51.1, 0.0, 12.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-30.7, 0.0, 12.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-10.2, 0.0, 12.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [10.2, 0.0, 12.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [30.7, 0.0, 12.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [51.1, 0.0, 12.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.udaloy.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [71.5, 0.0, 12.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.grisha3]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 71.1
+modello = "modelli/grisha3.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.grisha3.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [0.6, 0.0, 16.2]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.grisha3.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [5.6, 3.4, 8.4]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.grisha3.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [5.6, -3.4, 8.4]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.grisha3.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-34.5, 0.0, 3.2]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.grisha3.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [32.7, 0.0, 11.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.grisha3.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-32.7, 0.0, 4.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.grisha3.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [0.6, 0.0, 15.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.grisha3.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [0.6, 0.0, 13.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.grisha3.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [0.6, 0.0, 11.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.grisha3.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [0.6, 0.0, 15.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.grisha3.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [0.6, 0.0, 13.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.ohio]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 170.7
+modello = "modelli/ohio.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I; 32 CFR 707.7 per il faro ambra"
+conf = "media"
+
+[[classe.ohio.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [49.8, 0.0, 10.3]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.ohio.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [49.8, 1.0, 9.0]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.ohio.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [49.8, -1.0, 9.0]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.ohio.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-59.9, 0.0, 1.7]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.ohio.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [49.8, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ohio.fanale]]
+ruolo = "faro_ambra"
+colore = "ambra"
+pos_m = [49.8, 0.0, 11.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["moto"]
+lampi = "707.7"
+
+[[classe.ohio.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [49.8, 0.0, 8.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.ohio.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [49.8, 0.0, 6.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.ohio.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [49.8, 0.0, 4.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.ohio.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [49.8, 0.0, 8.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.ohio.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [49.8, 0.0, 6.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.type206]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 48.5
+modello = "modelli/type206.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.type206.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [3.7, 0.0, 6.4]
+settore = [-112.5, 112.5]
+portata_nm = 5.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.type206.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [3.7, 0.9, 5.1]
+settore = [-112.5, 0.0]
+portata_nm = 2.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.type206.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [3.7, -0.9, 5.1]
+settore = [0.0, 112.5]
+portata_nm = 2.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.type206.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-16.2, 0.0, 1.1]
+settore = [112.5, -112.5]
+portata_nm = 2.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.type206.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [3.7, 0.0, 6.4]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type206.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [3.7, 0.0, 4.4]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.type206.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [3.7, 0.0, 2.4]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.type206.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [3.7, 0.0, 0.4]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.type206.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [3.7, 0.0, 4.4]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.type206.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [3.7, 0.0, 2.4]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.ticonderoga]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 172.5
+modello = "modelli/ticonderoga.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.ticonderoga.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [21.9, 0.0, 26.6]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [0.2, 0.0, 31.1]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [36.7, 6.0, 16.4]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [36.7, -6.0, 16.4]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-85.2, 0.0, 4.7]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [79.3, 0.0, 13.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-79.3, 0.0, 5.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [0.2, 0.0, 30.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [0.2, 0.0, 28.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [0.2, 0.0, 26.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [0.2, 0.0, 30.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [0.2, 0.0, 28.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-75.5, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-53.9, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-32.3, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-10.8, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [10.8, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [32.3, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [53.9, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ticonderoga.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [75.5, 0.0, 10.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.knox]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 134.0
+modello = "modelli/knox.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.knox.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [-6.6, 0.0, 29.1]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [18.8, 5.4, 14.6]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [18.8, -5.4, 14.6]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-66.0, 0.0, 5.4]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [61.6, 0.0, 16.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-61.6, 0.0, 6.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-7.4, 0.0, 38.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-7.4, 0.0, 36.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-7.4, 0.0, 34.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-7.4, 0.0, 38.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-7.4, 0.0, 36.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-55.8, 0.0, 13.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-33.5, 0.0, 13.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-11.2, 0.0, 13.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [11.2, 0.0, 13.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [33.5, 0.0, 13.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.knox.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [55.8, 0.0, 13.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.type22]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 131.2
+modello = "modelli/type22.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.type22.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [-26.0, 0.0, 27.5]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [18.7, 5.6, 14.8]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [18.7, -5.6, 14.8]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-64.6, 0.0, 7.2]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [60.4, 0.0, 14.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-60.4, 0.0, 8.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-26.0, 0.0, 27.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-26.0, 0.0, 25.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-26.0, 0.0, 23.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-26.0, 0.0, 27.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-26.0, 0.0, 25.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-54.7, 0.0, 11.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-32.8, 0.0, 11.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-10.9, 0.0, 11.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [10.9, 0.0, 11.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [32.8, 0.0, 11.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [54.7, 0.0, 11.2]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.type22b2]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 146.5
+modello = "modelli/type22b2.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.type22b2.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [-38.2, 0.0, 26.6]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [16.9, 5.6, 15.6]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [16.9, -5.6, 15.6]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-72.2, 0.0, 5.1]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [67.4, 0.0, 18.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-67.4, 0.0, 6.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-38.2, 0.0, 26.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-38.2, 0.0, 24.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-38.2, 0.0, 22.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-38.2, 0.0, 26.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-38.2, 0.0, 24.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-62.8, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-41.9, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-20.9, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [0.0, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [20.9, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [41.9, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.type22b2.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [62.8, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.ugra]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 141.4
+modello = "modelli/ugra.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.ugra.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [18.9, 0.0, 13.9]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-18.3, 0.0, 18.4]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [34.6, 6.5, 18.0]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [34.6, -6.5, 18.0]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-69.7, 0.0, 8.5]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [65.0, 0.0, 15.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-65.0, 0.0, 9.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [18.9, 0.0, 23.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [18.9, 0.0, 21.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [18.9, 0.0, 19.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [18.9, 0.0, 23.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [18.9, 0.0, 21.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-60.6, 0.0, 12.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-40.4, 0.0, 12.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-20.2, 0.0, 12.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [0.0, 0.0, 12.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [20.2, 0.0, 12.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [40.4, 0.0, 12.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.ugra.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [60.6, 0.0, 12.0]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.hauk]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 36.5
+modello = "modelli/hauk.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.hauk.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [-4.9, 0.0, 12.4]
+settore = [-112.5, 112.5]
+portata_nm = 5.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.hauk.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [1.8, 2.4, 5.5]
+settore = [-112.5, 0.0]
+portata_nm = 2.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.hauk.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [1.8, -2.4, 5.5]
+settore = [0.0, 112.5]
+portata_nm = 2.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.hauk.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-17.2, 0.0, 3.3]
+settore = [112.5, -112.5]
+portata_nm = 2.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.hauk.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [16.8, 0.0, 9.7]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.hauk.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-4.9, 0.0, 11.9]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.hauk.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-4.9, 0.0, 9.9]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.hauk.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-4.9, 0.0, 7.9]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.hauk.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-4.9, 0.0, 11.9]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.hauk.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-4.9, 0.0, 9.9]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.oslo]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 96.6
+modello = "modelli/oslo.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.oslo.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [-4.9, 0.0, 23.7]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.oslo.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [5.3, 5.2, 10.9]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.oslo.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [5.3, -5.2, 10.9]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.oslo.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-47.3, 0.0, 4.0]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.oslo.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [44.4, 0.0, 13.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.oslo.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-44.4, 0.0, 5.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.oslo.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-5.5, 0.0, 24.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.oslo.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-5.5, 0.0, 22.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.oslo.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-5.5, 0.0, 20.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.oslo.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-5.5, 0.0, 24.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.oslo.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-5.5, 0.0, 22.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.stockholm]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 50.0
+modello = "modelli/stockholm.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.stockholm.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [-5.7, 0.0, 23.1]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.stockholm.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [0.7, 3.0, 8.7]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.stockholm.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [0.7, -3.0, 8.7]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.stockholm.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-24.0, 0.0, 3.8]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.stockholm.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [23.0, 0.0, 10.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.stockholm.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-23.0, 0.0, 4.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.stockholm.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-5.7, 0.0, 22.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.stockholm.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-5.7, 0.0, 20.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.stockholm.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-5.7, 0.0, 18.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.stockholm.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-5.7, 0.0, 22.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.stockholm.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-5.7, 0.0, 20.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.nacken]
+tipo = "sottomarino"
+pesca = ""
+lunghezza_m = 49.5
+modello = "modelli/nacken.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.nacken.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [4.2, 0.0, 7.3]
+settore = [-112.5, 112.5]
+portata_nm = 5.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.nacken.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [4.2, 2.4, 6.0]
+settore = [-112.5, 0.0]
+portata_nm = 2.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.nacken.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [4.2, -2.4, 6.0]
+settore = [0.0, 112.5]
+portata_nm = 2.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.nacken.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-13.3, 0.0, 1.4]
+settore = [112.5, -112.5]
+portata_nm = 2.0
+stati = ["moto", "manovra_limitata", "non_governa"]
+lampi = ""
+
+[[classe.nacken.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [4.2, 0.0, 7.3]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nacken.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [4.2, 0.0, 5.3]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.nacken.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [4.2, 0.0, 3.3]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.nacken.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [4.2, 0.0, 1.3]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.nacken.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [4.2, 0.0, 5.3]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.nacken.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [4.2, 0.0, 3.3]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.kitty_hawk]
+tipo = "militare"
+pesca = ""
+lunghezza_m = 323.6
+modello = "modelli/kitty_hawk.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [-32.6, 0.0, 61.6]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [-21.4, 36.5, 32.2]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [-21.4, -36.5, 32.2]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-160.8, 0.0, 17.8]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [148.9, 0.0, 23.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-148.9, 0.0, 18.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-32.6, 0.0, 61.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-32.6, 0.0, 59.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-32.6, 0.0, 57.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-32.6, 0.0, 61.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-32.6, 0.0, 59.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-141.6, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-101.1, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-60.7, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-20.2, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [20.2, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [60.7, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [101.1, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.kitty_hawk.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [141.6, 0.0, 19.8]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.mercantile]
+tipo = "mercantile"
+pesca = ""
+lunghezza_m = 169.9
+modello = "modelli/mercantile.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.mercantile.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [59.5, 0.0, 32.8]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-43.1, 0.0, 39.4]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [21.8, 7.1, 18.2]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [21.8, -7.1, 18.2]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-83.9, 0.0, 12.9]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [78.2, 0.0, 19.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-78.2, 0.0, 13.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-43.1, 0.0, 38.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-43.1, 0.0, 36.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-43.1, 0.0, 34.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-43.1, 0.0, 38.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-43.1, 0.0, 36.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-74.3, 0.0, 16.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-53.1, 0.0, 16.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-31.9, 0.0, 16.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-10.6, 0.0, 16.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [10.6, 0.0, 16.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [31.9, 0.0, 16.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [53.1, 0.0, 16.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.mercantile.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [74.3, 0.0, 16.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.cargo]
+tipo = "mercantile"
+pesca = ""
+lunghezza_m = 230.25
+modello = "modelli/cargo.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.cargo.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [94.6, 0.0, 34.5]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-85.3, 0.0, 43.7]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [-82.9, 8.0, 33.5]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [-82.9, -8.0, 33.5]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-114.1, 0.0, 15.3]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [105.9, 0.0, 22.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-105.9, 0.0, 16.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-85.3, 0.0, 43.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-85.3, 0.0, 41.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-85.3, 0.0, 39.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-85.3, 0.0, 43.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-85.3, 0.0, 41.2]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-100.7, 0.0, 19.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-72.0, 0.0, 19.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-43.2, 0.0, 19.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-14.4, 0.0, 19.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [14.4, 0.0, 19.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [43.2, 0.0, 19.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [72.0, 0.0, 19.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.cargo.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [100.7, 0.0, 19.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.petroliera]
+tipo = "mercantile"
+pesca = ""
+lunghezza_m = 231.8
+modello = "modelli/petroliera.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.petroliera.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [88.2, 0.0, 30.7]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-81.3, 0.0, 38.3]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [-86.3, 11.0, 22.7]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [-86.3, -11.0, 22.7]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-114.9, 0.0, 9.8]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [106.6, 0.0, 21.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-106.6, 0.0, 10.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-81.3, 0.0, 37.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-81.3, 0.0, 35.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-81.3, 0.0, 33.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-81.3, 0.0, 37.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-81.3, 0.0, 35.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-101.4, 0.0, 18.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-72.4, 0.0, 18.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-43.5, 0.0, 18.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-14.5, 0.0, 18.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [14.5, 0.0, 18.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [43.5, 0.0, 18.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [72.4, 0.0, 18.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [101.4, 0.0, 18.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.portarinfuse]
+tipo = "mercantile"
+pesca = ""
+lunghezza_m = 225.0
+modello = "modelli/portarinfuse.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.portarinfuse.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [102.7, 0.0, 28.8]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-89.5, 0.0, 38.0]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [-85.6, 16.9, 24.8]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [-85.6, -16.9, 24.8]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-111.5, 0.0, 7.5]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [103.5, 0.0, 17.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-103.5, 0.0, 8.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-89.5, 0.0, 37.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-89.5, 0.0, 35.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-89.5, 0.0, 33.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-89.5, 0.0, 37.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-89.5, 0.0, 35.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-98.4, 0.0, 14.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-70.3, 0.0, 14.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-42.2, 0.0, 14.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-14.1, 0.0, 14.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [14.1, 0.0, 14.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [42.2, 0.0, 14.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [70.3, 0.0, 14.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.portarinfuse.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [98.4, 0.0, 14.6]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.petroliera_costiera]
+tipo = "mercantile"
+pesca = ""
+lunghezza_m = 120.0
+modello = "modelli/petroliera_costiera.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [45.2, 0.0, 20.6]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-42.5, 0.0, 31.0]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [-39.0, 7.3, 16.4]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [-39.0, -7.3, 16.4]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-59.0, 0.0, 6.5]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [55.2, 0.0, 13.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-55.2, 0.0, 7.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-42.5, 0.0, 30.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-42.5, 0.0, 28.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-42.5, 0.0, 26.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-42.5, 0.0, 30.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-42.5, 0.0, 28.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-50.0, 0.0, 10.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-30.0, 0.0, 10.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-10.0, 0.0, 10.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [10.0, 0.0, 10.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [30.0, 0.0, 10.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.petroliera_costiera.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [50.0, 0.0, 10.4]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.traghetto]
+tipo = "mercantile"
+pesca = ""
+lunghezza_m = 150.0
+modello = "modelli/traghetto.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.traghetto.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [22.2, 0.0, 54.1]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [46.6, 11.8, 30.0]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [46.6, -11.8, 30.0]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-74.0, 0.0, 12.9]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [69.0, 0.0, 18.4]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-69.0, 0.0, 13.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [22.2, 0.0, 53.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [22.2, 0.0, 51.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [22.2, 0.0, 49.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [22.2, 0.0, 53.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [22.2, 0.0, 51.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-64.3, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-42.9, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-21.4, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [0.0, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [21.4, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [42.9, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.traghetto.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [64.3, 0.0, 15.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.rompighiaccio]
+tipo = "mercantile"
+pesca = ""
+lunghezza_m = 130.0
+modello = "modelli/rompighiaccio.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [10.0, 0.0, 28.5]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-29.5, 0.0, 33.0]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [10.6, 6.0, 27.8]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [10.6, -6.0, 27.8]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-64.0, 0.0, 7.0]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [59.8, 0.0, 16.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-59.8, 0.0, 8.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-29.5, 0.0, 32.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-29.5, 0.0, 30.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-29.5, 0.0, 28.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-29.5, 0.0, 32.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-29.5, 0.0, 30.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-54.2, 0.0, 13.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-32.5, 0.0, 13.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-10.8, 0.0, 13.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [10.8, 0.0, 13.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [32.5, 0.0, 13.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.rompighiaccio.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [54.2, 0.0, 13.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["fonda"]
+lampi = ""
+
+[classe.nave_ricerca]
+tipo = "mercantile"
+pesca = ""
+lunghezza_m = 75.0
+modello = "modelli/nave_ricerca.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.nave_ricerca.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [27.1, 0.0, 33.5]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.nave_ricerca.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [1.5, 0.0, 38.0]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.nave_ricerca.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [11.4, 5.5, 22.3]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.nave_ricerca.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [11.4, -5.5, 22.3]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.nave_ricerca.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-36.5, 0.0, 11.6]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.nave_ricerca.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [34.5, 0.0, 18.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nave_ricerca.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-34.5, 0.0, 12.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.nave_ricerca.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [1.5, 0.0, 37.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.nave_ricerca.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [1.5, 0.0, 35.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.nave_ricerca.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [1.5, 0.0, 33.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.nave_ricerca.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [1.5, 0.0, 37.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.nave_ricerca.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [1.5, 0.0, 35.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.rimorchiatore]
+tipo = "mercantile"
+pesca = ""
+lunghezza_m = 50.0
+modello = "modelli/rimorchiatore.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.rimorchiatore.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [12.0, 0.0, 13.3]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.rimorchiatore.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [4.1, 0.0, 20.1]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.rimorchiatore.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [11.8, 6.2, 9.5]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.rimorchiatore.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [11.8, -6.2, 9.5]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.rimorchiatore.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-24.0, 0.0, 3.0]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.rimorchiatore.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [23.0, 0.0, 12.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.rimorchiatore.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-23.0, 0.0, 4.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.rimorchiatore.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [4.1, 0.0, 19.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.rimorchiatore.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [4.1, 0.0, 17.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.rimorchiatore.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [4.1, 0.0, 15.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.rimorchiatore.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [4.1, 0.0, 19.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.rimorchiatore.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [4.1, 0.0, 17.6]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[classe.peschereccio]
+tipo = "peschereccio"
+pesca = "strascico"
+lunghezza_m = 57.0
+modello = "modelli/peschereccio.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.peschereccio.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [18.3, 0.0, 11.0]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [1.7, 0.0, 21.0]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [6.7, 4.6, 11.3]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [6.7, -4.6, 11.3]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-27.5, 0.0, 6.7]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [26.2, 0.0, 14.9]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-26.2, 0.0, 7.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "pesca_alto"
+colore = "verde"
+pos_m = [1.7, 0.0, 20.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "pesca_basso"
+colore = "bianco"
+pos_m = [1.7, 0.0, 18.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "albero_pesca"
+colore = "bianco"
+pos_m = [0.7, 0.0, 22.0]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [1.7, 0.0, 20.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [1.7, 0.0, 18.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [1.7, 0.0, 16.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [1.7, 0.0, 20.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [1.7, 0.0, 18.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-19.0, 0.0, 11.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [0.0, 0.0, 11.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.peschereccio.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [19.0, 0.0, 11.9]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""
+
+[classe.bmrt]
+tipo = "peschereccio"
+pesca = "strascico"
+lunghezza_m = 94.5
+modello = "modelli/bmrt.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.bmrt.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [-5.2, 0.0, 19.4]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-25.6, 0.0, 23.9]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [-2.9, 5.5, 15.6]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [-2.9, -5.5, 15.6]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-46.2, 0.0, 7.0]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [43.5, 0.0, 17.7]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-43.5, 0.0, 8.0]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "pesca_alto"
+colore = "verde"
+pos_m = [-5.2, 0.0, 28.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "pesca_basso"
+colore = "bianco"
+pos_m = [-5.2, 0.0, 26.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "albero_pesca"
+colore = "bianco"
+pos_m = [-6.2, 0.0, 30.0]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-5.2, 0.0, 28.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-5.2, 0.0, 26.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-5.2, 0.0, 24.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-5.2, 0.0, 28.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-5.2, 0.0, 26.5]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-35.4, 0.0, 14.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-11.8, 0.0, 14.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [11.8, 0.0, 14.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.bmrt.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [35.4, 0.0, 14.7]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""
+
+[classe.peschereccio_costiero]
+tipo = "peschereccio"
+pesca = "altre"
+lunghezza_m = 30.0
+modello = "modelli/peschereccio_costiero.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [7.9, 0.0, 8.1]
+settore = [-112.5, 112.5]
+portata_nm = 5.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [6.9, 3.0, 4.4]
+settore = [-112.5, 0.0]
+portata_nm = 2.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [6.9, -3.0, 4.4]
+settore = [0.0, 112.5]
+portata_nm = 2.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-14.0, 0.0, 3.7]
+settore = [112.5, -112.5]
+portata_nm = 2.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [13.8, 0.0, 9.3]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "pesca_alto"
+colore = "rosso"
+pos_m = [-12.0, 0.0, 9.1]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "pesca_basso"
+colore = "bianco"
+pos_m = [-12.0, 0.0, 7.1]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-12.0, 0.0, 9.1]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-12.0, 0.0, 7.1]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-12.0, 0.0, 5.1]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-12.0, 0.0, 9.1]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-12.0, 0.0, 7.1]
+settore = [-180.0, 180.0]
+portata_nm = 2.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-10.0, 0.0, 6.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [0.0, 0.0, 6.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.peschereccio_costiero.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [10.0, 0.0, 6.3]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""
+
+[classe.cianciolo]
+tipo = "peschereccio"
+pesca = "altre"
+lunghezza_m = 50.0
+modello = "modelli/cianciolo.mdl"
+fonte = "modello 3D (alberi, plancia, poppa, vela); COLREG 1972 regole 21-23, 26, 27, 30, Annesso I"
+conf = "media"
+
+[[classe.cianciolo.fanale]]
+ruolo = "albero"
+colore = "bianco"
+pos_m = [9.1, 0.0, 7.8]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "albero_poppiero"
+colore = "bianco"
+pos_m = [-4.2, 0.0, 18.3]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["moto", "manovra_limitata"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "laterale_sinistro"
+colore = "rosso"
+pos_m = [12.5, 6.6, 6.1]
+settore = [-112.5, 0.0]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "laterale_dritto"
+colore = "verde"
+pos_m = [12.5, -6.6, 6.1]
+settore = [0.0, 112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "coronamento"
+colore = "bianco"
+pos_m = [-24.0, 0.0, 2.3]
+settore = [112.5, -112.5]
+portata_nm = 3.0
+stati = ["moto", "manovra_limitata", "non_governa", "pesca"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "fonda_prora"
+colore = "bianco"
+pos_m = [23.0, 0.0, 10.1]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "fonda_poppa"
+colore = "bianco"
+pos_m = [-23.0, 0.0, 3.3]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["fonda"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "pesca_alto"
+colore = "rosso"
+pos_m = [-4.2, 0.0, 17.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "pesca_basso"
+colore = "bianco"
+pos_m = [-4.2, 0.0, 15.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "albero_pesca"
+colore = "bianco"
+pos_m = [-5.2, 0.0, 19.3]
+settore = [-112.5, 112.5]
+portata_nm = 6.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "manovra_rosso_alto"
+colore = "rosso"
+pos_m = [-4.2, 0.0, 17.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "manovra_bianco"
+colore = "bianco"
+pos_m = [-4.2, 0.0, 15.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "manovra_rosso_basso"
+colore = "rosso"
+pos_m = [-4.2, 0.0, 13.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["manovra_limitata"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "governo_rosso_alto"
+colore = "rosso"
+pos_m = [-4.2, 0.0, 17.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "governo_rosso_basso"
+colore = "rosso"
+pos_m = [-4.2, 0.0, 15.8]
+settore = [-180.0, 180.0]
+portata_nm = 3.0
+stati = ["non_governa"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [-16.7, 0.0, 7.1]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [0.0, 0.0, 7.1]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""
+
+[[classe.cianciolo.fanale]]
+ruolo = "coperta"
+colore = "luci_coperta"
+pos_m = [16.7, 0.0, 7.1]
+settore = [-180.0, 180.0]
+portata_nm = 4.0
+stati = ["pesca"]
+lampi = ""

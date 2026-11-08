@@ -1,0 +1,170 @@
+# Nave da carico civile "Cargo Ship" (tipo 0x02 del gioco): portacontainer/ro-ro classe Cpl. Louis J. Hauge Jr.
+# (cinque navi Maersk costruite a Odense nel 1979-80, noleggiate dal Military Sealift Command come navi di
+# preposizionamento dal 1984-85; equipaggio civile Maersk, aspetto da mercantile). Configurazione 1985-1990, con
+# container in coperta come nella foto della Hauge del 1990.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua (x = L/2 - d).
+# Lunghezza, larghezza e immersione ufficiali (755'5" x 90'0" x 33'10"). Quote e posizioni ricavate dalla
+# triangolazione su cinque foto (tools/navi/triangola.py) e dai raggi delle fotocamere calibrate intersecati con
+# i piani della murata e dell'asse; dettagli in extracted/navi/cargo/RAPPORTO.md.
+# Parti proprie (torri delle gru, pile di container, ponte di volo) in classi/cargo_parti.py.
+nome: Cpl. Louis J. Hauge Jr. (T-AK 3000), portacontainer/ro-ro
+uscita: extracted/navi/cargo
+moduli_parti: [cargo_parti.py]
+
+scafo:
+  L: 230.25
+  B: 27.43
+  bordo: [[0, 16.6], [30, 16.8], [190, 16.8], [194, 14.3], [230.25, 14.3]]
+  slancio: 11.3
+  finezza_prua: 55
+  specchio: 0.25        # specchio a V (23/10/2026): stretto al galleggiamento, largo in coperta; verificato
+  specchio_alto: 0.88   # sulla foto di poppa della Baugh (prima: specchio verticale 0,88, che finiva fuori dallo scafo)
+  svasatura: 0.03
+  pienezza: [0.9, 0.8]
+  prua_segue_dritto: true
+  bagnasciuga: 2.2
+
+parti:
+  - {tipo: chiusura_dritto, nome: chiusura_dritto, L: 230.25, B: 27.43, bordo: [[0, 16.6], [30, 16.8], [190, 16.8], [194, 14.3], [230.25, 14.3]],
+     slancio: 11.3, finezza_prua: 55, specchio: 0.88, svasatura: 0.03, pienezza: [0.9, 0.8], prua_segue_dritto: true, bagnasciuga: 2.2}
+  # boccaporti (coperchi) lungo tutta la zona di carico
+  - {tipo: scatola, nome: boccaporti, x0: {prua: 166.0}, x1: {prua: 10.0}, y0: -11.2, y1: 11.2, z0: 16.0, z1: 17.6, mat: ponte}
+  # container in coperta: 3 strati (pila stretta) tra l'albero prodiero e la gru 3, 2 nelle stive centrali, 3 davanti al cassero
+  - {tipo: pila_container, nome: container_b, x0: {prua: 50.0}, x1: {prua: 28.0}, y0: -5.5, y1: 5.5, z0: 17.6, strati: 3}
+  - {tipo: pila_container, nome: container_c, x0: {prua: 86.0}, x1: {prua: 61.0}, y0: -9.8, y1: 9.8, z0: 17.6, strati: 2}
+  - {tipo: pila_container, nome: container_d, x0: {prua: 126.5}, x1: {prua: 97.0}, y0: -9.8, y1: 9.8, z0: 17.6, strati: 2}
+  - {tipo: pila_container, nome: container_e, x0: {prua: 166.0}, x1: {prua: 137.5}, y0: -9.8, y1: 9.8, z0: 17.6, strati: 3}
+  # case delle gru (rosse) e torri con braccio abbassato verso poppa (posizioni e quote dalla triangolazione)
+  - {tipo: scatola, nome: casa_gru_3, x0: {prua: 60.3}, x1: {prua: 50.3}, y0: -7.0, y1: 7.0, z0: 16.0, z1: 24.0, mat: scafo}
+  - {tipo: scatola, nome: casa_gru_2, x0: {prua: 96.9}, x1: {prua: 86.9}, y0: -7.0, y1: 7.0, z0: 16.0, z1: 24.5, mat: scafo}
+  - {tipo: scatola, nome: casa_gru_1, x0: {prua: 139.2}, x1: {prua: 129.2}, y0: -7.0, y1: 7.0, z0: 16.0, z1: 25.0, mat: scafo}
+  - {tipo: torre_gru, nome: gru_3, x: {prua: 55.3}, z0: 24.0, z1: 46.1, z_braccio: 30.5, z_punta: 29.0, braccio: 36.0}
+  - {tipo: torre_gru, nome: gru_2, x: {prua: 91.9}, z0: 24.5, z1: 46.0, z_braccio: 30.5, z_punta: 29.0, braccio: 40.0}
+  - {tipo: torre_gru, nome: gru_1, x: {prua: 134.2}, z0: 25.0, z1: 40.1, z_braccio: 30.5, z_punta: 29.0, braccio: 37.0}
+  # albero prodiero (palo bianco, coffa scura, frusta)
+  - {tipo: albero_palo, nome: albero_prodiero, x: {prua: 20.5}, z0: 16.8, z1: 34.5, r: 0.8, piattaforme: [[26.0, 2.4], [31.5, 2.0]], mat: bianco}
+  - {tipo: asta, nome: frusta_albero_prodiero, da: [{prua: 20.5}, 0, 34.5], a: [{prua: 20.5}, 0, 44.0], spessore: 0.2}
+  # cassero poppiero (alloggi): blocco principale, prolungamento a sinistra fino quasi allo specchio, ponte di
+  # comando, timoneria con alette, fumaiolo (cima nera), albero del radar e radome a sinistra dell'asse
+  - {tipo: tuga, nome: cassero, x0: {prua: 214.0}, x1: {prua: 173.0}, y0: -13.4, y1: 13.4, z0: 14.3, z1: 27.5, mat: bianco, rastrema: 0.995}
+  - {tipo: tuga, nome: cassero_sinistra, x0: {prua: 228.5}, x1: {prua: 214.0}, y0: 0.0, y1: 12.0, z0: 14.3, z1: 26.5, mat: bianco}
+  - {tipo: tuga, nome: ponte_comando, x0: {prua: 213.0}, x1: {prua: 186.0}, y0: -10.0, y1: 10.0, z0: 27.5, z1: 31.0, mat: bianco, rastrema: 0.99}
+  - {tipo: tuga, nome: timoneria, x0: {prua: 204.0}, x1: {prua: 192.0}, y0: -8.0, y1: 8.0, z0: 31.0, z1: 34.5, mat: bianco, rastrema: 0.98}
+  - {tipo: scatola, nome: finestre_timoneria, x0: {prua: 192.4}, x1: {prua: 191.9}, y0: -7.6, y1: 7.6, z0: 32.3, z1: 33.7, mat: scuro}
+  - {tipo: scatola, nome: alette_plancia, x0: {prua: 195.0}, x1: {prua: 192.0}, y0: -13.0, y1: 13.0, z0: 30.8, z1: 31.4, mat: bianco}
+  - {tipo: fumaiolo, nome: fumaiolo, x0: {prua: 208.0}, x1: {prua: 202.5}, semilarghezza: 3.2, z0: 31.0, z1: 36.4, rastrema: 0.95}
+  - {tipo: scatola, nome: cima_fumaiolo, x0: {prua: 207.8}, x1: {prua: 202.7}, y0: -3.0, y1: 3.0, z0: 36.4, z1: 37.7, mat: nero}
+  - {tipo: asta, nome: albero_radar, da: [{prua: 200.4}, 0, 34.5], a: [{prua: 200.4}, 0, 43.7], spessore: 0.5}
+  - {tipo: pennone, nome: pennone_radar, x: {prua: 200.4}, z: 41.0, semilunghezza: 2.5}
+  - {tipo: asta, nome: sostegno_radome, da: [{prua: 200.8}, 2.9, 34.5], a: [{prua: 200.8}, 2.9, 38.6], spessore: 0.4}
+  - {tipo: sfera, nome: radome, x: {prua: 200.8}, y: 2.9, z: 38.4, r: 1.5}
+  # ponte di volo per elicotteri sopra la poppa (sporge di qualche metro oltre lo specchio), su pilastri
+  - {tipo: ponte_volo, nome: ponte_volo, x0: {prua: 234.0}, x1: {prua: 213.5}, y0: -12.8, y1: 12.8, z: 31.8, z_base: 26.5}
+  # rampa di poppa al giardinetto di dritta, sollevata (posizione di navigazione)
+  - {tipo: scatola, nome: rampa_poppa, x0: {prua: 229.5}, x1: {prua: 226.5}, y0: -10.5, y1: -3.0, z0: 14.3, z1: 30.0, mat: scuro}
+
+foto:
+  # Punti: coordinate dalla triangolazione su tutte e cinque le foto (RAPPORTO.md); fotocamere iniziali dalla stessa.
+  - nome: prua_dritta_hauge
+    file: extracted/navi/cargo/foto/fianco_dritta_hauge_1990_1920.jpg
+    nave: Cpl. Louis J. Hauge Jr. (T-AK 3000), 16/08/1990 (Desert Shield), container in coperta
+    maschera_file: extracted/navi/cargo/foto/fianco_dritta_hauge_1990_maschera.png   # classi/cargo_maschere.yaml
+    qualita: 1.0
+    esponente_peso: 1.5
+    specchiabile: true
+    cancella: [[1008, 594, 1162, 620]]         # nome a prua "CPL. LOUIS J. HAUGE, JR."
+    escludi: [[500, 660, 645, 800]]            # persone sulla banchina (fuori anche dalla calibrazione)
+    fotocamera_iniziale: {posizione: [236.9, -125.6, 4.8], bersaglio: [58.7, 0, 12.7], f: 2874}
+    punti:
+      - [[{prua: 0}, 0, 16.5], [1505, 556]]          # dritto in coperta
+      - [[{prua: 12.2}, 0, 0], [1356, 822]]          # piede del dritto al galleggiamento
+      - [[{prua: 20.5}, 0, 34.5], [1287, 292]]       # albero prodiero, sommita' della coffa scura
+      - [[{prua: 55.3}, 0, 46.1], [986, 188]]        # gru 3 (prodiera), testata: punto medio dei corni
+      - [[{prua: 91.9}, 0, 46.0], [734, 246]]        # gru 2, testata
+      - [[{prua: 134.2}, 0, 40.1], [517, 357]]       # gru 1 (poppiera), testata
+      - [[{prua: 200.8}, 2.9, 39.9], [283, 410]]     # sommita' del radome (a sinistra dell'asse)
+      - [[{prua: 200.4}, 0, 43.7], [262, 372]]       # cima dell'albero del radar
+      - [[{prua: 205.2}, 0, 37.7], [242, 423]]       # cima del fumaiolo
+      - [[{prua: 236.1}, -14.2, 32.4], [41, 476]]    # ponte di volo, spigolo poppiero di dritta
+      - [[{prua: 230.25}, -14.4, 13.7], [45, 625]]   # specchio di poppa, spigolo di dritta in coperta
+  - nome: prua_sinistra_bonnyman
+    file: extracted/navi/cargo/foto/prua_sinistra_bonnyman_1987_1920.jpg
+    nave: 1st Lt. Alex Bonnyman (T-AK 3003), 16/07/1987, in cantiere a Norfolk, scarica (galleggia piu' alta)
+    maschera_file: extracted/navi/cargo/foto/prua_sinistra_bonnyman_1987_maschera.png
+    escludi: [[100, 860, 1760, 1010]]          # opera viva fuori dall'acqua (nave scarica): fuori dalla calibrazione
+    qualita: 0.8
+    esponente_peso: 1.5
+    specchiabile: true
+    cancella: [[500, 628, 665, 655]]           # nome "1ST LT. ALEX BONNYMAN"
+    fotocamera_iniziale: {posizione: [240.4, 125.1, -4.8], bersaglio: [26.4, 0, 18.6], f: 3240}
+    limiti_fotocamera: {elevazione: [-12, 10]}   # fotocamera sotto il galleggiamento del modello: nave scarica
+    punti:
+      - [[{prua: 0}, 0, 16.5], [118, 562]]
+      - [[{prua: 20.5}, 0, 34.5], [378, 293]]
+      - [[{prua: 55.3}, 0, 46.1], [713, 218]]
+      - [[{prua: 91.9}, 0, 46.0], [978, 315]]
+      - [[{prua: 134.2}, 0, 40.1], [1215, 455]]
+      - [[{prua: 200.8}, 2.9, 39.9], [1513, 535]]
+      - [[{prua: 200.4}, 0, 43.7], [1488, 505]]
+      - [[{prua: 205.2}, 0, 37.7], [1500, 568]]
+  - nome: prua_sinistra_fisher
+    file: extracted/navi/cargo/foto/prua_sinistra_fisher_1985_1920.jpg
+    nave: Pvt. Harry Fisher (T-AK 3004), settembre 1985, in navigazione, ripresa dall'alto (~12 gradi)
+    qualita: 0.6
+    esponente_peso: 1.5
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    soglia_schiuma: 200
+    cancella: [[490, 910, 635, 950]]           # nome "PVT. HARRY FISHER"
+    fotocamera_iniziale: {posizione: [196.7, 131.6, 58.8], bersaglio: [34.4, 0, 13.0], f: 2826}
+    punti:
+      - [[{prua: 0}, 0, 16.5], [12, 912]]
+      - [[{prua: 20.5}, 0, 34.5], [307, 546]]
+      - [[{prua: 55.3}, 0, 46.1], [724, 311]]
+      - [[{prua: 91.9}, 0, 46.0], [1056, 287]]
+      - [[{prua: 134.2}, 0, 40.1], [1350, 343]]
+      - [[{prua: 200.4}, 0, 43.7], [1680, 275]]
+      - [[{prua: 200.8}, 2.9, 39.9], [1705, 310]]
+  - nome: poppa_sinistra_fisher
+    file: extracted/navi/cargo/foto/poppa_sinistra_fisher_1985_1920.jpg
+    nave: Pvt. Harry Fisher (T-AK 3004), settembre 1985, in navigazione, ripresa dall'alto (~23 gradi)
+    qualita: 0.8
+    esponente_peso: 1.5
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    soglia_schiuma: 200
+    cancella: [[1298, 1150, 1412, 1210]]       # nome a poppa "PVT. HARRY FISHER / NEW YORK"
+    fotocamera_iniziale: {posizione: [-180.9, 90.8, 80.8], bersaglio: [-60.2, 0, 16.5], f: 2346}
+    punti:
+      - [[{prua: 20.5}, 0, 34.5], [147, 140]]
+      - [[{prua: 55.3}, 0, 46.1], [250, 73]]
+      - [[{prua: 91.9}, 0, 46.0], [402, 116]]
+      - [[{prua: 134.2}, 0, 40.1], [642, 259]]
+      - [[{prua: 200.8}, 2.9, 39.9], [1183, 468]]
+      - [[{prua: 200.4}, 0, 43.7], [1217, 397]]
+      - [[{prua: 214.7}, 12.4, 32.8], [1225, 693]]   # ponte di volo, spigolo prodiero di sinistra
+      - [[{prua: 236.1}, -14.2, 32.4], [1887, 702]]  # ponte di volo, spigolo poppiero di dritta
+      - [[{prua: 232.2}, 10.6, 32.4], [1508, 810]]   # ponte di volo, spigolo poppiero di sinistra
+      - [[{prua: 230.25}, 12.1, 11.1], [1425, 1182]] # specchio di poppa, spigolo di sinistra in coperta
+  - nome: poppa_dritta_baugh
+    file: extracted/navi/cargo/foto/poppa_dritta_baugh_1995_1920.jpg
+    nave: Pfc. William B. Baugh (T-AK 3001), 1995, con i rimorchiatori; bracci delle gru alzati
+    qualita: 0.5
+    esponente_peso: 1.5
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [-231.6, -70.2, 60.6], bersaglio: [-79.9, 0, 25.6], f: 1997}
+    punti:
+      - [[{prua: 232.2}, 10.6, 32.4], [603, 744]]    # ponte di volo, spigolo poppiero di sinistra
+      - [[{prua: 236.1}, -14.2, 32.4], [890, 798]]   # ponte di volo, spigolo poppiero di dritta
+      - [[{prua: 214.7}, 12.4, 32.8], [712, 710]]    # ponte di volo, spigolo prodiero di sinistra
+      - [[{prua: 200.8}, 2.9, 39.9], [904, 603]]
+      - [[{prua: 200.4}, 0, 43.7], [940, 553]]
+      - [[{prua: 0}, 0, 16.5], [1438, 622]]          # prua (estremita' lontana)
+      - [[{prua: 230.25}, 12.1, 11.1], [604, 1020]]  # specchio, spigolo di sinistra in coperta
+      - [[{prua: 229.8}, 0, 0], [745, 1192]]         # specchio al galleggiamento, sull'asse

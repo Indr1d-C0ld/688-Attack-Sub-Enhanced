@@ -1,0 +1,4847 @@
+{
+ "unita": [
+  {
+   "tipo": 0,
+   "nome": "FORREST SHERMAN CLASS DESTROYER",
+   "scene": [
+    "SCENE1A",
+    "SCENE1B",
+    "SCENE1C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE1A"
+     ],
+     "grezzo": {
+      "flag": 18,
+      "integrita": 100,
+      "p3a": 12,
+      "p3b": 11,
+      "p3c": 0,
+      "p3d": 0,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 12000,
+      "vmax": 8000
+     },
+     "avanti_tutta_kn": 22.9,
+     "massima_kn": 25.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 100,
+     "rumore_3a": 12,
+     "sensibilita_3b": 11,
+     "p3c": 0,
+     "danno_3d": 0,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE1B"
+     ],
+     "grezzo": {
+      "flag": 82,
+      "integrita": 100,
+      "p3a": 12,
+      "p3b": 11,
+      "p3c": 0,
+      "p3d": 0,
+      "p54": 1,
+      "p_accel": 15,
+      "p_quota": 2,
+      "p_virata": 5,
+      "quota_max": 12000,
+      "vmax": 8000
+     },
+     "avanti_tutta_kn": 22.9,
+     "massima_kn": 25.0,
+     "virata_gradi_s": 1.8,
+     "accel_kn_s": 0.386,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 100,
+     "rumore_3a": 12,
+     "sensibilita_3b": 11,
+     "p3c": 0,
+     "danno_3d": 0,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE1C"
+     ],
+     "grezzo": {
+      "flag": 82,
+      "integrita": 100,
+      "p3a": 12,
+      "p3b": 11,
+      "p3c": 0,
+      "p3d": 9,
+      "p54": 1,
+      "p_accel": 15,
+      "p_quota": 2,
+      "p_virata": 5,
+      "quota_max": 12000,
+      "vmax": 8000
+     },
+     "avanti_tutta_kn": 22.9,
+     "massima_kn": 25.0,
+     "virata_gradi_s": 1.8,
+     "accel_kn_s": 0.386,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 100,
+     "rumore_3a": 12,
+     "sensibilita_3b": 11,
+     "p3c": 0,
+     "danno_3d": 9,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 1,
+   "nome": "MERCHANT SHIP",
+   "scene": [
+    "SCENE2A",
+    "SCENE2B",
+    "SCENE2C",
+    "SCENE3B",
+    "SCENE4A",
+    "SCENE5A",
+    "SCENE5B",
+    "SCENE5C",
+    "SCENE7A",
+    "SCENE7B",
+    "SCENE7C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE2A",
+      "SCENE2B",
+      "SCENE2C"
+     ],
+     "grezzo": {
+      "flag": 66,
+      "integrita": 50,
+      "p3a": 15,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": 0,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 8000
+     },
+     "avanti_tutta_kn": 22.9,
+     "massima_kn": 25.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 50,
+     "rumore_3a": 15,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": 0,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE7A",
+      "SCENE7B",
+      "SCENE7C"
+     ],
+     "grezzo": {
+      "flag": 74,
+      "integrita": 50,
+      "p3a": 20,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 50,
+     "rumore_3a": 20,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE5A",
+      "SCENE5C"
+     ],
+     "grezzo": {
+      "flag": 66,
+      "integrita": 50,
+      "p3a": 20,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 50,
+     "rumore_3a": 20,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE3B"
+     ],
+     "grezzo": {
+      "flag": 66,
+      "integrita": 50,
+      "p3a": 15,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 12000,
+      "vmax": 6400
+     },
+     "avanti_tutta_kn": 18.3,
+     "massima_kn": 20.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 50,
+     "rumore_3a": 15,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE5B"
+     ],
+     "grezzo": {
+      "flag": 66,
+      "integrita": 50,
+      "p3a": 20,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 12000,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 50,
+     "rumore_3a": 20,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE4A"
+     ],
+     "grezzo": {
+      "flag": 66,
+      "integrita": 50,
+      "p3a": 20,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 4800,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 600,
+     "integrita": 50,
+     "rumore_3a": 20,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    }
+   ]
+  },
+  {
+   "tipo": 2,
+   "nome": "CARGO SHIP",
+   "scene": [
+    "SCENE6A",
+    "SCENE9A",
+    "SCENE9B",
+    "SCENE9C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE9B",
+      "SCENE9C"
+     ],
+     "grezzo": {
+      "flag": 74,
+      "integrita": 75,
+      "p3a": 15,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 75,
+     "rumore_3a": 15,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE6A"
+     ],
+     "grezzo": {
+      "flag": 74,
+      "integrita": 110,
+      "p3a": 18,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": 0,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 8000
+     },
+     "avanti_tutta_kn": 22.9,
+     "massima_kn": 25.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 110,
+     "rumore_3a": 18,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": 0,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE9A"
+     ],
+     "grezzo": {
+      "flag": 74,
+      "integrita": 75,
+      "p3a": 15,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 12000,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 75,
+     "rumore_3a": 15,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    }
+   ]
+  },
+  {
+   "tipo": 5,
+   "nome": "KARA CLASS GUIDED MISSILE CRUISER",
+   "scene": [
+    "SCENE0A"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE0A"
+     ],
+     "grezzo": {
+      "flag": 18,
+      "integrita": 150,
+      "p3a": 24,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": 90,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 9600
+     },
+     "avanti_tutta_kn": 27.4,
+     "massima_kn": 30.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 150,
+     "rumore_3a": 24,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": 90,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 6,
+   "nome": "KIROV",
+   "scene": [
+    "SCENE0A",
+    "SCENE6A"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE0A"
+     ],
+     "grezzo": {
+      "flag": 18,
+      "integrita": 200,
+      "p3a": 24,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": 90,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 9600
+     },
+     "avanti_tutta_kn": 27.4,
+     "massima_kn": 30.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 200,
+     "rumore_3a": 24,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": 90,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE6A"
+     ],
+     "grezzo": {
+      "flag": 18,
+      "integrita": 200,
+      "p3a": 24,
+      "p3b": 18,
+      "p3c": 5,
+      "p3d": 90,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 9600
+     },
+     "avanti_tutta_kn": 27.4,
+     "massima_kn": 30.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 200,
+     "rumore_3a": 24,
+     "sensibilita_3b": 18,
+     "p3c": 5,
+     "danno_3d": 90,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 7,
+   "nome": "KRIVAK II",
+   "scene": [
+    "SCENE0A"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE0A"
+     ],
+     "grezzo": {
+      "flag": 18,
+      "integrita": 100,
+      "p3a": 24,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": 90,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 9600
+     },
+     "avanti_tutta_kn": 27.4,
+     "massima_kn": 30.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 100,
+     "rumore_3a": 24,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": 90,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 8,
+   "nome": "KONI CLASS FRIGATE",
+   "scene": [
+    "SCENE3B",
+    "SCENE4A"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE4A"
+     ],
+     "grezzo": {
+      "flag": 18,
+      "integrita": 50,
+      "p3a": 20,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": 5,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 4800,
+      "vmax": 8000
+     },
+     "avanti_tutta_kn": 22.9,
+     "massima_kn": 25.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 600,
+     "integrita": 50,
+     "rumore_3a": 20,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": 5,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE3B"
+     ],
+     "grezzo": {
+      "flag": 82,
+      "integrita": 50,
+      "p3a": 15,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 12000,
+      "vmax": 8000
+     },
+     "avanti_tutta_kn": 22.9,
+     "massima_kn": 25.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 50,
+     "rumore_3a": 15,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    }
+   ]
+  },
+  {
+   "tipo": 9,
+   "nome": "SLAVA CLASS CRUISER",
+   "scene": [
+    "SCENE0A",
+    "SCENE3B",
+    "SCENE6A"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE6A"
+     ],
+     "grezzo": {
+      "flag": 18,
+      "integrita": 175,
+      "p3a": 22,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": 90,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 9600
+     },
+     "avanti_tutta_kn": 27.4,
+     "massima_kn": 30.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 22,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": 90,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE0A"
+     ],
+     "grezzo": {
+      "flag": 18,
+      "integrita": 175,
+      "p3a": 24,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": 90,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 9600
+     },
+     "avanti_tutta_kn": 27.4,
+     "massima_kn": 30.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 24,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": 90,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE3B"
+     ],
+     "grezzo": {
+      "flag": 82,
+      "integrita": 175,
+      "p3a": 15,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 12000,
+      "vmax": 8000
+     },
+     "avanti_tutta_kn": 22.9,
+     "massima_kn": 25.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 175,
+     "rumore_3a": 15,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    }
+   ]
+  },
+  {
+   "tipo": 10,
+   "nome": "NIMITZ CLASS AIRCRAFT CARRIER",
+   "scene": [
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE8B",
+      "SCENE8C"
+     ],
+     "grezzo": {
+      "flag": 10,
+      "integrita": 220,
+      "p3a": 25,
+      "p3b": 4,
+      "p3c": 8,
+      "p3d": 15,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 220,
+     "rumore_3a": 25,
+     "sensibilita_3b": 4,
+     "p3c": 8,
+     "danno_3d": 15,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE8A"
+     ],
+     "grezzo": {
+      "flag": 10,
+      "integrita": 220,
+      "p3a": 25,
+      "p3b": 4,
+      "p3c": 8,
+      "p3d": 15,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 12000,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 220,
+     "rumore_3a": 25,
+     "sensibilita_3b": 4,
+     "p3c": 8,
+     "danno_3d": 15,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 11,
+   "nome": "IOWA CLASS BATTLESHIP",
+   "scene": [
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE8B",
+      "SCENE8C"
+     ],
+     "grezzo": {
+      "flag": 10,
+      "integrita": 175,
+      "p3a": 15,
+      "p3b": 8,
+      "p3c": 0,
+      "p3d": 17,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 15,
+     "sensibilita_3b": 8,
+     "p3c": 0,
+     "danno_3d": 17,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE8A"
+     ],
+     "grezzo": {
+      "flag": 10,
+      "integrita": 175,
+      "p3a": 15,
+      "p3b": 8,
+      "p3c": 0,
+      "p3d": 17,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 12000,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 175,
+     "rumore_3a": 15,
+     "sensibilita_3b": 8,
+     "p3c": 0,
+     "danno_3d": 17,
+     "schiera_trainata": false
+    }
+   ]
+  },
+  {
+   "tipo": 12,
+   "nome": "KIDD CLASS GUIDED MISSILE DESTROYER",
+   "scene": [
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE8B",
+      "SCENE8C"
+     ],
+     "grezzo": {
+      "flag": 10,
+      "integrita": 150,
+      "p3a": 15,
+      "p3b": 8,
+      "p3c": 0,
+      "p3d": 16,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 10560
+     },
+     "avanti_tutta_kn": 30.2,
+     "massima_kn": 33.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 150,
+     "rumore_3a": 15,
+     "sensibilita_3b": 8,
+     "p3c": 0,
+     "danno_3d": 16,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE8A"
+     ],
+     "grezzo": {
+      "flag": 10,
+      "integrita": 150,
+      "p3a": 15,
+      "p3b": 8,
+      "p3c": 0,
+      "p3d": 16,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 12000,
+      "vmax": 10560
+     },
+     "avanti_tutta_kn": 30.2,
+     "massima_kn": 33.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 150,
+     "rumore_3a": 15,
+     "sensibilita_3b": 8,
+     "p3c": 0,
+     "danno_3d": 16,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 13,
+   "nome": "OLIVER HAZARD PERRY CLASS FRIGATE",
+   "scene": [
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C",
+    "SCENE9A",
+    "SCENE9B",
+    "SCENE9C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE8B",
+      "SCENE8C"
+     ],
+     "grezzo": {
+      "flag": 10,
+      "integrita": 100,
+      "p3a": 15,
+      "p3b": 8,
+      "p3c": 0,
+      "p3d": 15,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 9280
+     },
+     "avanti_tutta_kn": 26.5,
+     "massima_kn": 29.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 100,
+     "rumore_3a": 15,
+     "sensibilita_3b": 8,
+     "p3c": 0,
+     "danno_3d": 15,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE8A"
+     ],
+     "grezzo": {
+      "flag": 10,
+      "integrita": 100,
+      "p3a": 15,
+      "p3b": 8,
+      "p3c": 0,
+      "p3d": 15,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 12000,
+      "vmax": 9280
+     },
+     "avanti_tutta_kn": 26.5,
+     "massima_kn": 29.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 100,
+     "rumore_3a": 15,
+     "sensibilita_3b": 8,
+     "p3c": 0,
+     "danno_3d": 15,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE9A"
+     ],
+     "grezzo": {
+      "flag": 10,
+      "integrita": 75,
+      "p3a": 15,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": 128,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 12000,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 75,
+     "rumore_3a": 15,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": 128,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE9B"
+     ],
+     "grezzo": {
+      "flag": 10,
+      "integrita": 75,
+      "p3a": 15,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": 128,
+      "p54": 1,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 75,
+     "rumore_3a": 15,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": 128,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE9C"
+     ],
+     "grezzo": {
+      "flag": 10,
+      "integrita": 75,
+      "p3a": 15,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": 15,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 75,
+     "rumore_3a": 15,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": 15,
+     "schiera_trainata": false
+    }
+   ]
+  },
+  {
+   "tipo": 14,
+   "nome": "SACRAMENTO CLASS OILER",
+   "scene": [
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE8B",
+      "SCENE8C"
+     ],
+     "grezzo": {
+      "flag": 74,
+      "integrita": 75,
+      "p3a": 22,
+      "p3b": 5,
+      "p3c": 0,
+      "p3d": 5,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 75,
+     "rumore_3a": 22,
+     "sensibilita_3b": 5,
+     "p3c": 0,
+     "danno_3d": 5,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE8A"
+     ],
+     "grezzo": {
+      "flag": 74,
+      "integrita": 75,
+      "p3a": 22,
+      "p3b": 5,
+      "p3c": 0,
+      "p3d": 5,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 12000,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1500,
+     "integrita": 75,
+     "rumore_3a": 22,
+     "sensibilita_3b": 5,
+     "p3c": 0,
+     "danno_3d": 5,
+     "schiera_trainata": false
+    }
+   ]
+  },
+  {
+   "tipo": 15,
+   "nome": "CRUISE MISSILE TARGET",
+   "scene": [
+    "SCENE0A"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE0A"
+     ],
+     "grezzo": {
+      "flag": 194,
+      "integrita": 10,
+      "p3a": 0,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 10,
+     "rumore_3a": 0,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    }
+   ]
+  },
+  {
+   "tipo": 16,
+   "nome": "TANKER",
+   "scene": [
+    "SCENE4A"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE4A"
+     ],
+     "grezzo": {
+      "flag": 82,
+      "integrita": 75,
+      "p3a": 20,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 4800,
+      "vmax": 4800
+     },
+     "avanti_tutta_kn": 13.7,
+     "massima_kn": 15.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 600,
+     "integrita": 75,
+     "rumore_3a": 20,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    }
+   ]
+  },
+  {
+   "tipo": 18,
+   "nome": "SEAHAWK-60B LAMPS III HELICOPTOR",
+   "scene": [
+    "SCENE1A",
+    "SCENE7A",
+    "SCENE7B",
+    "SCENE7C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE7B",
+      "SCENE7C"
+     ],
+     "grezzo": {
+      "flag": 19,
+      "integrita": 10,
+      "p3a": 0,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 30,
+      "p_quota": 1,
+      "p_virata": 25,
+      "quota_max": 14400,
+      "vmax": 22400
+     },
+     "avanti_tutta_kn": 64.0,
+     "massima_kn": 70.0,
+     "virata_gradi_s": 9.0,
+     "accel_kn_s": 0.771,
+     "quota_ft_s": 1.1,
+     "quota_max_ft": 1800,
+     "integrita": 10,
+     "rumore_3a": 0,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE1A"
+     ],
+     "grezzo": {
+      "flag": 19,
+      "integrita": 10,
+      "p3a": 0,
+      "p3b": 25,
+      "p3c": 245,
+      "p3d": 0,
+      "p54": 0,
+      "p_accel": 30,
+      "p_quota": 1,
+      "p_virata": 25,
+      "quota_max": 12000,
+      "vmax": 28800
+     },
+     "avanti_tutta_kn": 82.3,
+     "massima_kn": 90.0,
+     "virata_gradi_s": 9.0,
+     "accel_kn_s": 0.771,
+     "quota_ft_s": 1.1,
+     "quota_max_ft": 1500,
+     "integrita": 10,
+     "rumore_3a": 0,
+     "sensibilita_3b": 25,
+     "p3c": 245,
+     "danno_3d": 0,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE7A"
+     ],
+     "grezzo": {
+      "flag": 19,
+      "integrita": 10,
+      "p3a": 0,
+      "p3b": 55,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 30,
+      "p_quota": 1,
+      "p_virata": 25,
+      "quota_max": 14400,
+      "vmax": 22400
+     },
+     "avanti_tutta_kn": 64.0,
+     "massima_kn": 70.0,
+     "virata_gradi_s": 9.0,
+     "accel_kn_s": 0.771,
+     "quota_ft_s": 1.1,
+     "quota_max_ft": 1800,
+     "integrita": 10,
+     "rumore_3a": 0,
+     "sensibilita_3b": 55,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 20,
+   "nome": "US 688 CLASS ATTACK SUBMARINE",
+   "scene": [
+    "SCENE0A",
+    "SCENE1A",
+    "SCENE1B",
+    "SCENE1C",
+    "SCENE2A",
+    "SCENE2B",
+    "SCENE2C",
+    "SCENE4A",
+    "SCENE5A",
+    "SCENE5B",
+    "SCENE5C",
+    "SCENE6A",
+    "SCENE7A",
+    "SCENE7B",
+    "SCENE7C",
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C",
+    "SCENE9A",
+    "SCENE9B",
+    "SCENE9C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE1A",
+      "SCENE1B",
+      "SCENE1C",
+      "SCENE2A",
+      "SCENE9A",
+      "SCENE9C"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 160,
+      "p3a": 6,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 160,
+     "rumore_3a": 6,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE0A",
+      "SCENE4A",
+      "SCENE5A",
+      "SCENE5C"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 180,
+      "p3a": 10,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 180,
+     "rumore_3a": 10,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE8A",
+      "SCENE8C"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 160,
+      "p3a": 10,
+      "p3b": 20,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 160,
+     "rumore_3a": 10,
+     "sensibilita_3b": 20,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE7A",
+      "SCENE7C"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 220,
+      "p3a": 8,
+      "p3b": 24,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 220,
+     "rumore_3a": 8,
+     "sensibilita_3b": 24,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE8B"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 160,
+      "p3a": 10,
+      "p3b": 20,
+      "p3c": 0,
+      "p3d": 16,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 160,
+     "rumore_3a": 10,
+     "sensibilita_3b": 20,
+     "p3c": 0,
+     "danno_3d": 16,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE6A"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 160,
+      "p3a": 10,
+      "p3b": 22,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 160,
+     "rumore_3a": 10,
+     "sensibilita_3b": 22,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE1B"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 160,
+      "p3a": 6,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": 0,
+      "p54": 2,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 160,
+     "rumore_3a": 6,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": 0,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE5B"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 180,
+      "p3a": 10,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 180,
+     "rumore_3a": 10,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE2C"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 180,
+      "p3a": 8,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 180,
+     "rumore_3a": 8,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE2B"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 180,
+      "p3a": 8,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1800,
+     "integrita": 180,
+     "rumore_3a": 8,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE9B"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 200,
+      "p3a": 6,
+      "p3b": 22,
+      "p3c": 0,
+      "p3d": 128,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 200,
+     "rumore_3a": 6,
+     "sensibilita_3b": 22,
+     "p3c": 0,
+     "danno_3d": 128,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE7B"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 220,
+      "p3a": 8,
+      "p3b": 24,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 220,
+     "rumore_3a": 8,
+     "sensibilita_3b": 24,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 21,
+   "nome": "SOVIET ALFA CLASS ATTACK SUBMARINE",
+   "scene": [
+    "SCENE0A",
+    "SCENE1A",
+    "SCENE2A",
+    "SCENE2B",
+    "SCENE2C",
+    "SCENE3B",
+    "SCENE5A",
+    "SCENE5B",
+    "SCENE5C",
+    "SCENE6A",
+    "SCENE7A",
+    "SCENE7B",
+    "SCENE7C",
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C",
+    "SCENE9A",
+    "SCENE9B",
+    "SCENE9C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE7B",
+      "SCENE7C",
+      "SCENE8B",
+      "SCENE8C"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 12,
+      "p3b": 19,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 12,
+     "sensibilita_3b": 19,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE3B",
+      "SCENE5B",
+      "SCENE5C"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 10,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 10,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE0A",
+      "SCENE5A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 10,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 10,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE2B",
+      "SCENE2C"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 250,
+      "p3a": 10,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 250,
+     "rumore_3a": 10,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE6A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 12,
+      "p3b": 17,
+      "p3c": null,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 12,
+     "sensibilita_3b": 17,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE8A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 12,
+      "p3b": 19,
+      "p3c": 0,
+      "p3d": 16,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 12,
+     "sensibilita_3b": 19,
+     "p3c": 0,
+     "danno_3d": 16,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE7A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 12,
+      "p3b": 19,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 12,
+     "sensibilita_3b": 19,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE1A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 8,
+      "p3b": 18,
+      "p3c": 245,
+      "p3d": 0,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 8,
+     "sensibilita_3b": 18,
+     "p3c": 245,
+     "danno_3d": 0,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE9C"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 8,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 8,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE2A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 8,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 8,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE9A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 9,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": 128,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 9,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": 128,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE9B"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 9,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 9,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    }
+   ]
+  },
+  {
+   "tipo": 23,
+   "nome": "VICTOR III CLASS FAST ATTACK SUB",
+   "scene": [
+    "SCENE0A",
+    "SCENE2A",
+    "SCENE5A"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE0A",
+      "SCENE5A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 160,
+      "p3a": 10,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 160,
+     "rumore_3a": 10,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE5A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 10,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 10,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE2A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 8,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": 0,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 8,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": 0,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 25,
+   "nome": "BIOLOGICAL",
+   "scene": [
+    "SCENE0A",
+    "SCENE1A",
+    "SCENE1B",
+    "SCENE2A",
+    "SCENE2B",
+    "SCENE2C",
+    "SCENE3B",
+    "SCENE4A",
+    "SCENE5A",
+    "SCENE5B",
+    "SCENE5C",
+    "SCENE6A",
+    "SCENE7A",
+    "SCENE7B",
+    "SCENE7C",
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C",
+    "SCENE9A",
+    "SCENE9B",
+    "SCENE9C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE1A",
+      "SCENE1B",
+      "SCENE2A",
+      "SCENE4A",
+      "SCENE5A",
+      "SCENE5B"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 25,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 10,
+     "rumore_3a": 25,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE2B",
+      "SCENE3B",
+      "SCENE5A",
+      "SCENE5B",
+      "SCENE5C"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 25,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 10,
+     "rumore_3a": 25,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE7B",
+      "SCENE8B"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 25,
+      "p3b": 19,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 10,
+     "rumore_3a": 25,
+     "sensibilita_3b": 19,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE9A"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 0,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 10,
+     "rumore_3a": 0,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE9B"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 0,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 10,
+     "rumore_3a": 0,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE2C"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 25,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": 0,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 10,
+     "rumore_3a": 25,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": 0,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE9C"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 25,
+      "p3b": 0,
+      "p3c": 0,
+      "p3d": 15,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 10,
+     "rumore_3a": 25,
+     "sensibilita_3b": 0,
+     "p3c": 0,
+     "danno_3d": 15,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE0A"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 25,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": 90,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 10,
+     "rumore_3a": 25,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": 90,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE7C"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 25,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 30,
+      "p_quota": 1,
+      "p_virata": 25,
+      "quota_max": 14400,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 9.0,
+     "accel_kn_s": 0.771,
+     "quota_ft_s": 1.1,
+     "quota_max_ft": 1800,
+     "integrita": 10,
+     "rumore_3a": 25,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE8A"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 25,
+      "p3b": 20,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 10,
+     "rumore_3a": 25,
+     "sensibilita_3b": 20,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE6A"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 25,
+      "p3b": 22,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 10,
+     "rumore_3a": 25,
+     "sensibilita_3b": 22,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE7A"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 25,
+      "p3b": 24,
+      "p3c": null,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 10,
+     "rumore_3a": 25,
+     "sensibilita_3b": 24,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": false
+    },
+    {
+     "scene": [
+      "SCENE8C"
+     ],
+     "grezzo": {
+      "flag": 192,
+      "integrita": 10,
+      "p3a": 25,
+      "p3b": 8,
+      "p3c": 0,
+      "p3d": 16,
+      "p54": 0,
+      "p_accel": 2,
+      "p_quota": 2,
+      "p_virata": 4,
+      "quota_max": 14400,
+      "vmax": 320
+     },
+     "avanti_tutta_kn": 0.9,
+     "massima_kn": 1.0,
+     "virata_gradi_s": 1.44,
+     "accel_kn_s": 0.051,
+     "quota_ft_s": 2.2,
+     "quota_max_ft": 1800,
+     "integrita": 10,
+     "rumore_3a": 25,
+     "sensibilita_3b": 8,
+     "p3c": 0,
+     "danno_3d": 16,
+     "schiera_trainata": false
+    }
+   ]
+  },
+  {
+   "tipo": 28,
+   "nome": "OSCAR CLASS (SSGN) CRUISE MISSILE SUB",
+   "scene": [
+    "SCENE9A",
+    "SCENE9B",
+    "SCENE9C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE9A",
+      "SCENE9B"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 14,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": 128,
+      "p54": 3,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 14,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": 128,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE9C"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 8,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": 15,
+      "p54": 3,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 8,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": 15,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 29,
+   "nome": "AKULA CLASS FAST ATTACK",
+   "scene": [
+    "SCENE0A",
+    "SCENE5A"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE5A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 255,
+      "p3a": 10,
+      "p3b": 18,
+      "p3c": null,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 255,
+     "rumore_3a": 10,
+     "sensibilita_3b": 18,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": true
+    },
+    {
+     "scene": [
+      "SCENE0A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 255,
+      "p3a": 10,
+      "p3b": 20,
+      "p3c": null,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 25,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 16000
+     },
+     "avanti_tutta_kn": 45.7,
+     "massima_kn": 50.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.643,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 255,
+     "rumore_3a": 10,
+     "sensibilita_3b": 20,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 30,
+   "nome": "CHARLIE II CLASS GUIDED MISSILE SUB",
+   "scene": [
+    "SCENE3B"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE3B"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 10,
+      "p3b": 18,
+      "p3c": 0,
+      "p3d": null,
+      "p54": 0,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 10,
+     "sensibilita_3b": 18,
+     "p3c": 0,
+     "danno_3d": null,
+     "schiera_trainata": false
+    }
+   ]
+  },
+  {
+   "tipo": 31,
+   "nome": "TYPHOON CLASS SSBN",
+   "scene": [
+    "SCENE7A",
+    "SCENE7B",
+    "SCENE7C"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE7A",
+      "SCENE7B",
+      "SCENE7C"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 175,
+      "p3a": 14,
+      "p3b": 19,
+      "p3c": null,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 14400,
+      "vmax": 13440
+     },
+     "avanti_tutta_kn": 38.4,
+     "massima_kn": 42.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 1800,
+     "integrita": 175,
+     "rumore_3a": 14,
+     "sensibilita_3b": 19,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 33,
+   "nome": "FOXTROT CLASS DIESEL SUB",
+   "scene": [
+    "SCENE4A"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE4A"
+     ],
+     "grezzo": {
+      "flag": 17,
+      "integrita": 110,
+      "p3a": 5,
+      "p3b": 23,
+      "p3c": null,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 5,
+      "p_quota": 20,
+      "p_virata": 10,
+      "quota_max": 4800,
+      "vmax": 6400
+     },
+     "avanti_tutta_kn": 18.3,
+     "massima_kn": 20.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.129,
+     "quota_ft_s": 22.5,
+     "quota_max_ft": 600,
+     "integrita": 110,
+     "rumore_3a": 5,
+     "sensibilita_3b": 23,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": true
+    }
+   ]
+  },
+  {
+   "tipo": 34,
+   "nome": "TRAFALGAR CLASS FAST ATTACK",
+   "scene": [
+    "SCENE3B"
+   ],
+   "modelli": [
+    {
+     "scene": [
+      "SCENE3B"
+     ],
+     "grezzo": {
+      "flag": 9,
+      "integrita": 180,
+      "p3a": 8,
+      "p3b": 22,
+      "p3c": null,
+      "p3d": null,
+      "p54": 1,
+      "p_accel": 10,
+      "p_quota": 16,
+      "p_virata": 10,
+      "quota_max": 12000,
+      "vmax": 11840
+     },
+     "avanti_tutta_kn": 33.8,
+     "massima_kn": 37.0,
+     "virata_gradi_s": 3.6,
+     "accel_kn_s": 0.257,
+     "quota_ft_s": 18.0,
+     "quota_max_ft": 1500,
+     "integrita": 180,
+     "rumore_3a": 8,
+     "sensibilita_3b": 22,
+     "p3c": null,
+     "danno_3d": null,
+     "schiera_trainata": true
+    }
+   ]
+  }
+ ],
+ "armi": [
+  {
+   "indice": 0,
+   "tipo": 22,
+   "nome": "MARK 48 TORPEDO",
+   "scene": [
+    "SCENE1B",
+    "SCENE1C",
+    "SCENE2A",
+    "SCENE2C",
+    "SCENE4A",
+    "SCENE5A",
+    "SCENE5C",
+    "SCENE6A",
+    "SCENE7A",
+    "SCENE7B",
+    "SCENE7C",
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C",
+    "SCENE9A",
+    "SCENE9B",
+    "SCENE9C"
+   ],
+   "fine_corsa_tick": 140,
+   "fine_corsa_s": 280,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 13.5,
+   "eventi": [
+    {
+     "tick": 85,
+     "istruzioni": [
+      "MSG_IF_PLAYER 39"
+     ]
+    },
+    {
+     "tick": 95,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 13",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 22,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 0,
+   "tipo": 22,
+   "nome": "MARK 48 TORPEDO",
+   "scene": [
+    "SCENE2B",
+    "SCENE5B"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 11.6,
+   "eventi": [],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 22,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 0,
+   "tipo": 22,
+   "nome": "MARK 48 TORPEDO",
+   "scene": [
+    "SCENE0A"
+   ],
+   "fine_corsa_tick": 140,
+   "fine_corsa_s": 280,
+   "velocita_corsa_kn": 54.9,
+   "portata_nm": 14.8,
+   "eventi": [
+    {
+     "tick": 85,
+     "istruzioni": [
+      "MSG_IF_PLAYER 39"
+     ]
+    },
+    {
+     "tick": 95,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 13",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 22,
+    "uflag": 1,
+    "vmax": 19200
+   },
+   "avanti_tutta_kn": 54.9,
+   "massima_kn": 60.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 0,
+   "tipo": 22,
+   "nome": "MARK 48 TORPEDO",
+   "scene": [
+    "SCENE1A"
+   ],
+   "fine_corsa_tick": 140,
+   "fine_corsa_s": 280,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 13.5,
+   "eventi": [
+    {
+     "tick": 85,
+     "istruzioni": [
+      "MSG_IF_PLAYER 39"
+     ]
+    },
+    {
+     "tick": 95,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 16",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 22,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 0,
+   "tipo": 39,
+   "nome": "SPEARFISH TORPEDO",
+   "scene": [
+    "SCENE3B"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 11.6,
+   "eventi": [
+    {
+     "tick": 30,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 13",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 39,
+    "uflag": 1,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 1,
+   "tipo": 37,
+   "nome": "533 MM TORPEDO",
+   "scene": [
+    "SCENE1B",
+    "SCENE1C",
+    "SCENE2B",
+    "SCENE2C",
+    "SCENE3B",
+    "SCENE7A",
+    "SCENE7B",
+    "SCENE7C",
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 45.7,
+   "portata_nm": 10.5,
+   "eventi": [
+    {
+     "tick": 75,
+     "istruzioni": [
+      "MSG_IF_PLAYER 39"
+     ]
+    },
+    {
+     "tick": 85,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 13",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 49,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 15,
+    "p3d": 100,
+    "p4c": 1,
+    "p_accel": 40,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 37,
+    "uflag": 0,
+    "vmax": 16000
+   },
+   "avanti_tutta_kn": 45.7,
+   "massima_kn": 50.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 1.029,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 15,
+   "p3c": null,
+   "danno_3d": 100,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 1,
+   "tipo": 37,
+   "nome": "533 MM TORPEDO",
+   "scene": [
+    "SCENE0A",
+    "SCENE5A",
+    "SCENE6A",
+    "SCENE9A"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 11.6,
+   "eventi": [],
+   "grezzo": {
+    "flag": 49,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 15,
+    "p3d": 100,
+    "p4c": 1,
+    "p_accel": 40,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 37,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 1.029,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 15,
+   "p3c": null,
+   "danno_3d": 100,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 1,
+   "tipo": 37,
+   "nome": "533 MM TORPEDO",
+   "scene": [
+    "SCENE5B",
+    "SCENE5C"
+   ],
+   "fine_corsa_tick": 140,
+   "fine_corsa_s": 280,
+   "velocita_corsa_kn": 45.7,
+   "portata_nm": 12.3,
+   "eventi": [
+    {
+     "tick": 85,
+     "istruzioni": [
+      "MSG_IF_PLAYER 39"
+     ]
+    },
+    {
+     "tick": 95,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 13",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 49,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 15,
+    "p3d": 100,
+    "p4c": 1,
+    "p_accel": 40,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 37,
+    "uflag": 0,
+    "vmax": 16000
+   },
+   "avanti_tutta_kn": 45.7,
+   "massima_kn": 50.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 1.029,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 15,
+   "p3c": null,
+   "danno_3d": 100,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 1,
+   "tipo": 37,
+   "nome": "533 MM TORPEDO",
+   "scene": [
+    "SCENE9B",
+    "SCENE9C"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 11.6,
+   "eventi": [
+    {
+     "tick": 75,
+     "istruzioni": [
+      "MSG_IF_PLAYER 39"
+     ]
+    },
+    {
+     "tick": 85,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 13",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 49,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 15,
+    "p3d": 100,
+    "p4c": 1,
+    "p_accel": 40,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 37,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 1.029,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 15,
+   "p3c": null,
+   "danno_3d": 100,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 1,
+   "tipo": 37,
+   "nome": "533 MM TORPEDO",
+   "scene": [
+    "SCENE1A"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 45.7,
+   "portata_nm": 10.5,
+   "eventi": [
+    {
+     "tick": 30,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 16",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 49,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 15,
+    "p3d": 100,
+    "p4c": 1,
+    "p_accel": 40,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 37,
+    "uflag": 0,
+    "vmax": 16000
+   },
+   "avanti_tutta_kn": 45.7,
+   "massima_kn": 50.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 1.029,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 15,
+   "p3c": null,
+   "danno_3d": 100,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 1,
+   "tipo": 37,
+   "nome": "533 MM TORPEDO",
+   "scene": [
+    "SCENE2A"
+   ],
+   "fine_corsa_tick": 100,
+   "fine_corsa_s": 200,
+   "velocita_corsa_kn": 45.7,
+   "portata_nm": 8.8,
+   "eventi": [],
+   "grezzo": {
+    "flag": 49,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 15,
+    "p3d": 100,
+    "p4c": 1,
+    "p_accel": 40,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 37,
+    "uflag": 0,
+    "vmax": 16000
+   },
+   "avanti_tutta_kn": 45.7,
+   "massima_kn": 50.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 1.029,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 15,
+   "p3c": null,
+   "danno_3d": 100,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 1,
+   "tipo": 38,
+   "nome": "450 MM TORPEDO",
+   "scene": [
+    "SCENE4A"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 45.7,
+   "portata_nm": 10.5,
+   "eventi": [
+    {
+     "tick": 30,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 13",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 49,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 15,
+    "p3d": 40,
+    "p4c": 1,
+    "p_accel": 40,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 38,
+    "uflag": 0,
+    "vmax": 16000
+   },
+   "avanti_tutta_kn": 45.7,
+   "massima_kn": 50.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 1.029,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 15,
+   "p3c": null,
+   "danno_3d": 40,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 2,
+   "tipo": 22,
+   "nome": "MARK 48 TORPEDO",
+   "scene": [
+    "SCENE1B",
+    "SCENE1C",
+    "SCENE2A",
+    "SCENE2C",
+    "SCENE4A",
+    "SCENE5A",
+    "SCENE5C",
+    "SCENE6A",
+    "SCENE7A",
+    "SCENE7B",
+    "SCENE7C"
+   ],
+   "fine_corsa_tick": 140,
+   "fine_corsa_s": 280,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 13.5,
+   "eventi": [
+    {
+     "tick": 85,
+     "istruzioni": [
+      "MSG_IF_PLAYER 39"
+     ]
+    },
+    {
+     "tick": 95,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 13",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 22,
+    "uflag": 1,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 2,
+   "tipo": 39,
+   "nome": "SPEARFISH TORPEDO",
+   "scene": [
+    "SCENE8C",
+    "SCENE9B"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 39.3,
+   "portata_nm": 9.1,
+   "eventi": [
+    {
+     "tick": 10,
+     "istruzioni": [
+      "LINK 0",
+      "GOTO"
+     ]
+    },
+    {
+     "tick": 5,
+     "istruzioni": [
+      "PING",
+      "AT 5"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 40,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota": 0,
+    "quota_max": 14400,
+    "rotta_ordinata": -1,
+    "telegrafo": 200,
+    "tipo": 39,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 40,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 2,
+   "tipo": 44,
+   "nome": "MARK 50 TORPEDO",
+   "scene": [
+    "SCENE9A",
+    "SCENE9C"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 39.3,
+   "portata_nm": 9.1,
+   "eventi": [
+    {
+     "tick": 10,
+     "istruzioni": [
+      "LINK 0",
+      "GOTO"
+     ]
+    },
+    {
+     "tick": 5,
+     "istruzioni": [
+      "PING",
+      "AT 5"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 40,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota": 0,
+    "quota_max": 14400,
+    "rotta_ordinata": -1,
+    "telegrafo": 200,
+    "tipo": 44,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 40,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 2,
+   "tipo": 22,
+   "nome": "MARK 48 TORPEDO",
+   "scene": [
+    "SCENE2B",
+    "SCENE5B"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 11.6,
+   "eventi": [],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 22,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 2,
+   "tipo": 22,
+   "nome": "MARK 48 TORPEDO",
+   "scene": [
+    "SCENE0A"
+   ],
+   "fine_corsa_tick": 140,
+   "fine_corsa_s": 280,
+   "velocita_corsa_kn": 54.9,
+   "portata_nm": 14.8,
+   "eventi": [
+    {
+     "tick": 85,
+     "istruzioni": [
+      "MSG_IF_PLAYER 39"
+     ]
+    },
+    {
+     "tick": 95,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 13",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 22,
+    "uflag": 1,
+    "vmax": 19200
+   },
+   "avanti_tutta_kn": 54.9,
+   "massima_kn": 60.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 2,
+   "tipo": 22,
+   "nome": "MARK 48 TORPEDO",
+   "scene": [
+    "SCENE1A"
+   ],
+   "fine_corsa_tick": 140,
+   "fine_corsa_s": 280,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 13.5,
+   "eventi": [
+    {
+     "tick": 85,
+     "istruzioni": [
+      "MSG_IF_PLAYER 39"
+     ]
+    },
+    {
+     "tick": 95,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 16",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 22,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 2,
+   "tipo": 39,
+   "nome": "SPEARFISH TORPEDO",
+   "scene": [
+    "SCENE3B"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 11.6,
+   "eventi": [
+    {
+     "tick": 30,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 13",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 39,
+    "uflag": 1,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 2,
+   "tipo": 36,
+   "nome": "SEALANCE TORPEDO",
+   "scene": [
+    "SCENE8A"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 39.3,
+   "portata_nm": 9.1,
+   "eventi": [
+    {
+     "tick": 10,
+     "istruzioni": [
+      "LINK 0",
+      "GOTO"
+     ]
+    },
+    {
+     "tick": 5,
+     "istruzioni": [
+      "PING",
+      "AT 5"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 40,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota": 0,
+    "quota_max": 14400,
+    "rotta_ordinata": -1,
+    "telegrafo": 200,
+    "tipo": 36,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 40,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 2,
+   "tipo": 39,
+   "nome": "SPEARFISH TORPEDO",
+   "scene": [
+    "SCENE8B"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 39.3,
+   "portata_nm": 9.1,
+   "eventi": [
+    {
+     "tick": 10,
+     "istruzioni": [
+      "LINK 0",
+      "GOTO"
+     ]
+    },
+    {
+     "tick": 5,
+     "istruzioni": [
+      "PING",
+      "AT 8"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 40,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota": 0,
+    "quota_max": 14400,
+    "rotta_ordinata": -1,
+    "telegrafo": 200,
+    "tipo": 39,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 40,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 3,
+   "tipo": 22,
+   "nome": "MARK 48 TORPEDO",
+   "scene": [
+    "SCENE1B",
+    "SCENE1C",
+    "SCENE2A",
+    "SCENE2C",
+    "SCENE4A",
+    "SCENE5A",
+    "SCENE5C",
+    "SCENE6A",
+    "SCENE7A",
+    "SCENE7B",
+    "SCENE7C",
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C",
+    "SCENE9A",
+    "SCENE9B",
+    "SCENE9C"
+   ],
+   "fine_corsa_tick": 140,
+   "fine_corsa_s": 280,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 13.5,
+   "eventi": [
+    {
+     "tick": 85,
+     "istruzioni": [
+      "MSG_IF_PLAYER 39"
+     ]
+    },
+    {
+     "tick": 95,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 13",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 22,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 3,
+   "tipo": 22,
+   "nome": "MARK 48 TORPEDO",
+   "scene": [
+    "SCENE2B",
+    "SCENE5B"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 11.6,
+   "eventi": [],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 22,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 3,
+   "tipo": null,
+   "nome": "—",
+   "scene": [
+    "SCENE0A"
+   ],
+   "fine_corsa_tick": null,
+   "fine_corsa_s": null,
+   "velocita_corsa_kn": null,
+   "portata_nm": null,
+   "eventi": [],
+   "grezzo": {},
+   "avanti_tutta_kn": null,
+   "massima_kn": null,
+   "virata_gradi_s": null,
+   "accel_kn_s": null,
+   "quota_ft_s": null,
+   "quota_max_ft": null,
+   "integrita": null,
+   "rumore_3a": null,
+   "sensibilita_3b": null,
+   "p3c": null,
+   "danno_3d": null,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 3,
+   "tipo": 22,
+   "nome": "MARK 48 TORPEDO",
+   "scene": [
+    "SCENE1A"
+   ],
+   "fine_corsa_tick": 140,
+   "fine_corsa_s": 280,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 13.5,
+   "eventi": [
+    {
+     "tick": 85,
+     "istruzioni": [
+      "MSG_IF_PLAYER 39"
+     ]
+    },
+    {
+     "tick": 95,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 16",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 22,
+    "uflag": 0,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 3,
+   "tipo": 39,
+   "nome": "SPEARFISH TORPEDO",
+   "scene": [
+    "SCENE3B"
+   ],
+   "fine_corsa_tick": 120,
+   "fine_corsa_s": 240,
+   "velocita_corsa_kn": 50.3,
+   "portata_nm": 11.6,
+   "eventi": [
+    {
+     "tick": 30,
+     "istruzioni": [
+      "CANCEL",
+      "LINK 0",
+      "P_3B 13",
+      "MSG_IF_PLAYER 23",
+      "STORE"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 41,
+    "integrita": 20,
+    "nav": 1,
+    "p04": 1,
+    "p3a": 18,
+    "p3b": 17,
+    "p3d": 75,
+    "p4c": 1,
+    "p_accel": 30,
+    "p_quota": 30,
+    "p_virata": 25,
+    "quota_max": 14400,
+    "telegrafo": 256,
+    "tipo": 39,
+    "uflag": 1,
+    "vmax": 17600
+   },
+   "avanti_tutta_kn": 50.3,
+   "massima_kn": 55.0,
+   "virata_gradi_s": 9.0,
+   "accel_kn_s": 0.771,
+   "quota_ft_s": 33.8,
+   "quota_max_ft": 1800,
+   "integrita": 20,
+   "rumore_3a": 18,
+   "sensibilita_3b": 17,
+   "p3c": null,
+   "danno_3d": 75,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 4,
+   "tipo": null,
+   "nome": "—",
+   "scene": [
+    "SCENE0A",
+    "SCENE1A",
+    "SCENE1B",
+    "SCENE1C",
+    "SCENE3B",
+    "SCENE4A",
+    "SCENE5A",
+    "SCENE5B",
+    "SCENE5C",
+    "SCENE6A",
+    "SCENE7A",
+    "SCENE7B",
+    "SCENE7C"
+   ],
+   "fine_corsa_tick": null,
+   "fine_corsa_s": null,
+   "velocita_corsa_kn": null,
+   "portata_nm": null,
+   "eventi": [
+    {
+     "tick": 10,
+     "istruzioni": [
+      "ATTACK_RND 75"
+     ]
+    }
+   ],
+   "grezzo": {},
+   "avanti_tutta_kn": null,
+   "massima_kn": null,
+   "virata_gradi_s": null,
+   "accel_kn_s": null,
+   "quota_ft_s": null,
+   "quota_max_ft": null,
+   "integrita": null,
+   "rumore_3a": null,
+   "sensibilita_3b": null,
+   "p3c": null,
+   "danno_3d": null,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 4,
+   "tipo": null,
+   "nome": "—",
+   "scene": [
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C",
+    "SCENE9A",
+    "SCENE9B"
+   ],
+   "fine_corsa_tick": null,
+   "fine_corsa_s": null,
+   "velocita_corsa_kn": null,
+   "portata_nm": null,
+   "eventi": [
+    {
+     "tick": 5,
+     "istruzioni": [
+      "ATTACK_RND 75"
+     ]
+    }
+   ],
+   "grezzo": {},
+   "avanti_tutta_kn": null,
+   "massima_kn": null,
+   "virata_gradi_s": null,
+   "accel_kn_s": null,
+   "quota_ft_s": null,
+   "quota_max_ft": null,
+   "integrita": null,
+   "rumore_3a": null,
+   "sensibilita_3b": null,
+   "p3c": null,
+   "danno_3d": null,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 4,
+   "tipo": null,
+   "nome": "—",
+   "scene": [
+    "SCENE2A",
+    "SCENE2B",
+    "SCENE2C",
+    "SCENE9C"
+   ],
+   "fine_corsa_tick": null,
+   "fine_corsa_s": null,
+   "velocita_corsa_kn": null,
+   "portata_nm": null,
+   "eventi": [
+    {
+     "tick": 5,
+     "istruzioni": [
+      "ATTACK_RND 100"
+     ]
+    }
+   ],
+   "grezzo": {},
+   "avanti_tutta_kn": null,
+   "massima_kn": null,
+   "virata_gradi_s": null,
+   "accel_kn_s": null,
+   "quota_ft_s": null,
+   "quota_max_ft": null,
+   "integrita": null,
+   "rumore_3a": null,
+   "sensibilita_3b": null,
+   "p3c": null,
+   "danno_3d": null,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 5,
+   "tipo": null,
+   "nome": "—",
+   "scene": [
+    "SCENE0A",
+    "SCENE1A",
+    "SCENE1B",
+    "SCENE1C",
+    "SCENE2A",
+    "SCENE2B",
+    "SCENE2C",
+    "SCENE3B",
+    "SCENE5A",
+    "SCENE5B",
+    "SCENE5C",
+    "SCENE6A",
+    "SCENE8A",
+    "SCENE8B",
+    "SCENE8C",
+    "SCENE9A",
+    "SCENE9B"
+   ],
+   "fine_corsa_tick": null,
+   "fine_corsa_s": null,
+   "velocita_corsa_kn": 0.9,
+   "portata_nm": null,
+   "eventi": [
+    {
+     "tick": 1,
+     "istruzioni": [
+      "P_3A 40",
+      "STORE",
+      "RETARGET"
+     ]
+    },
+    {
+     "tick": 80,
+     "istruzioni": [
+      "MSG_IF_PLAYER 44",
+      "SELECT_LAST"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 193,
+    "integrita": 2,
+    "nav": 0,
+    "p04": 1,
+    "p3a": 0,
+    "p4c": 1,
+    "uflag": 0,
+    "velocita": 320,
+    "vmax": 320
+   },
+   "avanti_tutta_kn": 0.9,
+   "massima_kn": 1.0,
+   "virata_gradi_s": null,
+   "accel_kn_s": null,
+   "quota_ft_s": null,
+   "quota_max_ft": null,
+   "integrita": 2,
+   "rumore_3a": 0,
+   "sensibilita_3b": null,
+   "p3c": null,
+   "danno_3d": null,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 5,
+   "tipo": null,
+   "nome": "—",
+   "scene": [
+    "SCENE4A",
+    "SCENE7A",
+    "SCENE7B",
+    "SCENE7C"
+   ],
+   "fine_corsa_tick": null,
+   "fine_corsa_s": null,
+   "velocita_corsa_kn": 0.9,
+   "portata_nm": null,
+   "eventi": [
+    {
+     "tick": 1,
+     "istruzioni": [
+      "P_3A 40",
+      "STORE",
+      "RETARGET"
+     ]
+    },
+    {
+     "tick": 30,
+     "istruzioni": [
+      "MSG_IF_PLAYER 44",
+      "SELECT_LAST"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 193,
+    "integrita": 2,
+    "nav": 0,
+    "p04": 1,
+    "p3a": 0,
+    "p4c": 1,
+    "uflag": 0,
+    "velocita": 320,
+    "vmax": 320
+   },
+   "avanti_tutta_kn": 0.9,
+   "massima_kn": 1.0,
+   "virata_gradi_s": null,
+   "accel_kn_s": null,
+   "quota_ft_s": null,
+   "quota_max_ft": null,
+   "integrita": 2,
+   "rumore_3a": 0,
+   "sensibilita_3b": null,
+   "p3c": null,
+   "danno_3d": null,
+   "schiera_trainata": false
+  },
+  {
+   "indice": 5,
+   "tipo": 26,
+   "nome": "US 688 CLASS ATTACK SUBMARINE",
+   "scene": [
+    "SCENE9C"
+   ],
+   "fine_corsa_tick": null,
+   "fine_corsa_s": null,
+   "velocita_corsa_kn": 0.9,
+   "portata_nm": null,
+   "eventi": [
+    {
+     "tick": 1,
+     "istruzioni": [
+      "P_3A 40",
+      "STORE",
+      "RETARGET"
+     ]
+    },
+    {
+     "tick": 80,
+     "istruzioni": [
+      "MSG_IF_PLAYER 44",
+      "SELECT_LAST"
+     ]
+    }
+   ],
+   "grezzo": {
+    "flag": 193,
+    "integrita": 2,
+    "nav": 0,
+    "p04": 1,
+    "p3a": 0,
+    "p4c": 1,
+    "tipo": 26,
+    "uflag": 0,
+    "velocita": 320,
+    "vmax": 320
+   },
+   "avanti_tutta_kn": 0.9,
+   "massima_kn": 1.0,
+   "virata_gradi_s": null,
+   "accel_kn_s": null,
+   "quota_ft_s": null,
+   "quota_max_ft": null,
+   "integrita": 2,
+   "rumore_3a": 0,
+   "sensibilita_3b": null,
+   "p3c": null,
+   "danno_3d": null,
+   "schiera_trainata": false
+  }
+ ]
+}

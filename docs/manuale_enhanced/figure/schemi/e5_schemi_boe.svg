@@ -1,0 +1,86 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='440' viewBox='0 0 760 440' font-family='DejaVu Sans, Helvetica, Arial, sans-serif' role='img' aria-label='Sei schemi di posa delle boe, coi punti del gioco: barriera, chevron, cerchio, cuneo, trappola e barriera circolare'>
+<title>Sei schemi di posa delle boe, coi punti del gioco: barriera, chevron, cerchio, cuneo, trappola e barriera circolare</title>
+<rect width='760' height='440' fill='#fcfcfb'/>
+<text x='36.0' y='26.0' font-size='16' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Gli schemi di posa delle boe</text>
+<text x='36.0' y='46.0' font-size='12' fill='#52514e' text-anchor='start'>Datum al centro, rotta stimata 090 a 8 nodi, datum vecchio di 15 minuti, portata della boa 7,4 km (posa_schema).</text>
+<rect x='36' y='62' width='224' height='176' fill='none' stroke='#e1e0d9'/>
+<text x='44.0' y='79.0' font-size='12' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Barriera</text>
+<path d='M148.0,104.0 L148.0,127.6 L148.0,151.2 L148.0,174.8 L148.0,198.4 L148.0,222.0' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<circle cx='148.0' cy='104.0' r='3.5' fill='#2a78d6'/>
+<circle cx='148.0' cy='127.6' r='3.5' fill='#2a78d6'/>
+<circle cx='148.0' cy='151.2' r='3.5' fill='#2a78d6'/>
+<circle cx='148.0' cy='174.8' r='3.5' fill='#2a78d6'/>
+<circle cx='148.0' cy='198.4' r='3.5' fill='#2a78d6'/>
+<circle cx='148.0' cy='222.0' r='3.5' fill='#2a78d6'/>
+<path d='M143.0,163.0 L153.0,163.0 M148.0,158.0 L148.0,168.0' stroke='#eb6834' stroke-width='2'/>
+<path d='M148.0,163.0 L174.0,163.0' fill='none' stroke='#eb6834' stroke-width='1.5' stroke-linejoin='round'/>
+<path d='M174.0,163.0 l-6,-3 l0,6 Z' fill='#eb6834'/>
+<text x='252.0' y='79.0' font-size='11' fill='#52514e' text-anchor='end'>65 km</text>
+<rect x='268' y='62' width='224' height='176' fill='none' stroke='#e1e0d9'/>
+<text x='276.0' y='79.0' font-size='12' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Chevron</text>
+<path d='M407.8,149.9 L423.4,136.8 L439.0,123.7 L407.8,176.1 L423.4,189.2 L439.0,202.3' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<circle cx='407.8' cy='149.9' r='3.5' fill='#2a78d6'/>
+<circle cx='423.4' cy='136.8' r='3.5' fill='#2a78d6'/>
+<circle cx='439.0' cy='123.7' r='3.5' fill='#2a78d6'/>
+<circle cx='407.8' cy='176.1' r='3.5' fill='#2a78d6'/>
+<circle cx='423.4' cy='189.2' r='3.5' fill='#2a78d6'/>
+<circle cx='439.0' cy='202.3' r='3.5' fill='#2a78d6'/>
+<path d='M375.0,163.0 L385.0,163.0 M380.0,158.0 L380.0,168.0' stroke='#eb6834' stroke-width='2'/>
+<path d='M380.0,163.0 L406.0,163.0' fill='none' stroke='#eb6834' stroke-width='1.5' stroke-linejoin='round'/>
+<path d='M406.0,163.0 l-6,-3 l0,6 Z' fill='#eb6834'/>
+<text x='484.0' y='79.0' font-size='11' fill='#52514e' text-anchor='end'>54 km</text>
+<rect x='500' y='62' width='224' height='176' fill='none' stroke='#e1e0d9'/>
+<text x='508.0' y='79.0' font-size='12' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Cerchio</text>
+<path d='M671.0,163.0 L653.7,204.7 L612.0,222.0 L570.3,204.7 L553.0,163.0 L570.3,121.3 L612.0,104.0 L653.7,121.3 L612.0,163.0' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<circle cx='671.0' cy='163.0' r='3.5' fill='#2a78d6'/>
+<circle cx='653.7' cy='204.7' r='3.5' fill='#2a78d6'/>
+<circle cx='612.0' cy='222.0' r='3.5' fill='#2a78d6'/>
+<circle cx='570.3' cy='204.7' r='3.5' fill='#2a78d6'/>
+<circle cx='553.0' cy='163.0' r='3.5' fill='#2a78d6'/>
+<circle cx='570.3' cy='121.3' r='3.5' fill='#2a78d6'/>
+<circle cx='612.0' cy='104.0' r='3.5' fill='#2a78d6'/>
+<circle cx='653.7' cy='121.3' r='3.5' fill='#2a78d6'/>
+<circle cx='612.0' cy='163.0' r='3.5' fill='#2a78d6'/>
+<path d='M607.0,163.0 L617.0,163.0 M612.0,158.0 L612.0,168.0' stroke='#eb6834' stroke-width='2'/>
+<path d='M612.0,163.0 L638.0,163.0' fill='none' stroke='#eb6834' stroke-width='1.5' stroke-linejoin='round'/>
+<path d='M638.0,163.0 l-6,-3 l0,6 Z' fill='#eb6834'/>
+<text x='716.0' y='79.0' font-size='11' fill='#52514e' text-anchor='end'>8 km</text>
+<rect x='36' y='248' width='224' height='176' fill='none' stroke='#e1e0d9'/>
+<text x='44.0' y='265.0' font-size='12' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Cuneo</text>
+<path d='M172.0,330.6 L172.0,367.4 L195.9,312.2 L207.0,335.9 L207.0,362.1 L195.9,385.8' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<circle cx='172.0' cy='330.6' r='3.5' fill='#2a78d6'/>
+<circle cx='172.0' cy='367.4' r='3.5' fill='#2a78d6'/>
+<circle cx='195.9' cy='312.2' r='3.5' fill='#2a78d6'/>
+<circle cx='207.0' cy='335.9' r='3.5' fill='#2a78d6'/>
+<circle cx='207.0' cy='362.1' r='3.5' fill='#2a78d6'/>
+<circle cx='195.9' cy='385.8' r='3.5' fill='#2a78d6'/>
+<path d='M143.0,349.0 L153.0,349.0 M148.0,344.0 L148.0,354.0' stroke='#eb6834' stroke-width='2'/>
+<path d='M148.0,349.0 L174.0,349.0' fill='none' stroke='#eb6834' stroke-width='1.5' stroke-linejoin='round'/>
+<path d='M174.0,349.0 l-6,-3 l0,6 Z' fill='#eb6834'/>
+<text x='252.0' y='265.0' font-size='11' fill='#52514e' text-anchor='end'>14 km</text>
+<rect x='268' y='248' width='224' height='176' fill='none' stroke='#e1e0d9'/>
+<text x='276.0' y='265.0' font-size='12' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Trappola</text>
+<path d='M432.4,290.0 L432.4,329.3 L432.4,368.7 L432.4,408.0' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<circle cx='432.4' cy='290.0' r='3.5' fill='#2a78d6'/>
+<circle cx='432.4' cy='329.3' r='3.5' fill='#2a78d6'/>
+<circle cx='432.4' cy='368.7' r='3.5' fill='#2a78d6'/>
+<circle cx='432.4' cy='408.0' r='3.5' fill='#2a78d6'/>
+<path d='M375.0,349.0 L385.0,349.0 M380.0,344.0 L380.0,354.0' stroke='#eb6834' stroke-width='2'/>
+<path d='M380.0,349.0 L406.0,349.0' fill='none' stroke='#eb6834' stroke-width='1.5' stroke-linejoin='round'/>
+<path d='M406.0,349.0 l-6,-3 l0,6 Z' fill='#eb6834'/>
+<text x='484.0' y='265.0' font-size='11' fill='#52514e' text-anchor='end'>33 km</text>
+<rect x='500' y='248' width='224' height='176' fill='none' stroke='#e1e0d9'/>
+<text x='508.0' y='265.0' font-size='12' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Barriera circolare (URSS)</text>
+<path d='M671.0,349.0 L648.8,395.1 L598.9,406.5 L558.8,374.6 L558.8,323.4 L598.9,291.5 L648.8,302.9' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<circle cx='671.0' cy='349.0' r='3.5' fill='#2a78d6'/>
+<circle cx='648.8' cy='395.1' r='3.5' fill='#2a78d6'/>
+<circle cx='598.9' cy='406.5' r='3.5' fill='#2a78d6'/>
+<circle cx='558.8' cy='374.6' r='3.5' fill='#2a78d6'/>
+<circle cx='558.8' cy='323.4' r='3.5' fill='#2a78d6'/>
+<circle cx='598.9' cy='291.5' r='3.5' fill='#2a78d6'/>
+<circle cx='648.8' cy='302.9' r='3.5' fill='#2a78d6'/>
+<path d='M607.0,349.0 L617.0,349.0 M612.0,344.0 L612.0,354.0' stroke='#eb6834' stroke-width='2'/>
+<path d='M612.0,349.0 L638.0,349.0' fill='none' stroke='#eb6834' stroke-width='1.5' stroke-linejoin='round'/>
+<path d='M638.0,349.0 l-6,-3 l0,6 Z' fill='#eb6834'/>
+<text x='716.0' y='265.0' font-size='11' fill='#52514e' text-anchor='end'>11 km</text>
+</svg>

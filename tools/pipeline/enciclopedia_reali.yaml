@@ -1,0 +1,162 @@
+# Valori storici reali per l'enciclopedia, da affiancare ai valori di gioco di data/motore/classi.toml.
+# Fonti: SOLO i dossier del progetto in docs/ricerca/ (01, 05, 17). Nessun valore inventato:
+# se un dato manca nei dossier il campo e' omesso (classe vuota = nessun dato).
+# Campi: lunghezza_m, larghezza_m (per i velivoli: apertura alare), velocita_max_nodi
+# (sottomarini: in immersione), pescaggio_m (solo navi e sottomarini).
+# Ogni campo: {valore, fonte, conf: alta|media|bassa, nota opzionale}.
+
+# --- Navi di superficie USA (dossier 01 §4.1) ---
+perry:
+  lunghezza_m: {valore: 135.6, fonte: 'dossier 01 §4.1', conf: media, nota: '135,6 m (138,1 m long hull)'}
+  larghezza_m: {valore: 13.7, fonte: 'dossier 01 §4.1', conf: media}
+  velocita_max_nodi: {valore: 29, fonte: 'dossier 01 §4.1', conf: media}
+kidd:
+  lunghezza_m: {valore: 171.6, fonte: 'dossier 01 §4.1', conf: media}
+  larghezza_m: {valore: 16.8, fonte: 'dossier 01 §4.1', conf: media}
+  velocita_max_nodi: {valore: 33, fonte: 'dossier 01 §4.1', conf: media}
+spruance: {}  # nessuna dimensione ne' velocita' massima nei dossier
+iowa:
+  lunghezza_m: {valore: 270.4, fonte: 'dossier 01 §4.1', conf: media}
+  larghezza_m: {valore: 33.0, fonte: 'dossier 01 §4.1', conf: media}
+  velocita_max_nodi: {valore: 33, fonte: 'dossier 01 §4.1', conf: media, nota: '33 kn (progetto)'}
+nimitz:
+  lunghezza_m: {valore: 332.8, fonte: 'dossier 01 §4.1', conf: media}
+  larghezza_m: {valore: 40.8, fonte: 'dossier 01 §4.1', conf: media, nota: 'scafo; ponte di volo 76,8 m'}
+  velocita_max_nodi: {valore: 30, fonte: 'dossier 01 §4.1', conf: media, nota: '30+ kn'}
+sacramento:
+  lunghezza_m: {valore: 241.0, fonte: 'dossier 01 §4.1', conf: media}
+  larghezza_m: {valore: 33.0, fonte: 'dossier 01 §4.1', conf: media}
+  velocita_max_nodi: {valore: 26, fonte: 'dossier 01 §4.1', conf: media}
+
+# --- Navi di superficie URSS (dossier 01 §4.2) ---
+krivak2:
+  lunghezza_m: {valore: 123.5, fonte: 'dossier 01 §4.2 [WPKrivak]', conf: media}
+  larghezza_m: {valore: 14.1, fonte: 'dossier 01 §4.2 [WPKrivak]', conf: media}
+  pescaggio_m: {valore: 4.6, fonte: 'dossier 01 §4.2 [WPKrivak]', conf: media}
+  velocita_max_nodi: {valore: 32, fonte: 'dossier 01 §4.2 [WPKrivak]', conf: media}
+kara:
+  lunghezza_m: {valore: 173.2, fonte: 'dossier 01 §4.2 [WPKara]', conf: alta}
+  larghezza_m: {valore: 18.6, fonte: 'dossier 01 §4.2 [WPKara]', conf: alta}
+  pescaggio_m: {valore: 6.7, fonte: 'dossier 01 §4.2 [WPKara]', conf: alta}
+  velocita_max_nodi: {valore: 34, fonte: 'dossier 01 §4.2 [WPKara]', conf: alta}
+kirov:
+  lunghezza_m: {valore: 252.0, fonte: 'dossier 01 §4.2 [WPKirov]', conf: media, nota: '~252 m'}
+  larghezza_m: {valore: 28.5, fonte: 'dossier 01 §4.2 [WPKirov]', conf: media}
+  pescaggio_m: {valore: 9.1, fonte: 'dossier 01 §4.2 [WPKirov]', conf: media}
+  velocita_max_nodi: {valore: 32, fonte: 'dossier 01 §4.2 [WPKirov]', conf: bassa, nota: '32 kn n.v.'}
+slava:
+  lunghezza_m: {valore: 186.4, fonte: 'dossier 01 §4.2 [WPSlava]', conf: media}
+  larghezza_m: {valore: 20.8, fonte: 'dossier 01 §4.2 [WPSlava]', conf: media}
+  pescaggio_m: {valore: 8.4, fonte: 'dossier 01 §4.2 [WPSlava]', conf: media}
+  velocita_max_nodi: {valore: 32, fonte: 'dossier 01 §4.2 [WPSlava]', conf: media}
+koni:
+  lunghezza_m: {valore: 95.0, fonte: 'dossier 01 §4.2 [WPKoni]', conf: media}
+  larghezza_m: {valore: 12.8, fonte: 'dossier 01 §4.2 [WPKoni]', conf: media}
+  pescaggio_m: {valore: 5.0, fonte: 'dossier 01 §4.2 [WPKoni]', conf: media}
+  velocita_max_nodi: {valore: 27, fonte: 'dossier 01 §4.2 [WPKoni]', conf: media}
+nanuchka:
+  lunghezza_m: {valore: 59.3, fonte: 'dossier 01 §4.2 [WPNanu]', conf: media}
+  larghezza_m: {valore: 12.6, fonte: 'dossier 01 §4.2 [WPNanu]', conf: media}
+  pescaggio_m: {valore: 2.7, fonte: 'dossier 01 §4.2 [WPNanu]', conf: media}
+  velocita_max_nodi: {valore: 35, fonte: 'dossier 01 §4.2 [WPNanu]', conf: media, nota: '32-35 kn (tabella 8.2: 32)'}
+
+# --- Mercantili (dossier 01 §4.4: solo valori generici di velocita') ---
+petroliera:
+  velocita_max_nodi: {valore: 16, fonte: 'dossier 01 §4.4', conf: bassa, nota: 'petroliera generica 13-16 kn'}
+mercantile:
+  velocita_max_nodi: {valore: 18, fonte: 'dossier 01 §4.4', conf: bassa, nota: 'mercantile cargo generico 14-18 kn'}
+cargo:
+  velocita_max_nodi: {valore: 18, fonte: 'dossier 01 §4.4', conf: bassa, nota: 'mercantile cargo generico 14-18 kn, non specifico del portacontainer'}
+
+# --- Missili e bersagli (dossier 05, 01 §6.4) ---
+tomahawk:
+  lunghezza_m: {valore: 6.25, fonte: 'dossier 05 §6.1', conf: media, nota: 'fusoliera con booster'}
+  velocita_max_nodi: {valore: 476, fonte: 'dossier 05 §0 Convenzioni [WPTom]', conf: media, nota: '~245 m/s (Mach 0,74), convertito in kn'}
+harpoon:
+  lunghezza_m: {valore: 3.8, fonte: 'dossier 05 §6.1', conf: media}
+  velocita_max_nodi: {valore: 467, fonte: 'dossier 05 §0 Convenzioni', conf: media, nota: '~240 m/s (Mach 0,71 WP; Mach 0,85 designation-systems e dossier 01 §6.4), convertito in kn'}
+p700:
+  lunghezza_m: {valore: 10.0, fonte: 'dossier 05 §6.1', conf: bassa, nota: '"grandi missili (10 m)", valore indicativo comune a Granit e Malakhit'}
+  velocita_max_nodi: {valore: 1434, fonte: 'dossier 01 §6.4 [WPGranit]', conf: bassa, nota: 'Mach 2,5 in quota (~1434 kn con 295 m/s), Mach 1,6 a bassa quota (~1058 kn con 340 m/s); conversione da Mach'}
+bqm74: {}  # nel dossier 11 solo l'assenza di radar proprio, nessuna dimensione o velocita'
+
+# --- Aerei ed elicotteri ASW (dossier 01 §5, 17 §1-3) ---
+p3c:
+  velocita_max_nodi: {valore: 411, fonte: 'dossier 01 §5.5 [FASP3]', conf: alta, nota: 'crociera 328-330 kn'}
+il38:
+  velocita_max_nodi: {valore: 351, fonte: 'dossier 01 §5.6 [RWIl38]', conf: media, nota: 'max 650 km/h, convertito /1,852; crociera 456 km/h (dossier 17 §3.4)'}
+tu142: {}  # dossier 17 §3.5 da' solo la crociera (M 0,68 ~ 735 km/h ~ 397 kn), non la massima
+sh60b:
+  velocita_max_nodi: {valore: 146, fonte: 'dossier 01 §5.3 [WPSH60]', conf: media, nota: 'FAS: dash 160 kn, 126 kn al livello del mare (incoerente)'}
+ka25:
+  velocita_max_nodi: {valore: 119, fonte: 'dossier 01 §5.1 [RWKa25]', conf: alta, nota: 'max 220 km/h, convertito /1,852'}
+s3a: {}  # dossier 17 §2.5: solo transito ~345 kt a 36 000 ft, non la massima
+s3b: {}  # come s3a
+sh3h:
+  velocita_max_nodi: {valore: 122, fonte: 'dossier 17 §1 e §2.2 [RUDZIS]', conf: alta, nota: '122 KTAS a 20 800 lb; dossier 01 §5.4 dava 144 kn (dati SH-3D)'}
+sh60f: {}  # dossier 17 §2.3: nessuna dimensione ne' velocita'
+ka27:
+  velocita_max_nodi: {valore: 157, fonte: 'dossier 01 §5.2 [RWKa27]', conf: media, nota: 'max 291 km/h, convertito /1,852'}
+be12: {}  # dossier 17 §3.3: solo crociera 450 km/h (~243 kn), non la massima
+
+# --- Sottomarini (dossier 01 §2; velocita' massima in immersione) ---
+los_angeles:
+  lunghezza_m: {valore: 109.7, fonte: 'dossier 01 §2.1 [FAS688]', conf: alta}
+  larghezza_m: {valore: 10.1, fonte: 'dossier 01 §2.1 [FAS688]', conf: alta}
+  pescaggio_m: {valore: 9.4, fonte: 'dossier 01 §2.1 [FAS688]', conf: alta}
+  velocita_max_nodi: {valore: 32, fonte: 'dossier 01 §2.1 [FAS688]', conf: media, nota: '30-32 kn (FAS); ufficiale "25+ kn", stime fino a 33+'}
+victor3:
+  lunghezza_m: {valore: 107.1, fonte: 'dossier 01 §2.5 [WPVictor]', conf: media, nota: '106-107,1 m'}
+  larghezza_m: {valore: 10.6, fonte: 'dossier 01 §2.5 [WPVictor]', conf: media}
+  pescaggio_m: {valore: 7.0, fonte: 'dossier 01 §2.5 [WPVictor]', conf: media}
+  velocita_max_nodi: {valore: 31, fonte: 'dossier 01 §2.5 [RW671]', conf: media, nota: '30-31 kn in immersione'}
+kilo:
+  lunghezza_m: {valore: 72.6, fonte: 'dossier 01 §2.10 [WPKilo]', conf: alta}
+  larghezza_m: {valore: 9.9, fonte: 'dossier 01 §2.10 [WPKilo]', conf: alta}
+  pescaggio_m: {valore: 6.2, fonte: 'dossier 01 §2.10 [WPKilo]', conf: alta}
+  velocita_max_nodi: {valore: 20, fonte: 'dossier 01 §2.10 [WPKilo]', conf: alta, nota: '20 kn in immersione; 17 in emersione, 10 a snorkel'}
+alfa:
+  lunghezza_m: {valore: 81.4, fonte: 'dossier 01 §2.4 [DS705]', conf: media}
+  larghezza_m: {valore: 10.0, fonte: 'dossier 01 §2.4 [DS705]', conf: media}
+  pescaggio_m: {valore: 7.6, fonte: 'dossier 01 §2.4 [DS705]', conf: media}
+  velocita_max_nodi: {valore: 41, fonte: 'dossier 01 §2.4 [WPAlfa]', conf: alta, nota: '41 kn in servizio (41,2); picchi di prova ~43-44'}
+akula:
+  lunghezza_m: {valore: 110.3, fonte: 'dossier 01 §2.6 [WPAkula]', conf: media}
+  larghezza_m: {valore: 13.6, fonte: 'dossier 01 §2.6 [WPAkula]', conf: media}
+  pescaggio_m: {valore: 9.7, fonte: 'dossier 01 §2.6 [WPAkula]', conf: media}
+  velocita_max_nodi: {valore: 33, fonte: 'dossier 01 §2.6 [RN971]', conf: media, nota: 'alcune schede 30-35 kn'}
+oscar:
+  lunghezza_m: {valore: 154.0, fonte: 'dossier 01 §2.7 [WPOscar]', conf: alta, nota: '~154 m (949A, Oscar II); ~143 m (949, Oscar I)'}
+  larghezza_m: {valore: 18.2, fonte: 'dossier 01 §2.7 [WPOscar]', conf: alta}
+  velocita_max_nodi: {valore: 32, fonte: 'dossier 01 §2.7 [WPOscar]', conf: media}
+charlie2:
+  lunghezza_m: {valore: 104.5, fonte: 'dossier 01 §2.8 [WPCharlie]', conf: media, nota: '103-104,5 m'}
+  larghezza_m: {valore: 10.0, fonte: 'dossier 01 §2.8 [WPCharlie]', conf: media}
+  velocita_max_nodi: {valore: 24, fonte: 'dossier 01 §2.8 [WPCharlie]', conf: media}
+typhoon:
+  lunghezza_m: {valore: 175.0, fonte: 'dossier 01 §2.9 [WPTyphoon]', conf: alta}
+  larghezza_m: {valore: 23.0, fonte: 'dossier 01 §2.9 [WPTyphoon]', conf: alta}
+  pescaggio_m: {valore: 12.0, fonte: 'dossier 01 §2.9 [WPTyphoon]', conf: alta}
+  velocita_max_nodi: {valore: 27, fonte: 'dossier 01 §2.9 [WPTyphoon]', conf: media, nota: '25-27 kn (testo WP: 28)'}
+foxtrot:
+  lunghezza_m: {valore: 89.9, fonte: 'dossier 01 §2.11 [WPFoxtrot]', conf: alta}
+  larghezza_m: {valore: 7.4, fonte: 'dossier 01 §2.11 [WPFoxtrot]', conf: alta}
+  pescaggio_m: {valore: 5.9, fonte: 'dossier 01 §2.11 [WPFoxtrot]', conf: alta}
+  velocita_max_nodi: {valore: 15, fonte: 'dossier 01 §2.11 [WPFoxtrot]', conf: alta, nota: '15 kn in immersione; 16 in emersione, 9 a snorkel'}
+sturgeon:
+  lunghezza_m: {valore: 89.1, fonte: 'dossier 01 §2.2 [WPSturgeon]', conf: alta, nota: '89,1 m scafo corto; 92,1 m scafo lungo (da SSN-678)'}
+  larghezza_m: {valore: 9.65, fonte: 'dossier 01 §2.2 [WPSturgeon]', conf: alta}
+  pescaggio_m: {valore: 7.44, fonte: 'dossier 01 §2.2 [WPSturgeon]', conf: alta}
+  velocita_max_nodi: {valore: 26, fonte: 'dossier 01 §2.2 [WPSturgeon]', conf: media, nota: '26 kn in immersione; 15 in emersione'}
+trafalgar:
+  lunghezza_m: {valore: 85.4, fonte: 'dossier 01 §2.3 [WPTraf]', conf: alta}
+  larghezza_m: {valore: 9.8, fonte: 'dossier 01 §2.3 [WPTraf]', conf: alta}
+  pescaggio_m: {valore: 9.5, fonte: 'dossier 01 §2.3 [WPTraf]', conf: alta}
+  velocita_max_nodi: {valore: 32, fonte: 'dossier 01 §2.3 [WPTraf]', conf: media, nota: '"oltre 30 kn" (32 comunemente)'}
+
+# Armi: il dato vero del 1989 dove il carico dell'Enhanced semplifica (chiave = id della voce)
+missile.vyuga:
+  testata: {testo_it: 'nucleare', testo_en: 'nuclear', fonte: 'dossier 05 §0.1 punto 7 e §3.1 [RWVyuga]', conf: media,
+            nota: 'nel gioco la carica di profondità convenzionale del carico (dossier 14 §2.11) è una semplificazione',
+            gioco_it: 'nel gioco: carica di profondità convenzionale (semplificazione del carico)',
+            gioco_en: 'in the game: conventional depth charge (a simplification of the load)'}

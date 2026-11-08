@@ -1,0 +1,953 @@
+# Achievement del remake (generato da tools/pipeline/achievement.py: non modificare a mano).
+
+[achievement.primo_sangue]
+nome_it = "Primo sangue"
+nome_en = "First blood"
+descrizione_it = "Affondare un'unita' ostile"
+descrizione_en = "Sink a hostile unit"
+categoria = "tattico"
+ambito = "missione"
+misura = "affondati_ostili"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "primo_sangue"
+nascosto = false
+
+[achievement.cacciatore]
+nome_it = "Cacciatore di sottomarini"
+nome_en = "Submarine hunter"
+descrizione_it = "Sottomarini ostili affondati"
+descrizione_en = "Hostile submarines sunk"
+categoria = "tattico"
+ambito = "somma"
+misura = "sottomarini_affondati"
+livelli = [1, 5, 20]
+condizioni = []
+distinti = ""
+icona = "cacciatore"
+nascosto = false
+
+[achievement.flotta]
+nome_it = "Contro la flotta"
+nome_en = "Against the fleet"
+descrizione_it = "Navi ostili affondate"
+descrizione_en = "Hostile ships sunk"
+categoria = "tattico"
+ambito = "somma"
+misura = "navi_affondate"
+livelli = [3, 15, 50]
+condizioni = []
+distinti = ""
+icona = "flotta"
+nascosto = false
+
+[achievement.un_colpo]
+nome_it = "Un siluro, un bersaglio"
+nome_en = "One fish, one target"
+descrizione_it = "Tutti i lanci di una missione a segno"
+descrizione_en = "Every launch of a patrol on target"
+categoria = "tattico"
+ambito = "missione"
+misura = "tutti_a_segno"
+livelli = [3, 5, 8]
+condizioni = []
+distinti = ""
+icona = "un_colpo"
+nascosto = false
+
+[achievement.doppietta]
+nome_it = "Doppietta"
+nome_en = "Double"
+descrizione_it = "Due unita' ostili affondate in un minuto"
+descrizione_en = "Two hostile units sunk within a minute"
+categoria = "tattico"
+ambito = "missione"
+misura = "doppietta"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "doppietta"
+nascosto = false
+
+[achievement.elusione]
+nome_it = "Elusione"
+nome_en = "Evasion"
+descrizione_it = "Siluri evitati senza colpi subiti"
+descrizione_en = "Torpedoes evaded without being hit"
+categoria = "tattico"
+ambito = "missione"
+misura = "siluri_evitati"
+livelli = [1, 3, 5]
+condizioni = [["colpi_subiti", "==", 0]]
+distinti = ""
+icona = "elusione"
+nascosto = false
+
+[achievement.completa]
+nome_it = "Missione compiuta"
+nome_en = "Mission accomplished"
+descrizione_it = "Tutti gli obiettivi contro un avversario regolare, veterano o d'elite"
+descrizione_en = "Every objective against a regular, veteran or elite opponent"
+categoria = "tattico"
+ambito = "missione"
+misura = "avversario"
+livelli = [1, 2, 3]
+condizioni = [["completezza", ">=", 1]]
+distinti = ""
+icona = "completa"
+nascosto = false
+
+[achievement.posa]
+nome_it = "Posa di precisione"
+nome_en = "Precision lay"
+descrizione_it = "Almeno quattro mine posate, nessuna inerte"
+descrizione_en = "At least four mines laid, none inert"
+categoria = "tattico"
+ambito = "missione"
+misura = "mine_posate"
+livelli = [4]
+condizioni = [["mine_inerti", "==", 0]]
+distinti = ""
+icona = "posa"
+nascosto = false
+
+[achievement.fantasma]
+nome_it = "Fantasma"
+nome_en = "Ghost"
+descrizione_it = "Riuscita senza fix, avvistamenti ne' ping subiti; poi senza contatto ASW; poi senza transitori ne' ping propri"
+descrizione_en = "Success with no fix, sighting or ping received; then no ASW contact; then no transient or own ping"
+categoria = "stealth"
+ambito = "missione"
+misura = "fantasma"
+livelli = [1, 2, 3]
+condizioni = [["successo", ">=", 1]]
+distinti = ""
+icona = "fantasma"
+nascosto = false
+
+[achievement.silenzio_radio]
+nome_it = "Silenzio radio"
+nome_en = "Radio silence"
+descrizione_it = "Riuscita senza trasmettere, con almeno una serie copiata"
+descrizione_en = "Success without transmitting, with at least one broadcast copied"
+categoria = "stealth"
+ambito = "missione"
+misura = "serie_copiate"
+livelli = [1]
+condizioni = [["successo", ">=", 1], ["trasmissioni", "==", 0]]
+distinti = ""
+icona = "silenzio_radio"
+nascosto = false
+
+[achievement.fra_le_boe]
+nome_it = "Fra le boe"
+nome_en = "Among the buoys"
+descrizione_it = "Boe ostili vicine, senza mai essere avvistati"
+descrizione_en = "Hostile buoys close aboard, never sighted"
+categoria = "stealth"
+ambito = "missione"
+misura = "boe_vicine"
+livelli = [1, 3, 6]
+condizioni = [["avvistamenti", "==", 0], ["battello_perso", "==", 0]]
+distinti = ""
+icona = "fra_le_boe"
+nascosto = false
+
+[achievement.solo_orecchie]
+nome_it = "Solo orecchie"
+nome_en = "Ears only"
+descrizione_it = "Un affondamento senza nessun ping attivo"
+descrizione_en = "A kill without a single active ping"
+categoria = "stealth"
+ambito = "missione"
+misura = "affondati_ostili"
+livelli = [1]
+condizioni = [["ping_attivi", "==", 0]]
+distinti = ""
+icona = "solo_orecchie"
+nascosto = false
+
+[achievement.sovereign]
+nome_it = "Passaggio ravvicinato"
+nome_en = "Close pass"
+descrizione_it = "A meno di 900 m da un sottomarino ostile, senza essere scoperti"
+descrizione_en = "Within 900 m of a hostile submarine, undetected"
+categoria = "stealth"
+ambito = "missione"
+misura = "sottomarino_vicino"
+livelli = [1]
+condizioni = [["avvistamenti", "==", 0]]
+distinti = ""
+icona = "sovereign"
+nascosto = false
+
+[achievement.testa_bassa]
+nome_it = "Testa bassa"
+nome_en = "Head down"
+descrizione_it = "Missioni riuscite con meno di un minuto di periscopio fuori"
+descrizione_en = "Successful patrols with under a minute of periscope exposure"
+categoria = "stealth"
+ambito = "somma"
+misura = "uno"
+livelli = [3, 10, 25]
+condizioni = [["successo", ">=", 1], ["esposizione_periscopio_s", "<", 60]]
+distinti = ""
+icona = "testa_bassa"
+nascosto = false
+
+[achievement.orecchio_fino]
+nome_it = "Orecchio fino"
+nome_en = "Golden ear"
+descrizione_it = "Classificazioni giuste, nessuna sbagliata"
+descrizione_en = "Correct classifications, none wrong"
+categoria = "tecnico"
+ambito = "missione"
+misura = "classificazioni_giuste"
+livelli = [3, 6, 10]
+condizioni = [["classificazioni_errate", "==", 0]]
+distinti = ""
+icona = "orecchio_fino"
+nascosto = false
+
+[achievement.anticipo]
+nome_it = "Prima di tutti"
+nome_en = "First to know"
+descrizione_it = "Classificazione in meno di due minuti in media (almeno tre)"
+descrizione_en = "Classified in under two minutes on average (at least three)"
+categoria = "tecnico"
+ambito = "missione"
+misura = "classificazioni_giuste"
+livelli = [3]
+condizioni = [["anticipo_medio_s", "<", 120]]
+distinti = ""
+icona = "anticipo"
+nascosto = false
+
+[achievement.controllo_danni]
+nome_it = "Controllo danni"
+nome_en = "Damage control"
+descrizione_it = "Danni domati con il battello salvo"
+descrizione_en = "Damage brought under control, boat saved"
+categoria = "tecnico"
+ambito = "somma"
+misura = "danni_domati"
+livelli = [1, 5, 15]
+condizioni = [["battello_perso", "==", 0]]
+distinti = ""
+icona = "controllo_danni"
+nascosto = false
+
+[achievement.quota_limite]
+nome_it = "Al limite"
+nome_en = "On the edge"
+descrizione_it = "A meno del 5% dalla quota di collasso, e ritorno"
+descrizione_en = "Within 5% of crush depth, and back"
+categoria = "tecnico"
+ambito = "missione"
+misura = "uno"
+livelli = [1]
+condizioni = [["margine_collasso", "<", 0.05], ["battello_perso", "==", 0]]
+distinti = ""
+icona = "quota_limite"
+nascosto = false
+
+[achievement.fotografo]
+nome_it = "Fotografo"
+nome_en = "Photographer"
+descrizione_it = "Foto col periscopio Type 18"
+descrizione_en = "Type 18 periscope photographs"
+categoria = "tecnico"
+ambito = "somma"
+misura = "foto_periscopio"
+livelli = [5, 20, 60]
+condizioni = []
+distinti = ""
+icona = "fotografo"
+nascosto = false
+
+[achievement.telegrafista]
+nome_it = "Telegrafista"
+nome_en = "Radioman"
+descrizione_it = "Tutte le serie copiate e tutti i rapporti inviati"
+descrizione_en = "Every broadcast copied and every report sent"
+categoria = "tecnico"
+ambito = "missione"
+misura = "serie_copiate"
+livelli = [2, 4, 6]
+condizioni = [["serie_perse", "==", 0], ["rapporti_mancati", "==", 0]]
+distinti = ""
+icona = "telegrafista"
+nascosto = false
+
+[achievement.alla_lettera]
+nome_it = "Alla lettera"
+nome_en = "By the book"
+descrizione_it = "Missioni con tutti gli ordini eseguiti e le ROE rispettate"
+descrizione_en = "Patrols with every order carried out and the ROE respected"
+categoria = "tecnico"
+ambito = "somma"
+misura = "uno"
+livelli = [3, 10, 25]
+condizioni = [["ordini", ">=", 1], ["ordini_mancati", "==", 0], ["ordini_rispettati", ">=", 1]]
+distinti = ""
+icona = "alla_lettera"
+nascosto = false
+
+[achievement.originali]
+nome_it = "Le missioni del 1989"
+nome_en = "The 1989 patrols"
+descrizione_it = "Missioni originali diverse riuscite"
+descrizione_en = "Different original missions completed"
+categoria = "storico"
+ambito = "somma"
+misura = "uno"
+livelli = [5, 12, 22]
+condizioni = [["successo", ">=", 1], ["originale", ">=", 1]]
+distinti = "missione"
+icona = "originali"
+nascosto = false
+
+[achievement.barents]
+nome_it = "Silenzio nel Barents"
+nome_en = "Silence in the Barents"
+descrizione_it = "Riuscita nel Barents senza ping ne' trasmissioni"
+descrizione_en = "Success in the Barents with no ping and no transmission"
+categoria = "storico"
+ambito = "missione"
+misura = "uno"
+livelli = [1]
+condizioni = [["successo", ">=", 1], ["teatro", "==", "barents"], ["ping_attivi", "==", 0], ["trasmissioni", "==", 0]]
+distinti = ""
+icona = "barents"
+nascosto = false
+
+[achievement.ghiaccio]
+nome_it = "Sotto il ghiaccio"
+nome_en = "Under the ice"
+descrizione_it = "Missioni artiche riuscite"
+descrizione_en = "Arctic patrols completed"
+categoria = "storico"
+ambito = "somma"
+misura = "uno"
+livelli = [1, 3, 6]
+condizioni = [["successo", ">=", 1], ["artico", ">=", 1]]
+distinti = ""
+icona = "ghiaccio"
+nascosto = false
+
+[achievement.crisi]
+nome_it = "Sangue freddo"
+nome_en = "Cool head"
+descrizione_it = "Una crisi riuscita senza aprire il fuoco senza ordine"
+descrizione_en = "A crisis handled without firing unprovoked"
+categoria = "storico"
+ambito = "missione"
+misura = "uno"
+livelli = [1]
+condizioni = [["successo", ">=", 1], ["crisi", ">=", 1], ["ordini_rispettati", ">=", 1]]
+distinti = ""
+icona = "crisi"
+nascosto = false
+
+[achievement.guerra]
+nome_it = "Guerra fredda, guerra calda"
+nome_en = "Cold war, hot war"
+descrizione_it = "Missioni di guerra riuscite"
+descrizione_en = "Wartime patrols completed"
+categoria = "storico"
+ambito = "somma"
+misura = "uno"
+livelli = [1, 5, 10]
+condizioni = [["successo", ">=", 1], ["guerra", ">=", 1]]
+distinti = ""
+icona = "guerra"
+nascosto = false
+
+[achievement.due_marine]
+nome_it = "Dalle due parti"
+nome_en = "Both sides"
+descrizione_it = "Missioni riuscite col 688 e con l'Alfa"
+descrizione_en = "Patrols completed with the 688 and the Alfa"
+categoria = "storico"
+ambito = "somma"
+misura = "uno"
+livelli = [2]
+condizioni = [["successo", ">=", 1]]
+distinti = "marina"
+icona = "due_marine"
+nascosto = false
+
+[achievement.dolphins]
+nome_it = "Dolphins"
+nome_en = "Dolphins"
+descrizione_it = "La qualifica di sommergibilista (dolphins o VSOK)"
+descrizione_en = "Submarine qualification (dolphins or VSOK)"
+categoria = "carriera"
+ambito = "carriera"
+misura = "qualifica_sommergibilista"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "dolphins"
+nascosto = false
+
+[achievement.al_comando]
+nome_it = "Al comando"
+nome_en = "In command"
+descrizione_it = "Commander o kapitan 2-go ranga"
+descrizione_en = "Commander or kapitan 2-go ranga"
+categoria = "carriera"
+ambito = "carriera"
+misura = "grado_ordine"
+livelli = [4]
+condizioni = []
+distinti = ""
+icona = "al_comando"
+nascosto = false
+
+[achievement.quattro_galloni]
+nome_it = "Quattro galloni"
+nome_en = "Four stripes"
+descrizione_it = "Captain o kapitan 1-go ranga"
+descrizione_en = "Captain or kapitan 1-go ranga"
+categoria = "carriera"
+ambito = "carriera"
+misura = "grado_ordine"
+livelli = [5]
+condizioni = []
+distinti = ""
+icona = "quattro_galloni"
+nascosto = false
+
+[achievement.decorato]
+nome_it = "Decorato"
+nome_en = "Decorated"
+descrizione_it = "Decorazioni personali"
+descrizione_en = "Personal decorations"
+categoria = "carriera"
+ambito = "carriera"
+misura = "decorazioni_personali"
+livelli = [1, 5, 12]
+condizioni = []
+distinti = ""
+icona = "decorato"
+nascosto = false
+
+[achievement.massima]
+nome_it = "Al valore"
+nome_en = "For valor"
+descrizione_it = "Silver Star o Bandiera Rossa; Navy Cross o Ordine di Lenin; Medal of Honor o Eroe dell'URSS"
+descrizione_en = "Silver Star or Red Banner; Navy Cross or Order of Lenin; Medal of Honor or Hero of the USSR"
+categoria = "carriera"
+ambito = "carriera"
+misura = "decorazione_massima"
+livelli = [1, 2, 3]
+condizioni = []
+distinti = ""
+icona = "massima"
+nascosto = false
+
+[achievement.veterano]
+nome_it = "Veterano"
+nome_en = "Veteran"
+descrizione_it = "Missioni in carriera"
+descrizione_en = "Career patrols"
+categoria = "carriera"
+ambito = "carriera"
+misura = "missioni_carriera"
+livelli = [15, 30, 60]
+condizioni = []
+distinti = ""
+icona = "veterano"
+nascosto = false
+
+[achievement.pensione]
+nome_it = "Fine servizio"
+nome_en = "Retired"
+descrizione_it = "Una carriera chiusa in pensione"
+descrizione_en = "A career ended in retirement"
+categoria = "carriera"
+ambito = "carriera"
+misura = "pensione"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "pensione"
+nascosto = false
+
+[achievement.autore]
+nome_it = "Autore"
+nome_en = "Author"
+descrizione_it = "Missioni dell'editor portate a termine"
+descrizione_en = "Editor missions played to the end"
+categoria = "editor"
+ambito = "somma"
+misura = "uno"
+livelli = [1, 5, 20]
+condizioni = [["editor", ">=", 1]]
+distinti = ""
+icona = "autore"
+nascosto = false
+
+[achievement.codici]
+nome_it = "Codici condivisi"
+nome_en = "Shared codes"
+descrizione_it = "Codici di missioni rapide diversi giocati"
+descrizione_en = "Different quick-mission codes played"
+categoria = "editor"
+ambito = "somma"
+misura = "uno"
+livelli = [5, 20, 50]
+condizioni = [["rapida", ">=", 1]]
+distinti = "codice"
+icona = "codici"
+nascosto = false
+
+[achievement.biblioteca]
+nome_it = "Biblioteca"
+nome_en = "Library"
+descrizione_it = "Missioni della libreria diverse riuscite (41 in tutto)"
+descrizione_en = "Different library missions completed (41 in all)"
+categoria = "editor"
+ambito = "somma"
+misura = "uno"
+livelli = [5, 20, 41]
+condizioni = [["successo", ">=", 1], ["libreria", ">=", 1]]
+distinti = "missione"
+icona = "biblioteca"
+nascosto = false
+
+[achievement.occhio_libretto]
+nome_it = "Occhio al libretto"
+nome_en = "Eye on the book"
+descrizione_it = "Identificazioni visive giuste al periscopio"
+descrizione_en = "Correct visual identifications at the periscope"
+categoria = "tecnico"
+ambito = "somma"
+misura = "visive_giuste"
+livelli = [1, 10, 50]
+condizioni = []
+distinti = ""
+icona = "occhio_libretto"
+nascosto = false
+
+[achievement.telemetrista]
+nome_it = "Telemetrista"
+nome_en = "Rangefinder"
+descrizione_it = "Una misura del telemetro entro il 5% della distanza vera"
+descrizione_en = "A rangefinder reading within 5% of the true range"
+categoria = "tecnico"
+ambito = "missione"
+misura = "telemetro_entro_5"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "telemetrista"
+nascosto = false
+
+[achievement.angolo_giusto]
+nome_it = "Angolo sulla prora"
+nome_en = "Angle on the bow"
+descrizione_it = "Un AOB entro 10 gradi del vero, mandato alla TMA"
+descrizione_en = "An AOB within 10 degrees of the truth, sent to the TMA"
+categoria = "tecnico"
+ambito = "missione"
+misura = "aob_entro_10"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "angolo_giusto"
+nascosto = false
+
+[achievement.prima_la_vista]
+nome_it = "Prima la vista"
+nome_en = "Eyes first"
+descrizione_it = "Un contatto identificato a vista prima del sonar, giusto"
+descrizione_en = "A contact correctly identified by eye before the sonar"
+categoria = "tecnico"
+ambito = "missione"
+misura = "prima_la_vista"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "prima_la_vista"
+nascosto = false
+
+[achievement.oltre_orizzonte]
+nome_it = "Oltre l'orizzonte"
+nome_en = "Over the horizon"
+descrizione_it = "Un bersaglio affondato con un missile oltre l'orizzonte"
+descrizione_en = "A target sunk with an over-the-horizon missile"
+categoria = "tattico"
+ambito = "missione"
+misura = "affondati_missile_oth"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "oltre_orizzonte"
+nascosto = false
+
+[achievement.scatola_pulita]
+nome_it = "Scatola pulita"
+nome_en = "Clean box"
+descrizione_it = "Una salva con un neutrale nella scatola, senza colpirlo"
+descrizione_en = "A salvo with a neutral in the box, left untouched"
+categoria = "tattico"
+ambito = "missione"
+misura = "salve_neutrale_illeso"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "scatola_pulita"
+nascosto = false
+
+[achievement.allarme_siluro]
+nome_it = "Allarme siluro"
+nome_en = "Torpedo alarm"
+descrizione_it = "Siluri evitati dopo l'allarme dell'intercettatore"
+descrizione_en = "Torpedoes evaded after the intercept alarm"
+categoria = "tattico"
+ambito = "somma"
+misura = "siluri_evitati_allarme"
+livelli = [1, 3, 5]
+condizioni = []
+distinti = ""
+icona = "allarme_siluro"
+nascosto = false
+
+[achievement.sotto_chiglia]
+nome_it = "Sotto la chiglia"
+nome_en = "Under the keel"
+descrizione_it = "Oltre 10 minuti con meno di 20 m sotto la chiglia, senza toccare"
+descrizione_en = "Over 10 minutes with less than 20 m under the keel, without touching"
+categoria = "stealth"
+ambito = "missione"
+misura = "sotto_chiglia_20_s"
+livelli = [600]
+condizioni = [["incaglio", "==", 0]]
+distinti = ""
+icona = "sotto_chiglia"
+nascosto = false
+
+[achievement.punto_nave]
+nome_it = "Punto nave"
+nome_en = "Fix"
+descrizione_it = "Finire con la navigazione incerta e l'errore sotto i 500 m, senza GPS"
+descrizione_en = "Finish with uncertain navigation, error under 500 m, without GPS"
+categoria = "tecnico"
+ambito = "missione"
+misura = "uno"
+livelli = [1]
+condizioni = [["navigazione_incerta", ">=", 1], ["gps", "==", 0], ["errore_finale_m", "<", 500]]
+distinti = ""
+icona = "punto_nave"
+nascosto = false
+
+[achievement.non_autentico]
+nome_it = "Non autenticato"
+nome_en = "Not authenticated"
+descrizione_it = "Un ordine radio non autenticato riconosciuto e non eseguito"
+descrizione_en = "An unauthenticated radio order recognised and not carried out"
+categoria = "tecnico"
+ambito = "missione"
+misura = "non_autentici_respinti"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "non_autentico"
+nascosto = false
+
+[achievement.campo_minato]
+nome_it = "Campo minato"
+nome_en = "Minefield"
+descrizione_it = "Un campo di mine attraversato col sonar da mine (BQS-15 o MG-70), senza danni"
+descrizione_en = "A minefield crossed with the mine-hunting sonar (BQS-15 or MG-70), unharmed"
+categoria = "tattico"
+ambito = "missione"
+misura = "campi_minati_attraversati"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "campo_minato"
+nascosto = false
+
+[achievement.tempesta]
+nome_it = "Nella tempesta"
+nome_en = "In the storm"
+descrizione_it = "Una missione compiuta con mare 6 o piu'"
+descrizione_en = "A patrol completed in sea state 6 or more"
+categoria = "tattico"
+ambito = "missione"
+misura = "uno"
+livelli = [1]
+condizioni = [["successo", ">=", 1], ["mare_max", ">=", 6]]
+distinti = ""
+icona = "tempesta"
+nascosto = false
+
+[achievement.sotto_il_fuoco]
+nome_it = "Sotto il fuoco"
+nome_en = "Under fire"
+descrizione_it = "Missione compiuta dopo essere stati presi a cannonate"
+descrizione_en = "A patrol completed after taking gunfire"
+categoria = "tattico"
+ambito = "missione"
+misura = "uno"
+livelli = [1]
+condizioni = [["successo", ">=", 1], ["colpi_artiglieria_subiti", ">=", 1]]
+distinti = ""
+icona = "sotto_il_fuoco"
+nascosto = false
+
+[achievement.novita_acint]
+nome_it = "Per l'intelligence"
+nome_en = "For the intelligence"
+descrizione_it = "Righe nuove nel rapporto ACINT, non spiegate dalla libreria"
+descrizione_en = "New lines in the ACINT report, not explained by the library"
+categoria = "tecnico"
+ambito = "somma"
+misura = "righe_nuove_acint"
+livelli = [1, 5, 10]
+condizioni = []
+distinti = ""
+icona = "novita_acint"
+nascosto = false
+
+[achievement.polynya]
+nome_it = "Polynya"
+nome_en = "Polynya"
+descrizione_it = "Emergere nella banchisa, in acqua libera o nel ghiaccio sottile, senza urti col ghiaccio"
+descrizione_en = "Surface inside the pack, in open water or thin ice, without striking the ice"
+categoria = "tecnico"
+ambito = "missione"
+misura = "emersioni_ghiaccio"
+livelli = [1]
+condizioni = [["urti_ghiaccio", "==", 0]]
+distinti = ""
+icona = "polynya"
+nascosto = false
+
+[achievement.banchisa]
+nome_it = "Tetto bianco"
+nome_en = "White ceiling"
+descrizione_it = "Ore sotto la banchisa senza urti col ghiaccio"
+descrizione_en = "Hours under the pack without striking the ice"
+categoria = "storico"
+ambito = "somma"
+misura = "sotto_banchisa_s"
+livelli = [3600, 18000, 72000]
+condizioni = [["urti_ghiaccio", "==", 0]]
+distinti = ""
+icona = "banchisa"
+nascosto = false
+
+[achievement.fanali]
+nome_it = "Leggere i fanali"
+nome_en = "Reading the lights"
+descrizione_it = "Identificazioni visive giuste di notte coi soli fanali, oltre la portata della sagoma"
+descrizione_en = "Correct visual identifications at night from the lights alone, beyond silhouette range"
+categoria = "tecnico"
+ambito = "somma"
+misura = "visive_fanali_giuste"
+livelli = [1, 5, 15]
+condizioni = []
+distinti = ""
+icona = "fanali"
+nascosto = false
+
+[achievement.luci_spente]
+nome_it = "A luci spente"
+nome_en = "Darkened ship"
+descrizione_it = "Di notte, una nave a luci spente identificata giusta"
+descrizione_en = "At night, a darkened ship correctly identified"
+categoria = "tecnico"
+ambito = "missione"
+misura = "visive_luci_spente"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "luci_spente"
+nascosto = false
+
+[achievement.soccorso]
+nome_it = "Soccorso"
+nome_en = "Rescue"
+descrizione_it = "Tutti gli uomini in acqua salvati"
+descrizione_en = "Every man in the water rescued"
+categoria = "storico"
+ambito = "missione"
+misura = "tutti_salvati"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "soccorso"
+nascosto = false
+
+[achievement.in_coda]
+nome_it = "Nei suoi baffles"
+nome_en = "In his baffles"
+descrizione_it = "Minuti in coda a un sottomarino (entro 3 nm, a poppa, col contatto), senza che lui ci classifichi"
+descrizione_en = "Minutes trailing a submarine (within 3 nm, astern, holding contact) without being classified"
+categoria = "stealth"
+ambito = "missione"
+misura = "in_coda_s"
+livelli = [1800, 3600, 7200]
+condizioni = []
+distinti = ""
+icona = "in_coda"
+nascosto = false
+
+[achievement.cinquecento]
+nome_it = "Cinquecento iarde"
+nome_en = "Five hundred yards"
+descrizione_it = "Cinque minuti entro 500 iarde da un sottomarino straniero, senza urto e senza essere scoperti"
+descrizione_en = "Five minutes within 500 yards of a foreign submarine, no collision, undetected"
+categoria = "nascosto"
+ambito = "missione"
+misura = "entro_500yd_s"
+livelli = [300]
+condizioni = [["collisioni", "==", 0], ["avvistamenti", "==", 0]]
+distinti = ""
+icona = "cinquecento"
+nascosto = true
+
+[achievement.occhio_mine]
+nome_it = "Occhio alle mine"
+nome_en = "Mine eyes"
+descrizione_it = "Mine scoperte col sonar da mine, senza colpi subiti"
+descrizione_en = "Mines detected with the mine-hunting sonar, without being hit"
+categoria = "tattico"
+ambito = "somma"
+misura = "mine_scoperte"
+livelli = [5, 20, 50]
+condizioni = [["colpi_subiti", "==", 0], ["battello_perso", "==", 0]]
+distinti = ""
+icona = "occhio_mine"
+nascosto = false
+
+[achievement.aggirate]
+nome_it = "Aggirate"
+nome_en = "Steered clear"
+descrizione_it = "Almeno tre mine scoperte, nessuna avvicinata a meno di 200 m dopo"
+descrizione_en = "At least three mines detected, none approached within 200 m afterwards"
+categoria = "tattico"
+ambito = "missione"
+misura = "mine_aggirate"
+livelli = [3]
+condizioni = [["colpi_subiti", "==", 0]]
+distinti = ""
+icona = "aggirate"
+nascosto = false
+
+[achievement.sotto_rotore]
+nome_it = "Sotto il rotore"
+nome_en = "Under the rotor"
+descrizione_it = "Sorvoli di elicotteri ASW, senza avvistamenti ne' colpi"
+descrizione_en = "ASW helicopter overflights, never sighted or hit"
+categoria = "stealth"
+ambito = "missione"
+misura = "sorvoli_elicottero"
+livelli = [1, 3, 6]
+condizioni = [["avvistamenti", "==", 0], ["colpi_subiti", "==", 0]]
+distinti = ""
+icona = "sotto_rotore"
+nascosto = false
+
+[achievement.fra_le_code]
+nome_it = "Fra le code"
+nome_en = "Between the tails"
+descrizione_it = "Navi col VDS o la schiera filati passate entro 5 km, senza essere scoperti"
+descrizione_en = "Ships streaming VDS or towed array passed within 5 km, undetected"
+categoria = "stealth"
+ambito = "missione"
+misura = "navi_traino_vicine"
+livelli = [1, 3, 6]
+condizioni = [["avvistamenti", "==", 0]]
+distinti = ""
+icona = "fra_le_code"
+nascosto = false
+
+[achievement.catalogo]
+nome_it = "Catalogo"
+nome_en = "Catalogue"
+descrizione_it = "Classi diverse classificate giuste, in tutte le partite"
+descrizione_en = "Different classes correctly classified, across all patrols"
+categoria = "tecnico"
+ambito = "somma"
+misura = "uno"
+livelli = [10, 30, 60]
+condizioni = []
+distinti = "classi_giuste"
+icona = "catalogo"
+nascosto = false
+
+[achievement.storie_vere]
+nome_it = "Le storie vere"
+nome_en = "True stories"
+descrizione_it = "Missioni storiche diverse della libreria riuscite (24 in tutto)"
+descrizione_en = "Different historical library missions completed (24 in all)"
+categoria = "storico"
+ambito = "somma"
+misura = "uno"
+livelli = [5, 12, 24]
+condizioni = [["successo", ">=", 1], ["libreria_storica", ">=", 1]]
+distinti = "missione"
+icona = "storie_vere"
+nascosto = false
+
+[achievement.sasso]
+nome_it = "Sasso nella scarpa"
+nome_en = "Pebble in the shoe"
+descrizione_it = "Un incaglio, e la missione riesce lo stesso"
+descrizione_en = "Ran aground, and still succeeded"
+categoria = "nascosto"
+ambito = "missione"
+misura = "incaglio"
+livelli = [1]
+condizioni = [["successo", ">=", 1]]
+distinti = ""
+icona = "sasso"
+nascosto = true
+
+[achievement.un_pelo]
+nome_it = "Per un pelo"
+nome_en = "By a whisker"
+descrizione_it = "Un siluro ostile passato a meno di 50 m"
+descrizione_en = "A hostile torpedo passed within 50 m"
+categoria = "nascosto"
+ambito = "missione"
+misura = "uno"
+livelli = [1]
+condizioni = [["distanza_min_siluro_m", "<", 50], ["battello_perso", "==", 0]]
+distinti = ""
+icona = "un_pelo"
+nascosto = true
+
+[achievement.ultimo_siluro]
+nome_it = "L'ultimo siluro"
+nome_en = "The last fish"
+descrizione_it = "Riuscita con nessuna arma rimasta a bordo"
+descrizione_en = "Success with no weapon left aboard"
+categoria = "nascosto"
+ambito = "missione"
+misura = "uno"
+livelli = [1]
+condizioni = [["successo", ">=", 1], ["armi_a_bordo", "==", 0]]
+distinti = ""
+icona = "ultimo_siluro"
+nascosto = true
+
+[achievement.pendolare]
+nome_it = "Pendolare"
+nome_en = "Commuter"
+descrizione_it = "Un passaggio ravvicinato con un'unita' che non sapevamo li'"
+descrizione_en = "A near miss with a unit we did not know was there"
+categoria = "nascosto"
+ambito = "missione"
+misura = "quasi_collisione_ignota"
+livelli = [1]
+condizioni = []
+distinti = ""
+icona = "pendolare"
+nascosto = true

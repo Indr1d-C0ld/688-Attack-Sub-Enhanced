@@ -1,0 +1,36 @@
+# Triangolazione degli elementi principali del Tu-142M da due foto dal basso (tools/navi/triangola.py).
+# xyz = [distanza dalla punta della sonda di rifornimento, y (sinistra), quota]; asse della fusoliera a z = 10.
+# Lunghezza fuori tutto 53,07 m dalla sonda alla punta della carenatura MAD in cima alla deriva (la carenatura
+# sporge ben oltre la torretta di coda, foto del 1982).
+L: 53.07
+uscita_fotocamere: extracted/navi/tu142/triangolazione_fotocamere.json
+elementi:
+  sonda: {xyz: [0, 0, 11.0]}
+  naso: {xyz: [2.3, 0, 10.0]}
+  coda: {xyz: [47.5, 0, 10.3], liberi: x}
+  deriva: {xyz: [48.5, 0, 19.0], liberi: xz}
+  mad: {xyz: [53.07, 0, 19.0], liberi: z}
+  ala_s: {xyz: [33.9, 25.02, 10.0], liberi: xz}
+  ala_d: {simmetrico_di: ala_s}
+  ala_s_bu: {xyz: [36.8, 25.02, 10.0], liberi: x}
+  ala_d_bu: {simmetrico_di: ala_s_bu}
+  stab_s: {xyz: [47.0, 7.2, 11.0], liberi: xyz}
+  stab_d: {simmetrico_di: stab_s}
+  s1: {xyz: [13.0, 7.0, 9.4], liberi: xyz}
+  s2: {xyz: [16.5, 13.4, 9.4], liberi: xyz}
+  d1: {simmetrico_di: s1}
+  d2: {simmetrico_di: s2}
+foto:
+  - nome: dritto_basso_1982
+    file: extracted/navi/tu142/foto/dritto_basso_1982.jpg
+    limiti_fotocamera: {elevazione: [-80, 10], distanza: [30, 5000]}
+    fotocamera_iniziale: {posizione: [96, -265, -93], bersaglio: [0, 0, 10], f: 9600}
+    osservazioni: {naso: [1857, 590], coda: [445, 560], mad: [172, 299], deriva: [318, 298], stab_d: [405, 398], stab_s: [228, 624],
+                   ala_d: [1238, 197], ala_d_bu: [1193, 197], ala_s: [527, 932],
+                   d2: [1572, 400], d1: [1612, 500], s1: [1430, 688], s2: [1250, 755]}
+  - nome: sotto_1987
+    file: extracted/navi/tu142/foto/sotto_1987.jpg
+    limiti_fotocamera: {elevazione: [-89, 10], distanza: [30, 5000], rollio: [-90, 90]}
+    fotocamera_iniziale: {posizione: [0, 150, -250], bersaglio: [0, 0, 10], f: 9000}
+    osservazioni: {sonda: [310, 755], coda: [1898, 600], ala_d_bu: [1412, 1200],
+                   s2: [697, 375], s1: [615, 560], d1: [702, 875], d2: [847, 985], stab_d: [1905, 740]}

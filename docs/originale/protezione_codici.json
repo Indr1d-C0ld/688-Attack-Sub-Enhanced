@@ -1,0 +1,899 @@
+{
+ "intestazione": [
+  "ESTABLISHING SATELLITE UPLINK....",
+  "SATELLITE UPLINK ESTABLISHED",
+  "SECURITY ACCESS KEYCODE FOLLOWS:"
+ ],
+ "voci": [
+  {
+   "pagina": 1,
+   "battello": "ALBANY",
+   "frammento": "THERE ARE 10",
+   "risposta": "DIF",
+   "parola_manuale": "DIFFERENT",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 2,
+   "battello": "ALBANY",
+   "frammento": "THE CHALLENGE OF THE",
+   "risposta": "EAR",
+   "parola_manuale": "EARLIER",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 3,
+   "battello": "ALBUQUERQUE",
+   "frammento": "YOU CAN CHOOSE TO",
+   "risposta": "COM",
+   "parola_manuale": "COMMAND",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 4,
+   "battello": "ALBUQUERQUE",
+   "frammento": "A NOTE ON PLAYING BY MODEM  YOU CAN",
+   "risposta": "CHO",
+   "parola_manuale": "CHOOSE",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 5,
+   "battello": "ASHEVILLE",
+   "frammento": "YOUR SUPERIORS ARE",
+   "risposta": "GOI",
+   "parola_manuale": "GOING",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 6,
+   "battello": "ASHEVILLE",
+   "frammento": "NAVY HELICOPTERS WILL BE",
+   "risposta": "ATT",
+   "parola_manuale": "ATTEMPTING",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 7,
+   "battello": "ATLANTA",
+   "frammento": "AMERICAN AND SOVIET",
+   "risposta": "NAV",
+   "parola_manuale": "NAVAL",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 8,
+   "battello": "ATLANTA",
+   "frammento": "THE EXPERIENCE THE",
+   "risposta": "CRE",
+   "parola_manuale": "CREWS",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 9,
+   "battello": "AUGUSTA",
+   "frammento": "PROVE THAT AMERICAN",
+   "risposta": "HIG",
+   "parola_manuale": "HIGH",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 10,
+   "battello": "AUGUSTA",
+   "frammento": "TRY AND STAY IN THE",
+   "risposta": "BAF",
+   "parola_manuale": "BAFFLES",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 11,
+   "battello": "BALTIMORE",
+   "frammento": "THE WHITE HOUSE IS",
+   "risposta": "BLA",
+   "parola_manuale": "BLAMING",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 12,
+   "battello": "BALTIMORE",
+   "frammento": "THE TANKERS ARE",
+   "risposta": "UND",
+   "parola_manuale": "UNDER",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 13,
+   "battello": "BATON ROUGE",
+   "frammento": "YOUR CREW IS FATIGUED",
+   "risposta": "FRO",
+   "parola_manuale": "FROM",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 14,
+   "battello": "BATON ROUGE",
+   "frammento": "THE NAVY WANTS",
+   "risposta": "YOU",
+   "parola_manuale": "YOU",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 15,
+   "battello": "BIRMINGHAM",
+   "frammento": "UNDER NEW LEADERSHIP,",
+   "risposta": "YUG",
+   "parola_manuale": "YUGOSLAVIA",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 16,
+   "battello": "BIRMINGHAM",
+   "frammento": "YOUR JOB IS TO GET",
+   "risposta": "SIX",
+   "parola_manuale": "SIX",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 17,
+   "battello": "BOSTON",
+   "frammento": "A SOVIET SSBN HAS",
+   "risposta": "REP",
+   "parola_manuale": "REPORTEDLY",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 18,
+   "battello": "BOSTON",
+   "frammento": "YOUR MAIN OBJECTIVE IS TO",
+   "risposta": "DES",
+   "parola_manuale": "DESTROY",
+   "fonte": "stampa (OCR)",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 19,
+   "battello": "BREMERTON",
+   "frammento": "NATO IS SENDING A LARGE BATTLE GROUP TO THE",
+   "risposta": "NOR",
+   "parola_manuale": "NORWEGIAN",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 20,
+   "battello": "BREMERTON",
+   "frammento": "IF NATO CAN",
+   "risposta": "KEE",
+   "parola_manuale": "KEEP",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 21,
+   "battello": "BUFFALO",
+   "frammento": "AS IN TWO PREVIOUS WORLD WARS, AMERICAN",
+   "risposta": "SHI",
+   "parola_manuale": "SHIPPING",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 22,
+   "battello": "BUFFALO",
+   "frammento": "YOUR 688 IS ASSIGNED TO",
+   "risposta": "COU",
+   "parola_manuale": "COUNTER",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 23,
+   "battello": "CHICAGO",
+   "frammento": "THE NEXT STEP IS TO DESTROY",
+   "risposta": "INL",
+   "parola_manuale": "INLAND",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 24,
+   "battello": "CHICAGO",
+   "frammento": "WITH YOUR PERISCOPE STILL RAISED,",
+   "risposta": "SEL",
+   "parola_manuale": "SELECT",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 25,
+   "battello": "CINCINNATI",
+   "frammento": "YOU CAN CHOOSE PLAY LEVELS",
+   "risposta": "ONL",
+   "parola_manuale": "ONLY",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 26,
+   "battello": "CINCINNATI",
+   "frammento": "MODEM GAMES ARE",
+   "risposta": "AUT",
+   "parola_manuale": "AUTOMATICALLY",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 27,
+   "battello": "CITY OF CORPUS CHRISTI",
+   "frammento": "IN BOTH INSTANCES, ONE PLAYER",
+   "risposta": "WIL",
+   "parola_manuale": "WILL",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 28,
+   "battello": "CITY OF CORPUS CHRISTI",
+   "frammento": "THE ORIGINATOR SETS UP THE GAME AND",
+   "risposta": "INI",
+   "parola_manuale": "INITIATES",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 29,
+   "battello": "DALLAS",
+   "frammento": "YOU HAVE A CHOICE OF LETTING YOUR",
+   "risposta": "COM",
+   "parola_manuale": "COMPUTER",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 30,
+   "battello": "DALLAS",
+   "frammento": "IF YOU'RE GOING TO",
+   "risposta": "LET",
+   "parola_manuale": "LET",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 31,
+   "battello": "GROTON",
+   "frammento": "WHEN YOU'VE PLAYED ALL THE",
+   "risposta": "MOD",
+   "parola_manuale": "MODEM",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 32,
+   "battello": "GROTON",
+   "frammento": "IF YOU DON'T, THE COMPUTER WILL STILL",
+   "risposta": "MAI",
+   "parola_manuale": "MAINTAIN",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 33,
+   "battello": "HELENA",
+   "frammento": "IF IT DOES, YOU MAY BE GETTING",
+   "risposta": "PHO",
+   "parola_manuale": "PHONE",
+   "fonte": "stampa (OCR)",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 34,
+   "battello": "HELENA",
+   "frammento": "YOU CAN TEMPORARILY",
+   "risposta": "STO",
+   "parola_manuale": "STOP",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 35,
+   "battello": "HONOLULU",
+   "frammento": "WITH YOUR COMPUTERS OFF,",
+   "risposta": "CON",
+   "parola_manuale": "CONNECT",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 36,
+   "battello": "HONOLULU",
+   "frammento": "TURN ON THE COMPUTERS,",
+   "risposta": "LOA",
+   "parola_manuale": "LOAD",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 37,
+   "battello": "HOUSTON",
+   "frammento": "AS AN ATTACK BOAT, YOUR",
+   "risposta": "PRI",
+   "parola_manuale": "PRIMARY",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 38,
+   "battello": "HOUSTON",
+   "frammento": "SINCE IN A SUBMARINE YOU CAN'T",
+   "risposta": "ACT",
+   "parola_manuale": "ACTUALLY",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 39,
+   "battello": "HYMAN G. RICKOVER",
+   "frammento": "THE TOP-DOWN MAP GIVES YOU",
+   "risposta": "AER",
+   "parola_manuale": "AERIAL",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 40,
+   "battello": "HYMAN G. RICKOVER",
+   "frammento": "YOUR SUBMARINE IS THE",
+   "risposta": "FIX",
+   "parola_manuale": "FIXED",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 41,
+   "battello": "INDIANAPOLIS",
+   "frammento": "THE DARKER THE",
+   "risposta": "SHA",
+   "parola_manuale": "SHADE",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 42,
+   "battello": "INDIANAPOLIS",
+   "frammento": "ALWAYS STAY AWARE OF THE AVERAGE",
+   "risposta": "DEP",
+   "parola_manuale": "DEPTH",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 43,
+   "battello": "JACKSONVILLE",
+   "frammento": "THIS IS USEFUL WHEN",
+   "risposta": "TRA",
+   "parola_manuale": "TRAVELING",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 44,
+   "battello": "JACKSONVILLE",
+   "frammento": "THE BEAM'S HIGH-FREQUENCY AND",
+   "risposta": "SHO",
+   "parola_manuale": "SHORT",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 45,
+   "battello": "KEY WEST",
+   "frammento": "THE WHITE TRIANGLE IN THE MIDDLE OF THE LINE IS YOUR",
+   "risposta": "SUB",
+   "parola_manuale": "SUB'S",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 46,
+   "battello": "KEY WEST",
+   "frammento": "THE VERTICAL",
+   "risposta": "GAU",
+   "parola_manuale": "GAUGE",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 47,
+   "battello": "LA JOLLA",
+   "frammento": "SOME MAY HAVE BEEN",
+   "risposta": "IDE",
+   "parola_manuale": "IDENTIFIED",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 48,
+   "battello": "LA JOLLA",
+   "frammento": "THE THINGS THE SONAR OPERATOR IS",
+   "risposta": "TRY",
+   "parola_manuale": "TRYING",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 49,
+   "battello": "LOS ANGELES",
+   "frammento": "IT IS IMPORTANT TO",
+   "risposta": "UND",
+   "parola_manuale": "UNDERSTAND",
+   "fonte": "copia BBS",
+   "dove": "altrove",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 50,
+   "battello": "LOS ANGELES",
+   "frammento": "IN DETERMINING A SHIP'S COURSE, THE",
+   "risposta": "NOR",
+   "parola_manuale": "NORTHERN",
+   "fonte": "copia BBS",
+   "dove": "altrove",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 51,
+   "battello": "LOUISVILLE",
+   "frammento": "ON THE INFORMATION",
+   "risposta": "BAR",
+   "parola_manuale": "BAR",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 52,
+   "battello": "LOUISVILLE",
+   "frammento": "MISSION TIME RUNS",
+   "risposta": "TWI",
+   "parola_manuale": "TWICE",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 53,
+   "battello": "MEMPHIS",
+   "frammento": "IF MESSAGES FROM THE CREW ARE",
+   "risposta": "ROL",
+   "parola_manuale": "ROLLING",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 54,
+   "battello": "MEMPHIS",
+   "frammento": "IT WILL APPEAR IN THE",
+   "risposta": "MES",
+   "parola_manuale": "MESSAGE",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 55,
+   "battello": "MIAMI",
+   "frammento": "WHEN YOU'RE PLAYING BY MODEM, YOU CAN",
+   "risposta": "USE",
+   "parola_manuale": "USE",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 56,
+   "battello": "MIAMI",
+   "frammento": "FOR THIS, YOU CAN BE AT ANY DEPTH AND YOU",
+   "risposta": "DON",
+   "parola_manuale": "DON'T",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 57,
+   "battello": "MINNEAPOLIS-SAINT PAUL",
+   "frammento": "THE CLOSER THE",
+   "risposta": "DOT",
+   "parola_manuale": "DOT",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 58,
+   "battello": "MINNEAPOLIS-SAINT PAUL",
+   "frammento": "ALL TRACKS WILL BE",
+   "risposta": "BLA",
+   "parola_manuale": "BLACK",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 59,
+   "battello": "NEW YORK CITY",
+   "frammento": "SELECTING WAYPOINTS ACTIVATES THE AUTO-PILOT,",
+   "risposta": "WHI",
+   "parola_manuale": "WHICH",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 60,
+   "battello": "NEW YORK CITY",
+   "frammento": "IT WILL ADJUST THE SPEED DOWN TO",
+   "risposta": "MAK",
+   "parola_manuale": "MAKE",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 61,
+   "battello": "NEWPORT NEWS",
+   "frammento": "THE AUTO-PILOT WILL ONLY FUNCTION IF YOU HAVE",
+   "risposta": "SET",
+   "parola_manuale": "SET",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 62,
+   "battello": "NEWPORT NEWS",
+   "frammento": "CHANGING THE RUDDER WILL",
+   "risposta": "AUT",
+   "parola_manuale": "AUTOMATICALLY",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 63,
+   "battello": "NORFOLK",
+   "frammento": "CAVITATION RESULTS FROM",
+   "risposta": "PAR",
+   "parola_manuale": "PARTIAL",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 64,
+   "battello": "NORFOLK",
+   "frammento": "SINCE THE BUBBLES PRODUCED BY CAVITATION ARE",
+   "risposta": "VER",
+   "parola_manuale": "VERY",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 65,
+   "battello": "OKLAHOMA CITY",
+   "frammento": "LOWERING THE HANDLE RELEASES AIR FROM THE BALLAST TANKS,",
+   "risposta": "FIL",
+   "parola_manuale": "FILLING",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 66,
+   "battello": "OKLAHOMA CITY",
+   "frammento": "RAISING THE HANDLE RELEASES",
+   "risposta": "COM",
+   "parola_manuale": "COMPRESSED",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 67,
+   "battello": "OLYMPIA",
+   "frammento": "THE NUMBERS REPRESENT FRACTIONS OR PERCENTAGES OF YOUR TOTAL",
+   "risposta": "POW",
+   "parola_manuale": "POWER",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 68,
+   "battello": "OLYMPIA",
+   "frammento": "USE FLANK SPEED TO ACCELERATE QUICKLY, BUT",
+   "risposta": "REM",
+   "parola_manuale": "REMEMBER",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 69,
+   "battello": "OMAHA",
+   "frammento": "THE CONTROL IS INCREMENTED, WHICH MEANS YOU CAN CONTROL THE",
+   "risposta": "RAT",
+   "parola_manuale": "RATE",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 70,
+   "battello": "OMAHA",
+   "frammento": "REMEMBER THAT ACTIVATING THE",
+   "risposta": "RUD",
+   "parola_manuale": "RUDDER",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 71,
+   "battello": "PASADENA",
+   "frammento": "USE THE FREQUENCY ANALYZER TO DISPLAY THE SOUND",
+   "risposta": "SIG",
+   "parola_manuale": "SIGNATURE",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 72,
+   "battello": "PASADENA",
+   "frammento": "DIFFERENT OBJECTS WILL PEAK IN",
+   "risposta": "DIF",
+   "parola_manuale": "DIFFERENT",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 73,
+   "battello": "PHILADELPHIA",
+   "frammento": "SELECTING THIS DIRECTS YOUR SONAR",
+   "risposta": "OFF",
+   "parola_manuale": "OFFICER",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 74,
+   "battello": "PHILADELPHIA",
+   "frammento": "THE PROBLEM IS, IT ALSO",
+   "risposta": "ALE",
+   "parola_manuale": "ALERTS",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 75,
+   "battello": "PHOENIX",
+   "frammento": "CONSEQUENTLY, THE TOWED ARRAY MUST BE",
+   "risposta": "REE",
+   "parola_manuale": "REELED",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 76,
+   "battello": "PHOENIX",
+   "frammento": "SITUATIONS MAY ARISE IN WHICH YOU ABSOLUTELY MUST",
+   "risposta": "ACC",
+   "parola_manuale": "ACCELERATE",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 77,
+   "battello": "PITTSBURGH",
+   "frammento": "THIS GAUGES HOW STRONG YOUR OPPONENT'S",
+   "risposta": "SEA",
+   "parola_manuale": "SEARCH",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 78,
+   "battello": "PITTSBURGH",
+   "frammento": "ENEMY RADAR CAN DETECT NOT ONLY YOUR RAISED PERISCOPE BUT THE",
+   "risposta": "WAK",
+   "parola_manuale": "WAKE",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 79,
+   "battello": "PORTSMOUTH",
+   "frammento": "THE ALFA HAS SIX TORPEDO TUBES AT THE BOW ONLY, BUT THE",
+   "risposta": "SIX",
+   "parola_manuale": "SIXTH",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 80,
+   "battello": "PORTSMOUTH",
+   "frammento": "WHEN THE WEAPON IS READY TO FIRE, THE",
+   "risposta": "WEA",
+   "parola_manuale": "WEAPON",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 81,
+   "battello": "PROVIDENCE",
+   "frammento": "SINCE THE ROOM",
+   "risposta": "ABO",
+   "parola_manuale": "ABOARD",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 82,
+   "battello": "PROVIDENCE",
+   "frammento": "THE NUMBER AND TYPE OF MISSILES ARE",
+   "risposta": "PRE",
+   "parola_manuale": "PRESELECTED",
+   "fonte": "stampa (OCR)",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 83,
+   "battello": "SAN FRANCISCO",
+   "frammento": "THE TORPEDO CONTROL",
+   "risposta": "FUN",
+   "parola_manuale": "FUNCTIONS",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 84,
+   "battello": "SAN FRANCISCO",
+   "frammento": "THIS IS USEFUL IF YOUR",
+   "risposta": "TOR",
+   "parola_manuale": "TORPEDO",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 85,
+   "battello": "SAN JUAN",
+   "frammento": "A LAUNCHED TORPEDO HAS A",
+   "risposta": "GUI",
+   "parola_manuale": "GUIDANCE",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 86,
+   "battello": "SAN JUAN",
+   "frammento": "A TORPEDO WITH A CUT GUIDANCE-WIRE WILL SEEK A TARGET",
+   "risposta": "UNT",
+   "parola_manuale": "UNTIL",
+   "fonte": "stampa (OCR)",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 87,
+   "battello": "SALT LAKE CITY",
+   "frammento": "IF YOU'VE LAUNCHED A TORPEDO AND YOU",
+   "risposta": "WAN",
+   "parola_manuale": "WANT",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 88,
+   "battello": "SCRANTON",
+   "frammento": "YOUR OWN TORPEDO MAY LOSE ITS ORIGINAL TARGET AND",
+   "risposta": "END",
+   "parola_manuale": "END",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  },
+  {
+   "pagina": 89,
+   "battello": "TOPEKA",
+   "frammento": "ALL SYSTEMS WILL",
+   "risposta": "REA",
+   "parola_manuale": "READ",
+   "fonte": "copia BBS",
+   "dove": "dopo il marcatore",
+   "verifica": "ok"
+  }
+ ]
+}

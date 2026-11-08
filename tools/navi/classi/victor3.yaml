@@ -1,0 +1,69 @@
+# Sottomarino d'attacco Progetto 671RTM "Shchuka" (NATO: Victor III), configurazione 1989: vela bassa e lunga
+# con il fronte verticale e il dorso che scende verso poppa, pod dell'array rimorchiato in cima al timone
+# verticale, scafo doppio che in emersione sta alto sull'acqua (immersione 7 m su 10,6 m di diametro).
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua. Quote assolute rispetto al galleggiamento in emersione normale.
+# Misure dalla foto di fianco della K-324 (1983) calibrata, con lunghezza 106,0 m e diametro 10,6 m.
+nome: Victor III (Progetto 671RTM)
+uscita: extracted/navi/victor3
+# scafo nero: livello medio e contrasto propri (le foto si portano a questi valori, non al grigio medio 0,45)
+tono: 0.22
+contrasto: 0.12
+moduli_parti: [sottomarini_parti.py]
+# scafo di rivoluzione visto quasi di taglio da tutte le foto basse: pesi delle foto piccoli (coseno 0,2-0,4).
+# Ombreggiatura di ripiego leggera ed esponente 1 sul coseno, cosi' le foto prevalgono dove vedono la superficie.
+peso_ombra: 0.03
+
+scafo:
+  generatore: scafo_sottomarino
+  L: 106.0
+  B: 10.6
+  # raggio tabulato: prua lunga e affusolata (la coperta scende dolcemente per ~20 m: superellisse di esponente
+  # 2,5 lunga 22 m), poppa misurata sulla foto della K-324 (coperta sotto l'acqua a ~89 m dalla prua)
+  raggio: [[0.0, 0.0], [0.5, 1.67], [1.0, 2.19], [2.0, 2.85], [3.0, 3.3], [4.0, 3.65], [6.0, 4.17], [8.0, 4.53],
+           [10.0, 4.8], [13.0, 5.07], [16.0, 5.22], [19.0, 5.29], [22.0, 5.3], [56.0, 5.3], [60.0, 5.05], [65.0, 4.75],
+           [70.0, 4.4], [76.0, 3.55], [82.0, 2.65], [87.0, 1.75], [92.0, 1.2], [97.0, 0.9], [102.0, 0.6], [106.0, 0.0]]
+  bordo_libero: 3.8        # sommita' dello scafo: immersione ~7 m su 10,6 m di diametro
+  # coperta piatta del cassero, larga ~3,6 m, fino all'inizio del cono di poppa
+  cassero: [[12.0, 3.55, 1.7], [18.0, 3.65, 1.8], [56.0, 3.65, 1.8], [62.0, 3.4, 1.7]]
+  stazioni: 90
+  punti_sezione: 48
+
+parti:
+  # vela: fronte quasi verticale, cielo piatto, dorso convesso che scende fino alla coperta
+  - tipo: vela
+    nome: vela
+    pianta: ovale
+    esponente: 2.5
+    livelli:
+      - [2.6, {prua: 34.0}, {prua: 52.5}, 2.0]
+      - [3.7, {prua: 34.1}, {prua: 51.4}, 1.95]
+      - [5.5, {prua: 34.2}, {prua: 49.5}, 1.85]
+      - [7.0, {prua: 34.3}, {prua: 47.3}, 1.75]
+      - [8.3, {prua: 34.5}, {prua: 45.0}, 1.6]
+      - [8.8, {prua: 35.1}, {prua: 43.6}, 1.35]
+  - {tipo: cilindro, nome: albero, x: {prua: 40.4}, y: 0, r: 0.12, z0: 8.0, z1: 15.2, n: 6, mat: scuro}
+  # timone verticale con il pod dell'array rimorchiato (lungo ~10 m, diametro ~2,6 m)
+  - {tipo: timone_verticale, nome: timone_pod, x: {prua: 97.4}, z0: -2.5, z1: 4.4, corda: 5.6, corda_estremita: 5.0, spessore: 0.7, freccia: -0.3, pod: [{prua: 95.7}, 5.1, 10.4, 2.65], muso_pod: 0.3, coda_pod: 0.4}
+
+foto:
+  - nome: fianco_dritta
+    file: extracted/navi/victor3/foto/fianco_dritta_k324_1983.jpg
+    nave: K-324 (Progetto 671RTM), Atlantico, novembre 1983
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    maschera_file: extracted/navi/victor3/foto/fianco_dritta_k324_1983_maschera.png   # classi/victor3_maschere.yaml
+    orizzonte_y: 0            # tutto contro il mare (orizzonte fuori dall'inquadratura)
+    soglia_cielo: 0
+    cancella: [[1000, 438, 1050, 458]]       # targa bianca sulla vela
+    fotocamera_iniziale: {posizione: [10, -1200, 60], bersaglio: [0, 0, 3], f: 20000}
+    punti:
+      - [[{prua: 34.1}, 0, 8.5], [1228, 380]]      # fronte della vela, sotto lo spigolo superiore
+      - [[{prua: 34.1}, 0, 3.65], [1238, 457]]      # fronte della vela in coperta
+      - [[{prua: 43.6}, 0, 8.8], [1081, 375]]      # fine del cielo piatto della vela
+      - [[{prua: 51.4}, 0, 3.65], [952, 457]]       # piede del dorso della vela in coperta
+      - [[{prua: 95.7}, 0, 5.1], [217, 436]]       # muso del pod
+      - [[{prua: 106.1}, 0, 5.1], [45, 436]]       # coda del pod
+      - [[{prua: 0.5}, 0, 0], [1781, 503]]         # prua al galleggiamento
+      - [[{prua: 40.4}, 0, 15.2], [1134, 269]]     # cima dell'albero

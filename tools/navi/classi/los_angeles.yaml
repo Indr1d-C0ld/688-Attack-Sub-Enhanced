@@ -1,0 +1,97 @@
+# Sottomarino d'attacco classe Los Angeles (SSN-688), Flight I (SSN-688...718), configurazione 1989:
+# timoni orizzontali sulla vela, niente VLS (i 12 tubi verticali arrivano con la Providence, SSN-719),
+# in emersione con i due periscopi alzati.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua. Quote assolute rispetto al galleggiamento in emersione normale.
+# Parti in classi/sottomarini_parti.py (scafo_sottomarino, vela, timone_verticale).
+nome: Los Angeles (SSN-688, Flight I)
+uscita: extracted/navi/los_angeles
+# scafo nero: livello medio e contrasto propri (le foto si portano a questi valori, non al grigio medio 0,45)
+tono: 0.22
+contrasto: 0.12
+moduli_parti: [sottomarini_parti.py]
+# scafo di rivoluzione visto quasi di taglio da tutte le foto basse: pesi delle foto piccoli (coseno 0,2-0,4).
+# Ombreggiatura di ripiego leggera ed esponente 1 sul coseno, cosi' le foto prevalgono dove vedono la superficie.
+peso_ombra: 0.03
+
+scafo:
+  generatore: scafo_sottomarino
+  L: 110.3
+  B: 10.06
+  # prua quasi emisferica (piede al galleggiamento a ~2 m dalla prua), cono di poppa sui 38 m finali
+  # (coperta sotto l'acqua a ~92 m dalla prua, come nelle foto del 2009-2010)
+  forma: {prua: 11.0, poppa: 38.0, esponente_prua: 2.2, esponente_poppa: 1.5, raggio_coda: 0.3}
+  bordo_libero: 1.9        # sommita' dello scafo sul galleggiamento (triangolata: 1,9 m al piede della vela)
+  stazioni: 90
+  punti_sezione: 48
+
+parti:
+  - tipo: vela
+    nome: vela
+    pianta: naca
+    # vela triangolata su tre foto (extracted/navi/los_angeles/lavoro/triangola_la.yaml): bordo d'attacco a
+    # 27,9 m, bordo d'uscita a 36,2 m, cielo a 7,6 m (5,7 m sulla coperta); larghezza ~2,2 m (foto di prua)
+    livelli:
+      - [0.5, {prua: 27.9}, {prua: 36.2}, 1.1]
+      - [7.6, {prua: 27.9}, {prua: 36.2}, 1.1]
+  # timoni di vela: estremita' (a meta' corda) a 31,6 m dalla prua, y = +-5,6 m, quota 4,9 m
+  - {tipo: pinna_orizzontale, nome: timoni_vela, x: {prua: 29.6}, z: 4.9, apertura: 5.6, corda: 2.8, corda_estremita: 1.9, spessore: 0.45, freccia: 1.05}
+  # periscopi alzati (cime triangolate: 13,3 e 13,5 m)
+  - {tipo: cilindro, nome: periscopio_ricerca, x: {prua: 31.4}, y: 0, r: 0.24, z0: 7.0, z1: 13.3, n: 8, mat: scuro}   # Type 18
+  - {tipo: cilindro, nome: periscopio_attacco, x: {prua: 33.3}, y: 0, r: 0.20, z0: 7.0, z1: 13.5, n: 8, mat: scuro}  # Type 2
+  # timone superiore: cima (a meta' corda) a 105,5 m dalla prua e 2,6 m sul galleggiamento
+  - {tipo: timone_verticale, nome: timone, x: {prua: 103.6}, z0: -3.5, z1: 2.6, corda: 3.6, corda_estremita: 2.0, spessore: 0.5, freccia: 0.9}
+
+foto:
+  - nome: prua_dritta
+    file: extracted/navi/los_angeles/foto/fianco_dritta_losangeles_2009.jpg
+    nave: USS Los Angeles (SSN-688), Guam, 2009
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    maschera_file: extracted/navi/los_angeles/foto/fianco_dritta_losangeles_2009_maschera.png   # classi/los_angeles_maschere.yaml
+    orizzonte_y: 745          # costa sullo sfondo: sopra c'e' il cielo
+    soglia_cielo: 150
+    fotocamera_iniziale: {posizione: [133.7, -59.5, 3.6], bersaglio: [18.4, 0.0, 6.3], f: 5576}
+    punti:
+      - [[{prua: 36.2}, 0, 7.6], [975, 623]]       # cielo della vela, spigolo poppiero
+      - [[{prua: 27.9}, 0, 7.6], [1147, 623]]      # cielo della vela, fronte
+      - [[{prua: 36.2}, 0, 1.9], [975, 877]]       # piede poppiero della vela in coperta
+      - [[{prua: 31.6}, -5.6, 4.9], [841, 740]]   # estremita' del timone di vela di dritta
+      - [[{prua: 31.6}, 5.6, 4.9], [1281, 745]]   # estremita' del timone di vela di sinistra
+      - [[{prua: 105.5}, 0, 2.6], [44, 821]]       # cima del timone verticale
+  - nome: prua_sinistra
+    file: extracted/navi/los_angeles/foto/prua_sinistra_olympia_1984.jpg
+    nave: USS Olympia (SSN-717), 1984
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    maschera_file: extracted/navi/los_angeles/foto/prua_sinistra_olympia_1984_maschera.png
+    orizzonte_y: 800
+    soglia_cielo: 150
+    cancella: [[812, 662, 852, 700], [315, 858, 428, 884]]   # numero 717 sulla vela e a prua
+    fotocamera_iniziale: {posizione: [142.0, 77.4, 3.0], bersaglio: [14.4, 0.0, 3.4], f: 4812}
+    punti:
+      - [[{prua: 36.2}, 0, 7.6], [880, 627]]       # cielo della vela, spigolo poppiero
+      - [[{prua: 27.9}, 0, 7.6], [725, 627]]       # cielo della vela, fronte
+      - [[{prua: 36.2}, 0, 1.9], [880, 817]]       # piede poppiero della vela in coperta
+      - [[{prua: 31.6}, -5.6, 4.9], [637, 721]]   # estremita' del timone di vela di dritta
+      - [[{prua: 31.6}, 5.6, 4.9], [964, 714]]    # estremita' del timone di vela di sinistra
+      - [[{prua: 105.5}, 0, 2.6], [1757, 788]]     # cima del timone verticale
+  - nome: poppa_dritta
+    file: extracted/navi/los_angeles/foto/poppa_dritta_sanfrancisco_2010.jpg
+    nave: USS San Francisco (SSN-711), San Diego, 2010
+    esponente_peso: 1.0
+    qualita: 0.9
+    specchiabile: true
+    maschera_file: extracted/navi/los_angeles/foto/poppa_dritta_sanfrancisco_2010_maschera.png
+    orizzonte_y: 600
+    soglia_cielo: 120
+    fotocamera_iniziale: {posizione: [-348.3, -118.7, 25.0], bersaglio: [-0.45, 0.0, 7.1], f: 10557}
+    punti:
+      - [[{prua: 36.2}, 0, 7.6], [1131, 640]]      # cielo della vela, spigolo poppiero
+      - [[{prua: 36.2}, 0, 1.9], [1131, 796]]      # piede poppiero della vela in coperta
+      - [[{prua: 31.6}, -5.6, 4.9], [1309, 715]]  # estremita' del timone di vela di dritta
+      - [[{prua: 31.6}, 5.6, 4.9], [1024, 701]]   # estremita' del timone di vela di sinistra
+      - [[{prua: 105.5}, 0, 2.6], [424, 879]]      # cima del timone verticale
+      - [[{prua: 27.9}, 0, 7.6], [1205, 640]]      # cielo della vela, fronte

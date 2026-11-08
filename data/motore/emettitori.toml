@@ -1,0 +1,860 @@
+# Emettitori radar, ESM ed EMCON (generato da tools/pipeline/emettitori.py: non modificare a mano).
+# Dossier docs/ricerca/11_emettitori_radar_esm.md §6: valori STIMA salvo dove il dossier cita una fonte.
+
+[radar.aps115]
+nome = "AN/APS-115"
+ruolo = "asw_aereo"
+banda = "I"
+ghz = 9.0
+periodo_s = 6.0
+altezza_m = 0.0
+r50_periscopio_mare2_m = 11112
+r50_periscopio_mare4_m = 3704
+r50_snorkel_mare2_m = 27780
+contro_nave_m = 185200
+fattore_esm = 1.1
+puntato = false
+firma_unica = false
+gruppo = "asw_x"
+
+[radar.aps124]
+nome = "AN/APS-124"
+ruolo = "asw_aereo"
+banda = "I"
+ghz = 9.0
+periodo_s = 0.75
+altezza_m = 0.0
+r50_periscopio_mare2_m = 9260
+r50_periscopio_mare4_m = 3704
+r50_snorkel_mare2_m = 22224
+contro_nave_m = 111120
+fattore_esm = 1.1
+puntato = false
+firma_unica = true
+gruppo = "asw_x"
+
+[radar.seaspray]
+nome = "Seaspray Mk 1"
+ruolo = "asw_aereo"
+banda = "I"
+ghz = 9.0
+periodo_s = 1.0
+altezza_m = 0.0
+r50_periscopio_mare2_m = 7408
+r50_periscopio_mare4_m = 2778
+r50_snorkel_mare2_m = 18520
+contro_nave_m = 92600
+fattore_esm = 1.1
+puntato = false
+firma_unica = true
+gruppo = "asw_x"
+
+[radar.wet_eye]
+nome = "Wet Eye"
+ruolo = "asw_aereo"
+banda = "I"
+ghz = 9.0
+periodo_s = 6.0
+altezza_m = 0.0
+r50_periscopio_mare2_m = 7408
+r50_periscopio_mare4_m = 2778
+r50_snorkel_mare2_m = 22224
+contro_nave_m = 148160
+fattore_esm = 1.1
+puntato = false
+firma_unica = false
+gruppo = "asw_x"
+
+[radar.initsiativa2k]
+nome = "Initsiativa-2K «Short Horn»"
+ruolo = "asw_aereo"
+banda = "I"
+ghz = 9.0
+periodo_s = 4.0
+altezza_m = 0.0
+r50_periscopio_mare2_m = 7408
+r50_periscopio_mare4_m = 2778
+r50_snorkel_mare2_m = 18520
+contro_nave_m = 111120
+fattore_esm = 1.1
+puntato = false
+firma_unica = false
+gruppo = "asw_x"
+
+[radar.aps116]
+nome = "AN/APS-116"
+ruolo = "asw_aereo"
+banda = "I"
+ghz = 9.0
+periodo_s = 0.2
+altezza_m = 0.0
+r50_periscopio_mare2_m = 14816
+r50_periscopio_mare4_m = 5556
+r50_snorkel_mare2_m = 33336
+contro_nave_m = 277800
+fattore_esm = 1.1
+puntato = false
+firma_unica = true
+gruppo = "asw_x"
+
+[radar.aps137]
+nome = "AN/APS-137 ISAR"
+ruolo = "asw_aereo"
+banda = "I"
+ghz = 9.0
+periodo_s = 0.2
+altezza_m = 0.0
+r50_periscopio_mare2_m = 18520
+r50_periscopio_mare4_m = 7408
+r50_snorkel_mare2_m = 37040
+contro_nave_m = 277800
+fattore_esm = 1.1
+puntato = false
+firma_unica = true
+gruppo = "asw_x"
+
+[radar.korshun]
+nome = "Korshun"
+ruolo = "asw_aereo"
+banda = "I"
+ghz = 9.0
+periodo_s = 6.0
+altezza_m = 0.0
+r50_periscopio_mare2_m = 9260
+r50_periscopio_mare4_m = 3704
+r50_snorkel_mare2_m = 25928
+contro_nave_m = 185200
+fattore_esm = 1.1
+puntato = false
+firma_unica = false
+gruppo = "asw_x"
+agilita_frequenza = true
+
+[radar.initsiativa2b]
+nome = "Initsiativa-2B"
+ruolo = "asw_aereo"
+banda = "I"
+ghz = 9.0
+periodo_s = 4.0
+altezza_m = 0.0
+r50_periscopio_mare2_m = 6482
+r50_periscopio_mare4_m = 2222
+r50_snorkel_mare2_m = 16668
+contro_nave_m = 92600
+fattore_esm = 1.1
+puntato = false
+firma_unica = false
+gruppo = "asw_x"
+
+[radar.initsiativa2km]
+nome = "Initsiativa-2KM"
+ruolo = "asw_aereo"
+banda = "I"
+ghz = 9.0
+periodo_s = 4.0
+altezza_m = 0.0
+r50_periscopio_mare2_m = 7408
+r50_periscopio_mare4_m = 2778
+r50_snorkel_mare2_m = 18520
+contro_nave_m = 111120
+fattore_esm = 1.1
+puntato = false
+firma_unica = false
+gruppo = "asw_x"
+
+[radar.sps55]
+nome = "AN/SPS-55"
+ruolo = "superficie"
+banda = "I"
+ghz = 9.0
+periodo_s = 3.75
+altezza_m = 30.0
+r50_periscopio_mare2_m = 9260
+r50_periscopio_mare4_m = 3704
+r50_snorkel_mare2_m = 18520
+contro_nave_m = 0
+fattore_esm = 1.2
+puntato = false
+firma_unica = false
+gruppo = "nav_i"
+
+[radar.sps10_67]
+nome = "AN/SPS-10/67"
+ruolo = "superficie"
+banda = "G"
+ghz = 5.0
+periodo_s = 4.0
+altezza_m = 42.0
+r50_periscopio_mare2_m = 7408
+r50_periscopio_mare4_m = 2778
+r50_snorkel_mare2_m = 16668
+contro_nave_m = 0
+fattore_esm = 1.2
+puntato = false
+firma_unica = true
+gruppo = "sup_g"
+
+[radar.mk92_cas]
+nome = "Mk 92 CAS"
+ruolo = "tiro"
+banda = "I"
+ghz = 9.0
+periodo_s = 1.0
+altezza_m = 20.0
+r50_periscopio_mare2_m = 7408
+r50_periscopio_mare4_m = 2778
+r50_snorkel_mare2_m = 16668
+contro_nave_m = 46300
+fattore_esm = 1.2
+puntato = false
+firma_unica = true
+gruppo = "tiro_i"
+
+[radar.spq9]
+nome = "AN/SPQ-9"
+ruolo = "tiro"
+banda = "I"
+ghz = 9.0
+periodo_s = 1.0
+altezza_m = 22.0
+r50_periscopio_mare2_m = 7408
+r50_periscopio_mare4_m = 2778
+r50_snorkel_mare2_m = 16668
+contro_nave_m = 37040
+fattore_esm = 1.2
+puntato = false
+firma_unica = true
+gruppo = "tiro_i"
+
+[radar.sps49]
+nome = "AN/SPS-49"
+ruolo = "ricerca_aerea"
+banda = "C"
+ghz = 0.75
+periodo_s = 5.0
+altezza_m = 38.0
+r50_periscopio_mare2_m = 1852
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 7408
+contro_nave_m = 0
+fattore_esm = 1.3
+puntato = false
+firma_unica = true
+gruppo = "aerea_c"
+
+[radar.sps48]
+nome = "AN/SPS-48"
+ruolo = "ricerca_aerea"
+banda = "E"
+ghz = 2.5
+periodo_s = 6.0
+altezza_m = 42.0
+r50_periscopio_mare2_m = 2778
+r50_periscopio_mare4_m = 926
+r50_snorkel_mare2_m = 9260
+contro_nave_m = 0
+fattore_esm = 1.3
+puntato = false
+firma_unica = false
+gruppo = "aerea_ef"
+
+[radar.sps40]
+nome = "AN/SPS-40"
+ruolo = "ricerca_aerea"
+banda = "B"
+ghz = 0.375
+periodo_s = 6.0
+altezza_m = 30.0
+r50_periscopio_mare2_m = 0
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 3704
+contro_nave_m = 0
+fattore_esm = 1.3
+puntato = false
+firma_unica = true
+gruppo = "aerea_b"
+
+[radar.top_sail]
+nome = "Top Sail / Top Pair / Top Steer"
+ruolo = "ricerca_aerea"
+banda = "C"
+ghz = 0.75
+periodo_s = 8.0
+altezza_m = 38.0
+r50_periscopio_mare2_m = 1852
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 7408
+contro_nave_m = 0
+fattore_esm = 1.3
+puntato = false
+firma_unica = true
+gruppo = "aerea_c"
+
+[radar.head_net_c]
+nome = "Head Net-C / Strut Curve"
+ruolo = "ricerca_aerea"
+banda = "E"
+ghz = 2.5
+periodo_s = 6.0
+altezza_m = 24.0
+r50_periscopio_mare2_m = 2778
+r50_periscopio_mare4_m = 926
+r50_snorkel_mare2_m = 9260
+contro_nave_m = 0
+fattore_esm = 1.3
+puntato = false
+firma_unica = false
+gruppo = "aerea_ef"
+
+[radar.nav_sov]
+nome = "Don-2 / Don Kay / Palm Frond"
+ruolo = "navigazione"
+banda = "I"
+ghz = 9.0
+periodo_s = 3.0
+altezza_m = 24.0
+r50_periscopio_mare2_m = 7408
+r50_periscopio_mare4_m = 2778
+r50_snorkel_mare2_m = 16668
+contro_nave_m = 0
+fattore_esm = 1.2
+puntato = false
+firma_unica = false
+gruppo = "nav_i"
+
+[radar.peel_pair]
+nome = "Peel Pair / Plank Shave"
+ruolo = "superficie"
+banda = "I"
+ghz = 9.0
+periodo_s = 3.0
+altezza_m = 12.0
+r50_periscopio_mare2_m = 7408
+r50_periscopio_mare4_m = 2778
+r50_snorkel_mare2_m = 16668
+contro_nave_m = 0
+fattore_esm = 1.2
+puntato = false
+firma_unica = false
+gruppo = "nav_i"
+
+[radar.nav_civ]
+nome = "radar di navigazione civile (X + S)"
+ruolo = "navigazione"
+banda = "I"
+ghz = 9.0
+periodo_s = 2.5
+altezza_m = 24.0
+r50_periscopio_mare2_m = 3704
+r50_periscopio_mare4_m = 926
+r50_snorkel_mare2_m = 11112
+contro_nave_m = 0
+fattore_esm = 1.2
+puntato = false
+firma_unica = false
+gruppo = "nav_i"
+
+[radar.fc]
+nome = "radar di tiro"
+ruolo = "tiro"
+banda = "J"
+ghz = 15.0
+periodo_s = 1.0
+altezza_m = 19.0
+r50_periscopio_mare2_m = 0
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 0
+contro_nave_m = 55560
+fattore_esm = 1.0
+puntato = true
+firma_unica = false
+gruppo = "tiro_j"
+
+[radar.bps15]
+nome = "AN/BPS-15"
+ruolo = "navigazione"
+banda = "I"
+ghz = 9.0
+periodo_s = 3.0
+altezza_m = 8.0
+r50_periscopio_mare2_m = 0
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 0
+contro_nave_m = 20372
+fattore_esm = 1.2
+puntato = false
+firma_unica = false
+gruppo = "nav_i"
+
+[radar.snoop]
+nome = "Snoop Tray / Snoop Pair"
+ruolo = "navigazione"
+banda = "I"
+ghz = 9.0
+periodo_s = 3.0
+altezza_m = 8.0
+r50_periscopio_mare2_m = 0
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 0
+contro_nave_m = 20372
+fattore_esm = 1.2
+puntato = false
+firma_unica = false
+gruppo = "nav_i"
+
+[radar.spy1a]
+nome = "AN/SPY-1A"
+ruolo = "ricerca_aerea"
+banda = "E"
+ghz = 2.5
+periodo_s = 1.0
+altezza_m = 17.0
+r50_periscopio_mare2_m = 3704
+r50_periscopio_mare4_m = 926
+r50_snorkel_mare2_m = 11112
+contro_nave_m = 0
+fattore_esm = 1.3
+puntato = false
+firma_unica = true
+gruppo = "aerea_ef"
+
+[radar.tipo967]
+nome = "Type 967/968"
+ruolo = "ricerca_aerea"
+banda = "D"
+ghz = 1.5
+periodo_s = 2.0
+altezza_m = 32.0
+r50_periscopio_mare2_m = 2778
+r50_periscopio_mare4_m = 926
+r50_snorkel_mare2_m = 9260
+contro_nave_m = 0
+fattore_esm = 1.3
+puntato = false
+firma_unica = true
+gruppo = "aerea_d"
+
+[radar.tipo1006]
+nome = "Type 1006"
+ruolo = "navigazione"
+banda = "I"
+ghz = 9.0
+periodo_s = 2.5
+altezza_m = 26.0
+r50_periscopio_mare2_m = 7408
+r50_periscopio_mare4_m = 2778
+r50_snorkel_mare2_m = 16668
+contro_nave_m = 0
+fattore_esm = 1.2
+puntato = false
+firma_unica = false
+gruppo = "nav_i"
+
+[radar.top_plate]
+nome = "Top Plate (Fregat-M)"
+ruolo = "ricerca_aerea"
+banda = "D"
+ghz = 1.5
+periodo_s = 5.0
+altezza_m = 31.0
+r50_periscopio_mare2_m = 1852
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 7408
+contro_nave_m = 0
+fattore_esm = 1.3
+puntato = false
+firma_unica = true
+gruppo = "aerea_d"
+
+[radar.sea_giraffe]
+nome = "Sea Giraffe 50HC"
+ruolo = "ricerca_aerea"
+banda = "G"
+ghz = 5.0
+periodo_s = 1.5
+altezza_m = 19.0
+r50_periscopio_mare2_m = 3704
+r50_periscopio_mare4_m = 926
+r50_snorkel_mare2_m = 11112
+contro_nave_m = 0
+fattore_esm = 1.3
+puntato = false
+firma_unica = true
+gruppo = "aerea_g"
+
+[radar.sps43]
+nome = "AN/SPS-43A"
+ruolo = "ricerca_aerea"
+banda = "B"
+ghz = 0.375
+periodo_s = 6.0
+altezza_m = 52.0
+r50_periscopio_mare2_m = 0
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 3704
+contro_nave_m = 0
+fattore_esm = 1.3
+puntato = false
+firma_unica = true
+gruppo = "aerea_b"
+
+[radar.terma]
+nome = "Terma (radar di navigazione)"
+ruolo = "navigazione"
+banda = "I"
+ghz = 9.0
+periodo_s = 3.0
+altezza_m = 7.0
+r50_periscopio_mare2_m = 0
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 0
+contro_nave_m = 18520
+fattore_esm = 1.2
+puntato = false
+firma_unica = false
+gruppo = "nav_i"
+
+[radar.drbv22]
+nome = "DRBV 22"
+ruolo = "ricerca_aerea"
+banda = "D"
+ghz = 1.5
+periodo_s = 4.0
+altezza_m = 16.0
+r50_periscopio_mare2_m = 1852
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 7408
+contro_nave_m = 0
+fattore_esm = 1.3
+puntato = false
+firma_unica = true
+gruppo = "aerea_d"
+
+[radar.calypso]
+nome = "Calypso II (DRUA 33)"
+ruolo = "navigazione"
+banda = "I"
+ghz = 9.0
+periodo_s = 3.0
+altezza_m = 7.0
+r50_periscopio_mare2_m = 0
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 0
+contro_nave_m = 18520
+fattore_esm = 1.2
+puntato = false
+firma_unica = false
+gruppo = "nav_i"
+
+[radar.dsq28]
+nome = "AN/DSQ-28 (Harpoon, TASM)"
+ruolo = "testa_missile"
+banda = "J"
+ghz = 15.0
+periodo_s = 0.5
+altezza_m = 10.0
+r50_periscopio_mare2_m = 0
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 0
+contro_nave_m = 27780
+fattore_esm = 1.0
+puntato = true
+firma_unica = true
+gruppo = "testa_j"
+
+[radar.granit]
+nome = "testa del Granit"
+ruolo = "testa_missile"
+banda = "J"
+ghz = 15.0
+periodo_s = 0.5
+altezza_m = 10.0
+r50_periscopio_mare2_m = 0
+r50_periscopio_mare4_m = 0
+r50_snorkel_mare2_m = 0
+contro_nave_m = 27780
+fattore_esm = 1.0
+puntato = true
+firma_unica = true
+gruppo = "testa_j"
+
+[esm.wlr8]
+nome = "AN/WLR-8(V)2"
+ghz_min = 0.05
+ghz_max = 20.0
+p_intercetto = 0.95
+p_intercetto_basse = 0.8
+errore_ij_gradi = 5.0
+errore_eh_gradi = 8.0
+errore_bd_gradi = 12.0
+altezza_m = 1.5
+
+[esm.bukhta]
+nome = "Bukhta"
+ghz_min = 2.0
+ghz_max = 18.0
+p_intercetto = 0.7
+p_intercetto_basse = 0.7
+errore_ij_gradi = 7.5
+errore_eh_gradi = 12.0
+errore_bd_gradi = 18.0
+altezza_m = 1.5
+
+[esm.dr2000]
+nome = "DR-2000U"
+ghz_min = 2.0
+ghz_max = 18.0
+p_intercetto = 0.8
+p_intercetto_basse = 0.6
+errore_ij_gradi = 6.0
+errore_eh_gradi = 10.0
+errore_bd_gradi = 15.0
+altezza_m = 1.5
+
+[suite]
+perry = ["sps55", "mk92_cas", "sps49", "fc"]
+kidd = ["sps55", "spq9", "sps48", "fc"]
+spruance = ["sps55", "spq9", "sps40", "fc"]
+iowa = ["sps10_67", "sps49", "fc"]
+nimitz = ["sps10_67", "sps49", "sps48"]
+sacramento = ["sps10_67", "sps40"]
+kara = ["nav_sov", "top_sail", "head_net_c", "fc"]
+kirov = ["nav_sov", "top_sail", "fc"]
+slava = ["nav_sov", "top_sail", "fc"]
+krivak2 = ["nav_sov", "head_net_c", "fc"]
+koni = ["nav_sov", "head_net_c", "fc"]
+nanuchka = ["peel_pair", "fc"]
+hauk = ["nav_civ", "fc"]
+oslo = ["drbv22", "nav_civ", "fc"]
+stockholm = ["sea_giraffe", "nav_civ", "fc"]
+nacken = ["terma"]
+kitty_hawk = ["sps10_67", "sps43", "sps48"]
+mercantile = ["nav_civ"]
+cargo = ["nav_civ"]
+petroliera = ["nav_civ"]
+peschereccio = ["nav_civ"]
+portarinfuse = ["nav_civ"]
+petroliera_costiera = ["nav_civ"]
+traghetto = ["nav_civ"]
+rimorchiatore = ["nav_civ"]
+rompighiaccio = ["nav_civ"]
+nave_ricerca = ["nav_civ"]
+bmrt = ["nav_sov"]
+peschereccio_costiero = ["nav_civ"]
+cianciolo = ["nav_civ"]
+p3c = ["aps115"]
+il38 = ["wet_eye"]
+tu142 = ["korshun"]
+sh60b = ["aps124"]
+lynx = ["seaspray"]
+ka25 = ["initsiativa2k"]
+s3a = ["aps116"]
+s3b = ["aps137"]
+be12 = ["initsiativa2b"]
+ka27 = ["initsiativa2km"]
+los_angeles = ["bps15"]
+sturgeon = ["bps15"]
+trafalgar = ["bps15"]
+victor3 = ["snoop"]
+akula = ["snoop"]
+oscar = ["snoop"]
+typhoon = ["snoop"]
+kilo = ["snoop"]
+alfa = ["snoop"]
+charlie2 = ["snoop"]
+foxtrot = ["snoop"]
+harpoon = ["dsq28"]
+tomahawk = ["dsq28"]
+p700 = ["granit"]
+knox = ["sps10_67", "sps40", "fc"]
+ticonderoga = ["sps55", "spq9", "sps49", "spy1a", "fc"]
+type22 = ["tipo1006", "tipo967", "fc"]
+type22b2 = ["tipo1006", "tipo967", "fc"]
+udaloy = ["nav_sov", "head_net_c", "top_plate", "fc"]
+grisha3 = ["nav_sov", "head_net_c", "fc"]
+ugra = ["nav_sov", "head_net_c", "fc"]
+ohio = ["bps15"]
+type206 = ["calypso"]
+delta3 = ["snoop"]
+sierra = ["snoop"]
+victor1 = ["snoop"]
+
+[esm_di]
+los_angeles = "wlr8"
+sturgeon = "wlr8"
+trafalgar = "wlr8"
+victor3 = "bukhta"
+akula = "bukhta"
+oscar = "bukhta"
+typhoon = "bukhta"
+kilo = "bukhta"
+alfa = "bukhta"
+charlie2 = "bukhta"
+foxtrot = "bukhta"
+delta3 = "bukhta"
+sierra = "bukhta"
+victor1 = "bukhta"
+ohio = "wlr8"
+type206 = "dr2000"
+
+[intermittente]
+p3c = [6.0, 18.0, 120.0, 480.0]
+il38 = [120.0, 300.0, 120.0, 300.0]
+tu142 = [120.0, 300.0, 120.0, 300.0]
+sh60b = [30.0, 60.0, 180.0, 300.0]
+lynx = [30.0, 60.0, 180.0, 300.0]
+ka25 = [1000000000.0, 1000000000.0, 0.0, 0.0]
+s3a = [1.0, 3.0, 180.0, 600.0]
+s3b = [1.0, 3.0, 180.0, 600.0]
+be12 = [120.0, 300.0, 120.0, 300.0]
+ka27 = [1000000000.0, 1000000000.0, 0.0, 0.0]
+
+[antenne.perry]
+sps55 = { parte = "pennone", quota_m = 28.1 }
+mk92_cas = { parte = "radome_mk92", quota_m = 20.0 }
+sps49 = { parte = "sps49", quota_m = 25.3 }
+fc = { parte = "radome_mk92", quota_m = 20.0 }
+
+[antenne.kidd]
+sps55 = { parte = "pennone_prodiero", quota_m = 31.6 }
+spq9 = { parte = "radome_albero_prodiero", quota_m = 22.2 }
+sps48 = { parte = "sps48", quota_m = 34.3 }
+
+[antenne.spruance]
+sps55 = { parte = "sps55", quota_m = 37.6 }
+spq9 = { parte = "piattaforma_radome", quota_m = 22.8 }
+sps40 = { parte = "sps40", quota_m = 29.9 }
+
+[antenne.iowa]
+sps10_67 = { parte = "pennone_trinchetto", quota_m = 41.9 }
+sps49 = { parte = "sps49", quota_m = 47.4 }
+fc = { parte = "mk38_poppiero", quota_m = 25.1 }
+
+[antenne.nimitz]
+sps10_67 = { parte = "radar_poppiero", quota_m = 41.4 }
+sps49 = { parte = "pennone_alto", quota_m = 52.5 }
+sps48 = { parte = "sps48", quota_m = 42.3 }
+
+[antenne.sacramento]
+sps10_67 = { parte = "pennone_prodiero", quota_m = 46.6 }
+sps40 = { parte = "radar_prodiero", quota_m = 58.5 }
+
+[antenne.kara]
+nav_sov = { parte = "albero_prodiero", quota_m = 21.3 }
+top_sail = { parte = "top_sail", quota_m = 32.7 }
+head_net_c = { parte = "head_net", quota_m = 23.7 }
+fc = { parte = "head_light_prodiero", quota_m = 21.1 }
+
+[antenne.kirov]
+nav_sov = { parte = "radar_plancia", quota_m = 30.2 }
+top_sail = { parte = "top_pair", quota_m = 48.5 }
+fc = { parte = "direttore_prodiero", quota_m = 20.3 }
+
+[antenne.slava]
+nav_sov = { parte = "albero_maestro", quota_m = 32.2 }
+top_sail = { parte = "top_steer", quota_m = 38.1 }
+
+[antenne.krivak2]
+nav_sov = { parte = "albero_principale", quota_m = 23.8 }
+head_net_c = { parte = "head_net", quota_m = 26.0 }
+fc = { parte = "pop_group", quota_m = 19.4 }
+
+[antenne.koni]
+nav_sov = { parte = "pennone", quota_m = 17.7 }
+head_net_c = { parte = "strut_curve", quota_m = 19.8 }
+fc = { parte = "pop_group", quota_m = 11.9 }
+
+[antenne.nanuchka]
+peel_pair = { parte = "radar_nav", quota_m = 12.1 }
+fc = { parte = "pop_group", quota_m = 9.5 }
+
+[antenne.hauk]
+nav_civ = { parte = "radar", quota_m = 11.2 }
+fc = { parte = "direttore", quota_m = 8.7 }
+
+[antenne.oslo]
+drbv22 = { parte = "radar_aereo", quota_m = 15.6 }
+nav_civ = { parte = "radar_navigazione", quota_m = 18.2 }
+fc = { parte = "direttore_prodiero", quota_m = 14.1 }
+
+[antenne.stockholm]
+sea_giraffe = { parte = "sea_giraffe", quota_m = 19.2 }
+nav_civ = { parte = "torre_albero", quota_m = 17.1 }
+fc = { parte = "direttore", quota_m = 13.0 }
+
+[antenne.kitty_hawk]
+sps10_67 = { parte = "radar_poppiero", quota_m = 42.8 }
+sps43 = { parte = "pennone_alto", quota_m = 52.5 }
+sps48 = { parte = "sps48", quota_m = 43.5 }
+
+[antenne.mercantile]
+nav_civ = { parte = "albero_radar", quota_m = 33.6 }
+
+[antenne.cargo]
+nav_civ = { parte = "albero_radar", quota_m = 43.7 }
+
+[antenne.petroliera]
+nav_civ = { parte = "albero_radar", quota_m = 38.3 }
+
+[antenne.peschereccio]
+nav_civ = { parte = "radar", quota_m = 13.9 }
+
+[antenne.portarinfuse]
+nav_civ = { parte = "albero_poppiero", quota_m = 38.0 }
+
+[antenne.petroliera_costiera]
+nav_civ = { parte = "radar", quota_m = 24.0 }
+
+[antenne.traghetto]
+nav_civ = { parte = "torre_albero", quota_m = 40.0 }
+
+[antenne.rimorchiatore]
+nav_civ = { parte = "albero_plancia", quota_m = 13.3 }
+
+[antenne.rompighiaccio]
+nav_civ = { parte = "radome_plancia", quota_m = 30.6 }
+
+[antenne.nave_ricerca]
+nav_civ = { parte = "albero", quota_m = 38.0 }
+
+[antenne.bmrt]
+nav_sov = { parte = "albero_dritta", quota_m = 29.0 }
+
+[antenne.peschereccio_costiero]
+nav_civ = { parte = "radar", quota_m = 6.9 }
+
+[antenne.cianciolo]
+nav_civ = { parte = "radar", quota_m = 10.3 }
+
+[antenne.knox]
+sps10_67 = { parte = "sps10", quota_m = 32.8 }
+sps40 = { parte = "sps40", quota_m = 28.1 }
+
+[antenne.ticonderoga]
+sps55 = { parte = "albero_prodiero", quota_m = 28.0 }
+sps49 = { parte = "sps49", quota_m = 29.1 }
+spy1a = { parte = "spy1_prua_dritta", quota_m = 17.0 }
+
+[antenne.type22]
+tipo1006 = { parte = "pennone_prodiero", quota_m = 26.2 }
+tipo967 = { parte = "type967_968", quota_m = 32.4 }
+fc = { parte = "type910_prodiero", quota_m = 18.9 }
+
+[antenne.type22b2]
+tipo1006 = { parte = "pennone_prodiero", quota_m = 25.1 }
+tipo967 = { parte = "type967_968", quota_m = 32.0 }
+fc = { parte = "type910_prodiero", quota_m = 19.0 }
+
+[antenne.udaloy]
+nav_sov = { parte = "albero_prodiero", quota_m = 23.9 }
+head_net_c = { parte = "strut_pair_maestro", quota_m = 28.3 }
+top_plate = { parte = "top_plate", quota_m = 30.6 }
+
+[antenne.grisha3]
+nav_sov = { parte = "albero", quota_m = 16.2 }
+head_net_c = { parte = "strut_curve", quota_m = 15.9 }
+fc = { parte = "pop_group", quota_m = 12.4 }
+
+[antenne.ugra]
+nav_sov = { parte = "albero", quota_m = 23.8 }
+head_net_c = { parte = "strut_curve", quota_m = 25.3 }

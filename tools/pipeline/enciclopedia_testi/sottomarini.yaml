@@ -1,0 +1,291 @@
+# Testi dell'enciclopedia, sottomarini (docs/00_ROADMAP.md, requisito 14): stesso formato di campioni.yaml. Scritti a
+# mano, in parafrasi dai dossier di docs/ricerca (nessun testo copiato), con le fonti.
+# Campi: it, en (storia e impiego 1985-1990); uso_it, uso_en (che cosa significa in partita); fonti (elenco);
+# armi_tipiche (classi senza carico in carico.toml): voci (id dell'indice), altre (testo libero), fonte.
+
+sottomarino.sturgeon:
+  it: >-
+    Sottomarino d'attacco nucleare della US Navy, nel 1989 ancora in linea accanto ai 688. Con un solo reattore S5W
+    arriva a 26 nodi in immersione, meno del 688, ma ha una profondità di collaudo di 400 metri; nove unità hanno lo
+    scafo allungato a 92 metri. Negli anni '80 riceve il sonar BQQ-5, una schiera rimorchiata aggiunta in un secondo
+    tempo e lavori di silenziamento, mentre i timoni sulla vela ruotano in verticale per emergere nel ghiaccio. Dai
+    quattro tubi a centro nave lancia siluri Mk 48, Harpoon, Tomahawk e mine; ha due periscopi, quello d'attacco Type 2
+    e quello di ricerca, nel 1989 quasi sempre un Type 18.
+  en: >-
+    A US Navy nuclear attack submarine, still in the front line alongside the 688s in 1989. With a single S5W reactor
+    it reaches 26 knots submerged, less than the 688, but it has a test depth of 400 metres; nine boats have a hull
+    stretched to 92 metres. In the 1980s it received the BQQ-5 sonar, a towed array added as a retrofit and quieting
+    work, while its sail planes rotate to the vertical for surfacing through ice. Its four midships tubes fire Mk 48
+    torpedoes, Harpoon, Tomahawk and mines; it has two periscopes, the Type 2 attack scope and the search scope, in
+    1989 almost always a Type 18.
+  uso_it: >-
+    È un battello della NATO: va riconosciuto bene per non scambiarlo per un sovietico. A velocità silenziosa fa circa
+    117 dB, cinque più del 688, con un'elica a 5 pale e le righe di rete a 60 Hz come i battelli americani (i
+    sovietici le hanno a 50 Hz). Non supera i 26 nodi.
+  uso_en: >-
+    It is a NATO boat: identify it carefully so as not to mistake it for a Soviet one. At quiet speed it makes about
+    117 dB, five more than the 688, with a 5-blade propeller and 60 Hz power-line tonals like American boats (Soviet
+    boats have them at 50 Hz). It cannot exceed 26 knots.
+  fonti: ['dossier 01 §2.2 [WPSturgeon] [FASBQQ5] [PM04]', 'dossier 01 §3.1-3.2 [MIA1]', 'dossier 04 §1.2 [SC-forum]',
+          'dossier 14 §1.4 [WPSturgeon]', 'dossier 20 §2.2 [WIKI-637] [NMVM]', 'acustica.toml (firme.sturgeon)']
+  armi_tipiche:
+    voci: [siluro.mk48, siluro.mk48_adcap, missile.harpoon, missile.tasm, mina.mk67, mina.mk60]
+    altre: ['razzi antisom UUM-44 SUBROC a testata nucleare (2-4, in ritiro nel 1989)']
+    fonte: 'dossier 01 §2.2 [WPSturgeon]; dossier 01 §6.4 (Tomahawk antinave); dossier 14 §1.4 [WPSturgeon]'
+
+sottomarino.trafalgar:
+  it: >-
+    Il sottomarino d'attacco nucleare della Royal Navy degli anni '80: nel 1989 ne sono in servizio cinque, da HMS
+    Trafalgar (1983) a HMS Trenchant (1989). Lungo poco più di 85 metri, supera i 30 nodi; tutte le unità tranne la
+    capoclasse spingono con un pump-jet invece che con un'elica, e questo cancella la riga delle pale che il sonar
+    nemico cerca. Nel 1989 i cinque tubi lanciano siluri Tigerfish, vecchi Mk 8 antinave, missili Sub-Harpoon e mine:
+    Spearfish e Tomahawk arrivano solo negli anni '90. Il periscopio d'attacco CH84, fra i primi elettronici, ha di
+    serie intensificatore d'immagine e camera termica; la profondità di collaudo è segreta, le stime prudenti dicono
+    circa 300 metri.
+  en: >-
+    The Royal Navy's nuclear attack submarine of the 1980s: in 1989 five are in service, from HMS Trafalgar (1983) to
+    HMS Trenchant (1989). Just over 85 metres long, it exceeds 30 knots; every boat except the first is driven by a
+    pump-jet instead of a propeller, which removes the blade line that enemy sonar looks for. In 1989 its five tubes
+    fire Tigerfish torpedoes, old Mk 8 anti-ship torpedoes, Sub-Harpoon missiles and mines: Spearfish and Tomahawk
+    only arrive in the 1990s. The CH84 attack periscope, among the first electronic ones, has an image intensifier and
+    a thermal camera as standard; test depth is secret, and cautious estimates say about 300 metres.
+  uso_it: >-
+    È un alleato, fra i sottomarini nucleari d'attacco la firma più bassa: circa 110 dB a velocità silenziosa, poco sotto il 688, e niente
+    riga di pala da contare. Al periscopio di notte, grazie al termico del CH84, vede la superficie meglio di
+    chiunque; la sua quota periscopica è di 18 metri.
+  uso_en: >-
+    It is an ally, the quietest of the nuclear attack boats: about 110 dB at quiet speed, just below the 688, and no
+    blade line to count. At the periscope by night, thanks to the CH84's thermal camera, it sees the surface better
+    than anyone; its periscope depth is 18 metres.
+  fonti: ['dossier 01 §2.3 [WPTraf] [JFS] [NWBR] [WPTiger]', 'dossier 01 §3.2', 'dossier 14 §1.4 [WPTraf]',
+          'dossier 20 §3 [RNS] [SD] e §8.3', 'acustica.toml (firme.trafalgar)', 'periscopi.toml (classi.trafalgar)']
+  armi_tipiche:
+    voci: [siluro.tigerfish, missile.harpoon]
+    altre: ['siluri antinave Mk 8', 'mine (tipo non precisato)', 'esche da due lanciatori SSE Mk 8']
+    fonte: 'dossier 01 §2.3 [NWBR] [WPTiger]; dossier 14 §1.4 [WPTraf]'
+
+sottomarino.victor3:
+  it: >-
+    Il Progetto 671RTM «Shchuka», Victor III per la NATO, in servizio dal 1979, fu il primo sottomarino d'attacco
+    sovietico davvero silenzioso: negli ambienti della US Navy lo si considerava pari a uno Sturgeon. Si riconosce dal
+    grosso bulbo in cima al timone verticale, che custodisce la schiera rimorchiata del sonar Skat-KS; ha un'elica
+    tandem, rivestimento anecoico, 30 nodi e 400 metri di quota di lavoro. Oltre ai tubi da 533 mm ne ha due da 650 mm
+    per i siluri pesanti 65-76 e i missili antisom SS-N-16. Nel 1983 il K-324 si impigliò nella schiera rimorchiata
+    della fregata USS McCloy che stava pedinando; nel 1987 cinque Victor III (operazione Atrina) girarono attorno alla
+    Groenlandia per non passare sopra il SOSUS del varco GIUK.
+  en: >-
+    Project 671RTM «Shchuka», NATO's Victor III, in service from 1979, was the first truly quiet Soviet attack
+    submarine: US Navy circles rated it equal to a Sturgeon. It is recognised by the large pod on top of the vertical
+    rudder, which houses the towed array of the Skat-KS sonar; it has a tandem propeller, anechoic coating, 30 knots
+    and a 400-metre operating depth. Besides its 533 mm tubes it has two 650 mm tubes for 65-76 heavy torpedoes and
+    SS-N-16 anti-submarine missiles. In 1983 K-324 fouled the towed array of the frigate USS McCloy it was trailing;
+    in 1987 five Victor IIIs (Operation Atrina) went round Greenland to avoid passing over the GIUK gap SOSUS.
+  uso_it: >-
+    A velocità silenziosa fa circa 122 dB, una decina più del 688, con le righe di rete a 50 Hz: in ascolto di solito
+    lo si sente per primi, ma il rivestimento anecoico riduce molto l'eco del sonar attivo. È pericoloso anche da
+    lontano: se tiene un contatto fra 10 e 50 km senza una buona soluzione per i siluri, lancia un Vodopad, che fa
+    scendere col paracadute un siluro vicino al bersaglio.
+  uso_en: >-
+    At quiet speed it makes about 122 dB, some ten more than the 688, with 50 Hz power-line tonals: when listening
+    you usually hear it first, but the anechoic coating greatly reduces its active sonar echo. It is dangerous at long
+    range too: if it holds a contact between 10 and 50 km without a good torpedo solution, it fires a Vodopad, which
+    drops a torpedo by parachute close to the target.
+  fonti: ['dossier 01 §2.5 [WPVictor] [RW671] [RWSkat] [TYL]', 'dossier 02 §1.4 [PM04] e §2.7 [Cote]',
+          'dossier 03 §C3', 'dossier 04 §3 [RU-671] [WP-Victor]', 'dossier 05 §3.2 e §7.4 [DSRM671]',
+          'acustica.toml (firme.victor3)']
+  armi_tipiche:
+    voci: [siluro.type53_65k, siluro.set65, siluro.test71m, siluro.uset80, missile.vyuga]
+    altre: ['siluri da 650 mm 65-76', 'missili antisom RPK-6 Vodopad e RPK-7 Veter (SS-N-16)',
+            'missili da crociera S-10 Granat (SS-N-21) sui 671RTMK dal 1988', 'esche MG-74 Korund-2 al posto di armi',
+            '36 mine al posto delle 24 armi']
+    fonte: 'dossier 01 §2.5 [NWRU] [WPRPK6] [WPRK55]; dossier 05 §5.2 [DSRM671]; dossier 14 §1.4 [WPVictor]'
+
+sottomarino.akula:
+  it: >-
+    Il Progetto 971 «Shchuka-B», Akula per la NATO, fu lo choc degli anni '80 per la US Navy: la prima unità, K-284,
+    entrò in servizio alla fine del 1984 e nel 1989 ce n'erano circa cinque. Era più silenzioso di ogni sottomarino
+    nucleare sovietico precedente; al salto contribuirono le informazioni passate dalla rete di spie Walker e le
+    fresatrici Toshiba-Kongsberg usate per le eliche. Fila a 33 nodi, lavora fino a circa 500 metri, ha 73 uomini e il
+    sonar digitale Skat-3 con antenne laterali e una schiera rimorchiata nel bulbo sul timone. Con quattro tubi da 533
+    e quattro da 650 mm imbarca una quarantina di armi; il suo arrivo rese molto più difficile agli SSN americani la
+    caccia agli SSBN sovietici nei bastioni.
+  en: >-
+    Project 971 «Shchuka-B», NATO's Akula, was the US Navy's shock of the 1980s: the first boat, K-284, was
+    commissioned at the end of 1984 and by 1989 there were about five. It was quieter than any earlier Soviet nuclear
+    submarine; the leap was helped by information passed on by the Walker spy ring and by the Toshiba-Kongsberg
+    milling machines used for propellers. It runs at 33 knots, operates down to about 500 metres, has 73 men and the
+    digital Skat-3 sonar with flank arrays and a towed array in the pod on the rudder. With four 533 mm and four
+    650 mm tubes it carries some forty weapons; its arrival made the American SSNs' hunt for Soviet SSBNs in the
+    bastions much harder.
+  uso_it: >-
+    È l'avversario più difficile: a velocità silenziosa fa circa 112 dB, quanto il 688, e chi sente per primo dipende
+    da quota, strato e pazienza. Il suo sonar classifica da solo i contatti e, come il Victor III, può colpire da
+    lontano col Vodopad. Per trovarlo conviene andare piano con la schiera rimorchiata e cercare le sue righe al LOFAR.
+  uso_en: >-
+    It is the toughest opponent: at quiet speed it makes about 112 dB, as much as the 688, and who hears whom first
+    depends on depth, layer and patience. Its sonar classifies contacts by itself and, like the Victor III, it can
+    strike from afar with the Vodopad. To find it, go slow with the towed array and look for its lines on LOFAR.
+  fonti: ['dossier 01 §2.6 [WPAkula] [RN971] [RWSkat] [USNI95]', 'dossier 02 §2.7 [Cote] e §7.1 [CNA18]',
+          'dossier 03 §C2 (Toshiba-Kongsberg)', 'dossier 09 §1.2 [RU-SKAT]', 'dossier 05 §7.4',
+          'acustica.toml (firme.akula)']
+  armi_tipiche:
+    voci: [siluro.uset80, siluro.test71m, missile.vyuga]
+    altre: ['siluri da 650 mm 65-76', 'missili antisom RPK-6 Vodopad e RPK-7 Veter (SS-N-16)',
+            'missili da crociera S-10 Granat (SS-N-21)']
+    fonte: 'dossier 01 §2.6 [WPRK55] [WPRPK6]; dossier 05 §3.1 [DSRM971]'
+
+sottomarino.oscar:
+  it: >-
+    Il Progetto 949A «Antey», Oscar II per la NATO, è un grande sottomarino lanciamissili da crociera nato per la lotta
+    alle portaerei: circa 154 metri di lunghezza, due reattori, due eliche e 32 nodi. Fra lo scafo resistente e quello
+    esterno porta 24 missili P-700 Granit (SS-N-19), che partono in immersione e arrivano a circa 550 km; in una salva i
+    missili si scambiano dati e si dividono i bersagli. Il primo Oscar II entrò in servizio nel 1986 e nel 1989 ce
+    n'erano circa tre, accanto a due Oscar I. Per tirare così lontano servivano però dati dall'esterno, da aerei
+    Tu-95RTs o da satelliti: l'ultimo satellite radar fu lanciato nel marzo 1988, e nel 1989 dallo spazio si vedevano
+    solo le navi che emettevano.
+  en: >-
+    Project 949A «Antey», NATO's Oscar II, is a large cruise-missile submarine built to fight carriers: about 154
+    metres long, two reactors, two shafts and 32 knots. Between the pressure hull and the outer hull it carries 24
+    P-700 Granit (SS-N-19) missiles, launched submerged and reaching about 550 km; in a salvo the missiles exchange
+    data and share out the targets. The first Oscar II was commissioned in 1986 and by 1989 there were about three,
+    alongside two Oscar Is. To shoot that far, though, it needed outside data from Tu-95RTs aircraft or satellites:
+    the last radar satellite was launched in March 1988, and in 1989 only ships that were emitting could be seen from
+    space.
+  uso_it: >-
+    Grande e a due assi, a velocità silenziosa fa circa 120 dB e dà un'eco forte al sonar attivo. Prima della salva
+    allaga i contenitori dei missili: il transitorio si sente in passivo a 5-20 km ed è il momento di attaccarlo. Contro
+    un gruppo in silenzio radar, nel 1989, non ha dati satellitari utili.
+  uso_en: >-
+    Large and twin-shafted, at quiet speed it makes about 120 dB and returns a strong active sonar echo. Before a
+    salvo it floods the missile containers: the transient is heard on passive at 5-20 km and that is the moment to
+    attack it. Against a group in radar silence, in 1989, it has no useful satellite data.
+  fonti: ['dossier 01 §2.7 [WPOscar] [WPGranit]', 'dossier 02 §7.2 [CIA-NS]', 'dossier 05 §0.1, §3.3 [RWP700] [WPUSA] e §3.5',
+          'acustica.toml (firme.oscar)']
+  armi_tipiche:
+    voci: [missile.p700]
+    altre: ['missili antisom RPK-6 Vodopad e RPK-7 Veter (SS-N-16)', 'siluri da 533 e 650 mm (tipi non precisati nei dossier)']
+    fonte: 'dossier 01 §2.7 [WPOscar] [WPGranit]; dossier 05 §3.1 [RWVodopad] [NPK206]'
+
+sottomarino.charlie2:
+  it: >-
+    Il Progetto 670M «Chayka», Charlie II per la NATO, è un sottomarino lanciamissili nucleare di seconda generazione,
+    più piccolo e lento dell'Oscar: un reattore, un'elica e 24 nodi in immersione. A prua ha otto contenitori inclinati
+    per i missili antinave P-120 Malakhit (SS-N-9), lanciati in immersione da non più di 50 metri e con una portata di
+    circa 120 km. Il sistema di tiro li sparava tutti e otto in una sola salva, con i dati del sonar Rubikon di bordo:
+    se il bersaglio era in una zona di convergenza, il battello poteva attaccare da solo. Alle prove del 1974 il missile
+    si dimostrò poco affidabile, e come gli altri sovietici di seconda generazione il Charlie II era rumoroso.
+  en: >-
+    Project 670M «Chayka», NATO's Charlie II, is a second-generation nuclear cruise-missile submarine, smaller and
+    slower than the Oscar: one reactor, one propeller and 24 knots submerged. In the bow it has eight inclined
+    containers for P-120 Malakhit (SS-N-9) anti-ship missiles, launched submerged from no deeper than 50 metres with a
+    range of about 120 km. The fire-control system launched all eight in a single salvo, using data from the onboard
+    Rubikon sonar: if the target lay in a convergence zone, the boat could attack on its own. In the 1974 trials the
+    missile proved unreliable, and like the other second-generation Soviet boats the Charlie II was noisy.
+  uso_it: >-
+    È il sottomarino più rumoroso del gioco: circa 132 dB anche a velocità silenziosa e forti righe a 50 Hz, quindi si
+    scopre da lontano. Per lanciare sale a 50 metri e rallenta sotto i 6 nodi, poi scappa a tutta forza: se lo si sente
+    fare così con una formazione amica a 55 o 110 km, la salva è vicina.
+  uso_en: >-
+    It is the noisiest submarine in the game: about 132 dB even at quiet speed and strong 50 Hz lines, so it is
+    detected from far away. To launch it rises to 50 metres and slows below 6 knots, then runs at full power: if you
+    hear it do this with a friendly formation at 55 or 110 km, the salvo is coming.
+  fonti: ['dossier 01 §2.8 [WPCharlie] [TYL]', 'dossier 01 §6.4', 'dossier 05 §0.1, §3.1, §3.4 [RWP120] e §7.4',
+          'acustica.toml (firme.charlie2)']
+  armi_tipiche:
+    voci: []
+    altre: ['8 missili antinave P-120 Malakhit (SS-N-9)', 'siluri da 533 mm e, secondo fonti russe, da 400 mm (tipi non precisati)']
+    fonte: 'dossier 01 §2.8 [WPCharlie]; dossier 05 §3.1 [RWP120]'
+
+sottomarino.typhoon:
+  it: >-
+    Il Progetto 941, che i sovietici chiamavano «Akula» (da non confondere con l'Akula della NATO, il Progetto 971), è
+    per la NATO il Typhoon: un sottomarino lanciamissili balistici enorme, lungo 175 metri e largo 23, da 48.000
+    tonnellate in immersione. Porta 20 missili R-39 (SS-N-20) e ha due reattori che muovono due eliche intubate a 7
+    pale; l'equipaggio è di 160 uomini. Fra il 1981 e il 1989 ne entrarono in servizio sei. Con missili di portata
+    intercontinentale non doveva uscire in oceano: in guerra avrebbe atteso nei «bastioni» del Mare di Barents e
+    dell'Artico, anche sotto il ghiaccio, difeso da sottomarini d'attacco, navi, aerei e campi minati.
+  en: >-
+    Project 941, which the Soviets called «Akula» (not to be confused with NATO's Akula, Project 971), is NATO's
+    Typhoon: a huge ballistic-missile submarine, 175 metres long and 23 wide, displacing 48,000 tonnes submerged. It
+    carries 20 R-39 (SS-N-20) missiles and has two reactors driving two ducted 7-blade propellers; the crew is 160
+    men. Six were commissioned between 1981 and 1989. With intercontinental-range missiles it had no need to go out
+    into the ocean: in wartime it would have waited in the «bastions» of the Barents Sea and the Arctic, under the ice
+    too, guarded by attack submarines, ships, aircraft and minefields.
+  uso_it: >-
+    Malgrado la mole, fra 4 e 8 nodi resta attorno ai 125 dB: più rumoroso del 688, molto meno di un Charlie II, e il
+    suo scafo enorme dà un'eco forte. Trovarlo e pedinarlo nei bastioni senza farsi scoprire dai sottomarini d'attacco
+    che lo proteggono è una missione tipica del 688; con sei tubi da 533 mm, però, può rispondere.
+  uso_en: >-
+    Despite its bulk, between 4 and 8 knots it stays around 125 dB: louder than the 688, much quieter than a Charlie
+    II, and its huge hull returns a strong echo. Finding and trailing it in the bastions without being detected by the
+    attack submarines guarding it is a typical 688 mission; with six 533 mm tubes, however, it can fight back.
+  fonti: ['dossier 01 §2.9 [WPTyphoon] [MIA1]', 'dossier 02 §7.1 [CNA18] e §7.3 [CIA-bastion]', 'dossier 03 §A2 (CIA 2017)',
+          'acustica.toml (firme.typhoon)']
+  armi_tipiche:
+    voci: [missile.vyuga]
+    altre: ['20 missili balistici R-39 (SS-N-20)', 'siluri da 533 mm della famiglia Type 53',
+            'missili antisom RPK-6 Vodopad (SS-N-16)']
+    fonte: 'dossier 01 §2.9 [WPTyphoon]'
+
+sottomarino.kilo:
+  it: >-
+    Il Progetto 877 «Paltus», Kilo per la NATO, è il sottomarino convenzionale sovietico degli anni '80: diesel-elettrico,
+    lungo 72,6 metri, con 52 uomini e una quota di lavoro di 240 metri. In immersione tocca i 20 nodi, ma a quella
+    velocità la batteria si scarica in poco più di mezz'ora; a 3 nodi invece copre 400 miglia. In batteria è molto
+    silenzioso; per ricaricare deve salire a quota periscopica e alzare lo snorkel, e allora i diesel lo rendono
+    rumoroso e visibile al radar. Porta sei tubi a prua con 18 siluri o 24 mine e il sonar MGK-400 Rubikon. La dottrina
+    sovietica lo usava in barriere negli stretti e, in acque basse, posato sul fondo a motori fermi.
+  en: >-
+    Project 877 «Paltus», NATO's Kilo, is the Soviet conventional submarine of the 1980s: diesel-electric, 72.6 metres
+    long, with 52 men and a 240-metre operating depth. Submerged it reaches 20 knots, but at that speed the battery is
+    drained in just over half an hour; at 3 knots, instead, it covers 400 miles. On battery it is very quiet; to
+    recharge it must come to periscope depth and raise the snorkel, and then the diesels make it noisy and visible to
+    radar. It carries six bow tubes with 18 torpedoes or 24 mines and the MGK-400 Rubikon sonar. Soviet doctrine used
+    it in barriers across straits and, in shallow water, lying on the bottom with engines stopped.
+  uso_it: >-
+    In batteria e piano è fra i battelli più difficili da sentire, circa 114 dB a 4,5 nodi, ma la batteria lo obbliga a
+    strisciare. A snorkel il rumore sale di oltre 20 dB, con le righe dei diesel attorno ai 12,5 Hz: è il momento di
+    scoprirlo, e col mare forza 6 non riesce più a ricaricare. In acque basse può posarsi sul fondo e sparire dal
+    passivo.
+  uso_en: >-
+    On battery and slow it is among the hardest boats to hear, about 114 dB at 4.5 knots, but the battery forces it to
+    creep. On snorkel its noise rises by more than 20 dB, with diesel lines around 12.5 Hz: that is the moment to
+    detect it, and in sea state 6 it can no longer recharge. In shallow water it can settle on the bottom and vanish
+    from passive sonar.
+  fonti: ['dossier 01 §2.10 [WPKilo] [MIA1]', 'dossier 02 §7.2 [CIA-NS] [PM04]', 'dossier 06 §4 [WATM]',
+          'dossier 11 §5', 'dossier 21 §7.3', 'acustica.toml (firme.kilo)']
+  armi_tipiche:
+    voci: []
+    altre: ['18 siluri da 533 mm (tipi non precisati nei dossier) o 24 mine']
+    fonte: 'dossier 01 §2.10 [WPKilo]'
+
+sottomarino.foxtrot:
+  it: >-
+    Il Progetto 641, Foxtrot per la NATO, è un sottomarino diesel-elettrico più vecchio e più grande del Kilo: 89,9
+    metri, 78 uomini, tre diesel e tre assi. In immersione non supera i 15 nodi e a 2 nodi copre circa 380 miglia prima
+    di dover ricaricare. In compenso è armatissimo, con dieci tubi da 533 mm, sei a prua e quattro a poppa, e 22 siluri
+    o 32 mine. Nella crisi di Cuba del 1962 alcuni Foxtrot furono tenuti sotto col sonar attivo dai gruppi antisom
+    americani finché le batterie non li costrinsero a emergere. Nel 1989 era ancora in servizio: quell'anno uno restò
+    impigliato nella rete di un peschereccio norvegese nel Mare di Barents.
+  en: >-
+    Project 641, NATO's Foxtrot, is a diesel-electric submarine older and larger than the Kilo: 89.9 metres, 78 men,
+    three diesels and three shafts. Submerged it cannot exceed 15 knots and at 2 knots it covers about 380 miles before
+    it must recharge. In return it is heavily armed, with ten 533 mm tubes, six forward and four aft, and 22 torpedoes
+    or 32 mines. In the 1962 Cuban crisis some Foxtrots were held down with active sonar by American anti-submarine
+    groups until their batteries forced them to surface. In 1989 it was still in service: that year one was caught in
+    the net of a Norwegian trawler in the Barents Sea.
+  uso_it: >-
+    In batteria fa circa 122 dB, ben più del Kilo, e a snorkel oltre 20 dB in più, con le righe dei diesel attorno agli
+    11 Hz; i tre assi lo distinguono al conteggio delle pale. È lento e in immersione dura poco: tenerlo sotto finché la
+    batteria si esaurisce funziona ancora. Ha però tubi anche a poppa, quindi non è inerme verso chi lo insegue.
+  uso_en: >-
+    On battery it makes about 122 dB, well above the Kilo, and on snorkel over 20 dB more, with diesel lines around
+    11 Hz; its three shafts set it apart in a blade count. It is slow and does not last long submerged: holding it down
+    until the battery runs out still works. It also has stern tubes, though, so it is not defenceless against a
+    pursuer.
+  fonti: ['dossier 01 §2.11 [WPFoxtrot] [NWRU]', 'dossier 01 §3.2-3.3', 'dossier 03 §C2 (Huchthausen, October Fury)',
+          'dossier 04 §2.2 [DN89]', 'dossier 11 §3.3 (radar continuo)', 'acustica.toml (firme.foxtrot)']
+  armi_tipiche:
+    voci: [siluro.type53_65k, siluro.set65, siluro.saet60m]
+    altre: ['siluri SET-53M', 'siluri da 400 mm a poppa su alcune unità (non verificato)', 'fino a 32 mine al posto dei siluri']
+    fonte: 'dossier 01 §2.11 [NWRU] [WPFoxtrot]'

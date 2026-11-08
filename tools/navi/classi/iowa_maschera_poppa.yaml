@@ -1,0 +1,19 @@
+# Maschera ritoccata a mano della foto di poppa sinistra della USS Iowa (1986), immagine 1920 px.
+# La nave sta tutta contro il mare, con toni simili (ponte ~130, mare ~140): soglie automatiche inutilizzabili.
+file: extracted/navi/iowa/foto/poppa_sinistra_1986.jpg
+uscita: extracted/navi/iowa/foto/poppa_sinistra_1986_maschera.png
+# scafo: orlo lontano (dritta) della coperta, poppa arrotondata, galleggiamento del lato vicino (sinistra)
+scafo: [[569, 566], [675, 599], [821, 621], [1230, 699], [1350, 746], [1712, 848], [1722, 858], [1700, 917],
+        [1592, 915], [1437, 896], [1200, 841], [1000, 782], [758, 701], [600, 626], [572, 600]]
+soglia_scafo: 178     # esclude la schiuma della scia e dell'onda di prua
+linea_coperta: [[0, 940], [1920, 940]]
+# inviluppo stretto attorno ad albero a traliccio, alberetto e pennone: e' nave cio' che e' piu' scuro del mare
+inviluppo: [[868, 372], [1002, 372], [1002, 468], [966, 472], [966, 540], [868, 540]]
+soglia_sovrastrutture: 105
+# sovrastruttura, torri e fumaioli: contorno tracciato a mano, tutto incluso
+includi:
+  - [[700, 612], [740, 600], [775, 582], [790, 585], [805, 605], [830, 610], [831, 585], [864, 560], [881, 553],
+     [881, 502], [897, 471], [918, 471], [940, 485], [968, 493], [968, 585], [977, 597], [1018, 597], [1018, 552],
+     [1060, 549], [1077, 585], [1077, 618], [1106, 604], [1135, 604], [1143, 627], [1172, 627], [1206, 625],
+     [1210, 698], [1240, 698], [1300, 716], [1358, 744], [1350, 753], [1230, 706], [821, 625], [740, 616]]
+area_minima: 60

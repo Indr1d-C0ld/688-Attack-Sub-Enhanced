@@ -1,0 +1,979 @@
+# Classi navali per il motore (generato da tools/pipeline/esporta_motore.py: non modificare a mano).
+# Fonte e affidabilita' indicate per ogni classe.
+
+[perry]
+nome = "Oliver Hazard Perry (FFG-7)"
+sprite = "navi/perry.spr"
+tipo_originale = 13
+lunghezza_m = 135.6
+larghezza_m = 13.7
+velocita_max_nodi = 29
+pescaggio_m = 6.7
+duomo_m = 2.2
+duomo_x_m = [15.8, 24.6]
+modello = "modelli/perry.mdl"
+scafo = "scafi/perry.toml"
+fonte = "docs/ricerca/01_piattaforme_e_armi.md"
+affidabilita = "alta"
+
+[kidd]
+nome = "Kidd (DDG-993)"
+sprite = "navi/kidd.spr"
+tipo_originale = 12
+lunghezza_m = 171.6
+larghezza_m = 16.8
+velocita_max_nodi = 33
+pescaggio_m = 9.6
+duomo_m = 3.4
+duomo_x_m = [62.1, 80.1]
+modello = "modelli/kidd.mdl"
+scafo = "scafi/kidd.toml"
+fonte = "docs/ricerca/01_piattaforme_e_armi.md"
+affidabilita = "alta"
+
+[spruance]
+nome = "Spruance (DD-963)"
+sprite = "navi/spruance.spr"
+tipo_originale = 0
+lunghezza_m = 171.7
+larghezza_m = 16.8
+velocita_max_nodi = 32.5
+pescaggio_m = 8.8
+duomo_m = 2.8
+duomo_x_m = [60.0, 78.0]
+modello = "modelli/spruance.mdl"
+scafo = "scafi/spruance.toml"
+fonte = "docs/ricerca/01_piattaforme_e_armi.md"
+affidabilita = "media"
+
+[iowa]
+nome = "Iowa (BB-61)"
+sprite = "navi/iowa.spr"
+tipo_originale = 11
+lunghezza_m = 270.4
+larghezza_m = 33.0
+velocita_max_nodi = 33
+pescaggio_m = 11.6
+modello = "modelli/iowa.mdl"
+scafo = "scafi/iowa.toml"
+fonte = "docs/ricerca/01_piattaforme_e_armi.md"
+affidabilita = "alta"
+
+[nimitz]
+nome = "Nimitz (CVN-68)"
+sprite = "navi/nimitz.spr"
+tipo_originale = 10
+lunghezza_m = 332.8
+larghezza_m = 40.8
+velocita_max_nodi = 30
+pescaggio_m = 11.3
+modello = "modelli/nimitz.mdl"
+scafo = "scafi/nimitz.toml"
+fonte = "docs/ricerca/01_piattaforme_e_armi.md"
+affidabilita = "media"
+
+[sacramento]
+nome = "Sacramento (AOE-1)"
+sprite = "navi/sacramento.spr"
+tipo_originale = 14
+lunghezza_m = 241.0
+larghezza_m = 33.0
+velocita_max_nodi = 26
+pescaggio_m = 11.6
+modello = "modelli/sacramento.mdl"
+scafo = "scafi/sacramento.toml"
+fonte = "docs/ricerca/01_piattaforme_e_armi.md"
+affidabilita = "media"
+
+[krivak2]
+nome = "Krivak II (Progetto 1135M)"
+sprite = "navi/krivak2.spr"
+tipo_originale = 7
+lunghezza_m = 123.5
+larghezza_m = 14.1
+velocita_max_nodi = 32
+pescaggio_m = 7.3
+duomo_m = 2.7
+duomo_x_m = [39.4, 49.4]
+modello = "modelli/krivak2.mdl"
+scafo = "scafi/krivak2.toml"
+fonte = "docs/ricerca/01_piattaforme_e_armi.md"
+affidabilita = "media"
+
+[kara]
+nome = "Kara (Progetto 1134B)"
+sprite = "navi/kara.spr"
+tipo_originale = 5
+lunghezza_m = 173.2
+larghezza_m = 18.6
+velocita_max_nodi = 34
+pescaggio_m = 6.7
+duomo_m = 1.2
+duomo_x_m = [62.8, 76.8]
+modello = "modelli/kara.mdl"
+scafo = "scafi/kara.toml"
+fonte = "docs/ricerca/01_piattaforme_e_armi.md"
+affidabilita = "media"
+
+[kirov]
+nome = "Kirov (Progetto 1144)"
+sprite = "navi/kirov.spr"
+tipo_originale = 6
+lunghezza_m = 252.0
+larghezza_m = 28.5
+velocita_max_nodi = 32
+pescaggio_m = 9.1
+duomo_m = 1.1
+duomo_x_m = [80.9, 104.9]
+modello = "modelli/kirov.mdl"
+scafo = "scafi/kirov.toml"
+fonte = "docs/ricerca/01_piattaforme_e_armi.md"
+affidabilita = "bassa"
+
+[slava]
+nome = "Slava (Progetto 1164)"
+sprite = "navi/slava.spr"
+tipo_originale = 9
+lunghezza_m = 186.4
+larghezza_m = 20.8
+velocita_max_nodi = 32
+pescaggio_m = 8.4
+duomo_m = 1.4
+duomo_x_m = [63.4, 79.4]
+modello = "modelli/slava.mdl"
+scafo = "scafi/slava.toml"
+fonte = "docs/ricerca/01_piattaforme_e_armi.md"
+affidabilita = "media"
+
+[koni]
+nome = "Koni (Progetto 1159)"
+sprite = "navi/koni.spr"
+tipo_originale = 8
+lunghezza_m = 95.0
+larghezza_m = 12.8
+velocita_max_nodi = 27
+pescaggio_m = 4.2
+duomo_m = 0.6
+duomo_x_m = [19.3, 24.3]
+modello = "modelli/koni.mdl"
+scafo = "scafi/koni.toml"
+fonte = "docs/ricerca/01_piattaforme_e_armi.md"
+affidabilita = "media"
+
+[udaloy]
+nome = "Udaloy (Progetto 1155)"
+sprite = "navi/udaloy.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 163.5
+larghezza_m = 19.0
+velocita_max_nodi = 30
+pescaggio_m = 7.8
+duomo_m = 1.6
+duomo_x_m = [60.0, 74.0]
+modello = "modelli/udaloy.mdl"
+scafo = "scafi/udaloy.toml"
+fonte = "docs/ricerca/31_firme_lotto1.md"
+affidabilita = "media"
+
+[grisha3]
+nome = "Grisha III (Progetto 1124M)"
+sprite = "navi/grisha3.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 71.1
+larghezza_m = 10.15
+velocita_max_nodi = 32
+pescaggio_m = 6.1
+duomo_m = 2.4
+duomo_x_m = [14.0, 22.0]
+modello = "modelli/grisha3.mdl"
+scafo = "scafi/grisha3.toml"
+fonte = "docs/ricerca/31_firme_lotto1.md"
+affidabilita = "media"
+
+[ticonderoga]
+nome = "Ticonderoga (CG-47)"
+sprite = "navi/ticonderoga.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 172.5
+larghezza_m = 16.8
+velocita_max_nodi = 32.5
+pescaggio_m = 10.2
+duomo_m = 3.7
+duomo_x_m = [62.4, 80.3]
+modello = "modelli/ticonderoga.mdl"
+scafo = "scafi/ticonderoga.toml"
+fonte = "docs/ricerca/32_firme_lotto2.md"
+affidabilita = "media"
+
+[knox]
+nome = "Knox (FF-1052)"
+sprite = "navi/knox.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 134.0
+larghezza_m = 14.25
+velocita_max_nodi = 27
+pescaggio_m = 7.6
+duomo_m = 3.0
+duomo_x_m = [50.5, 65.5]
+modello = "modelli/knox.mdl"
+scafo = "scafi/knox.toml"
+fonte = "docs/ricerca/32_firme_lotto2.md"
+affidabilita = "media"
+
+[type22]
+nome = "Type 22 Broadsword (Batch 1)"
+sprite = "navi/type22.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 131.2
+larghezza_m = 14.8
+velocita_max_nodi = 30
+pescaggio_m = 6.0
+duomo_m = 1.0
+duomo_x_m = [49.0, 59.0]
+modello = "modelli/type22.mdl"
+scafo = "scafi/type22.toml"
+fonte = "docs/ricerca/32_firme_lotto2.md"
+affidabilita = "media"
+
+[type22b2]
+nome = "Type 22 Boxer (Batch 2)"
+sprite = "navi/type22b2.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 146.5
+larghezza_m = 14.8
+velocita_max_nodi = 30
+pescaggio_m = 6.4
+duomo_m = 1.0
+duomo_x_m = [47.3, 57.3]
+modello = "modelli/type22b2.mdl"
+scafo = "scafi/type22b2.toml"
+fonte = "docs/ricerca/32_firme_lotto2.md"
+affidabilita = "media"
+
+[nanuchka]
+nome = "Nanuchka I (Progetto 1234)"
+sprite = "navi/nanuchka.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 59.3
+larghezza_m = 12.6
+velocita_max_nodi = 33
+pescaggio_m = 3.1
+modello = "modelli/nanuchka.mdl"
+scafo = "scafi/nanuchka.toml"
+fonte = "docs/ricerca/01_piattaforme_e_armi.md"
+affidabilita = "media"
+
+[ugra]
+nome = "Ugra (Progetto 1886)"
+sprite = "navi/ugra.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 141.4
+larghezza_m = 17.7
+velocita_max_nodi = 17
+pescaggio_m = 6.4
+modello = "modelli/ugra.mdl"
+scafo = "scafi/ugra.toml"
+fonte = "extracted/navi/ugra/RAPPORTO.md"
+affidabilita = "media"
+
+[hauk]
+nome = "Hauk (motocannoniera norvegese)"
+sprite = "navi/hauk.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 36.5
+larghezza_m = 6.3
+velocita_max_nodi = 34
+pescaggio_m = 1.6
+modello = "modelli/hauk.mdl"
+scafo = "scafi/hauk.toml"
+fonte = "extracted/navi/hauk/RAPPORTO.md"
+affidabilita = "media"
+
+[oslo]
+nome = "Oslo (F300)"
+sprite = "navi/oslo.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 96.6
+larghezza_m = 11.2
+velocita_max_nodi = 25
+pescaggio_m = 5.5
+duomo_m = 1.1
+duomo_x_m = [26.6, 34.6]
+modello = "modelli/oslo.mdl"
+scafo = "scafi/oslo.toml"
+fonte = "extracted/navi/oslo/RAPPORTO.md"
+affidabilita = "media"
+
+[kitty_hawk]
+nome = "Kitty Hawk (CV-63)"
+sprite = "navi/kitty_hawk.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 323.6
+larghezza_m = 39.6
+velocita_max_nodi = 33
+pescaggio_m = 11.4
+modello = "modelli/kitty_hawk.mdl"
+scafo = "scafi/kitty_hawk.toml"
+fonte = "extracted/navi/kitty_hawk/RAPPORTO.md"
+affidabilita = "media"
+
+[stockholm]
+nome = "Stockholm (K11)"
+sprite = "navi/stockholm.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 50.0
+larghezza_m = 7.5
+velocita_max_nodi = 32
+pescaggio_m = 3.3
+modello = "modelli/stockholm.mdl"
+scafo = "scafi/stockholm.toml"
+fonte = "extracted/navi/stockholm/RAPPORTO.md"
+affidabilita = "media"
+
+[petroliera]
+nome = "Petroliera (Sea Isle City, 1981)"
+civile = true
+sprite = "navi/petroliera.spr"
+tipo_originale = 16
+lunghezza_m = 231.8
+larghezza_m = 44.0
+velocita_max_nodi = 15
+pescaggio_m = 14.0
+modello = "modelli/petroliera.mdl"
+scafo = "scafi/petroliera.toml"
+fonte = "extracted/navi/petroliera/RAPPORTO.md"
+affidabilita = "media"
+
+[mercantile]
+nome = "Mercantile (Ravenstvo, tipo Leninskiy Komsomol)"
+civile = true
+sprite = "navi/mercantile.spr"
+tipo_originale = 1
+lunghezza_m = 169.9
+larghezza_m = 21.8
+velocita_max_nodi = 18
+pescaggio_m = 9.0
+modello = "modelli/mercantile.mdl"
+scafo = "scafi/mercantile.toml"
+fonte = "extracted/navi/mercantile/RAPPORTO.md"
+affidabilita = "bassa"
+
+[cargo]
+nome = "Portacontainer (Cpl. Louis J. Hauge Jr., ex Estelle Maersk)"
+civile = true
+sprite = "navi/cargo.spr"
+tipo_originale = 2
+lunghezza_m = 230.25
+larghezza_m = 27.43
+velocita_max_nodi = 16.4
+pescaggio_m = 10.5
+modello = "modelli/cargo.mdl"
+scafo = "scafi/cargo.toml"
+fonte = "extracted/navi/cargo/RAPPORTO.md"
+affidabilita = "media"
+
+[agi]
+nome = "AGI classe Okean (LINZA)"
+sprite = "navi/agi.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 50.8
+larghezza_m = 8.8
+velocita_max_nodi = 11.5
+pescaggio_m = 3.7
+modello = "modelli/agi.mdl"
+scafo = "scafi/agi.toml"
+fonte = "extracted/navi/agi/RAPPORTO.md"
+affidabilita = "bassa"
+
+[peschereccio]
+nome = "Peschereccio d'altura (Atlantic Peace, 1987)"
+civile = true
+sprite = "navi/peschereccio.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 57.0
+larghezza_m = 13.0
+velocita_max_nodi = 14
+pescaggio_m = 5.0
+modello = "modelli/peschereccio.mdl"
+scafo = "scafi/peschereccio.toml"
+fonte = "extracted/navi/peschereccio/RAPPORTO.md"
+affidabilita = "bassa"
+
+[tomahawk]
+nome = "BGM/UGM-109 Tomahawk"
+sprite = "navi/tomahawk.spr"
+tipo_originale = 35
+lunghezza_m = 5.56
+larghezza_m = 2.67
+velocita_max_nodi = 475
+fonte = "extracted/navi/tomahawk/RAPPORTO.md"
+affidabilita = "media"
+
+[harpoon]
+nome = "RGM/UGM-84 Harpoon"
+sprite = "navi/harpoon.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 3.84
+larghezza_m = 0.91
+velocita_max_nodi = 465
+fonte = "extracted/navi/harpoon/RAPPORTO.md"
+affidabilita = "media"
+
+[p700]
+nome = "P-700 Granit (SS-N-19)"
+sprite = "navi/p700.spr"
+tipo_originale = 40
+lunghezza_m = 10.0
+larghezza_m = 2.6
+velocita_max_nodi = 860
+fonte = "extracted/navi/p700/RAPPORTO.md"
+affidabilita = "bassa"
+
+[bqm74]
+nome = "BQM-74C Chukar (bersaglio)"
+sprite = "navi/bqm74.spr"
+tipo_originale = 15
+lunghezza_m = 3.87
+larghezza_m = 1.76
+velocita_max_nodi = 500
+fonte = "extracted/navi/bqm74/RAPPORTO.md"
+affidabilita = "media"
+
+[p3c]
+nome = "P-3C Orion"
+sprite = "navi/p3c.spr"
+tipo_originale = 24
+lunghezza_m = 35.61
+larghezza_m = 30.38
+velocita_max_nodi = 330
+modello = "modelli/p3c.mdl"
+fonte = "extracted/navi/p3c/RAPPORTO.md"
+affidabilita = "media"
+
+[il38]
+nome = "Il-38 May"
+sprite = "navi/il38.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 39.6
+larghezza_m = 37.4
+velocita_max_nodi = 330
+modello = "modelli/il38.mdl"
+fonte = "extracted/navi/il38/RAPPORTO.md"
+affidabilita = "media"
+
+[tu142]
+nome = "Tu-142MK Bear-F"
+sprite = "navi/tu142.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 53.07
+larghezza_m = 50.0
+velocita_max_nodi = 400
+modello = "modelli/tu142.mdl"
+fonte = "extracted/navi/tu142/RAPPORTO.md"
+affidabilita = "media"
+
+[los_angeles]
+nome = "Los Angeles (SSN-688, Flight I)"
+sprite = "navi/los_angeles.spr"
+tipo_originale = 20
+lunghezza_m = 110.3
+larghezza_m = 10.06
+velocita_max_nodi = 32
+pescaggio_m = 9.4
+altezza_vela_m = 5.7
+vela_x_m = [19.0, 27.2]
+modello = "modelli/los_angeles.mdl"
+scafo = "scafi/los_angeles.toml"
+fonte = "extracted/navi/los_angeles/RAPPORTO.md"
+affidabilita = "media"
+
+[victor3]
+nome = "Victor III (Progetto 671RTM)"
+sprite = "navi/victor3.spr"
+tipo_originale = 23
+lunghezza_m = 106.0
+larghezza_m = 10.6
+velocita_max_nodi = 30
+pescaggio_m = 7.0
+altezza_vela_m = 5.2
+vela_x_m = [0.5, 19.0]
+modello = "modelli/victor3.mdl"
+scafo = "scafi/victor3.toml"
+fonte = "extracted/navi/victor3/RAPPORTO.md"
+affidabilita = "media"
+
+[kilo]
+nome = "Kilo (Progetto 877)"
+sprite = "navi/kilo.spr"
+tipo_originale = 32
+lunghezza_m = 72.6
+larghezza_m = 9.9
+velocita_max_nodi = 17
+pescaggio_m = 6.2
+altezza_vela_m = 5.7
+vela_x_m = [0.7, 16.8]
+modello = "modelli/kilo.mdl"
+scafo = "scafi/kilo.toml"
+fonte = "extracted/navi/kilo/RAPPORTO.md"
+affidabilita = "media"
+
+[alfa]
+nome = "Alfa (Progetto 705)"
+sprite = "navi/alfa.spr"
+tipo_originale = 21
+lunghezza_m = 81.4
+larghezza_m = 9.5
+velocita_max_nodi = 41
+pescaggio_m = 7.6
+altezza_vela_m = 3.0
+vela_x_m = [-0.8, 22.1]
+modello = "modelli/alfa.mdl"
+scafo = "scafi/alfa.toml"
+fonte = "extracted/navi/alfa/RAPPORTO.md"
+affidabilita = "media"
+
+[akula]
+nome = "Akula I (Progetto 971)"
+sprite = "navi/akula.spr"
+tipo_originale = 29
+lunghezza_m = 110.3
+larghezza_m = 13.6
+velocita_max_nodi = 33
+pescaggio_m = 9.7
+altezza_vela_m = 3.9
+vela_x_m = [-6.9, 23.2]
+modello = "modelli/akula.mdl"
+scafo = "scafi/akula.toml"
+fonte = "extracted/navi/akula/RAPPORTO.md"
+affidabilita = "media"
+
+[oscar]
+nome = "Oscar II (Progetto 949A)"
+sprite = "navi/oscar.spr"
+tipo_originale = 28
+lunghezza_m = 154.0
+larghezza_m = 18.2
+velocita_max_nodi = 32
+pescaggio_m = 9.2
+altezza_vela_m = 4.3
+vela_x_m = [17.4, 47.0]
+modello = "modelli/oscar.mdl"
+scafo = "scafi/oscar.toml"
+fonte = "extracted/navi/oscar2/RAPPORTO.md"
+affidabilita = "media"
+
+[charlie2]
+nome = "Charlie II (Progetto 670M)"
+sprite = "navi/charlie2.spr"
+tipo_originale = 30
+lunghezza_m = 104.5
+larghezza_m = 9.9
+velocita_max_nodi = 24
+pescaggio_m = 8.0
+altezza_vela_m = 2.9
+vela_x_m = [-5.2, 13.9]
+modello = "modelli/charlie2.mdl"
+scafo = "scafi/charlie2.toml"
+fonte = "extracted/navi/charlie2/RAPPORTO.md"
+affidabilita = "bassa"
+
+[typhoon]
+nome = "Typhoon (Progetto 941)"
+sprite = "navi/typhoon.spr"
+tipo_originale = 31
+lunghezza_m = 175.0
+larghezza_m = 23.0
+velocita_max_nodi = 27
+pescaggio_m = 11.0
+altezza_vela_m = 9.2
+vela_x_m = [-23.4, 4.9]
+modello = "modelli/typhoon.mdl"
+scafo = "scafi/typhoon.toml"
+fonte = "extracted/navi/typhoon/RAPPORTO.md"
+affidabilita = "media"
+
+[foxtrot]
+nome = "Foxtrot (Progetto 641)"
+sprite = "navi/foxtrot.spr"
+tipo_originale = 33
+lunghezza_m = 91.3
+larghezza_m = 7.5
+velocita_max_nodi = 16
+pescaggio_m = 6.0
+altezza_vela_m = 6.0
+vela_x_m = [-3.8, 9.9]
+modello = "modelli/foxtrot.mdl"
+scafo = "scafi/foxtrot.toml"
+fonte = "extracted/navi/foxtrot/RAPPORTO.md"
+affidabilita = "media"
+
+[sturgeon]
+nome = "Sturgeon (SSN-637)"
+sprite = "navi/sturgeon.spr"
+tipo_originale = 27
+lunghezza_m = 89.1
+larghezza_m = 9.65
+velocita_max_nodi = 26
+pescaggio_m = 8.9
+altezza_vela_m = 7.0
+vela_x_m = [15.1, 26.0]
+modello = "modelli/sturgeon.mdl"
+scafo = "scafi/sturgeon.toml"
+fonte = "extracted/navi/sturgeon/RAPPORTO.md"
+affidabilita = "media"
+
+[trafalgar]
+nome = "Trafalgar (Royal Navy)"
+sprite = "navi/trafalgar.spr"
+tipo_originale = 34
+lunghezza_m = 85.4
+larghezza_m = 9.8
+velocita_max_nodi = 32
+pescaggio_m = 9.5
+altezza_vela_m = 4.6
+vela_x_m = [6.1, 15.4]
+modello = "modelli/trafalgar.mdl"
+scafo = "scafi/trafalgar.toml"
+fonte = "extracted/navi/trafalgar/RAPPORTO.md"
+affidabilita = "media"
+
+[victor1]
+nome = "Victor I (Progetto 671)"
+sprite = "navi/victor1.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 93.0
+larghezza_m = 10.6
+velocita_max_nodi = 32
+pescaggio_m = 7.2
+altezza_vela_m = 4.8
+vela_x_m = [4.0, 22.7]
+modello = "modelli/victor1.mdl"
+scafo = "scafi/victor1.toml"
+fonte = "docs/ricerca/31_firme_lotto1.md"
+affidabilita = "media"
+
+[delta3]
+nome = "Delta III (Progetto 667BDR)"
+sprite = "navi/delta3.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 156.0
+larghezza_m = 11.7
+velocita_max_nodi = 24
+pescaggio_m = 8.7
+altezza_vela_m = 7.9
+vela_x_m = [29.6, 50.5]
+modello = "modelli/delta3.mdl"
+scafo = "scafi/delta3.toml"
+fonte = "docs/ricerca/31_firme_lotto1.md"
+affidabilita = "media"
+
+[sierra]
+nome = "Sierra I (Progetto 945)"
+sprite = "navi/sierra.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 107.2
+larghezza_m = 12.3
+velocita_max_nodi = 35
+pescaggio_m = 8.8
+altezza_vela_m = 4.0
+vela_x_m = [-1.8, 20.0]
+modello = "modelli/sierra.mdl"
+scafo = "scafi/sierra.toml"
+fonte = "docs/ricerca/31_firme_lotto1.md"
+affidabilita = "bassa"
+
+[ohio]
+nome = "Ohio (SSBN-726)"
+sprite = "navi/ohio.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 170.7
+larghezza_m = 12.8
+velocita_max_nodi = 25
+pescaggio_m = 10.8
+altezza_vela_m = 6.5
+vela_x_m = [43.4, 56.2]
+modello = "modelli/ohio.mdl"
+scafo = "scafi/ohio.toml"
+fonte = "docs/ricerca/32_firme_lotto2.md"
+affidabilita = "media"
+
+[type206]
+nome = "Type 206 (U 13-30)"
+sprite = "navi/type206.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 48.5
+larghezza_m = 4.6
+velocita_max_nodi = 17
+pescaggio_m = 4.3
+altezza_vela_m = 4.6
+vela_x_m = [-4.8, 11.5]
+modello = "modelli/type206.mdl"
+scafo = "scafi/type206.toml"
+fonte = "docs/ricerca/32_firme_lotto2.md"
+affidabilita = "media"
+
+[nacken]
+nome = "Nacken (A14)"
+sprite = "navi/nacken.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 49.5
+larghezza_m = 5.7
+velocita_max_nodi = 20
+pescaggio_m = 5.5
+altezza_vela_m = 5.2
+vela_x_m = [0.0, 8.3]
+modello = "modelli/nacken.mdl"
+scafo = "scafi/nacken.toml"
+fonte = "extracted/navi/nacken/RAPPORTO.md"
+affidabilita = "media"
+
+[sh60b]
+nome = "SH-60B Seahawk (LAMPS III)"
+sprite = "navi/sh60b.spr"
+tipo_originale = 18
+lunghezza_m = 19.76
+larghezza_m = 16.36
+velocita_max_nodi = 125
+modello = "modelli/sh60b.mdl"
+fonte = "extracted/navi/sh60b/RAPPORTO.md"
+affidabilita = "media"
+
+[ka25]
+nome = "Ka-25PL Hormone-A"
+sprite = "navi/ka25.spr"
+tipo_originale = 17
+lunghezza_m = 9.75
+larghezza_m = 15.74
+velocita_max_nodi = 105
+modello = "modelli/ka25.mdl"
+fonte = "extracted/navi/ka25/RAPPORTO.md"
+affidabilita = "media"
+
+[s3a]
+nome = "S-3A Viking"
+sprite = "navi/s3a.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 16.26
+larghezza_m = 20.93
+velocita_max_nodi = 350
+modello = "modelli/s3a.mdl"
+fonte = "extracted/navi/s3a/RAPPORTO.md"
+affidabilita = "media"
+
+[s3b]
+nome = "S-3B Viking"
+sprite = "navi/s3b.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 16.26
+larghezza_m = 20.93
+velocita_max_nodi = 350
+modello = "modelli/s3b.mdl"
+fonte = "extracted/navi/s3b/RAPPORTO.md"
+affidabilita = "media"
+
+[sh3h]
+nome = "SH-3H Sea King"
+sprite = "navi/sh3h.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 16.69
+larghezza_m = 18.9
+velocita_max_nodi = 114
+modello = "modelli/sh3h.mdl"
+fonte = "extracted/navi/sh3h/RAPPORTO.md"
+affidabilita = "media"
+
+[sh60f]
+nome = "SH-60F Ocean Hawk"
+sprite = "navi/sh60f.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 19.76
+larghezza_m = 16.36
+velocita_max_nodi = 125
+modello = "modelli/sh60f.mdl"
+fonte = "extracted/navi/sh60f/RAPPORTO.md"
+affidabilita = "media"
+
+[ka27]
+nome = "Ka-27PL Helix-A"
+sprite = "navi/ka27.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 11.3
+larghezza_m = 15.9
+velocita_max_nodi = 120
+modello = "modelli/ka27.mdl"
+fonte = "extracted/navi/ka27/RAPPORTO.md"
+affidabilita = "media"
+
+[be12]
+nome = "Be-12 Mail"
+sprite = "navi/be12.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 30.17
+larghezza_m = 29.84
+velocita_max_nodi = 245
+modello = "modelli/be12.mdl"
+fonte = "extracted/navi/be12/RAPPORTO.md"
+affidabilita = "media"
+
+[sh2f]
+nome = "SH-2F Seasprite (LAMPS I)"
+sprite = "navi/sh2f.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 16.0
+larghezza_m = 13.41
+velocita_max_nodi = 120
+modello = "modelli/sh2f.mdl"
+fonte = "extracted/navi/sh2f/RAPPORTO.md"
+affidabilita = "media"
+
+[hkp4]
+nome = "Hkp 4 (Vertol 107)"
+sprite = "navi/hkp4.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 13.66
+larghezza_m = 15.24
+velocita_max_nodi = 137
+modello = "modelli/hkp4.mdl"
+fonte = "extracted/navi/hkp4/RAPPORTO.md"
+affidabilita = "media"
+
+[lynx]
+nome = "Lynx HAS.3"
+sprite = "navi/lynx.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 13.2
+larghezza_m = 12.8
+velocita_max_nodi = 125
+modello = "modelli/lynx.mdl"
+fonte = "extracted/navi/lynx/RAPPORTO.md"
+affidabilita = "media"
+
+# --- classi civili del traffico (tools/pipeline/civili.py) ---
+# Modello, sprite e scafo propri (la classe piu' vicina riscalata alle misure vere, o il modello del
+# kit), oppure quelli della classe piu' vicina tali e quali.
+
+[portarinfuse]
+nome = "Portarinfuse"
+civile = true
+sprite = "navi/portarinfuse.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 225.0
+larghezza_m = 33.8
+velocita_max_nodi = 16.5
+pescaggio_m = 12.0
+modello = "modelli/portarinfuse.mdl"
+scafo = "scafi/portarinfuse.toml"
+fonte = "tools/pipeline/civili.py (docs/ricerca/26_navi_civili_traffico.md); extracted/navi/portarinfuse/RAPPORTO.md"
+affidabilita = "bassa"
+
+[petroliera_costiera]
+nome = "Petroliera costiera e chimichiera"
+civile = true
+sprite = "navi/petroliera_costiera.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 120.0
+larghezza_m = 19.2
+velocita_max_nodi = 16.5
+pescaggio_m = 7.5
+modello = "modelli/petroliera_costiera.mdl"
+scafo = "scafi/petroliera_costiera.toml"
+fonte = "tools/pipeline/civili.py (docs/ricerca/26_navi_civili_traffico.md); extracted/navi/petroliera_costiera/RAPPORTO.md"
+affidabilita = "bassa"
+
+[traghetto]
+nome = "Traghetto ro-ro e passeggeri"
+civile = true
+sprite = "navi/traghetto.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 150.0
+larghezza_m = 24.0
+velocita_max_nodi = 25.3
+pescaggio_m = 6.0
+modello = "modelli/traghetto.mdl"
+scafo = "scafi/traghetto.toml"
+fonte = "tools/pipeline/civili.py (docs/ricerca/26_navi_civili_traffico.md); extracted/navi/traghetto/RAPPORTO.md"
+affidabilita = "bassa"
+
+[rimorchiatore]
+nome = "Rimorchiatore d'altura"
+civile = true
+sprite = "navi/rimorchiatore.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 50.0
+larghezza_m = 13.5
+velocita_max_nodi = 16.5
+pescaggio_m = 5.0
+modello = "modelli/rimorchiatore.mdl"
+scafo = "scafi/rimorchiatore.toml"
+fonte = "tools/pipeline/civili.py (docs/ricerca/26_navi_civili_traffico.md); extracted/navi/rimorchiatore/RAPPORTO.md"
+affidabilita = "bassa"
+
+[rompighiaccio]
+nome = "Rompighiaccio diesel-elettrico"
+civile = true
+sprite = "navi/rompighiaccio.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 130.0
+larghezza_m = 26.0
+velocita_max_nodi = 20.9
+pescaggio_m = 9.5
+modello = "modelli/rompighiaccio.mdl"
+scafo = "scafi/rompighiaccio.toml"
+fonte = "tools/pipeline/civili.py (docs/ricerca/26_navi_civili_traffico.md); extracted/navi/rompighiaccio/RAPPORTO.md"
+affidabilita = "bassa"
+
+[nave_ricerca]
+nome = "Nave oceanografica"
+civile = true
+sprite = "navi/nave_ricerca.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 75.0
+larghezza_m = 14.2
+velocita_max_nodi = 15.4
+pescaggio_m = 5.0
+modello = "modelli/nave_ricerca.mdl"
+scafo = "scafi/nave_ricerca.toml"
+fonte = "tools/pipeline/civili.py (docs/ricerca/26_navi_civili_traffico.md); extracted/navi/nave_ricerca/RAPPORTO.md"
+affidabilita = "bassa"
+
+[bmrt]
+nome = "Grande peschereccio sovietico (BMRT)"
+civile = true
+sprite = "navi/bmrt.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 94.5
+larghezza_m = 15.1
+velocita_max_nodi = 17.6
+pescaggio_m = 5.5
+modello = "modelli/bmrt.mdl"
+scafo = "scafi/bmrt.toml"
+fonte = "tools/pipeline/civili.py (docs/ricerca/26_navi_civili_traffico.md); extracted/navi/bmrt/RAPPORTO.md"
+affidabilita = "bassa"
+
+[peschereccio_costiero]
+nome = "Peschereccio costiero (palangaro, reti da posta)"
+civile = true
+sprite = "navi/peschereccio_costiero.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 30.0
+larghezza_m = 7.5
+velocita_max_nodi = 13.2
+pescaggio_m = 3.0
+modello = "modelli/peschereccio_costiero.mdl"
+scafo = "scafi/peschereccio_costiero.toml"
+fonte = "tools/pipeline/civili.py (docs/ricerca/26_navi_civili_traffico.md); extracted/navi/peschereccio_costiero/RAPPORTO.md"
+affidabilita = "bassa"
+
+[cianciolo]
+nome = "Cianciolo"
+civile = true
+sprite = "navi/cianciolo.spr"
+# tipo_originale: assente nel gioco del 1989
+lunghezza_m = 50.0
+larghezza_m = 12.5
+velocita_max_nodi = 16.5
+pescaggio_m = 5.5
+modello = "modelli/cianciolo.mdl"
+scafo = "scafi/cianciolo.toml"
+fonte = "tools/pipeline/civili.py (docs/ricerca/26_navi_civili_traffico.md); extracted/navi/cianciolo/RAPPORTO.md"
+affidabilita = "bassa"

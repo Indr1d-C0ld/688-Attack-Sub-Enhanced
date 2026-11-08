@@ -1,0 +1,79 @@
+# Sottomarino d'attacco classe Sturgeon (SSN-637), scafo standard da 89,1 m (SSN-637...677; i nove allungati da 92,1 m
+# sono SSN-678...684, 686 e 687), configurazione 1989: vela alta e lunga ~10,6 m, molto avanzata,
+# con i timoni di vela a meta' altezza; timone superiore che emerge staccato a poppa; in emersione normale con i
+# periscopi alzati (come nelle foto).
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua. Quote assolute rispetto al galleggiamento in emersione normale.
+# Misure: lunghezza 89,1 m e diametro 9,65 m (dossier, [WPSturgeon]); vela, timoni di vela e timone triangolati su
+# due foto basse (extracted/navi/sturgeon/lavoro/triangola_sturgeon.yaml).
+nome: Sturgeon (SSN-637)
+uscita: extracted/navi/sturgeon
+tono: 0.22
+contrasto: 0.12
+peso_ombra: 0.03
+
+scafo:
+  generatore: scafo_sottomarino
+  L: 89.1
+  B: 9.65
+  # prua piena (piede al galleggiamento a ~1,5 m), cono di poppa lungo: la coperta va sotto a ~75 m dalla prua
+  forma: {prua: 12.0, poppa: 34.0, esponente_prua: 2.0, esponente_poppa: 1.5, raggio_coda: 0.3}
+  bordo_libero: 2.0        # sommita' dello scafo al piede della vela (triangolata: 2,0-2,1 m)
+  stazioni: 90
+  punti_sezione: 48
+
+parti:
+  # vela: fianchi piani, fronte arrotondato, cielo piatto a 9,0 m (triangolata: da 18,6 a 29,3 m dalla prua)
+  - tipo: vela
+    nome: vela
+    pianta: ovale
+    esponente: 3.5
+    livelli:
+      - [0.8, {prua: 18.5}, {prua: 29.4}, 1.35]
+      - [8.7, {prua: 18.6}, {prua: 29.3}, 1.3]
+      - [9.0, {prua: 18.8}, {prua: 29.1}, 1.15]
+  # timoni di vela: estremita' (a meta' corda) a 23,6 m dalla prua, y = +-5,5 m, quota 5,4 m (triangolata)
+  - {tipo: pinna_orizzontale, nome: timoni_vela, x: {prua: 21.4}, z: 5.4, apertura: 5.5, corda: 3.2, corda_estremita: 2.2, spessore: 0.45, freccia: 1.1}
+  # periscopi e alberi alzati (foto del 1992: cime a ~15 e ~16,5 m)
+  - {tipo: cilindro, nome: periscopio_1, x: {prua: 25.3}, y: 0, r: 0.24, z0: 8.8, z1: 16.3, n: 8, mat: scuro}
+  - {tipo: cilindro, nome: periscopio_2, x: {prua: 27.0}, y: 0, r: 0.22, z0: 8.8, z1: 15.2, n: 8, mat: scuro}
+  # timone superiore: cima (a meta' corda) a 85,6 m dalla prua e 2,4 m sul galleggiamento
+  - {tipo: timone_verticale, nome: timone, x: {prua: 84.0}, z0: -3.0, z1: 2.4, corda: 3.4, corda_estremita: 2.4, spessore: 0.5, freccia: 0.6}
+
+foto:
+  - nome: prua_sinistra
+    file: extracted/navi/sturgeon/foto/prua_sinistra_hawkbill_1997.jpg
+    maschera_file: extracted/navi/sturgeon/foto/prua_sinistra_hawkbill_1997_maschera.png   # classi/sturgeon_maschere.yaml
+    nave: USS Hawkbill (SSN-666), Pearl Harbor, 1997
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    fotocamera_iniziale: {posizione: [908.6, 518.7, 14.1], bersaglio: [12.3, 0.0, 5.4], f: 35302}
+    prior_fotocamera: {elevazione: 0.5, sigma_el: 2, distanza: 1000, sigma_logD: 0.5}
+    punti:
+      - [[{prua: 1.5}, 0, 0.0], [415, 948]]        # piede della prua al galleggiamento
+      - [[{prua: 18.7}, 0, 9.0], [732, 637]]       # cielo della vela, spigolo prodiero
+      - [[{prua: 29.2}, 0, 9.0], [905, 642]]       # cielo della vela, spigolo poppiero
+      - [[{prua: 29.5}, 0, 2.0], [905, 875]]       # piede poppiero della vela
+      - [[{prua: 23.6}, 5.5, 5.4], [975, 766]]     # estremita' del timone di vela di sinistra
+      - [[{prua: 23.6}, -5.5, 5.4], [672, 763]]    # estremita' del timone di vela di dritta
+      - [[{prua: 85.6}, 0, 2.4], [1830, 870]]      # cima del timone
+  - nome: fianco_sinistra
+    file: extracted/navi/sturgeon/foto/fianco_sinistra_chesapeake_1992.jpg
+    maschera_file: extracted/navi/sturgeon/foto/fianco_sinistra_chesapeake_1992_maschera.png   # classi/sturgeon_maschere.yaml
+    nave: Sturgeon non identificato, baia di Chesapeake, 1992
+    esponente_peso: 1.0
+    qualita: 0.9
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    fotocamera_iniziale: {posizione: [-317.0, 350.3, 25.5], bersaglio: [3.8, 0.0, 12.0], f: 12570}
+    prior_fotocamera: {elevazione: 1.6, sigma_el: 2, distanza: 470, sigma_logD: 0.5}
+    punti:
+      - [[{prua: 1.5}, 0, 0.0], [238, 908]]        # piede della prua al galleggiamento
+      - [[{prua: 18.7}, 0, 9.0], [541, 697]]       # cielo della vela, spigolo prodiero
+      - [[{prua: 29.2}, 0, 9.0], [744, 697]]       # cielo della vela, spigolo poppiero
+      - [[{prua: 18.5}, 0, 2.0], [541, 877]]       # piede prodiero della vela
+      - [[{prua: 29.5}, 0, 2.0], [744, 877]]       # piede poppiero della vela

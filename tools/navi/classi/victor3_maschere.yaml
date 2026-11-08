@@ -1,0 +1,29 @@
+# Maschere tracciate a mano delle foto del Victor III (tools/navi/maschera_manuale.py).
+# K-324, 1983 (1920 x 984 px): scafo scuro su mare scuro e mosso, pod chiaro come il mare: nessuna soglia
+# separa nave e mare, la sagoma e' tutta tracciata a mano (coperta, prua, galleggiamento, vela, albero, pod).
+file: extracted/navi/victor3/foto/fianco_dritta_k324_1983.jpg
+uscita: extracted/navi/victor3/foto/fianco_dritta_k324_1983_maschera.png
+# scafo: coperta da poppa alla vela, dalla vela alla prua, poi galleggiamento da prua a poppa
+scafo: [[281, 537], [303, 530], [346, 516], [403, 505], [474, 493], [546, 484], [617, 473], [760, 462], [960, 455],
+        [1238, 457], [1450, 459], [1550, 462], [1650, 470], [1700, 477], [1740, 487], [1765, 495], [1782, 502],
+        [1770, 510], [1700, 516], [1500, 525], [1300, 530], [1100, 535], [900, 540], [700, 545], [500, 547], [350, 546], [290, 541]]
+soglia_scafo: 256
+linea_coperta: [[0, 0], [1920, 0]]
+inviluppo: [[0, 0], [1, 0], [1, 1]]
+soglia_sovrastrutture: 0
+includi:
+  # vela: dorso convesso da poppa, cielo piatto, fronte quasi verticale con lo spigolo arrotondato
+  - [[950, 458], [980, 440], [1010, 418], [1040, 398], [1065, 383], [1081, 375], [1215, 375], [1228, 380], [1235, 395],
+     [1238, 458]]
+  # albero
+  - [[1130, 376], [1132, 268], [1137, 268], [1139, 376]]
+  # pod dell'array rimorchiato
+  - [[45, 436], [60, 425], [90, 417], [130, 414], [170, 415], [200, 420], [214, 428], [217, 436], [213, 446], [195, 454],
+     [170, 458], [130, 459], [90, 458], [60, 450]]
+  # timone verticale sotto il pod, fino al galleggiamento
+  - [[95, 456], [187, 456], [185, 540], [92, 540]]
+escludi:
+  - [[499, 455], [512, 455], [512, 476], [499, 476]]      # marinai in coperta
+  - [[810, 420], [825, 420], [825, 458], [810, 458]]
+  - [[925, 430], [945, 430], [945, 458], [925, 458]]
+area_minima: 40

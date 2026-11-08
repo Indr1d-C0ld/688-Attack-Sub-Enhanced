@@ -1,0 +1,35 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='440' viewBox='0 0 760 440' font-family='DejaVu Sans, Helvetica, Arial, sans-serif' role='img' aria-label='Il regolo di Ekelund: una striscia con una tacca per linea di rilevamento lungo la rotta stimata del bersaglio'>
+<title>Il regolo di Ekelund: una striscia con una tacca per linea di rilevamento lungo la rotta stimata del bersaglio</title>
+<rect width='760' height='440' fill='#fcfcfb'/>
+<text x='36.0' y='26.0' font-size='16' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Il regolo di Ekelund</text>
+<text x='36.0' y='46.0' font-size='12' fill='#52514e' text-anchor='start'>La striscia graduata alla velocità stimata, posata sull&#39;ultima linea e ruotata finché le tacche cadono sulle linee.</text>
+<path d='M90.0,380.0 L338.6,112.2' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='4 3'/>
+<path d='M131.5,380.0 L371.6,104.5' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='4 3'/>
+<path d='M173.0,380.0 L398.8,92.8' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='4 3'/>
+<path d='M214.4,380.0 L412.5,72.9' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='4 3'/>
+<path d='M90.0,380.0 L131.5,380.0 L173.0,380.0 L214.4,380.0' fill='none' stroke='#2a78d6' stroke-width='3' stroke-linejoin='round'/>
+<circle cx='90.0' cy='380.0' r='3.5' fill='#2a78d6'/>
+<text x='90.0' y='398.0' font-size='11' fill='#0b0b0b' text-anchor='middle'>O1</text>
+<circle cx='131.5' cy='380.0' r='3.5' fill='#2a78d6'/>
+<text x='131.5' y='398.0' font-size='11' fill='#0b0b0b' text-anchor='middle'>O2</text>
+<circle cx='173.0' cy='380.0' r='3.5' fill='#2a78d6'/>
+<text x='173.0' y='398.0' font-size='11' fill='#0b0b0b' text-anchor='middle'>O3</text>
+<circle cx='214.4' cy='380.0' r='3.5' fill='#2a78d6'/>
+<text x='214.4' y='398.0' font-size='11' fill='#0b0b0b' text-anchor='middle'>O4</text>
+<path d='M369.2,69.1 L303.6,249.1' fill='none' stroke='#c3c2b7' stroke-width='12' stroke-linejoin='round'/>
+<path d='M355.5,83.3 L370.5,88.7' fill='none' stroke='#eb6834' stroke-width='2.5' stroke-linejoin='round'/>
+<text x='377.0' y='78.0' font-size='11' fill='#0b0b0b' text-anchor='start'>tacca 1</text>
+<path d='M337.7,132.0 L352.8,137.5' fill='none' stroke='#eb6834' stroke-width='2.5' stroke-linejoin='round'/>
+<text x='359.3' y='126.7' font-size='11' fill='#0b0b0b' text-anchor='start'>tacca 2</text>
+<path d='M320.0,180.7 L335.0,186.2' fill='none' stroke='#eb6834' stroke-width='2.5' stroke-linejoin='round'/>
+<text x='341.5' y='175.4' font-size='11' fill='#0b0b0b' text-anchor='start'>tacca 3</text>
+<path d='M302.3,229.4 L317.3,234.9' fill='none' stroke='#eb6834' stroke-width='2.5' stroke-linejoin='round'/>
+<text x='323.8' y='224.2' font-size='11' fill='#0b0b0b' text-anchor='start'>tacca 4</text>
+<text x='470.0' y='310.0' font-size='12' fill='#0b0b0b' text-anchor='start'>Una tacca per linea, distanti V · (tₙ − tₖ).</text>
+<text x='470.0' y='328.0' font-size='12' fill='#0b0b0b' text-anchor='start'>Frecce: la rotta. Su e giù: la distanza.</text>
+<text x='470.0' y='346.0' font-size='12' fill='#0b0b0b' text-anchor='start'>[ e ]: la velocità. La riga in basso alla</text>
+<text x='470.0' y='364.0' font-size='12' fill='#0b0b0b' text-anchor='start'>carta dà lo scarto: più è piccolo, più la</text>
+<text x='470.0' y='382.0' font-size='12' fill='#0b0b0b' text-anchor='start'>soluzione spiega i rilevamenti.</text>
+<text x='470.0' y='400.0' font-size='12' fill='#0b0b0b' text-anchor='start'>Invio porta la soluzione nel MATE.</text>
+<text x='240.0' y='372.0' font-size='11' fill='#52514e' text-anchor='start'>la rotta propria</text>
+</svg>

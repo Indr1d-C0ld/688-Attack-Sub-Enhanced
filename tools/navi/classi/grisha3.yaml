@@ -1,0 +1,62 @@
+# Nave antisommergibile Progetto 1124M "Al'batros" (NATO: Grisha III), configurazione 1989: corvetta piccola e bassa,
+# castello alto fino a mezza nave, l'SA-N-4 a scomparsa e due RBU-6000 a prua della sovrastruttura, il traliccio col
+# radar sulla plancia, a poppa l'AK-630 e il radar di tiro sulla tuga e il binato AK-725 da 57 mm (31/10/2026: prima era
+# una torre singola da 76, l'AK-176 delle Grisha V; la foto del 1983 e' di una Grisha III, col binato visto di fianco e
+# le due canne sovrapposte). Coordinate del kit: x verso prua (origine a
+# meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} = punto a d metri dalla prua. Misure: 71,1 x 10,15 m
+# (dossier docs/ricerca/31_firme_lotto1.md); posizioni e quote dalla foto di fianco del 1983 (12,05 px/m sulla
+# miniatura), le larghezze STIMA. Passo 3 del primo lotto, approvato dall'utente il 29/10/2026.
+nome: Grisha III (Progetto 1124M)
+uscita: extracted/navi/grisha3
+
+scafo:
+  L: 71.1
+  B: 10.15
+  # castello alto (5,6 m a prua, 4,1 a mezza nave) fino a 41 m dalla prua, poi il ponte basso (2,2 m) fino a poppa
+  bordo: [[0, 5.6], [10, 4.8], [20, 4.3], [41, 4.1], [43, 2.4], [71.1, 2.2]]
+  slancio: 4.0
+  finezza_prua: 45
+  specchio: 0.82
+  svasatura: 0.06
+  pienezza: [0.88, 0.72]
+
+parti:
+  - {tipo: chiusura_dritto, nome: chiusura_dritto, L: 71.1, B: 10.15, bordo: [[0, 5.6], [10, 4.8], [20, 4.3], [41, 4.1], [43, 2.4], [71.1, 2.2]], slancio: 4.0, finezza_prua: 45, specchio: 0.82, svasatura: 0.06, pienezza: [0.88, 0.72]}
+  # ---------------- prua: l'SA-N-4 a scomparsa, i due RBU-6000
+  - {tipo: lanciatore_scomparsa, nome: osa_m, x: {prua: 11.0}, z0: 5.0, r: 1.6, altezza: 1.0}
+  - {tipo: lanciarazzi_rbu, nome: rbu6000_dritta, x: {prua: 15.5}, y: -2.0, z0: 4.6}
+  - {tipo: lanciarazzi_rbu, nome: rbu6000_sinistra, x: {prua: 15.5}, y: 2.0, z0: 4.6}
+  # ---------------- sovrastruttura, plancia, traliccio col radar (Strut Curve)
+  - {tipo: tuga, nome: sovrastruttura, x0: {prua: 44.0}, x1: {prua: 16.5}, y0: -4.0, y1: 4.0, z0: 4.1, z1: 6.6}
+  - {tipo: tuga, nome: plancia, x0: {prua: 37.0}, x1: {prua: 23.0}, y0: -3.4, y1: 3.4, z0: 6.6, z1: 9.4, rastrema: 0.9, smusso_prua: 0.6}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 23.8}, x1: {prua: 22.8}, y0: -3.0, y1: 3.0, z0: 8.4, z1: 9.0, mat: nero, rastrema: 0.97}
+  - {tipo: traliccio, nome: albero, x: {prua: 35.0}, base: 2.0, cima: 0.6, z0: 9.4, z1: 16.2, piani: [12.0]}
+  - {tipo: antenna_radar, nome: strut_curve, x: {prua: 35.0}, z0: 14.6, larghezza: 3.2, altezza: 1.2}
+  - {tipo: direttore_tiro, nome: pop_group, x: {prua: 25.5}, z0: 9.4, altezza_base: 1.4, larghezza: 2.0, disco: 1.2}
+  # ---------------- mezza nave e poppa: i tubi lanciasiluri, l'AK-630 e il radar di tiro, il binato da 57 mm verso poppa
+  - {tipo: lanciasiluri_quadruplo, nome: tubi_dritta, x: {prua: 47.0}, y: -3.4, z0: 2.4, lunghezza: 6.5, verso: 1}
+  - {tipo: lanciasiluri_quadruplo, nome: tubi_sinistra, x: {prua: 47.0}, y: 3.4, z0: 2.4, lunghezza: 6.5, verso: 1}
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 57.0}, x1: {prua: 49.0}, y0: -3.4, y1: 3.4, z0: 2.3, z1: 5.5}
+  - {tipo: direttore_tiro, nome: bass_tilt, x: {prua: 53.5}, z0: 5.5, altezza_base: 1.2, larghezza: 1.8, disco: 1.2}
+  - {tipo: ak630, nome: ak630, x: {prua: 50.5}, y: 0.0, z0: 5.5, verso: -1}   # la cupola davanti al Bass Tilt (foto, ~51 m)
+  - {tipo: impianto_binato, nome: ak725, x: {prua: 61.0}, y: 0.0, z0: 2.3, verso: -1, lunghezza: 4.0, larghezza: 3.0, altezza: 2.2, canna: 2.8, smusso: 1.0}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 29/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: fianco_sinistra
+    file: extracted/navi/grisha3/foto/MPK-52-1983.jpg
+    nave: MPK-52, 1983 (US Navy, pubblico dominio), quasi al traverso dall'alto
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    orizzonte_y: 2407         # niente cielo: la nave (bianca, la poppa nera) si stacca dal mare (35-58) riga per riga
+    scarto_cielo: 70
+    riquadro: [200, 850, 2850, 1520]
+    cancella: [[1080, 1400, 1260, 1500]]   # il numero 279
+    fotocamera_iniziale: {posizione: [0, 700, 250], bersaglio: [0, 0, 3], f: 9000}
+    limiti_fotocamera: {elevazione: [5, 35], distanza: [200, 3000], focale: [1500, 30000]}
+    punti:
+      - [[{prua: 0}, 0, 5.6], [235, 1278]]          # dritto di prua in coperta
+      - [[{prua: 71.1}, 0, 2.2], [2812, 1444]]      # poppa in coperta
+      - [[{prua: 35.0}, 0, 16.2], [1504, 893]]      # cima del traliccio
+      - [[{prua: 23.8}, 3.0, 9.4], [1098, 1152]]    # spigolo prodiero alto della plancia, a sinistra

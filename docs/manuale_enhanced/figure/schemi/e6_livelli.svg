@@ -1,0 +1,44 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='440' viewBox='0 0 760 440' font-family='DejaVu Sans, Helvetica, Arial, sans-serif' role='img' aria-label='I quattro livelli dell&#39;IA e i nove strati che decidono la rotta voluta, in ordine'>
+<title>I quattro livelli dell&#39;IA e i nove strati che decidono la rotta voluta, in ordine</title>
+<rect width='760' height='440' fill='#fcfcfb'/>
+<text x='36.0' y='26.0' font-size='16' fill='#0b0b0b' text-anchor='start' font-weight='bold'>I livelli dell&#39;IA e chi comanda il timone</text>
+<text x='36.0' y='46.0' font-size='12' fill='#52514e' text-anchor='start'>A sinistra chi decide che cosa; a destra, in ordine, gli strati che correggono la rotta voluta a ogni passo.</text>
+<rect x='36' y='74' width='300' height='70' rx='6' fill='#fcfcfb' stroke='#2a78d6' stroke-width='2'/>
+<text x='50.0' y='98.0' font-size='14' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Dottrina</text>
+<text x='50.0' y='118.0' font-size='11' fill='#0b0b0b' text-anchor='start'>i numeri per marina, classe ed esperienza</text>
+<text x='50.0' y='134.0' font-size='11' fill='#52514e' text-anchor='start'>interazioni.toml, carico.toml</text>
+<path d='M186.0,144.0 L186.0,160.0' fill='none' stroke='#898781' stroke-width='2' stroke-linejoin='round'/>
+<rect x='36' y='160' width='300' height='70' rx='6' fill='#fcfcfb' stroke='#eb6834' stroke-width='2'/>
+<text x='50.0' y='184.0' font-size='14' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Missione</text>
+<text x='50.0' y='204.0' font-size='11' fill='#0b0b0b' text-anchor='start'>dove va, che cosa cerca, quando ingaggia</text>
+<text x='50.0' y='220.0' font-size='11' fill='#52514e' text-anchor='start'>gli script, la VM, la libreria</text>
+<path d='M186.0,230.0 L186.0,246.0' fill='none' stroke='#898781' stroke-width='2' stroke-linejoin='round'/>
+<rect x='36' y='246' width='300' height='70' rx='6' fill='#fcfcfb' stroke='#1baf7a' stroke-width='2'/>
+<text x='50.0' y='270.0' font-size='14' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Tattica</text>
+<text x='50.0' y='290.0' font-size='11' fill='#0b0b0b' text-anchor='start'>allerta, ROE, rapporti, reazioni, TMA, armi</text>
+<text x='50.0' y='306.0' font-size='11' fill='#52514e' text-anchor='start'>il motore dell&#39;Enhanced</text>
+<path d='M186.0,316.0 L186.0,332.0' fill='none' stroke='#898781' stroke-width='2' stroke-linejoin='round'/>
+<rect x='36' y='332' width='300' height='70' rx='6' fill='#fcfcfb' stroke='#eda100' stroke-width='2'/>
+<text x='50.0' y='356.0' font-size='14' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Manovra</text>
+<text x='50.0' y='376.0' font-size='11' fill='#0b0b0b' text-anchor='start'>rotta, velocità, quota del passo</text>
+<text x='50.0' y='392.0' font-size='11' fill='#52514e' text-anchor='start'>manovra_ia, pilota, dinamica</text>
+<rect x='380' y='82' width='344' height='28' rx='4' fill='#e1e0d9' stroke='#c3c2b7'/>
+<text x='392.0' y='101.0' font-size='12' fill='#0b0b0b' text-anchor='start'>1. lo script: meta, inseguimento, telegrafo</text>
+<rect x='380' y='118' width='344' height='28' rx='4' fill='#e1e0d9' stroke='#c3c2b7'/>
+<text x='392.0' y='137.0' font-size='12' fill='#0b0b0b' text-anchor='start'>2. gli ordini dopo i danni: ritirata, soccorso</text>
+<rect x='380' y='154' width='344' height='28' rx='4' fill='#e1e0d9' stroke='#c3c2b7'/>
+<text x='392.0' y='173.0' font-size='12' fill='#0b0b0b' text-anchor='start'>3. manovra_ia: difesa, reazione, gamba di TMA</text>
+<rect x='380' y='190' width='344' height='28' rx='4' fill='#e1e0d9' stroke='#c3c2b7'/>
+<text x='392.0' y='209.0' font-size='12' fill='#0b0b0b' text-anchor='start'>4. il pilota del fondale</text>
+<rect x='380' y='226' width='344' height='28' rx='4' fill='#e1e0d9' stroke='#c3c2b7'/>
+<text x='392.0' y='245.0' font-size='12' fill='#0b0b0b' text-anchor='start'>5. l&#39;evasione del sottomarino</text>
+<rect x='380' y='262' width='344' height='28' rx='4' fill='#e1e0d9' stroke='#c3c2b7'/>
+<text x='392.0' y='281.0' font-size='12' fill='#0b0b0b' text-anchor='start'>6. la batteria del diesel</text>
+<rect x='380' y='298' width='344' height='28' rx='4' fill='#e1e0d9' stroke='#c3c2b7'/>
+<text x='392.0' y='317.0' font-size='12' fill='#0b0b0b' text-anchor='start'>7. il Crazy Ivan</text>
+<rect x='380' y='334' width='344' height='28' rx='4' fill='#e1e0d9' stroke='#c3c2b7'/>
+<text x='392.0' y='353.0' font-size='12' fill='#0b0b0b' text-anchor='start'>8. i vincoli del filo: 12 nodi, 2°/s</text>
+<rect x='380' y='370' width='344' height='28' rx='4' fill='#e1e0d9' stroke='#c3c2b7'/>
+<text x='392.0' y='389.0' font-size='12' fill='#0b0b0b' text-anchor='start'>9. la dinamica (B1) o il moto classico</text>
+<text x='552.0' y='420.0' font-size='11' fill='#52514e' text-anchor='middle'>ognuno può correggere quello di prima</text>
+</svg>

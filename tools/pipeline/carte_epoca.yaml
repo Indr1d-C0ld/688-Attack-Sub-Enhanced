@@ -1,0 +1,118 @@
+# Parametri delle carte d'epoca (tools/pipeline/carta_epoca.py, docs/08 §5, dossier 06 §3.3 e §7.4).
+# Tutti i valori sono STIME DI GIOCO (confidenza bassa), dalla tabella del dossier 06 §3.3; per la parte
+# sovietica la tabella si inverte nelle acque di casa (Barents, Okhotsk, Baltico orientale) e peggiora un po'
+# nelle acque NATO, dove pero' l'URSS aveva rilevato molto con le sue navi idrografiche.
+#
+# Per teatro: `zone`, nell'ordine (vince la prima che contiene la cella; l'ultima senza `poligono` e' il resto).
+# Per zona e per parte (nato, urss):
+#   spaziatura_km: [sulle soglie e in piattaforma, nei bacini] fra le linee di rilievo; fra le due si passa
+#                  con la profondita' (`profondita_soglia_m` del teatro: fitta sopra, rada oltre il doppio)
+#   spostamento_nm: [min, max] dello spostamento orizzontale di una campagna (blocchi di 20-50 nm)
+#   copertura: frazione delle campagne rilevate davvero (le altre restano «non rilevate»: solo sondaggi sparsi)
+#   fascia_negata_km: entro questa distanza dalla terra la parte non ha rilevato (acque territoriali avversarie)
+#   anni: [primo, ultimo] anno delle campagne
+#   ente: chi ha rilevato (per il cartiglio della carta)
+#   annotazioni: probabilita' che un rilievo sparito dalla carta compaia come nota (ED, PA, profondita' minore)
+# poligono: [lon, lat] in gradi decimali.
+predefiniti:
+  sondaggi_sparsi_km: 8        # un sondaggio sparso ogni tanti km di lato, ovunque (carte vecchie, passaggi isolati)
+  cono_gradi: 15               # semiapertura dell'ecoscandaglio (minimo della quota nell'impronta)
+  sigma_velocita_suono: [0.01, 0.03]   # scarto per campagna, in frazione (segno a caso)
+  rumore_profondita: 0.005
+  blocco_nm: [20, 50]
+  edizione: {nato: 1988, urss: 1987}
+  massimo_annotazioni: 60
+
+teatri:
+  faroe:
+    profondita_soglia_m: 900
+    zone:
+      - nome: Faroe e GIUK
+        nato: {spaziatura_km: [1.5, 7.5], spostamento_nm: [0.1, 0.3], copertura: 0.95, anni: [1962, 1987],
+               ente: "Hydrographic Office (UK), Sjømålingene (N), SOSUS", annotazioni: 0.3}
+        urss: {spaziatura_km: [3.0, 12.0], spostamento_nm: [0.2, 0.5], copertura: 0.8, anni: [1958, 1986],
+               ente: "GUNiO MO SSSR", annotazioni: 0.2}
+
+  barents:
+    profondita_soglia_m: 300
+    zone:
+      - nome: Varanger norvegese
+        poligono: [[31.0, 70.05], [31.4, 70.05], [31.4, 70.7], [31.0, 70.7]]
+        nato: {spaziatura_km: [1.5, 4.0], spostamento_nm: [0.1, 0.3], copertura: 0.95, anni: [1960, 1985],
+               ente: "Norges sjøkartverk", annotazioni: 0.3}
+        urss: {spaziatura_km: [2.0, 5.0], spostamento_nm: [0.1, 0.3], copertura: 0.9, anni: [1955, 1985],
+               ente: "GUNiO MO SSSR", annotazioni: 0.3}
+      - nome: Barents e approcci di Kola
+        nato: {spaziatura_km: [2.0, 5.0], spostamento_nm: [0.3, 1.0], copertura: 0.7, fascia_negata_km: 22,
+               anni: [1955, 1984], ente: "carte sovietiche pubblicate, sondaggi di sottomarini (DMA)", annotazioni: 0.15}
+        urss: {spaziatura_km: [0.5, 1.0], spostamento_nm: [0.0, 0.1], copertura: 1.0, anni: [1965, 1987],
+               ente: "GUNiO MO SSSR, Flotta del Nord", annotazioni: 0.4}
+
+  gibilterra:
+    profondita_soglia_m: 400
+    zone:
+      - nome: Stretto di Gibilterra
+        nato: {spaziatura_km: [0.5, 1.0], spostamento_nm: [0.0, 0.1], copertura: 1.0, anni: [1968, 1987],
+               ente: "Hydrographic Office (UK), Instituto Hidrográfico (E)", annotazioni: 0.4}
+        urss: {spaziatura_km: [1.0, 2.5], spostamento_nm: [0.1, 0.3], copertura: 0.9, anni: [1962, 1986],
+               ente: "GUNiO MO SSSR", annotazioni: 0.3}
+
+  otranto:
+    profondita_soglia_m: 300
+    zone:
+      - nome: costa albanese
+        poligono: [[18.85, 41.87], [20.5, 41.87], [20.5, 39.65], [19.9, 39.65], [19.2, 39.9], [18.9, 40.3]]
+        nato: {spaziatura_km: [2.0, 4.0], spostamento_nm: [0.3, 0.5], copertura: 0.6, fascia_negata_km: 22,
+               anni: [1940, 1975], ente: "rilievi italiani anteguerra, DMA", annotazioni: 0.15}
+        urss: {spaziatura_km: [1.0, 3.0], spostamento_nm: [0.1, 0.3], copertura: 0.9, anni: [1955, 1961],
+               ente: "GUNiO MO SSSR (base di Valona)", annotazioni: 0.25}
+      - nome: Canale d'Otranto
+        nato: {spaziatura_km: [0.5, 2.0], spostamento_nm: [0.1, 0.3], copertura: 1.0, anni: [1960, 1987],
+               ente: "Istituto Idrografico della Marina", annotazioni: 0.35}
+        urss: {spaziatura_km: [2.0, 5.0], spostamento_nm: [0.2, 0.4], copertura: 0.8, anni: [1958, 1985],
+               ente: "GUNiO MO SSSR", annotazioni: 0.2}
+
+  kunashir:
+    profondita_soglia_m: 500
+    zone:
+      - nome: acque giapponesi
+        poligono: [[144.8, 44.35], [145.35, 44.35], [145.5, 43.95], [145.5, 43.6], [145.7, 43.45], [145.7, 43.3], [144.8, 43.3]]
+        nato: {spaziatura_km: [1.0, 2.0], spostamento_nm: [0.1, 0.3], copertura: 1.0, anni: [1965, 1987],
+               ente: "Kaijō Hoan-chō Suirobu (J)", annotazioni: 0.35}
+        urss: {spaziatura_km: [2.0, 4.0], spostamento_nm: [0.2, 0.4], copertura: 0.8, anni: [1950, 1984],
+               ente: "GUNiO MO SSSR", annotazioni: 0.2}
+      - nome: Mare di Okhotsk
+        poligono: [[144.8, 45.6], [148.5, 45.6], [148.5, 45.5], [147.6, 44.95], [146.9, 44.55], [146.6, 44.55], [145.8, 44.25], [145.35, 44.35], [144.8, 44.35]]
+        nato: {spaziatura_km: [3.0, 10.0], spostamento_nm: [0.5, 1.0], copertura: 0.5, fascia_negata_km: 22,
+               anni: [1945, 1980], ente: "carte sovietiche pubblicate, DMA", annotazioni: 0.1}
+        urss: {spaziatura_km: [0.5, 1.0], spostamento_nm: [0.0, 0.1], copertura: 1.0, anni: [1965, 1987],
+               ente: "GUNiO MO SSSR, Flotta del Pacifico", annotazioni: 0.4}
+      - nome: Curili meridionali, lato Pacifico
+        nato: {spaziatura_km: [2.0, 6.0], spostamento_nm: [0.3, 0.7], copertura: 0.75, fascia_negata_km: 22,
+               anni: [1950, 1985], ente: "DMA, Kaijō Hoan-chō", annotazioni: 0.15}
+        urss: {spaziatura_km: [1.0, 3.0], spostamento_nm: [0.0, 0.2], copertura: 1.0, anni: [1960, 1987],
+               ente: "GUNiO MO SSSR, Flotta del Pacifico", annotazioni: 0.35}
+
+  celtica:
+    profondita_soglia_m: 250   # il ciglio della piattaforma: oltre, la scarpata con i canyon mal risolti
+    zone:
+      - nome: Margine della Piattaforma Celtica
+        nato: {spaziatura_km: [1.0, 4.0], spostamento_nm: [0.1, 0.3], copertura: 0.95, anni: [1960, 1987],
+               ente: "Hydrographic Office (UK), SHOM (F)", annotazioni: 0.3}
+        urss: {spaziatura_km: [2.0, 6.5], spostamento_nm: [0.2, 0.5], copertura: 0.8, anni: [1958, 1986],
+               ente: "GUNiO MO SSSR", annotazioni: 0.2}
+
+  baltico:
+    profondita_soglia_m: 60
+    zone:
+      - nome: acque del Patto di Varsavia
+        poligono: [[10.9, 53.9], [10.9, 54.2], [11.6, 54.35], [12.5, 54.6], [13.2, 54.85], [14.3, 54.75], [15.5, 54.65], [16.2, 54.85], [16.2, 53.9]]
+        nato: {spaziatura_km: [1.0, 2.0], spostamento_nm: [0.2, 0.3], copertura: 0.85, fascia_negata_km: 22,
+               anni: [1938, 1975], ente: "rilievi tedeschi anteguerra, DMA", annotazioni: 0.2}
+        urss: {spaziatura_km: [0.2, 0.5], spostamento_nm: [0.0, 0.1], copertura: 1.0, anni: [1960, 1987],
+               ente: "Seehydrographischer Dienst (DDR), BHMW (PL), GUNiO", annotazioni: 0.4}
+      - nome: Stretti danesi e Baltico occidentale
+        nato: {spaziatura_km: [0.2, 1.0], spostamento_nm: [0.0, 0.1], copertura: 1.0, anni: [1965, 1987],
+               ente: "Farvandsvæsenet (DK), Sjöfartsverket (S), DHI (D)", annotazioni: 0.45}
+        urss: {spaziatura_km: [1.0, 2.0], spostamento_nm: [0.1, 0.3], copertura: 0.9, anni: [1955, 1985],
+               ente: "GUNiO MO SSSR", annotazioni: 0.25}

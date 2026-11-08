@@ -1,0 +1,45 @@
+# Maschere aereo/cielo del Tu-142M (tools/navi/classi/aerei_maschera.py). Per ogni foto: maschera per la calibrazione
+# (_cal, sagoma intera) e maschera per la proiezione, senza i dischi delle eliche (eliche_<foto>.txt, prodotti da
+# aerei_eliche_maschera.py con la fotocamera calibrata): le pale nella foto non devono dipingere i dischi del modello.
+# Foto del 1982 con forte vignettatura: fondo polinomiale.
+file: extracted/navi/tu142/foto/dritto_basso_1982.jpg
+uscita: extracted/navi/tu142/maschere/dritto_basso_1982_cal.png
+soglia: 14
+grado: 5
+buco_massimo: 4000
+inviluppo: [[100, 280], [330, 280], [600, 520], [1100, 520], [1150, 180], [1260, 180], [1420, 330], [1560, 290], [1660, 420], [1920, 540], [1920, 620], [1620, 720], [1100, 810], [540, 950], [370, 950], [140, 650], [100, 300]]
+escludi: [[[1080, 180], [1190, 180], [1222, 470], [1080, 470]]]
+---
+file: extracted/navi/tu142/foto/dritto_basso_1982.jpg
+uscita: extracted/navi/tu142/maschere/dritto_basso_1982.png
+soglia: 14
+grado: 5
+buco_massimo: 4000
+inviluppo: [[100, 280], [330, 280], [600, 520], [1100, 520], [1150, 180], [1260, 180], [1420, 330], [1560, 290], [1660, 420], [1920, 540], [1920, 620], [1620, 720], [1100, 810], [540, 950], [370, 950], [140, 650], [100, 300]]
+escludi: [[[1080, 180], [1190, 180], [1222, 470], [1080, 470]]]
+escludi_file: [extracted/navi/tu142/maschere/eliche_dritto_basso_1982.txt]
+---
+# 1987 (F-15 escluso dall'inviluppo): nuvole chiare, ala lontana chiara aggiunta dalla sagoma del modello (erosa)
+file: extracted/navi/tu142/foto/dritto_1987.jpg
+uscita: extracted/navi/tu142/maschere/dritto_1987_cal.png
+metodo: soglia_cielo
+soglia: 45
+inviluppo: [[0, 220], [210, 215], [560, 360], [740, 330], [1240, 330], [1450, 360], [1920, 440], [1920, 470], [1700, 560], [1340, 720], [1150, 720], [600, 735], [440, 735], [150, 560], [0, 250]]
+---
+file: extracted/navi/tu142/foto/dritto_1987.jpg
+uscita: extracted/navi/tu142/maschere/dritto_1987.png
+metodo: soglia_cielo
+soglia: 45
+inviluppo: [[0, 220], [210, 215], [560, 360], [740, 330], [1240, 330], [1450, 360], [1920, 440], [1920, 470], [1700, 560], [1340, 720], [1150, 720], [600, 735], [440, 735], [150, 560], [0, 250]]
+modello: {classe: tools/navi/classi/tu142.yaml, foto: dritto_1987, erosione: 6, parti: [ala]}
+escludi_file: [extracted/navi/tu142/maschere/eliche_dritto_1987.txt]
+---
+# 1987 da sotto contro le nuvole: le superfici in ombra hanno il tono delle nuvole. Parti chiare per soglia, il resto
+# dalla sagoma del modello erosa di 12 pixel (calibrazione sui soli punti: maschera vuota_sotto_1987.png).
+file: extracted/navi/tu142/foto/sotto_1987.jpg
+uscita: extracted/navi/tu142/maschere/sotto_1987.png
+metodo: soglia_cielo
+soglia: 45
+inviluppo: [[240, 700], [300, 690], [520, 560], [540, 300], [720, 270], [960, 0], [1300, 0], [1080, 470], [1260, 560], [1900, 200], [1920, 200], [1920, 760], [1500, 760], [1240, 1220], [1100, 1220], [860, 1050], [700, 1080], [620, 900], [300, 800], [240, 760]]
+modello: {classe: tools/navi/classi/tu142.yaml, foto: sotto_1987, erosione: 12, dilatazione: 25, escludi_parti: [elica]}
+escludi_file: [extracted/navi/tu142/maschere/eliche_sotto_1987.txt]

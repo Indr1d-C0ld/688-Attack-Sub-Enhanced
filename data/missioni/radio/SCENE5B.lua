@@ -1,0 +1,35 @@
+-- Contenuti radio dell'Enhanced per SCENE5B, ESCAPE (lato Alfa, Gibilterra). R3 (docs/11): colore e contesto, obiettivi
+-- ed esiti restano quelli dell'originale. Sessioni ogni 10 minuti con la 5ª Eskadra.
+return {
+  ordini = { da = "KP 5 ESK", a = "PL «LENINSKII KOMSOMOL»", oggetto = "PEREKHVAT", classifica = "SOV. SEKRETNO", data = { giorno = 27, mese = 5, anno = 1989, ora_utc = 22 } },
+  parametri = { ciclo_s = 600, fondo_ogni_s = 400 },
+  finestre = { ogni_s = 600, primo_s = 300, tolleranza_s = 90, obbligatorie = true, ricevuta = false, saltate_max = 2 },
+  stato_iniziale = {
+    roe = { sottomarini = "trattenuto", navi = "trattenuto", mercantili = "trattenuto", neutrali = "trattenuto", aerei = "trattenuto" },
+    neutrali = { 6, 7 },
+  },
+  { id = "KONTAKT", dopo_s = 120, precedenza = "immediate", da = "KP 5 ESK", oggetto = "KONTAKT",
+    classifica = "SEKRETNO",
+    testo = { it = "LA NAVE DA RICOGNIZIONE NEL MARE DI ALBORAN HA SENTITO IL 688 AMERICANO DIRETTO ALLO STRETTO, 18 NODI.",
+              en = "RECONNAISSANCE SHIP IN THE ALBORAN SEA HEARD THE AMERICAN 688 HEADING FOR THE STRAIT, 18 KNOTS." },
+    contatto = { unita = { 2 }, eta_s = 900, errore_m = 7000, sensore = "agi", rotta_err = 25, velocita_err_kn = 4 } },
+  { id = "ZAPIS'", dopo_s = 480, precedenza = "priority", da = "KP 5 ESK", oggetto = "ZAPIS'",
+    classifica = "SEKRETNO",
+    testo = { it = "REGISTRARE IL RUMORE DEL 688 PIU' A LUNGO POSSIBILE, ENTRO LA PORTATA DI TIRO. ARMI SOLO SE GLI AMERICANI AGISCONO PER PRIMI.",
+              en = "RECORD THE 688'S NOISE AS LONG AS POSSIBLE, WITHIN FIRING RANGE. WEAPONS ONLY IF THE AMERICANS ACT FIRST." } },
+  { id = "POGODA", dopo_s = 780, precedenza = "routine", da = "GIDROMET", oggetto = "POGODA",
+    classifica = "DLYA SLUZHEBNOGO",
+    testo = { it = "STRETTO DI GIBILTERRA: VENTO DI LEVANTE 25 NODI, MARE 4. CORRENTE PROFONDA VERSO OVEST.",
+              en = "STRAIT OF GIBRALTAR: EASTERLY WIND 25 KNOTS, SEA STATE 4. DEEP CURRENT WESTBOUND." } },
+  { id = "UTOCHNENIE", dopo_s = 1080, precedenza = "priority", da = "KP 5 ESK", oggetto = "UTOCHNENIE",
+    classifica = "SEKRETNO",
+    testo = { it = "UN IL-38 DA MITIGA RIPORTA UN CONTATTO SUBACQUEO NELLO STRETTO. POSIZIONE AGGIORNATA.",
+              en = "AN IL-38 FROM MITIGA REPORTS A SUBMERGED CONTACT IN THE STRAIT. UPDATED POSITION." },
+    contatto = { unita = { 2 }, eta_s = 600, errore_m = 4000, sensore = "il38", rotta_err = 20, velocita_err_kn = 3 } },
+  -- legati agli eventi (E6): vanno in onda la prima volta che la condizione e' vera
+  { id = "ORUZHIE", se = { evento = "lancio_nemico" }, precedenza = "flash", da = "KP 5 ESK", oggetto = "ORUZHIE",
+    classifica = "SOV. SEKRETNO",
+    roe = { sottomarini = "libero" },
+    testo = { it = "GLI AMERICANI HANNO APERTO IL FUOCO. ARMI LIBERE CONTRO IL SOTTOMARINO AMERICANO.",
+              en = "THE AMERICANS HAVE OPENED FIRE. WEAPONS FREE ON THE AMERICAN SUBMARINE." } },
+}

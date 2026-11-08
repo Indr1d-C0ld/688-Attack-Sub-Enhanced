@@ -1,0 +1,33 @@
+# Triangolazione degli elementi principali del P-3C da tre foto (tools/navi/triangola.py).
+L: 35.61
+uscita_fotocamere: extracted/navi/p3c/triangolazione_fotocamere.json
+elementi:
+  naso: {xyz: [0, 0, 9.65]}
+  coda: {xyz: [35.61, 0, 10.9], liberi: z}
+  deriva: {xyz: [30.5, 0, 17.0], liberi: xz}
+  ala_s: {xyz: [10.8, 15.19, 10.45], liberi: xz}
+  ala_d: {simmetrico_di: ala_s}
+  stab_s: {xyz: [30.6, 6.53, 11.35], liberi: xyz}
+  stab_d: {simmetrico_di: stab_s}
+  s2: {xyz: [5.8, 9.2, 10.1], liberi: xyz}
+  s1: {xyz: [5.4, 4.8, 9.65], liberi: xyz}
+  d1: {simmetrico_di: s1}
+  d2: {simmetrico_di: s2}
+foto:
+  - nome: sinistro_basso_1988
+    file: extracted/navi/p3c/foto/sinistro_basso_1988.jpg
+    limiti_fotocamera: {elevazione: [-70, 10], distanza: [30, 5000]}
+    fotocamera_iniziale: {posizione: [93, 255, -117], bersaglio: [0, 0, 10], f: 9100}
+    osservazioni: {naso: [672, 690], coda: [1752, 660], deriva: [1540, 506], ala_s: [894, 433], ala_d: [1140, 905],
+                   stab_s: [1468, 532], stab_d: [1563, 738], s2: [820, 539], s1: [855, 618], d1: [933, 775], d2: [982, 833]}
+  - nome: prua_2003
+    file: extracted/navi/p3c/foto/prua_2003.jpg
+    limiti_fotocamera: {elevazione: [-40, 15]}
+    fotocamera_iniziale: {posizione: [200, 0, -15], bersaglio: [0, 0, 10], f: 8900}
+    osservazioni: {naso: [937, 632], deriva: [993, 458], ala_s: [1645, 648], ala_d: [290, 650], s2: [1370, 630],
+                   s1: [1172, 648], d1: [742, 648], d2: [548, 635]}
+  - nome: dritto_1991
+    file: extracted/navi/p3c/foto/dritto_1991.jpg
+    limiti_fotocamera: {elevazione: [-10, 50], distanza: [30, 3000]}
+    fotocamera_iniziale: {posizione: [196, -339, 93], bersaglio: [0, 0, 10], f: 18400}
+    osservazioni: {naso: [1683, 448], coda: [37, 612], deriva: [440, 272], ala_s: [935, 362], ala_d: [1612, 668]}

@@ -1,0 +1,210 @@
+# Il piano del comandante IA per le missioni originali nella sandbox (generato da
+# tools/pipeline/sandbox_originali.py: non modificare a mano). Campi e fonti: vedi lo script.
+
+[SCENE0A]
+condotta = "attacco_terra"
+fonte = "briefing: «DELIVER YOUR PAYLOAD OF TOMAHAWK MISSILES... ESCAPE INTO COPENHAGEN WATERS AS QUICKLY AS POSSIBLE... THE NAVY... WILL NOT BE ABLE TO SEND ANY ASSISTANCE IF YOUR SUBMARINE IS DISCOVERED» (armi solo in difesa: la fuga prima di tutto); tubi: quattro Tomahawk nei tubi da siluro (il manuale: «You have only 5 minutes to fire ALL four missiles»; L_02fb a 300 s); uscita: il rettangolo di Copenaghen di L_0311; limite: il secondo rettangolo di L_0311 (fuori: esito 4)"
+armi = "solo_difesa"
+classi = ["bqm74"]
+quota_m = 60.0
+velocita_kn = 10.0
+uscita = { x = -40385.3, y = 68564.6, r = 15000.0 }
+limite = { x0 = -94766.4, y0 = 46518.2, x1 = 146274.2, y1 = -115155.4 }
+tubi = ["tasm", "tasm", "tasm", "tasm"]
+
+[SCENE1A]
+condotta = "caccia"
+fonte = "TORPEX: «YOUR MISSION IS TO DESTROY EACH OF THE WARSHIPS... THE WEAPONS RANGE IS CLEAR AND WEAPONS ARE FREE», «STAY LOW AND QUIET»; area: il poligono di tiro, dove partono i bersagli dell'esercitazione (le navi 2-4 sono uguali in tutte le varianti)"
+armi = "libere"
+classi = ["spruance"]
+quota_m = 60.0
+velocita_kn = 6.0
+area = { x = 9706.8, y = -43883.8, r = 12000.0 }
+
+[SCENE1B]
+condotta = "caccia"
+fonte = "briefing: «THERE ARE 5 FOREST SHERMAN CLASS DESTROYERS OUT THERE, AND WHOEVER SCORES THE MOST KILLS WINS»; area: le rotte dei cacciatorpediniere nel poligono; limite: il poligono di L_0531"
+armi = "libere"
+classi = ["spruance"]
+quota_m = 60.0
+velocita_kn = 8.0
+area = { x = 30000.0, y = 40000.0, r = 15000.0 }
+limite = { x0 = -99540.8, y0 = 57458.1, x1 = 109540.8, y1 = -69484.3 }
+
+[SCENE1C]
+condotta = "caccia"
+fonte = "briefing: «THERE ARE 5 FOREST SHERMAN CLASS DESTROYERS OUT THERE, AND WHOEVER SCORES THE MOST KILLS WINS»; area: le rotte dei cacciatorpediniere nel poligono; limite: il poligono di L_037b"
+armi = "libere"
+classi = ["spruance"]
+quota_m = 60.0
+velocita_kn = 8.0
+area = { x = 30000.0, y = 40000.0, r = 15000.0 }
+limite = { x0 = -99540.8, y0 = 57458.1, x1 = 109540.8, y1 = -69484.3 }
+
+[SCENE2A]
+condotta = "evasione"
+fonte = "briefing: «EITHER YOU SHAKE THE SOVIET ALFA ON YOUR TAIL... I CAN'T ALLOW YOU TO LAUNCH WEAPONS UNLESS THE RUSSIANS DECIDE THEY WANT TO PLAY HARDBALL»"
+armi = "solo_difesa"
+quota_m = 150.0
+velocita_kn = 5.0
+seminare = true
+
+[SCENE2B]
+condotta = "pedinamento"
+fonte = "briefing: «CONTINUE TRACKING THE AMERICANS... STAY WITHIN 5 MILES SO THAT YOU MAY FIRE ON COMMAND... YOU ARE NOT AUTHORIZED TO LAUNCH TORPEDOES UNLESS FIRED UPON»"
+armi = "solo_difesa"
+classi = ["los_angeles"]
+quota_m = 100.0
+distanza_m = 9260.0
+
+[SCENE2C]
+condotta = "evasione"
+fonte = "briefing: «EITHER YOU SHAKE THE SOVIET ALFA ON YOUR TAIL... I CAN'T ALLOW YOU TO LAUNCH WEAPONS UNLESS THE RUSSIANS DECIDE THEY WANT TO PLAY HARDBALL»"
+armi = "solo_difesa"
+quota_m = 150.0
+velocita_kn = 5.0
+seminare = true
+
+[SCENE3B]
+condotta = "pedinamento"
+fonte = "briefing: «EXECUTE SEARCH PROCEDURES ALONG THE POLYARNYY COASTLINE. SHOULD YOU DISCOVER INTRUDERS, MOVE CLOSE TO THE INTRUDER AND ACTIVATE SONAR. FOLLOW THE INTRUDER OUT OF THE AREA»; ping_m: L_0325 (bersaglio entro 1,8 miglia); area: la rotta costiera delle navi sovietiche; limite: L_028b"
+armi = "solo_difesa"
+classi = ["trafalgar"]
+quota_m = 100.0
+area = { x = 30224.6, y = -55708.2, r = 30000.0 }
+limite = { x0 = -165939.2, y0 = 93637.1, x1 = 165939.2, y1 = -96007.7 }
+distanza_m = 9260.0
+ping_m = 3333.6
+
+[SCENE4A]
+condotta = "caccia"
+fonte = "briefing: «INTERCEPT AND SINK FOUR LIBYAN OIL TANKERS... ENTERING THE STRAIT OF GIBRALTAR... DO NOT ATTACK THE FRIGATES UNLESS IT IS NECESSARY»; area: l'ingresso dello stretto (il primo punto della rotta delle petroliere, come l'intelligence la annuncia); limite: L_02f7"
+armi = "classi"
+classi = ["petroliera"]
+quota_m = 60.0
+velocita_kn = 8.0
+area = { x = -45804.8, y = 1103.1, r = 15000.0 }
+limite = { x0 = -133224.7, y0 = 55913.1, x1 = 72566.0, y1 = -86210.0 }
+
+[SCENE5A]
+condotta = "transito"
+fonte = "briefing: «GET PAST THE SOVIETS AND ESCAPE TO THE WEST WITHOUT SO MUCH AS A WHISPER... I DON'T SEE ANY NEED FOR WEAPON TESTING UNLESS THEY DRAW FIRST»; punti: il canale dei mercantili (unita' 9 o 5) al contrario; uscita: a ovest del rettangolo dello stretto di L_0260"
+armi = "solo_difesa"
+quota_m = 150.0
+velocita_kn = 6.0
+seminare = true
+punti = [[-11240.3, 1875.1], [-42887.4, 1875.1]]
+uscita = { x = -42887.4, y = 1875.1, r = 3000.0 }
+
+[SCENE5B]
+condotta = "pedinamento"
+fonte = "briefing: «INTERCEPT THE AMERICANS AS THEY EXIT THE MEDITERRANEAN... MAINTAIN SONAR CONTACT WITH THE 688 AS LONG AS POSSIBLE... YOU MAY LAUNCH WEAPONS ONLY IN THE EVENT THAT THE IMPERIALISTS... TAKE ACTION FIRST»; distanza_m: le 5 miglia di L_0171; area: il rettangolo dello stretto di L_019c; limite: L_0306"
+armi = "solo_difesa"
+classi = ["los_angeles"]
+quota_m = 100.0
+area = { x = -15232.2, y = 1908.2, r = 12000.0 }
+limite = { x0 = -52993.2, y0 = 28541.8, x1 = 20439.8, y1 = -24621.2 }
+distanza_m = 9260.0
+
+[SCENE5C]
+condotta = "transito"
+fonte = "briefing: «GET PAST THE SOVIETS AND ESCAPE TO THE WEST WITHOUT SO MUCH AS A WHISPER... I DON'T SEE ANY NEED FOR WEAPON TESTING UNLESS THEY DRAW FIRST»; punti: il canale dei mercantili (unita' 9 o 5) al contrario; uscita: a ovest del rettangolo dello stretto di L_0175"
+armi = "solo_difesa"
+quota_m = 150.0
+velocita_kn = 6.0
+seminare = true
+punti = [[-11240.3, 1875.1], [-42887.4, 1875.1]]
+uscita = { x = -42887.4, y = 1875.1, r = 3000.0 }
+
+[SCENE6A]
+condotta = "scorta"
+fonte = "briefing: «ESCORT THE CARGO SHIPS NORTH TO TRIVAT AND PROTECT THEM FROM SOVIET AGGRESSION BY WHATEVER MEANS AVAILABLE... WE RECOMMEND THE USE OF MULTIPLE HARPOON MISSILES»; pim: la rotta del mercantile 3; limite: L_01c6"
+armi = "libere"
+quota_m = 60.0
+limite = { x0 = -103192.8, y0 = -7089.6, x1 = 92430.9, y1 = -118376.8 }
+pim = { punti = [[-1214.8, -52268.1], [876.1, -27262.5]], velocita_kn = 8.2 }
+avanti_m = 6000.0
+
+[SCENE7A]
+condotta = "caccia"
+fonte = "briefing: «A SOVIET TYPHOON CLASS SUBMARINE... IS HEADING FOR YOUR PATROL SECTOR... DON'T TANGLE WITH THEM [the attack boats] IF YOU CAN AVOID IT. IF YOU CAN CATCH IVAN AT THE PASS»; area: il passo, a meta' della rotta del Typhoon (la ricognizione dal satellite)"
+armi = "classi"
+classi = ["typhoon"]
+quota_m = 150.0
+velocita_kn = 6.0
+area = { x = -111677.7, y = -68667.2, r = 8000.0 }
+
+[SCENE7B]
+condotta = "scorta"
+fonte = "briefing: «YOU MUST PROTECT THE PLARB KRASNOGVARDEETS AT ALL COSTS! PATROL THE AREA AHEAD AND DESTROY ANY THREATENING WARSHIPS»; pim: la rotta del Typhoon (unita' 2); velocita' STIMA DI GIOCO (lo script non la dice)"
+armi = "libere"
+quota_m = 100.0
+pim = { punti = [[-106094.2, -49144.9], [-109520.2, -57719.2], [-110203.9, -59277.0], [-110256.1, -62414.5], [-111598.4, -63961.1], [-112954.7, -66291.8], [-112968.1, -67076.1], [-111677.7, -68667.2], [-109715.0, -69484.7], [-108423.4, -71075.2], [-105813.2, -72686.6], [-104544.7, -75845.0], [-101900.0, -80300.0]], velocita_kn = 6.0 }
+avanti_m = 8000.0
+
+[SCENE7C]
+condotta = "caccia"
+fonte = "briefing: «A SOVIET TYPHOON CLASS SUBMARINE... IS HEADING FOR YOUR PATROL SECTOR... DON'T TANGLE WITH THEM [the attack boats] IF YOU CAN AVOID IT. IF YOU CAN CATCH IVAN AT THE PASS»; area: il passo, a meta' della rotta del Typhoon (la ricognizione dal satellite); limite: L_01e8"
+armi = "classi"
+classi = ["typhoon"]
+quota_m = 150.0
+velocita_kn = 6.0
+area = { x = -111677.7, y = -68667.2, r = 8000.0 }
+limite = { x0 = -197194.0, y0 = 1623.2, x1 = -14990.2, y1 = -126855.1 }
+
+[SCENE8A]
+condotta = "scorta"
+fonte = "briefing: «ACT AS SCOUT FOR THE SURFACE GROUP HEADING NORTHEAST... IT IS YOUR RESPONSIBILITY TO PROTECT THE SKIMMERS»; pim: la rotta della Nimitz (unita' 2); limite: L_01f9"
+armi = "roe"
+quota_m = 100.0
+limite = { x0 = -165939.2, y0 = 93637.1, x1 = 165939.2, y1 = -96007.7 }
+pim = { punti = [[-49781.8, -10667.5], [30817.3, -10667.5]], velocita_kn = 13.7 }
+avanti_m = 10000.0
+
+[SCENE8B]
+condotta = "caccia"
+fonte = "briefing: «PREVENT AMERICAN SUPPORT FROM REACHING NATO FORCES IN THE NORWEGIAN SEA. PATROL THE SEA LANES AND DESTROY ALL NATO VESSELS»; area: la rotta del gruppo NATO verso la Norvegia; limite: L_01b8"
+armi = "libere"
+classi = ["nimitz", "iowa", "sacramento", "perry", "kidd"]
+quota_m = 100.0
+velocita_kn = 6.0
+area = { x = -9482.2, y = -10667.5, r = 25000.0 }
+limite = { x0 = -165939.2, y0 = 93637.1, x1 = 165939.2, y1 = -96007.7 }
+
+[SCENE8C]
+condotta = "scorta"
+fonte = "briefing: «ACT AS SCOUT FOR THE SURFACE GROUP HEADING NORTHEAST... IT IS YOUR RESPONSIBILITY TO PROTECT THE SKIMMERS»; pim: la rotta della Nimitz (unita' 2); limite: L_01be"
+armi = "roe"
+quota_m = 100.0
+limite = { x0 = -165939.2, y0 = 93637.1, x1 = 165939.2, y1 = -96007.7 }
+pim = { punti = [[-49781.8, -10667.5], [30817.3, -10667.5]], velocita_kn = 13.7 }
+avanti_m = 10000.0
+
+[SCENE9A]
+condotta = "scorta"
+fonte = "briefing: «ESCORT A CONVOY OF MILITARY SUPPLIES EAST TO THE BAY OF BISCAY... WEAPONS ARE FREE BUT ONLY ONCE YOU HAVE POSITIVE IDENTIFICATION»; pim: la rotta del mercantile 2; limite: L_054e"
+armi = "libere"
+quota_m = 100.0
+limite = { x0 = -165939.2, y0 = 93637.1, x1 = 142233.6, y1 = -101934.1 }
+pim = { punti = [[-10667.5, -55708.2], [88896.0, -55708.2]], velocita_kn = 13.7 }
+avanti_m = 5000.0
+
+[SCENE9B]
+condotta = "caccia"
+fonte = "briefing: «THE LENINSKII KOMSOMOL WILL WAIT AS THE PSKOVSKII KOMSOMOLETS CRUSHES THE CONVOY WITH A BARRAGE OF SS-NX-21 MISSILES. ONCE THE MISSILES HAVE IMPACTED, THE LENINSKII KOMSOMOL WILL MOVE IN»; area: dove va l'Oscar (unita' 10); attesa_s STIMA DI GIOCO; limite: L_061d"
+armi = "libere"
+classi = ["cargo", "perry"]
+quota_m = 100.0
+velocita_kn = 8.0
+area = { x = 5926.4, y = -60449.3, r = 15000.0 }
+limite = { x0 = -165939.2, y0 = 93637.1, x1 = 142233.6, y1 = -101934.1 }
+attesa_s = 900.0
+
+[SCENE9C]
+condotta = "scorta"
+fonte = "briefing: «ESCORT A CONVOY OF MILITARY SUPPLIES EAST TO THE BAY OF BISCAY... WEAPONS ARE FREE BUT ONLY ONCE YOU HAVE POSITIVE IDENTIFICATION»; pim: la rotta del mercantile 2; limite: L_04d2"
+armi = "libere"
+quota_m = 100.0
+limite = { x0 = -165939.2, y0 = 93637.1, x1 = 165939.2, y1 = -101934.1 }
+pim = { punti = [[-120898.6, -10667.5], [-88896.0, -1185.3], [-72302.1, -36743.7], [-30817.3, -18964.5], [-10667.5, -53337.6], [30817.3, -36743.7], [56893.4, -55708.2]], velocita_kn = 13.7 }
+avanti_m = 5000.0

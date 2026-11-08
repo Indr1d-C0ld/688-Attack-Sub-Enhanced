@@ -1,0 +1,25 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='440' viewBox='0 0 760 440' font-family='DejaVu Sans, Helvetica, Arial, sans-serif' role='img' aria-label='La geometria del filo: i due rocchetti dal punto di lancio e i limiti del battello'>
+<title>La geometria del filo: i due rocchetti dal punto di lancio e i limiti del battello</title>
+<rect width='760' height='440' fill='#fcfcfb'/>
+<text x='36.0' y='26.0' font-size='16' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Il filo del siluro</text>
+<text x='36.0' y='46.0' font-size='12' fill='#52514e' text-anchor='start'>Due rocchetti: il siluro svolge il suo col percorso fatto, il battello il suo col percorso fatto dopo il lancio.</text>
+<circle cx='110' cy='340' r='5' fill='#0b0b0b'/>
+<text x='102.0' y='360.0' font-size='11' fill='#0b0b0b' text-anchor='start'>il punto di lancio</text>
+<path d='M110.0,340.0 L640.0,120.0' fill='none' stroke='#2a78d6' stroke-width='2' stroke-linejoin='round'/>
+<path d='M651.4,114.9 L648.5,118.3 L637.4,123.0 L635.9,119.3 L646.9,114.6 Z' fill='#2a78d6' stroke='#0b0b0b'/>
+<text x='634.0' y='104.0' font-size='11' fill='#0b0b0b' text-anchor='end'>il siluro</text>
+<text x='389.0' y='252.0' font-size='12' fill='#2a78d6' text-anchor='start'>rocchetto del siluro: 30 km, 18 minuti a 55 nodi</text>
+<path d='M110.0,340.0 L215.0,230.0' fill='none' stroke='#eb6834' stroke-width='2' stroke-linejoin='round'/>
+<path d='M228.0,216.6 L225.7,223.4 L212.1,237.4 L207.8,233.3 L221.4,219.2 Z' fill='#52514e' stroke='#0b0b0b'/>
+<text x='205.0' y='218.0' font-size='11' fill='#0b0b0b' text-anchor='end'>il battello</text>
+<text x='153.0' y='270.0' font-size='12' fill='#eb6834' text-anchor='end'>rocchetto del</text>
+<text x='153.0' y='286.0' font-size='12' fill='#eb6834' text-anchor='end'>battello: 3 km</text>
+<text x='350.0' y='282.0' font-size='12' fill='#52514e' text-anchor='start'>Il filo si rompe se:</text>
+<text x='350.0' y='300.0' font-size='12' fill='#0b0b0b' text-anchor='start'>- il battello va oltre 12 nodi;</text>
+<text x='350.0' y='318.0' font-size='12' fill='#0b0b0b' text-anchor='start'>- vira oltre 2° al secondo per più di 5 s;</text>
+<text x='350.0' y='336.0' font-size='12' fill='#0b0b0b' text-anchor='start'>- un rocchetto finisce;</text>
+<text x='350.0' y='354.0' font-size='12' fill='#0b0b0b' text-anchor='start'>- il battello sparisce.</text>
+<text x='350.0' y='372.0' font-size='12' fill='#0b0b0b' text-anchor='start'>All&#39;80% di un rocchetto il filo è «a rischio».</text>
+<text x='350.0' y='390.0' font-size='12' fill='#0b0b0b' text-anchor='start'>Il rocchetto del battello dura 8 minuti a 12 nodi, 16 a 6:</text>
+<text x='350.0' y='408.0' font-size='12' fill='#0b0b0b' text-anchor='start'>con il filo in acqua il limite vero è la velocità del battello.</text>
+</svg>

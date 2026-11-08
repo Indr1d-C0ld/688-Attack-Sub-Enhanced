@@ -1,0 +1,301 @@
+# Interazioni fra unita' dell'IA (generato da tools/pipeline/interazioni.py: non modificare a mano).
+# Fase 4, parte del nucleo: manovre di TMA, carico e guida a filo dell'IA (docs/18_interazioni_ia.md).
+
+[tma.marine]
+usa = "nato"
+uk = "nato"
+nato = "nato"
+urss = "vmf"
+vmf = "vmf"
+
+[tma.nato]
+gamba_min_s = 180.0
+gamba_max_s = 360.0
+distanza_gamba_lunga_m = 20000.0
+mascone_deg = 45.0
+mascone_vicino_deg = 100.0
+virata_min_deg = 30.0
+virata_max_deg = 90.0
+vicino_m = 4000.0
+velocita_kn = 6.0
+velocita_max_kn = 10.0
+sigma_relativa = 0.15
+raddrizzamento_s = 120.0
+tolleranza_rotta_deg = 5.0
+margine_fondo_m = 30.0
+tenuta_s = 600.0
+gambe_max = 8
+gambe_max_specchio = 3
+variazione_gamba = 0.3
+fonte = "02 §5.1 [WMS] [Hervey]; distanze e velocita' STIMA"
+confidenza = "media"
+
+[tma.vmf]
+gamba_min_s = 240.0
+gamba_max_s = 480.0
+distanza_gamba_lunga_m = 20000.0
+mascone_deg = 60.0
+mascone_vicino_deg = 100.0
+virata_min_deg = 30.0
+virata_max_deg = 90.0
+vicino_m = 4000.0
+velocita_kn = 8.0
+velocita_max_kn = 12.0
+sigma_relativa = 0.2
+raddrizzamento_s = 180.0
+tolleranza_rotta_deg = 5.0
+margine_fondo_m = 30.0
+tenuta_s = 600.0
+gambe_max = 8
+gambe_max_specchio = 3
+variazione_gamba = 0.3
+fonte = "02 §5.1; 24 §3.3 (coordinazione sovietica); STIMA DI GIOCO"
+confidenza = "bassa"
+
+[tma.classi.alfa]
+velocita_kn = 12.0
+velocita_max_kn = 20.0
+fonte = "19 §3: l'Alfa si fida della velocita'; STIMA"
+confidenza = "bassa"
+
+[tma.classi.kilo]
+velocita_kn = 4.0
+velocita_max_kn = 6.0
+fonte = "diesel in immersione: batteria; STIMA"
+confidenza = "bassa"
+
+[tma.classi.foxtrot]
+velocita_kn = 4.0
+velocita_max_kn = 6.0
+fonte = "diesel in immersione: batteria; STIMA"
+confidenza = "bassa"
+
+[armi_ia.sturgeon]
+nazione = "usa"
+tubi_533 = 4
+tubi_650 = 0
+armi = { mk48 = 19, harpoon = 4 }
+tubi = ["mk48", "mk48", "mk48", "mk48"]
+fonte = "01 §2.2 e 14 §1.4 [WPSturgeon]: 4 tubi, 23 armi, tipicamente 4 Harpoon"
+confidenza = "media"
+
+[armi_ia.trafalgar]
+nazione = "uk"
+tubi_533 = 5
+tubi_650 = 0
+armi = { tigerfish = 20, harpoon = 5 }
+tubi = ["tigerfish", "tigerfish", "tigerfish", "tigerfish", "tigerfish"]
+fonte = "01 §2.3 e 14 §1.4 [WPTraf]: 5 tubi, 25-30 armi; composizione STIMA"
+confidenza = "media"
+
+[armi_ia.victor3]
+nazione = "urss"
+tubi_533 = 4
+tubi_650 = 2
+armi = { uset80 = 6, test71m = 4, set65 = 4, type53_65k = 4 }
+tubi = ["uset80", "uset80", "test71m", "type53_65k"]
+fonte = "01 §2.5 e 14 §1.4 [WPVictor]: 4 x 533 + 2 x 650, 24 armi; i 6 da 650 non ci sono"
+confidenza = "media"
+
+[armi_ia.akula]
+nazione = "urss"
+tubi_533 = 4
+tubi_650 = 4
+armi = { uset80 = 10, test71m = 6, set65 = 6, type53_65k = 6 }
+tubi = ["uset80", "uset80", "test71m", "type53_65k"]
+fonte = "01 §2.6 [WPAkula]: 4 x 533 + 4 x 650, 40 armi; i 12 da 650 non ci sono"
+confidenza = "media"
+
+[armi_ia.oscar]
+nazione = "urss"
+tubi_533 = 4
+tubi_650 = 2
+armi = { uset80 = 6, set65 = 6, type53_65k = 8 }
+tubi = ["uset80", "set65", "type53_65k", "type53_65k"]
+fonte = "01 §2.7 [WPOscar]: 4 x 533 + 2 x 650, 28 armi (i P-700 a parte)"
+confidenza = "media"
+
+[armi_ia.typhoon]
+nazione = "urss"
+tubi_533 = 6
+tubi_650 = 0
+armi = { set65 = 8, uset80 = 6, type53_65k = 4 }
+tubi = ["set65", "set65", "uset80", "uset80", "type53_65k", "set65"]
+fonte = "01 §2.9 [WPTyphoon]: 6 x 533 (le fonti divergono); composizione STIMA"
+confidenza = "bassa"
+
+[armi_ia.charlie2]
+nazione = "urss"
+tubi_533 = 6
+tubi_650 = 0
+armi = { set65 = 6, type53_65k = 6 }
+tubi = ["set65", "set65", "set65", "type53_65k", "type53_65k", "type53_65k"]
+fonte = "01 §2.8 [WPCharlie]: 6 x 533, 12 armi (le fonti russe 4 x 533 + 2 x 400)"
+confidenza = "media"
+
+[armi_ia.kilo]
+nazione = "urss"
+tubi_533 = 6
+tubi_650 = 0
+armi = { set65 = 8, type53_65k = 6, test71m = 4 }
+tubi = ["set65", "set65", "test71m", "test71m", "type53_65k", "type53_65k"]
+fonte = "01 §2.10 [WPKilo]: 6 x 533, 18 siluri; composizione STIMA"
+confidenza = "media"
+
+[armi_ia.foxtrot]
+nazione = "urss"
+tubi_533 = 10
+tubi_650 = 0
+armi = { saet60m = 6, set65 = 8, type53_65k = 8 }
+tubi = ["set65", "set65", "saet60m", "saet60m", "type53_65k", "type53_65k", "set65", "set65", "type53_65k", "type53_65k"]
+fonte = "01 §2.11 [WPFoxtrot]: 10 x 533 (6 a prua, 4 a poppa), 22 siluri; composizione STIMA"
+confidenza = "media"
+
+[filo_ia.recluta]
+correzione_s = 60.0
+soglia_deg = 15.0
+taglio_dopo_aggancio_s = 10.0
+distanza_taglio_m = 1500.0
+rifiuta_esche = false
+scarto_esca_deg = 15.0
+attivo_su_perdita = false
+fonte = "02 §6.2; STIMA: corregge di rado e si fida della testa"
+confidenza = "bassa"
+
+[filo_ia.medio]
+correzione_s = 20.0
+soglia_deg = 8.0
+taglio_dopo_aggancio_s = 30.0
+distanza_taglio_m = 1500.0
+rifiuta_esche = true
+scarto_esca_deg = 15.0
+attivo_su_perdita = true
+fonte = "02 §6.2, §6.4; STIMA"
+confidenza = "bassa"
+
+[filo_ia.esperto]
+correzione_s = 10.0
+soglia_deg = 5.0
+taglio_dopo_aggancio_s = 60.0
+distanza_taglio_m = 1000.0
+rifiuta_esche = true
+scarto_esca_deg = 10.0
+attivo_su_perdita = true
+fonte = "02 §6.2, §6.4 [Mk48]: guida fino all'ultimo e rifiuta le esche; STIMA"
+confidenza = "bassa"
+
+# Fase 3 (runtime): allerta della forza, messaggi fra unita' dell'IA, zone e fuoco amico, ROE dell'IA.
+
+[allerta]
+raggio_formazione_m = 20000.0
+discesa_s = 2700.0
+minimo_crisi = 1
+minimo_guerra = 2
+falsi_contatti = [1.0, 1.5, 2.0, 3.0]
+posto_combattimento = 2
+emcon_combattimento = 3
+fonte = "24 §8.1 (tabella degli eventi, discesa 30-60 min, falsi contatti x1-x3); raggio della formazione STIMA"
+confidenza = "bassa"
+
+[allerta.eventi.possub]
+formazione = 1
+formazione_max = 2
+forza = 0
+forza_max = 0
+formazione_fino_a = -1
+forza_fino_a = -1
+
+[allerta.eventi.probsub]
+formazione = 1
+formazione_max = 3
+forza = 1
+forza_max = 2
+formazione_fino_a = -1
+forza_fino_a = -1
+
+[allerta.eventi.albero]
+formazione = 1
+formazione_max = 3
+forza = 0
+forza_max = 0
+formazione_fino_a = -1
+forza_fino_a = -1
+
+[allerta.eventi.flash]
+formazione = 1
+formazione_max = 3
+forza = 1
+forza_max = 3
+formazione_fino_a = -1
+forza_fino_a = -1
+
+[allerta.eventi.ping]
+formazione = 1
+formazione_max = 3
+forza = 0
+forza_max = 0
+formazione_fino_a = -1
+forza_fino_a = -1
+
+[allerta.eventi.arma]
+formazione = 0
+formazione_max = 3
+forza = 1
+forza_max = 3
+formazione_fino_a = 3
+forza_fino_a = -1
+
+[allerta.eventi.affondato]
+formazione = 0
+formazione_max = 3
+forza = 0
+forza_max = 3
+formazione_fino_a = 3
+forza_fino_a = 2
+
+[messaggi.usa]
+formazione_s = [30.0, 120.0]
+formazione_perdita = 0.02
+aereo_nave_s = [60.0, 180.0]
+aereo_nave_riuscita = 1.0
+teatro_flash_s = [300.0, 600.0]
+teatro_immediate_s = [900.0, 1800.0]
+teatro_perdita = 0.05
+fonte = "24 §8.2 (voce e Link 11, FLASH e IMMEDIATE nella scala del gioco)"
+confidenza = "media"
+
+[messaggi.urss]
+formazione_s = [60.0, 180.0]
+formazione_perdita = 0.05
+aereo_nave_s = [720.0, 720.0]
+aereo_nave_riuscita = 0.16
+teatro_flash_s = [450.0, 900.0]
+teatro_immediate_s = [1350.0, 2700.0]
+teatro_perdita = 0.05
+fonte = "24 §8.2 e §4.5: KPUG; Be-12 -> Ka-25 12 min, riuscita 12/74 [ART-Be12]; teatro x1,5"
+confidenza = "media"
+
+[messaggi.comuni]
+riferire_ogni_s = 600.0
+broadcast_ciclo_s = [600.0, 900.0]
+r0_m = 1852.0
+ellisse_max_m = 10000.0
+velocita_kn = { sottomarino = 20.0, nave = 30.0, aereo = 0.0, sconosciuto = 20.0 }
+fonte = "24 §8.2 (ciclo di broadcast 10-15 min, 10 §0); r0, velocita' e soglia dell'ellisse STIMA"
+confidenza = "bassa"
+
+[zone]
+avanti_nm = 15.0
+indietro_nm = 30.0
+lato_nm = 5.0
+dopo_attacco_s = 3600.0
+fuoco_amico_usa = 0.05
+fuoco_amico_urss = 0.15
+fonte = "24 §8.3: zona mobile 10-20 nm nella scala del gioco, P di fuoco amico nella prima ora dopo un attacco"
+confidenza = "bassa"
+
+[roe_ia]
+neutrali_a3 = 0.3
+linea_neutrale_nm = 2.0
+fonte = "24 §4.6 (legittima difesa contro chi ha fatto l'atto), §8.7 (neutrali, P 0,3 ad A3)"
+confidenza = "media"

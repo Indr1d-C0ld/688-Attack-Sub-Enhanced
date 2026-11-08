@@ -1,0 +1,1448 @@
+-- LIB_I07_LUPO_FERITO: missione dell'editor (engine/missioni/src/scenario_missione.cpp), autore Libreria di Melchior 688.
+-- Formato: docs/09_schema_missioni.md. Lo scenario e' nel blocco `editor`: l'editor lo rilegge e riscrive il file.
+
+local script = {}
+
+-- parametro i del comando del giocatore (p), oppure il valore scritto nello script
+local function par(p, i, predefinito) if p ~= nil and p[i] ~= nil then return p[i] end return predefinito end
+
+local missione = {
+  formato = 1,
+  pacchetto = { formato_pacchetto = 1, formato_missione = 1, formato_editor = 1, libreria = 2, autore = "Libreria di Melchior 688", creato = "2026-10-25", dipendenze = { teatro = "celtica", impronta_teatro = "08f74d1fc0b171a7", classi = { "giocatore_los_angeles", "ka27", "kara", "krivak2", "oscar", "perry", "tu142", }, impronta_classi = "0b7fa2ae5960f23b", impronta_kit = "2ce96bf1d483c197" }, impronta = "sha256:a2318e072447a6efd3b83083d601fc8edca83677982767f0bf4ce9f9217b7896" },
+  id = "LIB_I07_LUPO_FERITO",
+  titolo = { it = "Lupo ferito", en = "Wounded wolf" },
+  lato = "usa",
+  teatro = "celtica",
+  posa = { metodo = "rapida", centro = { lat = 48.25, lon = -9.75 }, metri_per_unita = { x = 37.04, y = 37.04 }, moto_classico_m_s_per_nodo = 0.514444, nota = "posizioni in metri sul teatro, velocita' vere anche nel classico" },
+  data = "1989-11-09", ora_utc = 19.333,
+  dotazione = { mk48 = 2, esca = 4 },
+  tubi = { "mk48", "mk48", "", "", "esca", "esca", "" },
+  deposito = { mk48 = 2, esca = 4 },
+  tipo_missione = "antisom",
+  armi = {
+    mk48 = { classe = "mk48", velocita_kn = 50.2857, corsa_s = 280, filo_s = 190, danno = 75, rumore = 18, testa = 17, virata_gradi_s = 9, quota_max_m = 548.64, gestore = "KU1A_041a" },
+    harpoon = { gestore = "KU1A_03cc" },   -- senza modello di corsa (missile o esca: vedi lo script)
+    esca = { gestore = "KU1A_04ab" },   -- senza modello di corsa (missile o esca: vedi lo script)
+    tomahawk = { gestore = "KU1A_03cc" },   -- TASM antinave: il gestore dell'Harpoon
+  },
+  gestori_giocatore = {
+    punto_di_rotta = "KU1A_050e",
+    telegrafo = "KU1A_0520",
+    quota = "KU1A_0525",
+    timone = "KU1A_052c",
+    pilota_automatico_off = "KU1A_0588",
+    periscopio = "KU1A_0590",
+    carica_tubo_1 = "KU1A_0534",
+    carica_tubo_2 = "KU1A_053d",
+    carica_tubo_3 = "KU1A_0546",
+    carica_tubo_4 = "KU1A_054f",
+    carica_tubo_5 = "KU1A_0558",
+    carica_tubo_6 = "KU1A_0561",
+    carica_tubo_7 = "KU1A_056a",
+    schiera_cala = "KU1A_0594",
+    schiera_recupera = "KU1A_05a4",
+    schiera_persa = "KU1A_05b0",
+    designa_bersaglio = "KU1A_05ba",
+    posizione = "KU1A_05bf",
+    antenna = "KU1A_059a",
+    guida_e0 = "KU1A_04e1",
+    guida_e1 = "KU1A_04e6",
+    guida_e2 = "KU1A_04f0",
+  },
+  carriera = false,   -- missione fuori carriera
+  aereo_asw = {
+    { unita = 6, missione = "caccia", situazione = "guerra", bersagli = "giocatore", equipaggio = "esperto",
+      base_unita = 3, zona = { x = -29781.5, y = 17822.5, raggio_m = 20000 } },
+  },
+  obiettivi = {
+    { id = "incontro", tipo = "raggiungere", cerchio = { x = 3686.4, y = 41144.7, r = 3704 },
+      testo = { it = "Raggiungere il punto d'incontro con la fregata francese", en = "Reach the rendezvous with the French frigate" } },
+    { id = "dodici_nodi", tipo = "variabile", minimo = 1, primario = false, indice = 301, almeno = 1,
+      testo = { it = "Mai oltre i 12 nodi: la linea d'asse non regge", en = "Never above 12 knots: the shaft will not take it" } },
+    { id = "oscar", tipo = "variabile", minimo = 1, primario = false, indice = 302, almeno = 1,
+      testo = { it = "Fermare l'Oscar prima che lanci sul convoglio", en = "Stop the Oscar before she fires on the convoy" } },
+    { id = "rapporto", tipo = "variabile", minimo = 1, primario = false, indice = 304, almeno = 1,
+      testo = { it = "Segnalare l'Oscar con un rapporto di contatto via radio", en = "Report the Oscar with a radio contact report" } },
+    { id = "vivo", tipo = "sopravvivere",
+      testo = { it = "Riportare a casa il battello", en = "Bring the boat home" } },
+  },
+  briefing = {
+    it = { "ORDINI DI MISSIONE", "DA: COMSUBLANT", "A: USS LOS ANGELES (SSN-688)", "OGG.: RIENTRO A BREST", "9 novembre 1989, ore 1920Z. Teatro: piattaforma Celtica. Guerra.", "Avete affondato un Victor III a cento miglia da qui. Il suo ultimo siluro e' esploso a duecento metri dalla poppa.", "C'e' acqua nel locale macchine, la linea d'asse vibra oltre i dodici nodi e la schiera rimorchiata e' persa. Nei tubi restano due Mk 48.", "Brest e' a duecentoquaranta miglia. Una barriera di Krivak e un Kara, con gli elicotteri e un Tu-142, stanno fra voi e la piattaforma; una fregata francese vi aspetta sul bordo.", "La burrasca da ovest e' una tortura a quota periscopica; a trecento metri e' la vostra alleata.", "Regole d'ingaggio: armi libere. Non superate i dodici nodi se non per salvare il battello.", "Tempo a disposizione: 4 ore.", "Nota: inedita; unita' e luoghi sono di fantasia." },
+    en = { "MISSION ORDERS", "FM: COMSUBLANT", "TO: USS LOS ANGELES (SSN-688)", "SUBJ: RETURN TO BREST", "9 November 1989, 1920Z. Theatre: Celtic shelf. War.", "You sank a Victor III a hundred miles from here. Her last torpedo exploded two hundred metres off your stern.", "There is water in the engine room, the shaft vibrates above twelve knots and the towed array is lost. Two Mk 48s are left in the tubes.", "Brest is two hundred and forty miles away. A barrier of Krivaks and a Kara, with helicopters and a Tu-142, lies between you and the shelf; a French frigate waits at its edge.", "The westerly gale is torture at periscope depth; at three hundred metres it is your ally.", "Rules of engagement: weapons free. Do not exceed twelve knots unless to save the boat.", "Time available: 4 hours.", "Note: original; units and places are fictional." },
+  },
+  esiti = {
+    [20] = { it = "Missione conclusa: rientrare alla base per il rapporto.", en = "Mission over: return to base for debriefing." },
+    [21] = { it = "Tempo scaduto: la missione si chiude qui.", en = "Time is up: the mission ends here." },
+    [40] = { it = "La fregata vi ha in sonar e vi scorta verso Brest: il lupo ferito e' a casa.", en = "The frigate has you on sonar and escorts you to Brest: the wounded wolf is home." },
+  },
+  radio = {
+    ordini = { da = "COMSUBLANT", a = "USS LOS ANGELES (SSN 688)", oggetto = "RETURN TO BREST", classifica = "SECRET", data = { giorno = 9, mese = 11, anno = 1989, ora_utc = 19.333 } },
+    stato_iniziale = { roe = { aerei = "libero", navi = "libero", sottomarini = "libero", } },
+    { id = "OSCAR", su_richiesta = true, precedenza = "flash", da = "COMSUBLANT", oggetto = "OSCAR CLASS SSGN", classifica = "SECRET",
+      testo = { it = "SOSUS: OSCAR II A NORD DELLA VOSTRA ROTTA, PORTELLI DEI MISSILI APERTI. CONVOGLIO UK-FR A QUARANTA MIGLIA. RIFERIRE.", en = "SOSUS: OSCAR II NORTH OF YOUR TRACK, MISSILE HATCHES OPEN. UK-FR CONVOY FORTY MILES AWAY. REPORT." } },
+    { id = "LANCIO", su_richiesta = true, precedenza = "flash", da = "COMSUBLANT", oggetto = "CONVOY UNDER MISSILE ATTACK", classifica = "SECRET",
+      testo = { it = "IL CONVOGLIO E' SOTTO ATTACCO DI MISSILI DA SOTTOMARINO. DUE MERCANTILI COLPITI.", en = "CONVOY UNDER SUBMARINE MISSILE ATTACK. TWO MERCHANTS HIT." } },
+  },
+  meteo = { fisso = { vento_m_s = 20, vento_da_gradi = 270, stato_mare = 6, visibilita_m = 6000, pioggia_mm_h = 4, nubi_ottavi = 8, } },
+  danni_iniziali = { urto = { tnt_kg = 150, distanza_m = 200, angolo_gradi = 180 }, sistemi = { propulsione = 0.55, schiera = 0, }, acqua = { { compartimento = "macchine", m3 = 6 }, }, },
+  messaggi = {
+    [1] = { it = "La linea d'asse vibra: il cuscinetto non reggera' a lungo a questa velocita'.", en = "The shaft is vibrating: the bearing will not last long at this speed." },
+  },
+  editor = { formato_editor = 1, scenario = {
+    id = "LIB_I07_LUPO_FERITO", titolo = { it = "Lupo ferito", en = "Wounded wolf" }, autore = "Libreria di Melchior 688",
+    teatro = "celtica", alfa = false, centro = { lat = 48.25, lon = -9.75 },
+    data = { giorno = 9, mese = 11, anno = 1989 }, ora_utc = 19.333333333333332, meteo_realistico = false,
+    situazione = "guerra", paranoia = 2, difficolta = 4, durata_s = 14400, libreria = 2,
+    carico = { dotazione = { { "mk48", 2 }, { "esca", 4 }, }, deposito = { { "mk48", 2 }, { "esca", 4 }, }, tubi = { "mk48", "mk48", "", "", "esca", "esca", "", }, tipo_missione = "antisom", ospiti = 0 },
+    unita = {
+      { id = 0, classe = "los_angeles", categoria = "sottomarino", parte = "usa", ruolo = "", flag = 9, giocatore = true, non_combattente = false, nascosta = false,
+        pos = { x = -70686.567118912149, y = -10682.438218349273 }, quota = 300, rotta = 55.129075406694291, velocita = 6, punti = { },
+        ciclica = false, esce = false, comportamento = "", profonda = 0, entra_con = "",
+        parametri = { } },
+      { id = 2, classe = "krivak2", categoria = "nave", parte = "urss", ruolo = "barriera", flag = 18, giocatore = false, non_combattente = false, nascosta = false,
+        pos = { x = -37785.668258733269, y = 29308.704839677201 }, quota = 0, rotta = 145.12907540669428, velocita = 10, punti = { { x = -34355.290633356912, y = 24386.052165831799 }, { x = -41216.045884109626, y = 34231.357513522606 }, },
+        ciclica = true, esce = false, comportamento = "R_nave", profonda = 0, entra_con = "",
+        parametri = { } },
+      { id = 3, classe = "kara", categoria = "nave", parte = "urss", ruolo = "barriera", flag = 18, giocatore = false, non_combattente = false, nascosta = false,
+        pos = { x = -29781.453799521776, y = 17822.515267371266 }, quota = 0, rotta = 145.12907540669428, velocita = 10, punti = { { x = -26351.076174145419, y = 12899.862593525864 }, { x = -33211.831424898133, y = 22745.167941216667 }, },
+        ciclica = true, esce = false, comportamento = "R_nave", profonda = 0, entra_con = "",
+        parametri = { } },
+      { id = 4, classe = "krivak2", categoria = "nave", parte = "urss", ruolo = "barriera", flag = 18, giocatore = false, non_combattente = false, nascosta = false,
+        pos = { x = -21777.23934031028, y = 6336.3256950653304 }, quota = 0, rotta = 145.12907540669428, velocita = 10, punti = { { x = -18346.861714933926, y = 1413.67302121993 }, { x = -25207.616965686633, y = 11258.978368910732 }, },
+        ciclica = true, esce = false, comportamento = "R_nave", profonda = 0, entra_con = "",
+        parametri = { } },
+      { id = 5, classe = "ka27", categoria = "aereo", parte = "urss", ruolo = "elicottero del Kara", flag = 19, giocatore = false, non_combattente = false, nascosta = false,
+        pos = { x = -27320.127462599074, y = 19537.704080059444 }, quota = 0, rotta = 0, velocita = 110, punti = { { x = -37165.43281028988, y = 12676.948829306733 }, { x = -34927.020237586308, y = 25206.494278139369 }, { x = -22397.474788753672, y = 22968.081705435798 }, { x = -24635.887361457244, y = 10438.536256603165 }, },
+        ciclica = true, esce = false, comportamento = "R_aereo", profonda = 0, entra_con = "",
+        parametri = { } },
+      { id = 6, classe = "tu142", categoria = "aereo", parte = "urss", ruolo = "pattugliatore", flag = 19, giocatore = false, non_combattente = false, nascosta = false,
+        pos = { x = -5168.190430294766, y = 34974.403394253037 }, quota = 0, rotta = 270, velocita = 300, punti = { { x = -12103.78426985809, y = 35500.184797034955 }, { x = -12103.784269858086, y = 144.84573770757925 }, { x = -47459.123329185459, y = 144.84573770757197 }, { x = -47459.123329185473, y = 35500.184797034948 }, },
+        ciclica = true, esce = false, comportamento = "R_aereo", profonda = 0, entra_con = "",
+        parametri = { } },
+      { id = 7, classe = "oscar", categoria = "sottomarino", parte = "urss", ruolo = "Oscar II di riserva", flag = 17, giocatore = false, non_combattente = false, nascosta = true,
+        pos = { x = -31649.502514020631, y = 39743.062568938782 }, quota = 40, rotta = 145.12907540669428, velocita = 6, punti = { },
+        ciclica = false, esce = false, comportamento = "R_sottomarino", profonda = 200, entra_con = "portelli",
+        parametri = { } },
+      { id = 8, classe = "perry", categoria = "nave", parte = "usa", ruolo = "fregata francese del punto d'incontro", flag = 10, giocatore = false, non_combattente = false, nascosta = false,
+        pos = { x = 6147.692525993034, y = 42859.938750194422 }, quota = 0, rotta = 235.12907540669428, velocita = 8, punti = { { x = 3686.3661890703329, y = 41144.749937506247 }, },
+        ciclica = false, esce = false, comportamento = "", profonda = 0, entra_con = "fregata",
+        parametri = { } },
+    },
+    obiettivi = {
+      { id = "incontro", tipo = "raggiungere", unita = {  }, minimo = -1, cerchio = { x = 3686.3661890703329, y = 41144.749937506247, r = 3704 }, entro_s = -1, primario = true, colpire = true, testo = { it = "Raggiungere il punto d'incontro con la fregata francese", en = "Reach the rendezvous with the French frigate" } },
+      { id = "dodici_nodi", tipo = "variabile", unita = {  }, minimo = 1, entro_s = -1, primario = false, colpire = true, testo = { it = "Mai oltre i 12 nodi: la linea d'asse non regge", en = "Never above 12 knots: the shaft will not take it" }, indice = 1 },
+      { id = "oscar", tipo = "variabile", unita = {  }, minimo = 1, entro_s = -1, primario = false, colpire = true, testo = { it = "Fermare l'Oscar prima che lanci sul convoglio", en = "Stop the Oscar before she fires on the convoy" }, indice = 2 },
+      { id = "rapporto", tipo = "variabile", unita = {  }, minimo = 1, entro_s = -1, primario = false, colpire = true, testo = { it = "Segnalare l'Oscar con un rapporto di contatto via radio", en = "Report the Oscar with a radio contact report" }, indice = 4 },
+      { id = "vivo", tipo = "sopravvivere", unita = {  }, minimo = -1, entro_s = -1, primario = true, colpire = true, testo = { it = "Riportare a casa il battello", en = "Bring the boat home" } },
+    },
+    aerei_asw = {
+      { unita = 6, base_unita = 3, situazione = "guerra", contro_giocatore = true, bersagli = {  }, zona = { x = -29781.453799521776, y = 17822.515267371266 }, raggio = 20000 },
+    },
+    briefing = { it = { "ORDINI DI MISSIONE", "DA: COMSUBLANT", "A: USS LOS ANGELES (SSN-688)", "OGG.: RIENTRO A BREST", "9 novembre 1989, ore 1920Z. Teatro: piattaforma Celtica. Guerra.", "Avete affondato un Victor III a cento miglia da qui. Il suo ultimo siluro e' esploso a duecento metri dalla poppa.", "C'e' acqua nel locale macchine, la linea d'asse vibra oltre i dodici nodi e la schiera rimorchiata e' persa. Nei tubi restano due Mk 48.", "Brest e' a duecentoquaranta miglia. Una barriera di Krivak e un Kara, con gli elicotteri e un Tu-142, stanno fra voi e la piattaforma; una fregata francese vi aspetta sul bordo.", "La burrasca da ovest e' una tortura a quota periscopica; a trecento metri e' la vostra alleata.", "Regole d'ingaggio: armi libere. Non superate i dodici nodi se non per salvare il battello.", "Tempo a disposizione: 4 ore.", "Nota: inedita; unita' e luoghi sono di fantasia.", }, en = { "MISSION ORDERS", "FM: COMSUBLANT", "TO: USS LOS ANGELES (SSN-688)", "SUBJ: RETURN TO BREST", "9 November 1989, 1920Z. Theatre: Celtic shelf. War.", "You sank a Victor III a hundred miles from here. Her last torpedo exploded two hundred metres off your stern.", "There is water in the engine room, the shaft vibrates above twelve knots and the towed array is lost. Two Mk 48s are left in the tubes.", "Brest is two hundred and forty miles away. A barrier of Krivaks and a Kara, with helicopters and a Tu-142, lies between you and the shelf; a French frigate waits at its edge.", "The westerly gale is torture at periscope depth; at three hundred metres it is your ally.", "Rules of engagement: weapons free. Do not exceed twelve knots unless to save the boat.", "Time available: 4 hours.", "Note: original; units and places are fictional.", } },
+    esito_fine = { it = "Missione conclusa: rientrare alla base per il rapporto.", en = "Mission over: return to base for debriefing." }, esito_tempo = { it = "Tempo scaduto: la missione si chiude qui.", en = "Time is up: the mission ends here." },
+    chiusura = { tipo = "solo_tempo", unita = {  }, zona = { x = 0, y = 0, r = 0 }, fuori = { x = 0, y = 0, r = 0 } },
+    zone = {
+      { id = "incontro", nome = { it = "il punto d'incontro", en = "the rendezvous" }, cerchio = { x = 3686.3661890703329, y = 41144.749937506247, r = 3704 } },
+      { id = "avvicinamento", nome = { it = "l'avvicinamento all'incontro", en = "the approach to the rendezvous" }, cerchio = { x = 3686.3661890703329, y = 41144.749937506247, r = 22224 } },
+    },
+    regole = {
+      { id = "inizio", una_volta = true,
+        quando = {
+          { tipo = "tempo", valore = 0, unita = -1, indice = 0, zona = "", regola = "", confronto = "=" },
+        },
+        allora = {
+          { tipo = "variabile", codice = 0, unita = -1, indice = 1, valore = 1, comportamento = "", operazione = "=", categoria = "", zona = "", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "", en = "" } },
+          { tipo = "variabile", codice = 0, unita = -1, indice = 2, valore = 1, comportamento = "", operazione = "=", categoria = "", zona = "", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "", en = "" } },
+        } },
+      { id = "troppo_veloce", una_volta = true,
+        quando = {
+          { tipo = "giocatore_sopra_nodi", valore = 12.5, unita = -1, indice = 0, zona = "", regola = "", confronto = "=" },
+        },
+        allora = {
+          { tipo = "variabile", codice = 0, unita = -1, indice = 1, valore = 0, comportamento = "", operazione = "=", categoria = "", zona = "", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "", en = "" } },
+          { tipo = "messaggio", codice = 0, unita = -1, indice = 0, valore = 0, comportamento = "", operazione = "=", categoria = "", zona = "", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "La linea d'asse vibra: il cuscinetto non reggera' a lungo a questa velocita'.", en = "The shaft is vibrating: the bearing will not last long at this speed." } },
+        } },
+      { id = "portelli", una_volta = true,
+        quando = {
+          { tipo = "tempo", valore = 5400, unita = -1, indice = 0, zona = "", regola = "", confronto = "=" },
+        },
+        allora = {
+          { tipo = "entra", codice = 0, unita = 7, indice = 0, valore = 0, comportamento = "", operazione = "=", categoria = "", zona = "", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "", en = "" } },
+          { tipo = "radio", codice = 0, unita = -1, indice = 0, valore = 0, comportamento = "", operazione = "=", categoria = "", zona = "OSCAR", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "", en = "" } },
+        } },
+      { id = "oscar_affondato", una_volta = true,
+        quando = {
+          { tipo = "regola_scattata", valore = 0, unita = -1, indice = 0, zona = "", regola = "portelli", confronto = "=" },
+          { tipo = "unita_fuori", valore = 0, unita = 7, indice = 0, zona = "", regola = "", confronto = "=" },
+        },
+        allora = {
+          { tipo = "variabile", codice = 0, unita = -1, indice = 3, valore = 1, comportamento = "", operazione = "=", categoria = "", zona = "", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "", en = "" } },
+        } },
+      { id = "lancio", una_volta = true,
+        quando = {
+          { tipo = "tempo", valore = 9000, unita = -1, indice = 0, zona = "", regola = "", confronto = "=" },
+          { tipo = "variabile", valore = 0, unita = -1, indice = 3, zona = "", regola = "", confronto = "=" },
+        },
+        allora = {
+          { tipo = "variabile", codice = 0, unita = -1, indice = 2, valore = 0, comportamento = "", operazione = "=", categoria = "", zona = "", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "", en = "" } },
+          { tipo = "radio", codice = 0, unita = -1, indice = 0, valore = 0, comportamento = "", operazione = "=", categoria = "", zona = "LANCIO", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "", en = "" } },
+        } },
+      { id = "rapporto", una_volta = true,
+        quando = {
+          { tipo = "giocatore_ha_trasmesso", valore = 5400, unita = -1, indice = 0, zona = "", regola = "", confronto = "=", trasmissione = "contatto" },
+        },
+        allora = {
+          { tipo = "variabile", codice = 0, unita = -1, indice = 4, valore = 1, comportamento = "", operazione = "=", categoria = "", zona = "", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "", en = "" } },
+        } },
+      { id = "fregata", una_volta = true,
+        quando = {
+          { tipo = "giocatore_in_zona", valore = 0, unita = -1, indice = 0, zona = "avvicinamento", regola = "", confronto = "=" },
+        },
+        allora = {
+          { tipo = "entra", codice = 0, unita = 8, indice = 0, valore = 0, comportamento = "", operazione = "=", categoria = "", zona = "", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "", en = "" } },
+        } },
+      { id = "a_casa", una_volta = true,
+        quando = {
+          { tipo = "giocatore_in_zona", valore = 0, unita = -1, indice = 0, zona = "incontro", regola = "", confronto = "=" },
+        },
+        allora = {
+          { tipo = "fine", codice = 40, unita = -1, indice = 0, valore = 0, comportamento = "", operazione = "=", categoria = "", zona = "", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "La fregata vi ha in sonar e vi scorta verso Brest: il lupo ferito e' a casa.", en = "The frigate has you on sonar and escorts you to Brest: the wounded wolf is home." } },
+        } },
+    },
+    radio = { ordini = { da = "COMSUBLANT", a = "USS LOS ANGELES (SSN 688)", oggetto = "RETURN TO BREST", classifica = "SECRET" }, roe = { aerei = "libero", navi = "libero", sottomarini = "libero", }, messaggi = {
+      { id = "OSCAR", dopo_s = 0, su_richiesta = true, precedenza = "flash", da = "COMSUBLANT", oggetto = "OSCAR CLASS SSGN", classifica = "SECRET", testo = { it = "SOSUS: OSCAR II A NORD DELLA VOSTRA ROTTA, PORTELLI DEI MISSILI APERTI. CONVOGLIO UK-FR A QUARANTA MIGLIA. RIFERIRE.", en = "SOSUS: OSCAR II NORTH OF YOUR TRACK, MISSILE HATCHES OPEN. UK-FR CONVOY FORTY MILES AWAY. REPORT." }, autentico = true, roe = { }, se_evento = "", se_ricevuto = "", se_unita_colpita = {  }, annulla = "" },
+      { id = "LANCIO", dopo_s = 0, su_richiesta = true, precedenza = "flash", da = "COMSUBLANT", oggetto = "CONVOY UNDER MISSILE ATTACK", classifica = "SECRET", testo = { it = "IL CONVOGLIO E' SOTTO ATTACCO DI MISSILI DA SOTTOMARINO. DUE MERCANTILI COLPITI.", en = "CONVOY UNDER SUBMARINE MISSILE ATTACK. TWO MERCHANTS HIT." }, autentico = true, roe = { }, se_evento = "", se_ricevuto = "", se_unita_colpita = {  }, annulla = "" },
+    } },
+    danni_iniziali = { urto = { tnt_kg = 150, distanza_m = 200, angolo_gradi = 180 }, sistemi = { propulsione = 0.55000000000000004, schiera = 0, }, acqua = { { compartimento = "macchine", m3 = 6 }, }, },
+    meteo_fisso = { vento_m_s = 20, vento_da_gradi = 270, stato_mare = 6, visibilita_m = 6000, pioggia_mm_h = 4, nubi_ottavi = 8, nebbia = "" },
+  } },
+  script = script,
+  varianti = {
+    { probabilita = 1, unita = {
+      { id = 0, classe = "los_angeles", categoria = "sottomarino", schieramento = "usa", flag = 9, giocatore = true,
+        posizione = { x = -70686.6, y = -10682.4 }, quota_m = 300, rotta = 55.1, velocita_kn = 6,
+        modello = { massima_kn = 37, virata_gradi_s = 3.6, accel_kn_s = 0.257, quota_m_s = 5.4864, quota_max_m = 457.2, integrita = 160, rumore = 6, sonar = 18, schiera_trainata = false, controllo_fondale = true, periodo_controlli = 1 },
+        gestori = { bersaglio = nil, reazione = nil, arrivo = nil } },
+      { id = 2, classe = "krivak2", categoria = "nave", schieramento = "urss", flag = 18,
+        posizione = { x = -37785.7, y = 29308.7 }, quota_m = 0, rotta = 145.1, velocita_kn = 10,
+        modello = { massima_kn = 30, virata_gradi_s = 1.44, accel_kn_s = 0.051, quota_m_s = 0.6706, quota_max_m = 548.64, integrita = 100, rumore = 24, sonar = 19, difesa = 90, schiera_trainata = true, controllo_fondale = false, periodo_controlli = 1 },
+        rotta_punti = { { x = -34355.3, y = 24386.1 } }, rotta_ciclica = true,
+        gestori = { bersaglio = "R_nave", reazione = nil, arrivo = "R_2_p2" } },   -- barriera
+      { id = 3, classe = "kara", categoria = "nave", schieramento = "urss", flag = 18,
+        posizione = { x = -29781.5, y = 17822.5 }, quota_m = 0, rotta = 145.1, velocita_kn = 10,
+        modello = { massima_kn = 30, virata_gradi_s = 1.44, accel_kn_s = 0.051, quota_m_s = 0.6706, quota_max_m = 548.64, integrita = 150, rumore = 24, sonar = 19, difesa = 90, schiera_trainata = true, controllo_fondale = false, periodo_controlli = 1 },
+        rotta_punti = { { x = -26351.1, y = 12899.9 } }, rotta_ciclica = true,
+        gestori = { bersaglio = "R_nave", reazione = nil, arrivo = "R_3_p2" } },   -- barriera
+      { id = 4, classe = "krivak2", categoria = "nave", schieramento = "urss", flag = 18,
+        posizione = { x = -21777.2, y = 6336.3 }, quota_m = 0, rotta = 145.1, velocita_kn = 10,
+        modello = { massima_kn = 30, virata_gradi_s = 1.44, accel_kn_s = 0.051, quota_m_s = 0.6706, quota_max_m = 548.64, integrita = 100, rumore = 24, sonar = 19, difesa = 90, schiera_trainata = true, controllo_fondale = false, periodo_controlli = 1 },
+        rotta_punti = { { x = -18346.9, y = 1413.7 } }, rotta_ciclica = true,
+        gestori = { bersaglio = "R_nave", reazione = nil, arrivo = "R_4_p2" } },   -- barriera
+      { id = 5, classe = "ka27", categoria = "aereo", schieramento = "urss", flag = 19,
+        posizione = { x = -27320.1, y = 19537.7 }, quota_m = 0, rotta = 0, velocita_kn = 110,
+        modello = { massima_kn = 90, virata_gradi_s = 9, accel_kn_s = 0.771, quota_m_s = 0.3353, quota_max_m = 457.2, integrita = 10, rumore = 0, sonar = 26, difesa = 0, schiera_trainata = false, controllo_fondale = false, periodo_controlli = 2 },
+        rotta_punti = { { x = -37165.4, y = 12676.9 } }, rotta_ciclica = true,
+        gestori = { bersaglio = "R_aereo", reazione = nil, arrivo = "R_5_p2" } },   -- elicottero del Kara
+      { id = 6, classe = "tu142", categoria = "aereo", schieramento = "urss", flag = 19,
+        posizione = { x = -5168.2, y = 34974.4 }, quota_m = 0, rotta = 270, velocita_kn = 300,
+        modello = { massima_kn = 330, virata_gradi_s = 3, accel_kn_s = 2, quota_m_s = 1, quota_max_m = 500, integrita = 10, rumore = 0, sonar = 21, difesa = 0, schiera_trainata = false, controllo_fondale = false, periodo_controlli = 2 },
+        rotta_punti = { { x = -12103.8, y = 35500.2 } }, rotta_ciclica = true,
+        gestori = { bersaglio = "R_aereo", reazione = nil, arrivo = "R_6_p2" } },   -- pattugliatore
+      { id = 7, classe = "oscar", categoria = "sottomarino", schieramento = "urss", flag = 17,
+        posizione = { x = -31649.5, y = 2179743.1 }, quota_m = 40, rotta = 145.1, velocita_kn = 0,
+        modello = { massima_kn = 42, virata_gradi_s = 3.6, accel_kn_s = 0.257, quota_m_s = 6.858, quota_max_m = 548.64, integrita = 175, rumore = 14, sonar = 19, difesa = 128, schiera_trainata = true, controllo_fondale = true, periodo_controlli = 1 },
+        gestori = { bersaglio = "R_sottomarino", reazione = nil, arrivo = nil } },   -- Oscar II di riserva (non nel briefing), di riserva: entra con la regola portelli
+      { id = 8, classe = "perry", categoria = "nave", schieramento = "usa", flag = 10,
+        posizione = { x = 6147.7, y = 2202859.9 }, quota_m = 0, rotta = 235.1, velocita_kn = 0,
+        modello = { massima_kn = 15, virata_gradi_s = 1.44, accel_kn_s = 0.051, quota_m_s = 0.6706, quota_max_m = 457.2, integrita = 75, rumore = 15, sonar = 10, difesa = 128, schiera_trainata = true, controllo_fondale = false, periodo_controlli = 1 },
+        gestori = { bersaglio = nil, reazione = nil, arrivo = nil } },   -- fregata francese del punto d'incontro, di riserva: entra con la regola fregata
+    },
+    timer = {
+      { dopo_s = 20, unita = 0, gestore = "R_chiusura" },
+      { dopo_s = 14400, unita = 0, gestore = "R_tempo" },
+      { dopo_s = 44, unita = 2, gestore = "R_vigila" },
+      { dopo_s = 51, unita = 3, gestore = "R_vigila" },
+      { dopo_s = 58, unita = 4, gestore = "R_vigila" },
+      { dopo_s = 10, unita = 0, gestore = "R_regola_0" },
+      { dopo_s = 10, unita = 0, gestore = "R_regola_1" },
+      { dopo_s = 5400, unita = 0, gestore = "R_regola_2" },
+      { dopo_s = 10, unita = 0, gestore = "R_regola_3" },
+      { dopo_s = 9000, unita = 0, gestore = "R_regola_4" },
+      { dopo_s = 10, unita = 0, gestore = "R_regola_5" },
+      { dopo_s = 10, unita = 0, gestore = "R_regola_6" },
+      { dopo_s = 10, unita = 0, gestore = "R_regola_7" },
+    },
+    variabili = { [10] = 0, [11] = 0 },
+    },
+  },
+}
+
+-- kit del 688 (data/motore/missioni_rapide/, dalle missioni originali)
+script.KU1A_03cc = function(u)
+  ::KU1A_03cc::
+  m688.lancio_missile(u)
+  m688.messaggio_al_giocatore(u, 49)
+  m688.seleziona_collegata(u)
+  m688.dopo(u, 20, "KU1A_03d6")
+  do return end
+end
+script.KU1A_03d6 = function(u)
+  ::KU1A_03d6::
+  m688.attacco_casuale(u, 75)
+  do return end
+end
+script.KU1A_041a = function(u)
+  ::KU1A_041a::
+  m688.rumore_transitorio(u)
+  m688.variabile_piu(u, 1)
+  m688.memorizza_bersaglio(u)
+  m688.modello_azzera(u)
+  m688.modello_classe(u, "mk48")
+  m688.modello_flag(u, 41)
+  m688.lancia(u, "KU1A_04a7", "KU1A_0484")
+  script.KU1A_0441(u)
+  m688.dopo(u, 170, "KU1A_043e")
+  m688.dopo(u, 190, "KU1A_0467")
+  m688.dopo(u, 280, "KU1A_04a7")
+  m688.messaggio_al_giocatore(u, 2)
+  do return end
+end
+script.KU1A_043e = function(u)
+  ::KU1A_043e::
+  m688.messaggio_al_giocatore(u, 39)
+  do return end
+end
+script.KU1A_0441 = function(u)
+  ::KU1A_0441::
+  m688.modello_tipo(u, 1)
+  m688.modello_rateo_quota(u, 10.287)
+  m688.modello_virata(u, 9)
+  m688.modello_accelerazione(u, 0.7714)
+  m688.modello_avanti_tutta(u, 50.2857)
+  m688.modello_rumore(u, 18)
+  m688.modello_sonar(u, 17)
+  m688.modello_integrita(u, 20)
+  m688.modello_difesa(u, 75)
+  m688.modello_quota_max(u, 548.64)
+  m688.modello_4c(u, 1)
+  m688.telegrafo(u, 1)
+  m688.navigazione(u, 1)
+  m688.collega(u, 1)
+  m688.flag_scena(u, 0)
+  m688.nuova_unita(u)
+  do return end
+end
+script.KU1A_0467 = function(u)
+  ::KU1A_0467::
+  m688.annulla_timer(u, "KU1A_0467")
+  m688.collega(u, 0)
+  m688.modello_sonar(u, 16)
+  m688.messaggio_al_giocatore(u, 23)
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_0472 = function(u)
+  ::KU1A_0472::
+  m688.telegrafo(u, 1)
+  m688.annulla_timer(u, "KU1A_0498")
+  m688.annulla_timer(u, "KU1A_0484")
+  m688.insegui(u, 0, "KU1A_04a7", "KU1A_0484")
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_0484 = function(u)
+  ::KU1A_0484::
+  m688.telegrafo(u, 0.7812)
+  m688.comportamento(u, "KU1A_0472")
+  m688.salva_modello(u)
+  m688.impulso_sonar(u)
+  m688.impulso_sonar(u)
+  m688.dopo(u, 10, "KU1A_04a0")
+  m688.dopo(u, 10, "KU1A_0498")
+  do return end
+end
+script.KU1A_0498 = function(u)
+  ::KU1A_0498::
+  m688.rateo_virata(u, -3.6)
+  m688.rotta(u, nil)
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_04a0 = function(u)
+  ::KU1A_04a0::
+  m688.impulso_sonar(u)
+  m688.dopo(u, 10, "KU1A_04a0")
+  do return end
+end
+script.KU1A_04a7 = function(u)
+  ::KU1A_04a7::
+  m688.messaggio_al_giocatore(u, 24)
+  m688.togli_unita(u)
+  do return end
+end
+script.KU1A_04ab = function(u)
+  ::KU1A_04ab::
+  m688.messaggio_al_giocatore(u, 43)
+  m688.memorizza_bersaglio(u)
+  m688.modello_azzera(u)
+  m688.modello_flag(u, 193)
+  m688.lancia(u, "KU1A_04a7", "KU1A_0484")
+  m688.modello_tipo(u, 1)
+  m688.modello_rumore(u, 0)
+  m688.velocita_ora(u, 0.9143)
+  m688.modello_avanti_tutta(u, 0.9143)
+  m688.modello_integrita(u, 2)
+  m688.modello_4c(u, 1)
+  m688.navigazione(u, 0)
+  m688.collega(u, 1)
+  m688.collega(u, 0)
+  m688.flag_scena(u, 0)
+  m688.nuova_unita(u)
+  m688.dopo(u, 2, "KU1A_04d8")
+  m688.dopo(u, 160, "KU1A_04dd")
+  do return end
+end
+script.KU1A_04d8 = function(u)
+  ::KU1A_04d8::
+  m688.modello_rumore(u, 40)
+  m688.salva_modello(u)
+  m688.devia_riferimenti(u)
+  do return end
+end
+script.KU1A_04dd = function(u)
+  ::KU1A_04dd::
+  m688.messaggio_al_giocatore(u, 44)
+  m688.togli_unita(u)
+  do return end
+end
+script.KU1A_04e1 = function(u)
+  ::KU1A_04e1::
+  m688.seleziona_bersaglio(u)
+  m688.messaggio(u, 19)
+  m688.togli_unita(u)
+  do return end
+end
+script.KU1A_04e6 = function(u)
+  ::KU1A_04e6::
+  m688.messaggio_al_giocatore(u, 41)
+  m688.seleziona_bersaglio(u)
+  m688.marca_contatti(u)
+  m688.dopo(u, 2, "KU1A_0484")
+  do return end
+end
+script.KU1A_04f0 = function(u, p)
+  ::KU1A_04f0::
+  m688.seleziona_bersaglio(u)
+  m688.vai_a(u, par(p, 1, -114475.2), par(p, 2, 64925.28), 20, "KU1A_04ff")
+  m688.telegrafo(u, 1)
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_04ff = function(u)
+  ::KU1A_04ff::
+  m688.telegrafo(u, 0)
+  m688.comportamento(u, "KU1A_0472")
+  m688.salva_modello(u)
+  m688.marca_contatti(u)
+  if m688.flag_scena_uguale(u, 1) then goto KU1A_050d end
+  m688.messaggio_al_giocatore(u, 42)
+  ::KU1A_050d::
+  do return end
+end
+script.KU1A_050e = function(u, p)
+  ::KU1A_050e::
+  m688.vai_a(u, par(p, 1, -114475.2), par(p, 2, 64925.28), 30, "KU1A_0519")
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_0519 = function(u)
+  ::KU1A_0519::
+  m688.rateo_virata(u, 0)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 4)
+  do return end
+end
+script.KU1A_0520 = function(u, p)
+  ::KU1A_0520::
+  m688.telegrafo(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_0525 = function(u, p)
+  ::KU1A_0525::
+  m688.quota(u, par(p, 1, 0), par(p, 2, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_052c = function(u, p)
+  ::KU1A_052c::
+  m688.rateo_virata(u, par(p, 1, 0))
+  m688.rotta(u, nil)
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_0534 = function(u)
+  ::KU1A_0534::
+  m688.annulla_timer(u, "KU1A_0573")
+  m688.dopo(u, 20, "KU1A_0573")
+  do return end
+end
+script.KU1A_053d = function(u)
+  ::KU1A_053d::
+  m688.annulla_timer(u, "KU1A_0576")
+  m688.dopo(u, 20, "KU1A_0576")
+  do return end
+end
+script.KU1A_0546 = function(u)
+  ::KU1A_0546::
+  m688.annulla_timer(u, "KU1A_0579")
+  m688.dopo(u, 20, "KU1A_0579")
+  do return end
+end
+script.KU1A_054f = function(u)
+  ::KU1A_054f::
+  m688.annulla_timer(u, "KU1A_057c")
+  m688.dopo(u, 20, "KU1A_057c")
+  do return end
+end
+script.KU1A_0558 = function(u)
+  ::KU1A_0558::
+  m688.annulla_timer(u, "KU1A_057f")
+  m688.dopo(u, 20, "KU1A_057f")
+  do return end
+end
+script.KU1A_0561 = function(u)
+  ::KU1A_0561::
+  m688.annulla_timer(u, "KU1A_0582")
+  m688.dopo(u, 20, "KU1A_0582")
+  do return end
+end
+script.KU1A_056a = function(u)
+  ::KU1A_056a::
+  m688.annulla_timer(u, "KU1A_0585")
+  m688.dopo(u, 20, "KU1A_0585")
+  do return end
+end
+script.KU1A_0573 = function(u)
+  ::KU1A_0573::
+  m688.messaggio_al_giocatore(u, 10)
+  do return end
+end
+script.KU1A_0576 = function(u)
+  ::KU1A_0576::
+  m688.messaggio_al_giocatore(u, 11)
+  do return end
+end
+script.KU1A_0579 = function(u)
+  ::KU1A_0579::
+  m688.messaggio_al_giocatore(u, 12)
+  do return end
+end
+script.KU1A_057c = function(u)
+  ::KU1A_057c::
+  m688.messaggio_al_giocatore(u, 13)
+  do return end
+end
+script.KU1A_057f = function(u)
+  ::KU1A_057f::
+  m688.messaggio_al_giocatore(u, 14)
+  do return end
+end
+script.KU1A_0582 = function(u)
+  ::KU1A_0582::
+  m688.messaggio_al_giocatore(u, 15)
+  do return end
+end
+script.KU1A_0585 = function(u)
+  ::KU1A_0585::
+  m688.messaggio_al_giocatore(u, 16)
+  do return end
+end
+script.KU1A_0588 = function(u)
+  ::KU1A_0588::
+  m688.ferma_navigazione(u)
+  m688.rateo_virata(u, 0)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 6)
+  do return end
+end
+script.KU1A_0590 = function(u, p)
+  ::KU1A_0590::
+  m688.periscopio(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_0594 = function(u)
+  ::KU1A_0594::
+  m688.dopo(u, 60, "KU1A_059e")
+  do return end
+end
+script.KU1A_059a = function(u, p)
+  ::KU1A_059a::
+  m688.antenna(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_059e = function(u)
+  ::KU1A_059e::
+  m688.schiera_trainata(u, 1)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 17)
+  do return end
+end
+script.KU1A_05a4 = function(u)
+  ::KU1A_05a4::
+  m688.dopo(u, 40, "KU1A_05aa")
+  do return end
+end
+script.KU1A_05aa = function(u)
+  ::KU1A_05aa::
+  m688.schiera_trainata(u, 0)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 18)
+  do return end
+end
+script.KU1A_05b0 = function(u)
+  ::KU1A_05b0::
+  m688.annulla_timer(u, "KU1A_059e")
+  m688.annulla_timer(u, "KU1A_05aa")
+  m688.schiera_trainata(u, 0)
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_05ba = function(u, p)
+  ::KU1A_05ba::
+  m688.bersaglio(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_05bf = function(u, p)
+  ::KU1A_05bf::
+  m688.posizione(u, par(p, 1, -114475.2), par(p, 2, 64925.28))
+  m688.salva_modello(u)
+  do return end
+end
+
+-- kit dell'Alfa: i gestori di lancio usati dall'IA
+script.KR3B_0631 = function(u)
+  ::KR3B_0631::
+  m688.rumore_transitorio(u)
+  m688.variabile_piu(u, 1)
+  m688.memorizza_bersaglio(u)
+  m688.modello_azzera(u)
+  m688.modello_classe(u, "type53")
+  m688.modello_flag(u, 49)
+  m688.lancia(u, "KR3B_06fc", "KR3B_06d9")
+  m688.modello_tipo(u, 1)
+  m688.modello_rateo_quota(u, 10.287)
+  m688.modello_virata(u, 9)
+  m688.modello_accelerazione(u, 1.0286)
+  m688.modello_avanti_tutta(u, 45.7143)
+  m688.modello_rumore(u, 18)
+  m688.modello_sonar(u, 15)
+  m688.modello_integrita(u, 20)
+  m688.modello_difesa(u, 100)
+  m688.modello_quota_max(u, 548.64)
+  m688.modello_4c(u, 1)
+  m688.telegrafo(u, 1)
+  m688.navigazione(u, 1)
+  m688.collega(u, 1)
+  m688.flag_scena(u, 0)
+  m688.nuova_unita(u)
+  m688.dopo(u, 150, "KR3B_0693")
+  m688.dopo(u, 170, "KR3B_06bc")
+  m688.dopo(u, 240, "KR3B_06fc")
+  m688.messaggio_al_giocatore(u, 2)
+  do return end
+end
+script.KR3B_0693 = function(u)
+  ::KR3B_0693::
+  m688.messaggio_al_giocatore(u, 39)
+  do return end
+end
+script.KR3B_06bc = function(u)
+  ::KR3B_06bc::
+  m688.annulla_timer(u, "KR3B_06bc")
+  m688.collega(u, 0)
+  m688.modello_sonar(u, 13)
+  m688.messaggio_al_giocatore(u, 23)
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_06c7 = function(u)
+  ::KR3B_06c7::
+  m688.telegrafo(u, 1)
+  m688.annulla_timer(u, "KR3B_06ed")
+  m688.annulla_timer(u, "KR3B_06d9")
+  m688.insegui(u, 0, "KR3B_06fc", "KR3B_06d9")
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_06d9 = function(u)
+  ::KR3B_06d9::
+  m688.telegrafo(u, 0.7812)
+  m688.comportamento(u, "KR3B_06c7")
+  m688.salva_modello(u)
+  m688.impulso_sonar(u)
+  m688.impulso_sonar(u)
+  m688.dopo(u, 10, "KR3B_06f5")
+  m688.dopo(u, 10, "KR3B_06ed")
+  do return end
+end
+script.KR3B_06ed = function(u)
+  ::KR3B_06ed::
+  m688.rateo_virata(u, -3.6)
+  m688.rotta(u, nil)
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_06f5 = function(u)
+  ::KR3B_06f5::
+  m688.impulso_sonar(u)
+  m688.dopo(u, 10, "KR3B_06f5")
+  do return end
+end
+script.KR3B_06fc = function(u)
+  ::KR3B_06fc::
+  m688.messaggio_al_giocatore(u, 24)
+  m688.togli_unita(u)
+  do return end
+end
+script.KR3B_0700 = function(u)
+  ::KR3B_0700::
+  m688.messaggio_al_giocatore(u, 43)
+  m688.memorizza_bersaglio(u)
+  m688.modello_azzera(u)
+  m688.modello_flag(u, 193)
+  m688.lancia(u, "KR3B_06fc", "KR3B_06d9")
+  m688.modello_tipo(u, 1)
+  m688.modello_rumore(u, 0)
+  m688.velocita_ora(u, 0.9143)
+  m688.modello_avanti_tutta(u, 0.9143)
+  m688.modello_integrita(u, 2)
+  m688.modello_4c(u, 1)
+  m688.navigazione(u, 0)
+  m688.collega(u, 1)
+  m688.collega(u, 0)
+  m688.flag_scena(u, 0)
+  m688.nuova_unita(u)
+  m688.dopo(u, 2, "KR3B_072d")
+  m688.dopo(u, 160, "KR3B_0732")
+  do return end
+end
+script.KR3B_072d = function(u)
+  ::KR3B_072d::
+  m688.modello_rumore(u, 40)
+  m688.salva_modello(u)
+  m688.devia_riferimenti(u)
+  do return end
+end
+script.KR3B_0732 = function(u)
+  ::KR3B_0732::
+  m688.messaggio_al_giocatore(u, 44)
+  m688.togli_unita(u)
+  do return end
+end
+script.KR3B_0736 = function(u)
+  ::KR3B_0736::
+  m688.seleziona_bersaglio(u)
+  m688.messaggio(u, 19)
+  m688.togli_unita(u)
+  do return end
+end
+script.KR3B_073b = function(u)
+  ::KR3B_073b::
+  m688.messaggio_al_giocatore(u, 41)
+  m688.seleziona_bersaglio(u)
+  m688.marca_contatti(u)
+  m688.dopo(u, 2, "KR3B_06d9")
+  do return end
+end
+script.KR3B_0745 = function(u, p)
+  ::KR3B_0745::
+  m688.seleziona_bersaglio(u)
+  m688.vai_a(u, par(p, 1, -189644.8), par(p, 2, 117342.72), 20, "KR3B_0754")
+  m688.telegrafo(u, 1)
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_0754 = function(u)
+  ::KR3B_0754::
+  m688.telegrafo(u, 0)
+  m688.comportamento(u, "KR3B_06c7")
+  m688.salva_modello(u)
+  m688.marca_contatti(u)
+  if m688.flag_scena_uguale(u, 1) then goto KR3B_0762 end
+  m688.messaggio_al_giocatore(u, 42)
+  ::KR3B_0762::
+  do return end
+end
+script.KR3B_0763 = function(u, p)
+  ::KR3B_0763::
+  m688.vai_a(u, par(p, 1, -189644.8), par(p, 2, 117342.72), 30, "KR3B_076e")
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_076e = function(u)
+  ::KR3B_076e::
+  m688.rateo_virata(u, 0)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 4)
+  do return end
+end
+script.KR3B_0775 = function(u, p)
+  ::KR3B_0775::
+  m688.telegrafo(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_077a = function(u, p)
+  ::KR3B_077a::
+  m688.quota(u, par(p, 1, 0), par(p, 2, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_0781 = function(u, p)
+  ::KR3B_0781::
+  m688.rateo_virata(u, par(p, 1, 0))
+  m688.rotta(u, nil)
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_0789 = function(u)
+  ::KR3B_0789::
+  m688.annulla_timer(u, "KR3B_07c8")
+  m688.dopo(u, 20, "KR3B_07c8")
+  do return end
+end
+script.KR3B_0792 = function(u)
+  ::KR3B_0792::
+  m688.annulla_timer(u, "KR3B_07cb")
+  m688.dopo(u, 20, "KR3B_07cb")
+  do return end
+end
+script.KR3B_079b = function(u)
+  ::KR3B_079b::
+  m688.annulla_timer(u, "KR3B_07ce")
+  m688.dopo(u, 20, "KR3B_07ce")
+  do return end
+end
+script.KR3B_07a4 = function(u)
+  ::KR3B_07a4::
+  m688.annulla_timer(u, "KR3B_07d1")
+  m688.dopo(u, 20, "KR3B_07d1")
+  do return end
+end
+script.KR3B_07ad = function(u)
+  ::KR3B_07ad::
+  m688.annulla_timer(u, "KR3B_07d4")
+  m688.dopo(u, 20, "KR3B_07d4")
+  do return end
+end
+script.KR3B_07b6 = function(u)
+  ::KR3B_07b6::
+  m688.annulla_timer(u, "KR3B_07d7")
+  m688.dopo(u, 20, "KR3B_07d7")
+  do return end
+end
+script.KR3B_07bf = function(u)
+  ::KR3B_07bf::
+  m688.annulla_timer(u, "KR3B_07da")
+  m688.dopo(u, 20, "KR3B_07da")
+  do return end
+end
+script.KR3B_07c8 = function(u)
+  ::KR3B_07c8::
+  m688.messaggio_al_giocatore(u, 10)
+  do return end
+end
+script.KR3B_07cb = function(u)
+  ::KR3B_07cb::
+  m688.messaggio_al_giocatore(u, 11)
+  do return end
+end
+script.KR3B_07ce = function(u)
+  ::KR3B_07ce::
+  m688.messaggio_al_giocatore(u, 12)
+  do return end
+end
+script.KR3B_07d1 = function(u)
+  ::KR3B_07d1::
+  m688.messaggio_al_giocatore(u, 13)
+  do return end
+end
+script.KR3B_07d4 = function(u)
+  ::KR3B_07d4::
+  m688.messaggio_al_giocatore(u, 14)
+  do return end
+end
+script.KR3B_07d7 = function(u)
+  ::KR3B_07d7::
+  m688.messaggio_al_giocatore(u, 15)
+  do return end
+end
+script.KR3B_07da = function(u)
+  ::KR3B_07da::
+  m688.messaggio_al_giocatore(u, 16)
+  do return end
+end
+script.KR3B_07dd = function(u)
+  ::KR3B_07dd::
+  m688.ferma_navigazione(u)
+  m688.rateo_virata(u, 0)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 6)
+  do return end
+end
+script.KR3B_07e5 = function(u, p)
+  ::KR3B_07e5::
+  m688.periscopio(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_07e9 = function(u)
+  ::KR3B_07e9::
+  m688.dopo(u, 60, "KR3B_07f3")
+  do return end
+end
+script.KR3B_07ef = function(u, p)
+  ::KR3B_07ef::
+  m688.antenna(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_07f3 = function(u)
+  ::KR3B_07f3::
+  m688.schiera_trainata(u, 1)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 17)
+  do return end
+end
+script.KR3B_07f9 = function(u)
+  ::KR3B_07f9::
+  m688.dopo(u, 40, "KR3B_07ff")
+  do return end
+end
+script.KR3B_07ff = function(u)
+  ::KR3B_07ff::
+  m688.schiera_trainata(u, 0)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 18)
+  do return end
+end
+script.KR3B_0805 = function(u)
+  ::KR3B_0805::
+  m688.annulla_timer(u, "KR3B_07f3")
+  m688.annulla_timer(u, "KR3B_07ff")
+  m688.schiera_trainata(u, 0)
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_080f = function(u, p)
+  ::KR3B_080f::
+  m688.bersaglio(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_0814 = function(u, p)
+  ::KR3B_0814::
+  m688.posizione(u, par(p, 1, -189644.8), par(p, 2, 117342.72))
+  m688.salva_modello(u)
+  do return end
+end
+
+
+-- Costanti della missione: regole d'ingaggio, paranoia (2) e difficolta' (4)
+local ARMI = 2            -- 0 pace (armi trattenute), 1 crisi (solo dopo un lancio del giocatore), 2 guerra
+local COLPO = 9          -- soglia di ATTACK: riesce con probabilita' (18 - COLPO) / 18
+local CACCIA = 0.8          -- telegrafo delle navi in caccia
+local AVVICINAMENTO = 0.25  -- telegrafo dei sottomarini in avvicinamento
+-- per unita': parte, telegrafo di crociera, comportamento, rotta, quota d'evasione e i parametri del
+-- comportamento (paranoia 0-3, il minimo dell'allerta; salve, portata e distanza del pedinamento in nm)
+local UNITA = {
+  [2] = { parte = "urss", crociera = 0.365, comportamento = "R_nave", rotta = true, profonda = 0,
+      paranoia = 2, salve = 3, portata = 3, distanza = 2 },
+  [3] = { parte = "urss", crociera = 0.365, comportamento = "R_nave", rotta = true, profonda = 0,
+      paranoia = 2, salve = 3, portata = 3, distanza = 2 },
+  [4] = { parte = "urss", crociera = 0.365, comportamento = "R_nave", rotta = true, profonda = 0,
+      paranoia = 2, salve = 3, portata = 3, distanza = 2 },
+  [5] = { parte = "urss", crociera = 1, comportamento = "R_aereo", rotta = true, profonda = 0,
+      paranoia = 2, salve = 3, portata = 3, distanza = 2 },
+  [6] = { parte = "urss", crociera = 0.994, comportamento = "R_aereo", rotta = true, profonda = 0,
+      paranoia = 2, salve = 3, portata = 3, distanza = 2 },
+  [7] = { parte = "urss", crociera = 0.156, comportamento = "R_sottomarino", rotta = false, profonda = 200,
+      paranoia = 2, salve = 3, portata = 5, distanza = 2 },
+  [8] = { parte = "usa", crociera = 0.583, comportamento = "", rotta = true, profonda = 0,
+      paranoia = 2, salve = 3, portata = 3, distanza = 2 },
+}
+
+-- Comportamenti dell'IA (API classica, docs/09 §6), con i parametri per unita' della tabella UNITA. Variabili di scena:
+-- 1 siluri lanciati dal giocatore (kit), 10 fase della missione, 11 allarme, 100 + id salve lanciate da un'unita',
+-- 200 + n regole scattate, 300 + i variabili dell'autore, 400 + id passaggi d'attesa di una nave dopo una salva,
+-- 450 + id passaggi di caccia di una nave (nel classico la prima salva dopo PRIMO_ATTACCO), 460 + id le sue salve
+-- dall'ultima ripresa, 470 + id i passaggi d'ascolto dopo il tetto delle salve, 480 + id lo stato del pedinamento
+-- ravvicinato (1 in corso, 2 scoperto col ping: non torna).
+-- Nell'Enhanced (docs/18 fase 3) le regole d'ingaggio sono quelle dell'IA (m688.armi_libere: crisi solo dopo un atto
+-- ostile fra le parti, zone amiche) e l'allerta sale con gli eventi, mai sotto la paranoia dell'editor; nel classico
+-- quelle funzioni danno nil e valgono le costanti della missione.
+local PING, AGGANCIO, VIGILA = { 0.05, 0.2, 0.4, 0.7 }, { 8, 5, 3, 2 }, { 60, 180, 90, 60 }
+local ATTESA_SALVA = 20   -- passaggi sul contatto fra due salve antisom di una nave (riposizionarsi, ricaricare)
+-- la caccia fino al PROBSUB: la prima salva di una nave dopo PRIMO_ATTACCO_S secondi sul contatto attuale (Enhanced,
+-- m688.tempo_contatto), nel classico dopo PRIMO_ATTACCO passaggi; dopo SALVE_MASSIME salve si torna ad ascoltare e si
+-- riattacca dopo RIPRESA passaggi sul contatto (STIME)
+local PRIMO_ATTACCO_S, PRIMO_ATTACCO = 780, 330
+local SALVE_MASSIME, RIPRESA = 6, 120
+local function armi_libere(u)
+  local a = m688.armi_libere(u)
+  if a ~= nil then return a end
+  return ARMI == 2 or (ARMI == 1 and m688.variabile_maggiore(u, 1, 0))
+end
+local function allerta(u)
+  local a = m688.allerta(u)
+  if a == nil then return UNITA[u].paranoia end
+  return math.max(a, UNITA[u].paranoia)
+end
+local function contatto_buono(u)
+  return m688.traccia_solida(u) or (allerta(u) >= 3 and m688.traccia_media(u))
+end
+-- nell'Enhanced si lancia su una posizione stimata (eco, vista, radar, TMA), non sul solo rilevamento: finche' non
+-- c'e', il motore fa da se' le gambe di TMA (fase 4) e lo script non le disturba con rotta e velocita'
+local function soluzione(u)
+  return m688.allerta(u) == nil or m688.soluzione(u)
+end
+-- siluri nei tubi o di riserva (Enhanced); nil nel classico o senza i dati di carico: si lancia come prima
+local function ha_armi(u)
+  local n = m688.armi_rimaste(u)
+  return n == nil or n > 0
+end
+-- i non combattenti (mercantili, pescherecci, navi spia: flag 40h) non si ingaggiano finche' le armi non sono libere
+-- (il peschereccio in pace); in guerra un convoglio nemico resta un bersaglio. Nel classico la funzione da' nil
+local function non_combattente(u) return m688.bersaglio_non_combattente(u) == true end
+local function caccia_finita(u)
+  local t = m688.tempo_contatto(u)
+  if t ~= nil then return t >= PRIMO_ATTACCO_S end
+  return m688.variabile_maggiore(u, 450 + u, PRIMO_ATTACCO)
+end
+local function riprendi_rotta(u)
+  local f = script["R_" .. u .. "_p1"]
+  if f ~= nil then f(u) end
+end
+
+-- nave da guerra: segue la sua rotta; su un contatto nemico subacqueo accosta, fa ping e, se le regole lo consentono,
+-- attacca con le armi antisom (ATTACK: riesce con probabilita' (18 - COLPO) / 18). Le navi nemiche no: la caccia
+-- antisom su una nave di superficie illuminava col ping i sottomarini vicini (il tiro fra navi e' del motore e dei missili)
+script.R_nave = function(u)
+  if m688.bersaglio_arma(u) then goto evita end
+  if not m688.bersaglio_nemico(u) or (non_combattente(u) and not armi_libere(u)) then goto ignora end
+  if m688.bersaglio_aereo(u) or m688.bersaglio_nave(u) then goto ignora end
+  if not contatto_buono(u) then goto ignora end
+  m688.variabile(u, 11, 1)
+  m688.ferma_navigazione(u)
+  m688.accosta_verso_bersaglio(u)
+  m688.telegrafo(u, CACCIA)
+  if m688.caso(u, PING[allerta(u) + 1]) then m688.impulso_sonar(u) end
+  -- una salva, poi ATTESA_SALVA passaggi prima della successiva; nell'Enhanced solo con una posizione stimata
+  m688.variabile_piu(u, 450 + u)   -- i passaggi di caccia
+  if m688.variabile_maggiore(u, 400 + u, 0) then
+    m688.variabile_meno(u, 400 + u)
+  elseif m688.variabile_maggiore(u, 470 + u, 0) then
+    m688.variabile_meno(u, 470 + u)   -- dopo il tetto delle salve: la caccia ricomincia
+  elseif armi_libere(u) and not m688.bersaglio_nave(u) and m688.bersaglio_vicino(u, UNITA[u].portata) and soluzione(u) and
+         caccia_finita(u) then
+    if not m688.variabile_minore(u, 460 + u, SALVE_MASSIME) then
+      -- tante salve senza affondarlo: si torna ad ascoltare, e si riattacca solo dopo RIPRESA passaggi sul contatto
+      m688.variabile(u, 460 + u, 0)
+      m688.variabile(u, 470 + u, RIPRESA)
+      goto ascolta
+    end
+    m688.messaggio(u, 19)
+    m688.attacca(u, UNITA[u].portata, COLPO)
+    m688.variabile(u, 400 + u, ATTESA_SALVA)
+    m688.variabile_piu(u, 460 + u)
+  end
+  m688.ingaggia(u, AGGANCIO[allerta(u) + 1], "R_nave", "R_persa")
+  m688.salva_modello(u)
+  do return end
+  ::ascolta::
+  if UNITA[u].rotta then m688.riprendi_navigazione(u) end
+  m688.telegrafo(u, UNITA[u].crociera)
+  m688.comportamento(u, "R_nave")
+  m688.salva_modello(u)
+  do return end
+  ::evita::
+  m688.ferma_navigazione(u)
+  m688.accosta_opposto(u)
+  m688.telegrafo(u, 1)
+  m688.comportamento(u, "R_nave")
+  m688.salva_modello(u)
+  m688.dopo(u, 90, "R_persa")
+  do return end
+  ::ignora::
+  m688.comportamento(u, "R_nave")
+  m688.salva_modello(u)
+end
+
+-- sottomarino: pattuglia lento; sul contatto nemico si avvicina (se insegue) e lancia entro la portata, al piu' `salve`
+-- volte; davanti a un siluro scappa e scende
+script.R_sottomarino = function(u)
+  if m688.bersaglio_arma(u) then goto evita end
+  if not m688.bersaglio_nemico(u) or (non_combattente(u) and not armi_libere(u)) then goto ignora end
+  if m688.bersaglio_aereo(u) then goto ignora end
+  if not contatto_buono(u) then goto ignora end
+  m688.variabile(u, 11, 1)
+  if armi_libere(u) and m688.bersaglio_vicino(u, UNITA[u].portata) and m688.variabile_minore(u, 100 + u, UNITA[u].salve) and
+     soluzione(u) and ha_armi(u) then goto lancia end
+  if allerta(u) >= 1 and soluzione(u) then
+    m688.ferma_navigazione(u)
+    m688.accosta_verso_bersaglio(u)
+    m688.telegrafo(u, AVVICINAMENTO)
+  end
+  m688.ingaggia(u, AGGANCIO[allerta(u) + 1], "R_sottomarino", "R_persa")
+  m688.salva_modello(u)
+  do return end
+  ::lancia::
+  m688.variabile_piu(u, 100 + u)
+  m688.ferma_navigazione(u)
+  m688.accosta_verso_bersaglio(u)
+  m688.telegrafo(u, AVVICINAMENTO)
+  m688.ingaggia(u, AGGANCIO[allerta(u) + 1], "R_sottomarino", "R_persa")
+  m688.salva_modello(u)
+  -- il gestore di lancio crea il siluro dal modello corrente: dopo non si salva piu' il lanciatore
+  script["R_siluro_" .. UNITA[u].parte](u)
+  do return end
+  ::evita::
+  m688.ferma_navigazione(u)
+  m688.accosta_opposto(u)
+  m688.telegrafo(u, 1)
+  m688.quota(u, UNITA[u].profonda, 1)
+  m688.comportamento(u, "R_sottomarino")
+  m688.salva_modello(u)
+  m688.dopo(u, 120, "R_persa")
+  do return end
+  ::ignora::
+  m688.comportamento(u, "R_sottomarino")
+  m688.salva_modello(u)
+end
+
+-- aereo antisom (nel classico; nell'Enhanced lo guida il controllore di docs/13 e vai_al_bersaglio diventa un datum)
+script.R_aereo = function(u)
+  if not m688.bersaglio_nemico(u) or (non_combattente(u) and not armi_libere(u)) then goto ignora end
+  if m688.bersaglio_nave(u) or m688.bersaglio_aereo(u) or m688.bersaglio_arma(u) then goto ignora end
+  if not contatto_buono(u) then goto ignora end
+  m688.variabile(u, 11, 1)
+  m688.vai_al_bersaglio(u, 60, "R_aereo_sopra")
+  m688.telegrafo(u, 1)
+  m688.comportamento(u, "R_aereo")
+  m688.salva_modello(u)
+  do return end
+  ::ignora::
+  m688.comportamento(u, "R_aereo")
+  m688.salva_modello(u)
+end
+
+script.R_aereo_sopra = function(u)
+  -- sopra il bersaglio: attacca solo se quello che osserva adesso e' ancora un sottomarino nemico (l'osservazione gira
+  -- su tutte le unita', anche amiche e navi)
+  if armi_libere(u) and m688.bersaglio_nemico(u) and not non_combattente(u) and not (m688.bersaglio_nave(u) or m688.bersaglio_aereo(u) or m688.bersaglio_arma(u)) and
+     contatto_buono(u) then
+    m688.messaggio(u, 19)
+    m688.attacca(u, 1, COLPO)
+  end
+  m688.telegrafo(u, UNITA[u].crociera)
+  riprendi_rotta(u)
+  m688.salva_modello(u)
+end
+
+-- bersaglio perso: la rotta di prima alla velocita' di crociera
+script.R_persa = function(u)
+  if UNITA[u].rotta then m688.riprendi_navigazione(u) end
+  m688.telegrafo(u, UNITA[u].crociera)
+  if UNITA[u].comportamento ~= "" then m688.comportamento(u, UNITA[u].comportamento) end
+  m688.salva_modello(u)
+end
+
+-- pedinamento ravvicinato (S24): sul giocatore, con una traccia buona, il motore lo tiene nel cono sordo a `distanza`
+-- miglia e 20 m sotto la quota che vede (m688.pedina_vicino), e ne segue le manovre con ritardo; se il giocatore pinga
+-- entro 3 km smette e non torna, e l'evasione dell'IA lo porta via. Solo il giocatore: lo script non sa l'id del bersaglio
+script.R_pedina_vicino = function(u)
+  if m688.variabile_uguale(u, 480 + u, 1) and m688.ping_giocatore_entro(u, 3000, 60) then
+    m688.pedina_vicino(u, -1)
+    m688.variabile(u, 480 + u, 2)
+  end
+  if m688.variabile_uguale(u, 480 + u, 2) or not m688.bersaglio_id(u, 0) or not contatto_buono(u) then goto ignora end
+  if m688.variabile_uguale(u, 480 + u, 0) and m688.pedina_vicino(u, 0, UNITA[u].distanza * 1852, -20) then
+    m688.variabile(u, 480 + u, 1)
+  end
+  m688.ingaggia(u, AGGANCIO[allerta(u) + 1], "R_pedina_vicino", "R_persa")
+  m688.salva_modello(u)
+  do return end
+  ::ignora::
+  m688.comportamento(u, "R_pedina_vicino")
+  m688.salva_modello(u)
+end
+
+-- pedinamento: sul contatto nemico si porta a `distanza` miglia e ci resta, alla stessa velocita', senza farsi notare;
+-- spara solo se le regole lo consentono, come il sottomarino; davanti a un siluro scappa
+script.R_pedina = function(u)
+  if m688.bersaglio_arma(u) then goto evita end
+  if not m688.bersaglio_nemico(u) or (non_combattente(u) and not armi_libere(u)) then goto ignora end
+  if m688.bersaglio_aereo(u) then goto ignora end
+  if not contatto_buono(u) then goto ignora end
+  if armi_libere(u) and m688.bersaglio_vicino(u, UNITA[u].portata) and m688.variabile_minore(u, 100 + u, UNITA[u].salve) and
+     soluzione(u) and ha_armi(u) then goto lancia end
+  m688.ferma_navigazione(u)
+  m688.accosta_verso_bersaglio(u)
+  if m688.bersaglio_vicino(u, UNITA[u].distanza) then
+    m688.uguaglia_velocita(u)
+  else
+    m688.telegrafo(u, AVVICINAMENTO * 1.6)
+  end
+  m688.ingaggia(u, AGGANCIO[allerta(u) + 1], "R_pedina", "R_persa")
+  m688.salva_modello(u)
+  do return end
+  ::lancia::
+  m688.variabile_piu(u, 100 + u)
+  m688.ferma_navigazione(u)
+  m688.accosta_verso_bersaglio(u)
+  m688.ingaggia(u, AGGANCIO[allerta(u) + 1], "R_pedina", "R_persa")
+  m688.salva_modello(u)
+  script["R_siluro_" .. UNITA[u].parte](u)
+  do return end
+  ::evita::
+  m688.ferma_navigazione(u)
+  m688.accosta_opposto(u)
+  m688.telegrafo(u, 1)
+  m688.comportamento(u, "R_pedina")
+  m688.salva_modello(u)
+  m688.dopo(u, 120, "R_persa")
+  do return end
+  ::ignora::
+  m688.comportamento(u, "R_pedina")
+  m688.salva_modello(u)
+end
+
+-- in allarme le navi fanno ping
+script.R_vigila = function(u)
+  if m688.variabile_uguale(u, 11, 1) and m688.caso(u, PING[allerta(u) + 1]) then m688.impulso_sonar(u) end
+  m688.dopo(u, VIGILA[allerta(u) + 1], "R_vigila")
+end
+
+-- fine della rotta di transito: l'unita' esce dal teatro
+script.R_esce = function(u)
+  m688.togli_unita(u)
+end
+
+-- lanci dei sottomarini dell'IA: i gestori di lancio dei kit senza il conto del giocatore
+script.R_siluro_usa = function(u)
+  m688.rumore_transitorio(u)
+  m688.memorizza_bersaglio(u)
+  m688.modello_azzera(u)
+  m688.modello_classe(u, "mk48")
+  m688.modello_flag(u, 41)
+  m688.lancia(u, "KU1A_04a7", "KU1A_0484")
+  script.KU1A_0441(u)
+  m688.dopo(u, 170, "KU1A_043e")
+  m688.dopo(u, 190, "KU1A_0467")
+  m688.dopo(u, 280, "KU1A_04a7")
+  do return end
+end
+script.R_siluro_urss = function(u)
+  m688.rumore_transitorio(u)
+  m688.memorizza_bersaglio(u)
+  m688.modello_azzera(u)
+  m688.modello_classe(u, "type53")
+  m688.modello_flag(u, 49)
+  m688.lancia(u, "KR3B_06fc", "KR3B_06d9")
+  m688.modello_tipo(u, 1)
+  m688.modello_rateo_quota(u, 10.287)
+  m688.modello_virata(u, 9)
+  m688.modello_accelerazione(u, 1.0286)
+  m688.modello_avanti_tutta(u, 45.7143)
+  m688.modello_rumore(u, 18)
+  m688.modello_sonar(u, 15)
+  m688.modello_integrita(u, 20)
+  m688.modello_difesa(u, 100)
+  m688.modello_quota_max(u, 548.64)
+  m688.modello_4c(u, 1)
+  m688.telegrafo(u, 1)
+  m688.navigazione(u, 1)
+  m688.collega(u, 1)
+  m688.flag_scena(u, 0)
+  m688.nuova_unita(u)
+  m688.dopo(u, 150, "KR3B_0693")
+  m688.dopo(u, 170, "KR3B_06bc")
+  m688.dopo(u, 240, "KR3B_06fc")
+  do return end
+end
+
+-- rotte: all'arrivo a ogni punto il successivo (le pattuglie ricominciano, i transiti escono)
+script.R_2_p1 = function(u)
+  m688.vai_a(u, -34355.3, 24386.1, 30, "R_2_p2")
+  m688.salva_modello(u)
+end
+script.R_2_p2 = function(u)
+  m688.vai_a(u, -41216, 34231.4, 30, "R_2_p1")
+  m688.salva_modello(u)
+end
+script.R_3_p1 = function(u)
+  m688.vai_a(u, -26351.1, 12899.9, 30, "R_3_p2")
+  m688.salva_modello(u)
+end
+script.R_3_p2 = function(u)
+  m688.vai_a(u, -33211.8, 22745.2, 30, "R_3_p1")
+  m688.salva_modello(u)
+end
+script.R_4_p1 = function(u)
+  m688.vai_a(u, -18346.9, 1413.7, 30, "R_4_p2")
+  m688.salva_modello(u)
+end
+script.R_4_p2 = function(u)
+  m688.vai_a(u, -25207.6, 11259, 30, "R_4_p1")
+  m688.salva_modello(u)
+end
+script.R_5_p1 = function(u)
+  m688.vai_a(u, -37165.4, 12676.9, 30, "R_5_p2")
+  m688.salva_modello(u)
+end
+script.R_5_p2 = function(u)
+  m688.vai_a(u, -34927, 25206.5, 30, "R_5_p3")
+  m688.salva_modello(u)
+end
+script.R_5_p3 = function(u)
+  m688.vai_a(u, -22397.5, 22968.1, 30, "R_5_p4")
+  m688.salva_modello(u)
+end
+script.R_5_p4 = function(u)
+  m688.vai_a(u, -24635.9, 10438.5, 30, "R_5_p1")
+  m688.salva_modello(u)
+end
+script.R_6_p1 = function(u)
+  m688.vai_a(u, -12103.8, 35500.2, 30, "R_6_p2")
+  m688.salva_modello(u)
+end
+script.R_6_p2 = function(u)
+  m688.vai_a(u, -12103.8, 144.8, 30, "R_6_p3")
+  m688.salva_modello(u)
+end
+script.R_6_p3 = function(u)
+  m688.vai_a(u, -47459.1, 144.8, 30, "R_6_p4")
+  m688.salva_modello(u)
+end
+script.R_6_p4 = function(u)
+  m688.vai_a(u, -47459.1, 35500.2, 30, "R_6_p1")
+  m688.salva_modello(u)
+end
+script.R_8_p1 = function(u)
+  m688.vai_a(u, 3686.4, 41144.7, 30, "")
+  m688.salva_modello(u)
+end
+
+-- chiusura: codice 120 a missione conclusa, 121 a tempo scaduto (il giudizio lo danno gli obiettivi)
+script.R_chiusura = function(u)
+  m688.dopo(u, 20, "R_chiusura")
+  do return end
+  ::fine::
+  m688.messaggio(u, 120)
+end
+script.R_tempo = function(u)
+  m688.messaggio(u, 34)
+  m688.messaggio(u, 121)
+end
+
+-- regole «quando... allora...» dell'editor: un controllo ogni 10 s sull'unita' della regola
+local ZONE = {
+  ["incontro"] = { 3686.4, 41144.7, 3704 },
+  ["avvicinamento"] = { 3686.4, 41144.7, 22224 },
+}
+-- inizio
+script.R_regola_0 = function(u)
+  if m688.variabile_uguale(u, 200, 0) then
+    m688.variabile(u, 200, 1)
+    m688.variabile(u, 301, 1)
+    m688.variabile(u, 302, 1)
+    do return end
+  end
+  m688.dopo(u, 10, "R_regola_0")
+end
+-- troppo_veloce
+script.R_regola_1 = function(u)
+  if m688.variabile_uguale(u, 201, 0) and not m688.velocita_sotto(u, 12.5) then
+    m688.variabile(u, 201, 1)
+    m688.variabile(u, 301, 0)
+    m688.messaggio_al_giocatore(u, 1001)
+    do return end
+  end
+  m688.dopo(u, 10, "R_regola_1")
+end
+-- portelli
+script.R_regola_2 = function(u)
+  if m688.variabile_uguale(u, 202, 0) then
+    m688.variabile(u, 202, 1)
+    if m688.unita_esiste(u, 7) then
+      m688.seleziona(u, 7)
+      m688.posizione(u, -31649.5, 39743.1)
+      m688.rotta_ora(u, 145.1)
+      m688.velocita_ora(u, 6)
+      m688.salva_modello(u)
+    end
+    m688.radio(u, "OSCAR")
+    m688.seleziona(u, u)
+    do return end
+  end
+  m688.dopo(u, 10, "R_regola_2")
+end
+-- oscar_affondato
+script.R_regola_3 = function(u)
+  if m688.variabile_uguale(u, 203, 0) and m688.variabile_uguale(u, 202, 1) and not m688.unita_esiste(u, 7) then
+    m688.variabile(u, 203, 1)
+    m688.variabile(u, 303, 1)
+    do return end
+  end
+  m688.dopo(u, 10, "R_regola_3")
+end
+-- lancio
+script.R_regola_4 = function(u)
+  if m688.variabile_uguale(u, 204, 0) and m688.variabile_uguale(u, 303, 0) then
+    m688.variabile(u, 204, 1)
+    m688.variabile(u, 302, 0)
+    m688.radio(u, "LANCIO")
+    do return end
+  end
+  m688.dopo(u, 10, "R_regola_4")
+end
+-- rapporto
+script.R_regola_5 = function(u)
+  if m688.variabile_uguale(u, 205, 0) and m688.trasmesso(u, "contatto", 5400) then
+    m688.variabile(u, 205, 1)
+    m688.variabile(u, 304, 1)
+    do return end
+  end
+  m688.dopo(u, 10, "R_regola_5")
+end
+-- fregata
+script.R_regola_6 = function(u)
+  if m688.variabile_uguale(u, 206, 0) and m688.in_cerchio(u, table.unpack(ZONE["avvicinamento"])) then
+    m688.variabile(u, 206, 1)
+    if m688.unita_esiste(u, 8) then
+      m688.seleziona(u, 8)
+      m688.posizione(u, 6147.7, 42859.9)
+      m688.rotta_ora(u, 235.1)
+      m688.velocita_ora(u, 8)
+      script.R_8_p1(u)
+    end
+    m688.seleziona(u, u)
+    do return end
+  end
+  m688.dopo(u, 10, "R_regola_6")
+end
+-- a_casa
+script.R_regola_7 = function(u)
+  if m688.variabile_uguale(u, 207, 0) and m688.in_cerchio(u, table.unpack(ZONE["incontro"])) then
+    m688.variabile(u, 207, 1)
+    m688.messaggio(u, 140)
+    do return end
+  end
+  m688.dopo(u, 10, "R_regola_7")
+end
+
+return missione

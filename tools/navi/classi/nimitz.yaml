@@ -1,0 +1,228 @@
+# Portaerei nucleare classe Nimitz (CVN-68), configurazione 1989.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua (x = L/2 - d).
+# Lunghezza, larghezza dello scafo e del ponte dal dossier (332,8 x 40,8 m, ponte 76,8 m).
+# Quote e posizioni lungo la nave dalla foto di fianco della USS Theodore Roosevelt (CVN-71, 1986),
+# misure prese sulla miniatura da 1920 px, scala 0,2245 m/pixel (lunghezza del ponte di volo 1.483 px);
+# per la proiezione si usa il file originale da 2955 px (scala 0,1459 m/pixel).
+# Pianta del ponte (sbalzo angolato a sinistra) per retroproiezione dalle foto calibrate (aerea di sinistra e prua);
+# larghezza dell'isola (circa 18 m) dalla foto di prua. Velivoli, Phalanx e Sea Sparrow poppieri: posizioni tipiche,
+# non misurate. Relazione: extracted/navi/nimitz/RAPPORTO.md.
+nome: Nimitz (CVN-68)
+uscita: extracted/navi/nimitz
+moduli_parti: [nimitz_parti.py]
+
+# Lo scafo del kit e' ridotto a una lamina invisibile (alta 2 cm): lo scafo vero e' la parte
+# scafo_profilato (nimitz_parti.py), con il profilo concavo della prua svasata misurato sulla foto.
+# L resta 332,8 perche' definisce l'origine delle posizioni {prua: d}.
+scafo:
+  L: 332.8
+  B: 0.1
+  bordo: [[0, 0.02], [332.8, 0.02]]
+  stazioni: 2
+  bagnasciuga: 0.01
+
+parti:
+  - tipo: scafo_profilato
+    nome: scafo
+    L: 332.8
+    B: 40.8
+    bordo: [[0, 16.8], [332.8, 16.8]]   # sommita' dello scafo (sotto la lastra del ponte di volo)
+    # profilo del dritto [distanza dalla prua, quota]: piede a 14,6 m dietro la punta del ponte
+    profilo_prua: [[0, 16.5], [5.8, 14.8], [10.3, 11.9], [13.7, 7.6], [14.6, 0]]
+    finezza_prua: 85
+    specchio: 0.50         # specchio stretto al galleggiamento...
+    specchio_alto: 0.95    # ...e largo in coperta (foto di giardinetto della Eisenhower)
+    lunghezza_poppa: 70
+    svasatura: 0.12
+    pienezza: [0.75, 0.40]
+  # sbalzi di poppa sotto il ponte di volo (piattaforme del fantail), oltre lo specchio
+  - {tipo: scatola, nome: poppa_bassa, x0: {prua: 338.5}, x1: {prua: 330.0}, y0: -12.0, y1: 12.0, z0: 3.5, z1: 9.1}
+  - {tipo: scatola, nome: poppa_alta, x0: {prua: 336.5}, x1: {prua: 330.0}, y0: -15.0, y1: 15.0, z0: 9.1, z1: 15.0}
+  # ---------------------------------------------------------------- ponte di volo e sbalzi
+  - tipo: ponte_volo
+    nome: ponte_di_volo
+    z0: 16.8
+    z1: 18.8
+    caduta: 4.0
+    # pianta misurata per retroproiezione sul piano del ponte dalla ripresa aerea di sinistra (Roosevelt 1986)
+    # e dalla foto di prua calibrata (Eisenhower 1987)
+    stazioni:                       # [x, bordo di dritta, bordo di sinistra]
+      - [{prua: 0}, -12.0, 11.5]
+      - [{prua: 20}, -15.5, 11.5]
+      - [{prua: 45}, -19.0, 12.5]
+      - [{prua: 75}, -21.5, 16.0]
+      - [{prua: 84}, -24.0, 22.0]     # inizio dello sbalzo del ponte angolato
+      - [{prua: 98}, -26.0, 40.0]     # spigolo prodiero del ponte angolato (anche dalla foto di prua)
+      - [{prua: 112}, -27.0, 39.5]
+      - [{prua: 183}, -30.0, 33.0]
+      - [{prua: 268}, -31.0, 31.0]
+      - [{prua: 284}, -31.0, 30.5]
+      - [{prua: 286}, -31.0, 20.0]    # gradino a poppavia dell'elevatore 4
+      - [{prua: 310}, -27.0, 18.0]
+      - [{prua: 332.8}, -22.0, 16.5]
+    scafo:                          # semilarghezza dello scafo alla quota z0 - caduta
+      - [{prua: 0}, 2.0]
+      - [{prua: 25}, 11.0]
+      - [{prua: 60}, 18.0]
+      - [{prua: 90}, 22.5]
+      - [{prua: 300}, 22.5]
+      - [{prua: 332.8}, 19.0]
+  # elevatori: tre a dritta (due a proravia e uno a poppavia dell'isola), uno a sinistra a poppa
+  - {tipo: elevatore, nome: elevatore_1, x0: {prua: 156.0}, x1: {prua: 132.9}, y0: -26.5, y1: -42.0, z: 18.8, spessore: 2.0}
+  - {tipo: elevatore, nome: elevatore_2, x0: {prua: 203.4}, x1: {prua: 177.6}, y0: -28.5, y1: -44.0, z: 18.8, spessore: 2.0}
+  - {tipo: elevatore, nome: elevatore_3, x0: {prua: 281.3}, x1: {prua: 258.2}, y0: -28.5, y1: -44.0, z: 18.8, spessore: 2.0}
+  - {tipo: elevatore, nome: elevatore_4, x0: {prua: 285.0}, x1: {prua: 262.0}, y0: 29.0, y1: 38.0, z: 18.8, spessore: 2.0}
+  # ---------------------------------------------------------------- isola (sul bordo di dritta)
+  # lunghezza e quote dalla foto di fianco; larghezza (circa 18 m) dalla foto di prua
+  - {tipo: tuga, nome: isola_bassa, x0: {prua: 236.0}, x1: {prua: 209.0}, y0: -36.0, y1: -20.0, z0: 18.8, z1: 27.1, rastrema: 0.99}
+  - {tipo: tuga, nome: isola_alta, x0: {prua: 239.3}, x1: {prua: 207.7}, y0: -37.0, y1: -19.0, z0: 27.1, z1: 31.6, rastrema: 0.99}
+  - {tipo: tuga, nome: isola_superiore, x0: {prua: 230.0}, x1: {prua: 207.7}, y0: -37.0, y1: -19.0, z0: 31.6, z1: 35.6, rastrema: 0.98}
+  - {tipo: tuga, nome: isola_cielo, x0: {prua: 228.0}, x1: {prua: 212.0}, y0: -33.0, y1: -23.0, z0: 35.6, z1: 37.0}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 208.2}, x1: {prua: 207.5}, y0: -36.5, y1: -19.5, z0: 32.0, z1: 33.2, mat: nero}
+  - {tipo: antenna_piana, nome: sps48, x: {prua: 216.4}, y: -28.0, z0: 37.0, larghezza: 5.0, altezza: 4.9, sostegno: 0.5, orientamento: 30}
+  # albero principale (cima a 63 m), pennoni
+  - {tipo: traliccio, nome: albero_principale, x: {prua: 222.5}, y: -28.0, base: 2.6, cima: 0.9, z0: 37.0, z1: 52.4, piani: [44.5, 48.0]}
+  - {tipo: asta, nome: alberetto, da: [{prua: 222.5}, -28.0, 52.4], a: [{prua: 222.5}, -28.0, 63.0], spessore: 0.45}
+  - {tipo: pennone, nome: pennone_alto, x: {prua: 222.5}, y: -28.0, z: 52.4, semilunghezza: 9.0}
+  - {tipo: asta, nome: braccio_alto, da: [{prua: 227.5}, -28.0, 52.4], a: [{prua: 217.5}, -28.0, 52.4], spessore: 0.3}
+  - {tipo: pennone, nome: pennone_basso, x: {prua: 222.5}, y: -28.0, z: 48.0, semilunghezza: 6.0}
+  - {tipo: asta, nome: braccio_basso, da: [{prua: 229.0}, -28.0, 48.0], a: [{prua: 216.0}, -28.0, 48.0], spessore: 0.3}
+  # traliccio poppiero sul bordo di dritta, con antenna radar in cima (cima a 41,3 m)
+  - {tipo: traliccio, nome: traliccio_poppiero, x: {prua: 246.3}, y: -36.0, base: 2.8, cima: 1.2, z0: 18.8, z1: 38.3, piani: [28.0, 33.5]}
+  - {tipo: antenna_radar, nome: radar_poppiero, x: {prua: 246.3}, y: -36.0, z0: 38.3, larghezza: 5.5, altezza: 3.0, orientamento: 60}
+  # asta sul bordo di dritta a proravia (lato confermato dalla ripresa aerea di sinistra; cima a 31,8 m)
+  - {tipo: asta, nome: asta_prodiera, da: [{prua: 93.0}, -28.0, 18.8], a: [{prua: 93.0}, -28.0, 31.8], spessore: 0.5}
+  # ---------------------------------------------------------------- sponsoni e armi
+  - {tipo: sponsone, nome: sponsone_prodiero_dritta, x0: {prua: 78.0}, x1: {prua: 54.0}, y0: -20.0, y1: -27.0, z: 13.9, mensola: 7.0, lato: -1}
+  - {tipo: sea_sparrow, nome: sea_sparrow_prodiero_dritta, x: {prua: 66.0}, y: -24.0, z0: 13.9}
+  # posizioni tipiche della configurazione 1989 (3 Mk29, 3 Phalanx): non misurate sulle foto
+  - {tipo: sponsone, nome: sponsone_prodiero_sinistra, x0: {prua: 98.0}, x1: {prua: 86.0}, y0: 24.0, y1: 32.0, z: 13.5, mensola: 5.0, lato: 1}
+  - {tipo: ciws, nome: phalanx_prodiero_sinistra, x: {prua: 92.0}, y: 29.0, z0: 13.5}
+  - {tipo: sponsone, nome: sponsone_poppiero_dritta, x0: {prua: 326.0}, x1: {prua: 294.0}, y0: -21.0, y1: -30.0, z: 13.5, mensola: 5.0, lato: -1}
+  - {tipo: ciws, nome: phalanx_poppiero_dritta, x: {prua: 298.0}, y: -26.0, z0: 13.5}
+  - {tipo: sea_sparrow, nome: sea_sparrow_poppiero_dritta, x: {prua: 318.0}, y: -25.0, z0: 13.5, orientamento: 180}
+  - {tipo: sponsone, nome: sponsone_poppiero_sinistra, x0: {prua: 328.0}, x1: {prua: 292.0}, y0: 16.0, y1: 26.0, z: 13.0, mensola: 5.0, lato: 1}
+  - {tipo: sea_sparrow, nome: sea_sparrow_poppiero_sinistra, x: {prua: 298.0}, y: 21.5, z0: 13.0, orientamento: 180}
+  - {tipo: ciws, nome: phalanx_poppiero_sinistra, x: {prua: 320.0}, y: 21.0, z0: 13.0}
+
+  # ---------------------------------------------------------------- velivoli parcheggiati (carico tipico
+  # in navigazione, dalle foto della Eisenhower 1982 e 1987): sagome basse, muso [x, y, orientamento]
+  - tipo: aerei
+    nome: aerei_prua
+    z0: 18.8
+    posizioni: [[{prua: 22}, -14.0, 60], [{prua: 36}, -17.0, 60], [{prua: 50}, -19.0, 60], [{prua: 64}, -19.5, 60],
+                [{prua: 78}, -19.5, 60], [{prua: 92}, -19.5, 60], [{prua: 32}, -1.0, 45], [{prua: 48}, -3.0, 45],
+                [{prua: 64}, -4.0, 45], [{prua: 80}, -4.0, 45]]
+  - tipo: aerei
+    nome: aerei_dritta
+    z0: 18.8
+    posizioni: [[{prua: 120}, -19.5, 90], [{prua: 162}, -21.0, 90], [{prua: 190}, -21.0, 90],
+                [{prua: 252}, -21.0, 100], [{prua: 266}, -21.0, 100], [{prua: 280}, -21.0, 100], [{prua: 294}, -20.0, 100]]
+  - tipo: aerei
+    nome: aerei_poppa
+    z0: 18.8
+    posizioni: [[{prua: 322}, -15.0, 0], [{prua: 322}, -5.0, 0], [{prua: 322}, 5.0, 0], [{prua: 322}, 15.0, 0]]
+  - tipo: aerei
+    nome: aerei_sinistra
+    z0: 18.8
+    posizioni: [[{prua: 112}, 31.0, -60], [{prua: 126}, 32.0, -60]]
+
+foto:
+  - nome: fianco_dritta
+    file: extracted/navi/nimitz/foto/fianco_dritta_roosevelt_1986_full_ritaglio.jpg   # originale 2955 px, righe 231-1216: nave centrata in verticale
+    nave: USS Theodore Roosevelt (CVN-71), 1986
+    maschera_file: extracted/navi/nimitz/foto/fianco_dritta_roosevelt_1986_full_ritaglio_maschera.png   # classi/nimitz_maschera_fianco.yaml
+    qualita: 1.0
+    esponente_peso: 4
+    specchiabile: false     # riflessa porterebbe sul fianco sinistro i tre elevatori di dritta: il lato sinistro
+                            # viene dalla ripresa aerea della Roosevelt (stessa nave, stesso anno)
+    orizzonte_y: 0
+    soglia_cielo: 0
+    cancella: [[1040, 382, 1090, 435]]          # numero 71 sull'isola
+    fotocamera_iniziale: {posizione: [0, -1500, 150], bersaglio: [0, 0, 12], f: 10281}
+    punti:
+      - [[{prua: 0}, 0, 18.8], [2579, 422]]          # punta del ponte di volo
+      - [[{prua: 14.6}, 0, 0], [2478, 549]]          # piede del dritto al galleggiamento
+      - [[{prua: 332.8}, 0, 18.8], [296, 420]]       # estremita' poppiera del ponte di volo
+      - [[{prua: 222.5}, -28.0, 63.0], [1053, 138]]   # cima dell'albero principale
+      - [[{prua: 246.3}, -36.0, 41.3], [890, 288]]   # cima del traliccio poppiero
+      - [[{prua: 207.7}, -37.0, 35.6], [1154, 326]]   # isola, spigolo prodiero alto (lato dritto)
+      - [[{prua: 239.3}, -37.0, 31.6], [937, 355]]   # isola, spigolo poppiero alto (lato dritto)
+      - [[{prua: 93.0}, -28.0, 31.8], [1938, 352]]   # cima dell'asta prodiera
+  - nome: poppa_dritta
+    file: extracted/navi/nimitz/foto/poppa_dritta_eisenhower_1982.jpg
+    nave: USS Dwight D. Eisenhower (CVN-69), 1982
+    qualita: 0.9
+    esponente_peso: 4
+    specchiabile: true
+    qualita_speculare: 0.5   # riflessa serve per lo specchio di poppa; sul fianco prevalgono le foto vere di sinistra
+    maschera_file: extracted/navi/nimitz/foto/poppa_dritta_eisenhower_1982_maschera.png   # classi/nimitz_maschera_poppa.yaml
+    orizzonte_y: 818
+    soglia_cielo: 230
+    cancella: [[1148, 752, 1174, 784]]        # numero 69 sull'isola
+    soglia_schiuma: 235
+    fotocamera_iniziale: {posizione: [-1000, -1200, 10], bersaglio: [0, 0, 12], f: 5500}
+    punti:
+      - [[{prua: 222.5}, -28.0, 63.0], [1130, 618]]   # cima dell'albero principale
+      - [[{prua: 0}, -12.0, 18.8], [1544, 802]]       # ponte di volo, spigolo prodiero di dritta (il punto piu' a destra)
+      - [[{prua: 14.6}, 0, 0], [1486, 856]]           # piede del dritto al galleggiamento
+      - [[{prua: 332.8}, 10.2, 0], [677, 876]]        # specchio di poppa, spigolo di sinistra al galleggiamento (a sinistra nella foto)
+      - [[{prua: 332.8}, -10.2, 0], [740, 876]]       # specchio di poppa, spigolo di dritta al galleggiamento
+      - [[{prua: 332.8}, 21.7, 16.8], [654, 797]]     # specchio di poppa, spigolo di sinistra in alto
+      - [[{prua: 332.8}, -21.7, 16.8], [775, 797]]    # specchio di poppa, spigolo di dritta in alto
+      - [[{prua: 207.7}, -37.0, 35.6], [1196, 722]]   # isola, spigolo prodiero alto (lato dritto)
+      - [[{prua: 246.3}, -36.0, 41.3], [1095, 702]]   # cima del traliccio poppiero
+  - nome: prua
+    file: extracted/navi/nimitz/foto/prua_eisenhower_1987_ritaglio.jpg   # colonne 0-1640: centro dell'immagine sull'asse della nave
+    nave: USS Dwight D. Eisenhower (CVN-69), 1987
+    qualita: 0.8
+    esponente_peso: 4
+    specchiabile: true
+    orizzonte_y: 362
+    soglia_cielo: 185
+    riquadro: [400, 150, 800, 362]
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [403, 4.5, 40], bersaglio: [0, 0, 20], f: 3900}   # ripresa ravvicinata (circa 240 m dalla prua)
+    punti:
+      - [[{prua: 0}, -12.0, 18.8], [598, 791]]        # ponte di volo, spigolo prodiero di dritta (a sinistra nella foto)
+      - [[{prua: 0}, 11.5, 18.8], [985, 791]]         # ponte di volo, spigolo prodiero di sinistra
+      - [[{prua: 222.5}, -28.0, 63.0], [592, 239]]    # cima dell'albero principale
+      - [[{prua: 207.7}, -37.0, 35.6], [505, 481]]    # isola, spigolo prodiero alto esterno (dritta)
+      - [[{prua: 207.7}, -19.0, 35.6], [663, 481]]    # isola, spigolo prodiero alto interno
+  - nome: fianco_sinistro_aereo
+    file: extracted/navi/nimitz/foto/fianco_sinistro_roosevelt_1986.jpg
+    nave: USS Theodore Roosevelt (CVN-71), 1986 (ripresa aerea)
+    qualita: 0.7
+    esponente_peso: 4
+    specchiabile: false      # foto del lato sinistro: non serve riflessa
+    orizzonte_y: 0            # nessun cielo: maschera dal modello e dal riconoscimento del mare
+    soglia_cielo: 0
+    cancella: [[1140, 690, 1185, 735]]        # numero 71 sull'isola
+    soglia_schiuma: 215
+    fotocamera_iniziale: {posizione: [0, 1500, 800], bersaglio: [0, 0, 10], f: 7550}
+    punti:
+      - [[{prua: 0}, 0, 18.8], [176, 760]]             # ponte di volo, centro del bordo prodiero
+      - [[{prua: 332.8}, 0, 18.8], [1655, 781]]        # ponte di volo, centro del bordo poppiero
+      - [[{prua: 222.5}, -28.0, 63.0], [1160, 575]]    # cima dell'albero principale
+      - [[{prua: 246.3}, -36.0, 41.3], [1262, 631]]    # cima del traliccio poppiero
+      - [[{prua: 93.0}, -28.0, 31.8], [615, 670]]      # cima dell'asta prodiera
+      - [[{prua: 209.0}, -20.0, 18.8], [1107, 735]]    # isola, spigolo prodiero interno alla base
+  - nome: prua_sinistra_aerea
+    file: extracted/navi/nimitz/foto/prua_sinistra_vinson_1982.jpg
+    nave: USS Carl Vinson (CVN-70), 1982 (prove in mare, ripresa rialzata)
+    qualita: 0.7
+    esponente_peso: 4
+    specchiabile: false      # foto del lato sinistro: non serve riflessa
+    orizzonte_y: 582
+    soglia_cielo: 172
+    riquadro: [1000, 350, 1700, 582]
+    soglia_schiuma: 175
+    fotocamera_iniziale: {posizione: [440, 160, 35], bersaglio: [60, 0, 15], f: 3500}   # circa 300 m a proravia sinistra
+    punti:
+      # il bordo prodiero del ponte si vede di scorcio da sinistra-prua: va da (468, 737) a (720, 765)
+      - [[{prua: 0}, -12.0, 18.8], [468, 737]]        # ponte di volo, spigolo prodiero di dritta
+      - [[{prua: 0}, 11.5, 18.8], [720, 765]]         # ponte di volo, spigolo prodiero di sinistra
+      - [[{prua: 222.5}, -28.0, 63.0], [1155, 388]]   # cima dell'albero principale
+      - [[{prua: 207.7}, -37.0, 35.6], [1073, 562]]   # isola, spigolo prodiero alto esterno (dritta)
+      - [[{prua: 332.8}, 16.5, 18.8], [1630, 670]]    # ponte di volo, spigolo poppiero di sinistra

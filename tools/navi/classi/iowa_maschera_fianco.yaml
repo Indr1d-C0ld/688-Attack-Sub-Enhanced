@@ -1,0 +1,17 @@
+# Maschera della foto di fianco dritto della USS Iowa (1984), immagine 3000 px.
+# Cielo e mare sono chiari (190-250), la nave scura (80-150): basta una soglia dentro un contorno largo,
+# chiuso in basso dal galleggiamento (cosi' restano fuori i cavi scuri delle onde). Il contorno serve soprattutto
+# a INCLUDERE i numeri di scafo bianchi (61 a prua e a poppa): con la maschera automatica restavano fuori e,
+# dopo la cancellatura, la loro sagoma riappariva negli sprite riempita da altre sorgenti.
+file: extracted/navi/iowa/foto/fianco_dritta_1984_full.jpg
+uscita: extracted/navi/iowa/foto/fianco_dritta_1984_maschera.png
+scafo: [[180, 1360], [180, 840], [2840, 840], [2840, 1262], [2826, 1266], [2800, 1320], [2768, 1377], [2656, 1386],
+        [2500, 1392], [2187, 1402], [1875, 1414], [1562, 1431], [1250, 1436], [938, 1445], [625, 1443], [312, 1441],
+        [225, 1441], [196, 1374]]
+soglia_scafo: 165
+linea_coperta: [[0, 0], [3000, 0]]
+inviluppo: [[0, 0], [1, 0], [1, 1]]
+includi:
+  - [[2681, 1314], [2727, 1314], [2727, 1350], [2681, 1350]]   # 61 a prua
+  - [[264, 1393], [299, 1393], [299, 1416], [264, 1416]]       # 61 a poppa
+area_minima: 40

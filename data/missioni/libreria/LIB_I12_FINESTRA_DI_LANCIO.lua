@@ -1,0 +1,1250 @@
+-- LIB_I12_FINESTRA_DI_LANCIO: missione dell'editor (engine/missioni/src/scenario_missione.cpp), autore Libreria di Melchior 688.
+-- Formato: docs/09_schema_missioni.md. Lo scenario e' nel blocco `editor`: l'editor lo rilegge e riscrive il file.
+
+local script = {}
+
+-- parametro i del comando del giocatore (p), oppure il valore scritto nello script
+local function par(p, i, predefinito) if p ~= nil and p[i] ~= nil then return p[i] end return predefinito end
+
+local missione = {
+  formato = 1,
+  id = "LIB_I12_FINESTRA_DI_LANCIO",
+  titolo = { it = "Finestra di lancio", en = "Launch window" },
+  lato = "usa",
+  teatro = "barents",
+  posa = { metodo = "rapida", centro = { lat = 70.15, lon = 35 }, metri_per_unita = { x = 37.04, y = 37.04 }, moto_classico_m_s_per_nodo = 0.514444, nota = "posizioni in metri sul teatro, velocita' vere anche nel classico" },
+  data = "1989-01-17", ora_utc = 2,
+  dotazione = { mk48 = 16, tlam_c = 6, esca = 6 },
+  tubi = { "tlam_c", "tlam_c", "mk48", "mk48", "esca", "esca", "tlam_c" },
+  deposito = { mk48 = 16, tlam_c = 6, esca = 6 },
+  tipo_missione = "antisom",
+  armi = {
+    mk48 = { classe = "mk48", velocita_kn = 50.2857, corsa_s = 280, filo_s = 190, danno = 75, rumore = 18, testa = 17, virata_gradi_s = 9, quota_max_m = 548.64, gestore = "KU1A_041a" },
+    harpoon = { gestore = "KU1A_03cc" },   -- senza modello di corsa (missile o esca: vedi lo script)
+    esca = { gestore = "KU1A_04ab" },   -- senza modello di corsa (missile o esca: vedi lo script)
+    tomahawk = { gestore = "KU1A_03cc" },   -- TASM antinave: il gestore dell'Harpoon
+  },
+  gestori_giocatore = {
+    punto_di_rotta = "KU1A_050e",
+    telegrafo = "KU1A_0520",
+    quota = "KU1A_0525",
+    timone = "KU1A_052c",
+    pilota_automatico_off = "KU1A_0588",
+    periscopio = "KU1A_0590",
+    carica_tubo_1 = "KU1A_0534",
+    carica_tubo_2 = "KU1A_053d",
+    carica_tubo_3 = "KU1A_0546",
+    carica_tubo_4 = "KU1A_054f",
+    carica_tubo_5 = "KU1A_0558",
+    carica_tubo_6 = "KU1A_0561",
+    carica_tubo_7 = "KU1A_056a",
+    schiera_cala = "KU1A_0594",
+    schiera_recupera = "KU1A_05a4",
+    schiera_persa = "KU1A_05b0",
+    designa_bersaglio = "KU1A_05ba",
+    posizione = "KU1A_05bf",
+    antenna = "KU1A_059a",
+    guida_e0 = "KU1A_04e1",
+    guida_e1 = "KU1A_04e6",
+    guida_e2 = "KU1A_04f0",
+  },
+  carriera = false,   -- missione fuori carriera
+  aereo_asw = {
+    { unita = 3, missione = "caccia", situazione = "guerra", bersagli = "giocatore", equipaggio = "esperto",
+      base = { x = -63127, y = -124126.8 }, zona = { x = -95681.1, y = 68985.5, raggio_m = 25000 } },
+  },
+  obiettivi = {
+    { id = "tlam_0521", tipo = "tlam", minimo = 2, missione = "0521",
+      testo = { it = "Due TLAM della 0521 sul bersaglio nella finestra", en = "Two 0521 TLAMs on target within the window" } },
+    { id = "plp", tipo = "raggiungere", cerchio = { x = -95681.1, y = 68985.5, r = 18520 }, primario = false,
+      testo = { it = "Raggiungere l'area di lancio della 0521", en = "Reach the 0521 launch area" } },
+    { id = "vivo", tipo = "sopravvivere",
+      testo = { it = "Riportare a casa il battello", en = "Bring the boat home" } },
+  },
+  briefing = {
+    it = { "ORDINI DI MISSIONE", "DA: COMSUBLANT", "A: USS LOS ANGELES (SSN-688)", "OGG.: STRIKE - ALLARME PRECOCE DI KOLA", "17 gennaio 1989, ore 0200Z. Teatro: Mare di Barents. Guerra. Notte polare, neve.", "Siete in mare da diciannove giorni; l'ultimo punto nave sicuro e' di cinque giorni fa.", "In libreria avete due missioni TLAM contro i radar d'allarme della penisola di Kola, la 0521 e la 0522. Il comando le eseguira' nella notte, a un'ora che ancora non dice, e vuole i missili sul bersaglio entro dieci minuti dall'ora fissata.", "Il punto di lancio della 0521 e' a quaranta miglia, dove passano una Krivak e un Il-38. Un punto nave vi costa esposizione; senza, potete sbagliare di due miglia, e il TERCOM non perdona.", "Lanciate solo su un ordine d'esecuzione autenticato.", "Tempo a disposizione: 3 ore.", "Nota: inedita; bersagli e missioni sono di fantasia." },
+    en = { "MISSION ORDERS", "FM: COMSUBLANT", "TO: USS LOS ANGELES (SSN-688)", "SUBJ: STRIKE - KOLA EARLY WARNING", "17 January 1989, 0200Z. Theatre: Barents Sea. War. Polar night, snow.", "You have been at sea nineteen days; the last reliable fix was five days ago.", "Your library holds two TLAM missions against the early-warning radars of the Kola peninsula, 0521 and 0522. Command will execute them tonight, at a time not yet given, and wants the missiles on target within ten minutes of the set time.", "The 0521 launch point is forty miles away, where a Krivak and an Il-38 patrol. A fix costs exposure; without one you may be two miles off, and TERCOM does not forgive.", "Launch only on an authenticated execute order.", "Time available: 3 hours.", "Note: original; targets and missions are fictional." },
+  },
+  esiti = {
+    [20] = { it = "Missione conclusa: rientrare alla base per il rapporto.", en = "Mission over: return to base for debriefing." },
+    [21] = { it = "Tempo scaduto: la missione si chiude qui.", en = "Time is up: the mission ends here." },
+  },
+  radio = {
+    ordini = { da = "COMSUBLANT", a = "USS LOS ANGELES (SSN 688)", oggetto = "STRIKE - KOLA EARLY WARNING", classifica = "TOP SECRET", data = { giorno = 17, mese = 1, anno = 1989, ora_utc = 2 } },
+    stato_iniziale = { roe = { aerei = "libero", navi = "libero", sottomarini = "libero", } },
+    { id = "ESEGUIRE_0522", dopo_s = 3600, precedenza = "flash", da = "COMSUBLANT", oggetto = "TLAM EXECUTE", classifica = "TOP SECRET", autentico = false, esecuzione_tlam = "0522",
+      testo = { it = "ESEGUIRE MISSIONE TLAM 0522. ORA SUL BERSAGLIO 0440Z PIU' O MENO 10 MINUTI. AUTENTICAZIONE KILO ROMEO.", en = "EXECUTE TLAM MISSION 0522. TIME ON TARGET 0440Z PLUS OR MINUS 10 MINUTES. AUTHENTICATION KILO ROMEO." } },
+    { id = "ESEGUIRE_0521", dopo_s = 4800, precedenza = "flash", da = "COMSUBLANT", oggetto = "TLAM EXECUTE", classifica = "TOP SECRET", esecuzione_tlam = "0521",
+      testo = { it = "ESEGUIRE MISSIONE TLAM 0521, DUE MISSILI. ORA SUL BERSAGLIO 0430Z PIU' O MENO 10 MINUTI, ANTICIPATA DI TRENTA MINUTI. IGNORARE OGNI ALTRO ORDINE.", en = "EXECUTE TLAM MISSION 0521, TWO MISSILES. TIME ON TARGET 0430Z PLUS OR MINUS 10 MINUTES, ADVANCED THIRTY MINUTES. DISREGARD ANY OTHER ORDER." } },
+  },
+  meteo = { fisso = { vento_m_s = 9, vento_da_gradi = 30, stato_mare = 3, visibilita_m = 3000, neve_mm_h = 2, nubi_ottavi = 8, } },
+  navigazione = { sigma_iniziale_nm = 2 },
+  tlam = {
+    { id = "0521", bersaglio = "OLENEGORSK, RADAR D'ALLARME", plp = { x = -95681.1, y = 68985.5 }, landfall = { x = -96582.7, y = -42644 }, tot_s = 9000, finestra_s = 600, tratta_terra_m = 90000 },
+    { id = "0522", bersaglio = "PECHENGA, RADAR DI SCOPERTA", plp = { x = -65590.1, y = 90225.9 }, landfall = { x = -66152.2, y = -60436.2 }, tot_s = 9600, finestra_s = 600, tratta_terra_m = 40000 },
+  },
+  editor = { formato_editor = 1, scenario = {
+    id = "LIB_I12_FINESTRA_DI_LANCIO", titolo = { it = "Finestra di lancio", en = "Launch window" }, autore = "Libreria di Melchior 688",
+    teatro = "barents", alfa = false, centro = { lat = 70.150000000000006, lon = 35 },
+    data = { giorno = 17, mese = 1, anno = 1989 }, ora_utc = 2, meteo_realistico = false,
+    situazione = "guerra", paranoia = 2, difficolta = 4, durata_s = 10800, libreria = 2,
+    carico = { dotazione = { { "mk48", 16 }, { "tlam_c", 6 }, { "esca", 6 }, }, deposito = { { "mk48", 16 }, { "tlam_c", 6 }, { "esca", 6 }, }, tubi = { "tlam_c", "tlam_c", "mk48", "mk48", "esca", "esca", "tlam_c", }, tipo_missione = "antisom", ospiti = 0 },
+    unita = {
+      { id = 0, classe = "los_angeles", categoria = "sottomarino", parte = "usa", ruolo = "", flag = 9, giocatore = true, non_combattente = false, nascosta = false,
+        pos = { x = -132721.12603653956, y = 133140.62726036407 }, quota = 150, rotta = 150, velocita = 6, punti = { },
+        ciclica = false, esce = false, comportamento = "", profonda = 0, entra_con = "",
+        parametri = { } },
+      { id = 2, classe = "krivak2", categoria = "nave", parte = "urss", ruolo = "pattuglia dell'area di lancio", flag = 18, giocatore = false, non_combattente = false, nascosta = false,
+        pos = { x = -86681.126036539514, y = 68985.465348012891 }, quota = 0, rotta = 270, velocita = 12, punti = { { x = -95681.126036539514, y = 77985.465348012891 }, { x = -86681.126036539514, y = 68985.465348012891 }, { x = -95681.126036539514, y = 59985.465348012891 }, { x = -104681.12603653951, y = 68985.465348012891 }, },
+        ciclica = true, esce = false, comportamento = "R_nave", profonda = 0, entra_con = "",
+        parametri = { } },
+      { id = 3, classe = "il38", categoria = "aereo", parte = "urss", ruolo = "pattugliatore", flag = 19, giocatore = false, non_combattente = false, nascosta = false,
+        pos = { x = -95681.126036539514, y = 93985.465348012891 }, quota = 0, rotta = 90, velocita = 250, punti = { { x = -80124.776850435475, y = 84541.814534116944 }, { x = -80124.776850435461, y = 53429.116161908845 }, { x = -111237.47522264355, y = 53429.116161908838 }, { x = -111237.47522264357, y = 84541.814534116929 }, },
+        ciclica = true, esce = false, comportamento = "R_aereo", profonda = 0, entra_con = "",
+        parametri = { } },
+      { id = 4, classe = "ka27", categoria = "aereo", parte = "urss", ruolo = "Ka-27 di riserva", flag = 19, giocatore = false, non_combattente = false, nascosta = false,
+        pos = { x = -86681.126036539514, y = 70985.465348012891 }, quota = 0, rotta = 0, velocita = 110, punti = { { x = -95681.126036539514, y = 76985.465348012891 }, { x = -87681.126036539514, y = 68985.465348012891 }, { x = -95681.126036539514, y = 60985.465348012891 }, { x = -103681.12603653951, y = 68985.465348012891 }, },
+        ciclica = true, esce = false, comportamento = "R_aereo", profonda = 0, entra_con = "allarme",
+        parametri = { } },
+    },
+    obiettivi = {
+      { id = "tlam_0521", tipo = "tlam", unita = {  }, minimo = 2, entro_s = -1, primario = true, colpire = true, testo = { it = "Due TLAM della 0521 sul bersaglio nella finestra", en = "Two 0521 TLAMs on target within the window" }, missione = "0521" },
+      { id = "plp", tipo = "raggiungere", unita = {  }, minimo = -1, cerchio = { x = -95681.126036539514, y = 68985.465348012891, r = 18520 }, entro_s = -1, primario = false, colpire = true, testo = { it = "Raggiungere l'area di lancio della 0521", en = "Reach the 0521 launch area" } },
+      { id = "vivo", tipo = "sopravvivere", unita = {  }, minimo = -1, entro_s = -1, primario = true, colpire = true, testo = { it = "Riportare a casa il battello", en = "Bring the boat home" } },
+    },
+    aerei_asw = {
+      { unita = 3, base_unita = -1, base = { x = -63126.990800130872, y = -124126.77103452636 }, situazione = "guerra", contro_giocatore = true, bersagli = {  }, zona = { x = -95681.126036539514, y = 68985.465348012891 }, raggio = 25000 },
+    },
+    briefing = { it = { "ORDINI DI MISSIONE", "DA: COMSUBLANT", "A: USS LOS ANGELES (SSN-688)", "OGG.: STRIKE - ALLARME PRECOCE DI KOLA", "17 gennaio 1989, ore 0200Z. Teatro: Mare di Barents. Guerra. Notte polare, neve.", "Siete in mare da diciannove giorni; l'ultimo punto nave sicuro e' di cinque giorni fa.", "In libreria avete due missioni TLAM contro i radar d'allarme della penisola di Kola, la 0521 e la 0522. Il comando le eseguira' nella notte, a un'ora che ancora non dice, e vuole i missili sul bersaglio entro dieci minuti dall'ora fissata.", "Il punto di lancio della 0521 e' a quaranta miglia, dove passano una Krivak e un Il-38. Un punto nave vi costa esposizione; senza, potete sbagliare di due miglia, e il TERCOM non perdona.", "Lanciate solo su un ordine d'esecuzione autenticato.", "Tempo a disposizione: 3 ore.", "Nota: inedita; bersagli e missioni sono di fantasia.", }, en = { "MISSION ORDERS", "FM: COMSUBLANT", "TO: USS LOS ANGELES (SSN-688)", "SUBJ: STRIKE - KOLA EARLY WARNING", "17 January 1989, 0200Z. Theatre: Barents Sea. War. Polar night, snow.", "You have been at sea nineteen days; the last reliable fix was five days ago.", "Your library holds two TLAM missions against the early-warning radars of the Kola peninsula, 0521 and 0522. Command will execute them tonight, at a time not yet given, and wants the missiles on target within ten minutes of the set time.", "The 0521 launch point is forty miles away, where a Krivak and an Il-38 patrol. A fix costs exposure; without one you may be two miles off, and TERCOM does not forgive.", "Launch only on an authenticated execute order.", "Time available: 3 hours.", "Note: original; targets and missions are fictional.", } },
+    esito_fine = { it = "Missione conclusa: rientrare alla base per il rapporto.", en = "Mission over: return to base for debriefing." }, esito_tempo = { it = "Tempo scaduto: la missione si chiude qui.", en = "Time is up: the mission ends here." },
+    chiusura = { tipo = "solo_tempo", unita = {  }, zona = { x = 0, y = 0, r = 0 }, fuori = { x = 0, y = 0, r = 0 } },
+    zone = {
+      { id = "plp_0521", nome = { it = "l'area di lancio della 0521", en = "the 0521 launch area" }, cerchio = { x = -95681.126036539514, y = 68985.465348012891, r = 18520 } },
+    },
+    regole = {
+      { id = "allarme", una_volta = true,
+        quando = {
+          { tipo = "allarme", valore = 0, unita = -1, indice = 0, zona = "", regola = "", confronto = "=" },
+        },
+        allora = {
+          { tipo = "entra", codice = 0, unita = 4, indice = 0, valore = 0, comportamento = "", operazione = "=", categoria = "", zona = "", punto = { x = 0, y = 0 }, raggio = 1852, testo = { it = "", en = "" } },
+        } },
+    },
+    radio = { ordini = { da = "COMSUBLANT", a = "USS LOS ANGELES (SSN 688)", oggetto = "STRIKE - KOLA EARLY WARNING", classifica = "TOP SECRET" }, roe = { aerei = "libero", navi = "libero", sottomarini = "libero", }, messaggi = {
+      { id = "ESEGUIRE_0522", dopo_s = 3600, su_richiesta = false, precedenza = "flash", da = "COMSUBLANT", oggetto = "TLAM EXECUTE", classifica = "TOP SECRET", testo = { it = "ESEGUIRE MISSIONE TLAM 0522. ORA SUL BERSAGLIO 0440Z PIU' O MENO 10 MINUTI. AUTENTICAZIONE KILO ROMEO.", en = "EXECUTE TLAM MISSION 0522. TIME ON TARGET 0440Z PLUS OR MINUS 10 MINUTES. AUTHENTICATION KILO ROMEO." }, autentico = false, roe = { }, se_evento = "", se_ricevuto = "", se_unita_colpita = {  }, annulla = "", esecuzione_tlam = "0522" },
+      { id = "ESEGUIRE_0521", dopo_s = 4800, su_richiesta = false, precedenza = "flash", da = "COMSUBLANT", oggetto = "TLAM EXECUTE", classifica = "TOP SECRET", testo = { it = "ESEGUIRE MISSIONE TLAM 0521, DUE MISSILI. ORA SUL BERSAGLIO 0430Z PIU' O MENO 10 MINUTI, ANTICIPATA DI TRENTA MINUTI. IGNORARE OGNI ALTRO ORDINE.", en = "EXECUTE TLAM MISSION 0521, TWO MISSILES. TIME ON TARGET 0430Z PLUS OR MINUS 10 MINUTES, ADVANCED THIRTY MINUTES. DISREGARD ANY OTHER ORDER." }, autentico = true, roe = { }, se_evento = "", se_ricevuto = "", se_unita_colpita = {  }, annulla = "", esecuzione_tlam = "0521" },
+    } },
+    navigazione = { sigma_iniziale_nm = 2 },
+    tlam = {
+      { id = "0521", bersaglio = "OLENEGORSK, RADAR D'ALLARME", plp = { x = -95681.126036539514, y = 68985.465348012891 }, landfall = { x = -96582.720085424444, y = -42643.992439909445 }, tot_s = 9000, finestra_s = 600, tratta_terra_m = 90000 },
+      { id = "0522", bersaglio = "PECHENGA, RADAR DI SCOPERTA", plp = { x = -65590.060830043236, y = 90225.887549700739 }, landfall = { x = -66152.153208399104, y = -60436.159743010037 }, tot_s = 9600, finestra_s = 600, tratta_terra_m = 40000 },
+    },
+    meteo_fisso = { vento_m_s = 9, vento_da_gradi = 30, stato_mare = 3, visibilita_m = 3000, neve_mm_h = 2, nubi_ottavi = 8, nebbia = "" },
+  } },
+  script = script,
+  varianti = {
+    { probabilita = 1, unita = {
+      { id = 0, classe = "los_angeles", categoria = "sottomarino", schieramento = "usa", flag = 9, giocatore = true,
+        posizione = { x = -132721.1, y = 133140.6 }, quota_m = 150, rotta = 150, velocita_kn = 6,
+        modello = { massima_kn = 37, virata_gradi_s = 3.6, accel_kn_s = 0.257, quota_m_s = 5.4864, quota_max_m = 457.2, integrita = 160, rumore = 6, sonar = 18, schiera_trainata = false, controllo_fondale = true, periodo_controlli = 1 },
+        gestori = { bersaglio = nil, reazione = nil, arrivo = nil } },
+      { id = 2, classe = "krivak2", categoria = "nave", schieramento = "urss", flag = 18,
+        posizione = { x = -86681.1, y = 68985.5 }, quota_m = 0, rotta = 270, velocita_kn = 12,
+        modello = { massima_kn = 30, virata_gradi_s = 1.44, accel_kn_s = 0.051, quota_m_s = 0.6706, quota_max_m = 548.64, integrita = 100, rumore = 24, sonar = 19, difesa = 90, schiera_trainata = true, controllo_fondale = false, periodo_controlli = 1 },
+        rotta_punti = { { x = -95681.1, y = 77985.5 } }, rotta_ciclica = true,
+        gestori = { bersaglio = "R_nave", reazione = nil, arrivo = "R_2_p2" } },   -- pattuglia dell'area di lancio
+      { id = 3, classe = "il38", categoria = "aereo", schieramento = "urss", flag = 19,
+        posizione = { x = -95681.1, y = 93985.5 }, quota_m = 0, rotta = 90, velocita_kn = 250,
+        modello = { massima_kn = 330, virata_gradi_s = 3, accel_kn_s = 2, quota_m_s = 1, quota_max_m = 500, integrita = 10, rumore = 0, sonar = 21, difesa = 0, schiera_trainata = false, controllo_fondale = false, periodo_controlli = 2 },
+        rotta_punti = { { x = -80124.8, y = 84541.8 } }, rotta_ciclica = true,
+        gestori = { bersaglio = "R_aereo", reazione = nil, arrivo = "R_3_p2" } },   -- pattugliatore
+      { id = 4, classe = "ka27", categoria = "aereo", schieramento = "urss", flag = 19,
+        posizione = { x = -86681.1, y = 2150985.5 }, quota_m = 0, rotta = 0, velocita_kn = 0,
+        modello = { massima_kn = 90, virata_gradi_s = 9, accel_kn_s = 0.771, quota_m_s = 0.3353, quota_max_m = 457.2, integrita = 10, rumore = 0, sonar = 26, difesa = 0, schiera_trainata = false, controllo_fondale = false, periodo_controlli = 2 },
+        gestori = { bersaglio = "R_aereo", reazione = nil, arrivo = nil } },   -- Ka-27 di riserva, di riserva: entra con la regola allarme
+    },
+    timer = {
+      { dopo_s = 20, unita = 0, gestore = "R_chiusura" },
+      { dopo_s = 10800, unita = 0, gestore = "R_tempo" },
+      { dopo_s = 44, unita = 2, gestore = "R_vigila" },
+      { dopo_s = 10, unita = 0, gestore = "R_regola_0" },
+    },
+    variabili = { [10] = 0, [11] = 0 },
+    },
+  },
+}
+
+-- kit del 688 (data/motore/missioni_rapide/, dalle missioni originali)
+script.KU1A_03cc = function(u)
+  ::KU1A_03cc::
+  m688.lancio_missile(u)
+  m688.messaggio_al_giocatore(u, 49)
+  m688.seleziona_collegata(u)
+  m688.dopo(u, 20, "KU1A_03d6")
+  do return end
+end
+script.KU1A_03d6 = function(u)
+  ::KU1A_03d6::
+  m688.attacco_casuale(u, 75)
+  do return end
+end
+script.KU1A_041a = function(u)
+  ::KU1A_041a::
+  m688.rumore_transitorio(u)
+  m688.variabile_piu(u, 1)
+  m688.memorizza_bersaglio(u)
+  m688.modello_azzera(u)
+  m688.modello_classe(u, "mk48")
+  m688.modello_flag(u, 41)
+  m688.lancia(u, "KU1A_04a7", "KU1A_0484")
+  script.KU1A_0441(u)
+  m688.dopo(u, 170, "KU1A_043e")
+  m688.dopo(u, 190, "KU1A_0467")
+  m688.dopo(u, 280, "KU1A_04a7")
+  m688.messaggio_al_giocatore(u, 2)
+  do return end
+end
+script.KU1A_043e = function(u)
+  ::KU1A_043e::
+  m688.messaggio_al_giocatore(u, 39)
+  do return end
+end
+script.KU1A_0441 = function(u)
+  ::KU1A_0441::
+  m688.modello_tipo(u, 1)
+  m688.modello_rateo_quota(u, 10.287)
+  m688.modello_virata(u, 9)
+  m688.modello_accelerazione(u, 0.7714)
+  m688.modello_avanti_tutta(u, 50.2857)
+  m688.modello_rumore(u, 18)
+  m688.modello_sonar(u, 17)
+  m688.modello_integrita(u, 20)
+  m688.modello_difesa(u, 75)
+  m688.modello_quota_max(u, 548.64)
+  m688.modello_4c(u, 1)
+  m688.telegrafo(u, 1)
+  m688.navigazione(u, 1)
+  m688.collega(u, 1)
+  m688.flag_scena(u, 0)
+  m688.nuova_unita(u)
+  do return end
+end
+script.KU1A_0467 = function(u)
+  ::KU1A_0467::
+  m688.annulla_timer(u, "KU1A_0467")
+  m688.collega(u, 0)
+  m688.modello_sonar(u, 16)
+  m688.messaggio_al_giocatore(u, 23)
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_0472 = function(u)
+  ::KU1A_0472::
+  m688.telegrafo(u, 1)
+  m688.annulla_timer(u, "KU1A_0498")
+  m688.annulla_timer(u, "KU1A_0484")
+  m688.insegui(u, 0, "KU1A_04a7", "KU1A_0484")
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_0484 = function(u)
+  ::KU1A_0484::
+  m688.telegrafo(u, 0.7812)
+  m688.comportamento(u, "KU1A_0472")
+  m688.salva_modello(u)
+  m688.impulso_sonar(u)
+  m688.impulso_sonar(u)
+  m688.dopo(u, 10, "KU1A_04a0")
+  m688.dopo(u, 10, "KU1A_0498")
+  do return end
+end
+script.KU1A_0498 = function(u)
+  ::KU1A_0498::
+  m688.rateo_virata(u, -3.6)
+  m688.rotta(u, nil)
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_04a0 = function(u)
+  ::KU1A_04a0::
+  m688.impulso_sonar(u)
+  m688.dopo(u, 10, "KU1A_04a0")
+  do return end
+end
+script.KU1A_04a7 = function(u)
+  ::KU1A_04a7::
+  m688.messaggio_al_giocatore(u, 24)
+  m688.togli_unita(u)
+  do return end
+end
+script.KU1A_04ab = function(u)
+  ::KU1A_04ab::
+  m688.messaggio_al_giocatore(u, 43)
+  m688.memorizza_bersaglio(u)
+  m688.modello_azzera(u)
+  m688.modello_flag(u, 193)
+  m688.lancia(u, "KU1A_04a7", "KU1A_0484")
+  m688.modello_tipo(u, 1)
+  m688.modello_rumore(u, 0)
+  m688.velocita_ora(u, 0.9143)
+  m688.modello_avanti_tutta(u, 0.9143)
+  m688.modello_integrita(u, 2)
+  m688.modello_4c(u, 1)
+  m688.navigazione(u, 0)
+  m688.collega(u, 1)
+  m688.collega(u, 0)
+  m688.flag_scena(u, 0)
+  m688.nuova_unita(u)
+  m688.dopo(u, 2, "KU1A_04d8")
+  m688.dopo(u, 160, "KU1A_04dd")
+  do return end
+end
+script.KU1A_04d8 = function(u)
+  ::KU1A_04d8::
+  m688.modello_rumore(u, 40)
+  m688.salva_modello(u)
+  m688.devia_riferimenti(u)
+  do return end
+end
+script.KU1A_04dd = function(u)
+  ::KU1A_04dd::
+  m688.messaggio_al_giocatore(u, 44)
+  m688.togli_unita(u)
+  do return end
+end
+script.KU1A_04e1 = function(u)
+  ::KU1A_04e1::
+  m688.seleziona_bersaglio(u)
+  m688.messaggio(u, 19)
+  m688.togli_unita(u)
+  do return end
+end
+script.KU1A_04e6 = function(u)
+  ::KU1A_04e6::
+  m688.messaggio_al_giocatore(u, 41)
+  m688.seleziona_bersaglio(u)
+  m688.marca_contatti(u)
+  m688.dopo(u, 2, "KU1A_0484")
+  do return end
+end
+script.KU1A_04f0 = function(u, p)
+  ::KU1A_04f0::
+  m688.seleziona_bersaglio(u)
+  m688.vai_a(u, par(p, 1, -114475.2), par(p, 2, 64925.28), 20, "KU1A_04ff")
+  m688.telegrafo(u, 1)
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_04ff = function(u)
+  ::KU1A_04ff::
+  m688.telegrafo(u, 0)
+  m688.comportamento(u, "KU1A_0472")
+  m688.salva_modello(u)
+  m688.marca_contatti(u)
+  if m688.flag_scena_uguale(u, 1) then goto KU1A_050d end
+  m688.messaggio_al_giocatore(u, 42)
+  ::KU1A_050d::
+  do return end
+end
+script.KU1A_050e = function(u, p)
+  ::KU1A_050e::
+  m688.vai_a(u, par(p, 1, -114475.2), par(p, 2, 64925.28), 30, "KU1A_0519")
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_0519 = function(u)
+  ::KU1A_0519::
+  m688.rateo_virata(u, 0)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 4)
+  do return end
+end
+script.KU1A_0520 = function(u, p)
+  ::KU1A_0520::
+  m688.telegrafo(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_0525 = function(u, p)
+  ::KU1A_0525::
+  m688.quota(u, par(p, 1, 0), par(p, 2, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_052c = function(u, p)
+  ::KU1A_052c::
+  m688.rateo_virata(u, par(p, 1, 0))
+  m688.rotta(u, nil)
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_0534 = function(u)
+  ::KU1A_0534::
+  m688.annulla_timer(u, "KU1A_0573")
+  m688.dopo(u, 20, "KU1A_0573")
+  do return end
+end
+script.KU1A_053d = function(u)
+  ::KU1A_053d::
+  m688.annulla_timer(u, "KU1A_0576")
+  m688.dopo(u, 20, "KU1A_0576")
+  do return end
+end
+script.KU1A_0546 = function(u)
+  ::KU1A_0546::
+  m688.annulla_timer(u, "KU1A_0579")
+  m688.dopo(u, 20, "KU1A_0579")
+  do return end
+end
+script.KU1A_054f = function(u)
+  ::KU1A_054f::
+  m688.annulla_timer(u, "KU1A_057c")
+  m688.dopo(u, 20, "KU1A_057c")
+  do return end
+end
+script.KU1A_0558 = function(u)
+  ::KU1A_0558::
+  m688.annulla_timer(u, "KU1A_057f")
+  m688.dopo(u, 20, "KU1A_057f")
+  do return end
+end
+script.KU1A_0561 = function(u)
+  ::KU1A_0561::
+  m688.annulla_timer(u, "KU1A_0582")
+  m688.dopo(u, 20, "KU1A_0582")
+  do return end
+end
+script.KU1A_056a = function(u)
+  ::KU1A_056a::
+  m688.annulla_timer(u, "KU1A_0585")
+  m688.dopo(u, 20, "KU1A_0585")
+  do return end
+end
+script.KU1A_0573 = function(u)
+  ::KU1A_0573::
+  m688.messaggio_al_giocatore(u, 10)
+  do return end
+end
+script.KU1A_0576 = function(u)
+  ::KU1A_0576::
+  m688.messaggio_al_giocatore(u, 11)
+  do return end
+end
+script.KU1A_0579 = function(u)
+  ::KU1A_0579::
+  m688.messaggio_al_giocatore(u, 12)
+  do return end
+end
+script.KU1A_057c = function(u)
+  ::KU1A_057c::
+  m688.messaggio_al_giocatore(u, 13)
+  do return end
+end
+script.KU1A_057f = function(u)
+  ::KU1A_057f::
+  m688.messaggio_al_giocatore(u, 14)
+  do return end
+end
+script.KU1A_0582 = function(u)
+  ::KU1A_0582::
+  m688.messaggio_al_giocatore(u, 15)
+  do return end
+end
+script.KU1A_0585 = function(u)
+  ::KU1A_0585::
+  m688.messaggio_al_giocatore(u, 16)
+  do return end
+end
+script.KU1A_0588 = function(u)
+  ::KU1A_0588::
+  m688.ferma_navigazione(u)
+  m688.rateo_virata(u, 0)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 6)
+  do return end
+end
+script.KU1A_0590 = function(u, p)
+  ::KU1A_0590::
+  m688.periscopio(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_0594 = function(u)
+  ::KU1A_0594::
+  m688.dopo(u, 60, "KU1A_059e")
+  do return end
+end
+script.KU1A_059a = function(u, p)
+  ::KU1A_059a::
+  m688.antenna(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_059e = function(u)
+  ::KU1A_059e::
+  m688.schiera_trainata(u, 1)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 17)
+  do return end
+end
+script.KU1A_05a4 = function(u)
+  ::KU1A_05a4::
+  m688.dopo(u, 40, "KU1A_05aa")
+  do return end
+end
+script.KU1A_05aa = function(u)
+  ::KU1A_05aa::
+  m688.schiera_trainata(u, 0)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 18)
+  do return end
+end
+script.KU1A_05b0 = function(u)
+  ::KU1A_05b0::
+  m688.annulla_timer(u, "KU1A_059e")
+  m688.annulla_timer(u, "KU1A_05aa")
+  m688.schiera_trainata(u, 0)
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_05ba = function(u, p)
+  ::KU1A_05ba::
+  m688.bersaglio(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KU1A_05bf = function(u, p)
+  ::KU1A_05bf::
+  m688.posizione(u, par(p, 1, -114475.2), par(p, 2, 64925.28))
+  m688.salva_modello(u)
+  do return end
+end
+
+-- kit dell'Alfa: i gestori di lancio usati dall'IA
+script.KR3B_0631 = function(u)
+  ::KR3B_0631::
+  m688.rumore_transitorio(u)
+  m688.variabile_piu(u, 1)
+  m688.memorizza_bersaglio(u)
+  m688.modello_azzera(u)
+  m688.modello_classe(u, "type53")
+  m688.modello_flag(u, 49)
+  m688.lancia(u, "KR3B_06fc", "KR3B_06d9")
+  m688.modello_tipo(u, 1)
+  m688.modello_rateo_quota(u, 10.287)
+  m688.modello_virata(u, 9)
+  m688.modello_accelerazione(u, 1.0286)
+  m688.modello_avanti_tutta(u, 45.7143)
+  m688.modello_rumore(u, 18)
+  m688.modello_sonar(u, 15)
+  m688.modello_integrita(u, 20)
+  m688.modello_difesa(u, 100)
+  m688.modello_quota_max(u, 548.64)
+  m688.modello_4c(u, 1)
+  m688.telegrafo(u, 1)
+  m688.navigazione(u, 1)
+  m688.collega(u, 1)
+  m688.flag_scena(u, 0)
+  m688.nuova_unita(u)
+  m688.dopo(u, 150, "KR3B_0693")
+  m688.dopo(u, 170, "KR3B_06bc")
+  m688.dopo(u, 240, "KR3B_06fc")
+  m688.messaggio_al_giocatore(u, 2)
+  do return end
+end
+script.KR3B_0693 = function(u)
+  ::KR3B_0693::
+  m688.messaggio_al_giocatore(u, 39)
+  do return end
+end
+script.KR3B_06bc = function(u)
+  ::KR3B_06bc::
+  m688.annulla_timer(u, "KR3B_06bc")
+  m688.collega(u, 0)
+  m688.modello_sonar(u, 13)
+  m688.messaggio_al_giocatore(u, 23)
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_06c7 = function(u)
+  ::KR3B_06c7::
+  m688.telegrafo(u, 1)
+  m688.annulla_timer(u, "KR3B_06ed")
+  m688.annulla_timer(u, "KR3B_06d9")
+  m688.insegui(u, 0, "KR3B_06fc", "KR3B_06d9")
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_06d9 = function(u)
+  ::KR3B_06d9::
+  m688.telegrafo(u, 0.7812)
+  m688.comportamento(u, "KR3B_06c7")
+  m688.salva_modello(u)
+  m688.impulso_sonar(u)
+  m688.impulso_sonar(u)
+  m688.dopo(u, 10, "KR3B_06f5")
+  m688.dopo(u, 10, "KR3B_06ed")
+  do return end
+end
+script.KR3B_06ed = function(u)
+  ::KR3B_06ed::
+  m688.rateo_virata(u, -3.6)
+  m688.rotta(u, nil)
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_06f5 = function(u)
+  ::KR3B_06f5::
+  m688.impulso_sonar(u)
+  m688.dopo(u, 10, "KR3B_06f5")
+  do return end
+end
+script.KR3B_06fc = function(u)
+  ::KR3B_06fc::
+  m688.messaggio_al_giocatore(u, 24)
+  m688.togli_unita(u)
+  do return end
+end
+script.KR3B_0700 = function(u)
+  ::KR3B_0700::
+  m688.messaggio_al_giocatore(u, 43)
+  m688.memorizza_bersaglio(u)
+  m688.modello_azzera(u)
+  m688.modello_flag(u, 193)
+  m688.lancia(u, "KR3B_06fc", "KR3B_06d9")
+  m688.modello_tipo(u, 1)
+  m688.modello_rumore(u, 0)
+  m688.velocita_ora(u, 0.9143)
+  m688.modello_avanti_tutta(u, 0.9143)
+  m688.modello_integrita(u, 2)
+  m688.modello_4c(u, 1)
+  m688.navigazione(u, 0)
+  m688.collega(u, 1)
+  m688.collega(u, 0)
+  m688.flag_scena(u, 0)
+  m688.nuova_unita(u)
+  m688.dopo(u, 2, "KR3B_072d")
+  m688.dopo(u, 160, "KR3B_0732")
+  do return end
+end
+script.KR3B_072d = function(u)
+  ::KR3B_072d::
+  m688.modello_rumore(u, 40)
+  m688.salva_modello(u)
+  m688.devia_riferimenti(u)
+  do return end
+end
+script.KR3B_0732 = function(u)
+  ::KR3B_0732::
+  m688.messaggio_al_giocatore(u, 44)
+  m688.togli_unita(u)
+  do return end
+end
+script.KR3B_0736 = function(u)
+  ::KR3B_0736::
+  m688.seleziona_bersaglio(u)
+  m688.messaggio(u, 19)
+  m688.togli_unita(u)
+  do return end
+end
+script.KR3B_073b = function(u)
+  ::KR3B_073b::
+  m688.messaggio_al_giocatore(u, 41)
+  m688.seleziona_bersaglio(u)
+  m688.marca_contatti(u)
+  m688.dopo(u, 2, "KR3B_06d9")
+  do return end
+end
+script.KR3B_0745 = function(u, p)
+  ::KR3B_0745::
+  m688.seleziona_bersaglio(u)
+  m688.vai_a(u, par(p, 1, -189644.8), par(p, 2, 117342.72), 20, "KR3B_0754")
+  m688.telegrafo(u, 1)
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_0754 = function(u)
+  ::KR3B_0754::
+  m688.telegrafo(u, 0)
+  m688.comportamento(u, "KR3B_06c7")
+  m688.salva_modello(u)
+  m688.marca_contatti(u)
+  if m688.flag_scena_uguale(u, 1) then goto KR3B_0762 end
+  m688.messaggio_al_giocatore(u, 42)
+  ::KR3B_0762::
+  do return end
+end
+script.KR3B_0763 = function(u, p)
+  ::KR3B_0763::
+  m688.vai_a(u, par(p, 1, -189644.8), par(p, 2, 117342.72), 30, "KR3B_076e")
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_076e = function(u)
+  ::KR3B_076e::
+  m688.rateo_virata(u, 0)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 4)
+  do return end
+end
+script.KR3B_0775 = function(u, p)
+  ::KR3B_0775::
+  m688.telegrafo(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_077a = function(u, p)
+  ::KR3B_077a::
+  m688.quota(u, par(p, 1, 0), par(p, 2, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_0781 = function(u, p)
+  ::KR3B_0781::
+  m688.rateo_virata(u, par(p, 1, 0))
+  m688.rotta(u, nil)
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_0789 = function(u)
+  ::KR3B_0789::
+  m688.annulla_timer(u, "KR3B_07c8")
+  m688.dopo(u, 20, "KR3B_07c8")
+  do return end
+end
+script.KR3B_0792 = function(u)
+  ::KR3B_0792::
+  m688.annulla_timer(u, "KR3B_07cb")
+  m688.dopo(u, 20, "KR3B_07cb")
+  do return end
+end
+script.KR3B_079b = function(u)
+  ::KR3B_079b::
+  m688.annulla_timer(u, "KR3B_07ce")
+  m688.dopo(u, 20, "KR3B_07ce")
+  do return end
+end
+script.KR3B_07a4 = function(u)
+  ::KR3B_07a4::
+  m688.annulla_timer(u, "KR3B_07d1")
+  m688.dopo(u, 20, "KR3B_07d1")
+  do return end
+end
+script.KR3B_07ad = function(u)
+  ::KR3B_07ad::
+  m688.annulla_timer(u, "KR3B_07d4")
+  m688.dopo(u, 20, "KR3B_07d4")
+  do return end
+end
+script.KR3B_07b6 = function(u)
+  ::KR3B_07b6::
+  m688.annulla_timer(u, "KR3B_07d7")
+  m688.dopo(u, 20, "KR3B_07d7")
+  do return end
+end
+script.KR3B_07bf = function(u)
+  ::KR3B_07bf::
+  m688.annulla_timer(u, "KR3B_07da")
+  m688.dopo(u, 20, "KR3B_07da")
+  do return end
+end
+script.KR3B_07c8 = function(u)
+  ::KR3B_07c8::
+  m688.messaggio_al_giocatore(u, 10)
+  do return end
+end
+script.KR3B_07cb = function(u)
+  ::KR3B_07cb::
+  m688.messaggio_al_giocatore(u, 11)
+  do return end
+end
+script.KR3B_07ce = function(u)
+  ::KR3B_07ce::
+  m688.messaggio_al_giocatore(u, 12)
+  do return end
+end
+script.KR3B_07d1 = function(u)
+  ::KR3B_07d1::
+  m688.messaggio_al_giocatore(u, 13)
+  do return end
+end
+script.KR3B_07d4 = function(u)
+  ::KR3B_07d4::
+  m688.messaggio_al_giocatore(u, 14)
+  do return end
+end
+script.KR3B_07d7 = function(u)
+  ::KR3B_07d7::
+  m688.messaggio_al_giocatore(u, 15)
+  do return end
+end
+script.KR3B_07da = function(u)
+  ::KR3B_07da::
+  m688.messaggio_al_giocatore(u, 16)
+  do return end
+end
+script.KR3B_07dd = function(u)
+  ::KR3B_07dd::
+  m688.ferma_navigazione(u)
+  m688.rateo_virata(u, 0)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 6)
+  do return end
+end
+script.KR3B_07e5 = function(u, p)
+  ::KR3B_07e5::
+  m688.periscopio(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_07e9 = function(u)
+  ::KR3B_07e9::
+  m688.dopo(u, 60, "KR3B_07f3")
+  do return end
+end
+script.KR3B_07ef = function(u, p)
+  ::KR3B_07ef::
+  m688.antenna(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_07f3 = function(u)
+  ::KR3B_07f3::
+  m688.schiera_trainata(u, 1)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 17)
+  do return end
+end
+script.KR3B_07f9 = function(u)
+  ::KR3B_07f9::
+  m688.dopo(u, 40, "KR3B_07ff")
+  do return end
+end
+script.KR3B_07ff = function(u)
+  ::KR3B_07ff::
+  m688.schiera_trainata(u, 0)
+  m688.salva_modello(u)
+  m688.messaggio_al_giocatore(u, 18)
+  do return end
+end
+script.KR3B_0805 = function(u)
+  ::KR3B_0805::
+  m688.annulla_timer(u, "KR3B_07f3")
+  m688.annulla_timer(u, "KR3B_07ff")
+  m688.schiera_trainata(u, 0)
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_080f = function(u, p)
+  ::KR3B_080f::
+  m688.bersaglio(u, par(p, 1, 0))
+  m688.salva_modello(u)
+  do return end
+end
+script.KR3B_0814 = function(u, p)
+  ::KR3B_0814::
+  m688.posizione(u, par(p, 1, -189644.8), par(p, 2, 117342.72))
+  m688.salva_modello(u)
+  do return end
+end
+
+
+-- Costanti della missione: regole d'ingaggio, paranoia (2) e difficolta' (4)
+local ARMI = 2            -- 0 pace (armi trattenute), 1 crisi (solo dopo un lancio del giocatore), 2 guerra
+local COLPO = 9          -- soglia di ATTACK: riesce con probabilita' (18 - COLPO) / 18
+local CACCIA = 0.8          -- telegrafo delle navi in caccia
+local AVVICINAMENTO = 0.25  -- telegrafo dei sottomarini in avvicinamento
+-- per unita': parte, telegrafo di crociera, comportamento, rotta, quota d'evasione e i parametri del
+-- comportamento (paranoia 0-3, il minimo dell'allerta; salve, portata e distanza del pedinamento in nm)
+local UNITA = {
+  [2] = { parte = "urss", crociera = 0.438, comportamento = "R_nave", rotta = true, profonda = 0,
+      paranoia = 2, salve = 3, portata = 3, distanza = 2 },
+  [3] = { parte = "urss", crociera = 0.829, comportamento = "R_aereo", rotta = true, profonda = 0,
+      paranoia = 2, salve = 3, portata = 3, distanza = 2 },
+  [4] = { parte = "urss", crociera = 1, comportamento = "R_aereo", rotta = true, profonda = 0,
+      paranoia = 2, salve = 3, portata = 3, distanza = 2 },
+}
+
+-- Comportamenti dell'IA (API classica, docs/09 §6), con i parametri per unita' della tabella UNITA. Variabili di scena:
+-- 1 siluri lanciati dal giocatore (kit), 10 fase della missione, 11 allarme, 100 + id salve lanciate da un'unita',
+-- 200 + n regole scattate, 300 + i variabili dell'autore, 400 + id passaggi d'attesa di una nave dopo una salva,
+-- 450 + id passaggi di caccia di una nave (nel classico la prima salva dopo PRIMO_ATTACCO), 460 + id le sue salve
+-- dall'ultima ripresa, 470 + id i passaggi d'ascolto dopo il tetto delle salve, 480 + id lo stato del pedinamento
+-- ravvicinato (1 in corso, 2 scoperto col ping: non torna).
+-- Nell'Enhanced (docs/18 fase 3) le regole d'ingaggio sono quelle dell'IA (m688.armi_libere: crisi solo dopo un atto
+-- ostile fra le parti, zone amiche) e l'allerta sale con gli eventi, mai sotto la paranoia dell'editor; nel classico
+-- quelle funzioni danno nil e valgono le costanti della missione.
+local PING, AGGANCIO, VIGILA = { 0.05, 0.2, 0.4, 0.7 }, { 8, 5, 3, 2 }, { 60, 180, 90, 60 }
+local ATTESA_SALVA = 20   -- passaggi sul contatto fra due salve antisom di una nave (riposizionarsi, ricaricare)
+-- la caccia fino al PROBSUB: la prima salva di una nave dopo PRIMO_ATTACCO_S secondi sul contatto attuale (Enhanced,
+-- m688.tempo_contatto), nel classico dopo PRIMO_ATTACCO passaggi; dopo SALVE_MASSIME salve si torna ad ascoltare e si
+-- riattacca dopo RIPRESA passaggi sul contatto (STIME)
+local PRIMO_ATTACCO_S, PRIMO_ATTACCO = 780, 330
+local SALVE_MASSIME, RIPRESA = 6, 120
+local function armi_libere(u)
+  local a = m688.armi_libere(u)
+  if a ~= nil then return a end
+  return ARMI == 2 or (ARMI == 1 and m688.variabile_maggiore(u, 1, 0))
+end
+local function allerta(u)
+  local a = m688.allerta(u)
+  if a == nil then return UNITA[u].paranoia end
+  return math.max(a, UNITA[u].paranoia)
+end
+local function contatto_buono(u)
+  return m688.traccia_solida(u) or (allerta(u) >= 3 and m688.traccia_media(u))
+end
+-- nell'Enhanced si lancia su una posizione stimata (eco, vista, radar, TMA), non sul solo rilevamento: finche' non
+-- c'e', il motore fa da se' le gambe di TMA (fase 4) e lo script non le disturba con rotta e velocita'
+local function soluzione(u)
+  return m688.allerta(u) == nil or m688.soluzione(u)
+end
+-- siluri nei tubi o di riserva (Enhanced); nil nel classico o senza i dati di carico: si lancia come prima
+local function ha_armi(u)
+  local n = m688.armi_rimaste(u)
+  return n == nil or n > 0
+end
+-- i non combattenti (mercantili, pescherecci, navi spia: flag 40h) non si ingaggiano finche' le armi non sono libere
+-- (il peschereccio in pace); in guerra un convoglio nemico resta un bersaglio. Nel classico la funzione da' nil
+local function non_combattente(u) return m688.bersaglio_non_combattente(u) == true end
+local function caccia_finita(u)
+  local t = m688.tempo_contatto(u)
+  if t ~= nil then return t >= PRIMO_ATTACCO_S end
+  return m688.variabile_maggiore(u, 450 + u, PRIMO_ATTACCO)
+end
+local function riprendi_rotta(u)
+  local f = script["R_" .. u .. "_p1"]
+  if f ~= nil then f(u) end
+end
+
+-- nave da guerra: segue la sua rotta; su un contatto nemico subacqueo accosta, fa ping e, se le regole lo consentono,
+-- attacca con le armi antisom (ATTACK: riesce con probabilita' (18 - COLPO) / 18). Le navi nemiche no: la caccia
+-- antisom su una nave di superficie illuminava col ping i sottomarini vicini (il tiro fra navi e' del motore e dei missili)
+script.R_nave = function(u)
+  if m688.bersaglio_arma(u) then goto evita end
+  if not m688.bersaglio_nemico(u) or (non_combattente(u) and not armi_libere(u)) then goto ignora end
+  if m688.bersaglio_aereo(u) or m688.bersaglio_nave(u) then goto ignora end
+  if not contatto_buono(u) then goto ignora end
+  m688.variabile(u, 11, 1)
+  m688.ferma_navigazione(u)
+  m688.accosta_verso_bersaglio(u)
+  m688.telegrafo(u, CACCIA)
+  if m688.caso(u, PING[allerta(u) + 1]) then m688.impulso_sonar(u) end
+  -- una salva, poi ATTESA_SALVA passaggi prima della successiva; nell'Enhanced solo con una posizione stimata
+  m688.variabile_piu(u, 450 + u)   -- i passaggi di caccia
+  if m688.variabile_maggiore(u, 400 + u, 0) then
+    m688.variabile_meno(u, 400 + u)
+  elseif m688.variabile_maggiore(u, 470 + u, 0) then
+    m688.variabile_meno(u, 470 + u)   -- dopo il tetto delle salve: la caccia ricomincia
+  elseif armi_libere(u) and not m688.bersaglio_nave(u) and m688.bersaglio_vicino(u, UNITA[u].portata) and soluzione(u) and
+         caccia_finita(u) then
+    if not m688.variabile_minore(u, 460 + u, SALVE_MASSIME) then
+      -- tante salve senza affondarlo: si torna ad ascoltare, e si riattacca solo dopo RIPRESA passaggi sul contatto
+      m688.variabile(u, 460 + u, 0)
+      m688.variabile(u, 470 + u, RIPRESA)
+      goto ascolta
+    end
+    m688.messaggio(u, 19)
+    m688.attacca(u, UNITA[u].portata, COLPO)
+    m688.variabile(u, 400 + u, ATTESA_SALVA)
+    m688.variabile_piu(u, 460 + u)
+  end
+  m688.ingaggia(u, AGGANCIO[allerta(u) + 1], "R_nave", "R_persa")
+  m688.salva_modello(u)
+  do return end
+  ::ascolta::
+  if UNITA[u].rotta then m688.riprendi_navigazione(u) end
+  m688.telegrafo(u, UNITA[u].crociera)
+  m688.comportamento(u, "R_nave")
+  m688.salva_modello(u)
+  do return end
+  ::evita::
+  m688.ferma_navigazione(u)
+  m688.accosta_opposto(u)
+  m688.telegrafo(u, 1)
+  m688.comportamento(u, "R_nave")
+  m688.salva_modello(u)
+  m688.dopo(u, 90, "R_persa")
+  do return end
+  ::ignora::
+  m688.comportamento(u, "R_nave")
+  m688.salva_modello(u)
+end
+
+-- sottomarino: pattuglia lento; sul contatto nemico si avvicina (se insegue) e lancia entro la portata, al piu' `salve`
+-- volte; davanti a un siluro scappa e scende
+script.R_sottomarino = function(u)
+  if m688.bersaglio_arma(u) then goto evita end
+  if not m688.bersaglio_nemico(u) or (non_combattente(u) and not armi_libere(u)) then goto ignora end
+  if m688.bersaglio_aereo(u) then goto ignora end
+  if not contatto_buono(u) then goto ignora end
+  m688.variabile(u, 11, 1)
+  if armi_libere(u) and m688.bersaglio_vicino(u, UNITA[u].portata) and m688.variabile_minore(u, 100 + u, UNITA[u].salve) and
+     soluzione(u) and ha_armi(u) then goto lancia end
+  if allerta(u) >= 1 and soluzione(u) then
+    m688.ferma_navigazione(u)
+    m688.accosta_verso_bersaglio(u)
+    m688.telegrafo(u, AVVICINAMENTO)
+  end
+  m688.ingaggia(u, AGGANCIO[allerta(u) + 1], "R_sottomarino", "R_persa")
+  m688.salva_modello(u)
+  do return end
+  ::lancia::
+  m688.variabile_piu(u, 100 + u)
+  m688.ferma_navigazione(u)
+  m688.accosta_verso_bersaglio(u)
+  m688.telegrafo(u, AVVICINAMENTO)
+  m688.ingaggia(u, AGGANCIO[allerta(u) + 1], "R_sottomarino", "R_persa")
+  m688.salva_modello(u)
+  -- il gestore di lancio crea il siluro dal modello corrente: dopo non si salva piu' il lanciatore
+  script["R_siluro_" .. UNITA[u].parte](u)
+  do return end
+  ::evita::
+  m688.ferma_navigazione(u)
+  m688.accosta_opposto(u)
+  m688.telegrafo(u, 1)
+  m688.quota(u, UNITA[u].profonda, 1)
+  m688.comportamento(u, "R_sottomarino")
+  m688.salva_modello(u)
+  m688.dopo(u, 120, "R_persa")
+  do return end
+  ::ignora::
+  m688.comportamento(u, "R_sottomarino")
+  m688.salva_modello(u)
+end
+
+-- aereo antisom (nel classico; nell'Enhanced lo guida il controllore di docs/13 e vai_al_bersaglio diventa un datum)
+script.R_aereo = function(u)
+  if not m688.bersaglio_nemico(u) or (non_combattente(u) and not armi_libere(u)) then goto ignora end
+  if m688.bersaglio_nave(u) or m688.bersaglio_aereo(u) or m688.bersaglio_arma(u) then goto ignora end
+  if not contatto_buono(u) then goto ignora end
+  m688.variabile(u, 11, 1)
+  m688.vai_al_bersaglio(u, 60, "R_aereo_sopra")
+  m688.telegrafo(u, 1)
+  m688.comportamento(u, "R_aereo")
+  m688.salva_modello(u)
+  do return end
+  ::ignora::
+  m688.comportamento(u, "R_aereo")
+  m688.salva_modello(u)
+end
+
+script.R_aereo_sopra = function(u)
+  -- sopra il bersaglio: attacca solo se quello che osserva adesso e' ancora un sottomarino nemico (l'osservazione gira
+  -- su tutte le unita', anche amiche e navi)
+  if armi_libere(u) and m688.bersaglio_nemico(u) and not non_combattente(u) and not (m688.bersaglio_nave(u) or m688.bersaglio_aereo(u) or m688.bersaglio_arma(u)) and
+     contatto_buono(u) then
+    m688.messaggio(u, 19)
+    m688.attacca(u, 1, COLPO)
+  end
+  m688.telegrafo(u, UNITA[u].crociera)
+  riprendi_rotta(u)
+  m688.salva_modello(u)
+end
+
+-- bersaglio perso: la rotta di prima alla velocita' di crociera
+script.R_persa = function(u)
+  if UNITA[u].rotta then m688.riprendi_navigazione(u) end
+  m688.telegrafo(u, UNITA[u].crociera)
+  if UNITA[u].comportamento ~= "" then m688.comportamento(u, UNITA[u].comportamento) end
+  m688.salva_modello(u)
+end
+
+-- pedinamento ravvicinato (S24): sul giocatore, con una traccia buona, il motore lo tiene nel cono sordo a `distanza`
+-- miglia e 20 m sotto la quota che vede (m688.pedina_vicino), e ne segue le manovre con ritardo; se il giocatore pinga
+-- entro 3 km smette e non torna, e l'evasione dell'IA lo porta via. Solo il giocatore: lo script non sa l'id del bersaglio
+script.R_pedina_vicino = function(u)
+  if m688.variabile_uguale(u, 480 + u, 1) and m688.ping_giocatore_entro(u, 3000, 60) then
+    m688.pedina_vicino(u, -1)
+    m688.variabile(u, 480 + u, 2)
+  end
+  if m688.variabile_uguale(u, 480 + u, 2) or not m688.bersaglio_id(u, 0) or not contatto_buono(u) then goto ignora end
+  if m688.variabile_uguale(u, 480 + u, 0) and m688.pedina_vicino(u, 0, UNITA[u].distanza * 1852, -20) then
+    m688.variabile(u, 480 + u, 1)
+  end
+  m688.ingaggia(u, AGGANCIO[allerta(u) + 1], "R_pedina_vicino", "R_persa")
+  m688.salva_modello(u)
+  do return end
+  ::ignora::
+  m688.comportamento(u, "R_pedina_vicino")
+  m688.salva_modello(u)
+end
+
+-- pedinamento: sul contatto nemico si porta a `distanza` miglia e ci resta, alla stessa velocita', senza farsi notare;
+-- spara solo se le regole lo consentono, come il sottomarino; davanti a un siluro scappa
+script.R_pedina = function(u)
+  if m688.bersaglio_arma(u) then goto evita end
+  if not m688.bersaglio_nemico(u) or (non_combattente(u) and not armi_libere(u)) then goto ignora end
+  if m688.bersaglio_aereo(u) then goto ignora end
+  if not contatto_buono(u) then goto ignora end
+  if armi_libere(u) and m688.bersaglio_vicino(u, UNITA[u].portata) and m688.variabile_minore(u, 100 + u, UNITA[u].salve) and
+     soluzione(u) and ha_armi(u) then goto lancia end
+  m688.ferma_navigazione(u)
+  m688.accosta_verso_bersaglio(u)
+  if m688.bersaglio_vicino(u, UNITA[u].distanza) then
+    m688.uguaglia_velocita(u)
+  else
+    m688.telegrafo(u, AVVICINAMENTO * 1.6)
+  end
+  m688.ingaggia(u, AGGANCIO[allerta(u) + 1], "R_pedina", "R_persa")
+  m688.salva_modello(u)
+  do return end
+  ::lancia::
+  m688.variabile_piu(u, 100 + u)
+  m688.ferma_navigazione(u)
+  m688.accosta_verso_bersaglio(u)
+  m688.ingaggia(u, AGGANCIO[allerta(u) + 1], "R_pedina", "R_persa")
+  m688.salva_modello(u)
+  script["R_siluro_" .. UNITA[u].parte](u)
+  do return end
+  ::evita::
+  m688.ferma_navigazione(u)
+  m688.accosta_opposto(u)
+  m688.telegrafo(u, 1)
+  m688.comportamento(u, "R_pedina")
+  m688.salva_modello(u)
+  m688.dopo(u, 120, "R_persa")
+  do return end
+  ::ignora::
+  m688.comportamento(u, "R_pedina")
+  m688.salva_modello(u)
+end
+
+-- in allarme le navi fanno ping
+script.R_vigila = function(u)
+  if m688.variabile_uguale(u, 11, 1) and m688.caso(u, PING[allerta(u) + 1]) then m688.impulso_sonar(u) end
+  m688.dopo(u, VIGILA[allerta(u) + 1], "R_vigila")
+end
+
+-- fine della rotta di transito: l'unita' esce dal teatro
+script.R_esce = function(u)
+  m688.togli_unita(u)
+end
+
+-- lanci dei sottomarini dell'IA: i gestori di lancio dei kit senza il conto del giocatore
+script.R_siluro_usa = function(u)
+  m688.rumore_transitorio(u)
+  m688.memorizza_bersaglio(u)
+  m688.modello_azzera(u)
+  m688.modello_classe(u, "mk48")
+  m688.modello_flag(u, 41)
+  m688.lancia(u, "KU1A_04a7", "KU1A_0484")
+  script.KU1A_0441(u)
+  m688.dopo(u, 170, "KU1A_043e")
+  m688.dopo(u, 190, "KU1A_0467")
+  m688.dopo(u, 280, "KU1A_04a7")
+  do return end
+end
+script.R_siluro_urss = function(u)
+  m688.rumore_transitorio(u)
+  m688.memorizza_bersaglio(u)
+  m688.modello_azzera(u)
+  m688.modello_classe(u, "type53")
+  m688.modello_flag(u, 49)
+  m688.lancia(u, "KR3B_06fc", "KR3B_06d9")
+  m688.modello_tipo(u, 1)
+  m688.modello_rateo_quota(u, 10.287)
+  m688.modello_virata(u, 9)
+  m688.modello_accelerazione(u, 1.0286)
+  m688.modello_avanti_tutta(u, 45.7143)
+  m688.modello_rumore(u, 18)
+  m688.modello_sonar(u, 15)
+  m688.modello_integrita(u, 20)
+  m688.modello_difesa(u, 100)
+  m688.modello_quota_max(u, 548.64)
+  m688.modello_4c(u, 1)
+  m688.telegrafo(u, 1)
+  m688.navigazione(u, 1)
+  m688.collega(u, 1)
+  m688.flag_scena(u, 0)
+  m688.nuova_unita(u)
+  m688.dopo(u, 150, "KR3B_0693")
+  m688.dopo(u, 170, "KR3B_06bc")
+  m688.dopo(u, 240, "KR3B_06fc")
+  do return end
+end
+
+-- rotte: all'arrivo a ogni punto il successivo (le pattuglie ricominciano, i transiti escono)
+script.R_2_p1 = function(u)
+  m688.vai_a(u, -95681.1, 77985.5, 30, "R_2_p2")
+  m688.salva_modello(u)
+end
+script.R_2_p2 = function(u)
+  m688.vai_a(u, -86681.1, 68985.5, 30, "R_2_p3")
+  m688.salva_modello(u)
+end
+script.R_2_p3 = function(u)
+  m688.vai_a(u, -95681.1, 59985.5, 30, "R_2_p4")
+  m688.salva_modello(u)
+end
+script.R_2_p4 = function(u)
+  m688.vai_a(u, -104681.1, 68985.5, 30, "R_2_p1")
+  m688.salva_modello(u)
+end
+script.R_3_p1 = function(u)
+  m688.vai_a(u, -80124.8, 84541.8, 30, "R_3_p2")
+  m688.salva_modello(u)
+end
+script.R_3_p2 = function(u)
+  m688.vai_a(u, -80124.8, 53429.1, 30, "R_3_p3")
+  m688.salva_modello(u)
+end
+script.R_3_p3 = function(u)
+  m688.vai_a(u, -111237.5, 53429.1, 30, "R_3_p4")
+  m688.salva_modello(u)
+end
+script.R_3_p4 = function(u)
+  m688.vai_a(u, -111237.5, 84541.8, 30, "R_3_p1")
+  m688.salva_modello(u)
+end
+script.R_4_p1 = function(u)
+  m688.vai_a(u, -95681.1, 76985.5, 30, "R_4_p2")
+  m688.salva_modello(u)
+end
+script.R_4_p2 = function(u)
+  m688.vai_a(u, -87681.1, 68985.5, 30, "R_4_p3")
+  m688.salva_modello(u)
+end
+script.R_4_p3 = function(u)
+  m688.vai_a(u, -95681.1, 60985.5, 30, "R_4_p4")
+  m688.salva_modello(u)
+end
+script.R_4_p4 = function(u)
+  m688.vai_a(u, -103681.1, 68985.5, 30, "R_4_p1")
+  m688.salva_modello(u)
+end
+
+-- chiusura: codice 120 a missione conclusa, 121 a tempo scaduto (il giudizio lo danno gli obiettivi)
+script.R_chiusura = function(u)
+  m688.dopo(u, 20, "R_chiusura")
+  do return end
+  ::fine::
+  m688.messaggio(u, 120)
+end
+script.R_tempo = function(u)
+  m688.messaggio(u, 34)
+  m688.messaggio(u, 121)
+end
+
+-- regole «quando... allora...» dell'editor: un controllo ogni 10 s sull'unita' della regola
+local ZONE = {
+  ["plp_0521"] = { -95681.1, 68985.5, 18520 },
+}
+-- allarme
+script.R_regola_0 = function(u)
+  if m688.variabile_uguale(u, 200, 0) and m688.variabile_uguale(u, 11, 1) then
+    m688.variabile(u, 200, 1)
+    if m688.unita_esiste(u, 4) then
+      m688.seleziona(u, 4)
+      m688.posizione(u, -86681.1, 70985.5)
+      m688.rotta_ora(u, 0)
+      m688.velocita_ora(u, 110)
+      script.R_4_p1(u)
+    end
+    m688.seleziona(u, u)
+    do return end
+  end
+  m688.dopo(u, 10, "R_regola_0")
+end
+
+return missione

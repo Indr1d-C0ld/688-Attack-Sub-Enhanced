@@ -1,0 +1,293 @@
+# Testi dell'enciclopedia: aerei ed elicotteri antisommergibile (oltre a P-3C e Ka-27, già in campioni.yaml). Stesso
+# formato e stesse regole di campioni.yaml: parafrasi dai dossier di docs/ricerca (nessun testo copiato), fonti per
+# paragrafo e sigla. Campi: it, en (storia e impiego 1985-1990); uso_it, uso_en (che cosa significa per il battello
+# del giocatore); fonti (elenco).
+
+aereo.il38:
+  it: >-
+    Il pattugliatore antisommergibile a lungo raggio dell'aviazione navale sovietica, col sistema «Berkut-38» e il
+    radar di ricerca «Wet Eye» sotto la fusoliera. Il requisito chiedeva 2200 km di raggio con almeno 3 ore in zona;
+    fra il 1969 e il 1981 volò più di 4000 sortite, di circa 6 ore in media, e scoprì 172 sottomarini stranieri. Il
+    carico tipico è di 144 boe omnidirezionali RGB-1, 10 boe direzionali RGB-2, 10 bombe e 2 siluri; il magnetometro
+    si usa a 100 m di quota di giorno e a 200 m di notte, pilotando a mano. Non ascoltava da lontano come il P-3C:
+    posava una barriera di RGB-1 e, quando una boa superava la soglia a 1-4 km dal battello, il calcolatore ne
+    ricavava rotta e velocità e faceva posare una barriera di precisione di RGB-2. Un centro di valutazione sovietico
+    lo giudicava da 8 a 10 volte meno adatto alla ricerca del P-3C; i reggimenti stavano a Severomorsk al Nord e a
+    Nikolaevka nel Pacifico.
+  en: >-
+    The long-range anti-submarine patrol aircraft of Soviet naval aviation, with the «Berkut-38» system and the
+    «Wet Eye» search radar under the fuselage. The requirement called for a 2200 km radius with at least 3 hours on
+    station; between 1969 and 1981 it flew more than 4000 sorties, about 6 hours each on average, and detected 172
+    foreign submarines. The typical load is 144 RGB-1 omnidirectional buoys, 10 RGB-2 directional buoys, 10 bombs and
+    2 torpedoes; the magnetometer is used at 100 m altitude by day and 200 m by night, hand-flown. It did not listen
+    at long range like the P-3C: it laid a barrier of RGB-1s and, when one buoy crossed its threshold 1-4 km from the
+    boat, the computer derived course and speed and had a precision barrier of RGB-2s laid. A Soviet evaluation
+    centre rated it 8 to 10 times less suited to search than the P-3C; its regiments were at Severomorsk in the North
+    and Nikolaevka in the Pacific.
+  uso_it: >-
+    Si annuncia col radar Berkut, acceso a intervalli brevi ma frequenti prima della posa e per mirare; una serie di
+    tonfi a intervalli regolari vuol dire che sta stendendo una barriera. Le sue boe sentono solo a pochi km: lento e
+    silenzioso, lontano dalla barriera, il battello passa spesso inosservato, e andare profondi restringe la fascia
+    in cui il magnetometro lo scopre. Fino a mare 5 boe e MAD lavorano bene; da mare 6 rendono meno.
+  uso_en: >-
+    It announces itself with the Berkut radar, switched on at short but frequent intervals before laying buoys and
+    to aim; a series of splashes at regular intervals means it is laying a barrier. Its buoys hear only a few km:
+    slow and quiet, away from the barrier, the boat often slips past, and going deep narrows the strip in which the
+    magnetometer can find it. Up to sea state 5 buoys and MAD work well; from sea state 6 they perform worse.
+  fonti: ['dossier 17 §3.4 [ART-Il38] [RW-Il38]', 'dossier 17 §1 (carico Il-38)', 'dossier 17 §6.3 e §6.6',
+    'dossier 17 §8.2-8.3', 'dossier 11 §1.4 [MPWETEYE]', 'dossier 21 §7.1',
+    'data/motore/asw_aereo.toml [mezzi.il38]']
+
+aereo.tu142:
+  it: >-
+    Il «Bear-F» è la versione antisommergibile del grande quadrimotore Tupolev a eliche controrotanti: Tu-142M e
+    Tu-142MK sono lo stesso aereo, col sistema «Korshun-K» accettato nel 1980. Vola in crociera a circa 735 km/h, ha
+    un'autonomia stimata di 14-15 ore e dal 1981 raggiungeva zone fino a 4200 km dalla base: Kipelovo per l'Atlantico
+    del nord e il Mar di Norvegia, Kamennyj Ruchej per il Pacifico. Al posto delle RGB-1 del Tu-142 base porta boe
+    infrasonore RGB-75, passive RGB-15, direzionali RGB-25 e attive RGB-55A, cariche esplosive per la ricerca a eco e
+    3 siluri. Il magnetometro in cima alla deriva era così delicato che a ogni corsa si spegnevano generatori,
+    autopilota, lampeggiante e torretta di coda. Nel 1983 bastavano in media 3 sortite per una scoperta, ma dopo
+    un'esercitazione del 1985 con fino al 50% di falsi allarmi una decisione del 1987 ammise che parte delle boe non
+    funzionava con mare 3-5 né nel Barents.
+  en: >-
+    The «Bear-F» is the anti-submarine version of Tupolev's large four-engined aircraft with contra-rotating
+    propellers: the Tu-142M and Tu-142MK are the same aircraft, with the «Korshun-K» system accepted in 1980. It
+    cruises at about 735 km/h, has an estimated endurance of 14-15 hours and from 1981 reached areas up to 4200 km
+    from base: Kipelovo for the North Atlantic and the Norwegian Sea, Kamennyj Ruchej for the Pacific. Instead of the
+    basic Tu-142's RGB-1s it carries RGB-75 infrasonic, RGB-15 passive, RGB-25 directional and RGB-55A active buoys,
+    explosive charges for echo search and 3 torpedoes. The magnetometer atop the fin was so sensitive that every run
+    meant shutting down generators, autopilot, beacon light and tail turret. In 1983 it took 3 sorties on average for
+    one detection, but after a 1985 exercise with up to 50% false alarms a 1987 decision admitted that some of the
+    buoys did not work in sea states 3-5 or in the Barents Sea.
+  uso_it: >-
+    Il suo radar cambia frequenza a ogni impulso e all'ESM è difficile da riconoscere; in compenso sente il radar del
+    battello, quindi il tuo va tenuto spento. Esplosioni a 25, 150 o 400 m, ripetute 2-3 volte nello stesso punto a
+    3-4 minuti l'una dall'altra, vogliono dire che cerca l'eco del tuo scafo: cambia quota e allontanati. Le RGB-75
+    sentono un battello a 12 nodi a 15-20 km, uno lento a meno di 1 km, e con mare 3-5 rendono poco.
+  uso_en: >-
+    Its radar changes frequency with every pulse and is hard to recognise on ESM; in return it hears the boat's
+    radar, so keep yours switched off. Explosions at 25, 150 or 400 m, repeated 2-3 times at the same spot 3-4
+    minutes apart, mean it is looking for your hull's echo: change depth and move away. The RGB-75s hear a boat at
+    12 knots at 15-20 km, a slow one at under 1 km, and in sea states 3-5 they perform poorly.
+  fonti: ['dossier 17 §3.5 [ART-Tu142] [RW-Tu142]', 'dossier 17 §1 (Tu-142M/MK)', 'dossier 17 §4.2 e §6.6',
+    'dossier 17 §8.2-8.3', 'dossier 11 §1.4 [RWTU142]', 'data/motore/asw_aereo.toml [mezzi.tu142]']
+
+aereo.s3a:
+  it: >-
+    Il Viking è il bireattore antisommergibile delle portaerei americane: ognuna ne imbarca uno squadrone di 8-10,
+    incaricato delle zone media ed esterna attorno al gruppo, mentre gli elicotteri tengono quella interna. L'S-3A
+    porta il radar APS-116, un FLIR, l'ESM ALR-47, il magnetometro ASQ-81 su un'asta retrattile, 60 scivoli per le
+    boe e 4 siluri Mk 46, oltre a mine e alla bomba nucleare B57. Transita in alta quota a circa 345 nodi e resta in
+    zona circa 5 ore senza rifornimento, con quattro uomini d'equipaggio. Nella pratica una sortita durava un ciclo
+    del ponte, circa 2 ore: il radar faceva uno o due giri e poi taceva, e un campo di 12 DIFAR veniva posato
+    alternando le quote di 90 e 200 piedi, sopra e sotto lo strato. Nel 1989 è il Viking delle portaerei del
+    Pacifico; quelle dell'Atlantico passano all'S-3B.
+  en: >-
+    The Viking is the twin-jet anti-submarine aircraft of American carriers: each embarks a squadron of 8-10,
+    tasked with the middle and outer zones around the group, while helicopters hold the inner one. The S-3A carries
+    the APS-116 radar, a FLIR, the ALR-47 ESM, the ASQ-81 magnetometer on a retractable boom, 60 sonobuoy chutes and
+    4 Mk 46 torpedoes, as well as mines and the B57 nuclear bomb. It transits at high altitude at about 345 knots and
+    stays on station about 5 hours without refuelling, with a crew of four. In practice a sortie lasted one deck
+    cycle, about 2 hours: the radar made one or two sweeps and then went silent, and a field of 12 DIFARs was laid at
+    alternating depths of 90 and 200 feet, above and below the layer. In 1989 it is the Viking of Pacific carriers;
+    Atlantic carriers are moving to the S-3B.
+  uso_it: >-
+    Arriva veloce e da lontano su un contatto già segnalato: i segni sono i tonfi di una serie di boe e, all'ESM, un
+    radar che fa un paio di giri e tace; un ronzio quasi continuo vuol dire il modo periscopio, e allora il
+    periscopio va abbassato. Il suo campo ascolta sopra e sotto lo strato, quindi cambiare quota non basta: conviene
+    allontanarsi piano. Non ha eliche e il sonar quasi non lo sente; dalla portaerei vola male con mare 6 e non vola
+    con mare 7 o col temporale.
+  uso_en: >-
+    It arrives fast and from far away on a contact already reported: the signs are the splashes of a string of buoys
+    and, on ESM, a radar that makes a couple of sweeps and goes silent; an almost continuous hum means periscope
+    mode, and then the periscope must come down. Its field listens above and below the layer, so changing depth is
+    not enough: better to move away slowly. It has no propellers and sonar can barely hear it; from the carrier it
+    flies poorly in sea state 6 and not at all in sea state 7 or in thunderstorms.
+  fonti: ['dossier 17 §2.5 [WPS3] [TWZS3] [USNIS3]', 'dossier 17 §1 (S-3 nel 1989) [FASS3]', 'dossier 17 §5.3',
+    'dossier 17 §8.2-8.3', 'dossier 21 §7.1', 'data/motore/asw_aereo.toml [mezzi.s3a]']
+
+aereo.s3b:
+  it: >-
+    La versione aggiornata del Viking, operativa dal luglio 1988 con lo squadrone VS-30: le S-3A della costa est
+    vengono convertite fra il 1987 e il 1991, quelle della costa ovest solo nel 1992-94. Cambiano i sensori: radar
+    ISAR APS-137, ESM ALR-76, ricevitore di boe ARR-78 e processore AN/UYS-1, e in più il missile Harpoon. L'APS-137
+    ha un modo periscopio in cui l'antenna fa 300 giri al minuto con 2000 impulsi al secondo, un fascio di 2,4° e una
+    risoluzione di un piede. Restano quelli dell'S-3A la cellula, i 60 scivoli per le boe, i 4 Mk 46 e le circa 5 ore
+    in zona: nel 1989 è il Viking delle portaerei atlantiche.
+  en: >-
+    The upgraded Viking, operational from July 1988 with squadron VS-30: East Coast S-3As are converted between 1987
+    and 1991, West Coast ones only in 1992-94. The sensors change: APS-137 ISAR radar, ALR-76 ESM, ARR-78 sonobuoy
+    receiver and AN/UYS-1 processor, plus the Harpoon missile. The APS-137 has a periscope mode in which the antenna
+    turns 300 times a minute with 2000 pulses per second, a 2.4° beam and one-foot resolution. The airframe, the 60
+    sonobuoy chutes, the 4 Mk 46s and the roughly 5 hours on station stay as on the S-3A: in 1989 it is the Viking of
+    Atlantic carriers.
+  uso_it: >-
+    Il suo modo periscopio si sente all'ESM come un ronzio quasi continuo, modulato a 5 volte al secondo: è la firma
+    del cacciatore di periscopi, e chi resta alzato viene visto. Nel gioco il suo equipaggio è più esperto di quello
+    dell'S-3A, con meno errori nella posa delle boe; per il resto e per i limiti del mare vale quanto detto per
+    l'S-3A.
+  uso_en: >-
+    Its periscope mode sounds on ESM like an almost continuous hum, modulated 5 times a second: it is the signature
+    of the periscope hunter, and whoever stays raised is seen. In the game its crew is more experienced than the
+    S-3A's, with fewer errors in laying buoys; for the rest, and for sea limits, the S-3A entry applies.
+  fonti: ['dossier 17 §2.5 [FASS3] [TWZS3]', 'dossier 17 §1 (S-3B dal 1988) [FASS3] [WPS3]', 'dossier 17 §8.2',
+    'dossier 11 §1.4 [APL97]', 'data/motore/asw_aereo.toml [mezzi.s3b]']
+
+aereo.be12:
+  it: >-
+    L'anfibio Beriev ad ala di gabbiano è il cacciatore della zona vicina sovietica, dal Barents all'Okhotsk e al
+    Mediterraneo: crociera a 450 km/h, 500 km di raggio tattico con 3 ore in zona e fino a 80 boe. Cercava molto col
+    magnetometro, pilotando a mano a 70-100 m di quota e 300-320 km/h: fra il 1968 e il 1982 fino al 30% delle
+    scoperte venne dal MAD, anche se quasi senza classificazione. Le boe si posavano da 500 m: un campo a scacchiera
+    di 60-70 boe copriva 5000 km² con probabilità 0,5-0,6, mentre il solo MAD su 2500 km² dava appena 0,01-0,02.
+    Preso un contatto, lo inseguiva con barriere davanti alla rotta e sganciava il siluro direttamente sulla boa che
+    reagiva, perché le boe omnidirezionali davano posizioni troppo imprecise. Il Be-12N del 1976 aggiunse la boa
+    direzionale RGB-2 e un data link con navi ed elicotteri; volava sempre in coppia, e nel 1989 i Be-12 di tutte le
+    flotte fecero 29 scoperte.
+  en: >-
+    Beriev's gull-winged amphibian is the hunter of the Soviet near zone, from the Barents Sea to the Okhotsk and
+    the Mediterranean: 450 km/h cruise, a 500 km tactical radius with 3 hours on station and up to 80 buoys. It
+    searched a lot with the magnetometer, hand-flown at 70-100 m altitude and 300-320 km/h: between 1968 and 1982 up
+    to 30% of detections came from MAD, though with almost no classification. Buoys were laid from 500 m: a
+    checkerboard field of 60-70 buoys covered 5000 km² with a probability of 0.5-0.6, while MAD alone over 2500 km²
+    gave just 0.01-0.02. Once it had a contact it chased it with barriers ahead of its course and dropped the torpedo
+    right on the reacting buoy, because omnidirectional buoys gave positions that were too inaccurate. The 1976
+    Be-12N added the RGB-2 directional buoy and a data link with ships and helicopters; it always flew in pairs, and
+    in 1989 the Be-12s of all fleets made 29 detections.
+  uso_it: >-
+    Arriva in coppia e cerca basso col magnetometro: in profondità la fascia in cui ti scopre si restringe. Le sue
+    boe ascoltano solo a pochi km e non servono più oltre mare 3, quindi col mare mosso è quasi sordo; dopo un
+    contatto posa barriere davanti alla tua rotta, perciò conviene cambiarla di molto. Si posa in mare solo con mare
+    calmo, fino a 3.
+  uso_en: >-
+    It comes in pairs and searches low with the magnetometer: at depth the strip in which it finds you narrows. Its
+    buoys listen only a few km out and are useless beyond sea state 3, so in rough seas it is nearly deaf; after a
+    contact it lays barriers ahead of your course, so change it sharply. It alights on the water only in calm seas,
+    up to sea state 3.
+  fonti: ['dossier 17 §3.3 [ART-Be12] [ART-Be12N]', 'dossier 17 §4.2', 'dossier 17 §5.6', 'dossier 17 §6.3 e §6.6',
+    'dossier 21 §7.1', 'data/motore/asw_aereo.toml [mezzi.be12]']
+
+elicottero.sh60b:
+  it: >-
+    L'elicottero LAMPS III delle fregate Perry, dei cacciatorpediniere Spruance e Kidd e degli incrociatori
+    Ticonderoga, uno o due per nave, fa da «sensore remoto»: la nave scopre il sottomarino lontano, nella seconda o
+    terza zona di convergenza, e l'elicottero vola sul rilevamento per localizzarlo, classificarlo e, se ordinato,
+    attaccarlo. Il data link Hawk Link manda alla nave in tempo reale il suono delle boe e i dati di radar ed ESM, e
+    l'analisi acustica si fa a bordo della nave. Ha 25 tubi per le boe, il radar APS-124, l'ESM ALQ-142, il
+    magnetometro ASQ-81 trainato a circa 180 piedi e 2 siluri Mk 46 Mod 5; nel 1989 non ha FLIR. Resta in zona circa
+    3 ore a 50 miglia dalla nave e un'ora a 150; davanti a un gruppo portaerei deve bonificare una fascia di circa 30
+    miglia. Col mare alto le onde zittiscono le boe e interrompono il collegamento radio con la nave, e spesso
+    l'elicottero viene distolto per la sorveglianza di superficie.
+  en: >-
+    The LAMPS III helicopter of Perry frigates, Spruance and Kidd destroyers and Ticonderoga cruisers, one or two
+    per ship, acts as a «remote sensor»: the ship detects the submarine far away, in the second or third convergence
+    zone, and the helicopter flies down the bearing to localise it, classify it and, if ordered, attack it. The Hawk
+    Link data link sends the ship buoy audio and radar and ESM data in real time, and acoustic analysis is done
+    aboard the ship. It has 25 sonobuoy tubes, the APS-124 radar, the ALQ-142 ESM, the ASQ-81 magnetometer towed at
+    about 180 feet and 2 Mk 46 Mod 5 torpedoes; in 1989 it has no FLIR. It stays on station about 3 hours 50 miles
+    from the ship and one hour at 150; ahead of a carrier group it must sanitise a band of about 30 miles. In high
+    seas the waves silence the buoys and cut the radio link to the ship, and the helicopter is often diverted to
+    surface surveillance.
+  uso_it: >-
+    Se una fregata ti ha sentito da lontano, l'elicottero arriva in fretta sul rilevamento, posa boe DIFAR e DICASS
+    attorno al punto, poi passa basso col magnetometro e lancia un Mk 46. Non ha sonar a immersione: all'ESM si
+    riconosce dal radar in banda X fino a 120 giri al minuto. Vola normalmente fino a mare 4, a mare 5 è al limite
+    dell'appontaggio, da mare 7 o col temporale resta sul ponte.
+  uso_en: >-
+    If a frigate has heard you from afar, the helicopter hurries down the bearing, lays DIFAR and DICASS buoys
+    around the spot, then passes low with the magnetometer and drops a Mk 46. It has no dipping sonar: on ESM it is
+    recognised by its X-band radar at up to 120 rpm. It flies normally up to sea state 4, at sea state 5 it is at
+    the landing limit, and from sea state 7 or in thunderstorms it stays on deck.
+  fonti: ['dossier 17 §2.1 [NAVSRC] [FASSH60] [GAOALFS] [SBIRMAD] [NHHCSH60B] [WPSH60]', 'dossier 17 §5.3 [SIKS70B]',
+    'dossier 17 §8.2', 'dossier 11 §1.4 [ARMSAPS124]', 'dossier 21 §7.1', 'data/motore/asw_aereo.toml [mezzi.sh60b]']
+
+elicottero.sh60f:
+  it: >-
+    La versione dell'SH-60 per la zona interna della portaerei: monta il sonar a immersione AQS-13F, col cavo da
+    1575 piedi, l'impulso più lungo, il verricello più rapido e una potenza maggiore dell'AQS-13B del Sea King. Cala
+    il sonar in hover a circa 60 piedi, ha 6 tubi per le boe a caduta e 4 uomini d'equipaggio; non ha radar né
+    magnetometro, e lancia siluri Mk 46. Entrò in linea il 22 giugno 1989, ma solo presso il reparto addestrativo
+    HS-10: come elicottero operativo, nel 1989 è un anacronismo.
+  en: >-
+    The SH-60 version for the carrier's inner zone: it mounts the AQS-13F dipping sonar, with a 1575-foot cable, a
+    longer pulse, a faster winch and more power than the Sea King's AQS-13B. It dips the sonar from a hover at about
+    60 feet, has 6 gravity sonobuoy tubes and a crew of 4; it has neither radar nor magnetometer, and drops Mk 46
+    torpedoes. It entered service on 22 June 1989, but only with the HS-10 training squadron: as an operational
+    helicopter it is an anachronism in 1989.
+  uso_it: >-
+    Compare solo nelle missioni dal 1990 in poi; prima la portaerei usa l'SH-3H. Caccia come il Sea King, ma cala e
+    recupera il sonar più in fretta e porta il trasduttore fino a circa 440 m (STIMA): nascondersi sotto lo strato
+    serve meno. Con mare 4-5 lavora male, con onde oltre 10 piedi o da mare 6 non cala il sonar.
+  uso_en: >-
+    It appears only in missions from 1990 onwards; before that the carrier uses the SH-3H. It hunts like the Sea
+    King, but lowers and recovers its sonar faster and takes the transducer down to about 440 m (estimate): hiding
+    below the layer helps less. In sea states 4-5 it works poorly; with waves over 10 feet or from sea state 6 it
+    cannot dip.
+  fonti: ['dossier 17 §2.3 [WPAQS13] [SIKS70B]', 'dossier 17 §1 (SH-60F) [WPSH60]', 'dossier 21 §7.1',
+    'data/motore/asw_aereo.toml [mezzi.sh60f]']
+
+elicottero.sh3h:
+  it: >-
+    Il Sea King della Sikorsky è nel 1989 l'elicottero antisommergibile delle portaerei americane: uno squadrone di 6
+    per nave, con 2 macchine sempre nella zona interna, a 10-15 miglia davanti al gruppo e sui fianchi. Il sensore
+    principale è il sonar a immersione AQS-13B, attivo su tre frequenze attorno ai 10 kHz con almeno 211 dB in alta
+    potenza, ma anche passivo e telefono subacqueo; ha inoltre il magnetometro, 12 scivoli per le boe e 2 siluri Mk 46
+    o la bomba nucleare B57. Il profilo ufficiale prevede un hover a 40 piedi con 15 minuti d'attivo, poi un salto di
+    10 miglia e una nuova calata, sei volte, in poco meno di 3 ore e mezza di volo. Rende al meglio entro 3000 iarde
+    dal sottomarino, e in inseguimento il ciclo scende a 4-6 minuti. A 40 °C non riesce a tenere l'hover e non cala
+    il sonar, e anche con temperature normali il peso lo limita a 3 calate invece di 6.
+  en: >-
+    In 1989 Sikorsky's Sea King is the anti-submarine helicopter of American carriers: a squadron of 6 per ship,
+    with 2 machines always in the inner zone, 10-15 miles ahead of the group and on its flanks. Its main sensor is
+    the AQS-13B dipping sonar, active on three frequencies around 10 kHz with at least 211 dB at high power, but also
+    passive and underwater telephone; it also has a magnetometer, 12 sonobuoy chutes and 2 Mk 46 torpedoes or the B57
+    nuclear bomb. The official profile calls for a hover at 40 feet with 15 minutes of active pinging, then a 10-mile
+    jump and another dip, six times, in just under three and a half hours of flight. It performs best within 3000
+    yards of the submarine, and when tracking the cycle drops to 4-6 minutes. At 40 °C it cannot hold the hover and
+    cannot dip, and even at normal temperatures weight limits it to 3 dips instead of 6.
+  uso_it: >-
+    Il suo ciclo si riconosce: il tonfo del trasduttore, 1-3 minuti di silenzio, un ping ogni 6-10 secondi, poi di
+    nuovo silenzio e un altro tonfo 5-10 miglia più in là. Il ping si sente a circa 27 km mentre l'eco ti scopre solo
+    a 3-4 km: c'è il tempo di prendere il rilevamento e di allontanarsi durante il salto. Con mare 4-5 lavora male,
+    con onde oltre 10 piedi o da mare 6 non cala il sonar.
+  uso_en: >-
+    Its cycle is recognisable: the transducer's splash, 1-3 minutes of silence, a ping every 6-10 seconds, then
+    silence again and another splash 5-10 miles further on. The ping is heard at about 27 km while the echo finds you
+    only at 3-4 km: there is time to take the bearing and slip away during the jump. In sea states 4-5 it works
+    poorly; with waves over 10 feet or from sea state 6 it cannot dip.
+  fonti: ['dossier 17 §2.2 [RUDZIS] [MILAQS13B]', 'dossier 17 §5.3', 'dossier 17 §6.4 e §6.8', 'dossier 17 §8.3',
+    'dossier 21 §7.1', 'data/motore/asw_aereo.toml [mezzi.sh3h]']
+
+elicottero.ka25:
+  it: >-
+    L'elicottero antisommergibile imbarcato che precede il Ka-27, coi rotori coassiali della Kamov e il sistema
+    «Baikal»; nel 1985-1991 resta sui Kresta II, sui Kara, sulle Moskva e Leningrad e in parte sulle Kiev e Minsk, con
+    un raggio di 200 km e circa 2 ore di volo. Il sonar a immersione VGS-2 «Oka» scende con un cavo di 125 m: secondo
+    la CIA trovava un sottomarino a più di 5,5 km in attivo ma solo fino a 2,3 km in ascolto, ed era giudicato
+    inservibile di notte e col maltempo. Il radar Initsiativa-2K, dal nome NATO incerto, vede le navi grandi fino a
+    220 km e un periscopio a 10-20 km. Porta o 36 boe passive RGB-NM o l'arma (il siluro AT-1M, più tardi l'APR-2,
+    oppure bombe di profondità), oltre a 3 boe radar-faro e 4 marcatori. Per questo si lavorava in coppia:
+    l'elicottero di ricerca segnava il punto con una boa radar-faro e quello d'attacco lo raggiungeva col radar.
+  en: >-
+    The shipborne anti-submarine helicopter that preceded the Ka-27, with Kamov's coaxial rotors and the «Baikal»
+    system; in 1985-1991 it remains on Kresta II and Kara cruisers, the Moskva and Leningrad, and partly on the Kiev
+    and Minsk, with a 200 km radius and about 2 hours of flight. The VGS-2 «Oka» dipping sonar is lowered on a 125 m
+    cable: according to the CIA it found a submarine at over 5.5 km active but only up to 2.3 km listening, and it
+    was judged useless at night and in bad weather. The Initsiativa-2K radar, whose NATO name is uncertain, sees
+    large ships out to 220 km and a periscope at 10-20 km. It carries either 36 RGB-NM passive buoys or the weapon
+    (the AT-1M torpedo, later the APR-2, or depth bombs), plus 3 radar-beacon buoys and 4 markers. Hence they worked
+    in pairs: the search helicopter marked the spot with a radar-beacon buoy and the attack helicopter homed on it by
+    radar.
+  uso_it: >-
+    Arriva in coppia: uno cerca e marca il punto, l'altro viene a sganciare, quindi il primo che ti trova non è quello
+    che ti colpisce. Il suo ciclo di calata è più lento di quello del Ka-27 e di notte non cala il sonar; il radar è
+    acceso in volo e quasi spento in hover, e scopre un periscopio alzato a 10-20 km. Vola normalmente fino a mare 4,
+    a mare 5 con fatica, da mare 6 o col temporale resta sul ponte.
+  uso_en: >-
+    It comes in pairs: one searches and marks the spot, the other comes to drop, so the first to find you is not the
+    one that strikes. Its dipping cycle is slower than the Ka-27's and it does not dip at night; its radar is on in
+    flight and almost off in the hover, and spots a raised periscope at 10-20 km. It flies normally up to sea state
+    4, with difficulty at sea state 5, and from sea state 6 or in thunderstorms it stays on deck.
+  fonti: ['dossier 17 §3.1 [RW-Ka25] [AW-Ka25] [CIA72] [AI79]', 'dossier 17 §1 (Ka-25) [CIA-REG86]',
+    'dossier 17 §4.2 (RLB)', 'dossier 17 §6.5', 'dossier 17 §8.2', 'dossier 11 §1.4 [RWKA25]', 'dossier 21 §7.1',
+    'data/motore/asw_aereo.toml [mezzi.ka25]']

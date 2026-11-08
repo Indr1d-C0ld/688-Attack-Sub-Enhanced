@@ -1,0 +1,20 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='440' viewBox='0 0 760 440' font-family='DejaVu Sans, Helvetica, Arial, sans-serif' role='img' aria-label='La geometria dello stadimetro: la distanza dall&#39;altezza d&#39;albero e dall&#39;angolo'>
+<title>La geometria dello stadimetro: la distanza dall&#39;altezza d&#39;albero e dall&#39;angolo</title>
+<rect width='760' height='440' fill='#fcfcfb'/>
+<text x='36.0' y='26.0' font-size='16' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Lo stadimetro</text>
+<text x='36.0' y='46.0' font-size='12' fill='#52514e' text-anchor='start'>Dall&#39;altezza d&#39;albero H e dall&#39;angolo α sotto cui la si vede: D = H / tan α. Un errore su H vale lo stesso errore su D.</text>
+<path d='M40.0,330.0 L720.0,330.0' fill='none' stroke='#2a78d6' stroke-width='1.5' stroke-linejoin='round'/>
+<text x='700.0' y='348.0' font-size='11' fill='#52514e' text-anchor='end'>il mare</text>
+<circle cx='90' cy='328' r='5' fill='#0b0b0b'/>
+<text x='90.0' y='360.0' font-size='11' fill='#0b0b0b' text-anchor='middle'>la testa del periscopio</text>
+<path d='M620.0,330.0 L620.0,160.0' fill='none' stroke='#0b0b0b' stroke-width='3' stroke-linejoin='round'/>
+<path d='M682.0,324.0 L652.0,331.0 L562.0,331.0 L562.0,317.0 L652.0,317.0 Z' fill='#52514e' stroke='#0b0b0b'/>
+<text x='632.0' y='240.0' font-size='12' fill='#0b0b0b' text-anchor='start'>H: l&#39;altezza d&#39;albero</text>
+<text x='632.0' y='258.0' font-size='11' fill='#52514e' text-anchor='start'>(dal libretto)</text>
+<path d='M90.0,328.0 L620.0,160.0' fill='none' stroke='#eb6834' stroke-width='1.5' stroke-linejoin='round' stroke-dasharray='6 4'/>
+<path d='M90.0,328.0 L620.0,328.0' fill='none' stroke='#eb6834' stroke-width='1.5' stroke-linejoin='round' stroke-dasharray='6 4'/>
+<path d='M170,328 A80,80 0 0 0 166.3,303.8' fill='none' stroke='#eb6834'/>
+<text x='180.0' y='316.0' font-size='14' fill='#eb6834' text-anchor='start'>α</text>
+<text x='355.0' y='360.0' font-size='14' fill='#0b0b0b' text-anchor='middle' font-weight='bold'>D = H / tan α</text>
+<text x='36.0' y='400.0' font-size='12' fill='#52514e' text-anchor='start'>Il Type 2 sdoppia l&#39;immagine; il reticolo dell&#39;Alfa conta le divisioni. Errore 2-3% a 6×, di più a 1,5×.</text>
+</svg>

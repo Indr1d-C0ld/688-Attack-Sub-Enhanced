@@ -1,0 +1,21 @@
+# Maschera ritoccata a mano della foto della Ticonderoga (tools/navi/maschera_manuale.py), coordinate in pixel.
+# Ripresa dall'alto, tutta contro il mare: lo scafo e' scuro (47) ma le tughe al sole sono chiare quasi come il
+# mare (155 contro 170) e l'ombra della nave sull'acqua e' scura come lo scafo, quindi niente soglie: la sagoma
+# dello scafo e delle tughe e' un poligono pieno; gli alberi e le antenne (scuri) si staccano dal mare di ogni riga
+# dentro l'inviluppo (metodo cielo senza orizzonte).
+metodo: cielo
+file: extracted/navi/ticonderoga/foto/A_port_view_of_the_guided_missile_cruiser_USS_TICONDEROGA_CG-47_underway_on_the_Atlantic_Fleet_Weapons_Training_Facility_Puerto_Rico_prior_to_a_missile_launch_-_DPLA_-_e7ab4fa4f1b4ed775625721bed1d22ba.jpeg
+uscita: extracted/navi/ticonderoga/foto/sinistra_aerea_1983_maschera.png
+sfocatura: 1.6
+soglia: 40
+inviluppo: [[1150, 965], [1195, 965], [1240, 1110], [1410, 880], [1445, 880], [1565, 1040], [1565, 1150],
+            [1500, 1200], [1010, 1200], [1060, 1060]]
+includi:
+  # scafo, tughe, ponte di volo, dal dritto di prua in coperta lungo la sagoma alta e il galleggiamento
+  - [[403, 1238], [560, 1250], [700, 1262], [740, 1250], [790, 1250], [800, 1275], [950, 1295], [958, 1185],
+     [1005, 1150], [1175, 1150], [1175, 1115], [1255, 1115], [1255, 1150], [1270, 1170], [1270, 1200],
+     [1400, 1190], [1530, 1195], [1530, 1150], [1570, 1145], [1700, 1145], [1775, 1300], [2050, 1318],
+     [2060, 1350], [2240, 1355], [2245, 1370], [2440, 1395], [2480, 1405], [2440, 1475], [2100, 1465],
+     [1450, 1428], [950, 1398], [650, 1372], [495, 1350]]
+area_minima: 40
+buco_massimo: 400

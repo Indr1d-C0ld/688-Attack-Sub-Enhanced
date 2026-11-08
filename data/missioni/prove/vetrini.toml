@@ -1,0 +1,146 @@
+# I vetrini pronti della sandbox (docs/19 §1): scritto da strumenti/scene_interazioni, non modificare a mano.
+# missione, titolo e cosa mostra (it/en), pronto (falso: in ritaratura), durata in minuti, regolazioni consigliate
+# (i campi di RegolazioniSandbox; quelli assenti restano della missione)
+
+[[vetrino]]
+missione = "PROVA_S1_KPUG"
+titolo = { it = "S1 - KPUG e SSN alleato", en = "S1 - KPUG and allied SSN" }
+mostra = { it = "Un gruppo ASW sovietico trova uno Sturgeon alleato: il VDS lo sente subito, la traccia solida arriva per integrazione.", en = "A Soviet ASW group finds an allied Sturgeon: the VDS hears her at once, the solid track comes with integration." }
+pronto = true
+durata_min = 120
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false
+
+[[vetrino]]
+missione = "PROVA_S1G_KPUG_GUERRA"
+titolo = { it = "S1G - KPUG e SSN alleato (guerra)", en = "S1G - KPUG and allied SSN (war)" }
+mostra = { it = "La stessa scena in guerra: le navi cacciano fino al PROBSUB, poi attaccano con le salve antisom.", en = "The same scene at war: the ships hunt until PROBSUB, then attack with ASW salvos." }
+pronto = true
+durata_min = 120
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false
+
+[[vetrino]]
+missione = "PROVA_S2_PEDINAMENTO"
+titolo = { it = "S2 - Una Perry pedina un Victor III", en = "S2 - A Perry trails a Victor III" }
+mostra = { it = "Una Perry col sonar trainato pedina un Victor III in pace; il P-3 arriva sul suo contatto.", en = "A Perry with her towed array trails a Victor III in peacetime; the P-3 comes onto her contact." }
+pronto = true
+durata_min = 120
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false
+
+[[vetrino]]
+missione = "PROVA_S3_BASTIONE"
+titolo = { it = "S3 - L'intruso nel bastione", en = "S3 - The intruder in the bastion" }
+mostra = { it = "Un intruso nel bastione: Il-38, gruppo ASW e un Victor III lo cercano insieme.", en = "An intruder in the bastion: Il-38, ASW group and a Victor III hunt him together." }
+pronto = true
+durata_min = 120
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false
+
+[[vetrino]]
+missione = "PROVA_S3A_BASTIONE_ALFA"
+titolo = { it = "S3A - Il bastione visto dall'Alfa", en = "S3A - The bastion from the Alfa" }
+mostra = { it = "Il bastione visto dall'Alfa: il gruppo ASW trova l'intruso in pochi minuti.", en = "The bastion seen from the Alfa: the ASW group finds the intruder within minutes." }
+pronto = true
+durata_min = 120
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false
+
+[[vetrino]]
+missione = "PROVA_S4_DUE_SSN"
+titolo = { it = "S4 - Due SSN amici nella stessa acqua", en = "S4 - Two friendly SSNs in the same water" }
+mostra = { it = "Due sottomarini amici in aree vicine; il Trafalgar e un Victor III si trovano e si sparano.", en = "Two friendly submarines in adjacent areas; the Trafalgar and a Victor III find each other and fight." }
+pronto = true
+durata_min = 120
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false
+
+[[vetrino]]
+missione = "PROVA_S5_CONVOGLIO"
+titolo = { it = "S5 - Un mercantile silurato nel convoglio", en = "S5 - A merchant torpedoed in the convoy" }
+mostra = { it = "Un Victor attacca un convoglio: una petroliera colpita, le scorte che cercano il sottomarino.", en = "A Victor attacks a convoy: a tanker hit, the escorts hunting the submarine." }
+pronto = true
+durata_min = 120
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false
+
+[[vetrino]]
+missione = "PROVA_S6_USCITA"
+titolo = { it = "S6 - L'uscita del Typhoon", en = "S6 - The Typhoon sails" }
+mostra = { it = "Un Typhoon esce da Kola con la nave spia e i pescherecci; un SSN aspetta fuori.", en = "A Typhoon sails from Kola past a spy ship and trawlers; an SSN waits outside." }
+pronto = true
+durata_min = 120
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false
+
+[[vetrino]]
+missione = "PROVA_S7_PORTAEREI"
+titolo = { it = "S7 - La crisi diventa guerra", en = "S7 - The crisis turns to war" }
+mostra = { it = "Un gruppo portaerei e un Victor: la crisi diventa guerra, e ogni unita' lo sa in tempi diversi.", en = "A carrier group and a Victor: the crisis turns into war, and each unit learns it at a different time." }
+pronto = true
+durata_min = 120
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false
+
+[[vetrino]]
+missione = "PROVA_S8_LUOGO"
+titolo = { it = "S8 - La parte del luogo", en = "S8 - The local party" }
+mostra = { it = "La parte del luogo: una Koni in crisi con gli USA e in pace con l'URSS caccia solo il 688, e a 15 minuti dichiara la guerra.", en = "The local party: a Koni in crisis with the US and at peace with the USSR hunts only the 688, and after 15 minutes declares war." }
+pronto = true
+durata_min = 60
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false
+
+[[vetrino]]
+missione = "PROVA_M3_ORIZZONTE"
+titolo = { it = "M3 - Oltre l'orizzonte", en = "M3 - Beyond the horizon" }
+mostra = { it = "Uno Slava e due Perry a 120 km, in guerra: nessuno vede l'altro. Da sola non succede nulla; e' la scena dell'esperimento della spia.", en = "A Slava and two Perrys 120 km apart, at war: neither sees the other. Alone nothing happens; it is the scene of the spy experiment." }
+pronto = true
+durata_min = 60
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false
+
+[[vetrino]]
+missione = "PROVA_M1_ANTINAVE"
+titolo = { it = "M1 - Antinave con scorta e un neutrale", en = "M1 - Antiship shot with escort and a neutral" }
+mostra = { it = "Harpoon su uno Slava con due Krivak e un cargo neutrale dentro la scatola: il seeker prende il primo eco.", en = "Harpoon at a Slava with two Krivaks and a neutral freighter inside the box: the seeker takes the first echo." }
+pronto = false
+durata_min = 60
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false
+
+[[vetrino]]
+missione = "PROVA_M2_TLAM"
+titolo = { it = "M2 - TLAM: area di lancio e navigazione incerta", en = "M2 - TLAM: launch area and uncertain navigation" }
+mostra = { it = "Una missione TLAM dalla libreria di bordo: l'area di lancio, la navigazione incerta e l'ordine dalla radio.", en = "A TLAM mission from the onboard library: the launch area, uncertain navigation and the order by radio." }
+pronto = false
+durata_min = 240
+[vetrino.regolazioni]
+meteo_realistico = false   # le scene hanno il meteo fisso
+navigazione_realistica = false
+ferma_all_esito = false

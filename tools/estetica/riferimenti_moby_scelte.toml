@@ -1,0 +1,8 @@
+# Le schermate scelte per il dossier 25 (§10): menu, scelta della missione, briefing, fascicolo, base
+aces-of-the-pacific = [6259, 6260, 6265]       # menu principale, missione singola, debriefing
+aces-of-the-deep = [8369, 8370]                # menu principale, briefing
+red-baron = [8614, 8617, 8618]                 # menu, carriera, punteggio
+f-15-strike-eagle-iii = [99110, 99118, 99119]  # sala briefing, debriefing, schermata principale
+us-navy-fighters = [403498, 403500, 403501]    # menu, scelta della missione, briefing
+strike-commander = [313346, 313347, 313349]    # nuova campagna, la base, scelta delle armi
+falcon-30 = [27166, 27167, 372843]             # menu, sala operativa, assegnazione dei piloti

@@ -1,0 +1,115 @@
+# Tupolev Tu-142M/MK "Bear-F" (NATO: Bear-F Mod 3 = Tu-142MK, con il MAD in cima alla deriva), Aviazione Navale
+# Sovietica, configurazione 1989. Oggetto in volo.
+# Coordinate del kit: x verso il muso (origine a meta' lunghezza fuori tutto), y verso sinistra, z verso l'alto.
+# {prua: d} = punto a d metri dalla punta della sonda di rifornimento (x = L/2 - d). Asse della fusoliera a z = 10 m.
+# Misure pubbliche: lunghezza 53,07 m, apertura 50,0 m, ala a freccia di 35 gradi, quattro NK-12MV con eliche
+# controrotanti AV-60 (diametro ~5,6 m), fusoliera di ~2,9 m di diametro.
+# La lunghezza fuori tutto va dalla punta della sonda alla punta della carenatura del MAD in cima alla deriva, che
+# sporge oltre la torretta di coda (foto del 1982 e del 1987); torretta, deriva, piani di coda, estremita' alari e
+# motori triangolati da due foto (tools/navi/classi/tu142_triangolazione.yaml).
+nome: Tupolev Tu-142M Bear-F (1989)
+uscita: extracted/navi/tu142
+moduli_parti: [aerei_parti.py]
+vista: {volante: true, elevazioni: [0, 10, 25], centro: [0, 0, 10]}
+# dischi delle eliche ('traliccio') chiari: pale sfocate contro il cielo
+albedo: {traliccio: 0.72}
+
+scafo:
+  generatore: fusoliera
+  L: 53.07
+  z: 10.0
+  # [d dalla punta della sonda, semilarghezza, semialtezza, spostamento verticale del centro]
+  profilo:
+    - [2.3, 0.0, 0.0, -0.10]
+    - [2.6, 0.45, 0.45, -0.10]
+    - [3.3, 0.85, 0.85, -0.08]
+    - [4.5, 1.18, 1.20, -0.05]
+    - [6.0, 1.38, 1.40, 0.0]
+    - [7.5, 1.45, 1.45, 0.0]
+    - [36.0, 1.45, 1.45, 0.0]
+    - [40.0, 1.35, 1.30, 0.06]
+    - [43.0, 1.10, 1.05, 0.15]
+    - [45.3, 0.80, 0.80, 0.25]
+    - [46.5, 0.62, 0.62, 0.30]
+    - [47.0, 0.40, 0.40, 0.30]
+    - [47.2, 0.0, 0.0, 0.30]
+
+parti:
+  - {tipo: corpo, nome: sonda, x_naso: {prua: 0}, z: 11.0, n: 8, profilo: [[0, 0.06], [0.3, 0.12], [3.5, 0.14], [4.5, 0.2]]}
+  - {tipo: ellissoide, nome: cabina, x: {prua: 7.0}, y: 0, z: 10.95, a: 2.6, b: 1.15, c: 0.65}
+  - {tipo: ellissoide, nome: radome_ventrale, x: {prua: 9.8}, y: 0, z: 8.75, a: 2.6, b: 1.05, c: 0.65}
+  # ala a freccia (35 gradi al quarto della corda), corda 8,6 -> 2,9 m, quasi senza diedro
+  - {tipo: ala, nome: ala, radice: [{prua: 13.3}, 1.3, 10.0, 8.4], estremita: [{prua: 32.3}, 25.02, 10.2, 2.7], spessore: 0.13, spessore_estremita: 0.11}
+  # gondole NK-12MV: lunghe, le interne con la carenatura del carrello oltre il bordo d'uscita
+  - {tipo: corpo, nome: gondola_interna, x_naso: {prua: 13.9}, y: 6.2, z: 9.5, simmetrico: true,
+     profilo: [[0, 0.55, 0.60], [0.8, 0.80, 0.92], [3.0, 0.86, 1.02, -0.05], [8.0, 0.86, 1.05, -0.15], [12.5, 0.72, 0.85, -0.15], [16.0, 0.25, 0.30, 0.0]]}
+  - {tipo: corpo, nome: gondola_esterna, x_naso: {prua: 17.5}, y: 11.4, z: 9.7, simmetrico: true,
+     profilo: [[0, 0.55, 0.60], [0.8, 0.78, 0.88], [3.0, 0.82, 0.95, -0.05], [7.0, 0.78, 0.90, -0.05], [10.0, 0.35, 0.40, 0.0]]}
+  - {tipo: elica, nome: elica_interna, x: {prua: 13.2}, y: 6.2, z: 9.5, r: 2.8, doppia: 0.75, ogiva: [0.6, 0.5]}
+  - {tipo: elica, nome: elica_esterna, x: {prua: 16.8}, y: 11.4, z: 9.7, r: 2.8, doppia: 0.75, ogiva: [0.6, 0.5]}
+  # impennaggi a freccia: il piano orizzontale sporge oltre la torretta di coda
+  - {tipo: ala, nome: piano_orizzontale, radice: [{prua: 43.4}, 0.6, 10.6, 5.0], estremita: [{prua: 49.5}, 7.6, 11.4, 2.1], spessore: 0.11, spessore_estremita: 0.09}
+  - {tipo: ala, nome: deriva, verticale: true, simmetrica: false, radice: [{prua: 40.1}, 0, 11.3, 7.5], estremita: [{prua: 48.3}, 0, 18.5, 3.0], spessore: 0.11, spessore_estremita: 0.09}
+  - {tipo: ala, nome: pinna_dorsale, verticale: true, simmetrica: false, radice: [{prua: 35.5}, 0, 11.35, 5.0], estremita: [{prua: 40.6}, 0, 12.6, 1.0], spessore: 0.07}
+  # carenatura del MAD in cima alla deriva, verso coda (Tu-142M/MK)
+  - {tipo: corpo, nome: carenatura_mad, x_naso: {prua: 48.1}, z: 18.4, n: 10, profilo: [[0, 0.30, 0.32], [4.6, 0.28, 0.28], [4.97, 0.0, 0.0]]}
+
+# Foto (pubblico dominio, US Navy / US Air Force / DoD; metadati in extracted/navi/tu142/foto/fonti.json).
+foto:
+  - nome: dritto_basso_1982
+    file: extracted/navi/tu142/foto/dritto_basso_1982.jpg
+    nave: Tu-142M "Bear-F Mod 3", da sotto a destra (1982)
+    qualita: 1.0
+    specchiabile: true
+    maschera_file: extracted/navi/tu142/maschere/dritto_basso_1982.png
+    maschera_calibrazione: extracted/navi/tu142/maschere/dritto_basso_1982_cal.png
+    limiti_fotocamera: {elevazione: [-80, 10], distanza: [30, 5000]}
+    # foto da un caccia di scorta: distanza plausibile poche centinaia di metri (senza vincolo finisce a 5 km,
+    # quasi in proiezione ortografica)
+    prior_fotocamera: {distanza: 800, sigma_logD: 0.5}
+    fotocamera_iniziale: {posizione: [-470.4, -871.5, -396.6], bersaglio: [-3.7, 0.0, 10.5], f: 38090}
+    punti:
+      - [[{prua: 2.3}, 0, 10.0], [1857, 590]]       # punta della fusoliera (radome)
+      - [[{prua: 53.07}, 0, 18.4], [172, 299]]      # punta della carenatura MAD
+      - [[{prua: 48.3}, 0, 18.5], [318, 298]]       # sommita' della deriva, bordo d'attacco
+      - [[{prua: 32.3}, -25.02, 10.2], [1238, 197]] # estremita' alare destra (vicina), bordo d'attacco
+      - [[{prua: 32.3}, 25.02, 10.2], [527, 932]]   # estremita' alare sinistra (lontana)
+      - [[{prua: 49.5}, -7.6, 11.4], [405, 398]]    # piano orizzontale destro
+      - [[{prua: 49.5}, 7.6, 11.4], [228, 624]]     # piano orizzontale sinistro
+      - [[{prua: 16.2}, -11.4, 9.7], [1572, 400]]   # ogiva esterna destra
+      - [[{prua: 12.6}, -6.2, 9.5], [1612, 500]]    # ogiva interna destra
+      - [[{prua: 12.6}, 6.2, 9.5], [1430, 688]]     # ogiva interna sinistra
+      - [[{prua: 16.2}, 11.4, 9.7], [1250, 755]]    # ogiva esterna sinistra
+  - nome: sotto_1987
+    file: extracted/navi/tu142/foto/sotto_1987.jpg
+    nave: Tu-142 "Bear-F" con il vano armi aperto, da sotto (1987)
+    qualita: 0.7
+    specchiabile: true
+    maschera_file: extracted/navi/tu142/maschere/sotto_1987.png
+    maschera_calibrazione: extracted/navi/tu142/maschere/vuota_sotto_1987.png   # calibrazione sui soli punti (nuvole)
+    limiti_fotocamera: {elevazione: [-89, 10], distanza: [20, 5000], rollio: [-90, 90]}
+    fotocamera_iniziale: {posizione: [-0.7, 24.8, -25.3], bersaglio: [5.3, 0.0, 10.9], f: 1477}
+    punti:
+      - [[{prua: 0}, 0, 11.0], [310, 755]]          # punta della sonda
+      - [[{prua: 47.1}, 0, 10.3], [1898, 600]]      # torretta di coda
+      - [[{prua: 35.0}, -25.02, 10.2], [1412, 1200]] # estremita' alare destra, bordo d'uscita
+      - [[{prua: 16.2}, 11.4, 9.7], [697, 375]]     # ogiva esterna sinistra
+      - [[{prua: 12.6}, 6.2, 9.5], [615, 560]]      # ogiva interna sinistra
+      - [[{prua: 12.6}, -6.2, 9.5], [702, 875]]     # ogiva interna destra
+      - [[{prua: 16.2}, -11.4, 9.7], [847, 985]]    # ogiva esterna destra
+      - [[{prua: 49.5}, -7.6, 11.4], [1905, 740]]   # piano orizzontale destro
+  - nome: dritto_1987
+    file: extracted/navi/tu142/foto/dritto_1987.jpg
+    nave: Tu-142 "Bear-F" intercettato da un F-15A del 48th FIS (1987)
+    qualita: 0.8
+    specchiabile: true
+    maschera_file: extracted/navi/tu142/maschere/dritto_1987.png
+    maschera_calibrazione: extracted/navi/tu142/maschere/dritto_1987_cal.png
+    limiti_fotocamera: {elevazione: [-40, 20], distanza: [30, 5000]}
+    fotocamera_iniziale: {posizione: [0, -498, -34], bersaglio: [0, 0, 10], f: 17900}
+    punti:
+      - [[{prua: 0}, 0, 11.0], [1905, 452]]         # punta della sonda
+      - [[{prua: 2.3}, 0, 10.0], [1832, 487]]       # punta della fusoliera
+      - [[{prua: 53.07}, 0, 18.4], [12, 237]]       # punta della carenatura MAD
+      - [[{prua: 48.3}, 0, 18.5], [198, 233]]       # sommita' della deriva, bordo d'attacco
+      - [[{prua: 32.3}, -25.02, 10.2], [655, 712]]  # estremita' alare destra (vicina)

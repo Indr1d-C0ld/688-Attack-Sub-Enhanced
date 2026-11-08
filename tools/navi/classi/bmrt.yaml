@@ -1,0 +1,94 @@
+# Grande peschereccio congelatore sovietico a rampa poppiera (BMRT), la classe `bmrt` del traffico civile: lo scafo col
+# castello alto e la rampa a poppa, la tuga lunga sul ponte di coperta, la sovrastruttura a piani a centro-poppa con la
+# plancia in testa, i due fumaioli affiancati ai lati con gli alberi gemelli, i due portali dei picchi da carico a
+# proravia, il portale poppiero per la rete e quello delle lance, le lance di salvataggio sui due lati.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure della classe del traffico: 94,5 x 15,1 m, 5,5 m d'immersione, 4240 t (tools/
+# pipeline/civili.py). La nave della foto (un BMRT a fumaioli affiancati, Paljassaare 1992) non ha la lunghezza vera
+# nota: e' presa lunga quanto la classe (fattore unico = 94,5 / lunghezza vera, STIMA; per un progetto 1288 "Pulkovskiy
+# Meridian" di 103,7 m sarebbe 0,91). Posizioni e quote triangolate dalla foto di dritta con la fotocamera stimata sui
+# punti dello scafo (lunghezza e larghezza note, orizzonte); la scala delle altezze (focale ~1500 px) scelta perche' i
+# piani della sovrastruttura vengano di ~2,6 m e la lancia di ~7 m (STIMA). Lo zero e' il bordo inferiore della fascia
+# scura del bagnasciuga: nella foto la nave e' scarica e l'acqua sta ~0,7 m piu' in basso. Modello proprio (kit,
+# 31/10/2026).
+nome: Grande peschereccio sovietico (BMRT)
+uscita: extracted/navi/bmrt
+
+scafo:
+  L: 94.5
+  B: 15.1
+  # il castello alto a prua (11,7 m al dritto), lo scalino curvo a 17-21 m, la coperta a 6-7 m (orlo della murata)
+  bordo: [[0, 11.7], [9.0, 11.1], [16.0, 9.8], [18.5, 8.6], [21.0, 7.1], [40.0, 6.6], [66.0, 5.9], [94.5, 6.0]]
+  slancio: 6.3
+  finezza_prua: 30
+  specchio: 0.85
+  svasatura: 0.02
+  pienezza: [0.6, 0.4]
+  bagnasciuga: 1.8
+
+parti:
+  # ---------------- la tuga lunga sul ponte di coperta e la sovrastruttura a piani
+  - {tipo: tuga, nome: tuga_coperta, x0: {prua: 77.0}, x1: {prua: 22.8}, y0: -7.3, y1: 7.3, z0: 6.0, z1: 9.6, rastrema: 0.995}
+  - {tipo: tuga, nome: secondo_piano, x0: {prua: 65.0}, x1: {prua: 42.9}, y0: -6.8, y1: 6.8, z0: 9.6, z1: 11.0, rastrema: 0.99}
+  - {tipo: tuga, nome: terzo_piano, x0: {prua: 65.0}, x1: {prua: 44.8}, y0: -6.5, y1: 6.5, z0: 11.0, z1: 13.5, rastrema: 0.99}
+  - {tipo: tuga, nome: plancia, x0: {prua: 55.8}, x1: {prua: 44.5}, y0: -5.5, y1: 5.5, z0: 13.5, z1: 16.6, rastrema: 0.99}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 44.9}, x1: {prua: 44.4}, y0: -5.0, y1: 5.0, z0: 15.0, z1: 15.9, mat: nero, rastrema: 0.99}
+  # ---------------- i due fumaioli affiancati ai lati, con gli alberi gemelli e i puntelli
+  - {tipo: fumaiolo_cilindrico, nome: fumaiolo_dritta, x: {prua: 57.8}, y: -5.6, z0: 13.5, z1: 19.3, r: 1.65, cappello: 4.0}
+  - {tipo: fumaiolo_cilindrico, nome: fumaiolo_sinistra, x: {prua: 57.8}, y: 5.6, z0: 13.5, z1: 19.3, r: 1.65, cappello: 4.0}
+  - {tipo: albero_palo, nome: albero_dritta, x: {prua: 52.5}, y: -5.5, z0: 16.6, z1: 29.0, r: 0.3, crocette: [[25.0, 2.0], [27.0, 1.2]], piattaforme: [[22.0, 2.0]]}
+  - {tipo: albero_palo, nome: albero_sinistra, x: {prua: 52.5}, y: 5.5, z0: 16.6, z1: 29.0, r: 0.3, crocette: [[25.0, 2.0], [27.0, 1.2]], piattaforme: [[22.0, 2.0]]}
+  - {tipo: asta, nome: puntello_dritta, da: [{prua: 55.8}, -5.6, 19.3], a: [{prua: 52.5}, -5.5, 22.0], spessore: 0.45}
+  - {tipo: asta, nome: puntello_sinistra, da: [{prua: 55.8}, 5.6, 19.3], a: [{prua: 52.5}, 5.5, 22.0], spessore: 0.45}
+  # ---------------- i due portali dei picchi da carico a proravia, con gli alberetti e i picchi a riposo
+  - {tipo: cilindro, nome: picco_poppiero_dritta, x: {prua: 28.4}, y: -2.9, r: 0.5, z0: 9.6, z1: 20.4, n: 10}
+  - {tipo: cilindro, nome: picco_poppiero_sinistra, x: {prua: 28.4}, y: 2.9, r: 0.5, z0: 9.6, z1: 20.4, n: 10}
+  - {tipo: tuga, nome: piattaforma_poppiera, x0: {prua: 29.4}, x1: {prua: 27.4}, y0: -2.9, y1: 2.9, z0: 17.6, z1: 18.2}
+  - {tipo: albero_palo, nome: alberetto_poppiero, x: {prua: 28.2}, z0: 18.2, z1: 25.3, r: 0.2}
+  - {tipo: cilindro, nome: picco_prodiero_dritta, x: {prua: 24.3}, y: -2.3, r: 0.45, z0: 9.6, z1: 19.6, n: 10}
+  - {tipo: cilindro, nome: picco_prodiero_sinistra, x: {prua: 24.3}, y: 2.3, r: 0.45, z0: 9.6, z1: 19.6, n: 10}
+  - {tipo: tuga, nome: piattaforma_prodiera, x0: {prua: 25.3}, x1: {prua: 23.3}, y0: -2.3, y1: 2.3, z0: 16.6, z1: 17.2}
+  - {tipo: albero_palo, nome: alberetto_prodiero, x: {prua: 24.0}, z0: 17.2, z1: 23.6, r: 0.2}
+  - {tipo: asta, nome: braccio_poppiero, da: [{prua: 30.2}, -2.0, 12.6], a: [{prua: 46.5}, -2.0, 13.0], spessore: 0.45}
+  - {tipo: asta, nome: braccio_prodiero, da: [{prua: 30.5}, 2.0, 12.3], a: [{prua: 16.6}, 2.0, 11.5], spessore: 0.45}
+  # ---------------- il portale delle lance (con l'albero) e le lance di salvataggio ai due lati
+  - {tipo: asta, nome: portale_lance_dritta, da: [{prua: 72.0}, -4.3, 6.5], a: [{prua: 71.4}, -4.3, 17.1], spessore: 0.6}
+  - {tipo: asta, nome: portale_lance_sinistra, da: [{prua: 72.0}, 4.3, 6.5], a: [{prua: 71.4}, 4.3, 17.1], spessore: 0.6}
+  - {tipo: asta, nome: portale_lance_traversa, da: [{prua: 71.4}, -4.6, 17.1], a: [{prua: 71.4}, 4.6, 17.1], spessore: 0.8}
+  - {tipo: albero_palo, nome: albero_lance, x: {prua: 72.9}, z0: 17.1, z1: 23.9, r: 0.25, crocette: [[21.3, 2.5]]}
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 72.8}, x1: {prua: 65.8}, y: -6.3, z0: 10.5, larghezza: 2.4, altezza: 2.0}
+  - {tipo: imbarcazione, nome: lancia_sinistra, x0: {prua: 72.8}, x1: {prua: 65.8}, y: 6.3, z0: 10.5, larghezza: 2.4, altezza: 2.0}
+  # ---------------- la rampa per la rete nello specchio (STIMA: in foto non si vede), il portale poppiero sopra la rampa
+  # (gambe appena inclinate verso prua), con l'albero
+  - {tipo: asta, nome: portale_poppiero_dritta, da: [{prua: 88.0}, -5.0, 6.0], a: [{prua: 85.7}, -4.5, 16.2], spessore: 0.7}
+  - {tipo: asta, nome: portale_poppiero_sinistra, da: [{prua: 88.0}, 5.0, 6.0], a: [{prua: 85.7}, 4.5, 16.2], spessore: 0.7}
+  - {tipo: asta, nome: portale_poppiero_traversa, da: [{prua: 85.7}, -4.9, 16.2], a: [{prua: 85.7}, 4.9, 16.2], spessore: 0.9}
+  - {tipo: scatola, nome: rampa, x0: {prua: 94.6}, x1: {prua: 93.0}, y0: -1.8, y1: 1.8, z0: 2.0, z1: 6.1, mat: scuro}
+  - {tipo: albero_palo, nome: albero_poppiero, x: {prua: 86.3}, z0: 16.2, z1: 23.8, r: 0.25, crocette: [[21.5, 2.5]]}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 31/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: dritta_paljassaare
+    file: "extracted/navi/bmrt/foto/БМРТ_АБ-0122_«Амбарчик»_Paljassaare_sadamas_92.jpg"
+    nave: BMRT all'ormeggio, Paljassaare (Tallinn), 1992 (CC BY-SA 4.0), di dritta di tre quarti da prua
+    qualita: 1.0
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 2 px (contorno_modello.py --maschera): lascia
+    # fuori la gru di banchina, la torre dei fari, le altre navi e la carena scoperta sotto il galleggiamento
+    maschera_file: extracted/navi/bmrt/foto/dritta_paljassaare_maschera.png
+    solo_punti: true
+    # nome e matricola veri tolti: il nome a prua, la sigla con la matricola sulla sovrastruttura
+    cancella: [[1302, 563, 1406, 589], [343, 477, 432, 508]]
+    riquadro: [30, 170, 1590, 815]
+    fotocamera_iniziale: {posizione: [54, -72, 15], bersaglio: [10, 0, 11.6], f: 1570}
+    limiti_fotocamera: {elevazione: [-5, 15], distanza: [30, 2000], focale: [300, 20000]}
+    punti:
+      - [[{prua: 0}, 0, 11.7], [1572, 508]]          # dritto di prua, orlo della murata
+      - [[{prua: 5.3}, 0, 1.8], [1431, 737]]         # dritto all'orlo superiore della fascia scura
+      - [[{prua: 94.5}, -6.4, 6.0], [48, 556]]       # spigolo di dritta della poppa, orlo della murata
+      - [[{prua: 22.8}, -7.3, 9.6], [990, 549]]      # spigolo prodiero alto di dritta della tuga di coperta
+      - [[{prua: 65.0}, -6.8, 13.5], [340, 455]]     # spigolo poppiero alto di dritta della sovrastruttura
+      - [[{prua: 44.5}, 5.5, 16.6], [745, 398]]      # spigolo prodiero alto di sinistra della plancia (il piu' a destra)
+      - [[{prua: 57.8}, -5.6, 19.3], [443, 351]]     # cielo del fumaiolo di dritta
+      - [[{prua: 85.7}, -4.5, 16.2], [150, 406]]     # testa di dritta del portale poppiero
+      - [[{prua: 28.4}, -2.9, 20.4], [924, 315]]     # testa del picco poppiero di dritta

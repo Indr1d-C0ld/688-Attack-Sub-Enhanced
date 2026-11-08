@@ -1,0 +1,62 @@
+# Maschera ritoccata a mano della foto di fianco del Mirazh (1985), coordinate nell'immagine 3000 px.
+# La nave sta quasi tutta contro il mare e le sovrastrutture chiare hanno lo stesso grigio del mare:
+# scafo e sovrastrutture sono tracciati come poligoni (includi).
+file: extracted/navi/nanuchka/foto/fianco_sinistro_mirazh_1985.jpg
+uscita: extracted/navi/nanuchka/foto/fianco_sinistro_mirazh_1985_maschera.png
+# scafo: linea di coperta, specchio, bordo della schiuma lungo il galleggiamento, dritto di prua
+scafo: [[40, 1540], [300, 1542], [800, 1545], [1500, 1550], [2500, 1550], [2964, 1550], [2966, 1595],
+        [2930, 1640], [2880, 1695], [2800, 1692], [2500, 1693], [2200, 1695], [2050, 1712], [1900, 1718],
+        [1750, 1714], [1450, 1728], [1000, 1736], [550, 1752], [330, 1752], [230, 1748], [200, 1740],
+        [170, 1700], [140, 1660], [100, 1620], [60, 1590], [40, 1548]]
+soglia_scafo: 185          # esclude la schiuma (~205)
+linea_coperta: [[40, 1541], [300, 1543], [800, 1546], [1500, 1551], [2500, 1551], [2964, 1551]]
+inviluppo: []               # niente ricerca per soglia sopra la coperta
+# Nanuchka III: plancia, radome, albero, Bass Tilt, AK-630 e torre da 76 mm sono diversi dalla Nanuchka I
+# (radome e plancia piu' a prua, albero piu' grande): esclusi dalla maschera, li dipingono le foto della
+# Nanuchka I. Restano scafo, sovrastruttura prodiera fino al cielo della tuga, Pop Group, lanciatori e
+# fianco della tuga poppiera.
+includi:
+  - [[820, 1547], [820, 1480], [858, 1478], [858, 1378], [900, 1372], [905, 1335], [940, 1300], [990, 1295],
+     [1000, 1340], [1044, 1345], [1720, 1345], [1757, 1380], [1885, 1379], [1890, 1450], [2500, 1450],
+     [2540, 1500], [2540, 1551], [820, 1551]]
+  # numero di scafo (piu' chiaro della soglia: senza questo resterebbe un buco)
+  - [[615, 1600], [800, 1600], [800, 1705], [615, 1705]]
+  # cupola dell'Osa-M sul castello
+  - [[495, 1545], [505, 1512], [530, 1503], [560, 1510], [575, 1545]]
+area_minima: 150
+---
+# Maschera ritoccata a mano della foto della Vikhr (1988, Nanuchka I, dal mascone di sinistra, rialzata),
+# 1200 px. Mare chiaro alle spalle: scafo (con la coperta rossiccia chiara) per poligono, sovrastrutture e
+# albero per soglia (piu' scure del mare) dentro l'inviluppo.
+file: extracted/navi/nanuchka/foto/prua_sinistra_vikhr_1988.jpg
+uscita: extracted/navi/nanuchka/foto/prua_sinistra_vikhr_1988_maschera.png
+scafo: [[28, 367], [37, 358], [125, 356], [187, 358], [262, 364], [300, 378], [450, 420], [600, 440],
+        [800, 452], [990, 458], [1070, 462], [1133, 470], [1135, 539], [955, 527], [767, 511], [580, 502],
+        [437, 499], [312, 492], [187, 467], [81, 430], [40, 385]]
+soglia_scafo: 235          # esclude la schiuma bianca
+linea_coperta: [[28, 367], [37, 358], [125, 356], [187, 358], [262, 364], [300, 378], [450, 420],
+                [600, 440], [800, 452], [990, 458], [1070, 462], [1133, 470]]
+inviluppo: [[290, 380], [300, 300], [340, 280], [440, 250], [510, 195], [540, 170], [600, 80], [640, 15],
+            [700, 90], [740, 230], [760, 330], [900, 330], [915, 300], [950, 300], [960, 380], [1000, 395],
+            [1070, 400], [1100, 440], [1140, 470], [1140, 530], [290, 530]]
+soglia_sovrastrutture: 165
+includi:
+  - [[218, 430], [280, 436], [278, 472], [216, 466]]     # numero di scafo 432 (chiaro)
+area_minima: 60
+buco_massimo: 80
+---
+# Maschera della foto aerea dell'unita' 610 (1982, Nanuchka I, fianco di dritta), 1200 px. Nave chiara su
+# mare scuro e bluastro: metodo per colore (nave = poco blu) dentro un inviluppo stretto attorno a scafo,
+# sovrastrutture e albero; il bordo inferiore dell'inviluppo segue il galleggiamento ed esclude la schiuma.
+metodo: colore
+file: extracted/navi/nanuchka/foto/fianco_dritta_aereo_1982.jpg
+uscita: extracted/navi/nanuchka/foto/fianco_dritta_aereo_1982_maschera.png
+inviluppo: [[198, 342], [230, 330], [320, 322], [330, 315], [560, 312], [575, 300], [580, 170], [590, 128],
+            [610, 128], [650, 150], [660, 205], [690, 200], [700, 255], [760, 262], [790, 290], [830, 288],
+            [860, 320], [900, 325], [1000, 333], [1060, 340], [1095, 350], [1092, 362], [1000, 408],
+            [900, 437], [800, 448], [660, 456], [400, 462], [200, 464]]
+soglia_blu: -1
+sfocatura: 1.0
+includi:
+  # murata prodiera grigio-azzurra (il metodo per colore la scambierebbe per mare)
+  - [[640, 402], [800, 400], [900, 395], [1000, 382], [1085, 362], [1000, 408], [900, 437], [800, 448], [660, 456]]

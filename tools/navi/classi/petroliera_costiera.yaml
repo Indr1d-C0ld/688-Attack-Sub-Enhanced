@@ -1,0 +1,105 @@
+# Petroliera costiera e chimichiera (petroliera prodotti di ~100 m, tipo della Pegasus), la classe civile
+# `petroliera_costiera`: lo scafo blu col castello e la murata alta a prua, la coperta bassa del carico con la passerella
+# sull'asse e il fascio delle tubolature, la gru del manifold, il portale a meta' nave, i pali dei fanali; il cassero di
+# poppa con la sovrastruttura a quattro piani (la timoneria in cima, l'albero radar dietro), il fumaiolo a poppavia,
+# la lancia sulla culla a poppa; la poppa a specchio slanciata.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure della classe: 120,0 x 19,2 m, immersione 7,5 m, 12.100 t (tools/pipeline/
+# civili.py). La nave della foto (la Pegasus, di sinistra, ~38 gradi a proravia del traverso) non ha la lunghezza vera
+# nota: e' presa lunga quanto la classe, con un fattore unico in lunghezza e in quota (STIMA: la nave vera e' piu'
+# corta, ~100 m dai passi della ringhiera, e le quote scendono nella stessa proporzione). Fotocamera e quote stimate
+# insieme sui punti dello scafo (dritto, poppa, linea dell'antivegetativa e corrimano lungo la murata, montanti della
+# ringhiera) e sugli spigoli del fronte della sovrastruttura (semilarghezza 8,6 m, STIMA), poi posizioni e quote
+# retroproiettate sui piani del modello. Lo zero e' l'orlo superiore dell'antivegetativa rossa (la linea di carico):
+# nella foto la nave e' in zavorra, appoppata, e l'acqua sta ~4 m piu' in basso. Modello proprio (kit, 31/10/2026).
+nome: Petroliera costiera e chimichiera (tipo Pegasus)
+uscita: extracted/navi/petroliera_costiera
+# la passerella e il fascio delle tubolature della petroliera grande (classi/petroliera_parti.py)
+moduli_parti: [petroliera_parti.py]
+
+scafo:
+  # poppa a specchio slanciata: lo scafo composto del kit, con la poppa molto piena (quasi uno specchio) che sale
+  # lungo il profilo della volta; prua col dritto inclinato in alto e quasi verticale sotto
+  generatore: scafo_composto
+  L: 120.0
+  B: 19.2
+  # orlo della murata: la murata alta del castello (7,35 m al dritto), il ponte del castello con la ringhiera, la
+  # murata piena davanti alla coperta, la coperta del carico a 2,0 m, la rampa e il cassero di poppa a 5,5 m
+  bordo: [[0, 7.35], [5.5, 7.3], [6.5, 5.7], [14.0, 5.6], [18.5, 3.65], [26.0, 3.7], [26.6, 2.0], [83.8, 2.0],
+          [87.5, 4.3], [90.7, 5.45], [120.0, 5.5]]
+  profilo_prua: [[0, 7.35], [1.06, 5.66], [1.95, 4.24], [2.83, 2.81], [3.29, 1.74], [3.6, 0]]
+  profilo_poppa: [[0, 5.4], [1.2, 3.1], [2.4, 0]]   # dalla poppa: lo specchio slanciato
+  finezza_prua: 24
+  finezza_poppa: 12
+  pienezza_prua: [0.6, 0.4]
+  pienezza_poppa: [0.4, 0.1]
+  svasatura: 0.0
+  bagnasciuga: 0.4
+
+parti:
+  # ---------------- il castello: i verricelli dell'ancora, l'albero di prua col fanale
+  - {tipo: tuga, nome: verricelli, x0: {prua: 12.8}, x1: {prua: 6.4}, y0: -3.0, y1: 3.0, z0: 5.6, z1: 8.1, mat: scuro, rastrema: 0.97}
+  - {tipo: albero_palo, nome: albero_prua, x: {prua: 14.8}, z0: 5.6, z1: 20.6, r: 0.35, piattaforme: [[14.9, 1.4]], mat: sovrastruttura}
+  # ---------------- la coperta del carico: le ringhiere di murata, la passerella sull'asse, il fascio delle
+  # tubolature, la gru del manifold, il portale a meta' nave, i pali
+  - {tipo: scatola, nome: ringhiera_sinistra, x0: {prua: 84.0}, x1: {prua: 26.5}, y0: 9.42, y1: 9.6, z0: 2.0, z1: 3.56, mat: traliccio}
+  - {tipo: scatola, nome: ringhiera_dritta, x0: {prua: 84.0}, x1: {prua: 26.5}, y0: -9.6, y1: -9.42, z0: 2.0, z1: 3.56, mat: traliccio}
+  - {tipo: tubolature, nome: tubolature, x0: {prua: 88.0}, z0: 2.0, x1: {prua: 27.0}, z1: 2.0, semilarghezza: 5.5, altezza: 1.2}
+  - {tipo: passerella, nome: passerella, x0: {prua: 90.5}, z0: 2.0, x1: {prua: 18.5}, z1: 2.0, altezza: 3.0, spessore: 0.4, cavalletti: 16}
+  - {tipo: gru, nome: gru_manifold, base: [{prua: 47.7}, 0, 10.6], cima: [{prua: 30.0}, 0, 10.9], z0: 2.0, colonna: 1.0, spessore: 0.6}
+  - {tipo: asta, nome: portale_dritta, da: [{prua: 53.5}, -1.0, 2.0], a: [{prua: 53.5}, -1.0, 14.8], spessore: 0.5, mat: sovrastruttura}
+  - {tipo: asta, nome: portale_sinistra, da: [{prua: 53.5}, 1.0, 2.0], a: [{prua: 53.5}, 1.0, 14.8], spessore: 0.5, mat: sovrastruttura}
+  - {tipo: asta, nome: portale_traversa, da: [{prua: 53.5}, -1.25, 14.8], a: [{prua: 53.5}, 1.25, 14.8], spessore: 0.5, mat: sovrastruttura}
+  - {tipo: asta, nome: portale_mezzo, da: [{prua: 53.5}, -1.0, 11.0], a: [{prua: 53.5}, 1.0, 11.0], spessore: 0.3, mat: sovrastruttura}
+  - {tipo: cilindro, nome: palo_prodiero, x: {prua: 37.6}, y: 0, r: 0.35, z0: 2.0, z1: 10.1, n: 8}
+  - {tipo: cilindro, nome: palo_fanale, x: {prua: 71.8}, y: 0, r: 0.45, z0: 2.0, z1: 10.1, n: 8}
+  - {tipo: cilindro, nome: palo_poppiero, x: {prua: 83.8}, y: 0, r: 0.4, z0: 2.0, z1: 10.5, n: 8, mat: scuro}
+  # ---------------- la sovrastruttura di poppa: due piani lunghi, due corti, la timoneria in cima
+  - {tipo: tuga, nome: casa_bassa, x0: {prua: 109.5}, x1: {prua: 93.4}, y0: -8.6, y1: 8.6, z0: 2.0, z1: 9.5, rastrema: 0.995}
+  - {tipo: tuga, nome: casa_alta, x0: {prua: 103.5}, x1: {prua: 93.4}, y0: -8.6, y1: 8.6, z0: 9.5, z1: 15.0, rastrema: 0.995}
+  - {tipo: tuga, nome: timoneria, x0: {prua: 103.5}, x1: {prua: 94.6}, y0: -7.3, y1: 7.3, z0: 15.0, z1: 17.4, rastrema: 0.995}
+  - {tipo: scatola, nome: finestre_timoneria, x0: {prua: 94.8}, x1: {prua: 94.5}, y0: -6.8, y1: 6.8, z0: 15.6, z1: 16.8, mat: nero}
+  # ---------------- l'albero radar dietro la timoneria (le crocette, il radar), il fumaiolo a poppavia
+  - {tipo: albero_palo, nome: albero_radar, x: {prua: 102.5}, z0: 17.4, z1: 31.0, r: 0.35, crocette: [[29.3, 3.0]], piattaforme: [[23.3, 2.0]], mat: sovrastruttura}
+  - {tipo: antenna_radar, nome: radar, x: {prua: 102.5}, z0: 23.45, larghezza: 4.0, altezza: 0.4}
+  - {tipo: tuga, nome: fumaiolo, x0: {prua: 109.6}, x1: {prua: 104.7}, y0: -3.0, y1: 3.0, z0: 9.5, z1: 20.0, rastrema: 0.97}
+  - {tipo: cilindro, nome: scarico_sinistro, x: {prua: 107.3}, y: 1.0, r: 0.45, z0: 20.0, z1: 20.8, n: 8, mat: nero}
+  - {tipo: cilindro, nome: scarico_dritto, x: {prua: 107.3}, y: -1.0, r: 0.45, z0: 20.0, z1: 20.8, n: 8, mat: nero}
+  # ---------------- la lancia di salvataggio sulla culla a poppa, a sinistra
+  - {tipo: asta, nome: culla_prodiera, da: [{prua: 111.0}, 5.5, 5.5], a: [{prua: 111.0}, 5.5, 9.7], spessore: 0.4}
+  - {tipo: asta, nome: culla_poppiera, da: [{prua: 113.6}, 5.5, 5.5], a: [{prua: 113.6}, 5.5, 9.7], spessore: 0.4}
+  - {tipo: imbarcazione, nome: lancia, x0: {prua: 114.5}, x1: {prua: 110.3}, y: 5.5, z0: 9.6, larghezza: 2.4, altezza: 1.6}
+
+# le foto: il permesso dell'utente del 31/10/2026; crediti in foto_kit/crediti.json e nel RAPPORTO
+foto:
+  - nome: sinistra_pegasus
+    file: extracted/navi/petroliera_costiera/foto_kit/Tanker_Pegasus.jpg
+    nave: petroliera prodotti Pegasus (Tvabutzku1234, CC0), di sinistra, ~38 gradi a proravia del traverso
+    qualita: 1.0
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 2 px (contorno_modello.py --maschera): lascia
+    # fuori la riva, le sartie, l'antenna a frusta e l'antivegetativa scoperta sotto la linea di carico
+    maschera_file: extracted/navi/petroliera_costiera/foto_kit/sinistra_pegasus_maschera.png
+    solo_punti: true
+    # nomi, scritte, marchi e bandiere tolti (regola del progetto): il nome a prua e la scritta piccola sul dritto,
+    # «NO SMOKING» e la riga di lettere sopra, le lettere sul cofano del fumaiolo, le bandiere sull'albero radar e
+    # a poppa, la marca di bordo libero sulla murata
+    cancella: [[244, 563, 304, 580], [170, 532, 212, 547], [1056, 506, 1123, 523], [1036, 476, 1140, 491],
+               [1220, 453, 1262, 474], [1152, 298, 1225, 325], [1326, 520, 1345, 562], [816, 624, 846, 639]]
+    fotocamera_iniziale: {posizione: [244, 315, 6.2], bersaglio: [0, 0, 4.5], f: 5020}
+    limiti_fotocamera: {elevazione: [-5, 15], distanza: [50, 5000], focale: [500, 100000]}
+    punti:
+      - [[{prua: 0}, 0, 7.35], [113, 516]]            # dritto di prua, orlo della murata
+      - [[{prua: 3.6}, 0, 0.0], [153, 619]]           # dritto all'orlo dell'antivegetativa (linea di carico)
+      - [[{prua: 119.7}, 5.2, 5.5], [1370, 582.5]]    # spigolo di sinistra dello specchio, orlo della murata
+      - [[{prua: 117.2}, 2.9, 0.0], [1327, 641]]      # spigolo di sinistra dello specchio alla linea di carico
+      - [[{prua: 47.9}, 9.6, 0.0], [720, 634]]        # murata di sinistra alla linea di carico, a meta' nave
+      - [[{prua: 80.2}, 9.6, 0.0], [1040, 641]]       # murata di sinistra alla linea di carico, a poppavia
+      - [[{prua: 44.0}, 9.6, 3.56], [680, 586]]       # corrimano della ringhiera di sinistra
+      - [[{prua: 93.4}, -8.6, 15.0], [1023, 460]]     # fronte della sovrastruttura, spigolo alto di dritta
+      - [[{prua: 93.4}, 8.6, 15.0], [1160, 460]]      # fronte della sovrastruttura, spigolo alto di sinistra
+      - [[{prua: 94.6}, -7.3, 17.4], [1046, 431]]     # cielo della timoneria, spigolo prodiero di dritta
+      - [[{prua: 104.7}, 3.0, 20.0], [1219, 405]]     # fumaiolo, spigolo prodiero alto di sinistra
+      - [[{prua: 102.5}, 0, 31.0], [1178, 272]]       # cima dell'albero radar
+      - [[{prua: 14.8}, 0, 20.6], [292, 343]]         # cima dell'albero di prua
+      - [[{prua: 53.5}, -1.0, 14.8], [701, 443]]      # testa del portale, gamba di dritta

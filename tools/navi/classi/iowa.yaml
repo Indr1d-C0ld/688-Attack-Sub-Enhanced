@@ -1,0 +1,177 @@
+# Corazzata classe Iowa (BB-61), configurazione della riattivazione (1984-1991).
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua (x = L/2 - d).
+# Quote e posizioni misurate sulla foto di fianco dritto della USS Iowa (1984), con la fotocamera calibrata
+# (riproiezione dei pixel sul piano di simmetria); larghezze da controllare con le foto di prua e di poppa.
+nome: Iowa (BB-61), riattivazione anni '80
+uscita: extracted/navi/iowa
+moduli_parti: [iowa_parti.py]
+
+scafo:
+  L: 270.4
+  B: 33.0
+  # coperta misurata sulla foto di fianco calibrata (riproiezione sul piano di simmetria); a prua il
+  # parapetto rialzato dello scafo (circa 2,5 m sopra la coperta) fino a 6 m dalla prua
+  bordo: [[0, 13.0], [5.5, 12.9], [6.5, 10.4], [12.7, 9.9], [17.8, 9.6], [23, 9.4], [28, 9.1], [33, 8.7], [38, 8.3], [43, 7.9], [48.5, 7.6], [60, 7.3], [100, 7.1], [220, 7.0], [240, 7.2], [255, 7.4], [270.4, 7.9]]
+  slancio: 6.8
+  finezza_prua: 95
+  specchio: 0.35
+  svasatura: 0.03
+  pienezza: [0.75, 0.55]
+  bagnasciuga: 1.5
+
+parti:
+  # riempimento sotto lo slancio del dritto: lo scafo del kit e' aperto sotto la prua slanciata e da prua si
+  # vedevano le facce interne dei fianchi (fessura scura negli sprite a 0 gradi)
+  - {tipo: prisma_xz, nome: piede_prua, profilo: [[{prua: 0}, 13.0], [{prua: 6.8}, 0.0], [{prua: 14}, 0.0], [{prua: 14}, 11.0]], y0: -0.5, y1: 0.5, mat: scafo}
+  # torri da 16"/50 (casamatte, quote e bocche delle canne misurate sulla foto di fianco)
+  - {tipo: torre_trinata, nome: torre_1, x: {prua: 69.7}, z0: 7.4, z_ponte: 7.0, altezza: 3.1, lunghezza: 19.5, canna: 12.0, z_canne: 1.5}
+  - {tipo: torre_trinata, nome: torre_2, x: {prua: 89.2}, z0: 10.2, z_ponte: 7.0, altezza: 3.1, lunghezza: 17.5, canna: 12.0, z_canne: 1.5}
+  - {tipo: torre_trinata, nome: torre_3, x: {prua: 193.5}, z0: 8.0, z_ponte: 7.0, altezza: 3.2, lunghezza: 17.5, canna: 14.3, z_canne: 1.6, verso: -1}
+  # asta di bandiera di prua (jackstaff) con pennoncino
+  - {tipo: asta, nome: asta_prua, da: [{prua: 17.5}, 0, 9.6], a: [{prua: 17.5}, 0, 23.1], spessore: 0.35}
+  - {tipo: pennone, nome: pennoncino_prua, x: {prua: 17.5}, z: 19.5, semilunghezza: 2.5}
+  # sovrastruttura a gradoni (livelli 01, 02 e 03/04; quote dei ponti riproiettate dalla foto di fianco)
+  - {tipo: tuga, nome: sovrastruttura_01, x0: {prua: 186}, x1: {prua: 96}, y0: -11.5, y1: 11.5, z0: 6.9, z1: 9.9}
+  - {tipo: tuga, nome: sovrastruttura_02, x0: {prua: 184}, x1: {prua: 99}, y0: -8.0, y1: 8.0, z0: 9.9, z1: 12.5}
+  - {tipo: tuga, nome: gradino_poppiero, x0: {prua: 185.5}, x1: {prua: 182}, y0: -5.0, y1: 5.0, z0: 12.5, z1: 15.2}
+  - {tipo: tuga, nome: sovrastruttura_03_prodiera, x0: {prua: 163}, x1: {prua: 99}, y0: -6.0, y1: 6.0, z0: 12.5, z1: 17.6, rastrema: 0.97}
+  - {tipo: tuga, nome: sovrastruttura_03_poppiera, x0: {prua: 182}, x1: {prua: 163}, y0: -6.0, y1: 6.0, z0: 12.5, z1: 16.7, rastrema: 0.97}
+  - {tipo: tuga, nome: blocco_plancia, x0: {prua: 113.5}, x1: {prua: 99}, y0: -6.5, y1: 6.5, z0: 17.6, z1: 20.3, rastrema: 0.95}
+  - {tipo: direttore_mk37, nome: mk37_prodiero, x: {prua: 109}, y: 0, z0: 20.3, altezza_base: 1.3}
+  # torre di direzione del tiro prodiera
+  - {tipo: tuga, nome: torre_tiro, x0: {prua: 125}, x1: {prua: 115.5}, y0: -4.0, y1: 4.0, z0: 17.6, z1: 33.5, rastrema: 0.85}
+  - {tipo: tuga, nome: piattaforma_torre, x0: {prua: 124.5}, x1: {prua: 114}, y0: -4.0, y1: 4.0, z0: 33.5, z1: 35.5}
+  - {tipo: tuga, nome: casa_direttore, x0: {prua: 124}, x1: {prua: 116.5}, y0: -3.2, y1: 3.2, z0: 35.5, z1: 38.2}
+  - {tipo: direttore_mk38, nome: mk38_prodiero, x: {prua: 118.5}, z0: 38.2, altezza: 1.3}
+  # fumaiolo prodiero e albero di trinchetto a traliccio con SPS-49
+  - {tipo: fumaiolo_cappello, nome: fumaiolo_1, x0: {prua: 134.5}, x1: {prua: 127}, semilarghezza: 4.2, z0: 17.6, z1: 28.5, cappello: 2.3}
+  - {tipo: traliccio, nome: albero_trinchetto, x: {prua: 128.5}, base: 5.5, cima: 3.5, z0: 28.5, z1: 41.8, piani: [41.8]}
+  - {tipo: asta, nome: pennone_longitudinale, da: [{prua: 120.2}, 0, 41.8], a: [{prua: 135}, 0, 41.8], spessore: 0.35}
+  - {tipo: pennone, nome: pennone_trinchetto, x: {prua: 128.5}, z: 41.8, semilunghezza: 10.5}
+  - {tipo: asta, nome: alberetto_trinchetto, da: [{prua: 132.2}, 0, 41.8], a: [{prua: 132.2}, 0, 55.2], spessore: 0.45}
+  - {tipo: asta, nome: supporto_sps49, da: [{prua: 128.0}, 0, 41.8], a: [{prua: 128.0}, 0, 44.8], spessore: 0.7}
+  - {tipo: antenna_radar, nome: sps49, x: {prua: 128.0}, z0: 44.8, larghezza: 7.3, altezza: 2.5, orientamento: 90}
+  # tra i fumaioli e attorno al fumaiolo poppiero: Phalanx su colonnine (due per lato)
+  - {tipo: cilindro, nome: colonna_ciws_1d, x: {prua: 146}, y: -6.2, r: 1.1, z0: 17.6, z1: 20.4}
+  - {tipo: ciws, nome: phalanx_1d, x: {prua: 146}, y: -6.2, z0: 20.4}
+  - {tipo: cilindro, nome: colonna_ciws_2d, x: {prua: 151}, y: -6.2, r: 1.1, z0: 17.6, z1: 20.4}
+  - {tipo: ciws, nome: phalanx_2d, x: {prua: 151}, y: -6.2, z0: 20.4}
+  - {tipo: cilindro, nome: colonna_ciws_1s, x: {prua: 146}, y: 6.2, r: 1.1, z0: 17.6, z1: 20.4}
+  - {tipo: ciws, nome: phalanx_1s, x: {prua: 146}, y: 6.2, z0: 20.4}
+  - {tipo: cilindro, nome: colonna_ciws_2s, x: {prua: 151}, y: 6.2, r: 1.1, z0: 17.6, z1: 20.4}
+  - {tipo: ciws, nome: phalanx_2s, x: {prua: 151}, y: 6.2, z0: 20.4}
+  # fumaiolo poppiero e albero di maestra
+  - {tipo: fumaiolo_cappello, nome: fumaiolo_2, x0: {prua: 161}, x1: {prua: 152.5}, semilarghezza: 4.2, z0: 17.6, z1: 27.8, cappello: 2.2}
+  - {tipo: asta, nome: albero_maestra, da: [{prua: 151.3}, 0, 17.6], a: [{prua: 151.3}, 0, 35.0], spessore: 0.45}
+  - {tipo: pennone, nome: pennone_maestra, x: {prua: 151.3}, z: 31.0, semilunghezza: 3.0}
+  # direzione del tiro poppiera
+  - {tipo: tuga, nome: base_torre_poppiera, x0: {prua: 175}, x1: {prua: 170}, y0: -3.0, y1: 3.0, z0: 16.7, z1: 20.0}
+  - {tipo: cilindro, nome: torre_mk38_poppiero, x: {prua: 172.5}, y: 0, r: 2.3, z0: 20.0, z1: 22.4}
+  - {tipo: direttore_mk38, nome: mk38_poppiero, x: {prua: 172.5}, z0: 22.4, altezza: 1.8, verso: -1}
+  - {tipo: direttore_mk37, nome: mk37_poppiero, x: {prua: 181.3}, y: 0, z0: 12.5, altezza_base: 3.8, verso: -1}
+  # impianti binati da 5"/38: tre per lato (i quattro poppieri sono stati sbarcati nella riattivazione)
+  - {tipo: impianto_binato, nome: mk28_1d, x: {prua: 104}, y: -9.8, z0: 9.9}
+  - {tipo: impianto_binato, nome: mk28_2d, x: {prua: 117}, y: -9.8, z0: 9.9}
+  - {tipo: impianto_binato, nome: mk28_3d, x: {prua: 131}, y: -9.8, z0: 9.9, verso: -1}
+  - {tipo: impianto_binato, nome: mk28_1s, x: {prua: 104}, y: 9.8, z0: 9.9}
+  - {tipo: impianto_binato, nome: mk28_2s, x: {prua: 117}, y: 9.8, z0: 9.9}
+  - {tipo: impianto_binato, nome: mk28_3s, x: {prua: 131}, y: 9.8, z0: 9.9, verso: -1}
+  # lanciatori corazzati Tomahawk (8 ABL) e Harpoon (4 x 4) sul livello 02 ai lati
+  - {tipo: abl, nome: abl_1d, x: {prua: 140}, y: -9.0, z0: 9.9}
+  - {tipo: abl, nome: abl_2d, x: {prua: 147}, y: -9.0, z0: 9.9}
+  - {tipo: abl, nome: abl_3d, x: {prua: 160}, y: -7.4, z0: 12.5, verso: -1}
+  - {tipo: abl, nome: abl_4d, x: {prua: 167}, y: -7.4, z0: 12.5, verso: -1}
+  - {tipo: abl, nome: abl_1s, x: {prua: 140}, y: 9.0, z0: 9.9}
+  - {tipo: abl, nome: abl_2s, x: {prua: 147}, y: 9.0, z0: 9.9}
+  - {tipo: abl, nome: abl_3s, x: {prua: 160}, y: 7.4, z0: 12.5, verso: -1}
+  - {tipo: abl, nome: abl_4s, x: {prua: 167}, y: 7.4, z0: 12.5, verso: -1}
+  - {tipo: harpoon, nome: harpoon_d, x: {prua: 176}, y: -7.6, z0: 12.5, verso: -1}
+  - {tipo: harpoon, nome: harpoon_s, x: {prua: 176}, y: 7.6, z0: 12.5, verso: -1}
+
+foto:
+  - nome: fianco_dritta
+    file: extracted/navi/iowa/foto/fianco_dritta_1984_full.jpg
+    maschera_file: extracted/navi/iowa/foto/fianco_dritta_1984_maschera.png   # classi/iowa_maschera_fianco.yaml (include i numeri di scafo)
+    nave: USS Iowa (BB-61), 1984
+    qualita: 1.0
+    specchiabile: true
+    orizzonte_y: 1164
+    soglia_cielo: 165
+    soglia_mare: 165
+    mare_fino_a_y: 1406
+    riquadro: [156, 844, 2859, 1406]
+    cancella: [[2681, 1316, 2727, 1350], [266, 1395, 297, 1414]]
+    soglia_schiuma: 175
+    fotocamera_iniziale: {posizione: [0, -2500, 30], bersaglio: [0, 0, 10], f: 25000}
+    punti:
+      - [[{prua: 0}, 0, 13.0], [2826, 1266]]        # dritto di prua in coperta
+      - [[{prua: 5.9}, 0, 1.8], [2768, 1377]]       # piede del dritto sopra l'onda di prua
+      - [[{prua: 270.4}, 0, 7.9], [196, 1374]]      # poppa in coperta
+      - [[{prua: 132.2}, 0, 55.2], [1527, 881]]     # cima dell'alberetto di trinchetto
+      - [[{prua: 151.3}, 0, 35.0], [1344, 1087]]     # cima dell'albero di maestra
+      - [[{prua: 48.3}, 0, 8.9], [2350, 1317]]      # bocche delle canne della torre 1
+      - [[{prua: 216.5}, 0, 9.6], [716, 1345]]      # bocche delle canne della torre 3
+      # orizzonte: punto virtuale sul mare alla distanza dell'orizzonte geometrico (~24 km, fotocamera a ~45 m),
+      # quota -45 m per la curvatura terrestre. Vincola l'elevazione della fotocamera, altrimenti indeterminata
+      # con punti quasi complanari (ricavati con un'iterazione calibrazione -> raggio -> punto). Un solo punto, al centro
+      # della nave, per non vincolare il rollio (l'assetto della nave rispetto all'orizzonte resta libero).
+      - [[-2608.6, 18180.4, -45.0], [1500, 1176]]
+  - nome: prua_sinistra
+    file: extracted/navi/iowa/foto/prua_sinistra_1987.jpg
+    nave: USS Iowa (BB-61), 1987
+    qualita: 0.9
+    specchiabile: true
+    orizzonte_y: 338
+    soglia_cielo: 175
+    riquadro: [150, 220, 1730, 930]
+    cancella: [[315, 810, 352, 847]]
+    soglia_schiuma: 240
+    fotocamera_iniziale: {posizione: [450, 330, 15], bersaglio: [0, 0, 10], f: 3800}
+    punti:
+      - [[{prua: 132.2}, 0, 55.2], [1111, 238]]     # cima dell'alberetto di trinchetto
+      - [[{prua: 17.5}, 0, 23.1], [351, 604]]       # cima dell'asta di prua
+      - [[{prua: 6.8}, 0, 0], [250, 897]]           # dritto di prua al galleggiamento
+      - [[{prua: 128.5}, 10.5, 41.8], [1185, 377]]   # pennone di trinchetto, estremita' di sinistra (a destra nella foto)
+      - [[{prua: 128.5}, -10.5, 41.8], [988, 382]]   # pennone di trinchetto, estremita' di dritta (a sinistra nella foto)
+      - [[{prua: 79.45}, 6.5, 10.4], [837, 730]]    # torre 1, spigolo poppiero alto di sinistra
+      - [[{prua: 97.95}, 6.5, 13.2], [948, 687]]    # torre 2, spigolo poppiero alto di sinistra
+      - [[{prua: 270.4}, 0, 7.9], [1720, 669]]      # poppa in coperta
+  - nome: prua_dritta
+    file: extracted/navi/iowa/foto/prua_dritta_1988_full.jpg
+    maschera_file: extracted/navi/iowa/foto/prua_dritta_1988_maschera.png   # parti chiare piu' del cielo: classi/iowa_maschera_prua.yaml (metodo cielo)
+    nave: USS Iowa (BB-61), 1988 (Rota)
+    qualita: 0.8
+    specchiabile: true
+    orizzonte_y: 1445
+    soglia_cielo: 225
+    riquadro: [600, 540, 1340, 1445]
+    soglia_schiuma: 252
+    fotocamera_iniziale: {posizione: [2000, -350, 10], bersaglio: [0, 0, 15], f: 15000}
+    punti:
+      - [[{prua: 132.2}, 0, 55.2], [970, 585]]      # cima dell'alberetto di trinchetto
+      - [[{prua: 128.5}, -10.5, 41.8], [812, 810]]  # pennone di trinchetto, estremita' di dritta (a sinistra nella foto)
+      - [[{prua: 128.5}, 10.5, 41.8], [1128, 810]]  # pennone di trinchetto, estremita' di sinistra (a destra nella foto)
+      - [[{prua: 17.5}, 0, 23.1], [1112, 1047]]     # cima dell'asta di prua
+      - [[{prua: 0}, 0, 13.0], [1130, 1267]]        # dritto di prua, sommita' del parapetto
+      - [[{prua: 6.8}, 0, 0], [1130, 1525]]         # dritto di prua al galleggiamento
+  - nome: poppa_sinistra
+    file: extracted/navi/iowa/foto/poppa_sinistra_1986.jpg
+    maschera_file: extracted/navi/iowa/foto/poppa_sinistra_1986_maschera.png   # ritoccata a mano (classi/iowa_maschera_poppa.yaml)
+    nave: USS Iowa (BB-61), 1986
+    qualita: 0.8
+    specchiabile: true
+    orizzonte_y: 345
+    soglia_cielo: 150
+    riquadro: [540, 345, 1740, 940]
+    cancella: [[1562, 875, 1590, 896]]
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [-450, 300, 160], bersaglio: [0, 0, 10], f: 4400}
+    punti:
+      - [[{prua: 132.2}, 0, 55.2], [953, 378]]      # cima dell'alberetto di trinchetto
+      - [[{prua: 128.5}, 10.5, 41.8], [875, 467]]   # pennone di trinchetto, estremita' di sinistra (a sinistra nella foto)
+      - [[{prua: 128.5}, -10.5, 41.8], [997, 464]]  # pennone di trinchetto, estremita' di dritta (a destra nella foto)
+      - [[{prua: 270.4}, 0, 7.9], [1720, 855]]      # poppa in coperta, sul piano di simmetria
+      - [[{prua: 0}, 0, 13.0], [569, 571]]          # dritto di prua, sommita' del parapetto
+      - [[{prua: 216.0}, 0, 9.6], [1336, 752]]      # torre 3, bocca della canna centrale
+      - [[{prua: 216.0}, 2.6, 9.6], [1316, 754]]    # torre 3, bocca della canna di sinistra

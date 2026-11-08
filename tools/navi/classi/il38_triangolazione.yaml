@@ -1,0 +1,32 @@
+# Triangolazione degli elementi principali dell'Il-38 da tre foto (tools/navi/triangola.py).
+# xyz = [distanza dal muso, y (sinistra), quota]; asse della fusoliera a z = 10. Lunghezza 39,6 m (muso - punta del MAD).
+L: 39.6
+uscita_fotocamere: extracted/navi/il38/triangolazione_fotocamere.json
+elementi:
+  naso: {xyz: [0, 0, 10.0]}
+  mad: {xyz: [39.6, 0, 10.6], liberi: z}
+  deriva_ba: {xyz: [33.0, 0, 16.9], liberi: xz}
+  deriva_bu: {xyz: [34.7, 0, 16.9], liberi: xz}
+  ala_d: {xyz: [12.5, -18.7, 9.9], liberi: xz}
+  ala_s: {simmetrico_di: ala_d}
+  ala_d_bu: {xyz: [14.6, -18.7, 9.9], liberi: x}
+  stab_d: {xyz: [33.0, -5.9, 10.6], liberi: xyz}
+  est_d: {xyz: [8.0, -10.0, 9.6], liberi: xyz}
+  int_d: {xyz: [7.0, -4.9, 9.6], liberi: xyz}
+foto:
+  - nome: dritto_basso_1985
+    file: extracted/navi/il38/foto/dritto_basso_1985.jpg
+    limiti_fotocamera: {elevazione: [-60, 15], distanza: [30, 5000]}
+    fotocamera_iniziale: {posizione: [0, -900, -60], bersaglio: [0, 0, 10], f: 37000}
+    osservazioni: {naso: [1790, 605], mad: [60, 533], deriva_ba: [350, 272], deriva_bu: [285, 272], ala_d: [1376, 458], ala_d_bu: [1291, 462]}
+  - nome: dritto_basso_1987
+    file: extracted/navi/il38/foto/dritto_basso_1987.jpg
+    limiti_fotocamera: {elevazione: [-70, 15], distanza: [30, 5000]}
+    fotocamera_iniziale: {posizione: [0, -700, -150], bersaglio: [0, 0, 10], f: 25000}
+    osservazioni: {naso: [1689, 691], mad: [111, 635], deriva_ba: [388, 410], deriva_bu: [322, 412], ala_d: [1266, 405], ala_d_bu: [1169, 408],
+                   stab_d: [305, 587], est_d: [1433, 558], int_d: [1447, 633]}
+  - nome: sinistro_1986
+    file: extracted/navi/il38/foto/sinistro_1986.jpg
+    limiti_fotocamera: {elevazione: [-20, 30], distanza: [30, 5000]}
+    fotocamera_iniziale: {posizione: [0, 900, 15], bersaglio: [0, 0, 10], f: 41000}
+    osservazioni: {naso: [45, 660], mad: [1905, 630], deriva_ba: [1597, 336], deriva_bu: [1675, 337]}

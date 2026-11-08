@@ -1,0 +1,49 @@
+# Maschere tracciate a mano per le foto del peschereccio (Atlantic Peace, 2012, CC0; tools/navi/maschera_manuale.py).
+# Coordinate in pixel degli originali (1536 x 1152). Metodo cielo a colori: sopra l'orizzonte e dentro l'inviluppo
+# e' nave cio' che si scosta dal cielo grigio-azzurro della propria riga (sovrastrutture bianche, portale, alberi);
+# lo scafo blu e bianco, davanti al mare color fango e alla banchina, e' il poligono `includi` tra la linea della
+# murata e il galleggiamento.
+---
+# 3/4 di prua dritta (~55 gradi), dalla banchina; orizzonte marino a sinistra a y = 640
+metodo: cielo
+colore: true
+file: extracted/navi/peschereccio/foto/prua_dritta_atlantic_peace_2012.jpg
+uscita: extracted/navi/peschereccio/foto/prua_dritta_atlantic_peace_2012_maschera.png
+sfocatura: 1.2
+orizzonte_y: 640
+margine_orizzonte: 2
+soglia: 26
+inviluppo: [[196, 640], [196, 575], [235, 540], [250, 425], [290, 400], [325, 330], [330, 255], [340, 255], [350, 380],
+            [400, 395], [455, 470], [540, 535], [600, 520], [690, 500], [700, 340], [745, 330], [760, 230], [790, 230],
+            [810, 330], [880, 300], [920, 330], [1000, 330], [1010, 440], [1030, 470], [1060, 500], [1300, 495],
+            [1305, 512], [1275, 560], [1245, 610], [1220, 640]]
+includi:
+  # scafo: murata dalla poppa al dritto, dritto, galleggiamento fino alla poppa
+  - [[195, 598], [400, 596], [640, 594], [800, 589], [880, 561], [1000, 552], [1100, 542], [1200, 529], [1296, 513],
+     [1270, 560], [1240, 610], [1206, 660], [1190, 698], [1183, 716], [900, 718], [600, 716], [400, 714], [205, 712],
+     [197, 650]]
+escludi:
+  - [[925, 280], [990, 280], [990, 362], [925, 362]]      # radome satellitare (non c'era negli anni '80)
+area_minima: 60
+buco_massimo: 2500
+---
+# giardinetto di dritta (~115 gradi), dalla banchina: solo il terzo poppiero (portale, gru, ponte di lavoro, specchio),
+# perche' il resto di questa foto non e' coerente con le altre (vedi RAPPORTO.md)
+metodo: cielo
+colore: true
+file: extracted/navi/peschereccio/foto/poppa_dritta_atlantic_peace_2012.jpg
+uscita: extracted/navi/peschereccio/foto/poppa_dritta_atlantic_peace_2012_maschera.png
+sfocatura: 1.2
+orizzonte_y: 600
+margine_orizzonte: 2
+soglia: 26
+inviluppo: [[290, 600], [300, 570], [390, 540], [395, 395], [440, 380], [452, 300], [458, 238], [466, 238], [470, 300],
+            [495, 362], [560, 345], [590, 530], [720, 520], [720, 600]]
+includi:
+  # scafo dallo specchio (spigolo di dritta a x = 381) fino a x = 720; la fascia sopra y = 600 (murata della
+  # poppa e mastra con la ringhiera) e' dentro l'inviluppo ma sotto l'orizzonte usato qui
+  - [[298, 600], [381, 604], [600, 630], [720, 632], [720, 746], [600, 749], [381, 749], [300, 746]]
+  # ringhiera, persone e attrezzi sulla poppa e sul ponte di lavoro, davanti agli edifici dell'altra sponda
+  - [[381, 575], [500, 590], [600, 600], [720, 598], [720, 636], [381, 606]]
+area_minima: 60
+buco_massimo: 300        # niente riempimento del cielo racchiuso da gru, colonna e murata

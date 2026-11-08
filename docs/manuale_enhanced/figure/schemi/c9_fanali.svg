@@ -1,0 +1,25 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='440' viewBox='0 0 760 440' font-family='DejaVu Sans, Helvetica, Arial, sans-serif' role='img' aria-label='I settori dei fanali di navigazione e che cosa si vede da ogni lato'>
+<title>I settori dei fanali di navigazione e che cosa si vede da ogni lato</title>
+<rect width='760' height='440' fill='#fcfcfb'/>
+<text x='36.0' y='26.0' font-size='16' fill='#0b0b0b' text-anchor='start' font-weight='bold'>I settori dei fanali</text>
+<text x='36.0' y='46.0' font-size='12' fill='#52514e' text-anchor='start'>Dal regolamento internazionale (COLREG): albero 225°, fianchi 112,5° ciascuno, poppa 135°.</text>
+<path d='M250,250 L83.7,318.9 A180,180 0 1 1 416.3,318.9 Z' fill='#c3c2b7' fill-opacity='0.35' stroke='#c3c2b7'/>
+<path d='M250,250 L250.0,100.0 A150,150 0 0 1 388.6,307.4 Z' fill='#1baf7a' fill-opacity='0.35' stroke='#1baf7a'/>
+<path d='M250,250 L111.4,307.4 A150,150 0 0 1 250.0,100.0 Z' fill='#d03b2f' fill-opacity='0.35' stroke='#d03b2f'/>
+<path d='M250,250 L370.1,299.7 A130,130 0 0 1 129.9,299.7 Z' fill='#c3c2b7' fill-opacity='0.6' stroke='#c3c2b7'/>
+<path d='M250.0,220.0 L258.0,235.0 L258.0,280.0 L242.0,280.0 L242.0,235.0 Z' fill='#52514e' stroke='#0b0b0b'/>
+<text x='250.0' y='60.0' font-size='12' fill='#0b0b0b' text-anchor='middle'>fanale d&#39;albero, bianco, 225°</text>
+<text x='360.0' y='190.0' font-size='12' fill='#0b0b0b' text-anchor='start'>verde, dritta</text>
+<text x='140.0' y='190.0' font-size='12' fill='#0b0b0b' text-anchor='end'>rosso, sinistra</text>
+<text x='250.0' y='404.0' font-size='12' fill='#0b0b0b' text-anchor='middle'>fanale di poppa, bianco, 135°</text>
+<text x='460.0' y='120.0' font-size='12' fill='#52514e' text-anchor='start'>Che cosa vedi:</text>
+<text x='460.0' y='140.0' font-size='12' fill='#0b0b0b' text-anchor='start'>- verde e rosso insieme: ti viene incontro;</text>
+<text x='460.0' y='160.0' font-size='12' fill='#0b0b0b' text-anchor='start'>- solo il verde: ti mostra la dritta;</text>
+<text x='460.0' y='180.0' font-size='12' fill='#0b0b0b' text-anchor='start'>- solo il rosso: ti mostra la sinistra;</text>
+<text x='460.0' y='200.0' font-size='12' fill='#0b0b0b' text-anchor='start'>- solo un bianco: la vedi di poppa;</text>
+<text x='460.0' y='220.0' font-size='12' fill='#0b0b0b' text-anchor='start'>- due bianchi d&#39;albero: l&#39;allineamento</text>
+<text x='460.0' y='240.0' font-size='12' fill='#0b0b0b' text-anchor='start'>  dà la rotta (il più alto sta a poppavia).</text>
+<text x='460.0' y='260.0' font-size='12' fill='#0b0b0b' text-anchor='start'>Alla fonda un bianco tutt&#39;intorno; in pesca</text>
+<text x='460.0' y='280.0' font-size='12' fill='#0b0b0b' text-anchor='start'>verde o rosso sopra bianco; la manovra</text>
+<text x='460.0' y='300.0' font-size='12' fill='#0b0b0b' text-anchor='start'>limitata rosso, bianco, rosso.</text>
+</svg>

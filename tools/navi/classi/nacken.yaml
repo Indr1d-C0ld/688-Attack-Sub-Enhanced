@@ -1,0 +1,67 @@
+# Sottomarino svedese classe Näcken (A14, 1980-81), configurazione prima dello Stirling (1988): lo scafo a goccia corto
+# e largo con la prua tonda, il cassero lungo e piatto, la vela alta e diritta coi timoni di vela, la coda a X con
+# un'elica sola.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Quote rispetto al galleggiamento in emersione. Misure: 49,5 x 5,7 m, immersione 5,5 m,
+# 1.015 t in emersione (Jane's); la sagoma (vela, cassero, coda) dal profilo della Näcken com'era (disegno, pubblico
+# dominio, ~27,8 px/m), che serve anche per la calibrazione e la tessitura (scura e uniforme come lo scafo vero); la
+# foto dall'alto della Näcken in emersione (anni '80) e' troppo di scorcio per calibrare: resta come riscontro.
+# Modello proprio (blocco G del kit, 30/10/2026): prima usava il type206.
+nome: Näcken (A14)
+uscita: extracted/navi/nacken
+tono: 0.25
+contrasto: 0.12
+moduli_parti: [sottomarini_parti.py]
+peso_ombra: 0.03
+
+scafo:
+  generatore: scafo_sottomarino
+  L: 49.5
+  B: 5.7
+  # la prua tonda (3,5 m), il cilindro lungo, il cono di poppa corto fino all'elica (dal profilo)
+  forma: {prua: 3.5, poppa: 10.0, esponente_prua: 2.2, esponente_poppa: 1.4, raggio_coda: 0.4}
+  bordo_libero: 0.2        # sommita' dello scafo (immersione 5,5 m su 5,7 di diametro)
+  # il cassero piatto 1,65 m sopra lo scafo, dalla prua fino a 38 m, poi scende verso la coda
+  cassero: [[1.9, 1.0, 1.0], [4.0, 1.85, 1.4], [36.0, 1.85, 1.4], [38.5, 1.2, 1.0], [41.2, 0.4, 0.5]]
+  stazioni: 80
+  punti_sezione: 40
+
+parti:
+  # la vela alta e diritta, col cielo appena arrotondato davanti; i timoni di vela a meta' altezza
+  - tipo: vela
+    nome: vela
+    pianta: ovale
+    esponente: 3.0
+    livelli:
+      - [1.2, {prua: 16.5}, {prua: 24.7}, 0.95]
+      - [6.5, {prua: 16.5}, {prua: 24.7}, 0.9]
+      - [7.0, {prua: 16.9}, {prua: 24.7}, 0.85]
+    piani: [[{prua: 17.2}, 4.6, 2.3, 1.6, 1.1, 0.3, 0.3]]
+  - {tipo: cilindro, nome: periscopio, x: {prua: 23.0}, y: 0, r: 0.2, z0: 7.0, z1: 8.6, n: 8, mat: scuro}
+  - {tipo: cilindro, nome: snorkel, x: {prua: 20.0}, y: 0, r: 0.15, z0: 7.0, z1: 7.8, n: 8, mat: scuro}
+  # il braccio superiore della coda a X che esce dall'acqua (gli altri tre sono sotto)
+  - {tipo: timone_verticale, nome: timone, x: {prua: 45.5}, z0: -1.0, z1: 1.0, corda: 2.4, corda_estremita: 1.6, spessore: 0.35, freccia: 0.6}
+
+foto:
+  - nome: profilo
+    file: extracted/navi/nacken/foto/HMS_Näcken_original_appearance.png
+    nave: HMS Näcken com'era (disegno di profilo, pubblico dominio), di dritta
+    qualita: 0.6
+    specchiabile: true
+    # il disegno e' di profilo esatto: l'elevazione resta a zero (tutti i punti sono sulla mezzeria). La maschera e' la
+    # sagoma del modello calibrato sui punti, erosa di 2 px
+    maschera_file: extracted/navi/nacken/foto/profilo_maschera.png
+    solo_punti: true
+    riquadro: [0, 120, 1433, 520]
+    # la sigla vera tolta (come sulle altre classi): il «Näk» sulla vela
+    cancella: [[875, 160, 930, 190]]
+    fotocamera_iniziale: {posizione: [0, -5000, 0], bersaglio: [0, 0, 0], f: 138000}
+    limiti_fotocamera: {elevazione: [-0.5, 0.5], distanza: [1000, 20000], focale: [20000, 600000]}
+    punti:
+      - [[{prua: 0}, 0, -2.0], [1417, 398]]           # punta della prua
+      - [[{prua: 49.5}, 0, -2.0], [43, 398]]          # fine del cono di poppa al mozzo dell'elica
+      - [[{prua: 2.3}, 0, 1.85], [1354, 294]]         # inizio del cassero a prua, in coperta
+      - [[{prua: 38.4}, 0, 1.85], [351, 294]]         # fine del cassero piatto a poppa
+      - [[{prua: 16.6}, 0, 6.9], [956, 152]]          # spigolo prodiero alto della vela
+      - [[{prua: 24.7}, 0, 7.0], [731, 150]]          # spigolo poppiero alto della vela
+      - [[{prua: 22.7}, 0, -5.5], [788, 494]]         # chiglia a meta' nave

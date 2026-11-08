@@ -1,0 +1,104 @@
+# Sottomarino lanciamissili Progetto 670M "Chayka" (NATO: Charlie II), configurazione 1989 (6 unita' della Flotta del
+# Nord): scafo a sezione alta e stretta con prua piena (8 contenitori dei P-120 Malakhit a prua, sotto portelli a filo),
+# vela bassa a fronte arrotondato con cielo piatto e dorso corto, timone superiore a freccia.
+# Il Charlie II e' un Charlie I (Progetto 670) allungato di ~9,5 m con una sezione inserita a proravia della vela:
+# prua (fino a ~25 m) e parte dalla vela a poppa sono uguali. Nessuna foto di pubblico dominio di un Charlie II in
+# superficie: le foto sono di Charlie I (Chakra e un'unita' sovietica), proiettate in due pezzi (vedi RAPPORTO.md).
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua. Quote assolute rispetto al galleggiamento in emersione normale.
+nome: Charlie II (Progetto 670M)
+uscita: extracted/navi/charlie2
+tono: 0.22
+contrasto: 0.12
+peso_ombra: 0.03
+
+scafo:
+  generatore: scafo_sottomarino
+  L: 104.5
+  B: 9.9
+  ellitticita: 1.13        # scafo piu' alto (11,2 m) che largo (9,9 m)
+  raggio: [[0.0, 0.0], [1.0, 2.4], [2.5, 3.6], [4.5, 4.3], [7.0, 4.75], [11.8, 4.95], [33.6, 4.72], [50.0, 4.55],
+           [66.5, 4.16], [77.4, 3.63], [88.3, 2.71], [93.8, 2.1], [96.6, 1.58], [99.3, 0.88], [102.0, 0.32], [104.5, 0.0]]
+  asse: [[0.0, -1.49], [11.8, -1.49], [33.6, -1.77], [50.0, -1.96], [66.5, -2.4], [77.4, -2.55], [88.3, -2.65],
+         [93.8, -2.8], [96.6, -2.85], [99.3, -2.5], [104.5, -2.5]]
+  stazioni: 100
+  punti_sezione: 48
+
+parti:
+  - tipo: vela
+    nome: vela
+    pianta: ovale
+    esponente: 2.6
+    livelli:
+      - [2.5, {prua: 38.4}, {prua: 57.5}, 2.0]
+      - [3.3, {prua: 38.6}, {prua: 56.6}, 2.0]
+      - [5.0, {prua: 38.7}, {prua: 54.6}, 1.95]
+      - [6.3, {prua: 38.9}, {prua: 53.0}, 1.9]
+      - [6.8, {prua: 39.2}, {prua: 52.4}, 1.75]
+      - [7.0, {prua: 39.8}, {prua: 51.8}, 1.5]
+  - {tipo: cilindro, nome: antenna, x: {prua: 47.6}, y: 0, r: 0.1, z0: 6.0, z1: 12.1, n: 6, mat: scuro}
+  - {tipo: cilindro, nome: periscopio, x: {prua: 50.2}, y: 0, r: 0.25, z0: 6.0, z1: 10.5, n: 8, mat: scuro}
+  - {tipo: timone_verticale, nome: timone, x: {prua: 94.9}, z0: -0.5, z1: 3.6, corda: 4.7, corda_estremita: 2.0, spessore: 0.6, freccia: 2.7}
+
+foto:
+  # Chakra (Charlie I) 1988 di prua a sinistra, proiettata in due pezzi: dalla vela a poppa (coordinate del Charlie II,
+  # vela e poppa uguali) e la sola prua (geometria del Charlie I: vela 9,5 m piu' a prua, `solo_punti`)
+  - nome: sinistra_vela_poppa
+    file: extracted/navi/charlie2/foto/prua_sinistra_chakra_1988.jpg
+    maschera_file: extracted/navi/charlie2/foto/prua_sinistra_chakra_1988_maschera_poppa.png   # classi/charlie2_maschere.yaml
+    nave: Chakra (K-43, Charlie I), 26/8/1988 (DD-ST-88-09408); vela e parte poppiera
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    fotocamera_iniziale: {posizione: [200, 250, 15], bersaglio: [5, 0, 3], f: 4000}
+    prior_fotocamera: {elevazione: 3, sigma_el: 3}
+    limiti_fotocamera: {azimut: [10, 120], elevazione: [-3, 15], rollio: [-6, 6], mira_z: [-40, 40], distanza: [30, 3000]}
+    escludi: [[0, 0, 1010, 1196]]    # la prua (Charlie I, piu' corta) non entra nella calibrazione di questa voce
+    punti:
+      - [[{prua: 39.4}, 0, 7.0], [1085, 437]]     # spigolo prodiero del cielo della vela
+      - [[{prua: 38.6}, 0, 3.5], [1065, 572]]     # piede del fronte della vela
+      - [[{prua: 56.6}, 0, 3.3], [1430, 552]]     # piede del dorso della vela
+      - [[{prua: 47.6}, 0, 12.1], [1245, 245]]    # cima dell'antenna
+      - [[{prua: 50.2}, 0, 10.5], [1290, 305]]    # cima del periscopio
+      - [[{prua: 10.5}, 0, 1.5], [100, 700]]      # prua del Charlie I sull'onda di prua (1 m + 9,5 m della sezione mancante)
+  - nome: sinistra_prua
+    file: extracted/navi/charlie2/foto/prua_sinistra_chakra_1988.jpg
+    maschera_file: extracted/navi/charlie2/foto/prua_sinistra_chakra_1988_maschera_prua.png   # classi/charlie2_maschere.yaml
+    nave: Chakra (K-43, Charlie I), 26/8/1988 (DD-ST-88-09408); sola prua
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    solo_punti: true
+    escludi_parti: [vela, antenna, periscopio, timone]
+    orizzonte_y: 0
+    soglia_cielo: 0
+    fotocamera_iniziale: {posizione: [200, 250, 15], bersaglio: [5, 0, 3], f: 4000}
+    prior_fotocamera: {elevazione: 3, sigma_el: 3}
+    limiti_fotocamera: {azimut: [10, 120], elevazione: [-3, 15], rollio: [-6, 6], mira_z: [-40, 40], distanza: [30, 3000]}
+    punti:     # geometria del Charlie I: vela 9,5 m piu' a prua
+      - [[{prua: 1.0}, 0, 1.5], [100, 700]]       # prua sull'onda di prua
+      - [[{prua: 29.9}, 0, 7.0], [1085, 437]]     # spigolo prodiero del cielo della vela
+      - [[{prua: 29.1}, 0, 3.5], [1065, 572]]     # piede del fronte della vela
+      - [[{prua: 47.1}, 0, 3.3], [1430, 552]]     # piede del dorso della vela
+      - [[{prua: 38.1}, 0, 12.1], [1245, 245]]    # cima dell'antenna
+  - nome: dritta_aerea
+    file: extracted/navi/charlie2/foto/fianco_dritto_aereo_1990.jpg
+    maschera_file: extracted/navi/charlie2/foto/fianco_dritto_aereo_1990_maschera.png   # classi/charlie2_maschere.yaml
+    nave: Charlie I sovietico, 18/9/1990 (DN-ST-91-00404); vela e parte poppiera
+    esponente_peso: 1.0
+    qualita: 0.9
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    escludi_parti: [antenna, periscopio]
+    fotocamera_iniziale: {posizione: [0, -800, 450], bersaglio: [0, 0, 3], f: 6000}
+    prior_fotocamera: {elevazione: 30, sigma_el: 6, distanza: 900, sigma_logD: 0.5}
+    limiti_fotocamera: {azimut: [-140, -40], elevazione: [10, 60], rollio: [-15, 15], mira_z: [-40, 40]}
+    punti:
+      - [[{prua: 39.4}, 0, 7.0], [1105, 555]]     # spigolo prodiero del cielo della vela
+      - [[{prua: 38.6}, -2.0, 3.4], [1118, 635]]  # piede del fronte della vela, fianco dritto
+      - [[{prua: 56.6}, 0, 3.3], [785, 565]]      # piede del dorso della vela
+      - [[{prua: 99.6}, 0, 3.6], [80, 392]]       # timone superiore, spigolo poppiero in cima
+      - [[{prua: 97.6}, 0, 3.6], [125, 395]]      # timone superiore, spigolo prodiero in cima

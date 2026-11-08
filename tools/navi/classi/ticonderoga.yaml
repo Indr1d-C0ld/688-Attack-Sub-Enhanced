@@ -1,0 +1,77 @@
+# Incrociatore lanciamissili USS Ticonderoga (CG-47), configurazione 1989: lo scafo della Spruance (e della Kidd), le
+# due tughe squadrate coi pannelli ottagonali dell'SPY-1A (due a prua, due a poppa), l'albero di prua e il traliccio
+# maestro con l'SPS-49, i fumaioli in mezzo, i Mk 26 e i Mk 45 a prua e a poppa, l'hangar e il ponte di volo.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure: 172,5 x 16,8 m (dossier docs/ricerca/32_firme_lotto2.md); lo scafo, le armi e le
+# quote come la Kidd (kidd.yaml); le posizioni delle tughe e degli alberi dalla foto di sinistra del 1983 (4,58 px/m
+# sulla miniatura). Modello proprio approvato dall'utente il 29/10/2026.
+nome: Ticonderoga (CG-47)
+uscita: extracted/navi/ticonderoga
+
+scafo:
+  L: 172.5
+  B: 16.8
+  bordo: [[0, 7.3], [6, 7.1], [12, 6.8], [28, 6.1], [60, 5.3], [149.0, 5.1], [150.0, 3.7], [172.5, 3.7]]
+  slancio: 8.1
+  finezza_prua: 50
+  specchio: 0.79
+  svasatura: 0.06
+  pienezza: [0.8, 0.5]
+
+parti:
+  # ---------------- prua: Mk 45 e Mk 26
+  - {tipo: cannone_mk45, nome: mk45_prodiero, x: {prua: 30.0}, z0: 6.2, altezza: 2.8, lunghezza: 4.8, verso: 1}
+  - {tipo: tuga, nome: deposito_mk26_prodiero, x0: {prua: 45.0}, x1: {prua: 36.0}, y0: -3.5, y1: 3.5, z0: 5.3, z1: 6.0}
+  - {tipo: lanciatore_mk26, nome: mk26_prodiero, x: {prua: 40.5}, z0: 6.0, verso: 1, elevazione: 40}
+  # ---------------- la tuga prodiera coi pannelli SPY-1A (a prua di dritta e di sinistra) e la plancia
+  - {tipo: tuga, nome: tuga_prodiera, x0: {prua: 86.0}, x1: {prua: 49.5}, y0: -7.0, y1: 7.0, z0: 5.1, z1: 13.4, rastrema: 0.99}
+  - {tipo: tuga, nome: tuga_spy_prodiera, x0: {prua: 72.0}, x1: {prua: 49.5}, y0: -7.0, y1: 7.0, z0: 13.4, z1: 18.0, rastrema: 0.97}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 49.8}, x1: {prua: 49.3}, y0: -6.0, y1: 6.0, z0: 16.6, z1: 17.4, mat: nero, rastrema: 0.99}
+  - {tipo: scatola, nome: spy1_prua_dritta, x0: {prua: 58.0}, x1: {prua: 52.5}, y0: -7.25, y1: -7.0, z0: 12.0, z1: 17.0, mat: scuro}
+  - {tipo: scatola, nome: spy1_prua_sinistra, x0: {prua: 58.0}, x1: {prua: 52.5}, y0: 7.0, y1: 7.25, z0: 12.0, z1: 17.0, mat: scuro}
+  # ---------------- albero di prua, fumaiolo prodiero, traliccio maestro con l'SPS-49, fumaiolo poppiero
+  - {tipo: traliccio, nome: albero_prodiero, x: {prua: 64.4}, base: 3.0, cima: 1.0, z0: 18.0, z1: 28.0, piani: [24.0]}
+  - {tipo: asta, nome: alberetto_prodiero, da: [{prua: 64.4}, 0, 28.0], a: [{prua: 64.4}, 0, 32.5], spessore: 0.45}
+  - {tipo: mack, nome: fumaiolo_prodiero, x0: {prua: 74.5}, x1: {prua: 68.0}, y0: -3.0, y1: 3.0, z0: 13.4, z1: 19.5, cappello: 1.8}
+  - {tipo: traliccio, nome: albero_maestro, x: {prua: 86.0}, base: 5.0, cima: 1.4, z0: 13.4, z1: 31.0, piani: [24.0, 31.0]}
+  - {tipo: asta, nome: alberetto_maestro, da: [{prua: 86.0}, 0, 31.0], a: [{prua: 86.0}, 0, 39.5], spessore: 0.5}
+  - {tipo: antenna_radar, nome: sps49, x: {prua: 83.0}, z0: 25.0, larghezza: 7.3, altezza: 4.0, orientamento: 30}
+  - {tipo: tuga, nome: tuga_centrale, x0: {prua: 97.5}, x1: {prua: 86.0}, y0: -5.0, y1: 5.0, z0: 5.1, z1: 11.0}
+  - {tipo: mack, nome: fumaiolo_poppiero, x0: {prua: 99.0}, x1: {prua: 92.0}, y0: -3.0, y1: 3.0, z0: 11.0, z1: 18.5, cappello: 1.8}
+  # ---------------- la tuga poppiera, alta quanto la prodiera, coi pannelli SPY-1A (a poppa) sopra l'hangar
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 117.0}, x1: {prua: 97.5}, y0: -7.3, y1: 7.3, z0: 5.1, z1: 13.0, rastrema: 0.99}
+  - {tipo: tuga, nome: tuga_spy_poppiera, x0: {prua: 111.0}, x1: {prua: 97.5}, y0: -7.0, y1: 7.0, z0: 13.0, z1: 20.0, rastrema: 0.97}
+  - {tipo: scatola, nome: spy1_poppa_dritta, x0: {prua: 107.5}, x1: {prua: 102.0}, y0: -7.25, y1: -7.0, z0: 13.5, z1: 18.5, mat: scuro}
+  - {tipo: scatola, nome: spy1_poppa_sinistra, x0: {prua: 107.5}, x1: {prua: 102.0}, y0: 7.0, y1: 7.25, z0: 13.5, z1: 18.5, mat: scuro}
+  - {tipo: ciws, nome: phalanx_poppiero, x: {prua: 112.5}, y: 3.0, z0: 13.0}
+  - {tipo: ciws, nome: phalanx_prodiero, x: {prua: 84.0}, y: -4.5, z0: 13.4}
+  # ---------------- poppa: ponte di volo, Mk 26, Mk 45
+  - {tipo: tuga, nome: ponte_di_volo, x0: {prua: 140.0}, x1: {prua: 117.0}, y0: -7.6, y1: 7.6, z0: 5.1, z1: 8.3}
+  - {tipo: tuga, nome: deposito_mk26_poppiero, x0: {prua: 154.0}, x1: {prua: 143.0}, y0: -4.5, y1: 4.5, z0: 5.1, z1: 5.9}
+  - {tipo: lanciatore_mk26, nome: mk26_poppiero, x: {prua: 148.5}, z0: 5.9, verso: -1, elevazione: 50}
+  - {tipo: harpoon, nome: harpoon_dritta, x: {prua: 166.0}, y: -4.6, z0: 3.7, verso: -1}    # sul cassero di poppa (CG-47-51)
+  - {tipo: harpoon, nome: harpoon_sinistra, x: {prua: 166.0}, y: 4.6, z0: 3.7, verso: 1}
+  - {tipo: cannone_mk45, nome: mk45_poppiero, x: {prua: 158.0}, z0: 3.7, altezza: 2.8, lunghezza: 4.8, verso: -1}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 29/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: sinistra_aerea
+    file: extracted/navi/ticonderoga/foto/A_port_view_of_the_guided_missile_cruiser_USS_TICONDEROGA_CG-47_underway_on_the_Atlantic_Fleet_Weapons_Training_Facility_Puerto_Rico_prior_to_a_missile_launch_-_DPLA_-_e7ab4fa4f1b4ed775625721bed1d22ba.jpeg
+    nave: USS Ticonderoga (CG-47), 1983 (DoD, pubblico dominio), di sinistra dall'alto
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    maschera_file: extracted/navi/ticonderoga/foto/sinistra_aerea_1983_maschera.png   # classi/ticonderoga_maschere.yaml
+    riquadro: [350, 850, 2500, 1520]
+    cancella: [[500, 1250, 580, 1310]]   # il numero 47
+    fotocamera_iniziale: {posizione: [0, 1500, 600], bersaglio: [0, 0, 8], f: 6000}
+    limiti_fotocamera: {elevazione: [3, 40], distanza: [300, 5000], focale: [1500, 40000]}
+    punti:
+      - [[{prua: 0}, 0, 7.3], [410, 1244]]          # dritto di prua in coperta
+      - [[{prua: 172.5}, 6.6, 3.7], [2436, 1418]]   # specchio, spigolo di sinistra in coperta
+      - [[{prua: 64.4}, 0, 32.5], [1168, 980]]     # cima dell'albero di prua
+      - [[{prua: 86.0}, 0, 39.5], [1423, 902]]      # cima del traliccio maestro
+      - [[{prua: 8.1}, 0, 0.0], [495, 1350]]        # piede del dritto al galleggiamento
+      - [[{prua: 49.5}, 7.0, 18.0], [958, 1185]]    # spigolo prodiero alto di sinistra della tuga prodiera
+      - [[{prua: 97.5}, 7.0, 20.0], [1530, 1150]]   # spigolo prodiero alto di sinistra della tuga poppiera
+      - [[{prua: 140.0}, 7.6, 8.3], [2050, 1318]]   # spigolo poppiero di sinistra del ponte di volo

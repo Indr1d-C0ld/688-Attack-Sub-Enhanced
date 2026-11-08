@@ -1,0 +1,237 @@
+# Catalogo dei sistemi di bordo dell'enciclopedia (docs/00_ROADMAP.md, requisito 14): i sistemi dei battelli del
+# giocatore, il 688 Flight I e l'Alfa (Pr. 705/705K). Letto da tools/pipeline/enciclopedia.py (categoria «sistema»); i
+# testi stanno in enciclopedia_testi/basi_sistemi.yaml (voci «sistema.<id>").
+# I primi 12 id sono quelli del modello dei danni (enum Sistema in engine/nucleo/include/nucleo/battello.hpp; progetto in
+# docs/10_danni_affondamento_esplosioni.md §10.3 punto 5 e §10.7); gli altri (reattore, direzione_tiro,
+# filo_galleggiante, boa_radio, centrale) sono voci in piu' sostenute dai dossier, non sistemi danneggiabili del motore.
+# Campi: nazione (usa | urss | entrambe), classi (id delle classi in classi.toml), dati (righe della scheda: campo,
+# nome_it, nome_en, testo_it, testo_en, fonte, conf), fonte e conf della voce. Solo fatti dai dossier di docs/ricerca e
+# dal progetto dei danni; i numeri di gioco non pubblicati sono STIMA.
+
+calcolatore_sonar:
+  nome: Calcolatore del sonar
+  nome_en: Sonar computer
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: calcolatore_688, nome_it: Calcolatore (688), nome_en: Computer (688), testo_it: "UYK-7 nelle prime versioni del BQQ-5 (uno, poi due); tre UYK-44 nel BQQ-5C", testo_en: "UYK-7 in the early BQQ-5 versions (one, then two); three UYK-44s in the BQQ-5C", fonte: "dossier 19 §2.3 [FI-BQQ5]", conf: media}
+    - {campo: consolle_688, nome_it: Consolle (688), nome_en: Consoles (688), testo_it: "nel 1989 tre o quattro consolle OJ con CRT monocromatici; il colore arriva solo col BQQ-5E del 688I", testo_en: "in 1989 three or four OJ consoles with monochrome CRTs; colour only came with the 688I's BQQ-5E", fonte: "dossier 19 §2.3 [FI-BQQ5]", conf: media}
+    - {campo: alfa, nome_it: Complesso (Alfa), nome_en: Suite (Alfa), testo_it: "il complesso automatizzato «Okean», con gli schermi nel posto centrale; nessun registratore per fissare i bersagli", testo_en: "the automated «Okean» suite, with its displays in the central post; no recorder to log targets", fonte: "dossier 19 §3.3 [TTX] [BOG]", conf: alta}
+    - {campo: danno, nome_it: Nel modello dei danni, nome_en: In the damage model, testo_it: "uno dei sei sistemi che l'originale poteva guastare; sotto il 30% il sonar si spegne", testo_en: "one of the six systems the original could break; below 30% the sonar goes dead", fonte: "docs/10_danni_affondamento_esplosioni.md §10.1, §10.7", conf: alta}
+  fonte: 'dossier 19 §2.3, §3.3'
+  conf: media
+
+schiera:
+  nome: Schiera rimorchiata
+  nome_en: Towed array
+  nazione: usa
+  classi: [los_angeles]
+  dati:
+    - {campo: modello, nome_it: Modello, nome_en: Model, testo_it: "TB-16 su tutti i 688, sottosistema passivo del BQQ-5; TB-23 sottile solo a fine anni '80", testo_en: "TB-16 on every 688, a passive subsystem of the BQQ-5; the thin TB-23 only in the late 1980s", fonte: "dossier 04 (tabella delle schiere) [FAS-TB16]; dossier 01 §2.1", conf: alta}
+    - {campo: dimensioni, nome_it: Dimensioni, nome_en: Size, testo_it: "schiera di circa 73 m e 3,5 pollici di diametro, su un cavo di circa 730 m", testo_en: "array about 73 m long and 3.5 inches across, on a cable of about 730 m", fonte: "dossier 04 [FAS-TB16]", conf: alta}
+    - {campo: alfa, nome_it: Sull'Alfa, nome_en: On the Alfa, testo_it: "nessuna schiera: nessuna fonte ne attribuisce una al Pr. 705, e la schiera dell'Alfa nel gioco originale e' un errore", testo_en: "no array: no source credits the Project 705 with one, so the Alfa's array in the original game is a mistake", fonte: "dossier 04 [WP-Alfa] [Legion-705]", conf: media}
+    - {campo: danno, nome_it: Nel modello dei danni, nome_en: In the damage model, testo_it: "sta a poppa; nell'originale il guasto faceva perdere la schiera", testo_en: "it sits aft; in the original a failure lost the array", fonte: "docs/10_danni_affondamento_esplosioni.md §10.1, §10.13", conf: alta}
+  fonte: 'dossier 04; dossier 01 §2.1'
+  conf: alta
+
+periscopio:
+  nome: Periscopio
+  nome_en: Periscope
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: periscopi_688, nome_it: Periscopi (688), nome_en: Periscopes (688), testo_it: "due: d'attacco Type 2, solo diurno, e di ricerca Type 18, stabilizzato, con luce bassa, TV ed ESM", testo_en: "two: the day-only Type 2 attack periscope and the stabilised Type 18 search periscope, with low light, TV and ESM", fonte: "dossier 19 §2.1 [NOVA-C] [SR-2002]; dossier 01 §2.1", conf: media}
+    - {campo: radio_688, nome_it: Anche antenna, nome_en: Also an antenna, testo_it: "il Type 18 riceve anche VLF, LF, VHF e UHF", testo_en: "the Type 18 also receives VLF, LF, VHF and UHF", fonte: "dossier 08 §3.3 [SCMP]", conf: media}
+    - {campo: alfa, nome_it: Periscopio (Alfa), nome_en: Periscope (Alfa), testo_it: "uno solo, l'universale «Signal», piu' la telecamera TV-1 nella vela; ci guardavano solo comandante, secondo e ufficiale di guardia", testo_en: "only one, the universal «Signal», plus the TV-1 camera in the sail; only the captain, the executive officer and the officer of the watch looked through it", fonte: "dossier 19 §3.1, §3.2 [MET] [KOL]", conf: alta}
+    - {campo: danno, nome_it: Nel modello dei danni, nome_en: In the damage model, testo_it: "sotto il 50% non si alza piu'", testo_en: "below 50% it can no longer be raised", fonte: "docs/10_danni_affondamento_esplosioni.md §10.7", conf: alta}
+  fonte: 'dossier 19 §2.1, §3.2'
+  conf: media
+
+sonar_tiro:
+  nome: Sonar di tiro
+  nome_en: Targeting sonar
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: attivo_688, nome_it: Attivo ad alta frequenza (688), nome_en: High-frequency active (688), testo_it: "AN/BQS-15, attivo HF a corto raggio per ostacoli, ghiaccio e mine", testo_en: "AN/BQS-15, short-range HF active set for obstacles, ice and mines", fonte: "dossier 01 §2.1 e tabella dei sonar [FAS688]", conf: media}
+    - {campo: alfa, nome_it: Attivo (Alfa), nome_en: Active (Alfa), testo_it: "l'Okean ha la stazione antimine «Luch» e diversi modi attivi", testo_en: "the Okean has the «Luch» mine-avoidance set and several active modes", fonte: "dossier 19 §3.3 [TTX] [BAR]", conf: alta}
+    - {campo: corrispondenza, nome_it: Corrispondenza col gioco, nome_en: Match with the game, testo_it: "il «targeting sonar» dell'originale non ha un apparato preciso nei dossier: l'accostamento ai sonar attivi qui sopra e' una stima", testo_en: "the original's «targeting sonar» has no exact set in the dossiers: matching it to the active sonars above is an estimate", fonte: "docs/10_danni_affondamento_esplosioni.md §10.1", conf: STIMA}
+  fonte: 'dossier 01 §2.1; dossier 19 §3.3'
+  conf: bassa
+
+motori:
+  nome: Motori
+  nome_en: Engines
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: turbine_688, nome_it: Turbine (688), nome_en: Turbines (688), testo_it: "due turbine su un asse, circa 30.000-35.000 cavalli, piu' un motore ausiliario retrattile da 325 cavalli", testo_en: "two turbines on one shaft, about 30,000-35,000 shp, plus a 325 hp retractable auxiliary motor", fonte: "dossier 01 §2.1 [FAS688] [WP688]", conf: alta}
+    - {campo: turbina_alfa, nome_it: Turbina (Alfa), nome_en: Turbine (Alfa), testo_it: "una turbina da circa 40.000 cavalli su un asse; 41 nodi in servizio", testo_en: "a single turbine of about 40,000 shp on one shaft; 41 knots in service", fonte: "dossier 01 §2.4 [DS705] [WPAlfa]", conf: media}
+    - {campo: velocita, nome_it: Velocita', nome_en: Speed, testo_it: "688 reale 30-32 nodi, silenzioso solo fino a circa 5-8", testo_en: "688 actual 30-32 knots, quiet only up to about 5-8", fonte: "dossier 01 §2.1 [FAS688]", conf: media}
+    - {campo: danno, nome_it: Nel modello dei danni, nome_en: In the damage model, testo_it: "i motori al 75% danno 3/4 della velocita' massima, come nell'originale", testo_en: "engines at 75% give 3/4 of top speed, as in the original", fonte: "docs/10_danni_affondamento_esplosioni.md §10.3 punto 5", conf: alta}
+  fonte: 'dossier 01 §2.1, §2.4'
+  conf: alta
+
+antenna:
+  nome: Antenne e alberi radio
+  nome_en: Radio masts and antennas
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: alberi_688, nome_it: Alberi (688), nome_en: Masts (688), testo_it: "due alberi multifunzione BRA-34: HF e UHF in due sensi, VLF/LF solo in ricezione, a quota periscopica", testo_en: "two BRA-34 multifunction masts: two-way HF and UHF, receive-only VLF/LF, at periscope depth", fonte: "dossier 08 §3.3 [SCMP]", conf: media}
+    - {campo: apparati_688, nome_it: Apparati (688), nome_en: Sets (688), testo_it: "satellitare UHF WSC-3, ricevitore HF R-1051, trasmettitore HF URT-23, telescrivente UGC-136", testo_en: "WSC-3 UHF satcom, R-1051 HF receiver, URT-23 HF transmitter, UGC-136 teleprinter", fonte: "dossier 19 §2.5 [FAS-SCMP]; dossier 08 §3.3", conf: media}
+    - {campo: alfa, nome_it: Radio (Alfa), nome_en: Radio (Alfa), testo_it: "«Molniya-705» per la radio e «Bulava-705» per l'intercettazione, su un solo pulto del posto centrale", testo_en: "«Molniya-705» for radio and «Bulava-705» for intercept, on a single console in the central post", fonte: "dossier 19 §3.1, §3.2 [SOB]", conf: alta}
+    - {campo: trasmettere, nome_it: Per trasmettere, nome_en: To transmit, testo_it: "il 688 deve stare a quota periscopica (circa 18 m di chiglia) con l'albero alzato", testo_en: "the 688 must be at periscope depth (about 18 m keel depth) with the mast raised", fonte: "dossier 08 §3.3, §3.4 [FASBRT6]", conf: media}
+    - {campo: danno, nome_it: Nel modello dei danni, nome_en: In the damage model, testo_it: "sotto il 50% l'antenna non si alza piu'", testo_en: "below 50% the antenna can no longer be raised", fonte: "docs/10_danni_affondamento_esplosioni.md §10.7", conf: alta}
+  fonte: 'dossier 08 §3.3; dossier 19 §2.5, §3.2'
+  conf: media
+
+idroplani:
+  nome: Timoni orizzontali (idroplani)
+  nome_en: Diving planes
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: piani_688, nome_it: Piani (688 Flight I), nome_en: Planes (688 Flight I), testo_it: "timoni sulla vela e a poppa, nessun timone di prora (arriva col 688I); con i piani sulla vela non si emerge nel ghiaccio", testo_en: "sail planes and stern planes, no bow planes (they came with the 688I); with sail planes it cannot surface through ice", fonte: "dossier 19 §2.2 [NSTM-561]; dossier 01 §2.1 [WP688]", conf: alta}
+    - {campo: comandi_688, nome_it: Comandi (688), nome_en: Controls (688), testo_it: "colonna a cloche: avanti per scendere, indietro per salire, circa 6 pollici di corsa per parte", testo_en: "aircraft-type control column: forward to dive, back to rise, about 6 inches of travel each way", fonte: "dossier 19 §2.2 [NSTM-561]", conf: alta}
+    - {campo: alfa, nome_it: Quota (Alfa), nome_en: Depth (Alfa), testo_it: "«Boksit» tiene rotta e quota a programma, in automatico o a mano; «Tan» tiene l'assetto in moto", testo_en: "«Boksit» holds course and depth by programme, automatically or by hand; «Tan» holds trim under way", fonte: "dossier 19 §3.1 [SOB] [PRJ]", conf: alta}
+    - {campo: portanza, nome_it: Portanza, nome_en: Lift, testo_it: "sul 688 a 10 m/s i piani e lo scafo reggono dell'ordine di 100 t d'acqua imbarcata", testo_en: "on the 688 at 10 m/s the planes and hull carry on the order of 100 t of flooding", fonte: "docs/10_danni_affondamento_esplosioni.md §10.3 punto 2, §10.6", conf: STIMA}
+    - {campo: danno, nome_it: Nel modello dei danni, nome_en: In the damage model, testo_it: "sotto il 30% si bloccano all'angolo che avevano", testo_en: "below 30% they jam at their last angle", fonte: "docs/10_danni_affondamento_esplosioni.md §10.3 punto 5, §10.7", conf: alta}
+  fonte: 'dossier 19 §2.2, §3.1'
+  conf: alta
+
+timone:
+  nome: Timone
+  nome_en: Rudder
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: volante_688, nome_it: Volante (688), nome_en: Wheel (688), testo_it: "3,5° di volante per 1° di timone, senso orario per accostare a dritta; quadrante a sincro letto ogni 5°", testo_en: "3.5° of wheel per 1° of rudder, clockwise for starboard; synchro dial read every 5°", fonte: "dossier 19 §2.2 [NSTM-561]", conf: alta}
+    - {campo: emergenza_688, nome_it: Emergenza (688), nome_en: Emergency (688), testo_it: "c'e' una barra d'emergenza per il timone", testo_en: "there is an emergency rudder bar", fonte: "dossier 19 §2.2 [NSTM-561]", conf: alta}
+    - {campo: alfa, nome_it: Governo (Alfa), nome_en: Steering (Alfa), testo_it: "rotta e quota si tenevano per lo piu' dal pulto del moto «Boksit»", testo_en: "course and depth were mostly kept from the «Boksit» motion console", fonte: "dossier 19 §3.2 [FLOT]", conf: alta}
+    - {campo: virata, nome_it: Diametro di virata (688), nome_en: Turning circle (688), testo_it: "non pubblicato; stima di 4-6 lunghezze a 15-20 nodi con timone tutto", testo_en: "not published; estimate 4-6 lengths at 15-20 knots with full rudder", fonte: "dossier 01 §2.1", conf: STIMA}
+    - {campo: danno, nome_it: Nel modello dei danni, nome_en: In the damage model, testo_it: "sotto il 30% resta bloccato", testo_en: "below 30% it jams", fonte: "docs/10_danni_affondamento_esplosioni.md §10.7", conf: alta}
+  fonte: 'dossier 19 §2.2, §3.2'
+  conf: alta
+
+propulsione:
+  nome: Apparato propulsore
+  nome_en: Propulsion plant
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: impianto_688, nome_it: Impianto (688), nome_en: Plant (688), testo_it: "reattore S6G di circa 150-165 MW termici, due turbine, un asse", testo_en: "S6G reactor of about 150-165 MWt, two turbines, one shaft", fonte: "dossier 01 §2.1 [FAS688] [WP688]", conf: alta}
+    - {campo: impianto_alfa, nome_it: Impianto (Alfa), nome_en: Plant (Alfa), testo_it: "reattore a metallo liquido piombo-bismuto (OK-550, poi BM-40A), una turbina, un asse", testo_en: "lead-bismuth liquid-metal reactor (OK-550, later BM-40A), one turbine, one shaft", fonte: "dossier 01 §2.4 [DS705] [WPAlfa]", conf: media}
+    - {campo: comando_alfa, nome_it: Sorveglianza (Alfa), nome_en: Monitoring (Alfa), testo_it: "«Ritm» comanda reattore, rete elettrica e impianti, con 226 sensori e 279 segnali", testo_en: "«Ritm» runs the reactor, power grid and plant, with 226 sensors and 279 signals", fonte: "dossier 19 §3.1 [SOB]", conf: alta}
+    - {campo: danno, nome_it: Nel modello dei danni, nome_en: In the damage model, testo_it: "la velocita' massima e' il peggiore fra motori e propulsione; prima nella lista delle riparazioni", testo_en: "top speed follows the worse of engines and propulsion; first on the repair list", fonte: "docs/10_danni_affondamento_esplosioni.md §10.7; dossier 02 §9.2", conf: alta}
+  fonte: 'dossier 01 §2.1, §2.4'
+  conf: alta
+
+aria:
+  nome: Aria ad alta pressione
+  nome_en: High-pressure air
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: esaurimento, nome_it: Esaurimento d'emergenza, nome_en: Emergency blow, testo_it: "sul 688 l'interruttore e' sul Ballast Control Panel e lo usa solo il capo della guardia", testo_en: "on the 688 the switch is on the Ballast Control Panel and only the Chief of the Watch uses it", fonte: "dossier 19 §2.2 [SI-637]", conf: alta}
+    - {campo: boyle, nome_it: Rendimento in profondita', nome_en: Yield at depth, testo_it: "la stessa aria svuota a 300 m circa 1/31 del volume che svuoterebbe in superficie; in risalita si espande e la manovra accelera da sola", testo_en: "the same air empties at 300 m about 1/31 of the volume it would at the surface; it expands on the way up, so the manoeuvre speeds itself up", fonte: "dossier 02 §9.1", conf: alta}
+    - {campo: thresher, nome_it: La lezione del Thresher, nome_en: The Thresher lesson, testo_it: "nel 1963 il ghiaccio in filtri e valvole ridusse il flusso dell'aria; ne nacque il programma SUBSAFE", testo_en: "in 1963 ice in the filters and valves cut the air flow; the SUBSAFE programme followed", fonte: "dossier 02 §9.1 [USNI21] [USNI23]", conf: media}
+    - {campo: riserva, nome_it: Riserva nel gioco, nome_en: Reserve in the game, testo_it: "2,5 volte il volume delle casse a 1 bar: basta al caso San Francisco, non al Thresher", testo_en: "2.5 times the tank volume at 1 bar: enough for the San Francisco case, not for Thresher", fonte: "docs/10_danni_affondamento_esplosioni.md §10.6, §10.11", conf: STIMA}
+    - {campo: alfa, nome_it: Casse (Alfa), nome_en: Tanks (Alfa), testo_it: "nessuna parete di valvole: una stazione a pulsanti accanto al timoniere, tenuta da un ingegnere", testo_en: "no valve wall: a push-button station next to the helmsman, manned by an engineer", fonte: "dossier 19 §3.2 [SUT]", conf: media}
+  fonte: 'dossier 02 §9.1; dossier 19 §2.2'
+  conf: alta
+
+pompe:
+  nome: Pompe di esaurimento e d'assetto
+  nome_en: Drain and trim pumps
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: thresher, nome_it: In profondita', nome_en: At depth, testo_it: "al Thresher le pompe d'assetto e di sentina avevano una portata bassissima alla quota di collaudo", testo_en: "on Thresher the trim and bilge pumps had a very low capacity at test depth", fonte: "dossier 02 §9.1 [USNI21]", conf: media}
+    - {campo: dottrina, nome_it: Dottrina, nome_en: Doctrine, testo_it: "le pompe vengono per ultime nella risposta a un allagamento, perche' rendono solo a bassa quota", testo_en: "pumps come last in the flooding drill, because they only work at shallow depth", fonte: "dossier 02 §9.2", conf: media}
+    - {campo: compenso_688, nome_it: Casse di compenso (688), nome_en: Trim tanks (688), testo_it: "il capo della guardia tiene assetto e spinta pompando acqua fra le casse di compenso", testo_en: "the Chief of the Watch keeps trim and buoyancy by pumping water between the trim tanks", fonte: "dossier 19 §2.2 [NOVA-C]", conf: media}
+    - {campo: gioco, nome_it: Nel gioco, nome_en: In the game, testo_it: "a 200 m non rendono piu'; le valvole d'allagamento per posarsi sul fondo imbarcano circa 3 t al minuto", testo_en: "they stop working at 200 m; the flood valves used to settle on the bottom take in about 3 t a minute", fonte: "docs/10_danni_affondamento_esplosioni.md §10.7, §10.10", conf: STIMA}
+  fonte: 'dossier 02 §9.1, §9.2'
+  conf: media
+
+sonar_prua:
+  nome: Sonar di prua
+  nome_en: Bow sonar
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: sfera_688, nome_it: Sfera (688), nome_en: Sphere (688), testo_it: "sfera BQS-13 del BQQ-5 con oltre mille idrofoni, piu' una schiera conforme sullo scafo", testo_en: "the BQQ-5's BQS-13 sphere with over a thousand hydrophones, plus a conformal hull array", fonte: "dossier 01 §2.1 [FAS688] [WP688]", conf: alta}
+    - {campo: alfa, nome_it: Sonar (Alfa), nome_en: Sonar (Alfa), testo_it: "stazione passiva «Enisej» del complesso Okean; il rumore proprio ne limitava la portata a quella del Pr. 671", testo_en: "the «Yenisei» passive set of the Okean suite; self-noise cut its range to that of the Project 671", fonte: "dossier 19 §3.3 [TTX] [KOL]", conf: alta}
+    - {campo: confronto, nome_it: Confronto, nome_en: Comparison, testo_it: "Victor III e Los Angeles scoprivano piu' lontano dell'Alfa", testo_en: "the Victor III and the Los Angeles detected farther than the Alfa", fonte: "dossier 19 §3.3 [KOL]", conf: alta}
+    - {campo: danno, nome_it: Nel modello dei danni, nome_en: In the damage model, testo_it: "sta nel compartimento prodiero; sotto il 30% il sonar si spegne", testo_en: "it sits in the forward compartment; below 30% the sonar goes dead", fonte: "docs/10_danni_affondamento_esplosioni.md §10.7, §10.13", conf: alta}
+  fonte: 'dossier 01 §2.1; dossier 19 §3.3'
+  conf: alta
+
+reattore:
+  nome: Reattore
+  nome_en: Reactor
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: s6g, nome_it: Reattore (688), nome_en: Reactor (688), testo_it: "S6G, circa 150-165 MW termici, su un battello con un solo asse", testo_en: "S6G, about 150-165 MWt, in a single-shaft boat", fonte: "dossier 01 §2.1 [FAS688] [WP688]", conf: alta}
+    - {campo: alfa, nome_it: Reattore (Alfa), nome_en: Reactor (Alfa), testo_it: "a metallo liquido piombo-bismuto: OK-550 sul 705, BM-40A sul 705K", testo_en: "lead-bismuth liquid metal: OK-550 on the 705, BM-40A on the 705K", fonte: "dossier 01 §2.4 [DS705] [WPAlfa]", conf: media}
+    - {campo: scram, nome_it: SCRAM, nome_en: SCRAM, testo_it: "un urto forte puo' spegnerlo: si va avanti a batteria col motore d'emergenza, e il reattore torna critico in circa 5-20 minuti", testo_en: "a heavy shock can trip it: the boat runs on battery with the emergency motor, and the reactor is critical again in about 5-20 minutes", fonte: "dossier 02 §9.2, §9.4", conf: bassa}
+    - {campo: gioco, nome_it: Nel gioco, nome_en: In the game, testo_it: "SCRAM possibile da un fattore d'urto di 0,1; durante lo SCRAM al massimo il 15% della velocita'", testo_en: "SCRAM possible from a shock factor of 0.1; during SCRAM at most 15% of top speed", fonte: "docs/10_danni_affondamento_esplosioni.md §10.7", conf: STIMA}
+  fonte: 'dossier 01 §2.1, §2.4; dossier 02 §9.2'
+  conf: media
+
+direzione_tiro:
+  nome: Direzione del tiro
+  nome_en: Fire control
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: mk117, nome_it: Sistema (688), nome_en: System (688), testo_it: "Mk 117, primo tutto digitale, dal Dallas (SSN-700); i battelli piu' vecchi avevano il Mk 113 e molti furono convertiti negli anni '80", testo_en: "Mk 117, the first all-digital system, from Dallas (SSN-700); older boats had the Mk 113 and many were converted in the 1980s", fonte: "dossier 19 §2.4 [SR-1993]; dossier 01 §2.1", conf: media}
+    - {campo: mk81, nome_it: Consolle (688), nome_en: Consoles (688), testo_it: "consolle digitali Mk 81 con encoder rotativi per la TMA e le impostazioni delle armi; pulsante rosso di fuoco sul Weapons Control Panel", testo_en: "Mk 81 digital consoles with rotary encoders for TMA and weapon presets; red fire button on the Weapons Control Panel", fonte: "dossier 19 §2.1, §2.4 [WIKI-688] [SR-1984] [NOVA-C]", conf: media}
+    - {campo: akkord, nome_it: Sistema (Alfa), nome_en: System (Alfa), testo_it: "«Akkord» calcola il moto di tre bersagli e passa i dati alle armi solo per via elettrica; «Sargan» prepara i tubi e comanda il lancio", testo_en: "«Akkord» computes the motion of three targets and passes data to the weapons only electrically; «Sargan» readies the tubes and fires", fonte: "dossier 19 §3.1, §3.4 [SOB] [KOL]", conf: alta}
+    - {campo: guasto_alfa, nome_it: Guasto (Alfa), nome_en: Failure (Alfa), testo_it: "se Akkord si guastava, nessuna arma era utilizzabile", testo_en: "if Akkord failed, no weapon could be used", fonte: "dossier 19 §3.4 [BAR]", conf: alta}
+    - {campo: errore, nome_it: Da evitare, nome_en: To avoid, testo_it: "il Mk 92 e' delle fregate FFG-7, non dei sottomarini", testo_en: "the Mk 92 belongs to the FFG-7 frigates, not to submarines", fonte: "dossier 19 §2.4", conf: alta}
+  fonte: 'dossier 19 §2.4, §3.4'
+  conf: media
+
+filo_galleggiante:
+  nome: Antenna a filo galleggiante
+  nome_en: Floating wire antenna
+  nazione: usa
+  classi: [los_angeles]
+  dati:
+    - {campo: modello, nome_it: Modello, nome_en: Model, testo_it: "OE-315, per VLF/LF ed ELF (con il ricevitore OR-279)", testo_en: "OE-315, for VLF/LF and ELF (with the OR-279 receiver)", fonte: "dossier 08 §3.3 [SCMP]", conf: media}
+    - {campo: cavo, nome_it: Cavo, nome_en: Cable, testo_it: "oltre 305 m di cavo per tenere l'antenna in superficie; sporge al massimo circa 5 cm dall'acqua", testo_en: "over 305 m of cable to keep the antenna at the surface; it shows at most about 5 cm above water", fonte: "dossier 08 §3.4 [APL99]", conf: alta}
+    - {campo: vincolo, nome_it: Vincolo, nome_en: Constraint, testo_it: "il battello deve andare piano e tenere la rotta; solo ricezione, niente UHF", testo_en: "the boat must go slowly and hold course; receive only, no UHF", fonte: "dossier 08 §3.4 [NSL99] [ALT]; dossier 10 radio §1.1", conf: alta}
+    - {campo: gioco, nome_it: Nel gioco, nome_en: In the game, testo_it: "VLF fino a 120 m di chiglia e 8 nodi pieni, al 50% fra 8 e 12 nodi; oltre i 20 nodi il filo puo' rompersi", testo_en: "VLF down to 120 m keel depth and 8 knots in full, 50% between 8 and 12 knots; above 20 knots the wire can break", fonte: "dossier 08 §9.1", conf: STIMA}
+    - {campo: alfa, nome_it: Sull'Alfa, nome_en: On the Alfa, testo_it: "nessuna fonte aperta sulle antenne del Pr. 705; i sottomarini sovietici successivi avevano antenne a filo per ELF, VLF e HF", testo_en: "no open source on the Project 705's antennas; later Soviet submarines had wire antennas for ELF, VLF and HF", fonte: "dossier 08 §6.3 [RUSNAVY]", conf: bassa}
+  fonte: 'dossier 08 §3.3, §3.4'
+  conf: media
+
+boa_radio:
+  nome: Boa radio a perdere
+  nome_en: Expendable radio buoy
+  nazione: usa
+  classi: [los_angeles]
+  dati:
+    - {campo: brt6, nome_it: BRT-6, nome_en: BRT-6, testo_it: "boa UHF satellitare a perdere: su tre SSN-637 a meta' anni '80, poi sui 688; per il 688 del 1989 non verificata", testo_en: "expendable UHF satcom buoy: on three SSN-637s in the mid-1980s, then on the 688s; unverified for the 1989 688", fonte: "dossier 08 §3.3, §4.1 [FASBRT6] [SCMP]", conf: bassa}
+    - {campo: slot, nome_it: Boa SLOT, nome_en: SLOT buoy, testo_it: "messaggio registrato fino a 5 minuti, lanciato in immersione e trasmesso in VHF dopo un ritardo agli aerei vicini", testo_en: "recorded message of up to 5 minutes, launched submerged and sent on VHF after a delay to nearby aircraft", fonte: "dossier 10 radio §1.5 [NSL4604] [WPSLOT]", conf: media}
+    - {campo: costo, nome_it: Costo, nome_en: Cost, testo_it: "l'AN/BRT-1 costava 572 dollari nel 1982", testo_en: "the AN/BRT-1 cost 572 dollars in 1982", fonte: "dossier 10 radio §1.5 [WPSLOT]", conf: media}
+    - {campo: rimorchiata, nome_it: Boa rimorchiata, nome_en: Towed buoy, testo_it: "il 688 Flight I non aveva boe rimorchiate: la BRR-6 era solo degli SSBN Ohio", testo_en: "the 688 Flight I had no towed buoy: the BRR-6 was only on Ohio SSBNs", fonte: "dossier 08 §3.3 [SCMP] [TWZBRR6]", conf: alta}
+    - {campo: gioco, nome_it: Nel gioco, nome_en: In the game, testo_it: "proposta: 2-4 boe per missione, con un ritardo di 5-30 minuti", testo_en: "proposal: 2-4 buoys per mission, with a 5-30 minute delay", fonte: "dossier 10 radio §4.4", conf: STIMA}
+  fonte: 'dossier 08 §3.3, §4.1; dossier 10 radio §1.5'
+  conf: bassa
+
+centrale:
+  nome: Centrale
+  nome_en: Control room
+  nazione: entrambe
+  classi: [los_angeles, alfa]
+  dati:
+    - {campo: posizione_688, nome_it: Dove (688), nome_en: Where (688), testo_it: "ponte superiore del compartimento prodiero; fa anche da centro d'attacco, con la sala sonar a parte", testo_en: "upper deck of the forward compartment; it is also the attack centre, with the sonar room separate", fonte: "dossier 19 §2.1 [FAS-688] [SI-637]", conf: media}
+    - {campo: governo_688, nome_it: Governo (688), nome_en: Ship control (688), testo_it: "quattro uomini: timoniere, pianista, ufficiale d'immersione e capo della guardia al Ballast Control Panel", testo_en: "four men: helmsman, planesman, Diving Officer of the Watch and Chief of the Watch at the Ballast Control Panel", fonte: "dossier 19 §2.2 [NOVA-C] [SR-2004]", conf: alta}
+    - {campo: luci_688, nome_it: Luci (688), nome_en: Lighting (688), testo_it: "bianca di giorno; di notte buio o luce rossa prima delle osservazioni al periscopio", testo_en: "white by day; at night dark, or red light before periscope observations", fonte: "dossier 19 §2.1 [NOVA-S]", conf: media}
+    - {campo: alfa, nome_it: Posto centrale (Alfa), nome_en: Central post (Alfa), testo_it: "a ferro di cavallo nel compartimento III, quello rifugio; niente sale separate per radio, radar, sonar o carteggio; 8 uomini di guardia", testo_en: "horseshoe-shaped in compartment III, the refuge compartment; no separate radio, radar, sonar or chart rooms; 8 men on watch", fonte: "dossier 19 §3.1, §3.2 [SOB] [PRJ] [BOG]", conf: alta}
+    - {campo: compartimenti, nome_it: Compartimenti (688), nome_en: Compartments (688), testo_it: "pochi compartimenti stagni: prodiero (centrale, alloggi, locale siluri), reattore, sala macchine", testo_en: "few watertight compartments: forward (control, berthing, torpedo room), reactor, engine room", fonte: "dossier 02 §9.3 [PM04]", conf: media}
+  fonte: 'dossier 19 §2.1, §2.2, §3.2'
+  conf: alta

@@ -1,0 +1,16 @@
+LICENZE E CREDITI
+=================
+
+  CREDITI.txt               crediti di tutto il pacchetto: gioco originale, progetto, opere di terzi
+  PROPRIETARI.txt           i file del gioco originale e i brani MT-32: uso personale
+  Lua.txt                   Lua 5.4.7 (MIT): compilata nel gioco: le missioni
+  tomlplusplus.txt          toml++ 3.4.0 (MIT): compilata nel gioco: i file di dati
+  ymfm.txt                  ymfm (BSD 3-Clause): compilata nel gioco: la musica FM dal vivo (nucleo/musica_fm); negli strumenti, l'analisi della musica originale
+  SDL3.txt                  SDL3 3.2.10 (zlib): nel pacchetto (lib/libSDL3.so.0): finestra, ingresso, audio
+  sndio.txt                 sndio 1.10 (ISC): nel pacchetto (lib/libsndio.so.7): dipendenza di SDL3
+  Charis.txt                Charis 7.000 (SIL OFL 1.1): il testo dei PDF del manuale (Regular, Italic, Bold, BoldItalic)
+  Liberation.txt            Liberation Sans e Serif 2.1.5 (SIL OFL 1.1): incorporato nei PDF del manuale (Serif solo per le lettere greche)
+  LiberationSansNarrow.txt  Liberation Sans Narrow 1.07.6 (GPL-2 con l'eccezione dei caratteri): incorporato nei PDF del manuale
+  JetBrainsMono.txt         JetBrains Mono 2.304 (SIL OFL 1.1 (progetto); Apache-2.0 (file Debian)): incorporato nei PDF del manuale
+  DejaVu.txt                DejaVu Sans e Sans Mono 2.37 (Bitstream Vera): incorporato nel PDF del volume 2 (riferimento)
+

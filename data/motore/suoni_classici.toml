@@ -1,0 +1,46 @@
+# Campioni in partita del classico, copiati senza modifiche dai .T del disco 2 dell'originale
+# (tools/pipeline/suoni_classici.py; quando suonano: docs/originale/suoni.md). Asset dell'originale del 1989,
+# dal disco dell'utente: non ridistribuibili.
+formato = "PCM a 4 bit senza segno, due campioni per byte, prima il nibble alto"
+
+[campioni.EXP1]
+file = "motore/suoni_classici/exp1.t"
+origine = "DISK2/EXP1.T"
+byte = 5696
+sha1 = "17f8b28b8c4ad830bd5b0cc95c02cf15e2067ab9"
+uso = "esplosione: 5000 Hz ai messaggi 7 e 50 (1000:8CAE) e al periscopio (1000:2AA8), 4000 Hz ai messaggi 19, 20, 26, 30 (1000:8C54)"
+
+[campioni.SONAR1]
+file = "motore/suoni_classici/sonar1.t"
+origine = "DISK2/SONAR1.T"
+byte = 6019
+sha1 = "0d1166726c1cf9cdb6db39d842492669b8b54e99"
+uso = "impulso sonar: 5500 Hz al ping proprio (1000:3D4E), 6200 Hz al messaggio 8 (1000:8DFE)"
+
+[campioni.TORPRAMP]
+file = "motore/suoni_classici/torpramp.t"
+origine = "DISK2/TORPRAMP.T"
+byte = 3798
+sha1 = "98dc4034a06f679c36d2a4ba792c738bfdcdceb0"
+uso = "lancio del giocatore da un tubo: 6500 Hz (1000:7A73)"
+
+[campioni.PROP2]
+file = "motore/suoni_classici/prop2.t"
+origine = "DISK2/PROP2.T"
+byte = 1655
+sha1 = "72bfb4f66f050451ba29f6658748e7d40fa0d9e5"
+uso = "ANALYZE, navi: 2500 + 50 t Hz, 4 volte (1000:4049)"
+
+[campioni.PROPV2]
+file = "motore/suoni_classici/propv2.t"
+origine = "DISK2/PROPV2.T"
+byte = 1970
+sha1 = "a07df9b217231aa12aa66ae2886e11235f398068"
+uso = "ANALYZE, armi 5500 + 10 t Hz 5 volte, sottomarini ed esche 2000 + 30 t Hz 4 volte (1000:4049)"
+
+[campioni.WHALE2]
+file = "motore/suoni_classici/whale2.t"
+origine = "DISK2/WHALE2.T"
+byte = 4424
+sha1 = "cbd938d636f69a07fa32127b67f4c859c7f316b6"
+uso = "ANALYZE, biologici: 2500-6499 Hz a caso, 2 volte (1000:4049)"

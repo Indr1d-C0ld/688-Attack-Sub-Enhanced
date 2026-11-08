@@ -1,0 +1,63 @@
+# Nave oceanografica (sul tipo della Johan Hjort, 1990, Istituto di ricerca marina di Bergen), la classe `nave_ricerca`
+# del traffico civile: lo scafo alto col castello, la sovrastruttura lunga a tre piani da prua al mezzo con la plancia in
+# cima e l'albero, l'albero di prua, il fumaiolo a poppa del mezzo col radome, la lancia di salvataggio, il portale ad A
+# del ponte di lavoro a poppa.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure della classe del traffico: 75 x 14,2 m (tools/pipeline/civili.py); la Johan Hjort e'
+# 64,4 m: posizioni e quote dalla sua foto di sinistra (Adventfjorden, 2012, di tre quarti da prua) riportate alla
+# classe per 1,165 (STIMA), affinate con gli scarti della calibrazione. Modello proprio (kit, 31/10/2026).
+nome: Nave oceanografica (tipo Johan Hjort)
+uscita: extracted/navi/nave_ricerca
+
+scafo:
+  L: 75.0
+  B: 14.2
+  bordo: [[0, 12.0], [15, 10.8], [75.0, 10.6]]
+  slancio: 7.7
+  finezza_prua: 35
+  specchio: 0.85
+  svasatura: 0.08
+  pienezza: [0.7, 0.45]
+
+parti:
+  # ---------------- la sovrastruttura a piani, la plancia, gli alberi
+  - {tipo: tuga, nome: tuga_bassa, x0: {prua: 47.7}, x1: {prua: 7.5}, y0: -6.5, y1: 6.5, z0: 10.6, z1: 13.4, rastrema: 0.99}
+  - {tipo: tuga, nome: tuga_media, x0: {prua: 47.7}, x1: {prua: 15.0}, y0: -6.4, y1: 6.4, z0: 13.4, z1: 16.6, rastrema: 0.99}
+  - {tipo: tuga, nome: ponte_plancia, x0: {prua: 45.0}, x1: {prua: 18.0}, y0: -6.2, y1: 6.2, z0: 16.6, z1: 19.5, rastrema: 0.99}
+  - {tipo: tuga, nome: plancia, x0: {prua: 32.0}, x1: {prua: 20.3}, y0: -5.5, y1: 5.5, z0: 19.5, z1: 23.3, rastrema: 0.98}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 20.7}, x1: {prua: 20.2}, y0: -5.0, y1: 5.0, z0: 21.6, z1: 22.6, mat: nero, rastrema: 0.98}
+  - {tipo: albero_palo, nome: albero_prodiero, x: {prua: 10.4}, z0: 13.4, z1: 34.0, r: 0.3}
+  - {tipo: traliccio, nome: albero, x: {prua: 36.0}, base: 1.8, cima: 0.6, z0: 19.5, z1: 38.0, piani: [26.0, 31.0]}
+  # ---------------- il fumaiolo col radome, la lancia
+  - {tipo: tuga, nome: fumaiolo, x0: {prua: 61.7}, x1: {prua: 55.7}, y0: -2.2, y1: 2.2, z0: 10.6, z1: 20.7, rastrema: 0.97}
+  - {tipo: cilindro, nome: colonna_radome, x: {prua: 53.2}, y: 0, r: 0.25, z0: 20.7, z1: 25.9, n: 8, mat: scuro}
+  - {tipo: radome, nome: radome, x: {prua: 53.2}, z: 26.8, r: 0.9}
+  - {tipo: imbarcazione, nome: lancia, x0: {prua: 56.0}, x1: {prua: 47.7}, y: 6.0, z0: 11.2, larghezza: 3.0, altezza: 2.6}
+  # ---------------- il portale ad A sul ponte di lavoro a poppa
+  - {tipo: asta, nome: portale_sinistro, da: [{prua: 66.0}, 4.0, 10.6], a: [{prua: 64.0}, 4.0, 17.5], spessore: 0.6}
+  - {tipo: asta, nome: portale_destro, da: [{prua: 66.0}, -4.0, 10.6], a: [{prua: 64.0}, -4.0, 17.5], spessore: 0.6}
+  - {tipo: asta, nome: portale_traversa, da: [{prua: 64.0}, -4.0, 17.5], a: [{prua: 64.0}, 4.0, 17.5], spessore: 0.6}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 31/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: sinistra_adventfjorden
+    file: extracted/navi/nave_ricerca/foto/1920px-Johan_Hjort_IMG_7563_Adventfjorden.JPG
+    nave: Johan Hjort, Adventfjorden, 11/8/2012 (CC BY-SA 3.0), di sinistra di tre quarti da prua
+    qualita: 1.0
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 2 px (contorno_modello.py --maschera)
+    maschera_file: extracted/navi/nave_ricerca/foto/sinistra_adventfjorden_maschera.png
+    solo_punti: true
+    # nomi e stemma veri tolti (decisione della principale): il nome a prua e a poppa, lo stemma del fumaiolo
+    cancella: [[780, 864, 866, 888], [1266, 940, 1344, 962], [1210, 786, 1240, 818]]
+    riquadro: [560, 600, 1430, 1000]
+    fotocamera_iniziale: {posizione: [300, 600, 10], bersaglio: [0, 0, 8], f: 6000}
+    limiti_fotocamera: {elevazione: [0.5, 15], distanza: [50, 5000], focale: [500, 100000]}
+    punti:
+      - [[{prua: 0}, 0, 12.0], [614, 837]]           # dritto di prua in coperta
+      - [[{prua: 7.7}, 0, 0.0], [693, 970]]          # piede del dritto al galleggiamento
+      - [[{prua: 75.0}, 6.0, 10.6], [1378, 859]]      # specchio, spigolo di sinistra in coperta
+      - [[{prua: 74.0}, 5.5, 0.0], [1369, 976]]      # specchio al galleggiamento, a sinistra
+      - [[{prua: 20.3}, 5.5, 23.3], [810, 722]]      # spigolo prodiero alto di sinistra della plancia
+      - [[{prua: 55.7}, 2.2, 20.7], [1180, 750]]     # spigolo prodiero alto di sinistra del fumaiolo
+      - [[{prua: 53.2}, 0, 27.7], [1160, 676]]       # cima del radome

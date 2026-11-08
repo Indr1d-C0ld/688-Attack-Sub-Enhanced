@@ -1,0 +1,41 @@
+# Maschere delle foto dei missili (strumento: tools/navi/classi/missili_maschere.py).
+# Uso: tools/venv/bin/python -I tools/navi/classi/missili_maschere.py <radice> tools/navi/classi/missili_maschere.yaml
+file: extracted/navi/tomahawk/foto/convair_fianco.jpg
+uscita: extracted/navi/tomahawk/maschere/convair_fianco.png
+inviluppo: [[330, 400], [1540, 400], [1540, 790], [330, 790]]
+soglia: 28
+escludi:
+  - [[290, 590], [368, 590], [368, 640], [290, 640]]    # asta strumentale davanti al muso (non c'e' sui missili di serie)
+solo_maggiore: true
+---
+file: extracted/navi/tomahawk/foto/convair_tre_quarti.jpg
+uscita: extracted/navi/tomahawk/maschere/convair_tre_quarti.png
+inviluppo: [[300, 440], [1160, 440], [1160, 640], [880, 760], [440, 810], [300, 800]]
+soglia: 45
+sfocatura: 1.5
+solo_maggiore: true
+---
+file: extracted/navi/harpoon/foto/f16_fianco.jpg
+uscita: extracted/navi/harpoon/maschere/f16_fianco.png
+inviluppo: [[785, 740], [840, 725], [1000, 712], [1018, 688], [1078, 688], [1110, 708], [1190, 700], [1196, 670], [1222, 670], [1250, 690], [1250, 780], [1225, 785], [1100, 776], [1070, 785], [1018, 785], [990, 770], [830, 778], [785, 775]]
+soglia_luminanza: 175
+sfocatura: 1.0
+chiusura: 7          # chiude le sottili giunzioni scure tra le sezioni del corpo
+area_minima: 300
+escludi:
+  - [[915, 714], [952, 714], [952, 729], [915, 729]]    # attacco del pilone
+includi:
+  - [[1212, 752], [1240, 752], [1240, 770], [1228, 772]]  # aletta inferiore in ombra
+---
+file: extracted/navi/bqm74/foto/chukar3_1990_fianco.jpg
+uscita: extracted/navi/bqm74/maschere/chukar3_1990_fianco.png
+inviluppo: [[290, 495], [1075, 520], [1075, 610], [700, 640], [440, 670], [290, 625]]
+soglia_rosso: 70
+chiusura: 7
+area_minima: 400
+includi:
+  - [[1028, 529], [1046, 532], [1058, 545], [1062, 557], [1056, 570], [1044, 580], [1030, 584]]   # radome bianco
+  - [[387, 573], [450, 547], [650, 537], [1030, 528], [1043, 580], [757, 607], [717, 623], [417, 635], [387, 613]]   # fusoliera (cinghie e riflessi)
+  - [[302, 611], [380, 598], [384, 630], [343, 628]]     # cono di scarico bianco
+escludi:
+  - [[372, 636], [420, 636], [420, 680], [372, 680]]    # nastro "remove before flight" (parte sotto la coda)

@@ -1,0 +1,81 @@
+# Peschereccio costiero (palangaro, sul tipo dell'Argenova XXI, Argentina), la classe `peschereccio_costiero` del
+# traffico civile: lo scafo rosso col castello alto a prua, la tuga di prua con la timoneria in testa, l'albero a torre
+# con le antenne e quello del radar, la gru a braccio snodato a mezzanave, il ponte di lavoro basso con la murata, la
+# tuga poppiera, il portale di poppa con la piattaforma, l'albero e il bigo.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure della classe del traffico: 30 x 7,5 m, immersione 3,0 m, 360 t
+# (tools/pipeline/civili.py). La lunghezza vera dell'Argenova XXI non e' nei dati scaricati: la sua foto di dritta
+# (quasi al traverso, 986 px) e' riportata alla classe con un fattore unico in lunghezza e in quota, 905 px fuori
+# tutto = 30 m (~30,2 px/m; STIMA: un palangaro costiero piu' piccolo con la stessa sagoma), affinato con gli scarti
+# della calibrazione. Modello proprio (kit, 31/10/2026).
+nome: Peschereccio costiero (palangaro, tipo Argenova XXI)
+uscita: extracted/navi/peschereccio_costiero
+
+scafo:
+  L: 30.0
+  B: 7.5
+  # coperta (sommo della murata): 3,3 m al dritto, il castello che scende a 2,85 davanti alla tuga, 2,5 lungo il
+  # ponte di lavoro, la murata di poppa rialzata a 2,7
+  bordo: [[0, 3.3], [5.1, 2.86], [6.6, 2.82], [12.6, 2.55], [23.8, 2.52], [25.4, 2.69], [30.0, 2.69]]
+  # il dritto slanciato fino al ginocchio (1,2 m indietro a 1,4 m di quota); sotto, il bulbo che risale (parte a se')
+  profilo_prua: [[0, 3.3], [1.17, 1.4], [1.4, 0.0]]
+  finezza_prua: 11
+  specchio: 0.8
+  svasatura: 0.06
+  pienezza: [0.75, 0.4]
+  lunghezza_poppa: 8
+  bagnasciuga: 0.3
+
+parti:
+  # ---------------- il bulbo di prua che sporge sotto il ginocchio del dritto (larghezza STIMA)
+  - {tipo: prisma_xz, nome: bulbo, profilo: [[{prua: 0.45}, 0.0], [{prua: 1.17}, 1.4], [{prua: 3.0}, 1.4], [{prua: 3.0}, 0.0]], y0: -0.6, y1: 0.6, mat: scafo}
+  # ---------------- la tuga di prua, la timoneria, l'albero a torre e quello del radar
+  - {tipo: tuga, nome: tuga, x0: {prua: 12.6}, x1: {prua: 9.0}, y0: -3.1, y1: 3.1, z0: 2.55, z1: 5.03, rastrema: 0.98}
+  - {tipo: tuga, nome: timoneria, x0: {prua: 9.6}, x1: {prua: 6.6}, y0: -3.0, y1: 3.0, z0: 2.6, z1: 5.44, rastrema: 0.97}
+  - {tipo: scatola, nome: finestre_timoneria, x0: {prua: 6.7}, x1: {prua: 6.55}, y0: -2.6, y1: 2.6, z0: 4.35, z1: 4.8, mat: nero, rastrema: 0.98}
+  - {tipo: tuga, nome: torre_albero, x0: {prua: 10.4}, x1: {prua: 9.5}, y0: -0.6, y1: 0.6, z0: 5.03, z1: 8.35, rastrema: 0.7}
+  - {tipo: asta, nome: antenna_alta, da: [{prua: 10.3}, 0, 8.35], a: [{prua: 10.3}, 0, 10.7], spessore: 0.12}
+  - {tipo: asta, nome: antenna_bassa, da: [{prua: 9.7}, 0, 8.35], a: [{prua: 9.7}, 0, 10.3], spessore: 0.12}
+  - {tipo: asta, nome: colonna_radar, da: [{prua: 8.3}, 0, 5.44], a: [{prua: 8.3}, 0, 6.75], spessore: 0.15}
+  - {tipo: scatola, nome: radar, x0: {prua: 8.8}, x1: {prua: 7.7}, y0: -0.15, y1: 0.15, z0: 6.75, z1: 6.95, mat: scuro}
+  - {tipo: asta, nome: albero_radar, da: [{prua: 7.1}, 0, 5.44], a: [{prua: 7.1}, 0, 8.1], spessore: 0.15}
+  # ---------------- la gru a braccio snodato a mezzanave (STIMA: a dritta)
+  - {tipo: gru, nome: gru, base: [{prua: 19.3}, -1.5, 3.73], cima: [{prua: 14.0}, -1.5, 4.16], z0: 2.52, colonna: 0.6, spessore: 0.35}
+  # ---------------- la tuga poppiera col riparo e lo scarico
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 25.4}, x1: {prua: 23.8}, y0: -1.8, y1: 1.8, z0: 2.52, z1: 4.06}
+  - {tipo: tuga, nome: riparo, x0: {prua: 23.8}, x1: {prua: 21.6}, y0: -2.6, y1: 2.6, z0: 2.52, z1: 4.06}
+  - {tipo: cilindro, nome: scarico, x: {prua: 24.2}, y: 0, r: 0.15, z0: 4.06, z1: 4.55, n: 8, mat: scuro}
+  # ---------------- il portale di poppa con la piattaforma, l'albero e il bigo
+  - {tipo: asta, nome: portale_poppiero, da: [{prua: 26.9}, 0, 2.69], a: [{prua: 26.9}, 0, 6.4], spessore: 0.35}
+  - {tipo: asta, nome: portale_prodiero, da: [{prua: 25.56}, 0, 2.6], a: [{prua: 25.56}, 0, 6.4], spessore: 0.35}
+  - {tipo: scatola, nome: piattaforma_portale, x0: {prua: 27.3}, x1: {prua: 24.86}, y0: -1.2, y1: 1.2, z0: 6.3, z1: 7.1}
+  - {tipo: asta, nome: albero_poppa, da: [{prua: 27.0}, 0, 7.1], a: [{prua: 27.0}, 0, 9.55], spessore: 0.12}
+  - {tipo: asta, nome: bigo, da: [{prua: 27.2}, 0, 6.27], a: [{prua: 30.2}, 0, 3.6], spessore: 0.18}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 31/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: dritta_argenova
+    file: extracted/navi/peschereccio_costiero/foto/Longliner_Argenova-XXI.jpg
+    nave: Argenova XXI, palangaro (CC BY-SA 3.0), di dritta quasi al traverso, foto leggermente ruotata
+    qualita: 1.0
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 2 px (contorno_modello.py --maschera)
+    maschera_file: extracted/navi/peschereccio_costiero/foto/dritta_argenova_maschera.png
+    solo_punti: true
+    # nomi, numeri e marchi veri tolti (regola del progetto): la matricola e il porto a poppa, la matricola e la
+    # targa della tuga, il nome a prua, il marchio della gru
+    cancella: [[135, 360, 178, 381], [615, 334, 661, 351], [649, 303, 675, 318], [790, 361, 861, 375], [426, 309, 459, 319]]
+    # l'orizzonte del mare si vede bene ai due lati (inclinato di ~0,65 gradi: la foto e' ruotata)
+    orizzonte_punti: [[5, 308], [40, 309], [960, 319], [980, 320]]
+    riquadro: [20, 90, 970, 450]
+    fotocamera_iniziale: {posizione: [0, -400, 4], bersaglio: [0, 0, 3], f: 12000}
+    limiti_fotocamera: {elevazione: [-2, 10], distanza: [50, 5000], focale: [500, 100000]}
+    punti:
+      - [[{prua: 0}, 0, 3.3], [948, 337]]             # dritto di prua in coperta
+      - [[{prua: 0.45}, 0, 0.0], [936, 433]]          # piede del bulbo al galleggiamento
+      - [[{prua: 1.17}, 0, 1.4], [912, 395]]          # ginocchio del dritto, sopra il bulbo
+      - [[{prua: 30.0}, -3.2, 2.69], [45, 346]]       # specchio, spigolo di dritta in coperta
+      - [[{prua: 29.9}, -3.0, 0.0], [43, 427]]        # specchio al galleggiamento, a dritta
+      - [[{prua: 6.6}, -2.9, 5.44], [749, 271]]       # spigolo prodiero alto di dritta della timoneria
+      - [[{prua: 12.6}, -3.0, 5.03], [567, 281]]      # spigolo poppiero alto di dritta della tuga
+      - [[{prua: 27.3}, -1.2, 7.1], [124, 213]]       # spigolo poppiero alto di dritta della piattaforma del portale

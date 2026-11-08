@@ -1,0 +1,47 @@
+# Definizione dei 7 teatri operativi (riquadri da docs/ricerca/03_teatri_fondali_storia.md).
+# bbox: [lat_min, lat_max, lon_min, lon_max] in gradi decimali (lon negative = Ovest)
+# missioni: numeri delle missioni originali ambientate nel teatro
+# batimetria: fonte primaria della heightmap (emodnet = EMODnet DTM 1/16', etopo = ETOPO 2022 15")
+# cella_m: lato della cella della heightmap nella proiezione locale (azimutale equidistante)
+predefiniti:
+  batimetria: emodnet
+  cella_m: 200
+teatri:
+  - id: faroe
+    nome: Isole Faroe – Mar di Norvegia
+    figura: "3.1"
+    bbox: [60.5, 63.5, -10.0, -4.0]
+    missioni: [1, 2]
+  - id: barents
+    nome: Mare di Barents (approcci a Kola)
+    figura: "3.2"
+    # spostato di 0.45 gradi a sud rispetto al dossier (69.2-72.0) per includere la baia di Kola con
+    # Murmansk (68.97N), Severomorsk (69.07N), Poljarnyj e Gadzhievo: porti della missione 3 "Sub Ops"
+    bbox: [68.75, 71.55, 31.0, 39.0]
+    missioni: [3]
+  - id: gibilterra
+    nome: Stretto di Gibilterra
+    figura: "3.3"
+    bbox: [35.0, 36.8, -7.5, -3.5]
+    missioni: [4, 5]
+  - id: otranto
+    nome: Imboccatura dell'Adriatico (Canale d'Otranto)
+    figura: "3.4"
+    bbox: [39.5, 42.5, 17.0, 20.5]
+    missioni: [6]
+  - id: kunashir
+    nome: Passo di Kunashir – Mare di Okhotsk
+    figura: "3.5"
+    bbox: [43.3, 45.6, 144.8, 148.5]
+    missioni: [7]
+    batimetria: etopo   # fuori dalla copertura EMODnet
+  - id: celtica
+    nome: Margine della Piattaforma Celtica
+    figura: "3.6"
+    bbox: [47.0, 49.5, -12.0, -7.5]
+    missioni: [8, 9]
+  - id: baltico
+    nome: Mar Baltico sud-occidentale
+    figura: "3.7"
+    bbox: [53.9, 56.4, 10.5, 16.2]   # allargato il 23/10/2026 per le missioni ricollocate (Bornholm, Pomerania, Kattegat); prima [54.0, 55.8, 10.5, 15.0]
+    missioni: [10]

@@ -1,0 +1,15 @@
+# Maschera ritoccata a mano della foto di giardinetto di dritta della USS Dwight D. Eisenhower (CVN-69),
+# 29/6/1982, miniatura Commons da 1920 px. Sopra l'orizzonte (y 818) la nave sta contro il cielo, ma lo
+# specchio di poppa e i velivoli al sole sono chiari quanto il cielo: lo scafo e' tracciato a mano e preso
+# per intero; sopra la coperta vale la soglia (cielo 236-247).
+file: extracted/navi/nimitz/foto/poppa_dritta_eisenhower_1982.jpg
+uscita: extracted/navi/nimitz/foto/poppa_dritta_eisenhower_1982_maschera.png
+scafo: [[645, 787], [790, 788], [1200, 793], [1544, 798], [1546, 803], [1524, 809], [1504, 819], [1492, 833],
+        [1486, 857], [1300, 864], [1098, 872], [742, 877], [677, 877], [668, 866], [655, 845], [653, 800]]
+soglia_scafo: 256
+linea_coperta: [[640, 787], [1200, 793], [1550, 798]]
+inviluppo: [[640, 787], [640, 758], [1062, 758], [1062, 688], [1088, 688], [1098, 640], [1118, 605],
+            [1150, 605], [1162, 660], [1212, 698], [1216, 758], [1550, 768], [1550, 798]]
+soglia_sovrastrutture: 231
+area_minima: 30
+buco_massimo: 120

@@ -1,0 +1,48 @@
+# Maschere aereo/cielo dell'Il-38: prima le tre per la calibrazione (_cal, sagoma intera, eliche comprese), poi le
+# tre per la proiezione (senza i dischi delle eliche).
+# 1987: cielo blu (metodo colore); 1985 e 1986: cielo chiaro (metodo cielo, scarto dal cielo della riga).
+file: extracted/navi/il38/foto/dritto_basso_1987.jpg
+uscita: extracted/navi/il38/maschere/dritto_basso_1987_cal.png
+metodo: colore
+soglia_blu: 24
+inviluppo: [[60, 600], [300, 400], [420, 395], [520, 600], [1000, 600], [1150, 395], [1300, 395], [1410, 470], [1450, 470], [1700, 650], [1720, 720], [1560, 790], [1400, 850], [1050, 850], [400, 800], [60, 680]]
+---
+file: extracted/navi/il38/foto/dritto_basso_1985.jpg
+uscita: extracted/navi/il38/maschere/dritto_basso_1985_cal.png
+metodo: cielo
+soglia: 28
+inviluppo: [[40, 500], [260, 255], [380, 255], [480, 480], [1200, 440], [1300, 440], [1400, 440], [1520, 440], [1700, 520], [1810, 590], [1800, 640], [1700, 700], [1450, 720], [1050, 700], [300, 640], [40, 560]]
+---
+file: extracted/navi/il38/foto/sinistro_1986.jpg
+uscita: extracted/navi/il38/maschere/sinistro_1986_cal.png
+metodo: cielo
+soglia: 35
+includi: [[[300, 582], [1300, 585], [1300, 712], [300, 722]], [[1300, 585], [1700, 615], [1700, 660], [1300, 712]]]   # dorso al sole, chiaro come il cielo
+inviluppo: [[25, 640], [120, 560], [350, 500], [1400, 520], [1580, 320], [1700, 320], [1700, 600], [1915, 620], [1915, 645], [1500, 730], [800, 760], [300, 790], [130, 760], [25, 690]]
+---
+# (proiezione) Maschere aereo/cielo dell'Il-38 per la calibrazione (sagoma intera, eliche comprese).
+# 1987: cielo blu (metodo colore); 1985 e 1986: cielo chiaro (metodo cielo, scarto dal cielo della riga).
+file: extracted/navi/il38/foto/dritto_basso_1987.jpg
+uscita: extracted/navi/il38/maschere/dritto_basso_1987.png
+metodo: colore
+soglia_blu: 24
+inviluppo: [[60, 600], [300, 400], [420, 395], [520, 600], [1000, 600], [1150, 395], [1300, 395], [1410, 470], [1450, 470], [1700, 650], [1720, 720], [1560, 790], [1400, 850], [1050, 850], [400, 800], [60, 680]]
+# dischi delle eliche (aerei_eliche_maschera.py): le pale nella foto non dipingono i dischi
+escludi: [[[1418, 512], [1421, 488], [1425, 469], [1429, 455], [1434, 449], [1437, 449], [1442, 450], [1447, 459], [1451, 475], [1465, 562], [1449, 640], [1445, 659], [1440, 671], [1435, 675], [1432, 675], [1428, 672], [1423, 661], [1420, 644], [1417, 622], [1416, 596], [1415, 568], [1416, 539]], [[1427, 592], [1430, 571], [1433, 553], [1438, 541], [1442, 536], [1445, 536], [1450, 538], [1454, 547], [1458, 563], [1471, 641], [1456, 715], [1452, 732], [1448, 742], [1443, 746], [1440, 746], [1436, 742], [1432, 731], [1429, 715], [1426, 694], [1425, 669], [1424, 643], [1425, 617]]]
+---
+file: extracted/navi/il38/foto/dritto_basso_1985.jpg
+uscita: extracted/navi/il38/maschere/dritto_basso_1985.png
+metodo: cielo
+soglia: 28
+inviluppo: [[40, 500], [260, 255], [380, 255], [480, 480], [1200, 440], [1300, 440], [1400, 440], [1520, 440], [1700, 520], [1810, 590], [1800, 640], [1700, 700], [1450, 720], [1050, 700], [300, 640], [40, 560]]
+# dischi delle eliche (aerei_eliche_maschera.py): le pale nella foto non dipingono i dischi
+escludi: [[[1535, 446], [1550, 538], [1531, 624], [1527, 639], [1522, 647], [1517, 648], [1514, 648], [1509, 640], [1506, 626], [1503, 606], [1501, 581], [1500, 554], [1501, 525], [1502, 497], [1505, 472], [1509, 451], [1514, 435], [1518, 427], [1523, 426], [1526, 426], [1531, 433]]]
+---
+file: extracted/navi/il38/foto/sinistro_1986.jpg
+uscita: extracted/navi/il38/maschere/sinistro_1986.png
+metodo: cielo
+soglia: 35
+includi: [[[300, 582], [1300, 585], [1300, 712], [300, 722]], [[1300, 585], [1700, 615], [1700, 660], [1300, 712]]]   # dorso al sole, chiaro come il cielo
+inviluppo: [[25, 640], [120, 560], [350, 500], [1400, 520], [1580, 320], [1700, 320], [1700, 600], [1915, 620], [1915, 645], [1500, 730], [800, 760], [300, 790], [130, 760], [25, 690]]
+# dischi delle eliche (aerei_eliche_maschera.py): le pale nella foto non dipingono i dischi
+escludi: [[[509, 699], [501, 632], [508, 581], [511, 555], [516, 534], [522, 520], [528, 513], [531, 513], [538, 515], [544, 524], [550, 541], [554, 564], [557, 592], [558, 623], [558, 654], [556, 683], [552, 710], [547, 730], [541, 744], [535, 751], [532, 751], [525, 749], [519, 739], [514, 722]], [[410, 730], [401, 663], [412, 587], [417, 566], [422, 552], [429, 546], [432, 546], [438, 547], [444, 557], [450, 573], [454, 596], [457, 624], [458, 654], [458, 685], [456, 715], [452, 741], [447, 761], [442, 775], [435, 781], [432, 781], [426, 780], [420, 770], [414, 753]]]

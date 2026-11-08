@@ -1,0 +1,91 @@
+# Peschereccio a circuizione per tonni («purse seiner», senneur thonier francese anni '70-'80), la classe civile
+# `cianciolo`: lo scafo nero col castello alto e svasato, la sovrastruttura bianca a due piani da prua al mezzo con la
+# plancia in testa e l'elicottero da avvistamento sul cielo, la torre bianca di vedetta con la coffa e l'albero, il
+# lungo braccio (boma) con la power block e il braccio corto, il ponte di lavoro basso a poppa con la rete ammucchiata,
+# il casotto dei verricelli, il portale e la rampa poppiera che scende quasi al galleggiamento.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure della classe: 50 x 12,5 m, immersione 5,5 m, 1860 t. Nella foto di dritta al
+# traverso (1982, ~1130 px dalla poppa al dritto) la nave e' riportata alla classe con un fattore unico, 22,61 px/m in
+# lunghezza e in altezza (STIMA: la nave vera e' piu' lunga, ~70-85 m, e le quote scendono nella stessa proporzione).
+# Modello proprio (kit, 31/10/2026).
+nome: Peschereccio a circuizione (senneur thonier)
+uscita: extracted/navi/cianciolo
+
+scafo:
+  L: 50.0
+  B: 12.5
+  # coperta: il castello alto a prua (4,1 m al dritto), il ponte basso di lavoro (2,4 m), la rampa poppiera che scende
+  # allo specchio quasi al galleggiamento
+  bordo: [[0, 4.14], [6, 3.85], [9, 3.55], [11.7, 3.1], [25.9, 2.52], [45.75, 2.43], [48.4, 1.15], [50.0, 0.35]]
+  # fascia scura bassa: con quella predefinita (1 m) lo specchio sporgerebbe sopra la rampa poppiera
+  bagnasciuga: 0.3
+  # il dritto curvo e slanciato, letto sulla foto
+  profilo_prua: [[0, 4.1], [0.46, 3.56], [1.0, 2.96], [2.0, 1.77], [2.76, 0]]
+  prua_segue_dritto: true
+  finezza_prua: 16
+  specchio: 0.85
+  svasatura: 0.08
+  pienezza: [0.7, 0.45]
+
+parti:
+  # ---------------- la sovrastruttura bianca a due piani, la plancia in testa col fronte inclinato
+  - {tipo: tuga, nome: tuga_bassa, x0: {prua: 30.3}, x1: {prua: 11.6}, y0: -5.6, y1: 5.6, z0: 2.4, z1: 3.67, rastrema: 0.99}
+  - {tipo: tronco, nome: tuga_plancia, basso: [{prua: 25.0}, {prua: 11.9}, 5.2], alto: [{prua: 25.0}, {prua: 12.6}, 5.0], z0: 3.67, z1: 5.35}
+  # ---------------- l'elicottero da avvistamento sul cielo della plancia (galleggianti, cabina, trave di coda, pale ferme)
+  - {tipo: tuga, nome: galleggianti_elicottero, x0: {prua: 17.3}, x1: {prua: 14.0}, y0: -0.9, y1: 0.9, z0: 5.35, z1: 5.9, mat: scuro}
+  - {tipo: ellissoide_elicottero, nome: cabina_elicottero, x: {prua: 15.0}, y: 0, z: 6.7, rx: 1.2, ry: 0.7, rz: 0.75}
+  - {tipo: asta, nome: coda_elicottero, da: [{prua: 16.2}, 0, 6.9], a: [{prua: 20.3}, 0, 7.0], spessore: 0.25}
+  - {tipo: asta, nome: deriva_elicottero, da: [{prua: 20.3}, 0, 6.6], a: [{prua: 20.4}, 0, 7.5], spessore: 0.15}
+  - {tipo: asta, nome: albero_rotore, da: [{prua: 15.9}, 0, 7.1], a: [{prua: 15.9}, 0, 7.8], spessore: 0.2}
+  - {tipo: asta, nome: pala_longitudinale, da: [{prua: 12.6}, 0, 7.8], a: [{prua: 19.2}, 0, 7.8], spessore: 0.12, mat: scuro}
+  - {tipo: asta, nome: pala_trasversale, da: [{prua: 15.9}, -3.3, 7.8], a: [{prua: 15.9}, 3.3, 7.8], spessore: 0.12, mat: scuro}
+  # ---------------- la torre di vedetta rastremata, la piattaforma col radar, la coffa, l'albero
+  - {tipo: tronco, nome: torre_vedetta, basso: [{prua: 29.45}, {prua: 26.95}, 1.25], alto: [{prua: 28.62}, {prua: 27.78}, 0.42], z0: 3.67, z1: 14.66}
+  - {tipo: tuga, nome: piattaforma_radar, x0: {prua: 29.9}, x1: {prua: 26.0}, y0: -1.9, y1: 1.9, z0: 8.2, z1: 8.4, mat: traliccio}
+  - {tipo: cilindro, nome: colonna_radar, x: {prua: 26.65}, y: 0, r: 0.2, z0: 8.4, z1: 9.9, n: 8, mat: scuro}
+  - {tipo: antenna_radar, nome: radar, x: {prua: 26.65}, z0: 9.9, larghezza: 1.6, altezza: 0.3}
+  - {tipo: tuga, nome: coffa, x0: {prua: 29.72}, x1: {prua: 27.75}, y0: -1.1, y1: 1.1, z0: 14.66, z1: 16.39, rastrema: 0.98}
+  - {tipo: albero_palo, nome: albero, x: {prua: 29.23}, z0: 16.39, z1: 18.31, r: 0.12}
+  # ---------------- la lancia di servizio sul ponte delle imbarcazioni, a dritta davanti alla torre
+  - {tipo: imbarcazione, nome: lancia, x0: {prua: 28.5}, x1: {prua: 25.1}, y: -4.5, z0: 3.9, larghezza: 1.6, altezza: 0.8}
+  # ---------------- il braccio lungo (boma) con la power block, il braccio corto
+  - {tipo: asta, nome: boma, da: [{prua: 29.83}, 0, 4.42], a: [{prua: 41.07}, 0, 16.23], spessore: 0.5}
+  - {tipo: asta, nome: braccio_corto, da: [{prua: 29.35}, 0, 6.24], a: [{prua: 34.65}, 0, 13.14], spessore: 0.35}
+  - {tipo: tuga, nome: power_block, x0: {prua: 40.85}, x1: {prua: 40.1}, y0: -0.3, y1: 0.3, z0: 14.4, z1: 15.2, mat: nero}
+  # ---------------- il ponte di lavoro: il portale, il casotto dei verricelli, la rete ammucchiata
+  - {tipo: asta, nome: portale_poppiero, da: [{prua: 36.73}, -5.0, 2.43], a: [{prua: 36.73}, -5.0, 4.87], spessore: 0.25}
+  - {tipo: asta, nome: portale_prodiero, da: [{prua: 31.51}, -5.0, 2.43], a: [{prua: 31.51}, -5.0, 4.87], spessore: 0.25}
+  - {tipo: asta, nome: portale_traversa, da: [{prua: 36.73}, -5.0, 4.87], a: [{prua: 31.51}, -5.0, 4.87], spessore: 0.25}
+  - {tipo: tuga, nome: casotto_verricelli, x0: {prua: 40.05}, x1: {prua: 37.04}, y0: -3.0, y1: 3.0, z0: 2.4, z1: 4.33, rastrema: 0.98}
+  - {tipo: tuga, nome: verricello, x0: {prua: 39.8}, x1: {prua: 38.8}, y0: -0.5, y1: 0.5, z0: 4.33, z1: 5.4, mat: nero}
+  # la rete ammucchiata: un tronco col lato poppiero spiovente
+  - {tipo: tronco, nome: rete, basso: [{prua: 45.1}, {prua: 40.1}, 4.0], alto: [{prua: 43.75}, {prua: 40.4}, 3.0], z0: 2.4, z1: 4.5, mat: ponte}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 31/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: dritta_1982
+    file: extracted/navi/cianciolo/foto/French_tuna_purse_seiner.jpg
+    nave: senneur thonier francese, 1982 (Jose Cort, pubblico dominio), di dritta al traverso
+    qualita: 1.0
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 2 px (contorno_modello.py --maschera)
+    maschera_file: extracted/navi/cianciolo/foto/dritta_1982_maschera.png
+    solo_punti: true
+    # nome, numero e stemmi veri tolti (regola del progetto): il nome e il porto a poppa, la matricola sullo scafo,
+    # lo stemma della torre e quello del casotto dei verricelli
+    cancella: [[418, 739, 482, 760], [1007, 719, 1092, 735], [790, 614, 805, 632], [538, 691, 552, 702]]
+    riquadro: [280, 360, 1460, 800]
+    # la linea del mare all'orizzonte, ai due lati della nave (vincola quota ed elevazione della fotocamera)
+    orizzonte_punti: [[250, 754], [1760, 748]]
+    fotocamera_iniziale: {posizione: [0, -600, 1.5], bersaglio: [0, 0, 3], f: 13500}
+    limiti_fotocamera: {elevazione: [-2, 10], distanza: [50, 10000], focale: [500, 200000]}
+    punti:
+      - [[{prua: 0}, 0, 4.14], [1434, 686]]          # dritto di prua in coperta
+      - [[{prua: 2.76}, 0, 0.0], [1372, 778]]        # piede del dritto al galleggiamento
+      - [[{prua: 50.0}, -5.3, 0.3], [304, 777]]      # specchio, spigolo di dritta in basso
+      - [[{prua: 45.75}, -6.2, 2.43], [400, 725]]    # ginocchio della rampa poppiera in coperta, a dritta
+      - [[{prua: 12.6}, -5.0, 5.35], [1150, 660]]    # spigolo prodiero alto di dritta della plancia
+      - [[{prua: 25.0}, -5.0, 5.35], [870, 659]]     # spigolo poppiero alto di dritta della plancia
+      - [[{prua: 27.75}, -1.1, 16.39], [807, 410]]   # spigolo prodiero alto di dritta della coffa
+      - [[{prua: 41.07}, 0, 16.23], [506, 413]]      # testa del boma
+      - [[{prua: 29.23}, 0, 18.31], [775, 366]]      # cima dell'albero

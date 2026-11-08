@@ -1,0 +1,73 @@
+# Sottomarino lanciamissili balistici Progetto 667BDR "Kal'mar" (NATO: Delta III), configurazione 1989: scafo lungo e
+# cilindrico, vela a prua coi timoni orizzontali, la gobba dei 16 silos degli R-29R (SS-N-18) che sale subito dietro la
+# vela e scende verso poppa, timone verticale semplice. Misure dal dossier docs/ricerca/31_firme_lotto1.md (156 x 11,7
+# x 8,7 m); le posizioni della vela e della gobba sono STIMA del kit, da rifinire sulle foto (passo 3, approvato
+# dall'utente il 29/10/2026).
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua. Quote assolute rispetto al galleggiamento in emersione normale.
+nome: Delta III (Progetto 667BDR)
+uscita: extracted/navi/delta3
+tono: 0.22
+contrasto: 0.12
+moduli_parti: [sottomarini_parti.py]
+peso_ombra: 0.03
+
+scafo:
+  generatore: scafo_sottomarino
+  L: 156.0
+  B: 11.7
+  # prua arrotondata, corpo cilindrico lungo fin oltre i 130 m (la foto di fianco), cono di poppa corto (STIMA)
+  raggio: [[0.0, 0.0], [1.0, 2.2], [3.0, 3.6], [6.0, 4.6], [10.0, 5.3], [15.0, 5.75], [20.0, 5.85], [128.0, 5.85],
+           [136.0, 5.3], [142.0, 4.4], [148.0, 3.1], [152.0, 1.9], [154.5, 1.0], [156.0, 0.0]]
+  bordo_libero: 2.4        # la coperta a prua sulla foto di fianco (48 px su 21 px/m)
+  stazioni: 110
+  punti_sezione: 48
+
+parti:
+  # vela: dalla foto di fianco (21 px/m sulla lunghezza): da 27,5 a 48,4 m dalla prua, il cielo piatto a 10,3 m
+  - tipo: vela
+    nome: vela
+    pianta: ovale
+    esponente: 3.0
+    livelli:
+      - [2.4, {prua: 27.5}, {prua: 48.4}, 1.7]
+      - [4.0, {prua: 27.6}, {prua: 48.3}, 1.7]
+      - [9.6, {prua: 27.7}, {prua: 48.2}, 1.6]
+      - [10.1, {prua: 28.0}, {prua: 48.0}, 1.4]
+      - [10.3, {prua: 28.6}, {prua: 47.4}, 1.1]
+  - {tipo: pinna_orizzontale, nome: timoni_vela, x: {prua: 31.0}, z: 7.5, apertura: 4.6, corda: 3.2, corda_estremita: 2.2, spessore: 0.5, freccia: 1.0}
+  - {tipo: cilindro, nome: albero, x: {prua: 44.2}, y: 0, r: 0.15, z0: 10.3, z1: 15.7, n: 6, mat: scuro}
+  - {tipo: cilindro, nome: periscopio, x: {prua: 35.3}, y: 0, r: 0.12, z0: 10.3, z1: 15.5, n: 6, mat: scuro}
+  # la gobba dei silos: sale dal retro della vela (cima a 7,8 m da 48 m) e scende piano verso poppa, la coda bassa fino a 128 m dalla prua
+  - tipo: vela
+    nome: gobba_silos
+    pianta: ovale
+    esponente: 4.0
+    livelli:
+      - [2.4, {prua: 38.0}, {prua: 128.0}, 4.6]
+      - [4.0, {prua: 39.0}, {prua: 120.0}, 4.5]
+      - [5.6, {prua: 41.0}, {prua: 109.0}, 4.3]
+      - [7.4, {prua: 45.0}, {prua: 97.0}, 4.0]
+      - [7.8, {prua: 48.0}, {prua: 91.0}, 3.6]
+  # timone verticale (STIMA: fuori dall'inquadratura); le pinne di poppa e le eliche sono dell'opera viva (opera_viva.py)
+  - {tipo: timone_verticale, nome: timone, x: {prua: 146.0}, z0: -2.0, z1: 5.0, corda: 7.0, corda_estremita: 4.5, spessore: 0.8, freccia: 2.0}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 29/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: fianco_sinistra
+    file: extracted/navi/delta3/foto/Delta-III_nuclear-powered_ballistic_missle_submarine.jpg
+    nave: Delta III (Progetto 667BDR), anni '80 (DoD, pubblico dominio)
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    orizzonte_y: 268          # il cielo sopra, il mare chiaro sotto: la nave e' la cosa piu' scura
+    soglia_cielo: 150
+    soglia_mare: 110
+    mare_fino_a_y: 600
+    fotocamera_iniziale: {posizione: [-10, 3000, 30], bersaglio: [-10, 0, 3], f: 20000}
+    punti:
+      - [[{prua: 0.5}, 0, 0.0], [6, 572]]          # prua al galleggiamento
+      - [[{prua: 27.6}, 0, 10.2], [584, 360]]      # spigolo prodiero del cielo della vela
+      - [[{prua: 48.1}, 0, 10.2], [1016, 357]]     # spigolo poppiero del cielo della vela
+      - [[{prua: 27.5}, 0, 2.4], [582, 527]]       # piede prodiero della vela in coperta
+      - [[{prua: 44.2}, 0, 15.7], [932, 245]]      # cima dell'albero

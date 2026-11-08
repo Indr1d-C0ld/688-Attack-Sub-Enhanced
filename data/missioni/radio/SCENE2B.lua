@@ -1,0 +1,36 @@
+-- Contenuti radio dell'Enhanced per SCENE2B, SHAKE 'EM (lato Alfa, Fær Øer). R3 (docs/11): colore e contesto, obiettivi
+-- ed esiti restano quelli dell'originale. Il comando sovietico vuole sessioni regolari: una ogni 5 minuti.
+return {
+  ordini = { da = "KP SF", a = "PL «LENINSKII KOMSOMOL»", oggetto = "SLEZHENIE", classifica = "SOV. SEKRETNO", data = { giorno = 2, mese = 4, anno = 1989, ora_utc = 6 } },
+  parametri = { ciclo_s = 300, fondo_ogni_s = 300 },
+  finestre = { ogni_s = 300, primo_s = 150, tolleranza_s = 60, obbligatorie = true, ricevuta = false, saltate_max = 2 },
+  stato_iniziale = {
+    roe = { sottomarini = "trattenuto", navi = "trattenuto", mercantili = "trattenuto", neutrali = "trattenuto", aerei = "trattenuto" },
+    neutrali = { 3, 4, 5 },
+  },
+  { id = "KONTAKT", dopo_s = 60, precedenza = "immediate", da = "KP SF", oggetto = "KONTAKT",
+    classifica = "SEKRETNO",
+    testo = { it = "STAZIONE IDROFONICA COSTIERA: IL SOTTOMARINO AMERICANO PROCEDE A SUD-OVEST, 8 NODI. MANTENERE IL CONTATTO.",
+              en = "COASTAL HYDROPHONE STATION: AMERICAN SUBMARINE PROCEEDING SOUTHWEST, 8 KNOTS. MAINTAIN CONTACT." },
+    contatto = { unita = { 2 }, eta_s = 300, errore_m = 4000, sensore = "costiera", rotta_err = 25, velocita_err_kn = 3 } },
+  { id = "PODDERZHKA", dopo_s = 360, precedenza = "priority", da = "KP SF", oggetto = "PODDERZHKA",
+    classifica = "SEKRETNO",
+    testo = { it = "IL SOSTEGNO AEREO E' RITARDATO DAL TEMPO. IL LENINSKII KOMSOMOL CONTINUI DA SOLO.",
+              en = "AIR SUPPORT DELAYED BY WEATHER. LENINSKII KOMSOMOL TO CONTINUE ALONE." } },
+  { id = "POZICIJA", dopo_s = 660, precedenza = "priority", da = "KP SF", oggetto = "UTOCHNENIE",
+    classifica = "SEKRETNO",
+    testo = { it = "AGGIORNAMENTO DALLA NAVE DA PESCA DELL'OSSERVAZIONE: IL BERSAGLIO HA ACCOSTATO. NUOVA POSIZIONE STIMATA.",
+              en = "UPDATE FROM OBSERVATION TRAWLER: TARGET HAS TURNED. NEW ESTIMATED POSITION." },
+    contatto = { unita = { 2 }, eta_s = 240, errore_m = 2500, sensore = "agi", rotta_err = 20, velocita_err_kn = 3 } },
+  { id = "PRIKAZ", dopo_s = 900, precedenza = "immediate", da = "KP SF", oggetto = "PRIKAZ",
+    classifica = "SEKRETNO",
+    testo = { it = "RESTARE ENTRO 5 MIGLIA IN POSIZIONE DI TIRO. LANCIO SOLO SE ATTACCATI. NON PERDERE IL BERSAGLIO NEI CANALI.",
+              en = "STAY WITHIN 5 MILES IN FIRING POSITION. LAUNCH ONLY IF FIRED UPON. DO NOT LOSE THE TARGET IN THE CHANNELS." },
+    roe = { sottomarini = "trattenuto" } },
+  -- legati agli eventi (E6): vanno in onda la prima volta che la condizione e' vera
+  { id = "ORUZHIE", se = { evento = "lancio_nemico" }, precedenza = "flash", da = "KP SF", oggetto = "ORUZHIE",
+    classifica = "SOV. SEKRETNO",
+    roe = { sottomarini = "libero" },
+    testo = { it = "GLI AMERICANI HANNO APERTO IL FUOCO. ARMI LIBERE CONTRO IL SOTTOMARINO AMERICANO.",
+              en = "THE AMERICANS HAVE OPENED FIRE. WEAPONS FREE ON THE AMERICAN SUBMARINE." } },
+}

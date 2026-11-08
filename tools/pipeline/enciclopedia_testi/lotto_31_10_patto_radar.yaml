@@ -1,0 +1,378 @@
+# Testi dell'enciclopedia, lotto del 31/10/2026: le navi sovietiche nuove (Udaloy, Grisha III, Ugra) e i radar e l'ESM
+# delle classi dei lotti 1 e 2 e delle missioni S15-S19 (docs/00_ROADMAP.md, requisito 14; formato di campioni.yaml).
+# Scritti a mano, in parafrasi dai dossier di docs/ricerca (31, 32, 33, 35, 11, 01, 03, 07, 17, 36), dai RAPPORTO dei
+# modelli (extracted/navi) e dai dati di data/motore; nessun testo copiato. Campi: it, en (storia e impiego); uso_it,
+# uso_en (che cosa significa per il sottomarino del giocatore); fonti; armi_tipiche per le navi militari.
+# I numeri di gioco (bande, periodi, R50, portate ESM) vengono da emettitori.toml: la portata ESM è l'orizzonte radar
+# fra l'antenna e una testa a 1,5 m per il fattore ESM del radar (dossier 11 §0.2 e §6.3).
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Navi
+# ---------------------------------------------------------------------------------------------------------------------
+
+nave.udaloy:
+  it: >-
+    Le grandi navi antisommergibile del Progetto 1155 «Fregat» (Udaloy per la NATO) sono lunghe 163,5 metri e dislocano
+    7.620 tonnellate a pieno carico; due gruppi COGAG, con turbine di crociera e turbine di potenza su due assi, le
+    portano a 30 nodi. Il sensore principale è il sonar MGK-355 «Polinom»: la grande cupola di prua «Horse Jaw», a
+    bassa frequenza, e il «Horse Tail» a profondità variabile. Contro i sottomarini hanno due lanciatori quadrupli
+    Rastrub (SS-N-14) ai lati della plancia, due RBU-6000, due tubi quadrupli da 533 mm e due elicotteri Ka-27 in due
+    hangar affiancati; i cannoni sono due AK-100 da 100 mm e quattro AK-630. La dottrina le schiera nella zona media
+    della difesa dei bastioni, insieme alle Krivak, agli Il-38 e ai Ka-27.
+  en: >-
+    The Project 1155 «Fregat» large anti-submarine ships (Udaloy to NATO) are 163.5 metres long and displace 7,620
+    tonnes at full load; two COGAG sets, with cruise and boost turbines on two shafts, drive them to 30 knots. The main
+    sensor is the MGK-355 «Polinom» sonar: the large «Horse Jaw» bow dome, at low frequency, and the «Horse Tail»
+    variable depth sonar. Against submarines they carry two quadruple Rastrub launchers (SS-N-14) beside the bridge,
+    two RBU-6000s, two quadruple 533 mm tube mounts and two Ka-27 helicopters in twin side-by-side hangars; the guns
+    are two 100 mm AK-100s and four AK-630s. Doctrine places them in the middle zone of the bastion defence, together
+    with Krivaks, Il-38s and Ka-27s.
+  uso_it: >-
+    Nel gioco ascolta col Polinom di prua e col «Horse Tail», che la nave cala circa 30 metri sotto lo strato, fino a
+    200 metri: contro di lei lo strato termico protegge poco. Il suo ping a 3,5 kHz è forte (232 dB, poco sotto
+    l'SQS-53). Lancia il SET-65 dai tubi fino a circa 8 km; oltre, entro 60 km e con mare fino a 5, fa decollare un
+    Ka-27. All'ESM si annuncia col Top Plate, che nel gioco porta solo lei. È rumorosa quando corre (172 dB a 30 nodi),
+    ma a 5 nodi scende a 145 dB; per una nave di questa stazza mettete in conto uno o due siluri pesanti.
+  uso_en: >-
+    In the game it listens with the bow Polinom and with the «Horse Tail», which the ship lowers about 30 metres
+    below the layer, down to 200 metres: against it the thermal layer gives little protection. Its 3.5 kHz ping is
+    strong (232 dB, just below the SQS-53). It fires the SET-65 from its tubes out to about 8 km; beyond that, within
+    60 km and up to sea state 5, it launches a Ka-27. On the ESM it announces itself with the Top Plate, which in the
+    game only it carries. It is noisy when running (172 dB at 30 knots), but at 5 knots it drops to 145 dB; for a ship
+    of this size plan on one or two heavyweight torpedoes.
+  fonti: ['dossier 31 §4 (ru.wikipedia, progetto 1155)', 'dossier 33 §1-3', 'dossier 36 §3', 'dossier 17 §3.2 [RW-Ka27]',
+    'dossier 03 §C4 (9-10)', 'dossier 01 §6.1-6.3 (SET-65, AT-2U e Metel)', 'dossier 05 §4.2 [WPKinz]',
+    'dossier 07 §6.4', 'extracted/navi/udaloy/RAPPORTO.md', 'libretto.toml [udaloy]',
+    'acustica.toml (firme.udaloy, suite.udaloy, sensori.polinom, polinom_attivo, polinom_vds, polinom_vds_attivo)',
+    'emettitori.toml (suite.udaloy)', 'classi.toml [udaloy]',
+    'engine/missioni/src/missione_antisom_navi.cpp (tubi ed elicottero, STIMA)']
+  armi_tipiche:
+    voci: [siluro.at2, siluro.set65]
+    altre: ['2 × 4 SS-N-14 (Rastrub)', '2 RBU-6000', '2 × 4 tubi da 533 mm', '2 × 100 mm AK-100', '4 AK-630',
+      'Kinzhal (SA-N-9), operativo dal 1989 su poche unità', '2 Ka-27']
+    fonte: 'libretto.toml [udaloy]; dossier 36 §3; dossier 17 §3.2; dossier 05 §4.2; docs/18_interazioni_ia.md (tubi)'
+
+nave.grisha3:
+  it: >-
+    Le corvette antisommergibile del Progetto 1124M «Al'batros» (Grisha III per la NATO) sono piccole: 71,1 metri e
+    1.120 tonnellate a pieno carico. Hanno tre assi, due diesel su quelli laterali e una turbina a gas su quello
+    centrale: 32 nodi con tutto, 16 con i soli diesel. Sotto la prua c'è il sonar «Platina» («Bull Nose»), con una
+    portata di circa 15 km, e il sonar calabile «Shelon» («Elk Tail») si usa a nave ferma. L'armamento conta due
+    RBU-6000 a prua, quattro tubi da 533 mm, il missile antiaereo SA-N-4, un binato AK-725 da 57 mm e un AK-630. La
+    dottrina le assegna alle acque costiere e alla fascia interna della difesa dei bastioni.
+  en: >-
+    The Project 1124M «Al'batros» anti-submarine corvettes (Grisha III to NATO) are small: 71.1 metres and 1,120
+    tonnes at full load. They have three shafts, two diesels on the wing shafts and a gas turbine on the centre one: 32
+    knots with everything, 16 on diesels alone. Under the bow is the «Platina» sonar («Bull Nose»), with a range of
+    about 15 km, and the «Shelon» dipping sonar («Elk Tail») is used with the ship stopped. The armament counts two
+    RBU-6000s forward, four 533 mm tubes, the SA-N-4 anti-air missile, a twin 57 mm AK-725 and an AK-630. Doctrine
+    assigns them to coastal waters and to the inner belt of the bastion defence.
+  uso_it: >-
+    Nel gioco ha il sonar passivo delle navi sovietiche, un attivo a 3,5 kHz come il Titan-2 (228 dB) e lo Shelon:
+    quando si ferma lo cala fino a 150 metri, sotto lo strato, e ascolta o pinga a 10 kHz. Caccia a scatti, ferma o in
+    deriva e poi dieci minuti di corsa: è nello scatto che sente peggio. Non lancia siluri, attacca con le salve degli
+    RBU, che arrivano a circa 5 km: tenetela più lontana. Per una nave così piccola un siluro pesante basta.
+  uso_en: >-
+    In the game it has the Soviet ships' passive sonar, a 3.5 kHz active set like the Titan-2 (228 dB) and the Shelon:
+    when it stops it lowers it down to 150 metres, below the layer, and listens or pings at 10 kHz. It hunts in
+    sprints, stopped or drifting and then ten minutes of running: during the sprint it hears worst. It fires no
+    torpedoes and attacks with RBU salvoes, which reach about 5 km: keep it farther away than that. For a ship this
+    small one heavyweight torpedo is enough.
+  fonti: ['dossier 31 §5 (ru.wikipedia, progetto 1124)', 'dossier 33 §1-3', 'dossier 36 §3', 'dossier 03 §C4 (9-10)',
+    'dossier 01 §6.5 [RWRBU6000]', 'dossier 07 §6.4', 'extracted/navi/grisha3/RAPPORTO.md', 'libretto.toml [grisha3]',
+    'acustica.toml (firme.grisha3, suite.grisha3, sensori.titan2_attivo, shelon_vds, shelon_vds_attivo)',
+    'emettitori.toml (suite.grisha3)', 'classi.toml [grisha3]', 'engine/missioni/src/missione.cpp (salve_asw_classe)']
+  armi_tipiche:
+    voci: []
+    altre: ['2 RBU-6000', '4 tubi da 533 mm', 'SA-N-4 (Osa-M)', '1 × 2 da 57 mm AK-725', '1 AK-630']
+    fonte: 'dossier 36 §3; libretto.toml [grisha3]; extracted/navi/grisha3/RAPPORTO.md'
+
+nave.ugra:
+  it: >-
+    Le navi del Progetto 1886 (Ugra per la NATO) sono basi galleggianti per i sottomarini delle squadre (eskadre);
+    nel Mediterraneo lavorano con la 5a Eskadra. Hanno uno scafo lungo da mercantile, 141,4 metri
+    per 17,7, con una grande gru a centro nave, un fumaiolo tondo e circa 9.650 tonnellate a pieno carico. Per
+    difendersi portano quattro impianti binati da 57 mm, due a prua e due a poppa. Le misure vengono da fonti
+    secondarie e vanno prese come una stima.
+  en: >-
+    The Project 1886 ships (Ugra to NATO) are floating bases for the submarines of the squadrons (eskadras); in the
+    Mediterranean they work with the 5th Eskadra. They have a long merchant-style hull, 141.4 metres by
+    17.7, with a large crane amidships, a round funnel and about 9,650 tonnes at full load. For defence they carry four
+    twin 57 mm mounts, two forward and two aft. The dimensions come from secondary sources and should be taken as an
+    estimate.
+  uso_it: >-
+    Nel gioco è grande e lenta, al massimo 17 nodi, con un solo sonar passivo di prua; non insegue mai. Si sente bene
+    (168 dB alla massima), con le righe dei diesel e della rete a 50 Hz delle navi sovietiche. All'ancora con un
+    sottomarino affiancato, come nella missione «L'ancoraggio», il pericolo sono le navi di guardia, non lei.
+    All'ESM porta i radar delle navi sovietiche, compreso quello di tiro dei suoi cannoni.
+  uso_en: >-
+    In the game it is big and slow, 17 knots at most, with a single passive bow sonar; it never trails. It is easy to
+    hear (168 dB at full speed), with the diesel lines and the 50 Hz electrical grid of Soviet ships. At anchor with a
+    submarine alongside, as in the mission «The anchorage», the danger is the guard ships, not the tender itself. On the
+    ESM it shows the Soviet ships' radars, including the fire-control set of its guns.
+  fonti: ['extracted/navi/ugra/RAPPORTO.md', 'docs/17_libreria_missioni.md (LIB-S15)', 'libretto.toml [ugra]',
+    'acustica.toml (firme.ugra, suite.ugra)', 'emettitori.toml (suite.ugra)', 'classi.toml [ugra]',
+    'engine/missioni/src/missione_reazioni.cpp (le ausiliarie non pedinano)']
+  armi_tipiche:
+    voci: []
+    altre: ['4 × 2 da 57 mm']
+    fonte: 'extracted/navi/ugra/RAPPORTO.md; libretto.toml [ugra]'
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Radar
+# ---------------------------------------------------------------------------------------------------------------------
+
+radar.top_plate:
+  it: >-
+    Top Plate è il nome NATO del radar tridimensionale di ricerca aerea MR-710/750 «Fregat-M/MA», della stessa
+    famiglia del Top Steer (MR-700 «Fregat»). Lavora in banda D/E, con l'antenna che fa un giro ogni 5 o 10 secondi
+    (12 o 6 giri al minuto) e una portata di 150-300 km contro gli aerei. Nel 1989 è sulle unità sovietiche più nuove:
+    sulla Frunze e sulla Kalinin sta sull'albero poppiero, e il gioco lo monta sugli Udaloy, in banda D intorno a 1,5
+    GHz, con un giro ogni 5 secondi e l'antenna a 35 metri.
+  en: >-
+    Top Plate is the NATO name of the MR-710/750 «Fregat-M/MA» three-dimensional air search radar, of the same family
+    as the Top Steer (MR-700 «Fregat»). It works in D/E band, with the antenna turning once every 5 or 10 seconds (12
+    or 6 rpm) and a range of 150-300 km against aircraft. In 1989 it is on the newest Soviet units: on Frunze and
+    Kalinin it sits on the after mast, and the game fits it to the Udaloys, in D band around 1.5 GHz, with one sweep
+    every 5 seconds and the antenna at 35 metres.
+  uso_it: >-
+    All'ESM la firma è unica: un passaggio ogni 5 secondi in banda D vuol dire un Udaloy, che lo tiene acceso fin
+    dall'inizio come tutte le navi sovietiche in ricerca. Di rado il ricevitore lo scambia con l'altro radar in banda D,
+    il Type 967/968 o il DRBV 22. Sotto i 2 GHz il WLR-8 intercetta un po' meno sicuro, ma con l'antenna a 35 metri lo
+    senti fino a circa 20 miglia. Contro il periscopio vede poco, un miglio con mare calmo e niente con mare 4, uno
+    snorkel a 4 miglia: a vederti sono il radar di navigazione e il Polinom della nave.
+  uso_en: >-
+    On the ESM the signature is unique: one pass every 5 seconds in D band means an Udaloy, which keeps it on from the
+    start like every Soviet ship in search. Now and then the receiver mistakes it for the other D-band radars, the
+    Type 967/968 or the DRBV 22. Below 2 GHz the WLR-8 intercepts a little less reliably, but with the antenna at 35
+    metres you hear it out to about 20 miles. Against the periscope it sees little, one mile in a calm sea and nothing
+    in sea state 4, a snorkel at 4 miles: what sees you is the ship's navigation radar and its Polinom.
+  fonti: ['dossier 11 §1.2 [WPSLAVA] [RTTOP], §2, §3.4, §6.1 e §6.3', 'dossier 01 §7.4',
+    'extracted/navi/kirov/RAPPORTO.md (Frunze e Kalinin)', 'emettitori.toml (radar.top_plate, suite.udaloy, esm.wlr8)']
+
+radar.spy1a:
+  it: >-
+    L'AN/SPY-1A è il radar del sistema Aegis degli incrociatori Ticonderoga, quindici in servizio alla fine del 1989.
+    Non ha un'antenna che gira: quattro pannelli ottagonali fissi, due sulla tuga prodiera e due su quella poppiera
+    sopra l'hangar. A bordo lavora con l'SPS-49 di ricerca aerea, l'SPS-55
+    di superficie e l'SPQ-9. Nel gioco è in banda E, intorno a 2,5 GHz, con i pannelli a 20 metri; il gioco del 1989
+    non aveva l'SPY-1, che entra con l'Enhanced.
+  en: >-
+    The AN/SPY-1A is the Aegis system radar of the Ticonderoga cruisers, fifteen in service at the end of 1989. It has
+    no rotating antenna: four fixed octagonal panels, two on the forward deckhouse and two on the after one above the
+    hangar. On board it works with the SPS-49 air search radar, the SPS-55
+    surface radar and the SPQ-9. In the game it is in E band, around 2.5 GHz, with the panels at 20 metres; the 1989
+    game did not have the SPY-1, which comes in with the Enhanced.
+  uso_it: >-
+    All'ESM il gioco lo rende con un passaggio al secondo: una firma unica, anche se per errore può finire sull'SPS-48 o
+    sull'Head Net-C della stessa banda. Le navi della NATO partono col solo radar di navigazione, quindi se lo senti il
+    gruppo si sa scoperto o è in allarme. Lo senti fino a circa 16 miglia. Se giochi l'Alfa conta anche come minaccia:
+    vede un periscopio a circa 2 miglia con mare calmo e mezzo miglio con mare 4, uno snorkel a 6, e con un passaggio al
+    secondo anche un'alzata di 10 secondi gli dà dieci occasioni.
+  uso_en: >-
+    On the ESM the game renders it as one pass per second: a unique signature, although by mistake it can be taken for
+    the SPS-48 or the Head Net-C in the same band. NATO ships start with only their navigation radar, so if you hear
+    it the group knows it has been detected or is on alert. You hear it out to about 16 miles. If you play the Alfa it
+    is also a threat: it sees a periscope at about 2 miles in a calm sea and half a mile in sea state 4, a snorkel at
+    6, and with one pass per second even a 10-second exposure gives it ten chances.
+  fonti: ['dossier 32 §2', 'dossier 11 §1.1 (nota), §3.2, §5.3, §6.2 e §6.3', 'extracted/navi/ticonderoga/RAPPORTO.md',
+    'libretto.toml [ticonderoga]', 'tools/pipeline/emettitori.py (dotazioni dei lotti 1 e 2)',
+    'emettitori.toml (radar.spy1a, suite.ticonderoga)']
+
+radar.tipo967:
+  it: >-
+    Il Type 967/968 è il radar di sorveglianza delle fregate Type 22 della Royal Navy, in cima alla torre prodiera; sulla
+    stessa nave ci sono i due Type 910, a prua e a poppa, e i missili Sea Wolf. Lo portano entrambe le serie della classe, la
+    Batch 1 e la Batch 2. Nel gioco è un radar di ricerca aerea in banda D, intorno a 1,5 GHz, con un giro ogni 2
+    secondi e l'antenna a 22 metri.
+  en: >-
+    The Type 967/968 is the surveillance radar of the Royal Navy's Type 22 frigates, on top of the forward tower; the
+    same ship carries the two Type 910s, forward and aft, and the Sea Wolf missiles. Both series of the class carry it, Batch 1 and
+    Batch 2. In the game it is an air search radar in D band, around 1.5 GHz, with one sweep every 2 seconds and the
+    antenna at 22 metres.
+  uso_it: >-
+    All'ESM è una firma unica in banda D, un passaggio ogni 2 secondi, che di rado si scambia col Top Plate o col
+    DRBV 22. Il WLR-8 lo sente fino a circa 17 miglia; il Bukhta dell'Alfa, che parte da 2 GHz, non lo sente affatto,
+    ed è un guaio, perché contro un periscopio arriva a circa un miglio e mezzo con mare calmo, mezzo miglio con mare 4,
+    e vede uno snorkel a 5. Come sulle altre navi della NATO, si accende quando il gruppo si sa scoperto.
+  uso_en: >-
+    On the ESM it is a unique D-band signature, one pass every 2 seconds, rarely mistaken for the Top Plate or the
+    DRBV 22. The WLR-8 hears it out to about 17 miles; the Alfa's Bukhta, which starts at 2 GHz, does not hear it at
+    all, which is a problem, because against a periscope it reaches about a mile and a half in a calm sea, half a mile
+    in sea state 4, and it sees a snorkel at 5. As on other NATO ships, it comes on when the group knows it has been
+    detected.
+  fonti: ['dossier 32 §4', 'dossier 11 §3.2, §6.2 e §6.3', 'extracted/navi/type22/RAPPORTO.md',
+    'extracted/navi/type22b2/RAPPORTO.md', 'libretto.toml [type22] [type22b2]',
+    'tools/pipeline/emettitori.py (dotazioni dei lotti 1 e 2)',
+    'emettitori.toml (radar.tipo967, suite.type22, suite.type22b2, esm.bukhta)']
+
+radar.tipo1006:
+  it: >-
+    Il Type 1006 è un radar di navigazione e di ricerca di superficie in banda I della Kelvin Hughes. Nel gioco lo
+    portano le fregate Type 22, con l'antenna a 20 metri e un giro ogni 2,5 secondi, ed è il radar che la nave tiene
+    acceso anche in navigazione tranquilla. Il libretto lo elenca anche sui sottomarini Trafalgar, che nel gioco però
+    usano il modello del BPS-15.
+  en: >-
+    The Type 1006 is a Kelvin Hughes I-band navigation and surface search radar. In the game the Type 22 frigates carry
+    it, with the antenna at 20 metres and one sweep every 2.5 seconds, and it is the radar the ship keeps on even in
+    quiet transit. The recognition book also lists it on the Trafalgar submarines, which in the game however use the
+    BPS-15 model.
+  uso_it: >-
+    All'ESM si confonde con gli altri radar di navigazione in banda I, civili e sovietici compresi, e il ricevitore
+    a volte mostra solo la classe generica. Lo senti fino a circa 15 miglia. Se giochi l'Alfa è il radar più pericoloso
+    della Type 22: vede un periscopio a circa 4 miglia con mare calmo, una e mezza con mare 4, uno snorkel a 9. Quando
+    il rilevamento coincide con una fregata britannica, tieni le alzate brevi.
+  uso_en: >-
+    On the ESM it blends in with the other I-band navigation radars, civilian and Soviet included, and the receiver
+    sometimes shows only the generic class. You hear it out to about 15 miles. If you play the Alfa it is the Type 22's most
+    dangerous radar: it sees a periscope at about 4 miles in a calm sea, one and a half in sea state 4, a snorkel at 9.
+    When the bearing matches a British frigate, keep your exposures short.
+  fonti: ['dossier 11 §1.5, §2, §6.1 e §6.3', 'libretto.toml [type22] [trafalgar]',
+    'tools/pipeline/emettitori.py (dotazioni dei lotti 1 e 2)', 'emettitori.toml (radar.tipo1006, suite.type22)']
+
+radar.sea_giraffe:
+  it: >-
+    Il Sea Giraffe 50HC è il radar di scoperta delle corvette svedesi Stockholm, la Stockholm e la Malmö del 1985, che
+    lo affiancano a un radar di navigazione e al direttore di tiro 9LV200. Negli anni '80 sta in cima a un albero
+    sottile; la torre chiusa arriverà con l'ammodernamento del 2000-2002. Nel gioco è un radar di ricerca
+    aerea in banda G, intorno a 5 GHz, con un giro ogni secondo e mezzo e l'antenna a 22 metri.
+  en: >-
+    The Sea Giraffe 50HC is the search radar of the Swedish Stockholm corvettes, Stockholm and Malmö of 1985, which pair
+    it with a navigation radar and the 9LV200 fire director. In the 1980s it sits on top of a slender mast; the enclosed
+    tower will come with the 2000-2002 modernisation. In the game it is an air search radar in G band,
+    around 5 GHz, with one sweep every second and a half and the antenna at 22 metres.
+  uso_it: >-
+    All'ESM è una firma unica che vuol dire una corvetta svedese: in banda G c'è anche l'SPS-10/67 americano, ma
+    gira molto più lento. Lo senti fino a circa 17 miglia. Gira in fretta e vede un periscopio a circa 2 miglia con mare calmo,
+    mezzo miglio con mare 4, uno snorkel a 6: vicino a una Stockholm che caccia col VDS, alza poco e per poco.
+  uso_en: >-
+    On the ESM it is a unique signature that means a Swedish corvette: the American SPS-10/67 is also in G band,
+    but it turns much more slowly. You hear it out to about 17 miles. It turns fast and sees a periscope at about 2 miles in a calm
+    sea, half a mile in sea state 4, a snorkel at 6: near a Stockholm hunting with its VDS, raise little and briefly.
+  fonti: ['dossier 35 §1 e §2', 'dossier 11 §6.1 e §6.3', 'extracted/navi/stockholm/RAPPORTO.md',
+    'libretto.toml [stockholm]', 'tools/pipeline/emettitori.py (dotazione della Stockholm)',
+    'emettitori.toml (radar.sea_giraffe, suite.stockholm)']
+
+radar.sps43:
+  it: >-
+    L'AN/SPS-43A è un radar di ricerca aerea in banda B, la banda della ricerca a lungo raggio dell'SPS-40. Nel gioco
+    lo porta la portaerei Kitty Hawk com'era nel marzo 1984, insieme all'SPS-48C tridimensionale e all'SPS-10 di
+    superficie. L'antenna fa un giro ogni 6 secondi, a circa 30 metri sul mare. Come gli altri radar a onda lunga è
+    fatto per gli aerei lontani, non per i piccoli oggetti sull'acqua.
+  en: >-
+    The AN/SPS-43A is an air search radar in B band, the long-range search band of the SPS-40. In the game the
+    carrier Kitty Hawk carries it as she was in March 1984, together with the three-dimensional SPS-48C and the SPS-10
+    surface radar. The antenna turns once every 6 seconds, about 30 metres above the sea. Like the other long-wave
+    radars it is built for distant aircraft, not for small objects on the water.
+  uso_it: >-
+    Non vede un periscopio, e uno snorkel solo a un paio di miglia: per te è soprattutto un segnale. All'ESM la firma
+    in banda B è unica, ma il ricevitore può scambiarla con l'SPS-40; la senti fino a circa 19 miglia, e vuol dire che
+    il gruppo della portaerei ha rinunciato al silenzio radar. Il Bukhta dell'Alfa non sente sotto i 2 GHz: per un
+    battello sovietico questo radar non esiste.
+  uso_en: >-
+    It does not see a periscope, and a snorkel only at a couple of miles: for you it is mostly a signal. On the ESM the
+    B-band signature is unique, but the receiver can mistake it for the SPS-40; you hear it out to about 19 miles, and
+    it means the carrier group has given up radar silence. The Alfa's Bukhta hears nothing below 2 GHz: for a Soviet
+    boat this radar does not exist.
+  fonti: ['dossier 11 §0.1, §3.2, §6.1 e §6.3', 'dossier 35 §1', 'extracted/navi/kitty_hawk/RAPPORTO.md (LIB-S17, marzo 1984)',
+    'libretto.toml [kitty_hawk]', 'tools/pipeline/emettitori.py (dotazione della Kitty Hawk nel 1984)',
+    'emettitori.toml (radar.sps43, suite.kitty_hawk, esm.bukhta)']
+
+radar.terma:
+  it: >-
+    Il Terma è il radar di navigazione dei sottomarini svedesi Näcken (A14), tre battelli del 1980-81, in cima
+    all'albero. Lavora in banda I, con un giro ogni 3 secondi e l'antenna a circa 7 metri sull'acqua. Serve alla
+    navigazione e a uno sguardo rapido sulla superficie: nel gioco vede le navi fino a circa 10 miglia.
+  en: >-
+    The Terma is the navigation radar of the Swedish Näcken submarines (A14), three boats of 1980-81, on top of the
+    mast. It works in I band, with one sweep every 3 seconds and the antenna about 7 metres above the water. It is used
+    for navigation and for a quick look at the surface: in the game it sees ships out to about 10 miles.
+  uso_it: >-
+    Nel gioco un sottomarino dell'IA parte in silenzio radar e lo accende solo se la missione lo vuole: sentirlo è raro.
+    All'ESM si confonde con gli altri radar di navigazione in banda I, e con l'antenna così bassa lo senti solo fino a
+    circa 10 miglia; un rilevamento dove non c'è nessuna nave fa pensare a un battello a quota periscopica. Non vede la
+    testa del tuo periscopio, ma vede le navi e un battello in emersione.
+  uso_en: >-
+    In the game an AI submarine starts in radar silence and switches it on only if the mission wants it: hearing it is
+    rare. On the ESM it blends in with the other I-band navigation radars, and with the antenna so low you only hear it
+    out to about 10 miles; a bearing where there is no ship suggests a boat at periscope depth. It does not see your
+    periscope head, but it sees ships and a surfaced boat.
+  fonti: ['dossier 35 §1', 'dossier 11 §3.4 e §6.3', 'extracted/navi/nacken/RAPPORTO.md', 'libretto.toml [nacken]',
+    'tools/pipeline/emettitori.py (dotazione della Näcken)', 'emettitori.toml (radar.terma, suite.nacken)']
+
+radar.calypso:
+  it: >-
+    Il Calypso II (DRUA 33) è il radar di navigazione dei sottomarini Type 206A della Bundesmarine, e nel gioco lo
+    porta tutta la classe Type 206, i piccoli battelli del Baltico: nel 1989 sono diciotto, e tre hanno già finito la
+    conversione nella versione 206A. Lavora in banda I,
+    con un giro ogni 3 secondi e l'antenna a circa 7 metri sull'acqua. Nel gioco vede le navi fino a circa 10 miglia.
+  en: >-
+    The Calypso II (DRUA 33) is the navigation radar of the Bundesmarine's Type 206A submarines, and in the game the
+    whole Type 206 class carries it, the small Baltic boats: in 1989 there are eighteen, and three have already
+    completed conversion to the 206A version. It works in I band,
+    with one sweep every 3 seconds and the antenna about 7 metres above the water. In the game it sees ships out to
+    about 10 miles.
+  uso_it: >-
+    Come gli altri radar dei sottomarini dell'IA resta spento salvo che la missione non lo accenda. All'ESM è una firma
+    di navigazione in banda I come tante, che senti solo fino a circa 10 miglia; se la direzione non porta a nessuna
+    nave, c'è probabilmente un battello a quota periscopica. Non vede la testa del periscopio, ma un battello in
+    emersione sì.
+  uso_en: >-
+    Like the other AI submarine radars it stays off unless the mission switches it on. On the ESM it is an I-band
+    navigation signature like many others, heard only out to about 10 miles; if the bearing leads to no ship, there is
+    probably a boat at periscope depth. It does not see the periscope head, but it does see a surfaced boat.
+  fonti: ['dossier 32 §5', 'dossier 11 §3.4 e §6.3', 'tools/pipeline/emettitori.py (dotazione del Type 206A)',
+    'emettitori.toml (radar.calypso, suite.type206)', 'libretto.toml [type206]']
+
+radar.drbv22:
+  it: >-
+    Il DRBV 22 è il radar di scoperta aerea delle fregate norvegesi Oslo, cinque unità del 1966-67 su un progetto
+    derivato dai Dealey americani. Sta sulla sovrastruttura prodiera, e accanto ha un radar di navigazione Decca e il
+    direttore di tiro Mk 91. Nel gioco lavora in banda D, intorno a 1,5 GHz, con un giro ogni 4 secondi e l'antenna a
+    30 metri.
+  en: >-
+    The DRBV 22 is the air search radar of the Norwegian Oslo frigates, five ships of 1966-67 built to a design derived
+    from the American Dealeys. It sits on the forward superstructure, alongside a Decca navigation radar and the Mk 91
+    fire director. In the game it works in D band, around 1.5 GHz, with one sweep every 4 seconds and the antenna at 30
+    metres.
+  uso_it: >-
+    All'ESM è una firma unica in banda D, un passaggio ogni 4 secondi, che di rado si scambia col Top Plate o col
+    Type 967/968. Il WLR-8 lo sente fino a circa 19 miglia; il Bukhta dell'Alfa no, perché sta sotto i 2 GHz. Contro il
+    periscopio vede un miglio con mare calmo e niente con mare 4, uno snorkel a 4 miglia: alla Oslo, per vederti, serve
+    il radar di navigazione, e per colpirti il sonar e il Terne III.
+  uso_en: >-
+    On the ESM it is a unique D-band signature, one pass every 4 seconds, rarely mistaken for the Top Plate or the Type
+    967/968. The WLR-8 hears it out to about 19 miles; the Alfa's Bukhta does not, because it lies below 2 GHz. Against
+    the periscope it sees one mile in a calm sea and nothing in sea state 4, a snorkel at 4 miles: to see you the Oslo
+    needs its navigation radar, and to hit you its sonar and the Terne III.
+  fonti: ['dossier 35 §1', 'dossier 11 §6.1 e §6.3', 'extracted/navi/oslo/RAPPORTO.md', 'libretto.toml [oslo]',
+    'tools/pipeline/emettitori.py (dotazione della Oslo)', 'emettitori.toml (radar.drbv22, suite.oslo, esm.bukhta)']
+
+# ---------------------------------------------------------------------------------------------------------------------
+# ESM
+# ---------------------------------------------------------------------------------------------------------------------
+
+esm.dr2000:
+  it: >-
+    Il DR-2000U è il ricevitore ESM della Thomson-CSF dei sottomarini Type 206A della Bundesmarine, montato insieme al
+    SARIE. Le sue prestazioni non sono pubbliche: il gioco le stima a metà fra il WLR-8 americano e il Bukhta
+    sovietico. Copre da 2 a 18 GHz, con una probabilità d'intercetto di 0,8 per passaggio e un errore di rilevamento di
+    circa 6 gradi in banda I/J e 10 in E-H; l'antenna sta a 1,5 metri sull'acqua. Nel gioco lo usano tutti i Type 206.
+  en: >-
+    The DR-2000U is the Thomson-CSF ESM receiver of the Bundesmarine's Type 206A submarines, fitted together with the
+    SARIE. Its performance is not public: the game estimates it halfway between the American WLR-8 and the Soviet
+    Bukhta. It covers 2 to 18 GHz, with an intercept probability of 0.8 per pass and a bearing error of about 6 degrees
+    in I/J band and 10 in E-H; the antenna is 1.5 metres above the water. In the game every Type 206 uses it.
+  uso_it: >-
+    È l'ESM di un battello dell'IA: lavora solo quando il 206 ha la testa o l'albero fuori, e sui radar ostili gli dà
+    un contatto col solo rilevamento. Se giochi l'Alfa e il 206 è dall'altra parte, sente il tuo Snoop più lontano di
+    quanto il tuo radar veda lui: accendilo poco. Come il Bukhta è sordo sotto i 2 GHz, quindi non sente i radar di
+    ricerca aerea in banda B, C e D.
+  uso_en: >-
+    It is the ESM of an AI boat: it works only when the 206 has its head or mast up, and on hostile radars it gives a
+    bearing-only contact. If you play the Alfa and the 206 is on the other side, it hears your Snoop farther away than
+    your radar can see it: use it sparingly. Like the Bukhta it is deaf below 2 GHz, so it does not hear the B, C and
+    D-band air search radars.
+  fonti: ['dossier 32 §5', 'dossier 11 §4.2, §4.3 e §6.3',
+    'tools/pipeline/emettitori.py (Type 206A: DR-2000U col SARIE, Seaforces e Los Barcos de Eugenio; prestazioni STIMA)',
+    'emettitori.toml (esm.dr2000, esm_di)', 'engine/missioni/src/missione.cpp (ESM dell''IA)']

@@ -1,0 +1,183 @@
+# Incrociatore lanciamissili classe Slava (Progetto 1164 "Atlant"), configurazione 1989.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua.
+# Misure: profilo dalla foto di fianco sinistro dello Slava (gennaio 1986, quasi al traverso, 8,9 px/m);
+# elementi principali (dritto, alberi, Top Dome, AK-130, bocche dei contenitori Bazalt, plancia, fumaioli)
+# triangolati su sette foto con tools/navi/triangola.py (errori 0,1-8,5 px, vedi extracted/navi/slava/RAPPORTO.md).
+# Parti proprie (AK-130, batteria Bazalt, fumaioli binati, Top Dome) in classi/slava_parti.py;
+# maschere tracciate a mano in classi/slava_maschere.yaml.
+nome: Slava (Progetto 1164)
+uscita: extracted/navi/slava
+moduli_parti: [slava_parti.py]
+
+scafo:
+  L: 186.4
+  B: 19.3          # al galleggiamento; con la svasatura 0,08 la coperta e' larga 20,8 m (dato ufficiale)
+  # castello lungo: coperta alta a prua (11,6 m), circa 7 m al centro; a poppa (ultimi 23 m) murata bassa
+  # (3,6 m) con il ponte di volo a ~6 m sopra il ponte di ormeggio aperto
+  bordo: [[0, 11.2], [17, 9.7], [34, 8.2], [88, 7.1], [110, 6.4], [140, 6.2], [162.5, 6.1], [163.5, 3.6], [186.4, 3.6]]
+  slancio: 10.7
+  finezza_prua: 45
+  specchio: 0.80
+  svasatura: 0.08
+  pienezza: [0.8, 0.5]
+
+parti:
+  - {tipo: chiusura_dritto, nome: chiusura_dritto, L: 186.4, B: 19.3, bordo: [[0, 11.2], [17, 9.7], [34, 8.2], [88, 7.1], [110, 6.4], [140, 6.2], [162.5, 6.1], [163.5, 3.6], [186.4, 3.6]], slancio: 10.7, finezza_prua: 45, specchio: 0.80, svasatura: 0.08, pienezza: [0.8, 0.5]}
+  # impianto binato AK-130 a prua
+  - {tipo: ak130, nome: ak130, x: {prua: 31.1}, z0: 8.5, altezza: 4.4}
+  # sovrastruttura prodiera: blocco basso davanti ai tubi e tuga centrale tra le batterie del Bazalt
+  - {tipo: tuga, nome: tuga_prodiera, x0: {prua: 46.6}, x1: {prua: 34.7}, y0: -4.6, y1: 4.6, z0: 7.8, z1: 14.2, rastrema: 0.96}
+  - {tipo: tuga, nome: tuga_centrale, x0: {prua: 95.0}, x1: {prua: 46.6}, y0: -4.8, y1: 4.8, z0: 7.0, z1: 13.6}
+  # P-500 Bazalt (SS-N-12): quattro coppie di contenitori per lato, inclinati di ~16 gradi verso prua
+  - {tipo: bazalt, nome: bazalt, x_fronti: [{prua: 39.8}, {prua: 51.3}, {prua: 62.9}, {prua: 74.6}], z_fronte: 12.3, y_tubi: [6.0, 8.8], lunghezza: 11.2, elevazione: 16.0, r: 1.15, z_ponte: 7.6}
+  # plancia e albero prodiero a piramide (Top Steer in cima)
+  - {tipo: tuga, nome: plancia, x0: {prua: 84.8}, x1: {prua: 59.0}, y0: -6.5, y1: 6.5, z0: 13.6, z1: 20.0, rastrema: 0.97, smusso_prua: 1.0}
+  - {tipo: tuga, nome: albero_piramide, x0: {prua: 82.0}, x1: {prua: 73.6}, y0: -4.0, y1: 4.0, z0: 19.8, z1: 33.1, rastrema: 0.14}
+  - {tipo: antenna_radar, nome: top_steer, x: {prua: 77.4}, z0: 33.4, larghezza: 3.6, altezza: 4.6, orientamento: 90, sbarre: 5}
+  - {tipo: albero_palo, nome: palo_prodiero, x: {prua: 84.0}, z0: 20.0, z1: 39.9, r: 0.3, crocette: [[29.0, 5.0]]}
+  # grandi radome ECM ai lati della sovrastruttura, sopra le batterie del Bazalt (visibili nella foto di prua)
+  - {tipo: tuga, nome: base_radome_dritta, x0: {prua: 81.0}, x1: {prua: 75.0}, y0: -9.4, y1: -6.4, z0: 13.6, z1: 15.0}
+  - {tipo: tuga, nome: base_radome_sinistra, x0: {prua: 81.0}, x1: {prua: 75.0}, y0: 6.4, y1: 9.4, z0: 13.6, z1: 15.0}
+  - {tipo: sfera, nome: radome_ecm_dritta, x: {prua: 78.0}, y: -7.4, z: 15.6, r: 1.4, mat: sovrastruttura}
+  - {tipo: sfera, nome: radome_ecm_sinistra, x: {prua: 78.0}, y: 7.4, z: 15.6, r: 1.4, mat: sovrastruttura}
+  # base dell'albero maestro, albero tubolare e Top Pair (Top Sail + Big Net schiena contro schiena)
+  - {tipo: tuga, nome: base_albero_maestro, x0: {prua: 103.4}, x1: {prua: 95.0}, y0: -3.5, y1: 3.5, z0: 7.0, z1: 20.0, rastrema: 0.85}
+  - {tipo: cilindro, nome: albero_maestro, x: {prua: 100.7}, y: 0, r: 0.9, z0: 20.0, z1: 32.2, r_alto: 0.7, mat: sovrastruttura}
+  - {tipo: antenna_radar, nome: top_pair_top_sail, x: {prua: 98.4}, z0: 21.5, larghezza: 6.0, altezza: 9.6, orientamento: 70, sbarre: 8}
+  - {tipo: asta, nome: braccio_top_sail, da: [{prua: 100.7}, 0, 26.3], a: [{prua: 98.4}, 0, 26.3], spessore: 0.5, mat: scuro}
+  - {tipo: asta, nome: braccio_big_net, da: [{prua: 100.7}, 0, 25.6], a: [{prua: 104.7}, 0, 25.6], spessore: 0.5, mat: scuro}
+  - {tipo: antenna_radar, nome: top_pair_big_net, x: {prua: 104.7}, z0: 23.9, larghezza: 4.2, altezza: 3.5, orientamento: 70, sbarre: 4}
+  # fumaioli affiancati sopra la tuga poppiera alta, gru delle imbarcazioni
+  - {tipo: tuga, nome: tuga_fumaioli, x0: {prua: 122.5}, x1: {prua: 103.4}, y0: -5.5, y1: 5.5, z0: 6.4, z1: 10.5}
+  - {tipo: fumaioli_binati, nome: fumaioli, x0: {prua: 118.0}, x1: {prua: 106.5}, z0: 10.5, z1: 18.9, y_int: 0.4, y_est: 4.5}
+  - {tipo: gru, nome: gru, base: [{prua: 124.0}, 0.0, 12.0], cima: [{prua: 124.4}, 0.0, 16.4], z0: 6.3}
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 134.0}, x1: {prua: 126.0}, y: -7.5, z0: 6.8}
+  - {tipo: imbarcazione, nome: lancia_sinistra, x0: {prua: 134.0}, x1: {prua: 126.0}, y: 7.5, z0: 6.8}
+  # sovrastruttura poppiera con il Top Dome (S-300F; i lanciatori a revolver sono a filo del ponte)
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 152.0}, x1: {prua: 140.0}, y0: -6.5, y1: 6.5, z0: 6.0, z1: 11.4, rastrema: 0.97}
+  - {tipo: tuga, nome: tuga_poppiera_coda, x0: {prua: 164.5}, x1: {prua: 152.0}, y0: -6.5, y1: 6.5, z0: 6.0, z1: 10.3, rastrema: 0.97}
+  - {tipo: top_dome, nome: top_dome, x: {prua: 151.4}, z0: 11.4, r: 2.45, altezza_torre: 3.0}
+  # ponte di volo sopra il ponte di ormeggio (galleria aperta tra murata e ponte di volo)
+  - {tipo: tuga, nome: ponte_volo, x0: {prua: 186.4}, x1: {prua: 163.5}, y0: -8.3, y1: 8.3, z0: 3.6, z1: 6.1}
+
+foto:
+  - nome: fianco_dritta
+    file: extracted/navi/slava/foto/fianco_dritta_slava.jpg
+    nave: Slava (108), ripresa probabilmente 1986
+    maschera_file: extracted/navi/slava/foto/fianco_dritta_slava_maschera.png   # ritoccata a mano (classi/slava_maschere.yaml)
+    qualita: 1.0
+    esponente_peso: 6
+    specchiabile: true
+    orizzonte_y: 1070
+    soglia_cielo: 198
+    cancella: [[1595, 1240, 1725, 1330], [295, 1240, 370, 1268]]   # numero 108 e nome a poppa
+    soglia_schiuma: 175
+    fotocamera_iniziale: {posizione: [50, -300, 12], bersaglio: [0, 0, 10], f: 4500}
+    orizzonte_punti: [[100, 1073], [500, 1085], [2700, 1152], [2950, 1156]]
+    punti:
+      - [[{prua: 0}, 0, 11.2], [2781, 1179]]        # dritto di prua in coperta
+      - [[{prua: 10.7}, 0, 0], [2610, 1378]]        # piede del dritto al galleggiamento (onda di prua)
+      - [[{prua: 118.0}, -4.5, 18.9], [1040, 995]]  # fumaiolo di dritta, spigolo poppiero esterno in alto
+      - [[{prua: 84.0}, 0, 39.9], [1561, 619]]      # cima del palo prodiero
+      - [[{prua: 100.7}, 0, 32.2], [1326, 754]]     # cima dell'albero maestro
+      - [[{prua: 151.4}, 0, 18.7], [657, 983]]      # sommita' del Top Dome
+      - [[{prua: 31.1}, 0, 13.7], [2309, 1115]]     # sommita' dell'AK-130
+  - nome: fianco_sinistro
+    file: extracted/navi/slava/foto/fianco_sinistro_slava_1986.jpg
+    nave: Slava (108), gennaio 1986
+    maschera_file: extracted/navi/slava/foto/fianco_sinistro_slava_1986_maschera.png   # per colore (classi/slava_maschere.yaml)
+    qualita: 1.0
+    esponente_peso: 6
+    specchiabile: true
+    orizzonte_y: 540
+    soglia_cielo: 170
+    cancella: [[688, 678, 768, 722], [1600, 694, 1655, 712]]   # numero 108 e nome a poppa
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [0, 2500, 10], bersaglio: [0, 0, 10], f: 22300}
+    orizzonte_punti: [[150, 559], [960, 553], [1780, 541]]
+    punti:
+      - [[{prua: 0}, 0, 11.2], [119, 633]]          # dritto di prua in coperta
+      - [[{prua: 10.7}, 0, 0], [216, 735]]          # piede del dritto al galleggiamento
+      - [[{prua: 186.4}, 8.3, 6.0], [1778, 665]]    # ponte di volo, spigolo poppiero di sinistra
+      - [[{prua: 186.4}, 8.3, 0], [1780, 717]]      # specchio di poppa, spigolo di sinistra al galleggiamento
+      - [[{prua: 84.0}, 0, 39.9], [865, 372]]       # cima del palo prodiero
+      - [[{prua: 100.7}, 0, 32.2], [1018, 438]]     # cima dell'albero maestro
+      - [[{prua: 151.4}, 0, 18.7], [1471, 554]]     # sommita' del Top Dome
+      - [[{prua: 31.1}, 0, 13.7], [384, 606]]       # sommita' dell'AK-130
+  - nome: prua_sinistra
+    file: extracted/navi/slava/foto/prua_sinistra_cu_1990.jpg
+    nave: Chervona Ukraina (011), ottobre 1990
+    qualita: 0.9
+    esponente_peso: 6
+    specchiabile: true
+    orizzonte_y: 990
+    soglia_cielo: 170
+    riquadro: [440, 20, 1700, 990]
+    cancella: [[1360, 915, 1410, 1010]]          # numero 031
+    soglia_schiuma: 175
+    fotocamera_iniziale: {posizione: [350, 120, 8], bersaglio: [0, 0, 10], f: 8700}
+    punti:
+      - [[{prua: 0}, 0, 11.2], [490, 648]]          # dritto di prua in coperta
+      - [[{prua: 39.8}, 6.0, 12.3], [1082, 680]]    # bocca del 1o contenitore Bazalt interno di sinistra
+      - [[{prua: 39.8}, 8.8, 12.3], [1167, 680]]    # bocca del 1o contenitore Bazalt esterno di sinistra
+      - [[{prua: 186.4}, 8.3, 6.0], [1597, 906]]    # ponte di volo, spigolo poppiero di sinistra
+      - [[{prua: 84.0}, 0, 39.9], [1135, 50]]       # cima del palo prodiero
+      - [[{prua: 64.6}, -6.2, 19.8], [895, 515]]    # tetto della plancia, spigolo prodiero di dritta
+      - [[{prua: 64.6}, 6.2, 19.8], [1220, 512]]    # tetto della plancia, spigolo prodiero di sinistra
+  - nome: prua_dritta
+    file: extracted/navi/slava/foto/prua_dritta_cu_1990.jpg
+    nave: Chervona Ukraina (011), ottobre 1990
+    qualita: 0.9
+    esponente_peso: 6
+    specchiabile: true
+    orizzonte_y: 985
+    soglia_cielo: 160
+    riquadro: [30, 150, 1850, 985]
+    cancella: [[618, 898, 700, 992]]             # numero 031
+    soglia_schiuma: 175
+    fotocamera_iniziale: {posizione: [300, -250, 10], bersaglio: [0, 0, 10], f: 6000}
+    punti:
+      - [[{prua: 0}, 0, 11.2], [1772, 706]]         # dritto di prua in coperta
+      - [[{prua: 31.1}, 0, 13.7], [1316, 670]]      # sommita' dell'AK-130
+      - [[{prua: 84.0}, 0, 39.9], [806, 193]]       # cima del palo prodiero
+      - [[{prua: 100.7}, 0, 32.2], [681, 380]]      # cima dell'albero maestro
+      - [[{prua: 151.4}, 0, 18.7], [358, 679]]      # sommita' del Top Dome
+      - [[{prua: 186.4}, -8.3, 3.6], [67, 937]]     # specchio di poppa, spigolo di dritta in coperta (murata bassa)
+      - [[{prua: 64.6}, 6.2, 19.8], [1093, 559]]    # tetto della plancia, spigolo prodiero di sinistra
+      - [[{prua: 64.6}, -6.2, 19.8], [852, 570]]    # tetto della plancia, spigolo prodiero di dritta
+  - nome: poppa_dritta
+    file: extracted/navi/slava/foto/poppa_dritta_cu_1990.jpg
+    nave: Chervona Ukraina (011), settembre 1990 (ripresa aerea)
+    qualita: 0.8
+    esponente_peso: 6
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    cancella: [[500, 1215, 680, 1290], [1395, 945, 1462, 1020]]   # nome a poppa e numero 031
+    soglia_schiuma: 175
+    fotocamera_iniziale: {posizione: [-450, -350, 150], bersaglio: [0, 0, 8], f: 5000}
+    punti:
+      - [[{prua: 0}, 0, 11.2], [1817, 726]]         # dritto di prua in coperta
+      - [[{prua: 84.0}, 0, 39.9], [1229, 430]]      # cima del palo prodiero
+      - [[{prua: 100.7}, 0, 32.2], [1083, 577]]     # cima dell'albero maestro
+      - [[{prua: 151.4}, 0, 18.7], [579, 897]]      # sommita' del Top Dome
+      - [[{prua: 186.4}, -8.3, 3.6], [305, 1289]]   # specchio di poppa, spigolo di dritta in coperta
+      - [[{prua: 186.4}, -8.3, 0], [316, 1361]]     # specchio di poppa, spigolo di dritta al galleggiamento
+  - nome: prua
+    file: extracted/navi/slava/foto/prua_ustinov_1991.jpg
+    nave: Marshal Ustinov (070), luglio 1991
+    maschera_file: extracted/navi/slava/foto/prua_ustinov_1991_maschera.png   # colore + poligoni (classi/slava_maschere.yaml)
+    qualita: 0.8
+    esponente_peso: 6
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [260, 0, 25], bersaglio: [0, 0, 10], f: 12600}
+    punti:
+      - [[{prua: 0}, 0, 11.2], [911, 1594]]         # dritto di prua in coperta
+      - [[{prua: 39.8}, -8.8, 12.3], [383, 1433]]   # bocca del 1o contenitore Bazalt esterno di dritta
+      - [[{prua: 39.8}, -6.0, 12.3], [550, 1433]]   # bocca del 1o contenitore Bazalt interno di dritta
+      - [[{prua: 39.8}, 6.0, 12.3], [1278, 1439]]   # bocca del 1o contenitore Bazalt interno di sinistra
+      - [[{prua: 39.8}, 8.8, 12.3], [1444, 1439]]   # bocca del 1o contenitore Bazalt esterno di sinistra

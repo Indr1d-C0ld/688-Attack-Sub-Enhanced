@@ -1,0 +1,74 @@
+# Cacciatorpediniere antisommergibile Progetto 1155 "Fregat" (NATO: Udaloy), configurazione 1989. Coordinate del kit:
+# x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} = punto a d metri dalla
+# prua. Misure: 163,5 x 19 m (dossier docs/ricerca/31_firme_lotto1.md); le posizioni e le quote dal profilo della US Navy
+# del 1987 (5,91 px/m, galleggiamento a y 217), le larghezze STIMA. Passo 3 del primo lotto, approvato dall'utente il
+# 29/10/2026.
+nome: Udaloy (Progetto 1155)
+uscita: extracted/navi/udaloy
+moduli_parti: [kara_parti.py]
+
+scafo:
+  L: 163.5
+  B: 19.0
+  # castello lungo (9-10 m) fin oltre il secondo fumaiolo, poi il ponte principale basso (6,8 m) a poppa
+  bordo: [[0, 9.8], [10, 9.3], [30, 9.0], [60, 8.8], [106, 8.8], [111, 6.9], [163.5, 6.8]]
+  slancio: 8.0
+  finezza_prua: 50
+  specchio: 0.86
+  svasatura: 0.06
+  pienezza: [0.9, 0.75]
+
+parti:
+  - {tipo: chiusura_dritto, nome: chiusura_dritto, L: 163.5, B: 19.0, bordo: [[0, 9.8], [10, 9.3], [30, 9.0], [60, 8.8], [106, 8.8], [111, 6.9], [163.5, 6.8]], slancio: 8.0, finezza_prua: 50, specchio: 0.86, svasatura: 0.06, pienezza: [0.9, 0.75]}
+  # ---------------- castello: le due torri singole AK-100, la seconda su un piedistallo
+  - {tipo: torre_singola, nome: ak100_prodiero, x: {prua: 34.8}, z0: 9.0, lunghezza: 5.6, larghezza: 3.6, altezza: 2.8, canna: 5.5}
+  - {tipo: tuga, nome: piedistallo_ak100, x0: {prua: 48.5}, x1: {prua: 41.5}, y0: -3.0, y1: 3.0, z0: 8.9, z1: 10.6}
+  - {tipo: torre_singola, nome: ak100_poppiero, x: {prua: 45.0}, z0: 10.6, lunghezza: 5.6, larghezza: 3.6, altezza: 2.8, canna: 5.5}
+  # i Rastrub (SS-N-14) quadrupli ai lati della plancia, inclinati verso prua
+  - {tipo: rastrub_inclinato, nome: rastrub_dritta, x0: {prua: 60.0}, x1: {prua: 50.5}, z0: 9.0, y: -6.8, elevazione: 10, larghezza: 3.0, altezza: 3.2}
+  - {tipo: rastrub_inclinato, nome: rastrub_sinistra, x0: {prua: 60.0}, x1: {prua: 50.5}, z0: 9.0, y: 6.8, elevazione: 10, larghezza: 3.0, altezza: 3.2}
+  # ---------------- plancia e albero prodiero a piramide col radar (Strut Pair)
+  - {tipo: tuga, nome: sovrastruttura_prodiera, x0: {prua: 79.0}, x1: {prua: 57.5}, y0: -6.6, y1: 6.6, z0: 8.8, z1: 13.6}
+  - {tipo: tuga, nome: plancia, x0: {prua: 72.0}, x1: {prua: 58.5}, y0: -5.6, y1: 5.6, z0: 13.6, z1: 16.9, rastrema: 0.92, smusso_prua: 0.8}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 59.4}, x1: {prua: 58.2}, y0: -5.0, y1: 5.0, z0: 15.6, z1: 16.4, mat: nero, rastrema: 0.97}
+  - {tipo: traliccio, nome: albero_prodiero, x: {prua: 68.5}, base: 3.4, cima: 1.2, z0: 16.9, z1: 23.8, piani: [19.5]}
+  - {tipo: antenna_radar, nome: strut_pair_prodiero, x: {prua: 68.5}, z0: 23.8, larghezza: 5.0, altezza: 1.6}
+  # ---------------- centro nave: albero a traliccio, primo fumaiolo (gli scarichi appaiati), secondo traliccio
+  - {tipo: tuga, nome: tuga_centrale, x0: {prua: 108.0}, x1: {prua: 78.0}, y0: -7.2, y1: 7.2, z0: 8.8, z1: 11.6}
+  - {tipo: traliccio, nome: albero_maestro, x: {prua: 77.5}, base: 4.4, cima: 1.4, z0: 11.6, z1: 26.6, piani: [16.0, 21.0]}
+  - {tipo: antenna_radar, nome: strut_pair_maestro, x: {prua: 77.5}, z0: 26.6, larghezza: 5.0, altezza: 1.6}
+  - {tipo: fumaiolo, nome: fumaiolo_prodiero, x0: {prua: 86.0}, x1: {prua: 79.5}, semilarghezza: 3.8, z0: 11.6, z1: 18.1, rastrema: 0.95}
+  - {tipo: traliccio, nome: albero_poppiero, x: {prua: 98.0}, base: 4.0, cima: 1.2, z0: 11.6, z1: 29.0, piani: [18.0, 24.0]}
+  - {tipo: antenna_radar, nome: top_plate, x: {prua: 98.0}, z0: 29.0, larghezza: 4.4, altezza: 1.5}
+  - {tipo: fumaiolo, nome: fumaiolo_poppiero, x0: {prua: 106.0}, x1: {prua: 99.5}, semilarghezza: 3.8, z0: 11.6, z1: 16.1, rastrema: 0.95}
+  # ---------------- poppa: il blocco del Kite Screech e dei SA-N-9, i due hangar affiancati, il ponte di volo
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 128.0}, x1: {prua: 108.0}, y0: -6.8, y1: 6.8, z0: 6.9, z1: 9.4}
+  - {tipo: tuga, nome: tuga_kite_screech, x0: {prua: 127.4}, x1: {prua: 122.0}, y0: -3.2, y1: 3.2, z0: 9.4, z1: 12.2, rastrema: 0.92}
+  - {tipo: lanciatore_scomparsa, nome: sa_n_9_dritta, x: {prua: 114.0}, y: -5.0, z0: 9.4, r: 1.4, altezza: 0.6}
+  - {tipo: lanciatore_scomparsa, nome: sa_n_9_sinistra, x: {prua: 114.0}, y: 5.0, z0: 9.4, r: 1.4, altezza: 0.6}
+  - {tipo: tuga, nome: hangar, x0: {prua: 144.3}, x1: {prua: 128.6}, y0: -7.6, y1: 7.6, z0: 6.8, z1: 11.0}
+  - {tipo: ponte_elicotteri, nome: ponte_volo, x0: {prua: 163.0}, x1: {prua: 144.3}, semilarghezza: 9.0, z: 7.0}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 29/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: dritta_aerea
+    file: extracted/navi/udaloy/foto/AdmiralKharlamov1993.jpg
+    nave: Admiral Kharlamov, 1993 (US Navy, pubblico dominio), dritta, dall'alto e di prua
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    # maschera a mano (classi/udaloy_maschere.yaml): il galleggiamento sopra l'onda di prua e la scia, cosi' la
+    # schiuma non finisce nella tessitura della prua
+    maschera_file: extracted/navi/udaloy/foto/dritta_aerea_1993_maschera.png
+    riquadro: [0, 420, 2860, 1290]   # la nave: niente mare lontano
+    cancella: [[2180, 1020, 2310, 1080]]   # il numero 606
+    fotocamera_iniziale: {posizione: [300, -1300, 450], bersaglio: [0, 0, 8], f: 7000}
+    limiti_fotocamera: {elevazione: [8, 35], distanza: [400, 4000], focale: [1500, 25000]}
+    punti:
+      - [[{prua: 0}, 0, 9.8], [2850, 844]]           # dritto di prua in coperta
+      - [[{prua: 163.5}, -9.0, 7.0], [80, 1090]]     # spigolo poppiero di dritta del ponte di volo
+      - [[{prua: 98.0}, 0, 30.5], [1320, 500]]       # cima dell'albero poppiero (Top Plate)
+      - [[{prua: 77.5}, 0, 28.2], [1652, 544]]       # cima dell'albero maestro
+      - [[{prua: 45.0}, 0, 13.4], [2150, 820]]       # cielo della torre AK-100 poppiera
+      - [[{prua: 34.8}, 0, 11.8], [2320, 840]]       # cielo della torre AK-100 prodiera
+      - [[{prua: 144.3}, -7.6, 11.0], [430, 970]]    # spigolo prodiero alto di dritta dell'hangar

@@ -1,0 +1,9 @@
+{
+  "name": "melchior688-manuale-pdf",
+  "private": true,
+  "description": "Solo per generare il manuale in PDF (tools/pipeline/manuale_pdf.py); non va nel pacchetto",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "markdown-it": "14.1.0"
+  }
+}

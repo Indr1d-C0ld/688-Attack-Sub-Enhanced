@@ -1,0 +1,22 @@
+# Maschera tracciata a mano della foto di prua sinistra (3/4, teleobiettivo) della Chandler (1991), coordinate nell'immagine
+# 2820 px. Lo sfondo (citta', alberi, barche) non permette soglie: dentro i poligoni e' tutto nave.
+# Alberi a traliccio, bracci dei Mk26, fumo sopra il mack prodiero esclusi (li coprono le altre foto);
+# escluso anche il battello bianco appoggiato sul castello davanti al Mk26 prodiero.
+file: extracted/navi/kidd/foto/prua_sinistra_chandler_1991_full.jpg
+uscita: extracted/navi/kidd/foto/prua_sinistra_chandler_1991_maschera.png
+scafo: [[52, 1149], [140, 1156], [300, 1155], [460, 1163], [700, 1169], [940, 1173], [1200, 1166],
+        [1500, 1159], [1800, 1151], [2100, 1143], [2300, 1137], [2380, 1130], [2468, 1123],
+        [2467, 1190], [2100, 1209], [1800, 1224], [1500, 1240], [1200, 1255], [900, 1270], [600, 1286],
+        [300, 1300], [195, 1307], [120, 1230]]
+soglia_scafo: 256
+linea_coperta: [[40, 1152], [140, 1158], [300, 1157], [460, 1165], [700, 1171], [940, 1175], [1200, 1168],
+                [1500, 1161], [1800, 1153], [2100, 1145], [2300, 1139], [2380, 1132], [2475, 1125]]
+inviluppo: [[500, 1166], [515, 1150], [522, 1110], [540, 1098], [590, 1098], [597, 1150],
+            [745, 1152], [745, 1098], [800, 1098], [808, 1000], [800, 995], [800, 975], [832, 975],
+            [840, 943], [1000, 940], [1040, 925], [1050, 905], [1100, 900], [1110, 888], [1260, 888],
+            [1265, 940], [1345, 945], [1345, 962], [1460, 962], [1462, 876], [1555, 876], [1560, 930],
+            [1720, 930], [1725, 958], [1822, 958], [1822, 1095], [2065, 1095], [2080, 1092], [2165, 1092], [2168, 1118],
+            [2212, 1118], [2216, 1078], [2265, 1078], [2272, 1122], [2470, 1124], [2470, 1135], [500, 1175]]
+soglia_sovrastrutture: 256
+escludi: [[[626, 1092], [706, 1092], [706, 1160], [626, 1160]]]
+area_minima: 80

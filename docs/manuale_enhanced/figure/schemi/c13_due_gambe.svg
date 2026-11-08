@@ -1,0 +1,22 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='440' viewBox='0 0 760 440' font-family='DejaVu Sans, Helvetica, Arial, sans-serif' role='img' aria-label='La TMA a due gambe: il battello accosta e i rilevamenti fissano la soluzione'>
+<title>La TMA a due gambe: il battello accosta e i rilevamenti fissano la soluzione</title>
+<rect width='760' height='440' fill='#fcfcfb'/>
+<text x='36.0' y='26.0' font-size='16' fill='#0b0b0b' text-anchor='start' font-weight='bold'>La TMA a due gambe</text>
+<text x='36.0' y='46.0' font-size='12' fill='#52514e' text-anchor='start'>Con una sola gamba i rilevamenti vanno bene per infinite soluzioni; con due, una sola le spiega tutte.</text>
+<path d='M120.0,380.0 L600.0,110.0' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<path d='M169.4,380.0 L538.3,110.0' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<path d='M218.8,380.0 L476.5,110.0' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<path d='M268.1,380.0 L414.8,110.0' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<path d='M292.8,337.2 L353.1,110.0' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<path d='M317.5,294.5 L291.4,110.0' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<path d='M342.2,251.7 L229.6,110.0' fill='none' stroke='#898781' stroke-width='1' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<path d='M120.0,380.0 L144.7,380.0 L169.4,380.0 L194.1,380.0 L218.8,380.0 L243.5,380.0 L268.1,380.0 L280.5,358.6 L292.8,337.2 L305.2,315.9 L317.5,294.5 L329.9,273.1 L342.2,251.7' fill='none' stroke='#2a78d6' stroke-width='3' stroke-linejoin='round'/>
+<path d='M600.0,110.0 L569.1,110.0 L538.3,110.0 L507.4,110.0 L476.5,110.0 L445.7,110.0 L414.8,110.0 L384.0,110.0 L353.1,110.0 L322.2,110.0 L291.4,110.0 L260.5,110.0 L229.6,110.0' fill='none' stroke='#eb6834' stroke-width='3' stroke-linejoin='round'/>
+<text x='120.0' y='398.0' font-size='11' fill='#0b0b0b' text-anchor='start'>gamba 1: rotta 090</text>
+<text x='280.1' y='384.0' font-size='11' fill='#0b0b0b' text-anchor='start'>accostata</text>
+<text x='350.2' y='251.7' font-size='11' fill='#0b0b0b' text-anchor='start'>gamba 2: rotta 030</text>
+<text x='600.0' y='100.0' font-size='11' fill='#0b0b0b' text-anchor='end'>il bersaglio, rotta 270, 10 nodi</text>
+<text x='470.0' y='380.0' font-size='11' fill='#52514e' text-anchor='start'>In grigio i rilevamenti ogni 3 minuti e mezzo.</text>
+<text x='470.0' y='396.0' font-size='11' fill='#52514e' text-anchor='start'>Il rateo cambia con l&#39;accostata: dalla differenza dei</text>
+<text x='470.0' y='412.0' font-size='11' fill='#52514e' text-anchor='start'>ratei sulle due gambe viene la distanza (Ekelund).</text>
+</svg>

@@ -1,0 +1,93 @@
+# Fregata classe Oliver Hazard Perry (FFG-7), scafo lungo (FFG-36 e successive), configurazione 1989.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua (x = L/2 - d).
+# Posizioni e quote delle sovrastrutture misurate sulla foto di fianco della USS Nicholas (1984),
+# scala 0,175 m/pixel; da confrontare con i piani d'epoca prima dell'uso definitivo.
+nome: Oliver Hazard Perry (FFG-7, scafo lungo)
+uscita: extracted/navi/perry
+
+scafo:
+  L: 138.1
+  B: 13.7
+  bordo: [[0, 8.9], [20, 7.9], [49, 5.8], [138.1, 5.8]]   # quota della coperta lungo lo scafo
+  slancio: 9.2           # arretramento del dritto di prua al galleggiamento
+  finezza_prua: 40
+  specchio: 0.82
+  svasatura: 0.04
+  pienezza: [0.8, 0.45]  # prua fine al galleggiamento, svasata in coperta
+
+parti:
+  - {tipo: tuga, nome: tuga_prodiera, x0: {prua: 66.0}, x1: {prua: 40.2}, y0: -6.0, y1: 6.0, z0: 5.8, z1: 13.6, rastrema: 0.93}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 42.3}, x1: {prua: 40.0}, y0: -5.85, y1: 5.85, z0: 12.0, z1: 12.8, mat: nero, rastrema: 0.95}
+  - {tipo: radome, nome: radome_mk92, x: {prua: 46.7}, z: 18.5, r: 1.5}
+  - {tipo: lanciatore, nome: lanciatore_mk13, x: {prua: 30.0}, z0: 6.5, altezza: 5.4, braccio: 3.5}
+  - {tipo: traliccio, nome: supporto_sps49, x: {prua: 54.2}, base: 2.6, cima: 1.2, z0: 13.6, z1: 21.0, piani: [17.5]}
+  - {tipo: antenna_radar, nome: sps49, x: {prua: 54.2}, z0: 21.0, larghezza: 7.3, altezza: 4.2, orientamento: 90}
+  - {tipo: traliccio, nome: albero_principale, x: {prua: 63.8}, base: 5.5, cima: 1.0, z0: 13.6, z1: 29.7, piani: [21.5, 25.5, 29.7]}
+  - {tipo: pennone, nome: pennone, x: {prua: 63.8}, z: 28.0, semilunghezza: 6.0}   # misurato sulla foto di prua
+  - {tipo: asta, nome: alberetto, da: [{prua: 63.8}, 0, 29.7], a: [{prua: 63.8}, 0, 35.8], spessore: 0.3}
+  - {tipo: tuga, nome: tuga_centrale_hangar, x0: {prua: 111.9}, x1: {prua: 66.0}, y0: -6.3, y1: 6.3, z0: 5.8, z1: 12.2, rastrema: 0.97}
+  - {tipo: cilindro, nome: stir_supporto, x: {prua: 73.4}, y: 0, r: 1.0, z0: 12.2, z1: 14.4}
+  - {tipo: cilindro, nome: stir, x: {prua: 73.4}, y: 0, r: 1.3, z0: 14.4, z1: 15.3, mat: bianco}
+  - {tipo: cannone, nome: cannone_mk75, x: {prua: 83.0}, z0: 12.2, torretta: [3.0, 2.8, 1.2], canna: 4.5}
+  - {tipo: fumaiolo, nome: fumaiolo, x0: {prua: 97.0}, x1: {prua: 91.0}, semilarghezza: 2.4, z0: 12.2, z1: 13.4}
+  - {tipo: ciws, nome: phalanx, x: {prua: 107.5}, z0: 12.2}
+  - {tipo: imbarcazione, nome: lancia_sinistra, x0: {prua: 73.5}, x1: {prua: 66.5}, y: 5.4, z0: 9.0}
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 73.5}, x1: {prua: 66.5}, y: -5.4, z0: 9.0}
+
+# Foto di riferimento (pubblico dominio, NARA/DVIC; metadati in extracted/prototipo_perry/foto/fonti.json).
+# punti: [[x, y, z] nel modello, [u, v] nella foto] per la calibrazione della fotocamera.
+foto:
+  - nome: fianco_sinistro
+    specchiabile: true      # usata anche riflessa per il lato opposto
+    file: extracted/prototipo_perry/foto/fianco_sinistro.jpg
+    nave: USS Nicholas (FFG-47), 1984
+    qualita: 1.0
+    orizzonte_y: 367
+    soglia_cielo: 185
+    soglia_mare: 135
+    mare_fino_a_y: 436
+    riquadro: [60, 200, 880, 440]
+    cancella: [[118, 398, 156, 420], [824, 404, 843, 416]]
+    fotocamera_iniziale: {posizione: [0, 1500, 4], bersaglio: [0, 0, 12], f: 8500}
+    punti:
+      - [[{prua: 63.8}, 0, 35.8], [435, 230]]   # cima dell'alberetto
+      - [[{prua: 0}, 0, 8.9], [70, 384]]        # dritto di prua in coperta
+      - [[{prua: 9.2}, 0, 0], [122, 435]]       # dritto al galleggiamento
+      - [[{prua: 138.1}, 0, 5.8], [860, 402]]   # specchio di poppa in coperta
+      - [[{prua: 46.7}, 0, 18.5], [337, 329]]   # centro del radome
+  - nome: prua
+    specchiabile: true      # usata anche riflessa per il lato opposto
+    file: extracted/prototipo_perry/foto/prua.jpg
+    nave: USS Simpson (FFG-56), 1985
+    qualita: 0.8
+    orizzonte_y: 575
+    soglia_cielo: 175
+    riquadro: [300, 150, 640, 580]
+    cancella: [[388, 758, 452, 842], [500, 758, 555, 838]]
+    fotocamera_iniziale: {posizione: [450, 0, 35], bersaglio: [0, 0, 8], f: 7000}
+    punti:
+      - [[{prua: 63.8}, 0, 35.8], [454, 174]]   # cima dell'alberetto
+      - [[{prua: 46.7}, 0, 18.5], [461, 470]]   # centro del radome
+      - [[{prua: 0}, 0, 8.9], [477, 686]]       # dritto di prua in coperta
+      - [[{prua: 40.2}, -5.6, 13.6], [358, 570]]  # tetto della plancia, spigolo di dritta
+      - [[{prua: 40.2}, 5.6, 13.6], [565, 570]]   # tetto della plancia, spigolo di sinistra
+      - [[{prua: 63.8}, -6.0, 28.0], [351, 306]]  # pennone, estremita' di dritta
+      - [[{prua: 63.8}, 6.0, 28.0], [559, 306]]   # pennone, estremita' di sinistra
+  - nome: poppa_tre_quarti
+    specchiabile: true      # usata anche riflessa per il lato opposto
+    file: extracted/prototipo_perry/foto/poppa_tre_quarti.jpg
+    nave: USS Elrod (FFG-55), 1985
+    qualita: 0.9
+    orizzonte_y: 405   # sotto c'e' una striscia scura di orizzonte lontano
+    soglia_cielo: 185
+    riquadro: [280, 60, 880, 420]
+    cancella: [[620, 450, 645, 468], [718, 457, 760, 472]]
+    fotocamera_iniziale: {posizione: [-260, 180, 10], bersaglio: [0, 0, 10], f: 2500}
+    punti:
+      - [[{prua: 63.8}, 0, 35.8], [450, 90]]       # cima dell'alberetto
+      - [[{prua: 0}, 0, 8.9], [317, 377]]          # dritto di prua in coperta
+      - [[{prua: 138.1}, -5.6, 5.8], [812, 448]]   # specchio di poppa, spigolo di dritta in coperta (a destra nella foto)
+      - [[{prua: 138.1}, -5.0, 0], [800, 486]]     # specchio di poppa, spigolo di dritta al galleggiamento
+      - [[{prua: 107.5}, 0, 13.8], [587, 302]]     # cupola del Phalanx
+      - [[{prua: 111.9}, -6.3, 12.2], [692, 340]]  # hangar, spigolo poppiero di dritta in alto

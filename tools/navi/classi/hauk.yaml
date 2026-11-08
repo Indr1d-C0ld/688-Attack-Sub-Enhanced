@@ -1,0 +1,59 @@
+# Motocannoniera norvegese classe Hauk (P986, 1977-80): lo scafo basso e veloce col dritto slanciato, il 40/70 Bofors a
+# prua, la tuga con la timoneria, il direttore nella cupola, l'albero a traliccio col radar, i lanciatori dei Penguin e
+# i due tubi dei siluri filoguidati sul cassero di poppa.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure: 36,5 x 6,3 m (Jane's); posizioni e quote dalla foto di dritta della Lom (P 993,
+# 2007, controluce, ~40 px/m), affinate con gli scarti della calibrazione. Modello proprio (blocco D del kit,
+# 30/10/2026): prima era la nanuchka riscalata.
+nome: Hauk (P986)
+uscita: extracted/navi/hauk
+
+scafo:
+  L: 36.5
+  B: 6.3
+  bordo: [[0, 3.7], [8, 3.2], [16, 2.8], [36.5, 2.3]]
+  slancio: 1.9
+  finezza_prua: 35
+  specchio: 0.9
+  svasatura: 0.08
+  pienezza: [0.65, 0.4]
+
+parti:
+  # ---------------- il 40 a prua
+  - {tipo: cannone, nome: bofors40, x: {prua: 11.7}, z0: 3.6, torretta: [2.6, 2.2, 2.2], canna: 2.8}
+  # ---------------- la tuga, la timoneria, il direttore, l'albero col radar
+  - {tipo: tuga, nome: tuga, x0: {prua: 23.6}, x1: {prua: 13.1}, y0: -2.6, y1: 2.6, z0: 2.6, z1: 5.4, rastrema: 0.97}
+  - {tipo: tuga, nome: plancia, x0: {prua: 19.5}, x1: {prua: 13.4}, y0: -2.4, y1: 2.4, z0: 5.4, z1: 6.5, rastrema: 0.95}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 13.6}, x1: {prua: 13.3}, y0: -2.0, y1: 2.0, z0: 5.7, z1: 6.2, mat: nero, rastrema: 0.98}
+  - {tipo: direttore_tiro, nome: direttore, x: {prua: 18.5}, z0: 6.5, altezza_base: 0.6, larghezza: 1.2, disco: 0.8}
+  - {tipo: traliccio, nome: albero, x: {prua: 23.2}, base: 1.4, cima: 0.4, z0: 5.4, z1: 12.4, piani: [9.5], mat: nero}
+  - {tipo: antenna_radar, nome: radar, x: {prua: 22.8}, z0: 10.6, larghezza: 1.8, altezza: 0.5, orientamento: 20}
+  # ---------------- il cassero: i Penguin e i tubi dei siluri
+  - {tipo: scatola, nome: penguin_prodieri, x0: {prua: 28.3}, x1: {prua: 24.8}, y0: -2.4, y1: 2.4, z0: 2.3, z1: 5.6, rastrema: 0.95}
+  - {tipo: tubo, nome: siluro_sinistra, x0: {prua: 33.3}, x1: {prua: 28.4}, y: 2.2, z: 3.4, r: 0.35}
+  - {tipo: tubo, nome: siluro_dritta, x0: {prua: 33.3}, x1: {prua: 28.4}, y: -2.2, z: 3.4, r: 0.35}
+  - {tipo: scatola, nome: penguin_poppieri, x0: {prua: 35.8}, x1: {prua: 33.4}, y0: -2.2, y1: 2.2, z0: 2.3, z1: 4.1}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 30/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: dritta_lom
+    file: extracted/navi/hauk/foto/Hauk_class_MTB_LOM.JPG
+    nave: KNM Lom (P 993), aprile 2007 (pubblico dominio), di dritta, in controluce
+    qualita: 0.7
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 3 px (contorno_modello.py --maschera)
+    maschera_file: extracted/navi/hauk/foto/dritta_lom_maschera.png
+    orizzonte_punti: [[200, 256], [1650, 273]]
+    solo_punti: true
+    # il numero vero tolto (come sulle altre classi): il P 993 a prua
+    cancella: [[1238, 578, 1378, 624]]
+    riquadro: [60, 150, 1600, 760]
+    fotocamera_iniziale: {posizione: [0, -500, 15], bersaglio: [0, 0, 3], f: 15000}
+    limiti_fotocamera: {elevazione: [0.3, 20], distanza: [30, 5000], focale: [500, 200000]}
+    punti:
+      - [[{prua: 0}, 0, 3.7], [1554, 563]]           # dritto di prua in coperta
+      - [[{prua: 36.5}, -2.8, 2.3], [99, 567]]       # specchio, spigolo di dritta in coperta
+      - [[{prua: 23.2}, 0, 12.4], [633, 183]]        # cima del traliccio
+      - [[{prua: 13.4}, -2.4, 6.5], [1031, 428]]     # spigolo prodiero alto di dritta della timoneria
+      - [[{prua: 24.8}, -2.4, 5.6], [569, 448]]      # spigolo prodiero alto di dritta dei Penguin
+      - [[{prua: 35.8}, -2.2, 4.1], [124, 493]]      # spigolo poppiero alto di dritta dei Penguin poppieri

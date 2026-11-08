@@ -1,0 +1,639 @@
+# Testi dell'enciclopedia: boe, marcatori, sonar ed ESM (docs/00_ROADMAP.md, requisito 14; il Museo esteso). Stesso
+# formato di campioni.yaml: una voce per id dell'indice (tools/pipeline/enciclopedia.py), scritta a mano in parafrasi
+# dai dossier di docs/ricerca (nessun testo copiato), con le fonti.
+# Campi: it, en (2-6 frasi, storia e impiego); uso_it, uso_en (sensori: come si usano o che cosa vogliono dire per il
+# giocatore); fonti (elenco).
+
+# --- Boe sonore USA -------------------------------------------------------------------------------------------------
+
+boa.ssq41b:
+  it: >-
+    La boa sonora passiva omnidirezionale (LOFAR) degli aerei antisommergibile americani. Dopo l'ammaraggio cala
+    l'idrofono a circa 18 o 300 metri e trasmette all'aereo, su uno di 31 canali radio, il suono fra 10 Hz e 10-20
+    kHz, per 1, 3 o 8 ore. Non misura la direzione: dice solo che un bersaglio è dentro il suo cerchio d'ascolto. Nel
+    1989 un P-3C su un contatto del SOSUS ne porta 8-12, un SH-60B 2-4; serve per le barriere e per le righe di
+    macchina a bassa frequenza.
+  en: >-
+    The omnidirectional passive (LOFAR) sonobuoy of American anti-submarine aircraft. After splashdown it lowers its
+    hydrophone to about 18 or 300 metres and radios the sound between 10 Hz and 10-20 kHz to the aircraft on one of
+    31 channels, for 1, 3 or 8 hours. It gives no bearing: it only says that a target is inside its listening circle.
+    In 1989 a P-3C working a SOSUS contact carries 8-12 of them, an SH-60B 2-4; they are used for barriers and for
+    low-frequency machinery lines.
+  uso_it: >-
+    Da sola ti colloca solo in un cerchio di qualche chilometro: il pericolo arriva dopo, quando l'aereo ci posa
+    attorno le DIFAR. Una fila di tonfi a intervalli regolari è un aereo che stende una barriera: rallenta e cambia
+    rotta.
+  uso_en: >-
+    On its own it only places you in a circle a few kilometres wide: the danger comes next, when the aircraft lays
+    DIFAR buoys around it. A string of splashes at regular intervals is an aircraft laying a barrier: slow down and
+    change course.
+  fonti: ['dossier 17 §4.1 [FASSSQ41] [HOLLER]', 'dossier 17 §2.1, §2.4 e §8.3', 'dossier 02 §7.6',
+          'asw_aereo.toml (boe.ssq41b)']
+
+boa.ssq77a:
+  it: >-
+    La VLAD è una boa DIFAR con gli idrofoni disposti su una schiera verticale, in servizio dal 1981. La schiera
+    guadagna 10-15 dB contro il rumore del traffico navale, che arriva quasi in orizzontale, e quindi sente meglio in
+    acque profonde e affollate. Ascolta a circa 150 o 300 metri per 1, 4 o 8 ore e, come ogni DIFAR, dà anche la
+    direzione del suono. Un P-3C su un contatto del SOSUS ne porta 4-6.
+  en: >-
+    The VLAD is a DIFAR buoy with its hydrophones arranged in a vertical array, in service since 1981. The array gains
+    10-15 dB against shipping noise, which arrives almost horizontally, so it hears better in deep, busy waters. It
+    listens at about 150 or 300 metres for 1, 4 or 8 hours and, like every DIFAR, also gives the bearing of the sound.
+    A P-3C working a SOSUS contact carries 4-6.
+  uso_it: >-
+    Il rumore dei mercantili non ti nasconde: la VLAD lo filtra. Due boe direzionali incrociate fissano la tua
+    posizione, quindi dopo i tonfi cambia rotta e quota e scendi sotto gli 8 nodi.
+  uso_en: >-
+    Merchant noise will not hide you: the VLAD filters it out. Two crossing directional buoys fix your position, so
+    after the splashes change course and depth and drop below 8 knots.
+  fonti: ['dossier 17 §4.1 [HOLLER] [FASSSQ77]', 'dossier 17 §2.4', 'asw_aereo.toml (boe.ssq77a)']
+
+boa.ssq57a:
+  it: >-
+    Una boa passiva tarata, che non cerca sottomarini ma misura il livello del rumore ambiente, con l'idrofono a circa
+    27 o 120 metri. L'equipaggio del P-3C la posa appena arrivato in zona, insieme al batitermografo, per sapere quanto
+    è rumoroso il mare e tarare la ricerca. Nel carico di un P-3C su un contatto del SOSUS ce ne sono 2-4.
+  en: >-
+    A calibrated passive buoy that does not look for submarines but measures the ambient noise level, with its
+    hydrophone at about 27 or 120 metres. The P-3C crew drops it on arrival in the area, together with the
+    bathythermograph, to learn how noisy the sea is and to tune the search. A P-3C load for a SOSUS contact includes
+    2-4 of them.
+  uso_it: >-
+    Non ti sente, ma vuol dire che un aereo si prepara a cacciare proprio qui: presto arriveranno le boe d'ascolto.
+    È il momento di lasciare la zona senza fretta e senza rumore.
+  uso_en: >-
+    It does not hear you, but it means an aircraft is getting ready to hunt right here: listening buoys will follow
+    soon. Now is the time to leave the area, unhurried and quiet.
+  fonti: ['dossier 17 §4.1 [HOLLER]', 'dossier 17 §2.4 e §6.2', 'asw_aereo.toml (boe.ssq57a)']
+
+boa.ssq47b:
+  it: >-
+    Una boa attiva che misura soltanto la distanza: emette un ping a onda continua ogni 10 secondi, su una frequenza
+    fra 13 e 19 kHz, con il trasduttore a circa 18 o 245 metri. Funziona per circa mezz'ora e non dà la direzione, che
+    l'aereo deve ricavare incrociando più boe. Nel 1989 è ancora fra le boe in dotazione alla US Navy accanto alla più
+    moderna DICASS.
+  en: >-
+    An active buoy that measures range only: it sends a continuous-wave ping every 10 seconds, on a frequency between
+    13 and 19 kHz, with its transducer at about 18 or 245 metres. It works for about half an hour and gives no bearing,
+    which the aircraft must work out by combining several buoys. In 1989 it is still among the US Navy's buoys,
+    alongside the more modern DICASS.
+  uso_it: >-
+    Il suo ping regolare ogni 10 secondi, molto acuto, è inconfondibile: la boa conosce la tua distanza ma non la
+    direzione. Allontanati dal suo cerchio prima che l'aereo ne posi un'altra.
+  uso_en: >-
+    Its regular, high-pitched ping every 10 seconds is unmistakable: the buoy knows your range but not your bearing.
+    Get out of its circle before the aircraft drops another one.
+  fonti: ['dossier 17 §4.1 [HOLLER]', 'dossier 17 §8.3', 'asw_aereo.toml (boe.ssq47b)']
+
+boa.ssq62b:
+  it: >-
+    La DICASS è la boa attiva direzionale a comando degli aerei e degli elicotteri americani: trasmette solo quando
+    l'aereo glielo ordina, su una di quattro frequenze fra 6,5 e 9,5 kHz, con impulsi CW o FM. Misura distanza,
+    rilevamento e Doppler, abbastanza da dare i dati per l'attacco anche con una sola boa. Parte a circa 27 metri e si
+    può far scendere a 120 o 457 metri, ma mai risalire; in tutto ha 100 secondi di trasmissione. Un P-3C ne porta 8-10,
+    un SH-60B 4-6, e si posano in rombo attorno all'ultimo fix per la localizzazione finale.
+  en: >-
+    The DICASS is the command-activated directional active buoy of American aircraft and helicopters: it transmits only
+    when the aircraft orders it, on one of four frequencies between 6.5 and 9.5 kHz, with CW or FM pulses. It measures
+    range, bearing and Doppler, enough to give attack data even with a single buoy. It starts at about 27 metres and
+    can be sent down to 120 or 457 metres, but never back up; in all it has 100 seconds of transmission. A P-3C carries
+    8-10, an SH-60B 4-6, and they are laid in a diamond around the last fix for final localisation.
+  uso_it: >-
+    Un ping DICASS vuol dire che l'attacco è vicino: dopo vengono il passaggio MAD e il siluro Mk 46. Lo senti a circa
+    20 km mentre la boa ti scopre a 2: prendi il rilevamento, allontanati, cambia quota e tieni pronte le esche.
+  uso_en: >-
+    A DICASS ping means the attack is close: the MAD pass and the Mk 46 torpedo come next. You hear it at about 20 km
+    while the buoy detects you at 2: take the bearing, open the range, change depth and have decoys ready.
+  fonti: ['dossier 17 §4.1 [FASSSQ62] [U62G]', 'dossier 17 §6.1, §6.2 e §8.3', 'dossier 02 §1.5',
+          'asw_aereo.toml (boe.ssq62b)']
+
+boa.ssq36:
+  it: >-
+    La boa batitermografica: cadendo misura la temperatura dell'acqua fino a 300-800 metri e trasmette il profilo
+    all'aereo. Da quel profilo l'equipaggio ricava la velocità del suono alle varie quote, e quindi dove sta lo strato
+    e a che quota calare le boe d'ascolto. Si posa all'inizio della caccia; un P-3C ne porta 2-3, un SH-60B 1-2. Non
+    tutti la usavano: un operatore dei Viking ricorda che la si saltava perché faceva rumore.
+  en: >-
+    The bathythermograph buoy: as it sinks it measures water temperature down to 300-800 metres and radios the profile
+    to the aircraft. From that profile the crew derives the sound speed at each depth, and so where the layer lies and
+    how deep to set the listening buoys. It is dropped at the start of a hunt; a P-3C carries 2-3, an SH-60B 1-2. Not
+    everyone used it: a Viking operator recalls skipping it because it made noise.
+  uso_it: >-
+    Un tonfo isolato all'inizio di una caccia può essere un batitermografo: l'aereo sta studiando lo strato per
+    decidere dove ascoltarti. Non ti ha ancora trovato, ma ti cerca qui.
+  uso_en: >-
+    A lone splash at the start of a hunt may be a bathythermograph: the aircraft is studying the layer to decide where
+    to listen for you. It has not found you yet, but it is searching here.
+  fonti: ['dossier 17 §4.1 [FASSSQ36]', 'dossier 17 §2.1, §2.4, §2.5 [TWZS3] e §6.2', 'dossier 02 §7.6',
+          'asw_aereo.toml (boe.ssq36)']
+
+# --- Boe sonore sovietiche ------------------------------------------------------------------------------------------
+
+boa.rgb_nm:
+  it: >-
+    La boa passiva omnidirezionale «Chinara» dei Be-12 e degli elicotteri Ka-25 e Ka-27, che ne portano fino a 36.
+    Con l'idrofono a 20 metri ascolta fra 7 e 10 kHz e trasmette solo quando il segnale supera una soglia, per un
+    ascolto a orecchio dell'operatore; ignora i picchi più brevi di 10-15 secondi e può attendere fino a 6 ore. La
+    portata va da 0,2 a 5 km (la CIA stimava 2,7 km contro un bersaglio rumoroso) e con mare oltre forza 3 diventa
+    inutile. Nel 1966 il 28% era guasto; più tardi l'affidabilità salì a 0,7-0,8.
+  en: >-
+    The «Chinara» omnidirectional passive buoy of the Be-12 and of the Ka-25 and Ka-27 helicopters, which carry up to
+    36. With its hydrophone at 20 metres it listens between 7 and 10 kHz and transmits only when the signal crosses a
+    threshold, for the operator to judge by ear; it ignores peaks shorter than 10-15 seconds and can wait up to 6
+    hours. Range runs from 0.2 to 5 km (the CIA estimated 2.7 km against a noisy target) and above sea state 3 it
+    becomes useless. In 1966 28% were faulty; later reliability rose to 0.7-0.8.
+  uso_it: >-
+    Sente solo da vicino e in alta frequenza: lento e silenzioso le passi a qualche chilometro senza farla scattare.
+    Col mare oltre forza 3 è quasi sorda.
+  uso_en: >-
+    It only hears close in and at high frequency: slow and quiet, you can pass a few kilometres away without tripping
+    it. Above sea state 3 it is nearly deaf.
+  fonti: ['dossier 17 §4.2 [ART-Be12] [CIA72]', 'dossier 17 §3.1 e §3.2', 'asw_aereo.toml (boe.rgb_nm)']
+
+boa.rgb_nm1:
+  it: >-
+    La «Zheton» è la versione migliorata della Chinara, usata dagli stessi Be-12, Ka-25 e Ka-27. Funziona allo stesso
+    modo, passiva omnidirezionale con soglia e ascolto a orecchio fra 7 e 10 kHz, ma la quota dell'idrofono si sceglie
+    a terra fra 20, 40 e 100 metri. Ha gli stessi limiti: pochi chilometri di portata e niente da fare col mare oltre
+    forza 3.
+  en: >-
+    The «Zheton» is the improved version of the Chinara, used by the same Be-12, Ka-25 and Ka-27. It works the same
+    way, an omnidirectional passive buoy with a threshold and aural listening between 7 and 10 kHz, but the hydrophone
+    depth is chosen on the ground among 20, 40 and 100 metres. It has the same limits: a few kilometres of range and
+    no use above sea state 3.
+  uso_it: >-
+    Come per la Chinara: velocità bassa e distanza di qualche chilometro bastano di solito. Una boa che reagisce attira
+    subito una barriera di altre boe davanti alla tua rotta: se senti posarne una serie, cambia rotta in modo deciso.
+  uso_en: >-
+    As with the Chinara, low speed and a few kilometres of distance are usually enough. A buoy that reacts at once
+    brings a barrier of more buoys ahead of your course: if you hear a series being laid, change course decisively.
+  fonti: ['dossier 17 §4.2 [ART-Be12] [CIA72]', 'dossier 17 §6.6', 'asw_aereo.toml (boe.rgb_nm1)']
+
+boa.rgb1:
+  it: >-
+    La boa passiva omnidirezionale dell'Il-38, che ne carica 144, usata anche dal Tu-142. Una schiera di cinque
+    idrofoni scende a 35 o 70 metri, poi la boa resta in attesa e si accende da sola quando sente qualcosa; un
+    transponder radar permette all'aereo di ritrovarla. Alle prove del 1965 scoprì un sottomarino diesel a 6-8 nodi,
+    con mare 1-2, a 1,7-4 km. Fino al 30% arrivava guasto già a terra.
+  en: >-
+    The Il-38's omnidirectional passive buoy, which it carries 144 of, also used by the Tu-142. An array of five
+    hydrophones goes down to 35 or 70 metres, then the buoy waits and switches on by itself when it hears something; a
+    radar transponder lets the aircraft find it again. In 1965 trials it detected a diesel submarine at 6-8 knots, in
+    sea state 1-2, at 1.7-4 km. Up to 30% were already faulty on the ground.
+  uso_it: >-
+    Gli Il-38 stendono barriere lineari di RGB-1: quando una reagisce, l'aereo posa subito una barriera di RGB-2
+    direzionali attorno a te. Dopo una fila di tonfi rallenta e cambia rotta, perché la barriera successiva cadrà
+    davanti alla rotta che stimano.
+  uso_en: >-
+    Il-38s lay linear barriers of RGB-1s: when one reacts, the aircraft immediately lays a barrier of directional RGB-2s
+    around you. After a string of splashes slow down and change course, because the next barrier will fall ahead of
+    the course they estimate.
+  fonti: ['dossier 17 §4.2 [ART-Il38] [RW-Il38]', 'dossier 17 §3.4 e §6.6', 'asw_aereo.toml (boe.rgb1)']
+
+boa.rgb2:
+  it: >-
+    La boa passiva direzionale dell'Il-38 e del Be-12N: un'antenna di 13 elementi, a 20 metri, ruota a 8 giri al
+    minuto e dà la direzione del suono con un errore di 5-7 gradi. Vive 40-45 minuti e sente un sottomarino diesel
+    silenzioso a 1,5-2 km. Si posa dopo che una boa omnidirezionale ha reagito, come barriera di precisione; l'Il-38 ne
+    porta 10.
+  en: >-
+    The directional passive buoy of the Il-38 and the Be-12N: a 13-element antenna at 20 metres rotates at 8 rpm and
+    gives the bearing of the sound with a 5-7 degree error. It lives 40-45 minutes and hears a quiet diesel submarine
+    at 1.5-2 km. It is laid after an omnidirectional buoy has reacted, as a precision barrier; the Il-38 carries 10.
+  uso_it: >-
+    Le RGB-2 arrivano quando sei già stato sentito: danno la direzione, e due boe bastano a localizzarti. Durano meno
+    di un'ora e sentono a un paio di chilometri: allontanarsi in silenzio è spesso sufficiente.
+  uso_en: >-
+    RGB-2s arrive when you have already been heard: they give the bearing, and two buoys are enough to locate you. They
+    last less than an hour and hear out to a couple of kilometres: slipping away quietly is often enough.
+  fonti: ['dossier 17 §4.2 [ART-Il38] [ART-Be12N]', 'dossier 17 §3.4 e §6.6', 'asw_aereo.toml (boe.rgb2)']
+
+boa.rgb75:
+  it: >-
+    La boa infrasonora del Tu-142M: ascolta in continuo fra 2 e 60 Hz per un massimo di 5 ore, a caccia delle righe
+    più basse dei sottomarini. L'aereo ne porta 66 e le posa in campi a maglie di 10-20 km. La portata reale era al
+    più di 1 km contro un bersaglio lento, ma di 15-20 km a 12 nodi; nel 1987 una commissione la giudicò inefficace
+    con mare forza 3-5. Nel 1983 servivano 4 RGB-75 per ogni ora d'inseguimento.
+  en: >-
+    The Tu-142M's infrasonic buoy: it listens continuously between 2 and 60 Hz for up to 5 hours, hunting the lowest
+    lines of submarines. The aircraft carries 66 and lays them in fields with a 10-20 km mesh. Its real range was at
+    most 1 km against a slow target, but 15-20 km at 12 knots; in 1987 a commission judged it ineffective in sea states
+    3-5. In 1983 it took 4 RGB-75s for each hour of tracking.
+  uso_it: >-
+    Sente le righe d'elica a bassissima frequenza: contro un 688 a 8 nodi arriva a meno di un chilometro, a 12 nodi a
+    circa 3, a 20 nodi a decine di chilometri. In un campo di Tu-142 tieni la velocità sotto gli 8 nodi.
+  uso_en: >-
+    It hears propeller lines at very low frequency: against a 688 at 8 knots it reaches under one kilometre, at 12
+    knots about 3, at 20 knots tens of kilometres. Inside a Tu-142 field keep your speed below 8 knots.
+  fonti: ['dossier 17 §4.2 [ART-Tu142]', 'dossier 17 §3.5, §6.6 e §8.4', 'asw_aereo.toml (boe.rgb75)']
+
+boa.rgb15:
+  it: >-
+    Una boa passiva a larga banda del Tu-142M, fra 2 e 5000 Hz, che dura 2 ore; l'aereo ne porta 44. Da sola sente
+    poco, 0,5-1 km, e serve a rimpiazzare le RGB-75 nel campo. Il suo vero compito è ricevere l'eco delle cariche
+    esplosive MGAB: in quel ruolo la portata sale a 5-10 km. Nel 1987 si scoprì che il metodo, nel Mare di Barents,
+    non rilevava nulla.
+  en: >-
+    A broadband passive buoy of the Tu-142M, between 2 and 5,000 Hz, lasting 2 hours; the aircraft carries 44. On its
+    own it hears little, 0.5-1 km, and it is used to replace RGB-75s in the field. Its real job is to receive the echo
+    of MGAB explosive charges: in that role range rises to 5-10 km. In 1987 the method was found to detect nothing in
+    the Barents Sea.
+  uso_it: >-
+    Da sola non è un pericolo serio. Lo diventa quando cominciano le esplosioni: l'eco del tuo scafo le arriva da
+    chilometri, quindi allontanati dal punto delle cariche.
+  uso_en: >-
+    On its own it is no serious threat. It becomes one when the explosions start: the echo off your hull reaches it
+    from kilometres away, so move away from where the charges fall.
+  fonti: ['dossier 17 §4.2 [ART-Tu142]', 'dossier 17 §3.5 e §6.6', 'asw_aereo.toml (boe.rgb15)']
+
+boa.rgb25:
+  it: >-
+    La boa passiva direzionale del Tu-142M, con l'idrofono che scende fino a 150 metri; nel carico di ricerca e attacco
+    ce ne sono 10. Le fonti aperte dicono poco delle sue prestazioni. Nel 1987 la stessa commissione che bocciò la
+    RGB-75 la giudicò inefficace con mare forza 3-5.
+  en: >-
+    The Tu-142M's directional passive buoy, with a hydrophone that goes down to 150 metres; the search-and-attack load
+    includes 10. Open sources say little about its performance. In 1987 the same commission that failed the RGB-75
+    judged it ineffective in sea states 3-5.
+  uso_it: >-
+    Se un Tu-142 posa boe direzionali vicino a te vuole la tua direzione: cambia rotta e quota. Col mare forza 3 o più
+    rende poco.
+  uso_en: >-
+    If a Tu-142 lays directional buoys near you it wants your bearing: change course and depth. In sea state 3 or more
+    it does little.
+  fonti: ['dossier 17 §4.2 [ART-Tu142]', 'dossier 17 §3.5', 'asw_aereo.toml (boe.rgb25)']
+
+boa.rgb55a:
+  it: >-
+    La boa attiva omnidirezionale a comando del Tu-142M, che ne porta 10. Trasmette su quattro frequenze per un'ora al
+    massimo e sente un sottomarino a circa 5 km, misurandone la distanza con un errore di 75-100 metri e il Doppler.
+    Nel 1987 risultò incapace di rilevare nel Mare di Barents.
+  en: >-
+    The Tu-142M's command-activated omnidirectional active buoy, which it carries 10 of. It transmits on four
+    frequencies for an hour at most and detects a submarine at about 5 km, measuring its range with a 75-100 metre
+    error, plus Doppler. In 1987 it proved unable to detect in the Barents Sea.
+  uso_it: >-
+    Un ping da una boa vicina: il Tu-142 cerca la distanza per l'attacco. Lo senti molto prima che la boa senta te:
+    prendi il rilevamento e allontanati.
+  uso_en: >-
+    A ping from a nearby buoy: the Tu-142 wants your range for an attack. You hear it long before the buoy hears you:
+    take the bearing and move away.
+  fonti: ['dossier 17 §4.2 [ART-Tu142]', 'dossier 17 §3.5 e §8.3', 'asw_aereo.toml (boe.rgb55a)']
+
+boa.mgab:
+  it: >-
+    Le MGAB (nelle versioni OZ, LZ e SZ) sono sorgenti esplosive da 100-800 grammi che il Tu-142M sgancia per far
+    rimbalzare un'eco sul sottomarino verso le boe RGB-15. Esplodono a 25, 150 o 400 metri; la versione SZ, a spirale,
+    produce un treno di colpi a 4 Hz. Un aereo può portarne fino a 240, e per un fix servono 2-3 colpi nello stesso
+    punto a 3-4 minuti l'uno dall'altro. Per gli stessi sovietici, le esplosioni toglievano alla ricerca ogni
+    segretezza.
+  en: >-
+    The MGABs (in OZ, LZ and SZ versions) are 100-800 gram explosive sources that the Tu-142M drops to bounce an echo
+    off the submarine towards RGB-15 buoys. They detonate at 25, 150 or 400 metres; the spiral SZ version produces a
+    train of bangs at 4 Hz. An aircraft can carry up to 240, and a fix takes 2-3 shots at the same spot 3-4 minutes
+    apart. By the Soviets' own account, the explosions stripped the search of all secrecy.
+  uso_it: >-
+    Esplosioni singole o un treno di colpi rapidi: un Tu-142 ti sta cercando con l'eco. Dopo il primo colpo hai 3-4
+    minuti prima del successivo: usali per allontanarti dal punto.
+  uso_en: >-
+    Single explosions or a rapid train of bangs: a Tu-142 is hunting you by echo. After the first shot you have 3-4
+    minutes before the next: use them to get away from the spot.
+  fonti: ['dossier 17 §4.2 [ART-Tu142]', 'dossier 17 §3.5, §6.6 e §8.3', 'asw_aereo.toml (boe.mgab)']
+
+boa.rlb:
+  it: >-
+    La «Poplavok-1A» non è una boa acustica ma un radar-faro: galleggia e risponde al radar per segnare un punto. Il
+    Ka-25 la sgancia da non più di 200 metri e ne porta 3; funziona circa 20 minuti. Nelle coppie di ricerca e attacco
+    l'elicottero di ricerca marca così la posizione del contatto, e quello armato la raggiunge col radar.
+  en: >-
+    The «Poplavok-1A» is not an acoustic buoy but a radar beacon: it floats and answers radar to mark a point. The
+    Ka-25 drops it from no higher than 200 metres and carries 3; it works for about 20 minutes. In search-and-attack
+    pairs the search helicopter marks the contact's position this way, and the armed one homes on it by radar.
+  uso_it: >-
+    Non ti sente: dice all'elicottero armato dove ti ha trovato quello di ricerca. Se ne senti il tonfo dopo un dip,
+    l'attacco sta arrivando: lascia il punto in fretta.
+  uso_en: >-
+    It does not hear you: it tells the armed helicopter where the search helicopter found you. If you hear its splash
+    after a dip, the attack is on its way: leave the spot quickly.
+  fonti: ['dossier 17 §4.2 [RW-Ka25]', 'dossier 17 §3.1', 'asw_aereo.toml (boe.rlb)']
+
+# --- Marcatori ------------------------------------------------------------------------------------------------------
+
+marcatore.mk58:
+  it: >-
+    Il marcatore marino a lunga durata degli aerei antisommergibile statunitensi: in acqua accende due candele che
+    bruciano 40-60 minuti e si vedono ad almeno 4,5-5 km, di giorno come di notte. Segna un contatto o il punto di un
+    attacco; quando sgancia il siluro il P-3C lancia un Mk 25 o un Mk 58.
+  en: >-
+    The long-burning marine marker of American anti-submarine aircraft: in the water it lights two candles that burn
+    for 40-60 minutes and can be seen at 4.5-5 km or more, by day and by night. It marks a contact or an attack point;
+    when it releases a torpedo the P-3C drops a Mk 25 or a Mk 58.
+  uso_it: >-
+    Un Mk 58 in vista vuol dire che il nemico ha già un punto sulla tua posizione stimata: allontanati di 2-3 miglia
+    entro 15-20 minuti.
+  uso_en: >-
+    A Mk 58 in sight means the enemy already has a datum on your estimated position: move 2-3 miles away within 15-20
+    minutes.
+  fonti: ['dossier 17 §4.3 [AUS-MK58]', 'dossier 17 §6.2 e §8.1', 'asw_aereo.toml (marcatori.mk58)']
+
+marcatore.mk84:
+  it: >-
+    Il SUS Mk 84 è un segnalatore acustico non esplosivo con cui un aereo parla a un sottomarino: in acqua emette toni
+    a circa 3 kHz, con 4-5 codici diversi, parte entro 3 secondi e suona per 45-120 secondi. In esercitazione serviva
+    anche a simulare il lancio di un'arma contro il battello.
+  en: >-
+    The Mk 84 SUS is a non-explosive acoustic signal with which an aircraft talks to a submarine: in the water it emits
+    tones at about 3 kHz, with 4-5 different codes, starts within 3 seconds and sounds for 45-120 seconds. In exercises
+    it was also used to simulate a weapon launch against the boat.
+  uso_it: >-
+    Toni a 3 kHz per uno o due minuti: in esercitazione è un attacco simulato contro di te, altrimenti un codice
+    d'ordine da un aereo amico.
+  uso_en: >-
+    Tones at 3 kHz for a minute or two: in an exercise it is a simulated attack on you, otherwise a coded order from a
+    friendly aircraft.
+  fonti: ['dossier 17 §4.3 [PRC68SUS]', 'dossier 17 §8.3', 'asw_aereo.toml (marcatori.mk84)']
+
+marcatore.omab:
+  it: >-
+    I marcatori marini sovietici OMAB-25-12D e OMAB-25-8N: il primo, per il giorno, colora l'acqua con la fluoresceina;
+    il secondo, per la notte, accende una fiamma di acetilene. Li portano gli aerei e gli elicotteri antisommergibile,
+    per esempio il Ka-25 con 4 marcatori, per segnare un contatto o un punto della ricerca.
+  en: >-
+    The Soviet OMAB-25-12D and OMAB-25-8N marine markers: the first, for daytime, colours the water with fluorescein;
+    the second, for night, lights an acetylene flame. Anti-submarine aircraft and helicopters carry them, the Ka-25 for
+    instance with 4 markers, to mark a contact or a search point.
+  uso_it: >-
+    Una chiazza colorata in acqua di giorno o una fiamma di notte: il nemico ha segnato un punto su di te. Allontanati
+    di qualche miglio prima che torni.
+  uso_en: >-
+    A coloured patch on the water by day or a flame by night: the enemy has marked a point on you. Move a few miles
+    away before it comes back.
+  fonti: ['dossier 17 §4.3 [RW-Ka25] [ART-Il38]', 'dossier 17 §3.1 e §8.1', 'asw_aereo.toml (marcatori.omab)']
+
+# --- Sonar ----------------------------------------------------------------------------------------------------------
+
+sonar.tb16:
+  it: >-
+    La schiera rimorchiata «fat line» di tutti i 688, un sottosistema del BQQ-5: 73 metri di idrofoni, 9 cm di
+    diametro e 1.400 libbre, al traino di 731 metri di cavo; l'elaborazione è della famiglia BQR-15/BQR-23, con
+    almeno 64 canali LOFAR e la presentazione frequenza-azimut. È uno strumento a banda stretta: sente da lontano le
+    righe di macchina e d'elica, anche alle distanze della zona di convergenza. Sotto i 3 nodi si incurva, sopra i
+    15-18 è sorda per il rumore di flusso, in virata è cieca per alcuni minuti e ogni contatto ha un'immagine
+    speculare. Nel 1989 i 688I cominciano ad affiancarle la più lunga TB-23.
+  en: >-
+    The «fat line» towed array of every 688, a subsystem of the BQQ-5: 73 metres of hydrophones, 9 cm across and 1,400
+    lb, towed on 731 metres of cable; processing belongs to the BQR-15/BQR-23 family, with at least 64 LOFAR channels
+    and a frequency-azimuth display. It is a narrowband instrument: it hears machinery and propeller lines from far
+    away, out to convergence-zone ranges. Below 3 knots it sags, above 15-18 it is deafened by flow noise, while
+    turning it is blind for a few minutes, and every contact has a mirror image. In 1989 the 688I boats begin to add
+    the longer TB-23.
+  uso_it: >-
+    Filarla richiede circa un quarto d'ora; in pattuglia la si tiene fuori e la si recupera solo per i transiti veloci
+    o le acque basse. Per ascoltare stai fra 3 e 8 nodi, anche a scatti e derive; vira dolcemente, perché oltre 0,3
+    gradi al secondo diventa cieca e poi impiega circa 2 minuti a raddrizzarsi. Per sciogliere l'ambiguità
+    sinistra/destra vira di 20-40 gradi: il rilevamento vero resta, quello falso salta. Davanti, lungo il proprio asse,
+    non sente; a 5 nodi lavora circa 165 metri sotto il battello, quindi attento al fondo e non andare mai indietro con
+    la schiera fuori.
+  uso_en: >-
+    Streaming it takes about a quarter of an hour; on patrol it stays out and is recovered only for fast transits or
+    shallow water. To listen, stay between 3 and 8 knots, sprinting and drifting if needed; turn gently, because above
+    0.3 degrees per second it goes blind and then takes about 2 minutes to straighten. To resolve the left/right
+    ambiguity turn 20-40 degrees: the true bearing holds, the false one jumps. Ahead, along its own axis, it cannot
+    hear; at 5 knots it rides about 165 metres below the boat, so watch the bottom and never back down with the array
+    out.
+  fonti: ['dossier 04 §1.1-1.7, §2.3 e §7 [FAS-TB16] [NC-BQR15] [SBIR-074] [FAS-TB23]', 'dossier 02 §5.2',
+          'dossier 09 §1.1', 'acustica.toml (sensori.tb16)']
+
+sonar.wlr9:
+  it: >-
+    L'AN/WLR-9 è il ricevitore d'intercettazione acustica dei 688: non cerca bersagli, ma avverte quando qualcuno usa
+    un sonar attivo o quando la testa di un siluro a guida acustica comincia a cercare. Sente anche i transitori, come
+    l'apertura dei portelli e i lanci. Funziona perché il ping arriva al bersaglio con la perdita di sola andata: il
+    battello lo sente in genere da una distanza 1,5-3 volte maggiore di quella a cui il sonar può scoprirlo, contro gli
+    elicotteri anche 7-12 volte. Nella sala sonar del 1989 era una spia con un allarme.
+  en: >-
+    The AN/WLR-9 is the 688's acoustic intercept receiver: it does not search for targets, but warns when someone uses
+    an active sonar or when an acoustic homing torpedo's seeker starts searching. It also picks up transients such as
+    tube doors opening and launches. It works because the ping reaches the target with one-way loss only: the boat
+    usually hears it from 1.5-3 times the range at which the sonar can detect it, against helicopters even 7-12 times.
+    In the 1989 sonar room it was a warning lamp with an alarm.
+  uso_it: >-
+    Lavora da solo: all'allarme leggi rilevamento e frequenza, che dicono chi ti sta cercando. Intorno a 3 kHz è una
+    nave grande, 6,5-9,5 kHz una DICASS, intorno ai 10 kHz un elicottero col sonar a immersione, 13-19 kHz ogni 10
+    secondi una SSQ-47B, 20-30 kHz la testa di un siluro: in quel caso esche e manovra d'evasione subito.
+  uso_en: >-
+    It works on its own: on the alarm, read bearing and frequency, which tell you who is looking for you. Around 3 kHz
+    is a large ship, 6.5-9.5 kHz a DICASS, around 10 kHz a helicopter's dipping sonar, 13-19 kHz every 10 seconds an
+    SSQ-47B, 20-30 kHz a torpedo seeker: in that case decoys and evasion at once.
+  fonti: ['dossier 01 §2.1 [FAS688], §3.3 e §7.1', 'dossier 02 §1.5 e §5.3', 'dossier 05 §5.1 [WP688]',
+          'dossier 17 §8.3', 'dossier 19 §2.3 [APL]', 'acustica.toml (sensori.wlr9)']
+
+sonar.sqs53:
+  it: >-
+    Il grande sonar di prua dei cacciatorpediniere e degli incrociatori americani del 1989, come i Kidd: discende
+    dall'SQS-26CX e lavora a circa 3-3,5 kHz con un livello nominale di 235 dB. In attivo usa il percorso diretto, il
+    rimbalzo sul fondo e la prima zona di convergenza, intorno ai 55 km in acque profonde; in passivo dà il
+    rilevamento vero. In percorso diretto copre in genere 10-20 km. È il sensore della difesa interna del gruppo
+    portaerei, insieme agli elicotteri SH-3H.
+  en: >-
+    The big bow sonar of the American destroyers and cruisers of 1989, such as the Kidd class: it descends from the
+    SQS-26CX and works at about 3-3.5 kHz with a nominal 235 dB source level. In active mode it uses the direct path,
+    bottom bounce and the first convergence zone, around 55 km in deep water; in passive mode it gives true bearings.
+    On the direct path it typically covers 10-20 km. It is the sensor of the carrier group's inner defence, together
+    with the SH-3H helicopters.
+  uso_it: >-
+    Il suo ping basso e potente lo senti molto prima che lui senta te. Resta fuori dalla portata diretta e fuori
+    dall'anello della zona di convergenza; in acque basse la riverberazione del fondo ne dimezza la portata. Se ti
+    trova, il passo successivo è un elicottero sul rilevamento.
+  uso_en: >-
+    You hear its low, powerful ping long before it hears you. Stay outside direct-path range and out of the
+    convergence-zone ring; in shallow water bottom reverberation halves its range. If it finds you, the next step is a
+    helicopter flying down the bearing.
+  fonti: ['dossier 01 §4.1 [FASSQS53]', 'dossier 02 §1.5 [SQS53] e §7.5', 'dossier 09 §5.1', 'dossier 17 §8.4',
+          'acustica.toml (sensori.sqs53, sqs53_attivo)']
+
+sonar.sqs56:
+  it: >-
+    Il sonar di scafo a media frequenza delle fregate Oliver Hazard Perry, intorno ai 7-8 kHz (le frequenze esatte non
+    sono certe) e con un livello stimato di 220-225 dB. È un sonar piccolo, con una portata diretta di 5-10 km. Sulle
+    Perry del 1989 conta meno della schiera rimorchiata SQR-19 e dei due elicotteri SH-60B, a cui la nave passa i
+    contatti.
+  en: >-
+    The medium-frequency hull sonar of the Oliver Hazard Perry frigates, around 7-8 kHz (the exact frequencies are
+    uncertain) with an estimated 220-225 dB source level. It is a small sonar, with a direct-path range of 5-10 km. On
+    the Perrys of 1989 it matters less than the SQR-19 towed array and the two SH-60B helicopters, to which the ship
+    hands its contacts.
+  uso_it: >-
+    Il sonar di scafo è il pericolo minore di una Perry: se ne senti il ping la fregata è vicina. Il rischio vero è la
+    sua schiera rimorchiata, quindi resta lento, e il suo elicottero che arriva a posare boe sul tuo rilevamento.
+  uso_en: >-
+    The hull sonar is the lesser threat on a Perry: if you hear its ping the frigate is close. The real danger is its
+    towed array, so stay slow, and its helicopter coming to lay buoys along your bearing.
+  fonti: ['dossier 01 §4.1 e §5.9 (LAMPS III)', 'dossier 02 §1.5', 'dossier 17 §2.1',
+          'acustica.toml (sensori.sqs56_attivo)']
+
+sonar.titan2:
+  it: >-
+    Il sonar di scafo a bassa e media frequenza delle navi antisommergibile sovietiche Kara e Krivak, e dello Slava
+    nella versione Titan-2T; il dossier lo chiama MG-332 e riserva la sigla MGK-335 al Platina. Lavora intorno ai 3-8
+    kHz con un livello di 220-235 dB, cifre non pubblicate; sulle Kara e Krivak è affiancato dal sonar a profondità
+    variabile Vega, calato fino a 100 metri. Per il gioco si stima una portata diretta di 8-15 km. Le navi lo usano nei
+    gruppi di ricerca e attacco di 2-4 unità in linea di fronte, alternando ricerca attiva e corse veloci.
+  en: >-
+    The low- and medium-frequency hull sonar of the Soviet Kara and Krivak anti-submarine ships, and of the Slava in
+    its Titan-2T version; the dossier calls it MG-332 and gives the MGK-335 designation to the Platina. It works around
+    3-8 kHz at 220-235 dB, unpublished figures; on the Karas and Krivaks it is paired with the Vega variable-depth
+    sonar, lowered down to 100 metres. The game estimates a direct-path range of 8-15 km. The ships use it in search
+    and attack groups of 2-4 units in line abreast, alternating active search and fast runs.
+  uso_it: >-
+    Una fila di navi sovietiche che pingano è un gruppo di caccia: lo senti da lontano, quindi resta fuori dalla sua
+    portata diretta. Lo strato non basta: il Vega può ascoltare sotto di esso. Se ti prendono, aspettati razzi RBU,
+    missili SS-N-14 o un elicottero.
+  uso_en: >-
+    A line of pinging Soviet ships is a hunting group: you hear it from far off, so stay outside its direct-path range.
+    The layer is not enough: the Vega can listen beneath it. If they get you, expect RBU rockets, SS-N-14 missiles or a
+    helicopter.
+  fonti: ['dossier 01 §4.2 [WPKara] [WPSlava] e §7.3', 'dossier 02 §1.5 e §7.4',
+          'acustica.toml (sensori.titan2_attivo)']
+
+sonar.aqs13b:
+  it: >-
+    Il sonar a immersione dell'elicottero SH-3H Sea King, che difende il cuore del gruppo portaerei. Dall'hover a circa
+    12 metri cala il trasduttore e trasmette a 9,23, 10 o 10,77 kHz impulsi brevi da almeno 211 dB, ricevendo su 16
+    fasci con un filtro Doppler; ha anche il modo passivo e la telefonia subacquea. Contro un sottomarino d'attacco
+    medio la portata attiva è di 3-5 mila iarde, fino a 8-12 mila con buona propagazione sotto lo strato; il passivo è
+    debole. Lavora anche di notte, ma in una giornata a 40 °C l'elicottero non riesce a stare in hover e non può calare
+    il sonar.
+  en: >-
+    The dipping sonar of the SH-3H Sea King helicopter, which defends the heart of the carrier group. From a hover at
+    about 12 metres it lowers the transducer and sends short pulses of at least 211 dB at 9.23, 10 or 10.77 kHz,
+    receiving on 16 beams with a Doppler filter; it also has a passive mode and underwater telephone. Against an
+    average attack submarine active range is 3-5 thousand yards, up to 8-12 thousand with good propagation below the
+    layer; passive is weak. It also works at night, but on a 40 °C day the helicopter cannot hover and cannot dip.
+  uso_it: >-
+    Il ciclo si riconosce: il tonfo del trasduttore, uno o tre minuti di silenzio, ping ogni 6-10 secondi, il
+    recupero, poi un altro tonfo 5-10 miglia più in là. Lo senti a circa 27 km mentre lui ti scopre a 3-4: fuggi
+    durante il salto, quando il sonar è fuori dall'acqua.
+  uso_en: >-
+    The cycle is recognisable: the transducer's splash, one to three minutes of silence, pings every 6-10 seconds,
+    recovery, then another splash 5-10 miles further on. You hear it at about 27 km while it detects you at 3-4: run
+    during the jump, when the sonar is out of the water.
+  fonti: ['dossier 17 §2.2 [MILAQS13B] [RUDZIS]', 'dossier 17 §6.4 e §8.3', 
+          'asw_aereo.toml (sonar_immersione.aqs13b)', 'acustica.toml (sensori.aqs13b)']
+
+sonar.aqs13f:
+  it: >-
+    La versione dell'AQS-13 per l'SH-60F Ocean Hawk, il successore dell'SH-3H sulle portaerei, che entra in scena solo
+    nel 1990-91. Rispetto all'AQS-13B ha un cavo di 1575 piedi, un impulso più lungo, più potenza e un
+    verricello più veloce; l'elicottero sta in hover più in alto, a circa 18 metri, e non ha né radar né MAD. Nel 1989
+    le portaerei usano ancora l'SH-3H.
+  en: >-
+    The version of the AQS-13 for the SH-60F Ocean Hawk, the SH-3H's successor on the carriers, which appears only in
+    1990-91. Compared with the AQS-13B it has a 1,575-foot cable, a longer pulse, more power and a faster winch; the
+    helicopter hovers higher, at about 18 metres, and carries neither radar nor MAD. In 1989 carriers still use the
+    SH-3H.
+  uso_it: >-
+    Stesso ciclo dell'AQS-13B, ma il trasduttore scende fino a circa 440 metri: nascondersi sotto lo strato non basta
+    più. Compare solo nelle missioni dal 1990 in poi.
+  uso_en: >-
+    Same cycle as the AQS-13B, but the transducer goes down to about 440 metres: hiding below the layer is no longer
+    enough. It appears only in missions from 1990 on.
+  fonti: ['dossier 17 §2.3 [WPAQS13] [SIKS70B]', 'asw_aereo.toml (sonar_immersione.aqs13f)',
+          'acustica.toml (sensori.aqs13f)']
+
+sonar.vgs3:
+  it: >-
+    Il sonar a immersione «Ros'-V» del Ka-27PL, in servizio dal 1981 nel sistema «Osminog». Il corpo scende fino a 150
+    metri, forma i fasci elettronicamente e ha modi di ascolto passivo, eco, ricerca attiva a passi e inseguimento.
+    In una prova del 1977 nel Mar Nero trovò un sottomarino diesel a 8 km in passivo e a 7 km in eco; la frequenza
+    resta sconosciuta. L'attivo si usava raramente perché smascherava l'elicottero, e di notte non si calava affatto.
+    Nel 1987, nel Mediterraneo, un gruppo di Ka-27 seguì due sottomarini stranieri per 11 ore.
+  en: >-
+    The «Ros'-V» dipping sonar of the Ka-27PL, in service from 1981 as part of the «Osminog» system. The body goes down
+    to 150 metres, forms its beams electronically and has passive listening, echo, stepped active search and tracking
+    modes. In a 1977 Black Sea trial it found a diesel submarine at 8 km passively and 7 km by echo; its frequency
+    remains unknown. Active was rarely used because it gave the helicopter away, and at night it was not dipped at all.
+    In 1987, in the Mediterranean, a group of Ka-27s tracked two foreign submarines for 11 hours.
+  uso_it: >-
+    Di giorno i Ka-27 ascoltano in silenzio, a gruppi, 3-10 minuti per dip e poi un salto di 4-6 km: contro di loro
+    conta essere lenti e silenziosi. Se senti il loro ping hanno un contatto o un sospetto: allontanati e cambia quota.
+    Di notte non calano il sonar, ed è il momento per passare.
+  uso_en: >-
+    By day the Ka-27s listen silently, in groups, 3-10 minutes per dip and then a 4-6 km jump: against them being slow
+    and quiet is what counts. If you hear their ping they have a contact or a suspicion: move away and change depth.
+    At night they do not dip, and that is the time to slip through.
+  fonti: ['dossier 17 §3.2 [ART-Ka27]', 'dossier 17 §6.5 e §8.3', 'asw_aereo.toml (sonar_immersione.vgs3)',
+          'acustica.toml (sensori.vgs3)']
+
+sonar.vgs2:
+  it: >-
+    Il sonar a immersione «Oka» del Ka-25PL, l'elicottero antisommergibile sovietico precedente al Ka-27, ancora a
+    bordo di Kresta II, Kara e Moskva e in parte dei Kiev nel 1985-1991. Il cavo è di 125 metri e la portata arriva a
+    circa 6 km; la CIA stimava almeno 5,5 km in attivo e fino a 2,3 km in passivo, con una precisione di circa 100
+    iarde e 1 grado. Era giudicato inservibile di notte e col maltempo, e il suo ciclo era circa un terzo più lento di
+    quello del Ka-27.
+  en: >-
+    The «Oka» dipping sonar of the Ka-25PL, the Soviet anti-submarine helicopter that preceded the Ka-27, still aboard
+    Kresta IIs, Karas and Moskvas and some Kievs in 1985-1991. The cable is 125 metres and range reaches about 6 km;
+    the CIA estimated at least 5.5 km active and up to 2.3 km passive, with an accuracy of about 100 yards and 1
+    degree. It was judged unusable at night and in bad weather, and its cycle was about a third slower than the
+    Ka-27's.
+  uso_it: >-
+    Più lento e meno profondo del VGS-3, e fermo di notte e col mare grosso. Fra un dip e l'altro passa circa un quarto
+    d'ora: è il momento per allontanarti.
+  uso_en: >-
+    Slower and shallower than the VGS-3, and idle at night and in heavy seas. About a quarter of an hour passes between
+    dips: that is your moment to get away.
+  fonti: ['dossier 17 §3.1 [RW-Ka25] [CIA72] [ART-Ka27]', 'dossier 17 §6.5', 'asw_aereo.toml (sonar_immersione.vgs2)',
+          'acustica.toml (sensori.vgs2)']
+
+# --- ESM ------------------------------------------------------------------------------------------------------------
+
+esm.wlr8:
+  it: >-
+    L'AN/WLR-8(V)2 è il ricevitore ESM tattico dei 688, con le unità tenute in un pool e passate da un battello
+    all'altro. Copre da 50 MHz alla banda J, cioè fino a circa 18-20 GHz, con sette ricevitori supereterodina che
+    scandiscono le bande in sequenza o insieme; una modifica con misura istantanea della frequenza porta quasi al 100%
+    la probabilità d'intercetto in SHF. Le antenne stanno sul periscopio di ricerca Type 18 e su un albero dedicato.
+    Poiché il segnale radar gli arriva con una sola andata, sente un radar d'aereo fino all'orizzonte, 5-20 volte più
+    lontano di quanto quel radar veda un periscopio.
+  en: >-
+    The AN/WLR-8(V)2 is the 688's tactical ESM receiver, with units kept in a pool and moved from boat to boat. It
+    covers from 50 MHz to J band, that is up to about 18-20 GHz, with seven superheterodyne receivers scanning the bands
+    in sequence or together; a modification with instantaneous frequency measurement brings intercept probability close
+    to 100% in SHF. The antennas are on the Type 18 search periscope and on a dedicated mast. Because the radar signal
+    reaches it one way only, it hears an aircraft radar out to the horizon, 5-20 times farther than that radar can see
+    a periscope.
+  uso_it: >-
+    Funziona solo con un'antenna fuori dall'acqua, il Type 18 o l'albero ESM. Ogni passaggio del fascio dà banda e
+    rilevamento; dopo due-tre passaggi propone l'identità del radar, e un'ampiezza che sale dice che si avvicina. Se il
+    rischio passa ad «attenzione» tieni le alzate sotto i 10 secondi, alla contro-scoperta probabile abbassa tutto e
+    scendi; un radar d'aereo che compare a 40-90 miglia ti lascia pochi minuti.
+  uso_en: >-
+    It works only with an antenna out of the water, the Type 18 or the ESM mast. Each sweep of the beam gives band and
+    bearing; after two or three sweeps it proposes the radar's identity, and a rising amplitude says it is closing. If
+    the risk turns to «caution» keep exposures under 10 seconds; at probable counter-detection lower everything and go
+    deep; an aircraft radar appearing at 40-90 miles leaves you only a few minutes.
+  fonti: ['dossier 11 §4.1 [FASWLR8] [FAS688], §4.3, §4.4 e §6.3', 'dossier 01 §2.1 [FAS688]', 'dossier 02 §7.7',
+          'emettitori.toml (esm.wlr8)']
+
+esm.bukhta:
+  it: >-
+    «Bukhta» è il nome dell'apparato ESM dei sottomarini sovietici Alfa e Akula; le fonti non concordano nemmeno sul
+    tipo, che alcune danno come radar e altre come ESM. Banda e sensibilità non sono note: il gioco stima 2-18 GHz,
+    un avviso in banda I/J e un rilevamento grossolano, con probabilità d'intercetto ed errore peggiori di quelli del
+    WLR-8. Nel gioco lo montano tutti i sottomarini sovietici.
+  en: >-
+    «Bukhta» is the name of the ESM set of the Soviet Alfa and Akula submarines; sources do not even agree on its type,
+    some giving it as a radar and others as ESM. Band and sensitivity are unknown: the game estimates 2-18 GHz, a
+    warning in I/J band and a coarse bearing, with intercept probability and error worse than the WLR-8's. In the game
+    every Soviet submarine carries it.
+  uso_it: >-
+    Un battello sovietico a quota periscopica sente il tuo radar BPS-15 ben oltre la distanza a cui il radar vede lui:
+    accendilo poco e solo quando serve. Se giochi l'Alfa è il tuo ESM, e si usa come il WLR-8, ma con meno
+    precisione.
+  uso_en: >-
+    A Soviet boat at periscope depth hears your BPS-15 radar well beyond the range at which the radar sees it: switch
+    it on rarely and only when needed. If you play the Alfa it is your own ESM, used like the WLR-8 but less accurate.
+  fonti: ['dossier 11 §1.5 e §4.2 [DSRM705] [WPAKULA]', 'dossier 11 §4.3 e §6.3', 'emettitori.toml (esm.bukhta, esm_di)']

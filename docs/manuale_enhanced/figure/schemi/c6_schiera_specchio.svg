@@ -1,0 +1,22 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='440' viewBox='0 0 760 440' font-family='DejaVu Sans, Helvetica, Arial, sans-serif' role='img' aria-label='La schiera filata dietro il battello: il rilevamento vero e il suo specchio rispetto all&#39;asse, i coni sordi dell&#39;endfire'>
+<title>La schiera filata dietro il battello: il rilevamento vero e il suo specchio rispetto all&#39;asse, i coni sordi dell&#39;endfire</title>
+<rect width='760' height='440' fill='#fcfcfb'/>
+<text x='36.0' y='26.0' font-size='16' fill='#0b0b0b' text-anchor='start' font-weight='bold'>La schiera filata e lo specchio</text>
+<text x='36.0' y='46.0' font-size='12' fill='#52514e' text-anchor='start'>La schiera sente il rilevamento rispetto al suo asse: non sa da che lato. I coni dell&#39;endfire (25°) sono sordi.</text>
+<path d='M380.0,230.0 L370.0,235.0 L340.0,235.0 L340.0,225.0 L370.0,225.0 Z' fill='#52514e' stroke='#0b0b0b'/>
+<text x='360.0' y='254.0' font-size='11' fill='#52514e' text-anchor='middle'>il 688, rotta 090</text>
+<path d='M340.0,230.0 L300.0,230.0' fill='none' stroke='#898781' stroke-width='1.5' stroke-linejoin='round' stroke-dasharray='3 3'/>
+<path d='M300.0,230.0 L170.0,230.0' fill='none' stroke='#0b0b0b' stroke-width='4' stroke-linejoin='round'/>
+<text x='235.0' y='248.0' font-size='11' fill='#0b0b0b' text-anchor='middle'>la schiera TB-16</text>
+<path d='M235.0,230 L389.1,158.2 A170,170 0 0 1 389.1,301.8 Z' fill='#898781' fill-opacity='0.15' stroke='#898781'/>
+<path d='M235.0,230 L80.9,301.8 A170,170 0 0 1 80.9,158.2 Z' fill='#898781' fill-opacity='0.15' stroke='#898781'/>
+<text x='415.0' y='234.0' font-size='11' fill='#52514e' text-anchor='start'>endfire: sordo</text>
+<text x='115.0' y='148.0' font-size='11' fill='#52514e' text-anchor='middle'>endfire: sordo</text>
+<path d='M235.0,230.0 L331.4,115.1' fill='none' stroke='#2a78d6' stroke-width='2' stroke-linejoin='round'/>
+<circle cx='331.4' cy='115.1' r='5' fill='#2a78d6'/>
+<text x='339.4' y='109.1' font-size='11' fill='#0b0b0b' text-anchor='start'>il contatto vero, 40°</text>
+<path d='M235.0,230.0 L331.4,344.9' fill='none' stroke='#eb6834' stroke-width='2' stroke-linejoin='round' stroke-dasharray='6 4'/>
+<circle cx='331.4' cy='344.9' r='5' fill='#eb6834'/>
+<text x='339.4' y='360.9' font-size='11' fill='#0b0b0b' text-anchor='start'>lo specchio, 140°</text>
+<text x='36.0' y='425.0' font-size='12' fill='#52514e' text-anchor='start'>Accostando di 30-60° lo specchio salta dall&#39;altra parte dell&#39;asse, il vero resta: così si risolve.</text>
+</svg>

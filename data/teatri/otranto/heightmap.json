@@ -1,0 +1,53 @@
+{
+  "teatro": "otranto",
+  "nome": "Imboccatura dell'Adriatico (Canale d'Otranto)",
+  "creato": "2026-10-22",
+  "proiezione": {
+    "proj4": "+proj=aeqd +lat_0=41 +lon_0=18.75 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs",
+    "tipo": "azimutale equidistante",
+    "datum": "WGS84",
+    "centro_lat": 41.0,
+    "centro_lon": 18.75
+  },
+  "griglia": {
+    "cella_m": 200.0,
+    "larghezza": 1472,
+    "altezza": 1666,
+    "estensione_m": [
+      294400.0,
+      333200.0
+    ],
+    "origine": "riga 0 = nord, colonna 0 = ovest; centro griglia = centro della proiezione",
+    "coordinate_cella": "x = (col + 0.5) * cella - larghezza*cella/2 ; y = altezza*cella/2 - (riga + 0.5) * cella"
+  },
+  "codifica": {
+    "formato": "PNG grigio 16 bit",
+    "formula": "z_m = valore * 0.25 - 11000",
+    "scala": 0.25,
+    "offset": -11000.0,
+    "errore_max_m": 0.1255
+  },
+  "fonti": [
+    {
+      "id": 1,
+      "nome": "EMODnet Bathymetry DTM (release corrente, 1/16 di primo)",
+      "accesso": "https://ows.emodnet-bathymetry.eu/wcs coverage emodnet__mean",
+      "licenza": "CC-BY 4.0",
+      "attribuzione": "EMODnet Bathymetry Consortium (2024): EMODnet Digital Bathymetry (DTM)"
+    },
+    {
+      "id": 2,
+      "nome": "NOAA NCEI ETOPO 2022 15 secondi d'arco",
+      "accesso": "ERDDAP ETOPO_2022_v1_15s",
+      "licenza": "dati del governo USA, uso libero",
+      "attribuzione": "NOAA NCEI (2022), doi:10.25921/fd45-gt74"
+    }
+  ],
+  "statistiche": {
+    "z_min": -2184.4,
+    "z_max": 2631.1,
+    "frazione_terra": 0.3691,
+    "frazione_emodnet": 1.0,
+    "celle_riempite_bordo": 0
+  }
+}

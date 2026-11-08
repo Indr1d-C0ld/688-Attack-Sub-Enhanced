@@ -1,0 +1,73 @@
+# BGM/UGM-109 Tomahawk (Block II, TLAM/TASM, configurazione 1983-1991) in volo di crociera: booster
+# sganciato, ali, alette di coda e presa d'aria ventrale estese.
+# Coordinate del kit: x verso il muso (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dal muso (x = L/2 - d). Asse del corpo a z = 5 m (oggetto in volo).
+# Misure: lunghezza 5,56 m senza booster, diametro 0,518 m, apertura alare 2,67 m (dossier 05, Wikipedia,
+# designation-systems.net); posizione e forma di alette e presa misurate sulla foto Convair calibrata.
+nome: BGM/UGM-109 Tomahawk (crociera)
+uscita: extracted/navi/tomahawk
+moduli_parti: [missili_parti.py]
+
+vista: {volante: true, elevazioni: [0, 5, 15], centro: [0, 0, 5.0]}
+
+scafo:
+  generatore: corpo_missile
+  L: 5.56
+  B: 0.02
+  bordo: [[0, 0.02], [5.56, 0.02]]
+  z: 5.0
+  n: 18
+  # [distanza dal muso, raggio]: muso arrotondato, corpo cilindrico, coda rastremata sull'ugello
+  profilo: [[0, 0], [0.02, 0.12], [0.07, 0.19], [0.15, 0.235], [0.28, 0.255], [0.50, 0.259], [4.80, 0.259],
+            [5.05, 0.240], [5.30, 0.190], [5.50, 0.150], [5.56, 0.145]]
+
+parti:
+  # ali dritte a meta' corpo (leggera freccia), apertura 2,67 m
+  - {tipo: pinne, nome: ali, x_ba: {prua: 2.45}, corda: 0.36, x_ba_estremo: {prua: 2.58}, corda_estremo: 0.28,
+     r0: 0.20, semiapertura: 1.335, angoli: [90, 270], spessore: 0.12}   # spessore maggiorato: linea di 1 px di testa
+  # quattro alette di coda a croce '+', bordo d'uscita quasi perpendicolare all'asse
+  - {tipo: pinne, nome: alette_coda, x_ba: {prua: 5.10}, corda: 0.42, x_ba_estremo: {prua: 5.36}, corda_estremo: 0.17,
+     r0: 0.15, semiapertura: 0.63, angoli: [0, 90, 180, 270], spessore: 0.10}
+  # presa d'aria ventrale estesa (cucchiaio sotto la parte poppiera)
+  - {tipo: presa_ventrale, nome: presa_aria, x_bocca: {prua: 3.72}, x_coda: {prua: 4.85}, larghezza: 0.30,
+     sporgenza: 0.16, lunghezza_bocca: 0.55, z_attacco: 4.78}
+
+# Foto di riferimento (pubblico dominio; metadati in extracted/navi/tomahawk/foto/fonti.json).
+# punti: [[x, y, z] nel modello, [u, v] nella foto].
+foto:
+  - nome: convair_fianco
+    specchiabile: true
+    file: extracted/navi/tomahawk/foto/convair_fianco.jpg
+    nave: Tomahawk, veicolo di prova Convair n. 10 (anni '70-'80)
+    qualita: 1.0
+    maschera_file: extracted/navi/tomahawk/maschere/convair_fianco.png   # tools/navi/classi/missili_maschere.py
+    cancella: [[515, 600, 700, 635], [1325, 480, 1360, 515], [1025, 588, 1135, 602]]
+    fotocamera_iniziale: {posizione: [-17, 24, 0], bersaglio: [0, 0, 5], f: 6000}
+    limiti_fotocamera: {elevazione: [-45, 45], distanza: [5, 3000], rollio: [-60, 60]}
+    punti:
+      - [[{prua: 0}, 0, 5.0], [372, 632]]          # punta del muso
+      - [[{prua: 5.56}, 0, 5.0], [1374, 595]]      # centro dell'ugello
+      - [[{prua: 5.53}, 0, 5.63], [1385, 431]]     # aletta superiore, estremita' sul bordo d'uscita
+      - [[{prua: 5.36}, 0, 5.63], [1355, 431]]     # aletta superiore, estremita' sul bordo d'attacco
+      - [[{prua: 5.53}, 0, 4.37], [1370, 756]]     # aletta inferiore, estremita' sul bordo d'uscita
+      - [[{prua: 5.53}, -0.63, 5.0], [1495, 605]]  # aletta di dritta, estremita'
+      - [[{prua: 5.45}, 0.63, 5.0], [1222, 581]]   # aletta di sinistra, estremita' (verso la fotocamera)
+  - nome: convair_tre_quarti
+    specchiabile: true
+    file: extracted/navi/tomahawk/foto/convair_tre_quarti.jpg
+    nave: Tomahawk, veicolo di prova Convair n. 10, in virata
+    qualita: 1.0
+    maschera_file: extracted/navi/tomahawk/maschere/convair_tre_quarti.png
+    cancella: [[455, 670, 600, 700], [1045, 478, 1070, 502]]
+    fotocamera_iniziale: {posizione: [60, 70, -40], bersaglio: [0, 0, 5], f: 20000}
+    limiti_fotocamera: {elevazione: [-80, 80], distanza: [5, 3000], rollio: [-180, 180]}
+    punti:
+      - [[{prua: 0}, 0, 5.0], [333, 752]]           # punta del muso
+      - [[{prua: 5.56}, 0, 5.0], [1082, 537]]       # centro dell'ugello
+      - [[{prua: 5.53}, 0, 5.63], [1087, 459]]      # aletta dorsale, estremita' sul bordo d'uscita
+      - [[{prua: 5.36}, 0, 5.63], [1070, 464]]      # aletta dorsale, estremita' sul bordo d'attacco
+      - [[{prua: 5.53}, 0, 4.37], [1082, 615]]      # aletta ventrale, estremita' sul bordo d'uscita
+      - [[{prua: 5.53}, 0.63, 5.0], [1132, 572]]    # aletta di sinistra, estremita'
+      - [[{prua: 5.445}, -0.63, 5.0], [1006, 505]]  # aletta di dritta, estremita'
+      - [[{prua: 2.72}, 1.335, 5.0], [843, 712]]    # estremita' dell'ala sinistra (meta' corda)
+      - [[{prua: 2.72}, -1.335, 5.0], [570, 553]]   # estremita' dell'ala destra (meta' corda)

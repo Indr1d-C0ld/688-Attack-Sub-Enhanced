@@ -1,0 +1,372 @@
+# Effetti di bordo registrati (generato da tools/pipeline/effetti_veri.py: non modificare a mano). Fonte,
+# autore e licenza di ogni file; PCM 16 bit mono a 22.050 Hz in data/suoni/effetti.
+
+[effetti.allarme_immersione]
+file = "suoni/effetti/allarme_immersione.wav"
+campionamento_hz = 22050
+durata_s = 2.588
+voce = "allarme d'immersione elettronico di un sottomarino (stack AN/WIC)"
+pagina = "https://commons.wikimedia.org/wiki/File:Alarm_-_Diving_-_Cow_Fart.ogg"
+autore = "U.S. Navy"
+licenza = "PD-USNavy"
+note = "raccolta di policeinterceptor.com (Authentic Navy Alarm Sounds); il marchio PD-USNavy l'ha messo chi l'ha caricato su Commons: provenienza buona, non provata"
+
+[effetti.allarme_immersione_federal]
+file = "suoni/effetti/allarme_immersione_federal.wav"
+campionamento_hz = 22050
+durata_s = 4.48
+voce = "allarme d'immersione della USS Woodrow Wilson (Federal Sign and Signal)"
+pagina = "https://freesound.org/people/mkjunker/sounds/156672/"
+autore = "mkjunker (freesound.org)"
+licenza = "CC0"
+note = ""
+
+[effetti.tromba_immersione_h8]
+file = "suoni/effetti/tromba_immersione_h8.wav"
+campionamento_hz = 22050
+durata_s = 4.075
+voce = "tromba d'immersione meccanica H8 (il klaxon)"
+pagina = "https://commons.wikimedia.org/wiki/File:Alarm_-_Diving_-_H8.ogg"
+autore = "U.S. Navy"
+licenza = "PD-USNavy"
+note = "raccolta di policeinterceptor.com (Authentic Navy Alarm Sounds); il marchio PD-USNavy l'ha messo chi l'ha caricato su Commons: provenienza buona, non provata"
+
+[effetti.allarme_collisione]
+file = "suoni/effetti/allarme_collisione.wav"
+campionamento_hz = 22050
+durata_s = 13.099
+voce = "allarme di collisione di un sottomarino (SSN-625, stack AN/WIC)"
+pagina = "https://commons.wikimedia.org/wiki/File:Alarm_-_Collision.ogg"
+autore = "U.S. Navy"
+licenza = "PD-USNavy"
+note = "raccolta di policeinterceptor.com (Authentic Navy Alarm Sounds); il marchio PD-USNavy l'ha messo chi l'ha caricato su Commons: provenienza buona, non provata"
+
+[effetti.allarme_collisione_nave]
+file = "suoni/effetti/allarme_collisione_nave.wav"
+campionamento_hz = 22050
+durata_s = 15.196
+voce = "allarme di collisione di una nave (AN/SIA-114B, USS San Diego AFS-6)"
+pagina = "https://commons.wikimedia.org/wiki/File:Surface_ship_-_Collision_Alarm_-_USS_San_Diego_(AFS-6)_-_AN-SIA-114B.ogg"
+autore = "U.S. Navy"
+licenza = "PD-USNavy"
+note = "raccolta di policeinterceptor.com (Authentic Navy Alarm Sounds); il marchio PD-USNavy l'ha messo chi l'ha caricato su Commons: provenienza buona, non provata"
+
+[effetti.posti_combattimento]
+file = "suoni/effetti/posti_combattimento.wav"
+campionamento_hz = 22050
+durata_s = 14.419
+voce = "general quarters a bordo di una nave USN (gong e voce)"
+pagina = "https://commons.wikimedia.org/wiki/File:General_quarters.ogg"
+autore = "United States Navy (defenselink.mil)"
+licenza = "PD-USNavy"
+note = ""
+
+[effetti.posti_combattimento_gong]
+file = "suoni/effetti/posti_combattimento_gong.wav"
+campionamento_hz = 22050
+durata_s = 14.5
+voce = "il segnale del general alarm sul 1MC di una nave USN, senza voce"
+pagina = "https://freesound.org/people/lancelindley/sounds/423949/"
+autore = "lancelindley (freesound.org)"
+licenza = "CC BY 4.0"
+note = "solo il tratto 18-32,5 s: il segnale a 391 Hz senza voce (la voce del file dice «this is a drill»)"
+
+[effetti.allarme_propulsione]
+file = "suoni/effetti/allarme_propulsione.wav"
+campionamento_hz = 22050
+durata_s = 14.744
+voce = "allarme di avaria della propulsione (per lo SCRAM)"
+pagina = "https://commons.wikimedia.org/wiki/File:Alarm_-_Propul_Casualty.ogg"
+autore = "U.S. Navy"
+licenza = "PD-USNavy"
+note = "raccolta di policeinterceptor.com (Authentic Navy Alarm Sounds); il marchio PD-USNavy l'ha messo chi l'ha caricato su Commons: provenienza buona, non provata"
+
+[effetti.fischietto_chiamata]
+file = "suoni/effetti/fischietto_chiamata.wav"
+campionamento_hz = 22050
+durata_s = 5.006
+voce = "fischietto del nostromo, chiamata generale"
+pagina = "https://commons.wikimedia.org/wiki/File:Pipegeneralcall.ogg"
+autore = "Seloloving (Wikimedia Commons)"
+licenza = "CC0"
+note = ""
+
+[effetti.fischietto_a_bordo]
+file = "suoni/effetti/fischietto_a_bordo.wav"
+campionamento_hz = 22050
+durata_s = 7.104
+voce = "fischietto del nostromo, «piping aboard»"
+pagina = "https://commons.wikimedia.org/wiki/File:Pipeaboard.ogg"
+autore = "U.S. Department of Defense"
+licenza = "PD-USGov"
+note = ""
+
+[effetti.cw_rumoroso]
+file = "suoni/effetti/cw_rumoroso.wav"
+campionamento_hz = 22050
+durata_s = 23.838
+voce = "CW vero sui 40 m, ricevitore Kenwood R-2000"
+pagina = "https://freesound.org/people/xperseai/sounds/752469/"
+autore = "xperseai (freesound.org)"
+licenza = "CC0"
+note = ""
+
+[effetti.cw_fading]
+file = "suoni/effetti/cw_fading.wav"
+campionamento_hz = 22050
+durata_s = 60.0
+voce = "CW vero con fading, WebSDR"
+pagina = "https://freesound.org/people/klankbeeld/sounds/554164/"
+autore = "klankbeeld (freesound.org)"
+licenza = "CC BY 4.0"
+note = "il primo minuto"
+
+[effetti.fruscio_onde_corte]
+file = "suoni/effetti/fruscio_onde_corte.wav"
+campionamento_hz = 22050
+durata_s = 62.2
+voce = "fruscio e toni delle onde corte (Grundig Yacht Boy 207)"
+pagina = "https://freesound.org/people/nakkivene66/sounds/583364/"
+autore = "nakkivene66 (freesound.org)"
+licenza = "CC0"
+note = ""
+
+[effetti.telescrivente]
+file = "suoni/effetti/telescrivente.wav"
+campionamento_hz = 22050
+durata_s = 40.911
+voce = "telescrivente Lorenz Lo 133 che stampa"
+pagina = "https://commons.wikimedia.org/wiki/File:WWS_Teleprinterautomaticprinting.ogg"
+autore = "Work With Sounds / Konrad Gutkowski"
+licenza = "CC BY 4.0"
+note = ""
+
+[effetti.telescrivente_strappo]
+file = "suoni/effetti/telescrivente_strappo.wav"
+campionamento_hz = 22050
+durata_s = 20.621
+voce = "telescrivente con lo strappo della carta"
+pagina = "https://freesound.org/people/Halleck/sounds/19488/"
+autore = "Halleck (freesound.org)"
+licenza = "CC BY 4.0"
+note = ""
+
+[effetti.rtty]
+file = "suoni/effetti/rtty.wav"
+campionamento_hz = 22050
+durata_s = 15.007
+voce = "RTTY vero ricevuto in HF (DX394)"
+pagina = "https://freesound.org/people/benj500/sounds/369476/"
+autore = "benj500 (freesound.org)"
+licenza = "CC0"
+note = ""
+
+[effetti.radiofax]
+file = "suoni/effetti/radiofax.wav"
+campionamento_hz = 22050
+durata_s = 10.626
+voce = "radiofax del National Weather Service"
+pagina = "https://commons.wikimedia.org/wiki/File:Radiofax.ogg"
+autore = "National Weather Service, USA"
+licenza = "PD-USGov-NOAA"
+note = ""
+
+[effetti.uvb76]
+file = "suoni/effetti/uvb76.wav"
+campionamento_hz = 22050
+durata_s = 9.363
+voce = "«The Buzzer» UVB-76, la radio sovietica (dalla fine degli anni '70)"
+pagina = "https://commons.wikimedia.org/wiki/File:UVB-76.ogg"
+autore = "Mysid (Wikimedia Commons)"
+licenza = "PD-autore"
+note = ""
+
+[effetti.vlf_naturale]
+file = "suoni/effetti/vlf_naturale.wav"
+campionamento_hz = 22050
+durata_s = 60.0
+voce = "VLF naturale: sferics e chorus, senza elaborazione"
+pagina = "https://freesound.org/people/awg/sounds/395575/"
+autore = "awg (freesound.org)"
+licenza = "CC BY 4.0"
+note = "un minuto, da 1:00 a 2:00 (il file intero e' di 9:37)"
+
+[effetti.segnali_sonar]
+file = "suoni/effetti/segnali_sonar.wav"
+campionamento_hz = 22050
+durata_s = 80.377
+voce = "segnali sonar veri, dal CD «Schall im Meer» del FWG della Bundeswehr (2000)"
+pagina = "https://commons.wikimedia.org/wiki/File:Sonar_Signals.ogg"
+autore = "L. Ginzkey (Wikimedia Commons)"
+licenza = "CC BY-SA 2.5"
+note = "CC BY-SA: resta un file a se', non si fonde con altro"
+
+[effetti.periscopio_su]
+file = "suoni/effetti/periscopio_su.wav"
+campionamento_hz = 22050
+durata_s = 4.5
+voce = "idraulica del periscopio che sale, col colpo d'arresto"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.periscopio_giu]
+file = "suoni/effetti/periscopio_giu.wav"
+campionamento_hz = 22050
+durata_s = 4.5
+voce = "idraulica del periscopio che scende"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.antenna_su]
+file = "suoni/effetti/antenna_su.wav"
+campionamento_hz = 22050
+durata_s = 2.8
+voce = "un albero o l'antenna che sale"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.tubo_allaga]
+file = "suoni/effetti/tubo_allaga.wav"
+campionamento_hz = 22050
+durata_s = 6.0
+voce = "l'allagamento del tubo lanciasiluri"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.tubo_lancio]
+file = "suoni/effetti/tubo_lancio.wav"
+campionamento_hz = 22050
+durata_s = 3.0
+voce = "il lancio sentito a bordo: colpo dello stantuffo, soffio, ritorno dell'acqua"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.ricarica_tubo]
+file = "suoni/effetti/ricarica_tubo.wav"
+campionamento_hz = 22050
+durata_s = 8.0
+voce = "la ricarica di un tubo: carrello idraulico e colpi metallici"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.soffiata_emergenza]
+file = "suoni/effetti/soffiata_emergenza.wav"
+campionamento_hz = 22050
+durata_s = 9.0
+voce = "la soffiata d'emergenza delle casse zavorra"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.sfogo_casse]
+file = "suoni/effetti/sfogo_casse.wav"
+campionamento_hz = 22050
+durata_s = 4.5
+voce = "lo sfogo delle casse, aria e bolle"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.scafo_scricchiola]
+file = "suoni/effetti/scafo_scricchiola.wav"
+campionamento_hz = 22050
+durata_s = 4.0
+voce = "lo scafo che si assesta con la quota"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.portello_sbatte]
+file = "suoni/effetti/portello_sbatte.wav"
+campionamento_hz = 22050
+durata_s = 1.6
+voce = "un portello stagno che sbatte"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.campane_combattimento]
+file = "suoni/effetti/campane_combattimento.wav"
+campionamento_hz = 22050
+durata_s = 6.0
+voce = "l'allarme di combattimento sovietico: le campane «громкого боя»"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.revun]
+file = "suoni/effetti/revun.wav"
+campionamento_hz = 22050
+durata_s = 6.0
+voce = "il «ревун» sovietico, la sirena a vibratore"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.allarme_chimico]
+file = "suoni/effetti/allarme_chimico.wav"
+campionamento_hz = 22050
+durata_s = 6.0
+voce = "allarme chimico o antincendio USN (STIMA)"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.campanello_flash]
+file = "suoni/effetti/campanello_flash.wav"
+campionamento_hz = 22050
+durata_s = 2.6
+voce = "i cinque colpi di campanello della telescrivente per un FLASH"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.tono_sonar_mine]
+file = "suoni/effetti/tono_sonar_mine.wav"
+campionamento_hz = 22050
+durata_s = 1.8
+voce = "il tono di contatto del sonar da mine e da ghiaccio (STIMA)"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.clic_interfaccia]
+file = "suoni/effetti/clic_interfaccia.wav"
+campionamento_hz = 22050
+durata_s = 0.05
+voce = "il clic dei comandi dell'interfaccia"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"
+
+[effetti.bip_messaggio]
+file = "suoni/effetti/bip_messaggio.wav"
+campionamento_hz = 22050
+durata_s = 0.09
+voce = "il bip leggero di un messaggio nella barra"
+pagina = ""
+autore = "melchior-688 (sintesi, tools/pipeline/effetti_sintetici.py)"
+licenza = "CC0"
+note = "sintetizzato: nessuna registrazione vera con una licenza ammessa"

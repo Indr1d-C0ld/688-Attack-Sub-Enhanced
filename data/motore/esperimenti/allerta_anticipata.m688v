@@ -1,0 +1,16 @@
+# Esperimento pronto del vetrino di Dio (docs/28 §5, D2). La scena S5 del convoglio con la scorta gia' in allerta.
+[esperimento]
+titolo = "L'allerta anticipata"
+mostra = "La forza della scorta in allerta massima (A3) dal primo minuto, invece di salire coi contatti"
+ipotesi = "In allerta la scorta reagisce prima al primo contatto e il Victor lancia meno"
+codice = "8FZD3Q-4G0000-04K000-0000HZ-G002QH"
+semi = 10
+da = 1
+
+# al primo secondo: al tempo 0 le forze non ci sono ancora (le crea la simulazione dei danni al primo passo) e
+# l'allerta fallirebbe «senza le forze»
+[[intervento]]
+tempo = 1.0
+tipo = "allerta"
+unita = 8
+parametri = { livello = 3.0 }

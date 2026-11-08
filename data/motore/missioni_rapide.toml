@@ -1,0 +1,869 @@
+# Missioni rapide procedurali (roadmap punto 10): tabelle del generatore (engine/missioni/src/missione_rapida.cpp).
+#
+# Il generatore e' deterministico: lo stesso codice missione deve dare lo stesso file. Una modifica a queste tabelle
+# che cambia le missioni generate va con un nuovo numero di `versione` (e con la versione nel codice: i codici delle
+# versioni precedenti vengono rifiutati, le missioni gia' generate restano giocabili perche' sono file salvati).
+versione = 1
+
+# --- teatri -----------------------------------------------------------------------------------------------------------
+# pesi: probabilita' relative dei tipi quando il tipo e' «a caso», per parte (usa = 688, urss = Alfa); 0 = mai.
+# luoghi: nome italiano e inglese (en), lat e lon veri (anche fuori dalla carta per le basi degli aerei); il generatore li sposta nell'acqua utile
+# piu' vicina. tipo: base (navale), aeroporto, porto, stretto, mare; parte: nato, urss, neutrale.
+# forze: le classi per ruolo e per parte avversaria del giocatore (o amica, nella scorta), solo quelle di classi.toml.
+
+[teatri.faroe]
+nome = { it = "Fær Øer e Mar di Norvegia", en = "Faroes and Norwegian Sea" }
+comando = { usa = { it = "COMSUBLANT", en = "COMSUBLANT" }, urss = { it = "Comando della Flotta del Nord", en = "NORTHERN FLEET HQ" } }
+pesi.usa = { pattuglia = 4, caccia = 4, antinave = 3, scorta = 3, ricognizione = 0, minamento = 0, inserimento = 0 }
+pesi.urss = { pattuglia = 3, caccia = 3, antinave = 4, scorta = 1, ricognizione = 2, minamento = 2, inserimento = 1 }
+luoghi = [
+  { nome = "Tórshavn", en = "Tórshavn", lat = 62.00, lon = -6.70, tipo = "porto", parte = "nato" },
+  { nome = "Suðuroy", en = "Suðuroy", lat = 61.45, lon = -6.95, tipo = "porto", parte = "nato" },
+  { nome = "Banco delle Fær Øer", en = "Faroe Bank", lat = 60.95, lon = -8.30, tipo = "mare", parte = "neutrale" },
+  { nome = "Canale Fær Øer-Shetland", en = "Faroe-Shetland Channel", lat = 61.40, lon = -5.10, tipo = "stretto", parte = "neutrale" },
+  { nome = "Dorsale Islanda-Fær Øer", en = "Iceland-Faroe Ridge", lat = 62.80, lon = -9.40, tipo = "stretto", parte = "neutrale" },
+  { nome = "Keflavík", en = "Keflavík", lat = 63.98, lon = -22.60, tipo = "aeroporto", parte = "nato" },
+  { nome = "Olenegorsk", en = "Olenegorsk", lat = 68.15, lon = 33.46, tipo = "aeroporto", parte = "urss" },
+]
+forze.usa = { pregio = ["nimitz", "iowa"], scorte = ["spruance", "kidd", "perry"], logistica = ["sacramento"], mercantili = ["cargo", "mercantile", "petroliera"], sottomarini = ["los_angeles", "sturgeon", "trafalgar"], ssbn = [], elicotteri = ["sh60b"], aerei = ["p3c"] }
+forze.urss = { pregio = ["kirov", "slava", "kara"], scorte = ["krivak2", "kara"], logistica = ["petroliera"], mercantili = ["mercantile", "cargo"], sottomarini = ["victor3", "akula", "charlie2", "alfa"], ssbn = [], elicotteri = ["ka27"], aerei = ["tu142", "il38"] }
+
+[teatri.barents]
+nome = { it = "Mare di Barents, approcci a Kola", en = "Barents Sea, Kola approaches" }
+comando = { usa = { it = "COMSUBLANT", en = "COMSUBLANT" }, urss = { it = "Comando della Flotta del Nord", en = "NORTHERN FLEET HQ" } }
+pesi.usa = { pattuglia = 4, caccia = 5, antinave = 1, scorta = 0, ricognizione = 3, minamento = 1, inserimento = 1 }
+pesi.urss = { pattuglia = 4, caccia = 4, antinave = 0, scorta = 4, ricognizione = 0, minamento = 0, inserimento = 0 }
+luoghi = [
+  { nome = "imboccatura del Golfo di Kola", en = "Kola Inlet entrance", lat = 69.32, lon = 33.65, tipo = "base", parte = "urss" },
+  { nome = "Zapadnaja Lica", en = "Zapadnaya Litsa", lat = 69.48, lon = 32.50, tipo = "base", parte = "urss" },
+  { nome = "Teriberka", en = "Teriberka", lat = 69.25, lon = 35.20, tipo = "porto", parte = "urss" },
+  { nome = "bastione della Flotta del Nord", en = "Northern Fleet bastion", lat = 71.00, lon = 36.50, tipo = "mare", parte = "urss" },
+  { nome = "Fossa di Bjørnøya", en = "Bear Island Trough", lat = 71.20, lon = 32.00, tipo = "mare", parte = "neutrale" },
+  { nome = "Severomorsk-1", en = "Severomorsk-1", lat = 69.03, lon = 33.42, tipo = "aeroporto", parte = "urss" },
+  { nome = "Andøya", en = "Andøya", lat = 69.29, lon = 16.14, tipo = "aeroporto", parte = "nato" },
+]
+forze.usa = { pregio = ["nimitz"], scorte = ["spruance", "perry"], logistica = ["sacramento"], mercantili = [], sottomarini = ["los_angeles", "sturgeon", "trafalgar"], ssbn = [], elicotteri = ["sh60b"], aerei = ["p3c"] }
+forze.urss = { pregio = ["kirov", "slava"], scorte = ["krivak2", "kara"], logistica = ["petroliera"], mercantili = ["mercantile"], sottomarini = ["victor3", "akula", "alfa", "oscar", "charlie2"], ssbn = ["typhoon"], elicotteri = ["ka27", "ka25"], aerei = ["il38", "tu142", "be12"] }
+
+[teatri.celtica]
+nome = { it = "Margine della Piattaforma Celtica", en = "Celtic Shelf margin" }
+comando = { usa = { it = "COMSUBLANT", en = "COMSUBLANT" }, urss = { it = "Comando della Flotta del Nord", en = "NORTHERN FLEET HQ" } }
+pesi.usa = { pattuglia = 3, caccia = 4, antinave = 4, scorta = 4, ricognizione = 0, minamento = 0, inserimento = 0 }
+pesi.urss = { pattuglia = 3, caccia = 3, antinave = 5, scorta = 0, ricognizione = 0, minamento = 0, inserimento = 0 }
+luoghi = [
+  { nome = "Goban Spur", en = "Goban Spur", lat = 49.30, lon = -11.40, tipo = "mare", parte = "neutrale" },
+  { nome = "scarpata della Piattaforma Celtica", en = "Celtic Shelf slope", lat = 48.40, lon = -9.20, tipo = "mare", parte = "neutrale" },
+  { nome = "rotta dei convogli di Biscaglia", en = "Biscay convoy route", lat = 47.40, lon = -8.60, tipo = "stretto", parte = "nato" },
+  { nome = "piattaforma a ovest di Ushant", en = "shelf west of Ushant", lat = 48.70, lon = -8.30, tipo = "mare", parte = "nato" },
+  { nome = "St Mawgan", en = "St Mawgan", lat = 50.44, lon = -5.00, tipo = "aeroporto", parte = "nato" },
+  { nome = "Olenegorsk", en = "Olenegorsk", lat = 68.15, lon = 33.46, tipo = "aeroporto", parte = "urss" },
+]
+forze.usa = { pregio = ["nimitz", "iowa"], scorte = ["spruance", "kidd", "perry"], logistica = ["sacramento"], mercantili = ["cargo", "mercantile", "petroliera"], sottomarini = ["los_angeles", "trafalgar"], ssbn = [], elicotteri = ["sh60b", "sh3h"], aerei = ["p3c", "s3b"] }
+forze.urss = { pregio = ["kirov", "slava"], scorte = ["krivak2", "kara"], logistica = ["petroliera"], mercantili = ["mercantile", "cargo"], sottomarini = ["victor3", "akula", "charlie2", "oscar"], ssbn = [], elicotteri = ["ka27"], aerei = ["tu142"] }
+
+[teatri.gibilterra]
+nome = { it = "Stretto di Gibilterra", en = "Strait of Gibraltar" }
+comando = { usa = { it = "COMSUBGRU EIGHT", en = "COMSUBGRU EIGHT" }, urss = { it = "Comando della 5ª Eskadra", en = "5th ESKADRA HQ" } }
+pesi.usa = { pattuglia = 4, caccia = 3, antinave = 3, scorta = 3, ricognizione = 2, minamento = 0, inserimento = 0 }
+pesi.urss = { pattuglia = 2, caccia = 2, antinave = 4, scorta = 0, ricognizione = 3, minamento = 3, inserimento = 1 }
+luoghi = [
+  { nome = "Gibilterra", en = "Gibraltar", lat = 36.10, lon = -5.33, tipo = "base", parte = "nato" },
+  { nome = "Rota", en = "Rota", lat = 36.58, lon = -6.37, tipo = "base", parte = "nato" },
+  { nome = "Tarifa", en = "Tarifa", lat = 35.97, lon = -5.62, tipo = "stretto", parte = "neutrale" },
+  { nome = "Tangeri", en = "Tangier", lat = 35.82, lon = -5.78, tipo = "porto", parte = "neutrale" },
+  { nome = "Mare di Alboran", en = "Alboran Sea", lat = 36.00, lon = -4.00, tipo = "mare", parte = "neutrale" },
+  { nome = "Golfo di Cadice", en = "Gulf of Cádiz", lat = 36.30, lon = -7.20, tipo = "mare", parte = "neutrale" },
+  { nome = "ancoraggio della 5ª Eskadra presso Alboran", en = "5th Eskadra anchorage off Alboran", lat = 35.90, lon = -3.70, tipo = "base", parte = "urss" },
+  { nome = "Rota (base aerea)", en = "Rota (air station)", lat = 36.64, lon = -6.35, tipo = "aeroporto", parte = "nato" },
+  { nome = "Mitiga", en = "Mitiga", lat = 32.89, lon = 13.28, tipo = "aeroporto", parte = "urss" },
+]
+forze.usa = { pregio = ["nimitz", "iowa"], scorte = ["spruance", "kidd", "perry"], logistica = ["sacramento"], mercantili = ["cargo", "mercantile", "petroliera"], sottomarini = ["los_angeles", "sturgeon"], ssbn = [], elicotteri = ["sh60b", "sh3h"], aerei = ["p3c"] }
+forze.urss = { pregio = ["kirov", "slava", "kara"], scorte = ["krivak2", "kara", "koni"], logistica = ["petroliera"], mercantili = ["mercantile", "cargo"], sottomarini = ["victor3", "charlie2", "foxtrot", "kilo"], ssbn = [], elicotteri = ["ka27", "ka25"], aerei = ["il38"] }
+
+[teatri.otranto]
+nome = { it = "Canale d'Otranto", en = "Strait of Otranto" }
+comando = { usa = { it = "COMSUBGRU EIGHT", en = "COMSUBGRU EIGHT" }, urss = { it = "Comando della 5ª Eskadra", en = "5th ESKADRA HQ" } }
+pesi.usa = { pattuglia = 4, caccia = 3, antinave = 3, scorta = 3, ricognizione = 2, minamento = 0, inserimento = 0 }
+pesi.urss = { pattuglia = 2, caccia = 2, antinave = 4, scorta = 0, ricognizione = 3, minamento = 3, inserimento = 1 }
+luoghi = [
+  { nome = "Brindisi", en = "Brindisi", lat = 40.66, lon = 18.05, tipo = "base", parte = "nato" },
+  { nome = "Taranto", en = "Taranto", lat = 40.40, lon = 17.15, tipo = "base", parte = "nato" },
+  { nome = "Capo d'Otranto", en = "Cape Otranto", lat = 40.10, lon = 18.60, tipo = "stretto", parte = "neutrale" },
+  { nome = "Saseno", en = "Sazan", lat = 40.45, lon = 19.15, tipo = "porto", parte = "neutrale" },
+  { nome = "ancoraggio della 5ª Eskadra nello Ionio", en = "5th Eskadra anchorage in the Ionian", lat = 39.70, lon = 18.90, tipo = "base", parte = "urss" },
+  { nome = "Corfù", en = "Corfu", lat = 39.75, lon = 19.75, tipo = "porto", parte = "nato" },
+  { nome = "Sigonella", en = "Sigonella", lat = 37.40, lon = 14.92, tipo = "aeroporto", parte = "nato" },
+  { nome = "Mitiga", en = "Mitiga", lat = 32.89, lon = 13.28, tipo = "aeroporto", parte = "urss" },
+]
+forze.usa = { pregio = ["nimitz", "iowa"], scorte = ["spruance", "kidd", "perry"], logistica = ["sacramento"], mercantili = ["cargo", "mercantile", "petroliera"], sottomarini = ["los_angeles", "sturgeon"], ssbn = [], elicotteri = ["sh60b", "sh3h"], aerei = ["p3c"] }
+forze.urss = { pregio = ["kirov", "slava", "kara"], scorte = ["krivak2", "kara", "koni"], logistica = ["petroliera"], mercantili = ["mercantile", "cargo"], sottomarini = ["victor3", "charlie2", "foxtrot", "kilo"], ssbn = [], elicotteri = ["ka25"], aerei = ["il38"] }
+
+[teatri.kunashir]
+nome = { it = "Passo di Kunashir e Mare di Okhotsk", en = "Kunashir Strait and Sea of Okhotsk" }
+comando = { usa = { it = "COMSUBPAC", en = "COMSUBPAC" }, urss = { it = "Comando della Flotta del Pacifico", en = "PACIFIC FLEET HQ" } }
+pesi.usa = { pattuglia = 3, caccia = 4, antinave = 2, scorta = 1, ricognizione = 4, minamento = 1, inserimento = 2 }
+pesi.urss = { pattuglia = 3, caccia = 4, antinave = 2, scorta = 3, ricognizione = 1, minamento = 0, inserimento = 0 }
+luoghi = [
+  { nome = "Južno-Kuril'sk", en = "Yuzhno-Kurilsk", lat = 44.02, lon = 145.95, tipo = "base", parte = "urss" },
+  { nome = "Stretto di Ekaterina", en = "Yekaterina Strait", lat = 44.55, lon = 146.60, tipo = "stretto", parte = "urss" },
+  { nome = "Malokuril'skoe", en = "Malokurilskoye", lat = 43.80, lon = 146.80, tipo = "porto", parte = "urss" },
+  { nome = "Kuril'sk", en = "Kurilsk", lat = 45.20, lon = 147.75, tipo = "porto", parte = "urss" },
+  { nome = "Nemuro", en = "Nemuro", lat = 43.40, lon = 145.70, tipo = "porto", parte = "nato" },
+  { nome = "Mare di Okhotsk", en = "Sea of Okhotsk", lat = 45.30, lon = 145.80, tipo = "mare", parte = "urss" },
+  { nome = "Burevestnik", en = "Burevestnik", lat = 44.92, lon = 147.62, tipo = "aeroporto", parte = "urss" },
+  { nome = "Misawa", en = "Misawa", lat = 40.70, lon = 141.37, tipo = "aeroporto", parte = "nato" },
+]
+forze.usa = { pregio = ["nimitz"], scorte = ["spruance", "kidd", "perry"], logistica = ["sacramento"], mercantili = ["cargo"], sottomarini = ["los_angeles", "sturgeon"], ssbn = [], elicotteri = ["sh60b"], aerei = ["p3c"] }
+forze.urss = { pregio = ["kirov", "slava", "kara"], scorte = ["krivak2", "kara"], logistica = ["petroliera"], mercantili = ["mercantile", "cargo"], sottomarini = ["victor3", "akula", "charlie2", "oscar", "kilo"], ssbn = [], elicotteri = ["ka27", "ka25"], aerei = ["il38", "tu142", "be12"] }
+
+[teatri.baltico]
+nome = { it = "Mar Baltico sud-occidentale", en = "South-western Baltic Sea" }
+comando = { usa = { it = "COMSUBLANT", en = "COMSUBLANT" }, urss = { it = "Comando della Flotta del Baltico", en = "BALTIC FLEET HQ" } }
+pesi.usa = { pattuglia = 3, caccia = 2, antinave = 3, scorta = 0, ricognizione = 3, minamento = 4, inserimento = 3 }
+pesi.urss = { pattuglia = 2, caccia = 2, antinave = 3, scorta = 2, ricognizione = 3, minamento = 4, inserimento = 2 }
+luoghi = [
+  { nome = "Rostock-Warnemünde", en = "Rostock-Warnemünde", lat = 54.25, lon = 12.10, tipo = "base", parte = "urss" },
+  { nome = "Świnoujście", en = "Świnoujście", lat = 54.00, lon = 14.25, tipo = "base", parte = "urss" },
+  { nome = "Kołobrzeg", en = "Kołobrzeg", lat = 54.25, lon = 15.55, tipo = "porto", parte = "urss" },
+  { nome = "Kadetrinne", en = "Kadet Channel", lat = 54.45, lon = 12.15, tipo = "stretto", parte = "neutrale" },
+  { nome = "Fehmarnbelt", en = "Fehmarn Belt", lat = 54.55, lon = 11.20, tipo = "stretto", parte = "nato" },
+  { nome = "Øresund", en = "Øresund", lat = 55.55, lon = 12.80, tipo = "stretto", parte = "nato" },
+  { nome = "Rønne", en = "Rønne", lat = 55.10, lon = 14.65, tipo = "porto", parte = "nato" },
+  { nome = "Fossa di Bornholm", en = "Bornholm Deep", lat = 55.25, lon = 15.60, tipo = "mare", parte = "neutrale" },
+  { nome = "Nordholz", en = "Nordholz", lat = 53.77, lon = 8.66, tipo = "aeroporto", parte = "nato" },
+  { nome = "Čkalovsk", en = "Chkalovsk", lat = 54.77, lon = 20.40, tipo = "aeroporto", parte = "urss" },
+]
+forze.usa = { pregio = ["perry"], scorte = ["perry"], logistica = [], mercantili = ["cargo", "mercantile"], sottomarini = ["los_angeles"], ssbn = [], elicotteri = ["sh60b"], aerei = ["p3c"] }
+forze.urss = { pregio = ["krivak2"], scorte = ["koni", "nanuchka", "krivak2"], logistica = [], mercantili = ["mercantile", "cargo"], sottomarini = ["kilo", "foxtrot"], ssbn = [], elicotteri = ["ka27"], aerei = ["be12", "il38"] }
+
+# --- nomi per il briefing -------------------------------------------------------------------------------------------
+# singolare e plurale; il numero va davanti in cifre («2 fregate Krivak II»)
+[nomi_classi]
+nimitz = { it = ["portaerei Nimitz", "portaerei Nimitz"], en = ["Nimitz carrier", "Nimitz carriers"] }
+iowa = { it = ["corazzata Iowa", "corazzate Iowa"], en = ["Iowa battleship", "Iowa battleships"] }
+spruance = { it = ["cacciatorpediniere Spruance", "cacciatorpediniere Spruance"], en = ["Spruance destroyer", "Spruance destroyers"] }
+kidd = { it = ["cacciatorpediniere Kidd", "cacciatorpediniere Kidd"], en = ["Kidd destroyer", "Kidd destroyers"] }
+perry = { it = ["fregata Perry", "fregate Perry"], en = ["Perry frigate", "Perry frigates"] }
+sacramento = { it = ["rifornitrice Sacramento", "rifornitrici Sacramento"], en = ["Sacramento support ship", "Sacramento support ships"] }
+kirov = { it = ["incrociatore Kirov", "incrociatori Kirov"], en = ["Kirov cruiser", "Kirov cruisers"] }
+slava = { it = ["incrociatore Slava", "incrociatori Slava"], en = ["Slava cruiser", "Slava cruisers"] }
+kara = { it = ["incrociatore Kara", "incrociatori Kara"], en = ["Kara cruiser", "Kara cruisers"] }
+krivak2 = { it = ["fregata Krivak II", "fregate Krivak II"], en = ["Krivak II frigate", "Krivak II frigates"] }
+koni = { it = ["fregata Koni", "fregate Koni"], en = ["Koni frigate", "Koni frigates"] }
+nanuchka = { it = ["corvetta Nanuchka", "corvette Nanuchka"], en = ["Nanuchka corvette", "Nanuchka corvettes"] }
+petroliera = { it = ["petroliera", "petroliere"], en = ["tanker", "tankers"] }
+mercantile = { it = ["mercantile", "mercantili"], en = ["merchant ship", "merchant ships"] }
+cargo = { it = ["portacontainer", "portacontainer"], en = ["container ship", "container ships"] }
+los_angeles = { it = ["sottomarino Los Angeles", "sottomarini Los Angeles"], en = ["Los Angeles submarine", "Los Angeles submarines"] }
+sturgeon = { it = ["sottomarino Sturgeon", "sottomarini Sturgeon"], en = ["Sturgeon submarine", "Sturgeon submarines"] }
+trafalgar = { it = ["sottomarino Trafalgar", "sottomarini Trafalgar"], en = ["Trafalgar submarine", "Trafalgar submarines"] }
+victor3 = { it = ["sottomarino Victor III", "sottomarini Victor III"], en = ["Victor III submarine", "Victor III submarines"] }
+akula = { it = ["sottomarino Akula", "sottomarini Akula"], en = ["Akula submarine", "Akula submarines"] }
+alfa = { it = ["sottomarino Alfa", "sottomarini Alfa"], en = ["Alfa submarine", "Alfa submarines"] }
+oscar = { it = ["sottomarino Oscar II", "sottomarini Oscar II"], en = ["Oscar II submarine", "Oscar II submarines"] }
+charlie2 = { it = ["sottomarino Charlie II", "sottomarini Charlie II"], en = ["Charlie II submarine", "Charlie II submarines"] }
+kilo = { it = ["sottomarino Kilo", "sottomarini Kilo"], en = ["Kilo submarine", "Kilo submarines"] }
+foxtrot = { it = ["sottomarino Foxtrot", "sottomarini Foxtrot"], en = ["Foxtrot submarine", "Foxtrot submarines"] }
+typhoon = { it = ["sottomarino lanciamissili Typhoon", "sottomarini lanciamissili Typhoon"], en = ["Typhoon ballistic-missile submarine", "Typhoon ballistic-missile submarines"] }
+sh60b = { it = ["elicottero SH-60B", "elicotteri SH-60B"], en = ["SH-60B helicopter", "SH-60B helicopters"] }
+sh3h = { it = ["elicottero SH-3H", "elicotteri SH-3H"], en = ["SH-3H helicopter", "SH-3H helicopters"] }
+ka25 = { it = ["elicottero Ka-25", "elicotteri Ka-25"], en = ["Ka-25 helicopter", "Ka-25 helicopters"] }
+ka27 = { it = ["elicottero Ka-27", "elicotteri Ka-27"], en = ["Ka-27 helicopter", "Ka-27 helicopters"] }
+p3c = { it = ["pattugliatore P-3C", "pattugliatori P-3C"], en = ["P-3C patrol aircraft", "P-3C patrol aircraft"] }
+s3b = { it = ["aereo S-3B", "aerei S-3B"], en = ["S-3B aircraft", "S-3B aircraft"] }
+il38 = { it = ["pattugliatore Il-38", "pattugliatori Il-38"], en = ["Il-38 patrol aircraft", "Il-38 patrol aircraft"] }
+tu142 = { it = ["pattugliatore Tu-142", "pattugliatori Tu-142"], en = ["Tu-142 patrol aircraft", "Tu-142 patrol aircraft"] }
+be12 = { it = ["anfibio Be-12", "anfibi Be-12"], en = ["Be-12 amphibian", "Be-12 amphibians"] }
+
+# nomi in codice delle operazioni: inglesi per la US Navy, russi traslitterati per la VMF
+[nomi_operazioni]
+usa = ["GRAY WIND", "IRON GATE", "NORTHERN LIGHT", "SILENT HUNTER", "DEEP FREEZE", "BLUE NOSE", "HOLY STONE", "STEEL TRIDENT",
+       "COLD HARBOR", "DARK WATER", "ICE PICK", "SEA ANCHOR", "LONG WATCH", "BLACK TIDE", "FAR CRY", "GHOST RIDER",
+       "NIGHT OWL", "TOP HAT", "STONE WALL", "RED HERRING", "WINTER KEY", "FROST LINE", "GRAND SLAM", "LUCKY STRIKE"]
+urss = ["TUMAN", "BURJA", "VJUGA", "ŠTORM", "AJSBERG", "POLJARNIK", "SEVER", "TAJFUN", "ZARJA", "OKEAN", "BEREG", "ZASLON",
+        "KAMA", "VOLNA", "PRIBOJ", "MOROZ", "SOKOL", "BERKUT", "GROM", "MOLNIJA", "ZVEZDA", "RASSVET", "AMUR", "NEVA"]
+
+# --- briefing -------------------------------------------------------------------------------------------------------
+# Segnaposti: {operazione} {data} {ora} {teatro} {zona} {rotta} {distanza} {forze} {bersaglio} {durata} {intel}
+# {roe} {asw} {carriera} {uscita} {mine} {azione} {amici} {comando} {battello}. Una riga per voce della lista; il generatore toglie le righe vuote.
+[briefing.comune]
+battello.usa = { it = "USS LOS ANGELES (SSN 688)", en = "USS LOS ANGELES (SSN 688)" }
+battello.urss = { it = "K-463 (PROGETTO 705)", en = "K-463 (PROJECT 705)" }
+apertura = { it = ["ORDINI DI MISSIONE", "DA: {comando}", "A: {battello}", "OGG.: OPERAZIONE {operazione}", "{data}, ore {ora}. Teatro: {teatro}."], en = ["MISSION ORDERS", "FM: {comando}", "TO: {battello}", "SUBJ: OPERATION {operazione}", "{data}, {ora}. Theatre: {teatro}."] }
+intel = { it = ["Le informazioni sulle forze avversarie sono sicure.", "Le informazioni sulle forze avversarie sono buone ma non complete.", "Le informazioni sulle forze avversarie sono frammentarie: aspettatevi sorprese."], en = ["Intelligence on the opposing forces is reliable.", "Intelligence on the opposing forces is good but incomplete.", "Intelligence on the opposing forces is patchy: expect surprises."] }
+asw.usa = { it = "Velivoli antisommergibile avversari operano nella zona.", en = "Enemy anti-submarine aircraft are operating in the area." }
+asw.urss = { it = "Velivoli antisommergibile della NATO operano nella zona.", en = "NATO anti-submarine aircraft are operating in the area." }
+roe.pace = { it = "Regole d'ingaggio: tempo di pace. Armi trattenute: non aprire il fuoco.", en = "Rules of engagement: peacetime. Weapons hold: do not open fire." }
+roe.crisi = { it = "Regole d'ingaggio: crisi. Aprire il fuoco solo se attaccati.", en = "Rules of engagement: crisis. Fire only if fired upon." }
+roe.guerra = { it = "Regole d'ingaggio: ostilita' aperte. Armi libere contro le unita' ostili.", en = "Rules of engagement: open hostilities. Weapons free against hostile units." }
+carriera.si = { it = "La missione conta per il fascicolo del comandante.", en = "This mission counts towards the commander's record." }
+carriera.no = { it = "Missione fuori carriera: non conta per il fascicolo.", en = "Off-record mission: it does not count towards the commander's record." }
+durata = { it = "Tempo a disposizione: {durata}.", en = "Time available: {durata}." }
+
+[briefing.pattuglia]
+usa = { it = ["Assumere la pattuglia nel settore «{zona}», {distanza} miglia per {rotta}.", "Sono attesi passaggi di unita' sovietiche: {forze}.", "Scoprire e classificare i contatti senza farsi individuare."], en = ["Take up the patrol in the '{zona}' sector, {distanza} miles bearing {rotta}.", "Soviet units are expected to pass through: {forze}.", "Detect and classify the contacts without being detected."] }
+urss = { it = ["Assumere la pattuglia nel settore «{zona}», {distanza} miglia per {rotta}.", "Sono attese unita' della NATO: {forze}.", "Scoprire e classificare i contatti senza farsi individuare."], en = ["Take up the patrol in the '{zona}' sector, {distanza} miles bearing {rotta}.", "NATO units are expected: {forze}.", "Detect and classify the contacts without being detected."] }
+
+[briefing.caccia]
+usa = { it = ["Il SOSUS segnala un sottomarino sovietico presso «{zona}», {distanza} miglia per {rotta}: probabilmente un {bersaglio}.", "Trovarlo e {azione}.", "Forze nella zona: {forze}."], en = ["SOSUS reports a Soviet submarine near '{zona}', {distanza} miles bearing {rotta}: probably a {bersaglio}.", "Find it and {azione}.", "Forces in the area: {forze}."] }
+urss = { it = ["Una nostra unita' di superficie ha sentito un sottomarino della NATO presso «{zona}», {distanza} miglia per {rotta}: probabilmente un {bersaglio}.", "Trovarlo e {azione}.", "Forze nella zona: {forze}."], en = ["One of our surface units has heard a NATO submarine near '{zona}', {distanza} miles bearing {rotta}: probably a {bersaglio}.", "Find it and {azione}.", "Forces in the area: {forze}."] }
+azione.guerra = { it = "affondarlo", en = "sink it" }
+azione.crisi = { it = "pedinarlo senza farsi scoprire", en = "trail it without being detected" }
+
+[briefing.antinave]
+usa = { it = ["Un gruppo sovietico procede presso «{zona}», {distanza} miglia per {rotta}: {forze}.", "Obiettivo principale: {bersaglio}."], en = ["A Soviet group is under way near '{zona}', {distanza} miles bearing {rotta}: {forze}.", "Primary target: {bersaglio}."] }
+urss = { it = ["Un gruppo della NATO procede presso «{zona}», {distanza} miglia per {rotta}: {forze}.", "Obiettivo principale: {bersaglio}."], en = ["A NATO group is under way near '{zona}', {distanza} miles bearing {rotta}: {forze}.", "Primary target: {bersaglio}."] }
+
+[briefing.scorta]
+usa = { it = ["Un nostro gruppo attraversa la zona «{zona}»: {amici}.", "Sottomarini sovietici sono attesi sulla sua rotta: {forze}.", "Proteggere il gruppo fino all'uscita dalla zona."], en = ["One of our groups is crossing the '{zona}' area: {amici}.", "Soviet submarines are expected on its track: {forze}.", "Protect the group until it leaves the area."] }
+urss = { it = ["Un nostro gruppo attraversa la zona «{zona}»: {amici}.", "Sottomarini della NATO sono attesi sulla sua rotta: {forze}.", "Proteggere il gruppo fino all'uscita dalla zona."], en = ["One of our groups is crossing the '{zona}' area: {amici}.", "NATO submarines are expected on its track: {forze}.", "Protect the group until it leaves the area."] }
+
+[briefing.ricognizione]
+usa = { it = ["Avvicinarsi alla zona di «{zona}», {distanza} miglia per {rotta}, e osservare le unita' presenti: {forze}.", "Classificarle al periscopio o al sonar e uscire senza essere scoperti."], en = ["Close the '{zona}' area, {distanza} miles bearing {rotta}, and observe the units present: {forze}.", "Classify them by periscope or sonar and leave undetected."] }
+urss = { it = ["Avvicinarsi alla zona di «{zona}», {distanza} miglia per {rotta}, e osservare le unita' presenti: {forze}.", "Classificarle al periscopio o al sonar e uscire senza essere scoperti."], en = ["Close the '{zona}' area, {distanza} miles bearing {rotta}, and observe the units present: {forze}.", "Classify them by periscope or sonar and leave undetected."] }
+
+[briefing.minamento]
+usa = { it = ["Posare un campo minato presso «{zona}», {distanza} miglia per {rotta}: almeno {mine} mine nel cerchio indicato.", "Pattuglie nella zona: {forze}.", "Dopo la posa, lasciare la zona senza farsi scoprire."], en = ["Lay a minefield near '{zona}', {distanza} miles bearing {rotta}: at least {mine} mines inside the marked circle.", "Patrols in the area: {forze}.", "After laying, leave the area undetected."] }
+urss = { it = ["Posare un campo minato presso «{zona}», {distanza} miglia per {rotta}: almeno {mine} mine nel cerchio indicato.", "Pattuglie nella zona: {forze}.", "Dopo la posa, lasciare la zona senza farsi scoprire."], en = ["Lay a minefield near '{zona}', {distanza} miles bearing {rotta}: at least {mine} mines inside the marked circle.", "Patrols in the area: {forze}.", "After laying, leave the area undetected."] }
+
+[briefing.inserimento]
+usa = { it = ["A bordo una squadra SEAL. Portarla al punto di sbarco presso {zona}, {distanza} miglia per {rotta}, a quota periscopica.", "Poi raggiungere il punto d'esfiltrazione {uscita}.", "Pattuglie costiere: {forze}."], en = ["A SEAL team is embarked. Take it to the landing point near {zona}, {distanza} miles bearing {rotta}, at periscope depth.", "Then reach the exfiltration point {uscita}.", "Coastal patrols: {forze}."] }
+urss = { it = ["A bordo una squadra di incursori. Portarla al punto di sbarco presso {zona}, {distanza} miglia per {rotta}, a quota periscopica.", "Poi raggiungere il punto d'esfiltrazione {uscita}.", "Pattuglie costiere: {forze}."], en = ["A naval special forces team is embarked. Take it to the landing point near {zona}, {distanza} miles bearing {rotta}, at periscope depth.", "Then reach the exfiltration point {uscita}.", "Coastal patrols: {forze}."] }
+
+# testi degli obiettivi (registro M1) e dell'esito
+[obiettivi]
+raggiungere_zona = { it = "Raggiungere il settore «{zona}»", en = "Reach the '{zona}' sector" }
+scoprire = { it = "Scoprire e classificare le unita' indicate", en = "Detect and classify the designated units" }
+occulto = { it = "Non farsi scoprire", en = "Avoid detection" }
+affondare_sottomarino = { it = "Affondare il sottomarino", en = "Sink the submarine" }
+affondare_pregio = { it = "Affondare l'unita' di pregio ({bersaglio})", en = "Sink the high-value unit ({bersaglio})" }
+affondare_minimo = { it = "Affondare almeno {minimo} unita' del gruppo", en = "Sink at least {minimo} units of the group" }
+proteggere = { it = "Proteggere il gruppo", en = "Protect the group" }
+minacce = { it = "Neutralizzare i sottomarini ostili", en = "Neutralise the hostile submarines" }
+minare = { it = "Posare almeno {mine} mine nel cerchio", en = "Lay at least {mine} mines inside the circle" }
+sbarco = { it = "Raggiungere il punto di sbarco", en = "Reach the landing point" }
+esfiltrazione = { it = "Raggiungere il punto d'esfiltrazione", en = "Reach the exfiltration point" }
+vivo = { it = "Riportare a casa il battello", en = "Bring the boat home" }
+esito_fine = { it = "Missione conclusa: rientrare alla base per il rapporto.", en = "Mission over: return to base for debriefing." }
+esito_tempo = { it = "Tempo scaduto: la missione si chiude qui.", en = "Time is up: the mission ends here." }
+
+# --- modelli del livello classico per classe ------------------------------------------------------------------------
+# Dalle 22 missioni convertite (tools/rapide/estrai_modelli.lua; il modello piu' frequente per classe), piu' le classi
+# che l'originale non ha, per analogia (segnate). Il flag lo calcola il generatore dalla categoria e dalla parte.
+[modelli.giocatore_los_angeles]
+massima_kn = 37.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.257
+quota_m_s = 5.4864
+quota_max_m = 457.2
+integrita = 160
+rumore = 6
+sonar = 18
+[modelli.giocatore_alfa]
+massima_kn = 42.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.257
+quota_m_s = 6.858
+quota_max_m = 548.64
+integrita = 175
+rumore = 10
+sonar = 18
+[modelli.los_angeles]
+massima_kn = 37.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.257
+quota_m_s = 5.4864
+quota_max_m = 457.2
+integrita = 200
+rumore = 6
+sonar = 22
+difesa = 128
+schiera_trainata = true
+controllo_fondale = true
+[modelli.sturgeon]   # per analogia: un Los Angeles piu' lento e piu' rumoroso
+massima_kn = 26.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.2
+quota_m_s = 5.4864
+quota_max_m = 400.0
+integrita = 180
+rumore = 8
+sonar = 21
+difesa = 128
+schiera_trainata = true
+controllo_fondale = true
+[modelli.trafalgar]
+massima_kn = 37.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.257
+quota_m_s = 5.4864
+quota_max_m = 457.2
+integrita = 180
+rumore = 8
+sonar = 22
+schiera_trainata = true
+controllo_fondale = true
+[modelli.victor3]
+massima_kn = 42.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.257
+quota_m_s = 6.858
+quota_max_m = 548.64
+integrita = 160
+rumore = 10
+sonar = 18
+schiera_trainata = true
+controllo_fondale = true
+[modelli.akula]
+massima_kn = 42.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.257
+quota_m_s = 6.858
+quota_max_m = 548.64
+integrita = 255
+rumore = 10
+sonar = 18
+schiera_trainata = true
+controllo_fondale = true
+[modelli.alfa]
+massima_kn = 42.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.257
+quota_m_s = 6.858
+quota_max_m = 548.64
+integrita = 175
+rumore = 9
+sonar = 18
+difesa = 128
+schiera_trainata = true
+controllo_fondale = true
+[modelli.oscar]
+massima_kn = 42.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.257
+quota_m_s = 6.858
+quota_max_m = 548.64
+integrita = 175
+rumore = 14
+sonar = 18
+difesa = 128
+schiera_trainata = true
+controllo_fondale = true
+[modelli.charlie2]
+massima_kn = 42.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.257
+quota_m_s = 6.858
+quota_max_m = 548.64
+integrita = 175
+rumore = 10
+sonar = 18
+controllo_fondale = true
+[modelli.typhoon]
+massima_kn = 42.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.257
+quota_m_s = 6.858
+quota_max_m = 548.64
+integrita = 175
+rumore = 14
+sonar = 19
+schiera_trainata = true
+controllo_fondale = true
+[modelli.delta3]   # per analogia (non c'e' nell'originale): un Typhoon piu' piccolo e un po' piu' rumoroso (LIB-I16)
+massima_kn = 42.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.257
+quota_m_s = 6.858
+quota_max_m = 548.64
+integrita = 175
+rumore = 13
+sonar = 18
+schiera_trainata = true
+controllo_fondale = true
+[modelli.foxtrot]
+massima_kn = 20.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.129
+quota_m_s = 6.858
+quota_max_m = 182.88
+integrita = 110
+rumore = 5
+sonar = 23
+schiera_trainata = true
+[modelli.kilo]   # per analogia: un Foxtrot piu' silenzioso e piu' profondo
+massima_kn = 17.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.129
+quota_m_s = 6.858
+quota_max_m = 240.0
+integrita = 120
+rumore = 4
+sonar = 22
+schiera_trainata = true
+controllo_fondale = true
+[modelli.nimitz]
+massima_kn = 15.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 220
+rumore = 25
+sonar = 4
+difesa = 15
+schiera_trainata = true
+periodo_controlli = 3
+[modelli.iowa]
+massima_kn = 15.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 175
+rumore = 15
+sonar = 8
+difesa = 17
+periodo_controlli = 3
+[modelli.spruance]
+massima_kn = 25.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 100
+rumore = 12
+sonar = 11
+difesa = 0
+schiera_trainata = true
+periodo_controlli = 3
+[modelli.kidd]
+massima_kn = 33.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 150
+rumore = 15
+sonar = 8
+difesa = 16
+schiera_trainata = true
+periodo_controlli = 3
+[modelli.perry]
+massima_kn = 15.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 75
+rumore = 15
+sonar = 10
+difesa = 128
+schiera_trainata = true
+[modelli.sacramento]
+massima_kn = 15.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 548.64
+integrita = 75
+rumore = 22
+sonar = 5
+difesa = 5
+periodo_controlli = 3
+[modelli.kirov]
+massima_kn = 30.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 548.64
+integrita = 200
+rumore = 24
+sonar = 18
+difesa = 90
+schiera_trainata = true
+[modelli.slava]   # nell'originale e' un bersaglio passivo: qui come un Kara
+massima_kn = 30.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 548.64
+integrita = 175
+rumore = 24
+sonar = 16
+difesa = 90
+schiera_trainata = true
+[modelli.kara]
+massima_kn = 30.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 548.64
+integrita = 150
+rumore = 24
+sonar = 18
+difesa = 90
+schiera_trainata = true
+[modelli.krivak2]
+massima_kn = 30.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 548.64
+integrita = 100
+rumore = 24
+sonar = 18
+difesa = 90
+schiera_trainata = true
+[modelli.koni]
+massima_kn = 25.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 50
+rumore = 15
+sonar = 12
+difesa = 40
+[modelli.nanuchka]   # per analogia: una Koni senza sonar di scafo utile
+massima_kn = 32.0
+virata_gradi_s = 1.8
+accel_kn_s = 0.07
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 40
+rumore = 18
+sonar = 6
+difesa = 40
+[modelli.mercantile]
+massima_kn = 20.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 50
+rumore = 15
+sonar = 0
+periodo_controlli = 20
+[modelli.cargo]
+massima_kn = 15.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 548.64
+integrita = 75
+rumore = 15
+sonar = 0
+[modelli.petroliera]
+massima_kn = 15.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 182.88
+integrita = 75
+rumore = 20
+sonar = 0
+[modelli.agi]   # per analogia (non c'e' nell'originale): un mercantile piccolo e lento, con l'ascolto di bordo
+massima_kn = 11.5
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 30
+rumore = 12
+sonar = 8
+[modelli.peschereccio]   # per analogia (non c'e' nell'originale): un mercantile piccolo, rumoroso quando strascica
+massima_kn = 14.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 40
+rumore = 18
+sonar = 0
+periodo_controlli = 20
+[modelli.portarinfuse]   # per analogia: come il cargo (LIB-I16)
+massima_kn = 15.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 548.64
+integrita = 75
+rumore = 15
+sonar = 0
+[modelli.rompighiaccio]   # per analogia: un mercantile robusto e rumorosissimo (le eliche nel ghiaccio; LIB-I16)
+massima_kn = 17.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 548.64
+integrita = 100
+rumore = 20
+sonar = 0
+periodo_controlli = 20
+[modelli.bmrt]   # per analogia: un peschereccio grande (LIB-I16)
+massima_kn = 13.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 50
+rumore = 18
+sonar = 0
+periodo_controlli = 20
+[modelli.ohio]   # per analogia (non c'e' nell'originale): un Typhoon piu' silenzioso (LIB-S14)
+massima_kn = 42.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.257
+quota_m_s = 6.858
+quota_max_m = 548.64
+integrita = 175
+rumore = 8
+sonar = 20
+schiera_trainata = true
+controllo_fondale = true
+[modelli.knox]   # per analogia: come la Perry, col VDS (LIB-S14)
+massima_kn = 15.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 75
+rumore = 15
+sonar = 12
+difesa = 128
+schiera_trainata = true
+[modelli.sh2f]   # per analogia: come l'SH-60B, piu' vecchio (LIB-S14)
+massima_kn = 90.0
+virata_gradi_s = 9.0
+accel_kn_s = 0.771
+quota_m_s = 0.3353
+quota_max_m = 457.2
+integrita = 10
+rumore = 0
+sonar = 20
+difesa = 0
+periodo_controlli = 2
+[modelli.traghetto]   # per analogia: un mercantile veloce (LIB-S14)
+massima_kn = 22.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 50
+rumore = 16
+sonar = 0
+periodo_controlli = 20
+[modelli.udaloy]   # per analogia: come la Spruance, col VDS del Polinom (LIB-I17)
+massima_kn = 25.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 100
+rumore = 13
+sonar = 12
+difesa = 0
+periodo_controlli = 3
+[modelli.ugra]   # per analogia: una nave appoggio grande e lenta, come il cargo (LIB-S15)
+massima_kn = 17.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 90
+rumore = 15
+sonar = 4
+periodo_controlli = 20
+[modelli.hauk]   # per analogia: come la Nanuchka, piu' piccola (la motocannoniera norvegese, senza sonar antisom; LIB-S16)
+massima_kn = 32.0
+virata_gradi_s = 2.2
+accel_kn_s = 0.08
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 25
+rumore = 18
+sonar = 0
+difesa = 30
+[modelli.oslo]   # per analogia: una Koni col sonar di scafo e il Terne (la fregata norvegese; LIB-S16)
+massima_kn = 25.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 50
+rumore = 15
+sonar = 14
+difesa = 50
+[modelli.kitty_hawk]   # per analogia: come la nimitz, senza sonar (LIB-S17)
+massima_kn = 15.0
+virata_gradi_s = 1.44
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 210
+rumore = 26
+sonar = 0
+difesa = 15
+periodo_controlli = 3
+[modelli.stockholm]   # per analogia: una Koni piu' piccola e veloce, col VDS (LIB-S18)
+massima_kn = 32.0
+virata_gradi_s = 2.0
+accel_kn_s = 0.07
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 35
+rumore = 16
+sonar = 12
+difesa = 40
+[modelli.nacken]   # per analogia: come il type206, piu' grande (LIB-S18)
+massima_kn = 20.0
+virata_gradi_s = 3.6
+accel_kn_s = 0.129
+quota_m_s = 6.858
+quota_max_m = 300.0
+integrita = 110
+rumore = 3
+sonar = 20
+controllo_fondale = true
+[modelli.grisha3]   # per analogia: una Krivak piu' piccola, col VDS Shelon (LIB-S19)
+massima_kn = 32.0
+virata_gradi_s = 1.8
+accel_kn_s = 0.06
+quota_m_s = 0.6706
+quota_max_m = 548.64
+integrita = 60
+rumore = 22
+sonar = 16
+difesa = 60
+schiera_trainata = true
+[modelli.type206]   # per analogia: un Kilo piccolo e costiero, senza schiera (LIB-S18)
+massima_kn = 17.0
+virata_gradi_s = 4.0
+accel_kn_s = 0.129
+quota_m_s = 6.858
+quota_max_m = 200.0
+integrita = 90
+rumore = 3
+sonar = 18
+controllo_fondale = true
+[modelli.rimorchiatore]   # per analogia: un peschereccio robusto e lento (LIB-S18)
+massima_kn = 13.0
+virata_gradi_s = 2.0
+accel_kn_s = 0.051
+quota_m_s = 0.6706
+quota_max_m = 457.2
+integrita = 40
+rumore = 16
+sonar = 0
+periodo_controlli = 20
+[modelli.sh60b]
+massima_kn = 90.0
+virata_gradi_s = 9.0
+accel_kn_s = 0.771
+quota_m_s = 0.3353
+quota_max_m = 457.2
+integrita = 10
+rumore = 0
+sonar = 25
+difesa = 0
+periodo_controlli = 2
+[modelli.sh3h]   # per analogia: come l'SH-60B
+massima_kn = 90.0
+virata_gradi_s = 9.0
+accel_kn_s = 0.771
+quota_m_s = 0.3353
+quota_max_m = 457.2
+integrita = 10
+rumore = 0
+sonar = 24
+difesa = 0
+periodo_controlli = 2
+[modelli.hkp4]   # per analogia: come l'SH-3H, col sonar a immersione HS-73 (l'elicottero antisom svedese; LIB-S18)
+massima_kn = 90.0
+virata_gradi_s = 9.0
+accel_kn_s = 0.771
+quota_m_s = 0.3353
+quota_max_m = 457.2
+integrita = 10
+rumore = 0
+sonar = 23
+difesa = 0
+periodo_controlli = 2
+[modelli.ka25]   # per analogia: come l'SH-60B
+massima_kn = 90.0
+virata_gradi_s = 9.0
+accel_kn_s = 0.771
+quota_m_s = 0.3353
+quota_max_m = 457.2
+integrita = 10
+rumore = 0
+sonar = 23
+difesa = 0
+periodo_controlli = 2
+[modelli.ka27]   # per analogia: come l'SH-60B
+massima_kn = 90.0
+virata_gradi_s = 9.0
+accel_kn_s = 0.771
+quota_m_s = 0.3353
+quota_max_m = 457.2
+integrita = 10
+rumore = 0
+sonar = 25
+difesa = 0
+periodo_controlli = 2
+[modelli.p3c]   # per analogia: i valori delle missioni di taratura (tools/taratura/missioni)
+massima_kn = 330.0
+virata_gradi_s = 3.0
+accel_kn_s = 2.0
+quota_m_s = 1.0
+quota_max_m = 500.0
+integrita = 10
+rumore = 0
+sonar = 20
+difesa = 0
+periodo_controlli = 2
+[modelli.s3b]
+massima_kn = 330.0
+virata_gradi_s = 3.0
+accel_kn_s = 2.0
+quota_m_s = 1.0
+quota_max_m = 500.0
+integrita = 10
+rumore = 0
+sonar = 20
+difesa = 0
+periodo_controlli = 2
+[modelli.il38]
+massima_kn = 330.0
+virata_gradi_s = 3.0
+accel_kn_s = 2.0
+quota_m_s = 1.0
+quota_max_m = 500.0
+integrita = 10
+rumore = 0
+sonar = 20
+difesa = 0
+periodo_controlli = 2
+[modelli.tu142]
+massima_kn = 330.0
+virata_gradi_s = 3.0
+accel_kn_s = 2.0
+quota_m_s = 1.0
+quota_max_m = 500.0
+integrita = 10
+rumore = 0
+sonar = 20
+difesa = 0
+periodo_controlli = 2
+[modelli.be12]
+massima_kn = 250.0
+virata_gradi_s = 3.0
+accel_kn_s = 2.0
+quota_m_s = 1.0
+quota_max_m = 500.0
+integrita = 10
+rumore = 0
+sonar = 19
+difesa = 0
+periodo_controlli = 2

@@ -1,0 +1,402 @@
+# Testi dell'enciclopedia: lotto del 31/10/2026, le classi NATO e nordiche nuove (Hauk, Oslo, Stockholm, Kitty Hawk,
+# Knox, Ticonderoga, Type 22 Batch 1 e 2) e i loro elicotteri (Hkp 4, SH-2F). Stesso formato di navi.yaml e aerei.yaml:
+# it, en (storia e impiego), uso_it, uso_en (che cosa significa per il sottomarino del giocatore), fonti; armi_tipiche
+# solo per le navi militari. Scritti a mano, in parafrasi dai dossier di docs/ricerca, dai RAPPORTO dei modelli e dai
+# dati di data/motore; nessun testo copiato.
+
+nave.hauk:
+  it: >-
+    Le motocannoniere norvegesi della classe Hauk (1977-80) sono unità d'attacco costiere da 148 tonnellate a pieno
+    carico, lunghe 36,5 metri e con appena 1,6 metri d'immersione; due diesel veloci su due eliche le spingono a 34
+    nodi. L'armamento guarda tutto alla superficie: un Bofors 40/70 a prua, sei missili antinave Penguin e due tubi
+    da 533 mm per siluri filoguidati sul cassero, più un 20 mm secondo fonti deboli. Non hanno sonar antisommergibile,
+    e dei radar portano solo quello di navigazione e quello del tiro. Nella caccia agli intrusi dei fiordi la Norvegia
+    impiega motocannoniere e fregate insieme, con una scala d'escalation che parte dal segnale di emergere e arriva
+    alle bombe di profondità, mentre i siluri restano vietati.
+  en: >-
+    The Norwegian Hauk class fast attack craft (1977-80) are coastal strike boats of 148 tonnes at full load, 36.5
+    metres long and drawing only 1.6 metres; two fast diesels on two propellers drive them at 34 knots. Their
+    armament is aimed entirely at the surface: a Bofors 40/70 forward, six Penguin anti-ship missiles and two 533 mm
+    tubes for wire-guided torpedoes on the quarterdeck, plus a 20 mm according to weak sources. They have no
+    anti-submarine sonar, and their only radars are the navigation set and the fire control set. In hunting intruders
+    in the fjords Norway uses fast attack craft and frigates together, with an escalation ladder that runs from the
+    signal to surface up to depth charges, while torpedoes stay forbidden.
+  uso_it: >-
+    Non vi può sentire: nel gioco non ha alcun sonar, e il suo radar di navigazione coglie un periscopio a circa 3,7
+    km col mare 2 e a meno di un chilometro col mare 4. Il Bofors da 40 mm tira su un periscopio fino a 2 km. Si
+    sente poco, 130 dB a 5 nodi e 163 a 34, con le righe dei diesel a 30 e 150 Hz. Sotto la quota periscopica non ha
+    modo di colpirvi, e un solo siluro basta.
+  uso_en: >-
+    It cannot hear you: in the game it has no sonar at all, and its navigation radar picks up a periscope at about
+    3.7 km in sea state 2 and at under a kilometre in sea state 4. The 40 mm Bofors fires at a periscope out to 2 km.
+    It is quiet, 130 dB at 5 knots and 163 at 34, with diesel lines at 30 and 150 Hz. Below periscope depth it has no
+    way to hit you, and a single torpedo is enough.
+  fonti: ['extracted/navi/hauk/RAPPORTO.md', 'dossier 35 §1, §2 e §6', 'dossier 36 §1 e §3 [WP-Hauk]',
+    'dossier 23 E12 [CIMSEC]', 'dossier 07 §6.4', 'acustica.toml (firme.hauk, suite.hauk vuota)',
+    'emettitori.toml (suite.hauk, radar.nav_civ)', 'artiglieria.toml (classi.hauk, pezzi.bofors40)',
+    'libretto.toml [hauk]']
+  armi_tipiche:
+    voci: []
+    altre: ['6 Penguin', '2 tubi da 533 mm (siluri filoguidati)', '1 Bofors 40/70', '20 mm (fonti deboli)']
+    fonte: 'libretto.toml [hauk]; extracted/navi/hauk/RAPPORTO.md; dossier 36 §3'
+
+nave.oslo:
+  it: >-
+    Le cinque fregate norvegesi della classe Oslo (1966-67) nascono da un progetto derivato dalle Dealey americane:
+    circa 1.750 tonnellate a pieno carico per 96,6 metri, una turbina a vapore con due caldaie su un solo asse,
+    20.000 shp e 25 nodi. Contro i sottomarini hanno il sonar di scafo SQS-36 e il lanciarazzi Terne III davanti alla
+    plancia; contro aerei e navi il Sea Sparrow, i missili Penguin e i binati da 76 mm. Nel 1989 tre unità su cinque
+    portano ancora due binati, mentre la Trondheim e la Narvik ne hanno già sostituito uno con un Bofors 40/70 e la
+    Stavanger lo fa a giugno. Il nuovo sonar TSM 2633, di scafo e a profondità variabile, arriva fra il 1987 e il
+    1991, ma non si sa quali navi lo avessero già nel 1989. A fine aprile 1983, all'imboccatura del Hardangerfjord,
+    fregate norvegesi lanciarono razzi e bombe di profondità contro un sottomarino sospetto e trovarono solo una
+    chiazza d'olio.
+  en: >-
+    The five Norwegian Oslo class frigates (1966-67) come from a design derived from the American Dealeys: about
+    1,750 tonnes at full load on 96.6 metres, one steam turbine with two boilers on a single shaft, 20,000 shp and 25
+    knots. Against submarines they have the SQS-36 hull sonar and the Terne III rocket launcher ahead of the bridge;
+    against aircraft and ships, Sea Sparrow, Penguin missiles and twin 76 mm mounts. In 1989 three ships out of five
+    still carry two twin mounts, while Trondheim and Narvik have already replaced one with a Bofors 40/70 and
+    Stavanger does so in June. The new TSM 2633 sonar, hull and variable depth, arrives between 1987 and 1991, but it
+    is not known which ships already had it in 1989. In late April 1983, at the mouth of the Hardangerfjord, Norwegian
+    frigates fired rockets and depth charges at a suspected submarine and found only an oil slick.
+  uso_it: >-
+    Nel gioco ascolta con l'SQS-36, in passivo fra 3,5 e 10 kHz, e pinga a 13 kHz con 218 dB ogni 15 secondi: un
+    sonar ad alta frequenza, meno potente di quelli americani. Non ha siluri né elicottero; il Terne III tira solo fra
+    425 e 1.600 metri, con sei salve in tutto, e i binati da 76 mm colpiscono un periscopio fino a 4 km. Restate oltre
+    i 2 km e sotto la quota periscopica: fuori da quella fascia non ha modo di colpirvi. Si sente bene, 140 dB a 5
+    nodi con la turbina a 98 Hz e il riduttore a 196, e basta un siluro.
+  uso_en: >-
+    In the game it listens with the SQS-36, passive between 3.5 and 10 kHz, and pings at 13 kHz with 218 dB every 15
+    seconds: a high-frequency sonar, less powerful than the American ones. It has no torpedoes and no helicopter; the
+    Terne III fires only between 425 and 1,600 metres, with six salvoes in all, and the twin 76 mm mounts hit a
+    periscope out to 4 km. Stay beyond 2 km and below periscope depth: outside that band it has no way to hit you. It
+    is easy to hear, 140 dB at 5 knots with the turbine at 98 Hz and the reduction gear at 196, and one torpedo is
+    enough.
+  fonti: ['extracted/navi/oslo/RAPPORTO.md', 'dossier 35 §1 e §2', 'dossier 36 §1 e §3 [NP-Oslo]',
+    'dossier 23 E12 [CSM83N] [CIMSEC]', 'dossier 07 §6.4',
+    'acustica.toml (firme.oslo, suite.oslo, sensori.sqs36, sensori.sqs36_attivo, emissioni.sqs36_attivo)',
+    'emettitori.toml (suite.oslo)', 'artiglieria.toml (classi.oslo, pezzi.mk33)',
+    'engine/missioni/src/missione.cpp (fascia_lanciarazzi, salve_asw_classe)', 'libretto.toml [oslo]']
+  armi_tipiche:
+    voci: []
+    altre: ['Terne III', '2 × 2 da 76/50 Mk 33 (un binato e un Bofors 40/70 su Trondheim e Narvik)',
+      'Sea Sparrow (Mk 29)', '6 Penguin', '6 tubi da 324 mm']
+    fonte: 'libretto.toml [oslo]; extracted/navi/oslo/RAPPORTO.md; dossier 36 §1 e §3'
+
+nave.stockholm:
+  it: >-
+    Le due corvette svedesi della classe Stockholm, la Stockholm e la Malmö, entrano in servizio nel 1985: 372
+    tonnellate a pieno carico per 50 metri, con una propulsione CODAG su tre assi, due diesel MTU 16V396 e una turbina
+    a gas Allison 570, che le porta a 32 nodi. Ascoltano col sonar di scafo Simrad SA950, ad alta frequenza, e col
+    sonar a profondità variabile TSM 2643 «Salmon». Le armi sono un Bofors 57/70 Mk 2 a prua, un Bofors 40/70, otto
+    missili antinave RBS-15, quattro tubi da 400 mm e i lanciagranate antisommergibile Elma, quattro da nove tubi.
+    Pochi anni prima, nel 1982, la caccia di Hårsfjärden negli arcipelaghi di Stoccolma aveva fatto esplodere decine di
+    bombe di profondità e alcune mine contro un intruso mai confermato.
+  en: >-
+    The two Swedish Stockholm class corvettes, Stockholm and Malmö, enter service in 1985: 372 tonnes at full load on
+    50 metres, with CODAG propulsion on three shafts, two MTU 16V396 diesels and an Allison 570 gas turbine, which
+    drive them at 32 knots. They listen with the Simrad SA950 hull sonar, a high-frequency set, and with the TSM 2643
+    «Salmon» variable depth sonar. The weapons are a Bofors 57/70 Mk 2 forward, a Bofors 40/70, eight RBS-15 anti-ship
+    missiles, four 400 mm tubes and the Elma anti-submarine grenade launchers, four with nine tubes each. A few years
+    earlier, in 1982, the Hårsfjärden hunt in the Stockholm archipelago had set off dozens of depth charges and some
+    mines against an intruder that was never confirmed.
+  uso_it: >-
+    Nel gioco ha due orecchie: il sonar di scafo SA950, che ascolta fra 10 e 25 kHz e pinga a 24 kHz ogni 5 secondi, e
+    il Salmon calato a poppa, che ascolta fra 3,5 e 10 kHz e pinga a 12 kHz, fino a 120 metri di quota con 150 metri
+    di cavo. Come le altre navi col VDS cala il pesce 30 metri sotto lo strato e procede a scatti, ma con meno di 60
+    metri d'acqua non lo cala affatto, e oltre i 18 nodi deve recuperarlo. Le Elma restano un attacco a probabilità,
+    come gli RBU sovietici; il 57 mm tira su un periscopio fino a 4 km e il 40 fino a 2. Si sente poco (135 dB a 5
+    nodi, le righe dei diesel a 31,7 e 63,3 Hz), ma è piccola: basta un siluro.
+  uso_en: >-
+    In the game it has two ears: the SA950 hull sonar, which listens between 10 and 25 kHz and pings at 24 kHz every
+    5 seconds, and the Salmon lowered astern, which listens between 3.5 and 10 kHz and pings at 12 kHz, down to 120
+    metres on 150 metres of cable. Like the other ships with a VDS it lowers the fish 30 metres below the layer and
+    moves in sprints, but with less than 60 metres of water it does not lower it at all, and above 18 knots it must
+    recover it. The Elmas remain a probability attack, like the Soviet RBUs; the 57 mm fires at a periscope out to 4
+    km and the 40 out to 2. It is quiet (135 dB at 5 knots, diesel lines at 31.7 and 63.3 Hz), but it is small: one
+    torpedo is enough.
+  fonti: ['extracted/navi/stockholm/RAPPORTO.md', 'dossier 35 §1, §2 e §5', 'dossier 36 §1 e §3 [NP-Stockholm]',
+    'dossier 23 E15 [WP-SWE]', 'dossier 33 §2 e §3', 'dossier 07 §6.4',
+    'acustica.toml (firme.stockholm, suite.stockholm, sensori.sa950, sensori.salmon_vds, schiere.salmon_vds)',
+    'emettitori.toml (suite.stockholm)', 'artiglieria.toml (classi.stockholm, pezzi.bofors57, pezzi.bofors40)',
+    'engine/missioni/src/missione_vds.cpp (SOTTO_STRATO_M, FONDALE_FILARE_M)', 'libretto.toml [stockholm]']
+  armi_tipiche:
+    voci: []
+    altre: ['8 RBS-15', '4 tubi da 400 mm', 'lanciagranate Elma (4 × 9 tubi)', 'Bofors 57/70 Mk 2', 'Bofors 40/70']
+    fonte: 'libretto.toml [stockholm]; dossier 35 §5; dossier 36 §3'
+
+nave.kitty_hawk:
+  it: >-
+    La Kitty Hawk (CV-63) è la capoclasse di un gruppo di portaerei a propulsione convenzionale di cui fa parte anche
+    l'America (CV-66): 323,6 metri fuori tutto, circa 81.800 tonnellate a pieno carico, otto caldaie e turbine
+    Westinghouse su quattro assi per 280.000 shp; le fonti danno 32-33 nodi. Non ha sonar: l'America fu l'unica della
+    classe a riceverne uno, l'SQS-23, poi tolto nei primi anni '80. Imbarca circa 85 aerei e si difende con Sea
+    Sparrow e Phalanx; nel 1984 i suoi radar sono l'SPS-43A e l'SPS-48 per la scoperta aerea e l'SPS-10 di superficie.
+    Il 21 marzo 1984, nel Mar del Giappone durante l'esercitazione Team Spirit, il Victor I sovietico K-314, che la
+    pedinava da giorni e l'aveva persa col maltempo, risalì a quota periscopica sulla sua rotta: la portaerei lo urtò,
+    il battello perse un'elica e dovette essere rimorchiato, mentre la nave ne uscì con un'ammaccatura.
+  en: >-
+    Kitty Hawk (CV-63) is the lead ship of a group of conventionally powered carriers that also includes America
+    (CV-66): 323.6 metres overall, about 81,800 tonnes at full load, eight boilers and Westinghouse turbines on four
+    shafts for 280,000 shp; the sources give 32-33 knots. It has no sonar: America was the only ship of the class to
+    receive one, the SQS-23, removed in the early 1980s. It embarks about 85 aircraft and defends itself with Sea
+    Sparrow and Phalanx; in 1984 its radars are the SPS-43A and SPS-48 for air search and the SPS-10 for the surface.
+    On 21 March 1984, in the Sea of Japan during exercise Team Spirit, the Soviet Victor I K-314, which had been
+    trailing it for days and had lost it in bad weather, came up to periscope depth on its track: the carrier struck
+    it, the submarine lost a propeller and had to be towed, while the ship came away with a dent.
+  uso_it: >-
+    Non vi può sentire: nel gioco la sua suite sonar è vuota. In compenso è la nave militare più rumorosa della
+    libreria, 158 dB a 5 nodi e 183 a 32, con le righe della turbina a 80 Hz, del riduttore a 160 e delle pompe a 32:
+    la si sente da molto lontano. Il pericolo sono le scorte e gli elicotteri del gruppo, e la portaerei stessa quando
+    si risale alla cieca: pesca 11,4 metri, quindi non tornate a quota periscopica senza sapere dov'è la sua prora.
+    L'SPS-10 vede un periscopio a circa 7,4 km col mare 2; per affondarla le stime chiedono da 3 a 6 siluri pesanti.
+  uso_en: >-
+    It cannot hear you: in the game its sonar suite is empty. On the other hand it is the loudest warship in the
+    library, 158 dB at 5 knots and 183 at 32, with turbine lines at 80 Hz, reduction gear at 160 and pumps at 32: it
+    can be heard from very far away. The danger lies in the group's escorts and helicopters, and in the carrier
+    itself when you come up blind: it draws 11.4 metres, so do not return to periscope depth without knowing where
+    its bow is. The SPS-10 sees a periscope at about 7.4 km in sea state 2; estimates call for 3 to 6 heavyweight
+    torpedoes to sink it.
+  fonti: ['extracted/navi/kitty_hawk/RAPPORTO.md', 'dossier 35 §1, §2 e §6', 'dossier 23 E20 [WP-K314] [NI-K314]',
+    'dossier 16 §1.2 e §2.1', 'dossier 07 §6.4', 'acustica.toml (firme.kitty_hawk, suite.kitty_hawk vuota)',
+    'emettitori.toml (suite.kitty_hawk, radar.sps10_67)', 'tools/pipeline/emettitori.py (SUITE: la Kitty Hawk nel 1984)',
+    'libretto.toml [kitty_hawk]']
+  armi_tipiche:
+    voci: []
+    altre: ['Sea Sparrow', 'Phalanx', 'gruppo aereo di circa 85 velivoli']
+    fonte: 'libretto.toml [kitty_hawk]; extracted/navi/kitty_hawk/RAPPORTO.md (armi STIMA come la Nimitz)'
+
+nave.knox:
+  it: >-
+    Le fregate antisommergibile della classe Knox (FF-1052) sono le più numerose della US Navy: nel 1989 sono in
+    servizio tutte e 46. Su 134 metri e 4.065 tonnellate portano due caldaie da 1.200 psi e una sola turbina
+    Westinghouse da 35.000 shp su un asse, per 27 nodi; il vapore su un solo asse le rende più rumorose delle navi a
+    turbine a gas, e non è confermato che abbiano il Prairie-Masker. Il sonar di prua è il grande SQS-26CX, attivo a
+    circa 3,5 kHz; una parte della classe ha anche il sonar a profondità variabile SQS-35, calato da poppa fino a 180
+    metri, dal cui pesce si traina la schiera SQR-18A. Contro i sottomarini hanno l'ASROC e un elicottero SH-2F (LAMPS
+    I) nell'hangar di poppa; il resto è un solo pezzo da 127 mm Mk 42, gli Harpoon e il Phalanx.
+  en: >-
+    The Knox class anti-submarine frigates (FF-1052) are the most numerous in the US Navy: in 1989 all 46 are in
+    service. On 134 metres and 4,065 tonnes they carry two 1,200 psi boilers and a single 35,000 shp Westinghouse
+    turbine on one shaft, for 27 knots; steam on a single shaft makes them noisier than gas turbine ships, and it is
+    not confirmed that they have Prairie-Masker. The bow sonar is the large SQS-26CX, active at about 3.5 kHz; part of
+    the class also has the SQS-35 variable depth sonar, lowered from the stern down to 180 metres, whose fish tows the
+    SQR-18A array. Against submarines they have ASROC and one SH-2F helicopter (LAMPS I) in the after hangar; the rest
+    is a single 127 mm Mk 42 gun, Harpoons and Phalanx.
+  uso_it: >-
+    Nel gioco ha tre orecchie, e il VDS l'ha tutta la classe. Il sonar di prua usa i numeri dell'SQS-53: ascolta fra
+    1 e 3,5 kHz e pinga a 3,3 kHz ogni 25 secondi con 235 dB. A poppa cala il pesce dell'SQS-35 fino a 180 metri, 30
+    metri sotto lo strato, e dietro di lui la SQR-18A, che scende fino a 360 metri: lo strato non vi protegge. Col
+    cavo fuori non supera i 20 nodi e procede a scatti, 5 minuti in deriva a 6 nodi e 10 di corsa; durante la corsa
+    sente peggio. L'ASROC posa un Mk 46 fino a 9 km, l'SH-2F decolla fino a mare 4 e il 127 mm tira su un periscopio
+    fino a 5 km; per una nave di 4.000 tonnellate basta un siluro pesante.
+  uso_en: >-
+    In the game it has three ears, and the whole class has the VDS. The bow sonar uses the SQS-53 numbers: it
+    listens between 1 and 3.5 kHz and pings at 3.3 kHz every 25 seconds with 235 dB. Astern it lowers the SQS-35 fish
+    down to 180 metres, 30 metres below the layer, and behind it the SQR-18A, which goes down to 360 metres: the layer
+    does not protect you. With the cable out it does not exceed 20 knots and moves in sprints, 5 minutes drifting at
+    6 knots and 10 running; while running it hears worse. ASROC drops a Mk 46 out to 9 km, the SH-2F takes off up to
+    sea state 4 and the 127 mm fires at a periscope out to 5 km; for a 4,000-tonne ship one heavyweight torpedo is
+    enough.
+  fonti: ['dossier 32 §3', 'dossier 33 §1, §2, §3 e §4', 'dossier 04 §4 [USNI87] [FAS-SQR18]', 'dossier 02 §1.5 [SQS26]',
+    'dossier 17 §2.1b', 'dossier 36 §2 e §3 [NW-Mk42]', 'dossier 07 §6.4', 'extracted/navi/knox/RAPPORTO.md',
+    'acustica.toml (firme.knox, suite.knox, emissioni.sqs53_attivo, schiere.sqs35_vds, schiere.sqr18a)',
+    'emettitori.toml (suite.knox)', 'artiglieria.toml (classi.knox, pezzi.mk42)',
+    'engine/missioni/src/missione_antisom_navi.cpp (arma_antisom, elicottero_di) e missione_vds.cpp',
+    'libretto.toml [knox]']
+  armi_tipiche:
+    voci: [siluro.mk46, missile.harpoon]
+    altre: ['ASROC', '1 × 127 mm Mk 42', 'Phalanx', 'BPDMS (Sea Sparrow)', '1 SH-2F (LAMPS I)']
+    fonte: 'libretto.toml [knox]; extracted/navi/knox/RAPPORTO.md; dossier 17 §2.1b'
+
+nave.ticonderoga:
+  it: >-
+    Gli incrociatori lanciamissili della classe Ticonderoga (CG-47) portano il sistema Aegis, coi pannelli fissi del
+    radar SPY-1A, sullo scafo e sulle macchine della Spruance: 172,5 metri, circa 9.600-10.000 tonnellate, quattro
+    turbine a gas LM2500 su due assi per 80.000 shp e 30-32,5 nodi, col Prairie-Masker che soffia aria sullo scafo e
+    sulle pale. A fine 1989 ne sono in servizio quindici, dal CG-47 al CG-62, e fanno da scorta Aegis ai gruppi
+    portaerei. Il sonar cambia con le unità: le prime sette hanno l'SQS-53A, il CG-54 e il CG-55 vi aggiungono la
+    schiera SQR-19, e dal CG-56 c'è il sistema SQQ-89 con l'SQS-53B e la SQR-19. Le armi comprendono due cannoni da
+    127 mm, gli Harpoon, due Phalanx, i lanciatori Mk 26 o quelli verticali, e uno o due elicotteri SH-60B (LAMPS
+    III).
+  en: >-
+    The Ticonderoga class guided missile cruisers (CG-47) carry the Aegis system, with the fixed panels of the SPY-1A
+    radar, on the hull and machinery of the Spruance: 172.5 metres, about 9,600-10,000 tonnes, four LM2500 gas
+    turbines on two shafts for 80,000 shp and 30-32.5 knots, with Prairie-Masker blowing air over hull and blades. At
+    the end of 1989 fifteen are in service, from CG-47 to CG-62, and they act as the Aegis escort of carrier groups.
+    The sonar changes from ship to ship: the first seven have the SQS-53A, CG-54 and CG-55 add the SQR-19 array, and
+    from CG-56 there is the SQQ-89 system with the SQS-53B and SQR-19. The weapons include two 127 mm guns, Harpoons,
+    two Phalanx, Mk 26 launchers or vertical ones, and one or two SH-60B helicopters (LAMPS III).
+  uso_it: >-
+    Nel gioco è acusticamente una Spruance: 138 dB a 5 nodi e 168 a 32, con la turbina a 121 Hz e il riduttore a
+    181,5. Ascolta con l'SQS-53 e con la SQR-19, che nel gioco ha tutta la classe: 242 metri di schiera su 1.700 di
+    cavo, fino a 360 metri di quota, che la rende pericolosa da lontano e anche sotto lo strato. L'ASROC posa un Mk 46
+    fino a 9 km, l'SH-60B decolla sul vostro rilevamento fino a mare 5, e l'SPS-55 vede un periscopio a circa 9 km col
+    mare 2. All'ESM la si riconosce dall'SPY-1A, che ha una firma sua; per affondarla servono uno o due siluri
+    pesanti.
+  uso_en: >-
+    In the game it is acoustically a Spruance: 138 dB at 5 knots and 168 at 32, with the turbine at 121 Hz and the
+    reduction gear at 181.5. It listens with the SQS-53 and the SQR-19, which in the game the whole class has: 242
+    metres of array on 1,700 of cable, down to 360 metres, which makes it dangerous at long range and below the layer
+    too. ASROC drops a Mk 46 out to 9 km, the SH-60B takes off down your bearing up to sea state 5, and the SPS-55 sees
+    a periscope at about 9 km in sea state 2. On ESM it is recognised by the SPY-1A, which has a signature of its
+    own; one or two heavyweight torpedoes are needed to sink it.
+  fonti: ['dossier 32 §2', 'dossier 04 §4 [FI-SQR19] [USNI87]', 'dossier 33 §1 e §4', 'dossier 17 §2.1',
+    'dossier 02 §1.5 [SQS53]', 'dossier 07 §6.4', 'extracted/navi/ticonderoga/RAPPORTO.md',
+    'acustica.toml (firme.ticonderoga, suite.ticonderoga, sensori.sqr19, schiere.sqr19)',
+    'emettitori.toml (suite.ticonderoga, radar.sps55, radar.spy1a)',
+    'engine/missioni/src/missione_antisom_navi.cpp (arma_antisom, elicottero_di)', 'libretto.toml [ticonderoga]']
+  armi_tipiche:
+    voci: [siluro.mk46, missile.harpoon]
+    altre: ['ASROC (nel gioco)', '2 × 127 mm Mk 45', '2 Phalanx', 'Mk 26 o lancio verticale', '1-2 SH-60B (LAMPS III)']
+    fonte: 'libretto.toml [ticonderoga]; extracted/navi/ticonderoga/RAPPORTO.md; dossier 17 §2.1'
+
+nave.type22:
+  it: >-
+    Le Type 22 sono le fregate antisommergibile della Royal Navy; la Batch 1, quella della capoclasse Broadsword,
+    sposta 4.400 tonnellate su 131,2 metri e non ha cannone. Due turbine
+    a gas Olympus TM3B e due Tyne RM1C, in configurazione COGOG, muovono due eliche a passo variabile fino a 30 nodi.
+    Le armi sono quattro Exocet davanti alla plancia, due lanciatori sestupli di Sea Wolf, uno sul castello e uno sul
+    tetto dell'hangar, e due elicotteri Lynx; il sonar di scafo è il Type 2016, mentre il Type 2050 arriva solo dopo
+    il 1989. Per lo scafo le fonti citano l'Agouti, la versione britannica del Prairie. Nel 1989 sono in servizio
+    tutte e dieci le Type 22 delle due serie.
+  en: >-
+    The Type 22s are the Royal Navy's anti-submarine frigates; Batch 1, that of the lead ship Broadsword, displaces
+    4,400 tonnes on 131.2 metres and has no gun. Two Olympus TM3B and two Tyne
+    RM1C gas turbines, in a COGOG arrangement, drive two controllable pitch propellers to 30 knots. The weapons are
+    four Exocets ahead of the bridge, two sextuple Sea Wolf launchers, one on the forecastle and one on the hangar
+    roof, and two Lynx helicopters; the hull sonar is the Type 2016, while the Type 2050 arrives only after 1989. For
+    the hull the sources mention Agouti, the British version of Prairie. In 1989 all ten Type 22s of both batches are
+    in service.
+  uso_it: >-
+    Nel gioco il Type 2016 prende i numeri dell'SQS-53 della Spruance, in passivo e in attivo a 3,3 kHz, ma la Batch
+    1 non ha schiera: a poppa e quando corre ascolta male. Si fa riconoscere dalle righe forti dei generatori diesel a
+    22,5 e 45 Hz, oltre che dalla turbina a 108 Hz, con 140 dB a 5 nodi. Non ha cannone, e nel gioco non ha un siluro
+    modellato né un elicottero che decolli: il suo attacco resta quello generico del gioco originale, a probabilità e
+    entro poche miglia. Il Type 1006 vede un periscopio a circa 7,4 km col mare 2; un siluro pesante, al massimo due,
+    la affonda.
+  uso_en: >-
+    In the game the Type 2016 takes the numbers of the Spruance's SQS-53, passive and active at 3.3 kHz, but Batch 1
+    has no array: astern and when running it hears poorly. It gives itself away with strong diesel generator lines
+    at 22.5 and 45 Hz, besides the turbine at 108 Hz, with 140 dB at 5 knots. It has no gun, and in the game it has
+    no modelled torpedo and no helicopter that takes off: its attack remains the generic one of the original game, a
+    matter of probability and within a few miles. The Type 1006 sees a periscope at about 7.4 km in sea state 2; one
+    heavyweight torpedo, two at most, sinks it.
+  fonti: ['dossier 32 §4', 'extracted/navi/type22/RAPPORTO.md', 'acustica.toml (firme.type22, suite.type22)',
+    'emettitori.toml (suite.type22, radar.tipo1006)', 'libretto.toml [type22]',
+    'engine/missioni/src/missione_antisom_navi.cpp (nessuna arma né elicottero per la Type 22)',
+    'engine/missioni/src/missione.cpp (f_attacca, salve_asw_classe)', 'dossier 07 §6.4']
+  armi_tipiche:
+    voci: []
+    altre: ['4 Exocet', '2 Sea Wolf (lanciatori sestupli)', '2 Lynx']
+    fonte: 'libretto.toml [type22]; extracted/navi/type22/RAPPORTO.md'
+
+nave.type22b2:
+  it: >-
+    La Batch 2 della Type 22, quella della Boxer, allunga lo scafo a 146,5 metri e 4.800 tonnellate per far posto
+    alla schiera rimorchiata passiva Type 2031Z, lunga circa 500 metri e fatta per le frequenze molto basse. La prua
+    diventa più alta e slanciata, ma armi, sonar di scafo Type 2016 e radar restano quelli della Batch 1: Exocet, due
+    Sea Wolf, due Lynx e nessun cannone. Nel 1989 ne sono in servizio sei, Boxer, Beaver, Brave, London, Sheffield e
+    Coventry; la Brave ha le turbine Spey. La schiera non rese mai quanto si sperava, perché i generatori diesel non
+    poggiavano su un basamento elastico e il loro rumore passava in acqua: lo racconta un comandante della London.
+  en: >-
+    Batch 2 of the Type 22, that of Boxer, lengthens the hull to 146.5 metres and 4,800 tonnes to make room for the
+    Type 2031Z passive towed array, about 500 metres long and built for very low frequencies. The bow becomes higher
+    and more raked, but weapons, Type 2016 hull sonar and radars stay those of Batch 1: Exocets, two Sea Wolf, two
+    Lynx and no gun. In 1989 six are in service, Boxer, Beaver, Brave, London, Sheffield and Coventry; Brave has Spey
+    turbines. The array never performed as well as hoped, because the diesel generators were not on a resilient raft
+    and their noise reached the water: a commanding officer of London tells the story.
+  uso_it: >-
+    Rispetto alla Batch 1 cambia l'orecchio: nel gioco traina la Type 2031Z, 500 metri di schiera su 1.500 di cavo,
+    fino a 300 metri di quota, con l'analisi LOFAR fine a 0,05 Hz. Vi può sentire da lontano e sotto lo strato, ma
+    solo sotto i 20 nodi, oltre i quali deve recuperarla; e per via dei diesel il suo rumore proprio è più alto di
+    quello della SQR-19 americana. Gli stessi diesel tradiscono la nave anche a voi, con le righe a 22,5 e 45 Hz. Per
+    il resto è come la Batch 1: niente cannone, nessun siluro modellato, e uno o due siluri pesanti per affondarla.
+  uso_en: >-
+    Compared with Batch 1 the ear changes: in the game it tows the Type 2031Z, 500 metres of array on 1,500 of cable,
+    down to 300 metres, with fine LOFAR analysis at 0.05 Hz. It can hear you from afar and below the layer, but only
+    under 20 knots, above which it must recover it; and because of the diesels its self-noise is higher than that of
+    the American SQR-19. The same diesels give the ship away to you as well, with lines at 22.5 and 45 Hz. Otherwise
+    it is like Batch 1: no gun, no modelled torpedo, and one or two heavyweight torpedoes to sink it.
+  fonti: ['dossier 32 §4', 'dossier 04 §4 [Helis-2031] [Dowty-2031Z] [WP-T22]', 'dossier 33 §3',
+    'extracted/navi/type22b2/RAPPORTO.md',
+    'acustica.toml (firme.type22b2, suite.type22b2, sensori.type2031z, schiere.type2031z)',
+    'emettitori.toml (suite.type22b2)', 'libretto.toml [type22b2]',
+    'engine/missioni/src/missione_antisom_navi.cpp (nessuna arma né elicottero per la Type 22)', 'dossier 07 §6.4']
+  armi_tipiche:
+    voci: []
+    altre: ['4 Exocet', '2 Sea Wolf (lanciatori sestupli)', '2 Lynx']
+    fonte: 'libretto.toml [type22b2]; extracted/navi/type22b2/RAPPORTO.md'
+
+elicottero.hkp4:
+  it: >-
+    L'Hkp 4 è il Boeing Vertol 107-II dell'aviazione e della marina svedesi; la versione navale Hkp 4B vola dal 1973,
+    poi arriva la 4C. Ha due rotori in tandem di 15,24 metri a tre pale e tocca i 137 nodi; opera da basi a terra e da
+    cacciatorpediniere. Per la caccia ai sottomarini cala il sonar a immersione HS-73, a cui le fonti danno 5,6 km di
+    portata, e ha un radar di prua. Porta due siluri leggeri Tp 42 da 400 mm, nella versione Tp 422 per gli
+    elicotteri, che si sgancia senza paracadute, oppure fino a sei bombe di profondità Sjunkbomb 51, giudicate deboli.
+    Le fonti aperte su questo elicottero sono poche e di bassa confidenza.
+  en: >-
+    The Hkp 4 is the Boeing Vertol 107-II of the Swedish air force and navy; the naval Hkp 4B flies from 1973, then
+    comes the 4C. It has two tandem rotors of 15.24 metres with three blades and reaches 137 knots; it operates from
+    shore bases and from destroyers. For submarine hunting it lowers the HS-73 dipping sonar, credited by the sources
+    with a range of 5.6 km, and it has a nose radar. It carries two Tp 42 400 mm light torpedoes, in the Tp 422
+    helicopter version, which is dropped without a parachute, or up to six Sjunkbomb 51 depth charges, judged weak.
+    Open sources on this helicopter are few and of low confidence.
+  uso_it: >-
+    Nel gioco non posa boe: arriva sul punto, si ferma a 15 metri, cala l'HS-73 fino a 100 metri, ascolta da uno a due
+    minuti e pinga a 10 kHz tre o quattro volte, uno ogni 8 secondi. Se non vi trova salta di circa 5,6 km, o di 3,7
+    km quando vi insegue, e nel salto sentite i due rotori, una riga di circa 13 Hz. Il Tp 42 nel gioco aggancia a 500
+    metri in attivo e a 800 in passivo, scende fino a 200 metri e funziona anche con soli 15 metri d'acqua: l'acqua
+    bassa non vi salva. Vola anche di notte e fino a mare 5, e di solito ne arrivano due, uno coi siluri e uno con le
+    bombe.
+  uso_en: >-
+    In the game it lays no sonobuoys: it reaches the spot, hovers at 15 metres, lowers the HS-73 to 100 metres,
+    listens for one to two minutes and pings at 10 kHz three or four times, one every 8 seconds. If it does not find
+    you it jumps about 5.6 km, or 3.7 km when tracking you, and during the jump you hear the two rotors, a line at
+    about 13 Hz. In the game the Tp 42 acquires at 500 metres active and 800 passive, dives to 200 metres and works
+    even in only 15 metres of water: shallow water does not save you. It also flies at night and up to sea state 5,
+    and usually two come, one with torpedoes and one with depth charges.
+  fonti: ['dossier 35 §1, §2, §3 e §5 [AEROSEUM-HKP4] [AVROSYS-HKP4]', 'extracted/navi/hkp4/RAPPORTO.md',
+    'data/motore/asw_aereo.toml [mezzi.hkp4] [sonar_immersione.hs73]',
+    'acustica.toml (sensori.hs73, emissioni.hs73, transitori.elicottero_hkp4)', 'siluri.toml [siluri.tp42]']
+
+elicottero.sh2f:
+  it: >-
+    Il Kaman SH-2F Seasprite è l'elicottero del LAMPS Mk I, un «sensore remoto» delle scorte: vola dalle fregate
+    Knox e, prima dell'arrivo del LAMPS III, anche da Kidd, Spruance e dalle prime Perry. Non ha sonar a immersione:
+    porta circa 15 boe, passive SSQ-41 e attive SSQ-47 di sola distanza, il radar di superficie LN-66HP e il
+    magnetometro rimorchiato ASQ-81, mentre i due piloni esterni reggono due Mk 46, o un Mk 46 e un serbatoio.
+    L'elicottero non elabora il suono delle boe: lo passa alla nave col data link AN/ASK-22, e la nave gli rimanda i
+    risultati. Le fonti gli danno circa 120 nodi di crociera, 140 di massima e 3,5-4,5 ore d'autonomia. È un mezzo
+    «reattivo»: aspetta che la nave abbia già un contatto, stende un campo di boe sul rilevamento e precisa la
+    posizione col MAD prima di lanciare il Mk 46.
+  en: >-
+    The Kaman SH-2F Seasprite is the LAMPS Mk I helicopter, a «remote sensor» for the escorts: it flies from Knox
+    frigates and, before LAMPS III arrived, also from Kidds, Spruances and the early Perrys. It has no dipping sonar:
+    it carries about 15 sonobuoys, passive SSQ-41s and range-only active SSQ-47s, the LN-66HP surface radar and the
+    towed ASQ-81 magnetometer, while its two external pylons hold two Mk 46s, or one Mk 46 and a fuel tank. The
+    helicopter does not process the buoy audio: it passes it to the ship over the AN/ASK-22 data link, and the ship
+    sends the results back. The sources give it about 120 knots cruising, 140 maximum and 3.5-4.5 hours of endurance.
+    It is a «reactive» asset: it waits for the ship to have a contact, lays a buoy field down the bearing and pins the
+    position with MAD before dropping the Mk 46.
+  uso_it: >-
+    Nel gioco non ha un radar che il vostro ESM possa sentire, quindi arriva in silenzio, e decolla dalla Knox solo
+    fino a mare 4. Porta 9 boe SSQ-41B, 5 SSQ-47B e un batitermografo: con le sole omnidirezionali sa soltanto che
+    siete vicini, e l'errore scende sotto le 2 miglia quando due boe vi sentono insieme. Allora stende un quadrato di
+    SSQ-47B, coi vertici a 970 metri dal centro, che pingano a 16 kHz ogni 10 secondi: con tre distanze vi localizza
+    e passa basso col MAD, a circa 45 metri, prima del Mk 46. Quando sentite quei ping uscite dal quadrato, perché la
+    boa vi misura solo entro 1,5 km; e ricordate che resta in zona circa 2 ore e mezza, meno un'ora ogni 50 miglia di
+    distanza dalla nave.
+  uso_en: >-
+    In the game it has no radar your ESM can hear, so it arrives silently, and it takes off from the Knox only up to
+    sea state 4. It carries 9 SSQ-41B buoys, 5 SSQ-47Bs and a bathythermograph: with the omnidirectional buoys alone it
+    only knows you are near, and the error drops below 2 miles when two buoys hear you together. Then it lays a
+    square of SSQ-47Bs, with corners 970 metres from the centre, pinging at 16 kHz every 10 seconds: with three ranges
+    it fixes you and passes low with the MAD, at about 45 metres, before the Mk 46. When you hear those pings, get
+    out of the square, because the buoy ranges you only within 1.5 km; and remember that it stays on station about two
+    and a half hours, minus one hour for every 50 miles from the ship.
+  fonti: ['dossier 37 §1 e §2 [HOLLER]', 'dossier 17 §2.1b [FASSH2] [GSSH2] [ACSH2F]', 'extracted/navi/sh2f/RAPPORTO.md',
+    'data/motore/asw_aereo.toml [mezzi.sh2f]', 'acustica.toml (emissioni.ssq47b)',
+    'engine/missioni/src/missione_antisom_navi.cpp (elicottero_di)']

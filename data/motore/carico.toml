@@ -1,0 +1,1151 @@
+# Armi, locali siluri e carichi standard della Sala siluri (generato da tools/pipeline/carico.py: non modificare a mano).
+
+[armi.mk48]
+nome = "Mk 48 Mod 4"
+nazione = "usa"
+tipo = "siluro"
+famiglia = "mk48"
+siluro = "mk48"
+guida = "filoguidato, poi testa attiva o passiva"
+velocita_kn = 55.0
+portata_km = 38.0
+testata_kg = 293.0
+peso_kg = 1558.0
+lunghezza_m = 5.8
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1980
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:siluro_533"
+fonte = "dossier 14 §2.1"
+confidenza = "alta"
+nota = ""
+efficacia = { sottomarino = 3, superficie = 3, terra = 0, mine = 0 }
+efficacia_nota = "antisom e antinave, filoguidato"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.mk48_adcap]
+nome = "Mk 48 ADCAP"
+nazione = "usa"
+tipo = "siluro"
+famiglia = "mk48"
+siluro = "mk48_adcap"
+guida = "filoguidato, testa attiva o passiva a scansione elettronica"
+velocita_kn = 60.0
+portata_km = 32.0
+testata_kg = 295.0
+peso_kg = 1676.0
+lunghezza_m = 5.8
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1988
+ritirata_nel = 0
+massimo_primo_anno = 6
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:siluro_533"
+fonte = "dossier 14 §2.1 e §5.1"
+confidenza = "media"
+nota = "in servizio dal 1988; al piu' 6 per carico nei primi due anni (PROPOSTA)"
+efficacia = { sottomarino = 3, superficie = 3, terra = 0, mine = 0 }
+efficacia_nota = "come il Mod 4, testa migliore e piu' veloce"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.harpoon]
+nome = "UGM-84 Harpoon"
+nazione = "usa"
+tipo = "missile"
+famiglia = "harpoon"
+siluro = ""
+guida = "inerziale, radar attivo in banda J; capsula dal tubo"
+velocita_kn = 560.0
+portata_km = 140.0
+testata_kg = 221.0
+peso_kg = 1300.0
+lunghezza_m = 4.63
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1981
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "sprite:navi/harpoon.spr"
+fonte = "dossier 14 §2.2"
+confidenza = "media"
+nota = "Mach 0,85; peso di capsula e missile STIMA (690 kg il missile)"
+efficacia = { sottomarino = 0, superficie = 3, terra = 0, mine = 0 }
+efficacia_nota = "solo navi (radar attivo); Block 1C senza attacco a terra"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.tasm]
+nome = "UGM-109B Tomahawk TASM"
+nazione = "usa"
+tipo = "missile"
+famiglia = "tomahawk"
+siluro = ""
+guida = "inerziale, radar attivo, volo radente"
+velocita_kn = 475.0
+portata_km = 460.0
+testata_kg = 450.0
+peso_kg = 1590.0
+lunghezza_m = 6.25
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = true
+in_servizio_dal = 1983
+ritirata_nel = 1994
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "sprite:navi/tomahawk.spr"
+fonte = "dossier 14 §2.3"
+confidenza = "alta"
+nota = "antinave: il «tomahawk» delle missioni originali; ritirato all'inizio degli anni '90"
+efficacia = { sottomarino = 0, superficie = 3, terra = 0, mine = 0 }
+efficacia_nota = "antinave a lunga distanza"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.tlam_c]
+nome = "UGM-109C Tomahawk TLAM-C"
+nazione = "usa"
+tipo = "missile"
+famiglia = "attacco_terra"
+siluro = ""
+guida = "inerziale, TERCOM e DSMAC"
+velocita_kn = 475.0
+portata_km = 1250.0
+testata_kg = 450.0
+peso_kg = 1490.0
+lunghezza_m = 6.25
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = true
+in_servizio_dal = 1986
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = false
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "sprite:navi/tomahawk.spr"
+fonte = "dossier 14 §2.3"
+confidenza = "alta"
+nota = "attacco a terra: solo se la missione lo dichiara"
+efficacia = { sottomarino = 0, superficie = 0, terra = 3, mine = 0 }
+efficacia_nota = "solo bersagli a terra"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.sea_lance]
+nome = "UUM-125 Sea Lance"
+nazione = "usa"
+tipo = "missile"
+famiglia = "sea_lance"
+siluro = ""
+guida = "inerziale; capsula, poi siluro leggero Mk 50 a paracadute"
+velocita_kn = 860.0
+portata_km = 185.0
+testata_kg = 45.0
+peso_kg = 1400.0
+lunghezza_m = 6.25
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 0
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = true
+moderno = false
+nucleare = false
+sagoma = "icona:razzo"
+fonte = "dossier 14 §2.5"
+confidenza = "bassa"
+nota = "cancellato nel 1990: arma «what-if» dell'originale; prestazioni e peso STIMA"
+efficacia = { sottomarino = 3, superficie = 0, terra = 0, mine = 0 }
+efficacia_nota = "antisom a distanza (siluro leggero Mk 50)"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.mk67]
+nome = "Mk 67 SLMM"
+nazione = "usa"
+tipo = "mina"
+famiglia = "mina"
+siluro = ""
+guida = "mina mobile: corre fino a 13 km, poi si posa sul fondo"
+velocita_kn = 20.0
+portata_km = 13.0
+testata_kg = 150.0
+peso_kg = 754.0
+lunghezza_m = 4.1
+diametro_mm = 485
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1983
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:mina_mobile"
+fonte = "dossier 14 §2.6"
+confidenza = "media"
+nota = "1 per posto STIMA; 754-800 kg nelle fonti"
+efficacia = { sottomarino = 1, superficie = 2, terra = 0, mine = 3 }
+efficacia_nota = "mina mobile da fondo, a influenza: acque basse"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.mk60]
+nome = "Mk 60 CAPTOR"
+nazione = "usa"
+tipo = "mina"
+famiglia = "mina"
+siluro = ""
+guida = "ancorata: libera un siluro Mk 46 al passaggio di un sottomarino"
+velocita_kn = 0.0
+portata_km = 0.0
+testata_kg = 44.0
+peso_kg = 935.0
+lunghezza_m = 3.35
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1979
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:mina_captor"
+fonte = "dossier 14 §2.7"
+confidenza = "alta"
+nota = "1 per posto STIMA; testata quella del Mk 46"
+efficacia = { sottomarino = 2, superficie = 0, terra = 0, mine = 3 }
+efficacia_nota = "CAPTOR: libera un Mk 46 solo contro i sottomarini; acque profonde"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.moss_mk70]
+nome = "MOSS Mk 70"
+nazione = "usa"
+tipo = "siluro"
+famiglia = "esca_mobile"
+siluro = ""
+guida = "esca semovente da tubo: imita rumore ed eco del battello e si allontana"
+velocita_kn = 10.0
+portata_km = 0.0
+testata_kg = 0.0
+peso_kg = 230.0
+lunghezza_m = 4.0
+diametro_mm = 254
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1976
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = true
+moderno = true
+nucleare = false
+sagoma = "icona:esca_moss"
+fonte = "dossier 05 §5.1"
+confidenza = "bassa"
+nota = "Mobile Submarine Simulator, 10 pollici in un manicotto per il tubo da 533; negli anni '80 solo sugli SSBN: sul 688 what-if, consentita nel modo moderno; lunghezza e peso STIMA"
+efficacia = { sottomarino = 0, superficie = 0, terra = 0, mine = 0 }
+efficacia_nota = "esca mobile: allontana i siluri dal battello, nessun effetto sui bersagli"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.adc_mk2]
+nome = "ADC Mk 2"
+nazione = "usa"
+tipo = "esca"
+famiglia = "esca"
+siluro = ""
+guida = "esca acustica a quota fissa, elica intubata"
+velocita_kn = 0.0
+portata_km = 0.0
+testata_kg = 0.0
+peso_kg = 0.0
+lunghezza_m = 1.0
+diametro_mm = 76
+posti = 0.0
+pozzo_verticale = false
+in_servizio_dal = 1980
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:esca"
+fonte = "dossier 14 §2.8, dossier 05 §5.1"
+confidenza = "media"
+nota = "lanciatori propri, scorta a parte; 3 pollici (fonti USN); lunghezza STIMA: classificata"
+efficacia = { sottomarino = 0, superficie = 0, terra = 0, mine = 0 }
+efficacia_nota = "esca: nessun effetto sui bersagli"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.tigerfish]
+nome = "Tigerfish Mk 24 Mod 1"
+nazione = "uk"
+tipo = "siluro"
+famiglia = "mk48"
+siluro = "tigerfish"
+guida = "filoguidato, testa attiva o passiva"
+velocita_kn = 35.0
+portata_km = 17.0
+testata_kg = 134.0
+peso_kg = 1550.0
+lunghezza_m = 6.46
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1987
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:siluro_533"
+fonte = "dossier 01 §6.1, §2.3"
+confidenza = "media"
+nota = "il siluro dei Trafalgar nel 1989 (lo Spearfish entra nel 1994)"
+efficacia = { sottomarino = 2, superficie = 2, terra = 0, mine = 0 }
+efficacia_nota = "filoguidato ma lento (35 kn) e poco affidabile nei primi modelli"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.set65]
+nome = "SET-65"
+nazione = "urss"
+tipo = "siluro"
+famiglia = "type53"
+siluro = "set65"
+guida = "testa attiva o passiva"
+velocita_kn = 40.0
+portata_km = 16.0
+testata_kg = 205.0
+peso_kg = 1900.0
+lunghezza_m = 7.8
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1965
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:siluro_533"
+fonte = "dossier 14 §2.9"
+confidenza = "media"
+nota = "antisom dell'Alfa nel 1989; peso e lunghezza STIMA"
+efficacia = { sottomarino = 3, superficie = 2, terra = 0, mine = 0 }
+efficacia_nota = "antisom, testa attiva o passiva"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.type53_65k]
+nome = "53-65K"
+nazione = "urss"
+tipo = "siluro"
+famiglia = "type53"
+siluro = "type53_65k"
+guida = "segui-scia, immune alle esche"
+velocita_kn = 45.0
+portata_km = 19.0
+testata_kg = 300.0
+peso_kg = 2070.0
+lunghezza_m = 7.2
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1969
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:siluro_533"
+fonte = "dossier 14 §2.9"
+confidenza = "media"
+nota = "antinave; peso STIMA"
+efficacia = { sottomarino = 0, superficie = 3, terra = 0, mine = 0 }
+efficacia_nota = "segui-scia: inutile contro un sottomarino in immersione"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.saet60m]
+nome = "SAET-60M"
+nazione = "urss"
+tipo = "siluro"
+famiglia = "type53"
+siluro = "saet60m"
+guida = "testa passiva"
+velocita_kn = 40.0
+portata_km = 15.0
+testata_kg = 300.0
+peso_kg = 1800.0
+lunghezza_m = 7.5
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1969
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:siluro_533"
+fonte = "dossier 14 §2.9"
+confidenza = "bassa"
+nota = "peso e lunghezza STIMA"
+efficacia = { sottomarino = 2, superficie = 2, terra = 0, mine = 0 }
+efficacia_nota = "testa solo passiva"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.uset80]
+nome = "USET-80"
+nazione = "urss"
+tipo = "siluro"
+famiglia = "type53"
+siluro = "uset80"
+guida = "testa attiva o passiva"
+velocita_kn = 45.0
+portata_km = 18.0
+testata_kg = 250.0
+peso_kg = 2000.0
+lunghezza_m = 7.9
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1980
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = false
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:siluro_533"
+fonte = "dossier 14 §2.9"
+confidenza = "bassa"
+nota = "sull'Alfa non trovato: solo se la missione lo dichiara; peso e lunghezza STIMA"
+efficacia = { sottomarino = 3, superficie = 2, terra = 0, mine = 0 }
+efficacia_nota = "antisom"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.test71m]
+nome = "TEST-71M"
+nazione = "urss"
+tipo = "siluro"
+famiglia = "type53"
+siluro = "test71m"
+guida = "filoguidato, testa attiva o passiva"
+velocita_kn = 40.0
+portata_km = 15.0
+testata_kg = 205.0
+peso_kg = 1800.0
+lunghezza_m = 7.9
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1977
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = false
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:siluro_533"
+fonte = "dossier 14 §2.9"
+confidenza = "bassa"
+nota = "sull'Alfa non confermato: solo se la missione lo dichiara; peso e lunghezza STIMA"
+efficacia = { sottomarino = 3, superficie = 2, terra = 0, mine = 0 }
+efficacia_nota = "filoguidato, antisom"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.shkval]
+nome = "VA-111 Shkval"
+nazione = "urss"
+tipo = "siluro"
+famiglia = "type53"
+siluro = ""
+guida = "supercavitante a razzo, non guidato"
+velocita_kn = 200.0
+portata_km = 11.0
+testata_kg = 210.0
+peso_kg = 2700.0
+lunghezza_m = 8.2
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1977
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = true
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:razzo"
+fonte = "dossier 14 §2.10"
+confidenza = "bassa"
+nota = "arma segreta nel 1989: solo per l'IA"
+efficacia = { sottomarino = 2, superficie = 2, terra = 0, mine = 0 }
+efficacia_nota = "non guidato: solo a distanza ravvicinata"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.vyuga]
+nome = "RPK-2 Vyuga (SS-N-15)"
+nazione = "urss"
+tipo = "missile"
+famiglia = "sea_lance"
+siluro = ""
+guida = "razzo antisom dal tubo, carica di profondita'"
+velocita_kn = 0.0
+portata_km = 45.0
+testata_kg = 0.0
+peso_kg = 1800.0
+lunghezza_m = 8.2
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1969
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = true
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:razzo"
+fonte = "dossier 14 §2.11"
+confidenza = "bassa"
+nota = "sull'Alfa incerto: arma dell'IA; peso e lunghezza STIMA"
+efficacia = { sottomarino = 2, superficie = 0, terra = 0, mine = 0 }
+efficacia_nota = "razzo antisom con carica di profondita'"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.pmr1]
+nome = "PMR-1 Kal'mar"
+nazione = "urss"
+tipo = "mina"
+famiglia = "mina"
+siluro = ""
+guida = "mina-razzo antisom ormeggiata: lancia un razzo subacqueo contro un sottomarino sopra di lei"
+velocita_kn = 0.0
+portata_km = 0.0
+testata_kg = 200.0
+peso_kg = 1700.0
+lunghezza_m = 7.8
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1970
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:mina_razzo"
+fonte = "dossier 14 §2.12 [RuPMR1] [AMPMR2]"
+confidenza = "media"
+nota = "lunga come un siluro: 1 posto; solo sottomarini in immersione (Naval Encyclopedia la dava per mina-siluro da 400 mm anche antinave: corretto)"
+efficacia = { sottomarino = 2, superficie = 0, terra = 0, mine = 3 }
+efficacia_nota = "mina-razzo antisom: solo sottomarini in immersione, acque profonde"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.pmr2]
+nome = "PMR-2"
+nazione = "urss"
+tipo = "mina"
+famiglia = "mina"
+siluro = ""
+guida = "mina-razzo antisom ormeggiata a 200-400 m: razzo a 80-100 m/s, attacco in 7 s al piu'"
+velocita_kn = 0.0
+portata_km = 0.0
+testata_kg = 175.0
+peso_kg = 1850.0
+lunghezza_m = 7.83
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1973
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:mina_razzo"
+fonte = "dossier 14 §2.12 [AMPMR2] [WFPMR2]"
+confidenza = "media"
+nota = "raggio doppio della PMR-1; 1972 o 1973 nelle fonti; carica 175 kg (export 300-350)"
+efficacia = { sottomarino = 3, superficie = 0, terra = 0, mine = 3 }
+efficacia_nota = "mina-razzo antisom, raggio doppio della PMR-1"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.mdt]
+nome = "MDT"
+nazione = "urss"
+tipo = "mina"
+famiglia = "mina"
+siluro = ""
+guida = "mina da fondo acustico-induttiva, fino a 50 m di fondale"
+velocita_kn = 0.0
+portata_km = 0.0
+testata_kg = 600.0
+peso_kg = 1050.0
+lunghezza_m = 2.575
+diametro_mm = 533
+posti = 0.5
+pozzo_verticale = false
+in_servizio_dal = 1953
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:mina_fondo"
+fonte = "dossier 14 §2.12 [WPMDT] [AMMDT]"
+confidenza = "media"
+nota = "due per tubo, unite da un aggancio: 0,5 posti (36 sull'Alfa al posto di 18 armi, come una fonte)"
+efficacia = { sottomarino = 1, superficie = 2, terra = 0, mine = 3 }
+efficacia_nota = "mina da fondo a influenza: acque basse (fino a 50 m)"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.mg74]
+nome = "MG-74 Korund"
+nazione = "urss"
+tipo = "siluro"
+famiglia = "esca_mobile"
+siluro = ""
+guida = "esca semovente da tubo: imita rumore ed eco del sottomarino fino a 250 m"
+velocita_kn = 10.0
+portata_km = 0.0
+testata_kg = 0.0
+peso_kg = 800.0
+lunghezza_m = 3.9
+diametro_mm = 533
+posti = 1.0
+pozzo_verticale = false
+in_servizio_dal = 1974
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:esca_mg74"
+fonte = "dossier 05 §5.2 e §7 [KREM]"
+confidenza = "bassa"
+nota = "al posto di un siluro; sull'Alfa STIMA del dossier; peso STIMA"
+efficacia = { sottomarino = 0, superficie = 0, terra = 0, mine = 0 }
+efficacia_nota = "esca mobile: allontana i siluri dal battello, nessun effetto sui bersagli"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[armi.mg84]
+nome = "MG-84 Korund"
+nazione = "urss"
+tipo = "esca"
+famiglia = "esca"
+siluro = ""
+guida = "esca che disturba o imita la firma del battello"
+velocita_kn = 0.0
+portata_km = 0.0
+testata_kg = 0.0
+peso_kg = 0.0
+lunghezza_m = 3.0
+diametro_mm = 400
+posti = 0.0
+pozzo_verticale = false
+in_servizio_dal = 1974
+ritirata_nel = 0
+massimo_primo_anno = 0
+da_famiglia = true
+solo_ia = false
+what_if = false
+moderno = false
+nucleare = false
+sagoma = "icona:esca"
+fonte = "dossier 14 §2.13"
+confidenza = "bassa"
+nota = "nel sesto tubo come nell'originale; lunghezza STIMA (nessuna fonte aperta)"
+efficacia = { sottomarino = 0, superficie = 0, terra = 0, mine = 0 }
+efficacia_nota = "esca: nessun effetto sui bersagli"
+efficacia_fonte = "dossier 14 §2, dossier 15 §7.5"
+efficacia_confidenza = "STIMA"
+
+[mine.mk67]
+tipo = "influenza"
+carica_kg = 150.0
+raggio_m = 60.0
+profondita_min_m = 10.0
+profondita_max_m = 100.0
+corsa_max_m = 13000.0
+velocita_corsa_kn = 20.0
+ormeggio_m = 0.0
+armamento_s = 600.0
+siluro = ""
+navi = true
+sottomarini = true
+quota_min_bersaglio_m = 0.0
+fonte = "dossier 14 §2.6 (corsa 13 km, testata 150 kg); raggio, profondita' e velocita' STIMA"
+nota = "Mk 37 modificato: corre dal tubo lungo la rotta impostata, poi si posa; per acque basse"
+
+[mine.mk60]
+tipo = "captor"
+carica_kg = 44.0
+raggio_m = 1000.0
+profondita_min_m = 200.0
+profondita_max_m = 900.0
+corsa_max_m = 0.0
+velocita_corsa_kn = 0.0
+ormeggio_m = 150.0
+armamento_s = 600.0
+siluro = "mk46"
+navi = false
+sottomarini = true
+quota_min_bersaglio_m = 30.0
+fonte = "dossier 14 §2.7 (Mk 46 in un contenitore ormeggiato); raggio e profondita' STIMA"
+nota = "ignora le navi di superficie: libera il Mk 46 contro un sottomarino in immersione"
+
+[mine.pmr1]
+tipo = "mina_razzo"
+carica_kg = 200.0
+raggio_m = 100.0
+profondita_min_m = 200.0
+profondita_max_m = 1000.0
+corsa_max_m = 0.0
+velocita_corsa_kn = 0.0
+ormeggio_m = 0.0
+quota_mina_m = 300.0
+errore_razzo_m = 10.0
+solo_sopra = true
+armamento_s = 600.0
+siluro = ""
+navi = false
+sottomarini = true
+quota_min_bersaglio_m = 30.0
+fonte = "dossier 14 §2.12 [RuPMR1] [AMPMR2]: carica 200 kg, bersagli 30-400 m; raggio meta' di quello della PMR-2, fondali come la PMR-2, quota ed errore del razzo STIMA"
+nota = "razzo subacqueo: lo scoppio e' vicino al bersaglio; due file per coprire le quote"
+
+[mine.pmr2]
+tipo = "mina_razzo"
+carica_kg = 175.0
+raggio_m = 200.0
+profondita_min_m = 200.0
+profondita_max_m = 1000.0
+corsa_max_m = 0.0
+velocita_corsa_kn = 0.0
+ormeggio_m = 0.0
+quota_mina_m = 300.0
+errore_razzo_m = 10.0
+solo_sopra = true
+armamento_s = 600.0
+siluro = ""
+navi = false
+sottomarini = true
+quota_min_bersaglio_m = 30.0
+fonte = "dossier 14 §2.12 [AMPMR2] [WFPMR2]: raggio 200 m in un settore di 160 gradi verso l'alto, fondali 200-1000 m, mina a 200-400 m; quota ed errore del razzo STIMA"
+nota = "il settore verso l'alto e' reso con «solo bersagli sopra la mina»"
+
+[mine.mdt]
+tipo = "influenza"
+carica_kg = 600.0
+raggio_m = 50.0
+profondita_min_m = 8.0
+profondita_max_m = 50.0
+corsa_max_m = 0.0
+velocita_corsa_kn = 0.0
+ormeggio_m = 0.0
+armamento_s = 600.0
+siluro = ""
+navi = true
+sottomarini = true
+quota_min_bersaglio_m = 0.0
+fonte = "dossier 14 §2.12 [WPMDT] [AMMDT]: 600 kg, raggio 50 m, fondali fino a 50 m; minimo STIMA"
+nota = "si posa sotto il battello (nessuna corsa)"
+
+[locali.los_angeles]
+nome = "Los Angeles (Flight I)"
+nazione = "usa"
+tubi = 4
+calibro_mm = 533
+rastrelliera = 21
+pozzi = 0
+lanciatori_esche = 2
+esche = 6
+limite_in_acqua = 4
+posizioni = ["tubo", "tubo", "tubo", "tubo", "esca", "esca", ""]
+fonte = "dossier 14 §1.2"
+
+[locali.los_angeles_flight2]
+nome = "Los Angeles (Flight II)"
+nazione = "usa"
+tubi = 4
+calibro_mm = 533
+rastrelliera = 21
+pozzi = 12
+lanciatori_esche = 2
+esche = 6
+limite_in_acqua = 4
+posizioni = ["tubo", "tubo", "tubo", "tubo", "esca", "esca", "pozzi"]
+fonte = "dossier 14 §1.2"
+
+[locali.los_angeles_688i]
+nome = "Los Angeles (688I)"
+nazione = "usa"
+tubi = 4
+calibro_mm = 533
+rastrelliera = 21
+pozzi = 12
+lanciatori_esche = 2
+esche = 6
+limite_in_acqua = 4
+posizioni = ["tubo", "tubo", "tubo", "tubo", "esca", "esca", "pozzi"]
+fonte = "dossier 14 §1.2"
+
+[locali.alfa]
+nome = "Alfa (progetto 705)"
+nazione = "urss"
+tubi = 5
+calibro_mm = 533
+rastrelliera = 13
+pozzi = 0
+lanciatori_esche = 1
+esche = 4
+limite_in_acqua = 6
+posizioni = ["tubo", "tubo", "tubo", "tubo", "tubo", "esca"]
+fonte = "dossier 14 §1.3 e §4.2"
+
+[predefinite.usa]
+mk48 = "mk48"
+harpoon = "harpoon"
+tomahawk = "tasm"
+sea_lance = "sea_lance"
+mina = "mk67"
+attacco_terra = "tlam_c"
+esca = "adc_mk2"
+esca_mobile = "moss_mk70"
+
+[predefinite.urss]
+type53 = "set65"
+mina = "pmr2"
+esca = "mg84"
+esca_mobile = "mg74"
+
+[predefinite.uk]
+mk48 = "tigerfish"
+
+[carichi.los_angeles]
+predefinito = "antisom"
+
+[carichi.los_angeles.antisom]
+tubi = ["mk48", "mk48", "mk48", "mk48"]
+rastrelliera = { mk48 = 19, harpoon = 2 }
+pozzi = {  }
+
+[carichi.los_angeles.antinave]
+tubi = ["mk48", "mk48", "mk48", "harpoon"]
+rastrelliera = { mk48 = 13, harpoon = 4, tasm = 4 }
+pozzi = {  }
+
+[carichi.los_angeles.attacco_terra]
+tubi = ["mk48", "mk48", "tlam_c", "tlam_c"]
+rastrelliera = { mk48 = 13, tlam_c = 6, harpoon = 2 }
+pozzi = {  }
+
+[carichi.los_angeles.minamento]
+tubi = ["mk48", "mk48", "mk67", "mk67"]
+rastrelliera = { mk48 = 9, mk67 = 10, harpoon = 2 }
+pozzi = {  }
+
+[carichi.los_angeles.scorta]
+tubi = ["mk48", "mk48", "mk48", "mk48"]
+rastrelliera = { mk48 = 17, harpoon = 4 }
+pozzi = {  }
+
+[carichi.los_angeles.caccia]
+tubi = ["mk48_adcap", "mk48_adcap", "mk48_adcap", "mk48_adcap"]
+rastrelliera = { mk48_adcap = 2, mk48 = 19 }
+pozzi = {  }
+
+[carichi.los_angeles.saturazione]
+tubi = ["mk48", "mk48", "harpoon", "harpoon"]
+rastrelliera = { mk48 = 9, harpoon = 8, tasm = 4 }
+pozzi = {  }
+
+[carichi.los_angeles.costiero]
+tubi = ["mk48", "mk48", "mk48", "harpoon"]
+rastrelliera = { mk48 = 11, harpoon = 4, mk67 = 6 }
+pozzi = {  }
+
+[carichi.los_angeles.barriera]
+tubi = ["mk48", "mk48", "mk60", "mk60"]
+rastrelliera = { mk48 = 9, mk60 = 10, harpoon = 2 }
+pozzi = {  }
+
+[carichi.los_angeles_flight2]
+predefinito = "antisom"
+
+[carichi.los_angeles_flight2.antisom]
+tubi = ["mk48", "mk48", "mk48", "mk48"]
+rastrelliera = { mk48 = 19, harpoon = 2 }
+pozzi = { tasm = 4 }
+
+[carichi.los_angeles_flight2.antinave]
+tubi = ["mk48", "mk48", "mk48", "harpoon"]
+rastrelliera = { mk48 = 17, harpoon = 4 }
+pozzi = { tasm = 8 }
+
+[carichi.los_angeles_flight2.attacco_terra]
+tubi = ["mk48", "mk48", "mk48", "mk48"]
+rastrelliera = { mk48 = 19, harpoon = 2 }
+pozzi = { tlam_c = 12 }
+
+[carichi.los_angeles_flight2.minamento]
+tubi = ["mk48", "mk48", "mk67", "mk67"]
+rastrelliera = { mk48 = 9, mk67 = 10, harpoon = 2 }
+pozzi = { tasm = 4 }
+
+[carichi.los_angeles_flight2.scorta]
+tubi = ["mk48", "mk48", "mk48", "mk48"]
+rastrelliera = { mk48 = 17, harpoon = 4 }
+pozzi = { tasm = 4 }
+
+[carichi.los_angeles_flight2.caccia]
+tubi = ["mk48_adcap", "mk48_adcap", "mk48_adcap", "mk48_adcap"]
+rastrelliera = { mk48_adcap = 2, mk48 = 19 }
+pozzi = { tasm = 4 }
+
+[carichi.los_angeles_flight2.saturazione]
+tubi = ["mk48", "mk48", "harpoon", "harpoon"]
+rastrelliera = { mk48 = 13, harpoon = 8 }
+pozzi = { tasm = 12 }
+
+[carichi.los_angeles_flight2.costiero]
+tubi = ["mk48", "mk48", "mk48", "harpoon"]
+rastrelliera = { mk48 = 11, harpoon = 4, mk67 = 6 }
+pozzi = { tasm = 6, tlam_c = 6 }
+
+[carichi.los_angeles_flight2.barriera]
+tubi = ["mk48", "mk48", "mk60", "mk60"]
+rastrelliera = { mk48 = 9, mk60 = 10, harpoon = 2 }
+pozzi = { tasm = 4 }
+
+[carichi.los_angeles_688i]
+predefinito = "antisom"
+
+[carichi.los_angeles_688i.antisom]
+tubi = ["mk48", "mk48", "mk48", "mk48"]
+rastrelliera = { mk48 = 19, harpoon = 2 }
+pozzi = { tasm = 4 }
+
+[carichi.los_angeles_688i.antinave]
+tubi = ["mk48", "mk48", "mk48", "harpoon"]
+rastrelliera = { mk48 = 17, harpoon = 4 }
+pozzi = { tasm = 8 }
+
+[carichi.los_angeles_688i.attacco_terra]
+tubi = ["mk48", "mk48", "mk48", "mk48"]
+rastrelliera = { mk48 = 19, harpoon = 2 }
+pozzi = { tlam_c = 12 }
+
+[carichi.los_angeles_688i.minamento]
+tubi = ["mk48", "mk48", "mk67", "mk67"]
+rastrelliera = { mk48 = 9, mk67 = 10, harpoon = 2 }
+pozzi = { tasm = 4 }
+
+[carichi.los_angeles_688i.scorta]
+tubi = ["mk48", "mk48", "mk48", "mk48"]
+rastrelliera = { mk48 = 17, harpoon = 4 }
+pozzi = { tasm = 4 }
+
+[carichi.los_angeles_688i.caccia]
+tubi = ["mk48_adcap", "mk48_adcap", "mk48_adcap", "mk48_adcap"]
+rastrelliera = { mk48_adcap = 2, mk48 = 19 }
+pozzi = { tasm = 4 }
+
+[carichi.los_angeles_688i.saturazione]
+tubi = ["mk48", "mk48", "harpoon", "harpoon"]
+rastrelliera = { mk48 = 13, harpoon = 8 }
+pozzi = { tasm = 12 }
+
+[carichi.los_angeles_688i.costiero]
+tubi = ["mk48", "mk48", "mk48", "harpoon"]
+rastrelliera = { mk48 = 11, harpoon = 4, mk67 = 6 }
+pozzi = { tasm = 6, tlam_c = 6 }
+
+[carichi.los_angeles_688i.barriera]
+tubi = ["mk48", "mk48", "mk60", "mk60"]
+rastrelliera = { mk48 = 9, mk60 = 10, harpoon = 2 }
+pozzi = { tasm = 4 }
+
+[carichi.alfa]
+predefinito = "antisom"
+
+[carichi.alfa.antisom]
+tubi = ["set65", "set65", "set65", "type53_65k", "type53_65k"]
+rastrelliera = { set65 = 6, type53_65k = 5, mg74 = 2 }
+pozzi = {  }
+
+[carichi.alfa.antinave]
+tubi = ["set65", "set65", "type53_65k", "type53_65k", "type53_65k"]
+rastrelliera = { set65 = 6, type53_65k = 7 }
+pozzi = {  }
+
+[carichi.alfa.minamento]
+tubi = ["set65", "set65", "set65", "type53_65k", "type53_65k"]
+rastrelliera = { set65 = 2, pmr2 = 6, mdt = 10 }
+pozzi = {  }
+
+[carichi.alfa.caccia]
+tubi = ["set65", "set65", "set65", "set65", "set65"]
+rastrelliera = { set65 = 11, mg74 = 2 }
+pozzi = {  }
+
+[carichi.alfa.agguato]
+tubi = ["saet60m", "saet60m", "saet60m", "type53_65k", "type53_65k"]
+rastrelliera = { saet60m = 8, type53_65k = 3, mg74 = 2 }
+pozzi = {  }
+
+[carichi.alfa.barriera]
+tubi = ["set65", "set65", "set65", "type53_65k", "type53_65k"]
+rastrelliera = { set65 = 3, pmr2 = 10 }
+pozzi = {  }
+
+[carichi.alfa.costiero]
+tubi = ["set65", "set65", "set65", "type53_65k", "type53_65k"]
+rastrelliera = { set65 = 2, type53_65k = 1, mdt = 20 }
+pozzi = {  }
+
+[compiti.antisom]
+ordine = 0
+nome = "Caccia antisom"
+nota = "Il carico di partenza piu' comune: quasi tutto contro i sottomarini."
+fonte = "dossier 14 §5.1"
+confidenza = "PROPOSTA"
+
+[compiti.caccia]
+ordine = 1
+nome = "Caccia pura"
+nota = "Solo siluri: tutti i posti contro i sottomarini."
+fonte = "dossier 14 §1.2, §1.3, §5.1"
+confidenza = "STIMA"
+
+[compiti.agguato]
+ordine = 2
+nome = "Agguato passivo"
+nota = "Teste solo passive contro i sottomarini, segui-scia contro le navi."
+fonte = "dossier 14 §1.3 (SET-65A o SAET-60A)"
+confidenza = "STIMA, fonte bassa"
+
+[compiti.barriera]
+ordine = 3
+nome = "Barriera antisom"
+nota = "Mine contro i sottomarini in acque profonde: da 200 m di fondale in su."
+fonte = "dossier 14 §2.7, §2.12"
+confidenza = "STIMA"
+
+[compiti.antinave]
+ordine = 4
+nome = "Antinave"
+nota = "Contro le navi, tenendo qualche arma per i sottomarini."
+fonte = "dossier 14 §5.1"
+confidenza = "PROPOSTA"
+
+[compiti.saturazione]
+ordine = 5
+nome = "Antinave a distanza"
+nota = "Piu' missili possibile, a scapito dei siluri."
+fonte = "dossier 14 §3.6"
+confidenza = "STIMA"
+
+[compiti.scorta]
+ordine = 6
+nome = "Scorta e sorveglianza"
+nota = "Come l'originale: siluri e qualche missile."
+fonte = "dossier 14 §5.1"
+confidenza = "PROPOSTA"
+
+[compiti.costiero]
+ordine = 7
+nome = "Attacco costiero"
+nota = "Acque basse: mine da fondo fino a 50-100 m, siluri, missili se ci sono."
+fonte = "dossier 14 §2.6, §2.12, §3.6"
+confidenza = "STIMA"
+
+[compiti.minamento]
+ordine = 8
+nome = "Minamento"
+nota = "Molte mine, pochi siluri."
+fonte = "dossier 14 §5.1"
+confidenza = "PROPOSTA"
+
+[compiti.attacco_terra]
+ordine = 9
+nome = "Attacco a terra"
+nota = "TLAM-C: solo se la missione li dichiara."
+fonte = "dossier 14 §5.1, §3.6"
+confidenza = "PROPOSTA"

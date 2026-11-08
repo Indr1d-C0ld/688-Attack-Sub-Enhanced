@@ -1,0 +1,19 @@
+# Maschera ritoccata a mano della foto dell'Udaloy (tools/navi/maschera_manuale.py), coordinate in pixel.
+# Admiral Kharlamov 1993, dritta dall'alto e di prua (2860 x 1890 px): la nave scura (35-60) sul mare chiaro (107-177).
+# L'onda di prua e la scia coprono la parte bassa della prua e del fianco: il poligono segue il galleggiamento visibile
+# sopra la schiuma, e dentro e' nave cio' che e' piu' scuro di 105 (la schiuma bianca resta fuori). Il ponte di volo,
+# chiaro, si aggiunge con `includi`.
+file: extracted/navi/udaloy/foto/AdmiralKharlamov1993.jpg
+uscita: extracted/navi/udaloy/foto/dritta_aerea_1993_maschera.png
+scafo: [[30, 1060], [30, 960], [400, 940], [500, 880], [700, 880], [1100, 780], [1200, 430], [1400, 430], [1550, 520],
+        [1650, 560], [1900, 600], [2050, 780], [2200, 800], [2860, 800], [2860, 840],
+        [2760, 920], [2700, 965], [2620, 1000], [2540, 1030], [2460, 1060], [2350, 1075], [2250, 1085], [2200, 1060],
+        [2170, 1015], [2120, 1050], [2060, 1095], [2000, 1125], [1900, 1140], [1700, 1150], [1500, 1155], [1400, 1180],
+        [1200, 1200], [900, 1225], [600, 1250], [300, 1268], [150, 1265], [60, 1200], [30, 1080]]
+soglia_scafo: 105
+linea_coperta: [[0, 0], [2860, 0]]   # nessuna sovrastruttura a parte: tutto nel poligono
+inviluppo: [[0, 0], [1, 0], [1, 1]]
+includi:
+  - [[35, 1075], [120, 1055], [440, 1060], [505, 1095], [480, 1118], [60, 1110]]   # ponte di volo
+area_minima: 600       # le creste scure del mare fra gli alberi restano fuori; alberi e antenne toccano la nave
+buco_massimo: 3000      # il numero 606 e le finestre chiare

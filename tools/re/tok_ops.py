@@ -1,0 +1,155 @@
+"""Tabella degli opcode della VM degli scenari di 688 Attack Sub (file SCENE*.TOK).
+
+Ricavata dai gestori in GAME.EXE decompresso (segmento 2011h, tabella dei gestori a DS:6505).
+Lunghezze verificate automaticamente con tools/re/vm_paths.py (re/vm_lunghezze.json).
+
+Argomenti: b = byte, w = word con segno, u = word senza segno, L = etichetta (offset nel file
+TOK, il bytecode e' caricato a DS:5105), T = tempo (word: bit 15 = assoluto, altrimenti relativo),
+H = etichetta di gestore di evento, V = indice di variabile di scenario (word, tabella DS:64DB).
+
+Convenzioni sui campi dell'unita' (record da 100 byte, modello corrente a DS:2BEE):
+  +02 id, +04 tipo/classe, +06 flag (bit 0x18 = schieramento, 0x20, 0x40), +07 integrita',
+  +08 lista dei contatti, +16/+18 X (32 bit, parte intera +18), +1A/+1C Y (parte intera +1C),
+  +1E/+30 quota attuale/ordinata (1/8 di piede), +20/+34 rotta attuale/ordinata
+  (0..8999 = 360 gradi), +22/+32 velocita' attuale/ordinata (1/350 di nodo), +42 velocita'
+  "avanti tutta" (telegrafo 256; massima di sforzo = x 280/256), +4F tipo d'unita' (tabella
+  DS:019A), +58 contatto bersaglio,
+  +5A quota massima (1/8 di piede), +5F flag di scenario dell'unita'.
+  Tempo: 1 tick = 2 s di gioco (orologio a schermo FUN_1000_8510: ore = t/1800).
+  Distanza: 1 nm = 50 unita' (pannello RANGE = sqrt(dx^2+dy^2)/5 in decimi di nm); 1 pixel della
+  carta = 32 unita'. Velocita' mostrata = +22/350 nodi; quota mostrata = +1E/8 piedi.
+  Verifiche sul manuale: quota max 688 = 12000 (1500 ft), Alfa = 14400 (1800 ft); sforzo massimo
+  688 = 11840 x 280/256 / 350 = 37,0 kt, Alfa = 13440 -> 42,0 kt.
+  Record contatto (pool DS:2C52, 21 byte): +04 rilevamento, +0E qualita' della traccia (0..1200),
+  +10 livello del segnale, +14 durata del tracciamento, +13 lettera del contatto ('A' = 0x41...).
+  Script associati a ogni unita' (etichette nel bytecode): +0E all'arrivo o a fine azione,
+  +10 comportamento periodico, +56 reazione (verificato: 100% dei valori sono indirizzi di codice).
+"""
+
+# opcode: (mnemonico, argomenti, descrizione)
+OPS = {
+    0x00: ('END', '', "fine dello script o ritorno da CALL"),
+    0x01: ('CALL', 'L', "esegue la sottoroutine all'etichetta (interprete annidato fino a END)"),
+    0x02: ('POS', 'ww', "posizione X, Y dell'unita' (parte frazionaria azzerata)"),
+    0x03: ('DEPTH_NOW', 'w', "quota attuale e ordinata in 1/8 di piede (+1E, +30), variazione azzerata"),
+    0x04: ('TYPE', 'b', "tipo/classe dell'unita' (+04, byte duplicato)"),
+    0x05: ('FLAGS', 'b', "flag dell'unita' (+06): schieramento e proprieta'"),
+    0x06: ('HEAD_NOW', 'w', "rotta attuale e ordinata = valore (+20, +34), virata azzerata. Angolo matematico (0 = est, antiorario); in Lua gradi bussola"),
+    0x07: ('SPEED_NOW', 'w', "velocita' attuale e ordinata in 1/350 di nodo (+22, +32, +2E)"),
+    0x08: ('P_DIVE', 'w', "parametro di variazione di quota (+38)"),
+    0x09: ('P_TURN', 'w', "rateo di virata standard (+3E)"),
+    0x0a: ('P_ACCEL', 'w', "rateo di accelerazione (+40)"),
+    0x0b: ('P_VMAX', 'w', "velocita' 'avanti tutta' in 1/350 di nodo (+42); sforzo massimo = x 280/256"),
+    0x0c: ('P_3A', 'b', "parametro byte +3A (sensori/abilita')"),
+    0x0d: ('P_3B', 'b', "parametro byte +3B (sensori/abilita')"),
+    0x0e: ('P_3C', 'b', "parametro byte +3C (sensori/abilita')"),
+    0x0f: ('P_SKILL', 'b', "soglia di probabilita' +3D (confrontata con il numero casuale)"),
+    0x10: ('NEW_UNIT', '', "crea un'unita' dal modello corrente con un nuovo id (DS:5103)"),
+    0x11: ('CLEAR', '', "azzera lo stato dinamico del modello (contatti, ordini, flag)"),
+    0x12: ('GOTO_XY', 'wwwL', "naviga verso il punto X, Y; soglia d'arrivo +50 in quarti di unita' per asse; script all'arrivo (+0E)"),
+    0x13: ('P_4C', 'b', "periodo +4C dei controlli di quota, velocita' e fondale, in visite dell'unita' (byte copiato in periodo e conto)"),
+    0x14: ('AT', 'TL', "programma l'esecuzione dell'etichetta dopo/al tempo indicato (timer)"),
+    0x15: ('STORE', '', "salva il modello corrente nel record dell'unita' selezionata"),
+    0x16: ('SELECT_CUR', '', "riseleziona l'unita' corrente nella lista"),
+    0x17: ('SET_24', 'w', "campo +24"),
+    0x18: ('SET_2A', 'w', "campo +2A"),
+    0x19: ('TURN_TO', 'w', "rotta ordinata = valore con il rateo standard (+34, +36 = +3E): accosta sempre a sinistra. In Lua gradi bussola"),
+    0x1a: ('SPEED_STEP', 'wb', "velocita' ordinata (+32) raggiunta a passi (+52 = passo)"),
+    0x1b: ('LOAD', '', "carica nel modello il record puntato da +0A"),
+    0x1c: ('PURSUE', 'wLL', "insegue il bersaglio +58 (sul rilevamento finche' la traccia e' sotto 800, poi sulla posizione stimata); soglia d'arrivo +50 in quarti di unita'; script all'arrivo (+0E) e di reazione (+56)"),
+    0x1d: ('PURSUE2', 'wLL', "come 0x1C ma l'arrivo scatta quando la distanza SUPERA la soglia +50 (allontanamento); non uguaglia la quota"),
+    0x1e: ('BEHAVIOR', 'L', "script del bersaglio dell'unita' (+10): eseguito una volta quando un contatto diventa bersaglio (+58), poi azzerato"),
+    0x1f: ('HANDLERS_A', 'HHHHHH', "gestori di evento: waypoint, telegrafo, timone, quota, 0x2B, 0x32-33"),
+    0x20: ('TURN_RATE', 'w', "rateo di virata corrente (+36); la virata si ferma sulla rotta ordinata +34 (libera con HEAD_TO -1). Nell'originale positivo = sinistra; in Lua gradi/s con il positivo a dritta"),
+    0x21: ('TELEGRAPH', 'w', "velocita' ordinata in 1/256 della massima (999 = arresto rapido, >256 = accelerazione doppia)"),
+    0x22: ('DEPTH_TO', 'ww', "quota ordinata in 1/8 di piede (limitata da +5A) e rateo in 1/256 di +38"),
+    0x23: ('MSG_IF_PLAYER', 'b', "accoda il messaggio di bordo se l'unita' e' il giocatore o lo segue"),
+    0x24: ('HEAD_TO', 'w', "rotta ordinata (+34); -1 = rotta libera (la virata non si ferma). In Lua gradi bussola, nil = libera"),
+    0x25: ('HANDLERS_B', 'HHHHHHH', "gestori di evento 0x1D-0x23 (DS:63B7)"),
+    0x26: ('HANDLERS_C', 'HHHHHH', "gestori di evento 0x24-0x29 (DS:63C5)"),
+    0x27: ('STOP_NAV', '', "annulla la navigazione automatica (flag +4E, virata, +5C)"),
+    0x28: ('UNIT_TYPE', 'b', "tipo d'unita' (+4F): indice della tabella dei nomi DS:019A"),
+    0x29: ('P_3C2', 'b', "campo byte +3C"),
+    0x2a: ('PING', '', "impulso del sonar attivo dell'unita' corrente: evento acustico per 300 passi (33 s) nella lista DS:4772; gli altri giocatori ricevono il messaggio 8; se l'unita' e' la 0 incrementa la variabile di scena 0"),
+    0x2b: ('CANCEL', 'L', "annulla i timer dell'unita' corrente diretti all'etichetta"),
+    0x2c: ('CANCEL_ALL', '', "annulla tutti i timer dell'unita' corrente"),
+    0x2d: ('LAUNCH', 'LL', "prepara nel modello corrente l'arma che NEW_UNIT creera' (non crea l'unita'): soglia d'arrivo 0, script all'arrivo (+0E) e di reazione (+56), inseguimento del bersaglio memorizzato (DS:4762) con il contatto del lanciatore copiato a traccia solida (qualita' 1200)"),
+    0x2e: ('BREAK', '', "int 3 (punto di interruzione di debug)"),
+    0x2f: ('F54_2', 'b', "flag +54, bit 1 (02h): periscopio alzato (comandi 32h/33h)"),
+    0x30: ('F54_1', 'b', "flag +54, bit 0 (01h): schiera trainata filata, ascolto su +/-90 gradi; +3B += 2 (con 0: -= 2 sempre)"),
+    0x31: ('HANDLERS_D', 'HHHHHH', "gestori di evento 0x34-0x39 e 0x3E-0x3F"),
+    0x32: ('NO_BEHAVIOR', '', "toglie lo script del bersaglio (+10 = 0)"),
+    0x33: ('LINK', 'b', "collega l'unita' a quella selezionata (+0C, +62) o scollega"),
+    0x34: ('SAVE_TARGET', '', "memorizza il bersaglio corrente in DS:4762"),
+    0x35: ('DEPTH_MAX', 'w', "quota massima in 1/8 di piede (+5A)"),
+    0x36: ('TARGET_ID', 'w', "seleziona come bersaglio il contatto con l'id indicato (+58)"),
+    0x37: ('SELECT_LAST', '', "toglie dal gioco l'unita' corrente DS:475A (chi esegue lo script, salvo selezioni successive): fine corsa, esca esaurita, carica esplosa (2011:19CB -> 003C; il nome storico e' sbagliato)"),
+    0x38: ('HEALTH', 'b', "integrita' dell'unita' (+07)"),
+    0x39: ('NAVFLAG', 'b', "flag di navigazione +4E (0 = spegne il bit 0)"),
+    0x3a: ('LAYERS', 'www', "quote dei tre termoclini (1/8 di piede, DS:1F48): attraversarli attenua il segnale"),
+    0x3b: ('ENGAGE', 'bLL', "aggancia il bersaglio corrente (+60) e ne riarma lo scatto dopo n aggiornamenti del contatto (byte); script del bersaglio (+10) e del bersaglio perso (+56)"),
+    0x3c: ('IF_TRACK_LONG', 'L', "salta se il contatto bersaglio e' tracciato da molto (+14 >= 1400)"),
+    0x3d: ('IF_TRACK_GOOD', 'L', "salta se la traccia del contatto bersaglio e' solida (+0E >= 800 su 1200)"),
+    0x3e: ('IF_TGT_F20', 'L', "salta se l'unita' bersaglio ha il flag 0x20"),
+    0x3f: ('IF_TGT_ENEMY', 'L', "salta se il bersaglio e' dello schieramento opposto (flag 0x18)"),
+    0x40: ('IF_TGT_F02', 'L', "salta se l'unita' bersaglio ha il flag 0x02"),
+    0x41: ('IF_TGT_NEUTRAL', 'L', "salta se il bersaglio non ha schieramento (flag 0x18 = 0)"),
+    0x42: ('IF_TRACK_MED', 'L', "salta se il contatto bersaglio e' tracciato da un po' (+14 >= 800)"),
+    0x43: ('GOTO', 'L', "salto incondizionato"),
+    0x44: ('IF_RND', 'bL', "salta se valore >= numero casuale (DS:CFD9): probabilita'"),
+    0x45: ('IF_ID', 'wL', "salta se l'id dell'unita' corrente = valore"),
+    0x46: ('UFLAGS', 'b', "flag di scenario dell'unita' (+5F) = valore"),
+    0x47: ('IF_UFLAGS', 'bL', "salta se +5F = valore"),
+    0x48: ('IF_EXISTS', 'wL', "salta se esiste un'unita' con l'id indicato"),
+    0x49: ('UFLAGS_INC', '', "+5F += 1"),
+    0x4a: ('IF_ID2', 'wL', "salta se l'id dell'unita' corrente = valore (variante)"),
+    0x4b: ('IF_TGT_ID', 'wL', "salta se l'id del bersaglio = valore"),
+    0x4c: ('VAR_SET', 'Vw', "variabile di scenario = valore"),
+    0x4d: ('VAR_INC', 'V', "variabile di scenario += 1"),
+    0x4e: ('IF_VAR_GT', 'VwL', "salta se variabile > valore"),
+    0x4f: ('IF_VAR_LT', 'VwL', "salta se variabile < valore"),
+    0x50: ('IF_VAR_EQ', 'VwL', "salta se variabile = valore"),
+    0x51: ('VAR_DEC', 'V', "variabile di scenario -= 1"),
+    0x52: ('IF_HIT', 'wL', "salta se l'unita' con l'id indicato e' colpita o distrutta (+5E, +55)"),
+    0x53: ('IF_TGT_NEAR', 'wL', "salta se il bersaglio e' entro la distanza indicata in X e in Y (50 unita' = 1 nm)"),
+    0x54: ('ATTACK', 'ub', "attacco al bersaglio: la portata e' ignorata; riesce se il contatore DS:5100 (18..1) supera il byte (0 = +3D), cioe' con probabilita' (18 - b)/18; danno fisso 30"),
+    0x55: ('MSG', 'b', "accoda un messaggio di bordo (coda DS:6045); codici >= 100 = esito di fine missione"),
+    0x56: ('IF_TGT_LOCKED', 'L', "salta se il bersaglio punta l'ultima unita' trovata"),
+    0x57: ('CONTACTS_MARK', '', "marca tutti i contatti dell'unita' (+16 = 1)"),
+    0x58: ('HANDLERS_E', 'HHH', "gestori di evento 0x3A-0x3C (DS:63B1)"),
+    0x59: ('SELECT_TGT', '', "seleziona come corrente (DS:475A) l'unita' bersaglio (se non esiste termina)"),
+    0x5a: ('MISSILE', '', "lancio di missile dell'unita' corrente: evento acustico per 900 passi (100 s) nella lista DS:4772, messaggio 0x30 agli altri giocatori"),
+    0x5b: ('RETARGET', '', "trasferisce i riferimenti dall'unita' +62 all'ultima trovata"),
+    0x5c: ('F54_4', 'b', "flag +54, bit 2 (04h): antenna alzata (comandi 3Eh/3Fh)"),
+    0x5d: ('IF_IN_RECT', 'wwwwL', "salta se X >= x0, Y <= y0, X <= x1, Y >= y1"),
+    0x5e: ('IF_TGT_F03', 'L', "salta se l'unita' bersaglio ha i flag 0x03"),
+    0x5f: ('UFLAGS_DEC', '', "+5F -= 1"),
+    0x60: ('RANDOM', '', "nuovo numero casuale in DS:CFD9"),
+    0x61: ('TURN_TO_TGT', '', "rotta verso il rilevamento del bersaglio"),
+    0x62: ('NAV_ON', '', "attiva la navigazione verso il punto (flag +4E = 4)"),
+    0x63: ('TURN_REL', 'w', "virata relativa: rotta + valore (modulo 9000), nel verso piu' breve al rateo standard (1E9E). In Lua gradi con il positivo a dritta"),
+    0x64: ('GOTO_TGT', 'wL', "naviga verso la posizione del bersaglio; soglia d'arrivo +50 in quarti di unita' per asse, script all'arrivo (+0E)"),
+    0x65: ('IF_VARCMP', 'VVLL', "confronta due variabili: maggiore -> seconda etichetta; uguali -> prima etichetta + 2 (difetto: riprende a meta' istruzione)"),
+    0x66: ('MATCH_DEPTH', '', "quota ordinata = quota del bersaglio (limitata)"),
+    0x67: ('MATCH_SPEED', '', "velocita' ordinata = velocita' del bersaglio"),
+    0x68: ('IF_PLAYER1', 'L', "salta se il giocatore e' l'unita' 1 (DS:0364 = 1)"),
+    0x69: ('IF_STANDARD', 'L', "salta se DS:0331 = 0, cioe' livello STANDARD (ipotesi: 0331 != 0 = BEGINNER)"),
+    0x6a: ('ATTACK_RND', 'b', "colpo di missile sull'unita' corrente (DS:475A): riesce se un byte casuale e' >= +3D, messaggio 50, danno = byte"),
+    0x6b: ('SELECT_LINKED', '', "come `seleziona_bersaglio`, ma prima scrive l'unita' corrente nel +62 del bersaglio (2011:1DCD)"),
+    0x6c: ('IF_X_GT', 'wL', "salta se X dell'unita' > valore"),
+    0x6d: ('IF_UFLAG_BIT', 'Lb', "salta se +5F AND maschera != 0 (etichetta prima della maschera)"),
+    0x6e: ('UFLAG_SET', 'b', "+5F OR= maschera"),
+    0x6f: ('UFLAG_CLR', 'b', "+5F AND= NOT maschera"),
+    0x70: ('CLR_2C', '', "campo +2C = 0 (arresta la variazione di quota)"),
+    0x71: ('TURN_AWAY', '', "rotta opposta al rilevamento del bersaglio (+180 gradi)"),
+    0x72: ('JUMP_TO_TGT', '', "teletrasporta l'unita' vicino al bersaglio (+45, +45)"),
+    0x73: ('TRANSIENT', '', "rumore transitorio dell'unita' corrente (lancio di siluro, manovra): evento acustico per 100 passi (11 s) nella lista DS:4772"),
+    0x74: ('SELECT_ID', 'w', "unita' corrente per i comandi successivi = id (DS:5CBD)"),
+    0x75: ('IF_TAMPERED', 'L', "salta se la memoria DOS non corrisponde ai valori attesi (anti-manomissione)"),
+    0x76: ('HANDLERS_F', 'HH', "gestori di evento 0x42 e 0x43 (DS:1F6A)"),
+}
+
+SIZE = {'b': 1, 'w': 2, 'u': 2, 'L': 2, 'T': 2, 'H': 2, 'V': 2}
+
+# opcode dopo i quali il flusso non prosegue all'istruzione successiva
+TERMINA = {0x00, 0x43}

@@ -1,0 +1,50 @@
+# Maschere tracciate a mano per le foto della classe Kara (tools/navi/maschera_manuale.py, metodo per luminosita').
+# Coordinate in pixel di ciascuna foto.
+---
+# Nikolayev 1986, fianco dritto (1920 x 1502): nave scura su mare chiaro (mare ~230-247, nave 20-200).
+# Il poligono dello scafo si ferma alla linea bianca del galleggiamento: sotto c'e' la fascia scura del
+# riflesso, che la soglia automatica prendeva per nave.
+file: extracted/navi/kara/foto/fianco_dritta_1986.jpg
+uscita: extracted/navi/kara/foto/fianco_dritta_1986_maschera.png
+scafo: [[44, 690], [55, 658], [225, 667], [300, 680], [520, 690], [820, 696], [1120, 700], [1420, 698], [1620, 690],
+        [1770, 671], [1883, 653], [1840, 690], [1789, 740], [1620, 747], [1120, 746], [820, 742], [520, 736],
+        [300, 733], [100, 730], [62, 718]]
+soglia_scafo: 230
+linea_coperta: [[44, 659], [55, 659], [225, 668], [300, 681], [520, 691], [820, 697], [1120, 701], [1420, 699],
+                [1620, 691], [1770, 672], [1883, 654]]
+inviluppo: [[40, 662], [60, 628], [250, 622], [400, 598], [565, 512], [700, 505], [720, 518], [850, 335],
+            [990, 335], [990, 470], [1080, 440], [1210, 465], [1250, 495], [1335, 485], [1345, 560], [1420, 592],
+            [1500, 600], [1560, 622], [1700, 638], [1892, 648], [1892, 662], [40, 680]]
+soglia_sovrastrutture: 222
+includi:
+  - [[225,668], [300,681], [520,691], [820,697], [1120,701], [1420,699], [1620,691], [1770,672], [1875,656], [1875,644], [1770,660], [1620,667], [1420,675], [1120,677], [820,673], [520,667], [300,657], [225,662]]   # ponte di coperta visto dall'alto (chiaro come il mare)
+area_minima: 60
+buco_massimo: 300
+---
+# Nikolayev 1977, fianco sinistro (2989 x 1438): nave grigio chiara contro cielo velato, colline e mare
+# lontano. Le sovrastrutture al sole sono chiare come il cielo: sagome solide tracciate a mano (includi);
+# alberi, antenne e direttori scuri dalla soglia dentro l'inviluppo (che esclude colline e mare di fondo).
+file: extracted/navi/kara/foto/fianco_sinistro_1977.jpg
+uscita: extracted/navi/kara/foto/fianco_sinistro_1977_maschera.png
+scafo: [[8, 910], [300, 958], [700, 998], [1000, 1012], [1490, 1024], [2000, 1018], [2533, 1004], [2700, 984],
+        [2950, 984], [2962, 1050], [2935, 1086], [2500, 1101], [1490, 1136], [800, 1150], [200, 1164], [150, 1100],
+        [60, 985]]
+soglia_scafo: 256
+linea_coperta: [[8, 911], [300, 959], [700, 999], [1000, 1013], [1490, 1025], [2000, 1019], [2533, 1005],
+                [2700, 985], [2960, 985]]
+inviluppo: [[830, 1000], [830, 840], [985, 760], [1050, 560], [1150, 500], [1330, 540], [1500, 380], [1560, 240],
+            [1600, 500], [1690, 500], [1800, 200], [1900, 200], [2010, 380], [2050, 600], [2200, 640],
+            [2350, 700], [2490, 780], [2490, 870], [2960, 900], [2960, 1000]]
+soglia_sovrastrutture: 165
+includi:
+  - [[838, 900], [1090, 900], [1090, 1012], [838, 1005]]                                       # tuga dello Shtorm prodiero
+  - [[985, 1012], [985, 800], [995, 787], [1310, 787], [1310, 722], [1480, 722], [1480, 760], [1545, 760],
+     [1560, 835], [1650, 850], [1650, 1022]]                                                     # plancia, vani laterali, tuga dell'albero
+  - [[1650, 1022], [1650, 850], [1700, 858], [1745, 700], [1790, 560], [1828, 522], [1858, 522], [1862, 600],
+     [1878, 868], [1935, 868], [1935, 652], [2155, 652], [2155, 742], [2290, 742], [2290, 1006], [2155, 1012]]   # torre, fumaiolo, tuga poppiera
+  - [[2290, 1006], [2290, 882], [2340, 862], [2400, 862], [2400, 890], [2610, 890], [2620, 895], [2720, 895],
+     [2740, 925], [2950, 925], [2950, 986]]                                                       # Shtorm poppiero, hangar, ponte di volo
+escludi:
+  - [[0, 600], [830, 600], [830, 880], [0, 880]]       # colline e nave lontana a sinistra
+area_minima: 80
+buco_massimo: 400

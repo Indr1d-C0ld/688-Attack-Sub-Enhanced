@@ -1,0 +1,14 @@
+# Maschera ritoccata a mano della foto di fianco del Pytlivyy (1986), coordinate nell'immagine 2800 px.
+file: extracted/navi/krivak2/foto/fianco_dritta_1986_full.jpg
+uscita: extracted/navi/krivak2/foto/fianco_dritta_1986_maschera.png
+# scafo: linea di coperta (con il gradino a poppa), dritto di prua, galleggiamento con bagnasciuga
+scafo: [[357, 1130], [743, 1130], [757, 1100], [1130, 1105], [1850, 1115], [2200, 1106], [2477, 1092],
+        [2420, 1160], [2337, 1236], [2100, 1232], [1850, 1228], [1500, 1214], [1130, 1192], [797, 1182],
+        [463, 1165], [370, 1162]]
+soglia_scafo: 135   # murata ~81: esclude anche i bordi grigi dell'onda di prua
+linea_coperta: [[357, 1131], [743, 1131], [757, 1101], [1130, 1106], [1850, 1116], [2200, 1107], [2477, 1093]]
+inviluppo: [[350, 1131], [350, 1040], [560, 1035], [700, 990], [1000, 985], [1150, 930], [1250, 880],
+            [1300, 690], [1520, 690], [1560, 830], [1660, 880], [1780, 950], [1880, 1000], [1900, 1045],
+            [2300, 1045], [2445, 1050], [2462, 975], [2482, 975], [2490, 1093]]
+soglia_sovrastrutture: 140
+area_minima: 120

@@ -1,0 +1,134 @@
+# Toponimi aggiunti a mano a quelli di Natural Earth (tools/pipeline/toponimi.py), e correzioni dei nomi.
+# Coordinate in gradi decimali WGS84, arrotondate al chilometro circa; toponimi.py controlla che i nomi d'acqua cadano in
+# mare e gli altri a terra sul fondale vero, e avvisa se no. Nomi nella forma del glossario della traduzione
+# (docs/traduzione/glossario.md) e del 1989: nessun nome posteriore (niente «relitto del Kursk»).
+# Rango: 1-2 il teatro e i mari, 3-4 isole e stretti maggiori, basi; 5-6 capi, banchi, città minori; 7+ dettagli.
+
+correzioni:            # nome italiano o inglese di Natural Earth -> nome della carta
+  mare di Ochotsk: Mare di Okhotsk
+  mar Baltico: Mar Baltico
+  mare di Barents: Mare di Barents
+  mare di Norvegia: Mare di Norvegia
+  oceano Atlantico: Oceano Atlantico
+  oceano Pacifico: Oceano Pacifico
+  mare Adriatico: Mare Adriatico
+  mar Ionio: Mar Ionio
+  mare di Alborán: Mare di Alborán
+  Øresund: Øresund (Sund)
+  "en:Sea of Okhotsk": Sea of Okhotsk
+
+escludi: []            # nomi da togliere, anche «teatro:nome»
+
+FONTE: &mano "a mano, coordinate al chilometro (curatore kit)"
+
+teatri:
+  baltico:
+    - {testo: Bornholm, tipo: isola, rango: 3, lat: 55.13, lon: 14.92, fonte: *mano}
+    - {testo: Rügen, tipo: isola, rango: 3, lat: 54.42, lon: 13.40, fonte: *mano}
+    - {testo: Fehmarn, tipo: isola, rango: 4, lat: 54.46, lon: 11.15, fonte: *mano}
+    - {testo: Lolland, tipo: isola, rango: 4, lat: 54.75, lon: 11.40, fonte: *mano}
+    - {testo: Falster, tipo: isola, rango: 5, lat: 54.80, lon: 11.95, fonte: *mano}
+    - {testo: Møn, tipo: isola, rango: 5, lat: 54.97, lon: 12.35, fonte: *mano}
+    - {testo: Zelanda, en: Zealand, tipo: isola, rango: 3, lat: 55.45, lon: 11.85, fonte: *mano}
+    - {testo: Capo Arkona, en: Cape Arkona, tipo: capo, rango: 5, lat: 54.68, lon: 13.43, fonte: *mano}
+    - {testo: Bacino di Arkona, en: Arkona Basin, tipo: mare, acqua: true, rango: 5, lat: 54.90, lon: 13.70, fonte: *mano}
+    - {testo: Bacino di Bornholm, en: Bornholm Basin, tipo: mare, acqua: true, rango: 5, lat: 55.35, lon: 15.75, fonte: *mano}
+    - {testo: Baia di Pomerania, en: Pomeranian Bay, tipo: baia, acqua: true, rango: 5, lat: 54.15, lon: 14.25, fonte: *mano}
+    - {testo: Fehmarn Belt, tipo: stretto, acqua: true, rango: 6, lat: 54.58, lon: 11.30, fonte: *mano}
+    - {testo: Kadetrinne, tipo: stretto, acqua: true, rango: 6, lat: 54.45, lon: 12.20, fonte: "dossier 03 §A7 (soglia di Darss e Kadetrinne)"}
+    - {testo: Sassnitz, tipo: citta, rango: 6, lat: 54.52, lon: 13.64, fonte: *mano}
+    - {testo: Warnemünde, tipo: base, rango: 5, lat: 54.18, lon: 12.08, fonte: *mano}
+    - {testo: Peenemünde, tipo: base, rango: 5, lat: 54.14, lon: 13.77, fonte: *mano}
+    - {testo: Dranske, tipo: base, rango: 6, lat: 54.63, lon: 13.22, fonte: *mano}
+    - {testo: Świnoujście, tipo: base, rango: 5, lat: 53.91, lon: 14.25, fonte: *mano}
+    - {testo: Kołobrzeg, tipo: citta, rango: 6, lat: 54.18, lon: 15.58, fonte: *mano}
+    - {testo: Ystad, tipo: citta, rango: 6, lat: 55.43, lon: 13.82, fonte: *mano}
+    - {testo: Trelleborg, tipo: citta, rango: 6, lat: 55.37, lon: 13.15, fonte: *mano}
+    - {testo: Gedser, tipo: citta, rango: 7, lat: 54.58, lon: 11.93, fonte: *mano}
+    - {testo: Rønne, tipo: citta, rango: 6, lat: 55.10, lon: 14.70, fonte: *mano}
+
+  barents:
+    - {testo: Golfo di Kola, en: Kola Bay, tipo: golfo, acqua: true, rango: 3, lat: 69.25, lon: 33.47, fonte: "dossier 03 §A2 (ingresso del Golfo di Kola)"}
+    - {testo: Isola Kildin, en: Kildin Island, tipo: isola, rango: 4, lat: 69.33, lon: 34.15, fonte: "dossier 03 §A2"}
+    - {testo: Penisola Rybačij, en: Rybachy Peninsula, tipo: penisola, rango: 4, lat: 69.75, lon: 32.40, fonte: "dossier 03 §A2"}
+    - {testo: Golfo Motovskij, en: Motovsky Gulf, tipo: golfo, acqua: true, rango: 5, lat: 69.52, lon: 32.65, fonte: *mano}
+    - {testo: Costa del Murman, en: Murman Coast, tipo: costa, rango: 3, lat: 69.05, lon: 35.60, fonte: *mano}
+    - {testo: Severomorsk, tipo: base, rango: 3, lat: 69.07, lon: 33.42, fonte: *mano}
+    - {testo: Poljarnyj, en: Polyarny, tipo: base, rango: 4, lat: 69.20, lon: 33.45, fonte: *mano}
+    - {testo: Teriberka, tipo: citta, rango: 5, lat: 69.17, lon: 35.15, fonte: "dossier 03 §A2"}
+    - {testo: Gadžievo, en: Gadzhiyevo, tipo: base, rango: 4, lat: 69.25, lon: 33.33, fonte: *mano}
+    - {testo: Zapadnaja Lica, en: Zapadnaya Litsa, tipo: base, rango: 4, lat: 69.42, lon: 32.45, fonte: *mano}
+    - {testo: Vidjaevo, en: Vidyayevo, tipo: base, rango: 5, lat: 69.32, lon: 32.82, fonte: *mano}
+
+  faroe:
+    - {testo: Isole Fær Øer, en: Faroe Islands, tipo: isole, rango: 1, lat: 62.20, lon: -6.20, fonte: *mano}
+    - {testo: Streymoy, tipo: isola, rango: 4, lat: 62.13, lon: -7.00, fonte: *mano}
+    - {testo: Eysturoy, tipo: isola, rango: 4, lat: 62.20, lon: -6.85, fonte: *mano}
+    - {testo: Vágar, tipo: isola, rango: 5, lat: 62.08, lon: -7.25, fonte: *mano}
+    - {testo: Suðuroy, tipo: isola, rango: 4, lat: 61.53, lon: -6.85, fonte: *mano}
+    - {testo: Sandoy, tipo: isola, rango: 5, lat: 61.83, lon: -6.80, fonte: *mano}
+    - {testo: Viðoy, tipo: isola, rango: 6, lat: 62.33, lon: -6.52, fonte: *mano}
+    - {testo: Skúvoy, tipo: isola, rango: 6, lat: 61.77, lon: -6.81, fonte: *mano}
+    - {testo: Stóra Dímun, tipo: isola, rango: 7, lat: 61.69, lon: -6.75, fonte: *mano}
+    - {testo: Lítla Dímun, tipo: isola, rango: 7, lat: 61.63, lon: -6.71, fonte: *mano}
+    - {testo: Nólsoy, tipo: isola, rango: 6, lat: 62.00, lon: -6.67, fonte: *mano}
+    - {testo: Hestur, tipo: isola, rango: 7, lat: 61.96, lon: -6.88, fonte: *mano}
+    - {testo: Koltur, tipo: isola, rango: 7, lat: 61.98, lon: -6.97, fonte: *mano}
+    - {testo: Mykines, tipo: isola, rango: 6, lat: 62.10, lon: -7.65, fonte: *mano}
+    - {testo: Kalsoy, tipo: isola, rango: 6, lat: 62.30, lon: -6.73, fonte: *mano}
+    - {testo: Kunoy, tipo: isola, rango: 7, lat: 62.30, lon: -6.66, fonte: *mano}
+    - {testo: Borðoy, tipo: isola, rango: 6, lat: 62.25, lon: -6.55, fonte: *mano}
+    - {testo: Svínoy, tipo: isola, rango: 7, lat: 62.28, lon: -6.35, fonte: *mano}
+    - {testo: Fugloy, tipo: isola, rango: 7, lat: 62.33, lon: -6.30, fonte: *mano}
+    - {testo: Banco Fær Øer, en: Faroe Bank, tipo: secca, acqua: true, rango: 4, lat: 61.00, lon: -8.30, fonte: *mano}
+    - {testo: Canale del Banco Fær Øer, en: Faroe Bank Channel, tipo: canale, acqua: true, rango: 4, lat: 61.35, lon: -7.80, fonte: "dossier 03 §A1 (soglia del FBC)"}
+    - {testo: Canale Fær Øer-Shetland, en: Faroe-Shetland Channel, tipo: canale, acqua: true, rango: 3, lat: 61.40, lon: -4.80, fonte: "dossier 03 §A1 (FSC)"}
+    - {testo: Vágur, tipo: citta, rango: 7, lat: 61.47, lon: -6.80, fonte: *mano}
+    - {testo: Sornfelli (radar NATO), en: Sornfelli (NATO radar), tipo: base, rango: 6, lat: 62.07, lon: -6.95, fonte: *mano}
+
+  gibilterra:
+    - {testo: Stretto di Gibilterra, en: Strait of Gibraltar, tipo: stretto, acqua: true, rango: 2, lat: 35.96, lon: -5.55, fonte: *mano}
+    - {testo: Golfo di Cadice, en: Gulf of Cádiz, tipo: golfo, acqua: true, rango: 3, lat: 36.45, lon: -7.00, fonte: "dossier 03 §A3"}
+    - {testo: Capo Trafalgar, en: Cape Trafalgar, tipo: capo, rango: 5, lat: 36.18, lon: -6.03, fonte: *mano}
+    - {testo: Punta Tarifa, en: Tarifa Point, tipo: capo, rango: 5, lat: 36.00, lon: -5.61, fonte: "dossier 03 §A3"}
+    - {testo: Capo Spartel, en: Cape Spartel, tipo: capo, rango: 5, lat: 35.79, lon: -5.92, fonte: *mano}
+    - {testo: Punta Europa, en: Europa Point, tipo: capo, rango: 6, lat: 36.11, lon: -5.35, fonte: *mano}
+    - {testo: Rota (base USA), en: Rota (US base), tipo: base, rango: 4, lat: 36.63, lon: -6.35, fonte: *mano}
+    - {testo: Soglia di Camarinal, en: Camarinal Sill, tipo: secca, acqua: true, rango: 6, lat: 35.93, lon: -5.75, fonte: "dossier 03 §A3 (Camarinal 284 m)"}
+
+  otranto:
+    - {testo: Canale d'Otranto, en: Strait of Otranto, tipo: stretto, acqua: true, rango: 2, lat: 40.30, lon: 19.00, fonte: *mano}
+    - {testo: Otranto, tipo: citta, rango: 5, lat: 40.15, lon: 18.49, fonte: "dossier 03 §A4"}
+    - {testo: Capo d'Otranto, en: Cape Otranto, tipo: capo, rango: 6, lat: 40.10, lon: 18.52, fonte: *mano}
+    - {testo: Capo Santa Maria di Leuca, en: Cape Santa Maria di Leuca, tipo: capo, rango: 5, lat: 39.80, lon: 18.36, fonte: *mano}
+    - {testo: Penisola di Karaburun, en: Karaburun Peninsula, tipo: penisola, rango: 5, lat: 40.40, lon: 19.36, fonte: "dossier 03 §A4"}
+    - {testo: Saseno, en: Sazan, tipo: isola, rango: 6, lat: 40.50, lon: 19.28, fonte: *mano}
+    - {testo: Baia di Valona, en: Bay of Vlorë, tipo: baia, acqua: true, rango: 5, lat: 40.43, lon: 19.43, fonte: *mano}
+    - {testo: Bocche di Cattaro, en: Bay of Kotor, tipo: baia, acqua: true, rango: 5, lat: 42.43, lon: 18.62, fonte: "dossier 03 §A4 (Tivat)"}
+    - {testo: Tivat, tipo: base, rango: 5, lat: 42.43, lon: 18.70, fonte: "dossier 03 §A4"}
+    - {testo: Fossa Sud-Adriatica, en: South Adriatic Pit, tipo: mare, acqua: true, rango: 5, lat: 41.75, lon: 18.00, fonte: "dossier 03 §A4"}
+    - {testo: Taranto, tipo: base, rango: 4, lat: 40.47, lon: 17.23, fonte: "dossier 03 §A4"}
+    - {testo: Brindisi, tipo: base, rango: 5, lat: 40.64, lon: 17.94, fonte: "dossier 03 §A4"}
+    - {testo: Pasha Liman, en: Pasha Liman, tipo: base, rango: 5, lat: 40.33, lon: 19.42, fonte: *mano}
+    - {testo: Gallipoli, tipo: citta, rango: 7, lat: 40.06, lon: 17.98, fonte: *mano}
+
+  kunashir:
+    - {testo: Kunašir, en: Kunashir, tipo: isola, rango: 2, lat: 44.10, lon: 145.85, fonte: *mano}
+    - {testo: Iturup, tipo: isola, rango: 2, lat: 45.00, lon: 147.75, fonte: *mano}
+    - {testo: Šikotan, en: Shikotan, tipo: isola, rango: 4, lat: 43.80, lon: 146.75, fonte: *mano}
+    - {testo: Hokkaidō, tipo: isola, rango: 3, lat: 43.55, lon: 144.95, fonte: *mano}
+    - {testo: Stretto di Ekaterina, en: Yekaterina Strait, tipo: stretto, acqua: true, rango: 3, lat: 44.70, lon: 146.60, fonte: "dossier 03 §A5"}
+    - {testo: Stretto Izmeny, en: Izmeny Strait, tipo: stretto, acqua: true, rango: 4, lat: 43.75, lon: 145.25, fonte: "dossier 03 §A5"}
+    - {testo: Stretto delle Curili meridionali, en: South Kuril Strait, tipo: stretto, acqua: true, rango: 5, lat: 43.85, lon: 146.25, fonte: *mano}
+    - {testo: Bacino delle Curili, en: Kuril Basin, tipo: mare, acqua: true, rango: 4, lat: 45.20, lon: 146.00, fonte: "dossier 03 §A5"}
+    - {testo: Južno-Kuril'sk, en: Yuzhno-Kurilsk, tipo: citta, rango: 5, lat: 44.03, lon: 145.86, fonte: *mano}
+    - {testo: Kuril'sk, en: Kurilsk, tipo: citta, rango: 5, lat: 45.23, lon: 147.88, fonte: *mano}
+    - {testo: Nemuro, tipo: citta, rango: 5, lat: 43.33, lon: 145.58, fonte: *mano}
+
+  celtica:
+    - {testo: Mar Celtico, en: Celtic Sea, tipo: mare, acqua: true, rango: 2, lat: 49.20, lon: -8.30, fonte: *mano}
+    - {testo: Golfo di Biscaglia, en: Bay of Biscay, tipo: golfo, acqua: true, rango: 3, lat: 47.25, lon: -8.20, fonte: *mano}
+    - {testo: Goban Spur, tipo: secca, acqua: true, rango: 5, lat: 49.15, lon: -11.50, fonte: "dossier 03 §A6"}
+    - {testo: Canyon Whittard, en: Whittard Canyon, tipo: secca, acqua: true, rango: 5, lat: 48.55, lon: -10.40, fonte: "dossier 03 §A6"}
+    - {testo: Banco Grande Sole, en: Great Sole Bank, tipo: secca, acqua: true, rango: 5, lat: 49.00, lon: -9.80, fonte: *mano}
+    - {testo: Ciglio della piattaforma, en: Shelf break, tipo: secca, acqua: true, rango: 6, lat: 48.10, lon: -9.30, fonte: "dossier 03 §A6 (ciglio a 200 m)"}

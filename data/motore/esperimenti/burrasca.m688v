@@ -1,0 +1,13 @@
+# Esperimento pronto del vetrino di Dio (docs/28 §5, D2). La scena S5 del convoglio col mare che monta.
+[esperimento]
+titolo = "La burrasca"
+mostra = "Il mare a forza 6 col vento a 35 nodi dal secondo minuto, in tutto il teatro"
+ipotesi = "Il rumore del mare accorcia le portate di tutti: le scoperte arrivano piu' tardi, da entrambe le parti"
+codice = "8FZD3Q-4G0000-04K000-0000HZ-G002QH"
+semi = 10
+da = 1
+
+[[intervento]]
+tempo = 120.0
+tipo = "meteo"
+parametri = { mare = 6.0, vento_kn = 35.0 }

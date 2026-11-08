@@ -1,0 +1,692 @@
+# Testi dell'enciclopedia, armi (docs/00_ROADMAP.md, requisito 14; il Museo esteso): siluri, missili, mine ed esche
+# che non stanno già in campioni.yaml. Stesso formato delle voci campione: it, en (2-6 frasi, storia e impiego); uso_it,
+# uso_en (il manuale di bordo: come si usa l'arma nel gioco, o come la si evita se è del nemico); fonti (elenco).
+# Scritti a mano, in parafrasi dai dossier di docs/ricerca e dai dati del motore (data/motore/siluri.toml e
+# carico.toml); nessun testo copiato. Le cifre segnate STIMA sono valori di taratura del gioco, non dati storici.
+
+siluro.mk48_adcap:
+  it: >-
+    Il Mk 48 ADCAP (Mod 5) è il successore del Mk 48 Mod 4: il programma fu accelerato proprio perché in Occidente si
+    temevano la velocità e la quota dell'Alfa. Prodotto dal 1985, entrò in servizio nel 1988, per cui nel 1989 a bordo
+    dei 688 ce n'erano pochi, accanto ai Mod 4. Resta filoguidato, ma con una testa attiva e passiva digitale a
+    scansione elettronica. Le stime aperte parlano di 55-65 nodi, circa 27 km alla velocità massima e 50 km a 40 nodi,
+    e di una quota oltre gli 800 metri; pesa 1.676 kg, con una testata di circa 295 kg.
+  en: >-
+    The Mk 48 ADCAP (Mod 5) is the successor of the Mk 48 Mod 4: the programme was accelerated precisely because the
+    West feared the Alfa's speed and depth. Produced from 1985, it entered service in 1988, so in 1989 the 688s carried
+    only a few, alongside the Mod 4s. It is still wire-guided, but with a digital active and passive homing head using
+    electronic scanning. Open estimates speak of 55-65 knots, about 27 km at top speed and 50 km at 40 knots, and a
+    depth beyond 800 metres; it weighs 1,676 kg, with a warhead of about 295 kg.
+  uso_it: >-
+    Si carica e si lancia come il Mk 48 dalla stazione Armi, con le stesse impostazioni: rotta, modo della testa,
+    velocità (alta: 60 nodi e 32 km; bassa: 40 nodi e 50 km), RTE, tetto, schema di ricerca e anticircolare. Rispetto
+    al Mod 4 la testa aggancia da più lontano (2 km in attivo, 5 in passivo) e il siluro scende fino a 800 metri. Il
+    deposito lo offre solo nelle missioni dal 1988, e nei primi anni al più 6 per carico.
+  uso_en: >-
+    It is loaded and fired like the Mk 48 from the Weapons station, with the same settings: course, seeker mode, speed
+    (high: 60 knots and 32 km; low: 40 knots and 50 km), RTE, ceiling, search pattern and anti-circular run. Compared
+    with the Mod 4 the head acquires from farther away (2 km active, 5 passive) and the torpedo dives to 800 metres.
+    The stores offer it only in missions from 1988 onwards, and in the first years at most 6 per load.
+  fonti: ['dossier 14 §2.1 e §5.1-5.2 [WPMk48]', 'dossier 01 §2.4 (nota storica) e §6.1 [WPMk48] [NWUS] [HIS]',
+    'siluri.toml (siluri.mk48_adcap)', 'carico.toml (armi.mk48_adcap)']
+
+siluro.tigerfish:
+  it: >-
+    Il Mk 24 Tigerfish è il siluro pesante britannico dei sottomarini della Royal Navy, come i Trafalgar del 1989:
+    filoguidato, poi con la testa passiva e, a scelta, attiva. Il primo modello (Mod 0, 1980) era poco affidabile e
+    perdeva spesso il filo al lancio, tanto che funzionava in circa il 40% dei casi; i Mod 1 e 2 del 1987 lo
+    migliorarono. È lento rispetto al Mk 48: circa 35 nodi per 13-21 km, oppure 24 nodi per 27-39 km. Scende fino a
+    442 metri e porta una carica di Torpex fra 134 e 340 kg secondo le fonti.
+  en: >-
+    The Mk 24 Tigerfish is the British heavyweight torpedo of Royal Navy submarines such as the 1989 Trafalgars:
+    wire-guided, then with a passive and, optionally, active homing head. The first model (Mod 0, 1980) was unreliable
+    and often lost its wire at launch, so that it worked only about 40% of the time; the 1987 Mods 1 and 2 improved
+    it. It is slow compared with the Mk 48: about 35 knots for 13-21 km, or 24 knots for 27-39 km. It dives to 442
+    metres and carries a Torpex charge of 134 to 340 kg depending on the source.
+  uso_it: >-
+    Non si carica sul 688 né sull'Alfa: è l'arma dei battelli britannici guidati dal computer. Nel gioco corre a 35
+    nodi per 17 km o a 24 nodi per 33 km, e via filo l'operatore può correggerne la rotta e scartare le esche. Contro un
+    siluro ancora al filo l'esca da sola vale poco: conviene costringere il lanciatore a manovrare finché il filo si
+    rompe, poi lanciare le esche, virare stretto e cambiare quota.
+  uso_en: >-
+    It cannot be loaded on the 688 or the Alfa: it is the weapon of computer-controlled British boats. In the game it
+    runs at 35 knots for 17 km or 24 knots for 33 km, and over the wire the operator can steer it and reject decoys.
+    Against a torpedo still on the wire a decoy alone is of little use: force the launcher to manoeuvre until the wire
+    breaks, then fire decoys, turn hard and change depth.
+  fonti: ['dossier 01 §2.3 e §6.1 [WPTiger] [NWBR]', 'dossier 14 §1.4', 'dossier 05 §5.3-5.4',
+    'siluri.toml (siluri.tigerfish)']
+
+siluro.spearfish:
+  it: >-
+    Lo Spearfish è il siluro pesante britannico destinato a sostituire il Tigerfish: entrò in produzione piena nel
+    1988, ma in servizio solo nel 1992-94, quindi nel 1989 non era ancora a bordo. È filoguidato, con la testa attiva e
+    passiva, e la testata di 300 kg è di esplosivo PBX alluminizzato. Il requisito del 1981 chiedeva oltre 60 nodi per
+    circa 21 km; si sono letti anche 80 nodi, e a bassa velocità la portata arriva a circa 56 km. Con la quota la
+    velocità cala.
+  en: >-
+    The Spearfish is the British heavyweight torpedo meant to replace the Tigerfish: it entered full production in
+    1988 but service only in 1992-94, so in 1989 it was not yet aboard. It is wire-guided with an active and passive
+    homing head, and its 300 kg warhead is aluminised PBX. The 1981 requirement asked for over 60 knots for about 21
+    km; 80 knots have also been reported, and at low speed the range reaches about 56 km. Its speed drops with depth.
+  uso_it: >-
+    È un'arma «what-if»: compare solo negli scenari ambientati dopo il 1989, sui battelli britannici guidati dal
+    computer, e non si carica. Nel gioco fa 60 nodi per 21 km o 30 nodi per 56 km, aggancia da 2 km in attivo e 5 in
+    passivo e vira più stretto del Mk 48. Finché è al filo si difende come dal Tigerfish (rompere il filo, poi esche e
+    manovra), ma è troppo veloce per sperare di distanziarlo.
+  uso_en: >-
+    It is a «what-if» weapon: it appears only in scenarios set after 1989, on computer-controlled British boats, and
+    cannot be loaded. In the game it does 60 knots for 21 km or 30 knots for 56 km, acquires from 2 km active and 5
+    passive and turns tighter than the Mk 48. While it is on the wire defend as against the Tigerfish (break the wire,
+    then decoys and manoeuvre), but it is too fast to hope to outrun.
+  fonti: ['dossier 01 §1 e §6.1 [WPSpear] [NWBR]', 'dossier 14 §5.2', 'siluri.toml (siluri.spearfish)']
+
+siluro.uset80:
+  it: >-
+    L'USET-80 è il siluro antisommergibile sovietico da 533 mm della generazione del 1980, con la testa attiva e
+    passiva; le fonti gli attribuiscono anche la guida sulla scia. Le fonti danno 43-50 nodi e 18-20 km, con una
+    testata fra 200 e 300 kg. Sulla quota non concordano: 1.000 metri per la fonte russa, «oltre 400» per un'altra.
+    Nelle fonti aperte non risulta imbarcato sull'Alfa, ed è il «Type 53» antisom del gioco originale.
+  en: >-
+    The USET-80 is the Soviet 533 mm anti-submarine torpedo of the 1980 generation, with an active and passive homing
+    head; sources also credit it with wake homing. Sources give 43-50 knots and 18-20 km, with a warhead of 200 to
+    300 kg. They disagree on depth: 1,000 metres according to the Russian source, «over 400» according to another. Open
+    sources do not show it aboard the Alfa, and it is the anti-submarine «Type 53» of the original game.
+  uso_it: >-
+    Al comando dell'Alfa si carica solo se la missione lo prevede. Non è filoguidato: prima del lancio dalla stazione
+    Armi si impostano rotta, modo della testa (attivo, passivo o tutti e due), velocità (alta: 45 nodi e 18 km; bassa:
+    35 nodi e 24 km), RTE, tetto e schema, poi il siluro va da solo. Scende fino a 1.000 metri, quindi nessun battello
+    gli sfugge andando in profondità.
+  uso_en: >-
+    In command of the Alfa it is loaded only if the mission provides it. It is not wire-guided: before launch, at the
+    Weapons station, set course, seeker mode (active, passive or both), speed (high: 45 knots and 18 km; low: 35 knots
+    and 24 km), RTE, ceiling and pattern, then the torpedo runs on its own. It dives to 1,000 metres, so no boat
+    escapes it by going deep.
+  fonti: ['dossier 14 §2.9', 'dossier 01 §6.1 [RWUSET80] [NWRU]', 'siluri.toml (siluri.uset80)',
+    'carico.toml (armi.uset80)']
+
+siluro.test71m:
+  it: >-
+    Il TEST-71 (1971) e la versione TEST-71M (circa 1977) sono i siluri sovietici filoguidati da 533 mm, con il filo
+    KTU-71 e la testa attiva e passiva «Sapfir», che aggancia entro circa 800 metri. Le fonti danno 40 nodi per 15 km;
+    quella russa distingue 35 nodi d'attacco e 24 nodi di crociera per 15 km. Scende fino a 400 metri e porta una
+    testata di 205 kg. Sull'Alfa la sua presenza non è confermata.
+  en: >-
+    The TEST-71 (1971) and its TEST-71M version (about 1977) are the Soviet 533 mm wire-guided torpedoes, with the
+    KTU-71 wire and the «Sapfir» active and passive head, which acquires within about 800 metres. Sources give 40 knots
+    for 15 km; the Russian one distinguishes 35 knots in attack and 24 knots cruising for 15 km. It dives to 400 metres
+    and carries a 205 kg warhead. Its presence aboard the Alfa is not confirmed.
+  uso_it: >-
+    Al comando dell'Alfa si carica solo se la missione lo dichiara; è l'unico siluro filoguidato del battello
+    sovietico. Si imposta come il Mk 48 (rotta, testa, velocità alta 40 nodi e 15 km o bassa 24 nodi e 20 km, RTE,
+    tetto, schema) e finché il filo regge, fino a 20 km dal siluro e 2 km dal battello, si corregge la rotta e si
+    scartano le esche. La testa sente poco: conviene portarlo vicino al bersaglio via filo prima di abilitarla.
+  uso_en: >-
+    In command of the Alfa it is loaded only if the mission declares it; it is the Soviet boat's only wire-guided
+    torpedo. It is set like the Mk 48 (course, head, high speed 40 knots and 15 km or low 24 knots and 20 km, RTE,
+    ceiling, pattern) and while the wire holds, up to 20 km from the torpedo and 2 km from the boat, you can steer it
+    and reject decoys. The head hears little: bring it close to the target over the wire before enabling it.
+  fonti: ['dossier 01 §2.4 e §6.1 [RWTEST71] [NWRU]', 'dossier 14 §2.9', 'siluri.toml (siluri.test71m)',
+    'carico.toml (armi.test71m)']
+
+siluro.set65:
+  it: >-
+    Il SET-65 è il siluro antisommergibile sovietico da 533 mm entrato in servizio nel 1965, con una testa acustica
+    attiva e passiva che aggancia a circa 800 metri. Corre a 40 nodi per 15-16 km fra 20 e 400 metri di quota, con
+    una testata di 205-240 kg. Insieme al 53-65K era il carico principale dell'Alfa nel 1989, una ventina di armi in
+    tutto secondo le fonti.
+  en: >-
+    The SET-65 is the Soviet 533 mm anti-submarine torpedo that entered service in 1965, with an active and passive
+    acoustic head that acquires at about 800 metres. It runs at 40 knots for 15-16 km between 20 and 400 metres
+    depth, with a 205-240 kg warhead. Together with the 53-65K it was the Alfa's main load in 1989, around twenty
+    weapons in all according to the sources.
+  uso_it: >-
+    È il siluro antisom predefinito dell'Alfa: si carica nei cinque tubi da siluro e si lancia dalla stazione Armi.
+    Non ha filo e ha una sola velocità (40 nodi, 16 km): prima del lancio si scelgono rotta, modo della testa, RTE,
+    tetto e schema, poi va da solo. La testa sente poco (800 metri in attivo, 1.500 in passivo): conviene una buona
+    soluzione di tiro e un RTE vicino al bersaglio.
+  uso_en: >-
+    It is the Alfa's default anti-submarine torpedo: it is loaded into the five torpedo tubes and fired from the
+    Weapons station. It has no wire and a single speed (40 knots, 16 km): before launch choose course, seeker mode,
+    RTE, ceiling and pattern, then it runs on its own. The head hears little (800 metres active, 1,500 passive): it
+    needs a good firing solution and an RTE close to the target.
+  fonti: ['dossier 14 §1.3 e §2.9 [NavEnc705] [Legion705]', 'dossier 01 §6.1 [RWSET65] [NWRU]',
+    'siluri.toml (siluri.set65)', 'carico.toml (armi.set65, carichi.alfa)']
+
+siluro.saet60m:
+  it: >-
+    Il SAET-60M è un siluro sovietico da 533 mm del 1969 con testa acustica solo passiva, che ascolta il rumore del
+    bersaglio. Corre a 40 nodi per circa 15 km; la testata è di 300 kg, ma una fonte la dà di 100. Le fonti lo
+    descrivono come arma antinave o mista, antinave e antisom, e alcune lo mettono nella dotazione dell'Alfa accanto al
+    SET-65.
+  en: >-
+    The SAET-60M is a 1969 Soviet 533 mm torpedo with a passive-only acoustic head that listens for the target's
+    noise. It runs at 40 knots for about 15 km; the warhead is 300 kg, though one source gives 100. Sources describe
+    it as an anti-ship weapon or a mixed anti-ship and anti-submarine one, and some list it in the Alfa's load
+    alongside the SET-65.
+  uso_it: >-
+    Al comando dell'Alfa si carica nei tubi da siluro e si lancia con rotta, RTE, tetto e schema; la testa è solo
+    passiva e la velocità una sola (40 nodi, 15 km). Va bene contro bersagli rumorosi e veloci, navi o sottomarini
+    lanciati a tutta forza; un battello lento e silenzioso, o un'esca, lo ingannano facilmente. Non scende oltre i 200
+    metri (STIMA).
+  uso_en: >-
+    In command of the Alfa it is loaded into the torpedo tubes and fired with course, RTE, ceiling and pattern; the
+    head is passive only and there is a single speed (40 knots, 15 km). It suits noisy, fast targets, ships or
+    submarines running flat out; a slow, quiet boat, or a decoy, fools it easily. It does not dive below 200 metres
+    (estimate).
+  fonti: ['dossier 14 §1.3 e §2.9 [NavEnc705]', 'dossier 01 §6.1 [NWRU]', 'dossier 05 §5.3',
+    'siluri.toml (siluri.saet60m)', 'carico.toml (armi.saet60m)']
+
+siluro.type53_65k:
+  it: >-
+    Il 53-65K è un siluro sovietico antinave da 533 mm del 1969 che non insegue il rumore ma la scia della nave: la
+    testa riconosce la scia e la segue fino al bersaglio. Corre a 45 nodi per circa 19 km,
+    con una testata di 300 kg (una fonte dà cifre più alte, giudicate dubbie). Proprio perché ignora i suoni, nessuna
+    esca acustica lo inganna; per lo stesso motivo non serve contro un sottomarino in immersione.
+  en: >-
+    The 53-65K is a 1969 Soviet 533 mm anti-ship torpedo that follows not the noise but the ship's wake: the head
+    detects the wake and follows it to the target. It runs at 45 knots for about 19
+    km, with a 300 kg warhead (one source gives higher figures, considered doubtful). Precisely because it ignores
+    sound, no acoustic decoy fools it; for the same reason it is useless against a submerged submarine.
+  uso_it: >-
+    Al comando dell'Alfa è il siluro contro le navi: si carica nei tubi e si lancia con una rotta che attraversi la
+    scia del bersaglio, perché la testa non sente il rumore e aggancia solo la scia. Una sola velocità, 45 nodi per 19
+    km, e quota di corsa entro i 100 metri. Le esche della nave non lo fermano; la nave si salva solo con un cambio di
+    rotta fatto all'ultimo.
+  uso_en: >-
+    In command of the Alfa it is the anti-ship torpedo: load it into the tubes and fire it on a course that crosses
+    the target's wake, because the head does not hear noise and only locks onto the wake. One speed, 45 knots for 19
+    km, and a running depth within 100 metres. The ship's decoys do not stop it; the ship survives only with a
+    last-moment course change.
+  fonti: ['dossier 14 §2.9', 'dossier 01 §6.1 (note di gioco) [WPType53] [NWRU]', 'dossier 05 §5.3',
+    'siluri.toml (siluri.type53_65k)', 'carico.toml (armi.type53_65k)']
+
+siluro.mk46:
+  it: >-
+    Il Mk 46 è il siluro leggero da 324 mm della NATO, lanciato da aerei, elicotteri e navi; nel 1989 la versione in
+    servizio è il Mod 5. Le cifre ufficiali dicevano «oltre 28 nodi», ma corre a circa 45 nodi per 11 km e scende
+    fino a circa 450 metri, con una testa attiva o passiva/attiva e la ricerca a serpentina o a cerchio. La testata è
+    piccola, 44 kg. Lo portano il P-3C (4-8), l'S-3 (4), gli elicotteri SH-60B e SH-3H (2) e le fregate nei tubi Mk
+    32; è anche il siluro chiuso nella mina Mk 60 CAPTOR.
+  en: >-
+    The Mk 46 is NATO's 324 mm lightweight torpedo, launched from aircraft, helicopters and ships; in 1989 the version
+    in service is the Mod 5. Official figures said «over 28 knots», but it runs at about 45 knots for 11 km and dives
+    to about 450 metres, with an active or passive/active head and a snake or circle search. The warhead is small, 44
+    kg. It is carried by the P-3C (4-8), the S-3 (4), the SH-60B and SH-3H helicopters (2) and frigates in Mk 32
+    tubes; it is also the torpedo inside the Mk 60 CAPTOR mine.
+  uso_it: >-
+    Arriva dall'alto: un P-3C lo sgancia qualche centinaio di metri davanti al battello, un elicottero dal volo
+    stazionario o in passaggio, sempre col paracadute. Il tonfo in acqua e, 5-10 secondi dopo, il motore e i ping della
+    testa sono l'allarme «siluro in acqua»; poi cerca per 6-8 minuti, agganciando entro circa 1,5 km. La difesa: lancia
+    subito un'esca, accelera e cambia rotta, passa sotto lo strato o oltre i 450 metri; un battello in allerta con le
+    esche ha buone probabilità di cavarsela.
+  uso_en: >-
+    It comes from above: a P-3C drops it a few hundred metres ahead of the boat, a helicopter from the hover or in a
+    pass, always by parachute. The splash and, 5-10 seconds later, the motor and the head's pings are the «torpedo in
+    the water» alarm; then it searches for 6-8 minutes, acquiring within about 1.5 km. The defence: fire a decoy at
+    once, speed up and change course, go below the layer or beyond 450 metres; an alert boat with decoys has a good
+    chance of getting away.
+  fonti: ['dossier 01 §6.2 [FASMk46] [NWUS]', 'dossier 17 §1, §2.1-2.5, §6.2, §6.7 e §8.3 [FASMK46] [HARPHAAWC] [COTE]',
+    'dossier 14 §2.7', 'dossier 01 §4.1', 'siluri.toml (siluri.mk46)']
+
+siluro.at1:
+  it: >-
+    L'AT-1 (e l'AT-1M) è il siluro aviolanciato sovietico da 450 mm degli anni '60, portato dagli elicotteri Ka-25 e
+    Ka-27 e dal Tu-142. Scende col paracadute, poi gira a sinistra in un cerchio di 60-70 metri a 12
+    gradi al secondo cercando il bersaglio fra 20 e 200 metri di quota. È lento e corto: 27 nodi per 5 km,
+    acquisizione a circa 500 metri, testata di 70 kg, e si autodistrugge dopo 9 minuti. Alle prove di stato colpì solo
+    il 15-18% delle volte.
+  en: >-
+    The AT-1 (and AT-1M) is the Soviet 450 mm air-dropped torpedo of the 1960s, carried by the Ka-25 and Ka-27
+    helicopters and by the Tu-142. It descends by parachute, then turns left in a 60-70 metre
+    circle at 12 degrees per second, searching for the target between 20 and 200 metres depth. It is slow and short:
+    27 knots for 5 km, acquisition at about 500 metres, a 70 kg warhead, and it self-destructs after 9 minutes. In
+    state trials it hit only 15-18% of the time.
+  uso_it: >-
+    Lo sgancia un elicottero o un aereo sovietico; si sente il tonfo e poi i ping che arrivano dall'alto mentre il
+    siluro gira in cerchio. È il siluro nemico più facile da evitare: cerca solo fino a 200 metri, quindi basta
+    scendere sotto quella quota; a 27 nodi, inoltre, un 688 a tutta forza lo lascia indietro. Un'esca e qualche minuto
+    di fuga bastano: dopo 9 minuti si distrugge da solo.
+  uso_en: >-
+    A Soviet helicopter or aircraft drops it; you hear the splash and then the pings coming from above while the
+    torpedo circles. It is the easiest enemy torpedo to avoid: it searches only down to 200 metres, so just go below
+    that depth; at 27 knots, moreover, a 688 at full speed leaves it behind. A decoy and a few minutes of running are
+    enough: after 9 minutes it destroys itself.
+  fonti: ['dossier 17 §3.1-3.2, §3.5, §6.7, §8.3 e §9 [ART-Be12] [RW-Ka25]', 'dossier 01 §6.2 [RWKa25] [NWRU]',
+    'siluri.toml (siluri.at1)']
+
+siluro.at2:
+  it: >-
+    L'AT-2 (e le versioni AT-2M e AT-2U) è il siluro aviolanciato sovietico da 533 mm per gli aerei antisommergibile:
+    entrò in servizio nel 1965, la versione migliorata nel 1973. Pesa 1.030 kg, scende con un paracadute a più stadi
+    e aggancia il bersaglio a 600-1.000 metri con la testa attiva e passiva. Le fonti danno circa 40 nodi per 7 km e
+    una testata di 80-150 kg. Lo portano l'Il-38 e il Tu-142, e le navi lo lanciano a circa 50 km col missile Metel
+    (SS-N-14) da Kara, Krivak e Kirov.
+  en: >-
+    The AT-2 (and its AT-2M and AT-2U versions) is the Soviet 533 mm air-dropped torpedo for anti-submarine aircraft:
+    it entered service in 1965, the improved version in 1973. It weighs 1,030 kg, descends with a multi-stage
+    parachute and acquires the target at 600-1,000 metres with its active and passive head. Sources give about 40
+    knots for 7 km and an 80-150 kg warhead. It is carried by the Il-38 and Tu-142, and ships launch it out to about
+    50 km with the Metel missile (SS-N-14) from Kara, Krivak and Kirov.
+  uso_it: >-
+    Arriva da un aereo da pattugliamento sovietico o in cima a un missile lanciato da una nave: il primo avviso è il
+    tonfo in acqua. Nel gioco fa 40 nodi per 10 km, aggancia a 800 metri in attivo e in passivo e scende fino a 600
+    metri (STIMA). Si evita come il Mk 46: esca subito, poi velocità, cambio di rotta e di quota oltre lo strato, così
+    che la testa trovi l'esca e non il battello.
+  uso_en: >-
+    It comes from a Soviet patrol aircraft or atop a missile fired by a ship: the first warning is the splash. In
+    the game it does 40 knots for 10 km, acquires at 800 metres active and passive and dives to 600 metres
+    (estimate). Evade it like the Mk 46: a decoy at once, then speed, a change of course and of depth across the
+    layer, so that the head finds the decoy and not the boat.
+  fonti: ['dossier 17 §3.4-3.5 e §6.7 [ART-Il38] [ART-Tu142]', 'dossier 01 §6.2-6.3 [NWRU] [WPKara]',
+    'dossier 05 §5.3-5.4', 'siluri.toml (siluri.at2)']
+
+siluro.umgt1:
+  it: >-
+    L'UMGT-1 «Orlan» è il siluro leggero sovietico da 400 mm del 1981, con la testa attiva e passiva: corre a 41
+    nodi per 8 km e scende fino a 500-550 metri, con una testata di circa 60 kg. Lo sgancia l'elicottero Ka-27, ed è
+    anche il carico del missile antisom Vodopad (SS-N-16), lanciato dai tubi di Victor III, Akula e Oscar fino a 50
+    km. Entra in acqua a 60-65 metri al secondo con il motore già acceso, scende a 40-50 metri e comincia a girare a
+    sinistra.
+  en: >-
+    The UMGT-1 «Orlan» is the 1981 Soviet 400 mm lightweight torpedo, with an active and passive head: it runs at 41
+    knots for 8 km and dives to 500-550 metres, with a warhead of about 60 kg. The Ka-27 helicopter drops it, and it is
+    also the payload of the Vodopad anti-submarine missile (SS-N-16), launched from the tubes of Victor III, Akula and
+    Oscar out to 50 km. It enters the water at 60-65 metres per second with the motor already running, descends to
+    40-50 metres and starts turning left.
+  uso_it: >-
+    È la minaccia a distanza più seria: un Victor III o un Akula lo lancia col Vodopad da decine di chilometri, e il
+    primo segno è il razzo, poi il tonfo del siluro col paracadute; fra l'ammaraggio e la testa attiva restano 20-40
+    secondi (STIMA). Va subito in moto: lancia un'esca, accelera via dal punto d'ammaraggio e cambia quota. Scende fino
+    a 550 metri, quindi la profondità da sola non basta.
+  uso_en: >-
+    It is the most serious stand-off threat: a Victor III or an Akula fires it with the Vodopad from tens of
+    kilometres, and the first sign is the rocket, then the splash of the parachuted torpedo; between splashdown and
+    the active head there are 20-40 seconds (estimate). It starts running at once: fire a decoy, speed away from the
+    splash point and change depth. It dives to 550 metres, so depth alone is not enough.
+  fonti: ['dossier 17 §3.2, §6.7 e §8.3 [ART-Be12] [RW-UMGT1] [ART-Ka27]', 'dossier 01 §6.2-6.3 [NWRU] [WPRPK6]',
+    'dossier 05 §0.1 punto 7, §3.1-3.2 [RWVodopad] [DSRM671]', 'siluri.toml (siluri.umgt1)']
+
+siluro.apr2:
+  it: >-
+    L'APR-2 «Yastreb-M» (1976) è un razzo-siluro sovietico da 350 mm aviolanciato, l'arma degli elicotteri e degli
+    aerei antisom nel 1985-91 (l'APR-3 venne dopo). Dopo l'ammaraggio plana in spirale verso il basso, ascoltando in
+    passivo fino a 150 metri; poi accende il motore a razzo e passa in attivo, a 43-60 nodi. Colpisce bersagli fra 15 e
+    600 metri, ma solo da vicino: la corsa subacquea è di 1,5-2 km. Le fonti russe gli danno una probabilità di
+    colpire del 70-85% con un errore di designazione di 300-500 metri.
+  en: >-
+    The APR-2 «Yastreb-M» (1976) is a Soviet 350 mm air-dropped rocket torpedo, the weapon of anti-submarine
+    helicopters and aircraft in 1985-91 (the APR-3 came later). After splashdown it glides down in a spiral,
+    listening passively down to 150 metres; then it lights its rocket motor and switches to active, at 43-60 knots.
+    It hits targets between 15 and 600 metres, but only at close range: the underwater run is 1.5-2 km. Russian
+    sources give it a 70-85% chance of a hit with a designation error of 300-500 metres.
+  uso_it: >-
+    Lo sganciano il Ka-27, il Ka-25 e l'Il-38 quasi sopra il battello, ed è il siluro aereo più pericoloso del gioco:
+    velocissimo, profondo e con una testa che vede in un cono ampio. Mentre plana ascolta soltanto: è il momento di
+    lanciare l'esca, rallentare e diventare silenziosi, perché una volta acceso il razzo non lo si distanzia. La sua
+    corsa è breve (3 km nel gioco): allontanarsi in silenzio dal punto in cui è caduto è la difesa migliore.
+  uso_en: >-
+    The Ka-27, Ka-25 and Il-38 drop it almost on top of the boat, and it is the most dangerous air-dropped torpedo in
+    the game: very fast, deep-diving and with a head that sees in a wide cone. While it glides it only listens: that
+    is the moment to fire a decoy, slow down and go quiet, because once the rocket is lit you cannot outrun it. Its run
+    is short (3 km in the game): slipping quietly away from where it fell is the best defence.
+  fonti: ['dossier 17 §1, §3.1-3.4 e §6.7 [RW-APR2] [ART-Ka27] [ART-Il38]', 'dossier 01 §6.2 [RWKa25] [NWRU]',
+    'dossier 05 §5.4', 'siluri.toml (siluri.apr2)']
+
+siluro.shkval:
+  it: >-
+    Il VA-111 Shkval è un siluro sovietico supercavitante a razzo da 533 mm: corre a circa 200 nodi, ma solo per circa 11 km, con una testata di 210 kg. Era in servizio dal 1977, ma l'Occidente lo conobbe
+    solo negli anni '90: nel 1989 era un'arma segreta. Le schede dell'Alfa citano «20 Shkval al posto dei siluri», ma
+    nessuna fonte nomina un battello che li abbia davvero imbarcati; una lo descrive come arma non guidata contro i
+    siluri in arrivo.
+  en: >-
+    The VA-111 Shkval is a Soviet 533 mm supercavitating rocket torpedo: it runs at about 200 knots, but only for about 11 km, with a 210 kg warhead. It was in service from 1977, but the West learned of it
+    only in the 1990s: in 1989 it was a secret weapon. Alfa data sheets mention «20 Shkval instead of torpedoes», but
+    no source names a boat that actually carried them; one describes it as an unguided weapon against incoming
+    torpedoes.
+  uso_it: >-
+    Non si carica: è un'arma solo per il computer, in missioni scelte, e la libreria americana non la conosce. Non ha
+    testa né filo e va dritto, quindi le esche non servono e non lo si distanzia: l'unica difesa è non trovarsi sulla
+    sua rotta. È pericoloso solo da vicino, entro una decina di chilometri: contro un Alfa conviene tenersi lontani e
+    sparare per primi.
+  uso_en: >-
+    It cannot be loaded: it is a computer-only weapon, in selected missions, and the American library does not know
+    it. It has no homing head or wire and runs straight, so decoys are useless and you cannot outrun it: the only
+    defence is not being on its track. It is dangerous only at close range, within about ten kilometres: against an
+    Alfa, keep your distance and shoot first.
+  fonti: ['dossier 14 §1.3 e §2.10 [WPShkval] [WPAlfa] [GS705] [Legion705] [NavEnc705]', 'carico.toml (armi.shkval)']
+
+missile.harpoon:
+  it: >-
+    L'UGM-84 Sub-Harpoon è il missile antinave dei sottomarini d'attacco americani dal 1981; nel 1989 a bordo c'erano
+    le versioni A, C (radente, dal 1982) e D (Block 1C, dal 1985). Esce dal tubo in una capsula che sale in superficie
+    per galleggiamento; solo all'affioramento si aprono i tappi e si accende il razzo, poi un turbogetto lo porta a
+    circa Mach 0,85 radente sul mare. Il radar attivo in banda J si accende a una distanza preimpostata dal punto
+    previsto; la testata è di 221 kg e la portata da sottomarino circa 110-140 km. Ogni capsula occupa il posto di un
+    siluro.
+  en: >-
+    The UGM-84 Sub-Harpoon has been the anti-ship missile of American attack submarines since 1981; in 1989 the A, C
+    (sea-skimming, from 1982) and D (Block 1C, from 1985) versions were aboard. It leaves the tube in a capsule that
+    rises to the surface by buoyancy; only on broaching do the caps blow and the rocket ignite, then a turbojet
+    carries it at about Mach 0.85, skimming the sea. The J-band active radar switches on at a preset distance from the
+    predicted point; the warhead is 221 kg and the range from a submarine about 110-140 km. Each capsule takes the
+    place of a torpedo.
+  uso_it: >-
+    Si carica in un tubo come un siluro e si lancia dalla stazione Armi solo contro le navi: servono un bersaglio
+    identificato con traccia solida, almeno 5 miglia di distanza e la quota periscopica. Il missile vola dritto verso
+    il punto previsto e poi cerca col radar, quindi conviene una buona stima di distanza e rotta del bersaglio. Il
+    lancio si vede e si sente (capsula, fumo del razzo), e la rotta dritta tradisce il punto di partenza: dopo la salva
+    bisogna allontanarsi.
+  uso_en: >-
+    It is loaded into a tube like a torpedo and fired from the Weapons station against ships only: it needs an
+    identified target with a solid track, at least 5 miles of range and periscope depth. The missile flies straight
+    to the predicted point and then searches with its radar, so a good estimate of the target's range and course
+    pays. The launch is seen and heard (capsule, rocket smoke), and the straight flight path gives away the launch
+    point: after the salvo, get away.
+  fonti: ['dossier 14 §2.2 e §3.6 [DSM84]', 'dossier 05 §0.1 punto 1, §1.1-1.7 e §7.2 [DS84] [USNI77]',
+    'dossier 01 §6.4', 'carico.toml (armi.harpoon)']
+
+missile.tasm:
+  it: >-
+    L'UGM-109B TASM è la versione antinave del Tomahawk, in servizio dal 1983 e ritirata all'inizio degli anni '90.
+    Dal tubo esce in un contenitore e accende il razzo già sott'acqua; dai pozzi verticali dei Flight II parte senza
+    togliere posti al locale siluri. Vola a circa 245 metri al secondo e ha una portata utile di circa 460 km, con una
+    testata di 450 kg. Era un'arma d'area: dopo fino a mezz'ora di volo cercava a serpentina con l'ESM e il radar, e
+    nelle simulazioni degli anni '80 colpì più spesso altre navi che il bersaglio designato.
+  en: >-
+    The UGM-109B TASM is the anti-ship version of the Tomahawk, in service from 1983 and retired in the early 1990s.
+    From a tube it leaves in a canister and ignites its rocket while still underwater; from the vertical tubes of the
+    Flight IIs it launches without taking any torpedo room slots. It flies at about 245 metres per second and has a
+    useful range of about 460 km, with a 450 kg warhead. It was an area weapon: after up to half an hour of flight it
+    searched in a serpentine path with ESM and radar, and in 1980s simulations it hit other ships more often than the
+    designated target.
+  uso_it: >-
+    È il «Tomahawk» delle missioni originali: si carica in un tubo (un posto) o nei pozzi verticali dei Flight II e
+    688I, e si lancia contro navi a quota periscopica con un contatto a traccia solida. Con mezz'ora di volo il
+    bersaglio si sposta di parecchie miglia e il missile si accontenta della prima nave che trova: attenti ai neutrali
+    e alle navi amiche nella zona. Dopo il lancio, come con l'Harpoon, conviene lasciare il punto di partenza.
+  uso_en: >-
+    It is the «Tomahawk» of the original missions: load it into a tube (one slot) or into the vertical tubes of the
+    Flight II and 688I, and fire it against ships at periscope depth with a solid-track contact. With half an hour of
+    flight the target moves several miles and the missile settles for the first ship it finds: beware of neutral and
+    friendly ships in the area. After launch, as with the Harpoon, leave the launch point.
+  fonti: ['dossier 14 §2.3 e §3.6 [DSM109]', 'dossier 05 §0.1 punti 2 e 4, §2.1-2.3 [DS109] [NG2] [GAO95]',
+    'dossier 01 §6.4', 'carico.toml (armi.tasm, predefinite.usa)']
+
+missile.tlam_c:
+  it: >-
+    L'UGM-109C TLAM-C è il Tomahawk convenzionale d'attacco a terra, in servizio dal 1986, con una testata di 450 kg.
+    Vola sul mare con la navigazione inerziale, si corregge sulla costa confrontando il radioaltimetro con mappe del
+    terreno (TERCOM) e nell'ultima fase con immagini del bersaglio (DSMAC). Dal sottomarino la portata scende di circa
+    il 30%, da 1.250 a circa 875 km, perché il booster si porta via parte del carburante. Le missioni si preparavano a
+    terra anche per 72 ore e a bordo serviva circa un'ora per lanciare.
+  en: >-
+    The UGM-109C TLAM-C is the conventional land-attack Tomahawk, in service from 1986, with a 450 kg warhead. It
+    flies over the sea on inertial navigation, corrects itself at the coast by comparing its radar altimeter with
+    terrain maps (TERCOM) and in the final phase with images of the target (DSMAC). From a submarine the range drops
+    by about 30%, from 1,250 to about 875 km, because the booster takes up part of the fuel. Missions were prepared
+    ashore for up to 72 hours, and aboard it took about an hour to launch.
+  uso_it: >-
+    Si imbarca solo se la missione prevede un attacco a terra: nei tubi sui Flight I, togliendo posti ai siluri, o
+    nei 12 pozzi verticali sui Flight II e 688I. Non si spara a vista: la missione arriva già pianificata e il
+    battello deve raggiungere l'area di lancio prevista (5-10 miglia di raggio, STIMA) e lì lanciare dopo la
+    preparazione. Il lancio rivela la posizione: poi ci si allontana in fretta.
+  uso_en: >-
+    It is embarked only if the mission calls for a land attack: in the tubes on Flight I boats, taking torpedo
+    slots, or in the 12 vertical tubes on Flight II and 688I boats. It is not fired at will: the mission arrives
+    already planned and the boat must reach the planned launch area (5-10 miles radius, estimate) and fire there after
+    the preparation. The launch reveals the position: then get away quickly.
+  fonti: ['dossier 14 §2.3 e §3.6 [DSM109]', 'dossier 05 §0.1 punto 3, §2.2 e §2.4 [DS109] [GAO95] [FASCMSA]',
+    'carico.toml (armi.tlam_c, carichi.los_angeles_flight2)']
+
+missile.sea_lance:
+  it: >-
+    L'UUM-125 Sea Lance fu pensato nel 1980 come successore del SUBROC e dell'ASROC: una capsula da 21 pollici lanciata
+    dal tubo che porta lontano, e vi fa scendere col paracadute, un siluro leggero Mk 50, a sua volta non ancora in
+    servizio nel 1989. La Boeing ebbe il contratto nel 1982; la versione nucleare fu rinviata e quella convenzionale fu
+    cancellata nel 1990, ancora in sviluppo. Nel 1989 quindi non esisteva in servizio, ma il gioco originale lo
+    metteva nella dotazione di due missioni.
+  en: >-
+    The UUM-125 Sea Lance was conceived in 1980 as the successor to SUBROC and ASROC: a 21-inch capsule fired from the
+    tube that carries a Mk 50 lightweight torpedo far away and lowers it there by parachute; the Mk 50 itself was not
+    yet in service in 1989. Boeing got the contract in 1982; the nuclear version was deferred and the conventional one was
+    cancelled in 1990, still in development. In 1989 it therefore did not exist in service, but the original game put
+    it in the load of two missions.
+  uso_it: >-
+    È un'arma «what-if»: si carica (un posto, come un siluro) solo con l'opzione relativa o nelle due missioni
+    originali che la prevedono. Si lancia dalla stazione Armi contro un sottomarino con un contatto a traccia solida,
+    alle condizioni dei missili del tubo 7; l'arma arriva in pochi minuti sul punto previsto, dove il Mk 50 comincia
+    a cercare da solo. Portata e prestazioni sono STIMA (circa 185 km nel gioco).
+  uso_en: >-
+    It is a «what-if» weapon: it is loaded (one slot, like a torpedo) only with the corresponding option or in the
+    two original missions that include it. It is fired from the Weapons station against a submarine with a
+    solid-track contact, under the conditions for tube 7 missiles; the weapon reaches the predicted point in a few
+    minutes, where the Mk 50 starts searching on its own. Range and performance are estimates (about 185 km in the
+    game).
+  fonti: ['dossier 14 §2.5, §4.2 e §5.2 [WPSeaLance] [DSM125]', 'dossier 01 §6.2-6.3 [WPSUBROC] [WPMk50]',
+    'carico.toml (armi.sea_lance)']
+
+missile.vyuga:
+  it: >-
+    L'RPK-2 Vyuga (SS-N-15) è un missile antisommergibile sovietico lanciato dal tubo da 533 mm, l'equivalente del
+    SUBROC americano: esce dall'acqua, vola senza autoguida sul punto calcolato e vi fa cadere la carica. Entrò in
+    servizio nel 1969 o nel 1973 secondo le fonti, con una portata fra 10 e 45 km; il primo battello armato fu un
+    Pr.705, e lo portavano anche Victor, Akula, Oscar e Typhoon. Nel 1989 portava la testata nucleare (dossier 05), la
+    cui grande area d'effetto compensa la mancanza di guida; la versione con la carica di profondità convenzionale,
+    citata da una sola fonte, nel gioco è una semplificazione.
+  en: >-
+    The RPK-2 Vyuga (SS-N-15) is a Soviet anti-submarine missile fired from the 533 mm tube, the counterpart of the
+    American SUBROC: it leaves the water, flies without homing to the computed point and drops its payload there. It
+    entered service in 1969 or 1973 depending on the source, with a range of 10 to 45 km; the first armed boat was a
+    Project 705, and Victor, Akula, Oscar and Typhoon also carried it. In 1989 it carried the nuclear warhead (dossier
+    05), whose large area of effect makes up for the lack of guidance; the conventional depth-charge version, given by
+    a single source, is a simplification in the game.
+  uso_it: >-
+    Non si carica: nel gioco è un'arma del computer e porta una carica di profondità convenzionale, una semplificazione
+    del carico (dossier 14) al posto della testata nucleare vera; la usano soprattutto il
+    Victor III e, solo come variante, l'Alfa. Il battello nemico la lancia da 50-60 metri di quota contro la
+    posizione stimata del 688: si sente il lancio e poi il razzo. Non ha testa, quindi le esche non servono: conta solo
+    allontanarsi in fretta dal punto in cui il nemico ti crede.
+  uso_en: >-
+    It cannot be loaded: in the game it is a computer weapon and carries a conventional depth charge, a simplification
+    of the load (dossier 14) in place of the real nuclear warhead; it is used mainly by the
+    Victor III and by the Alfa only as a variant. The enemy boat fires it from 50-60 metres depth at the 688's
+    estimated position: you hear the launch and then the rocket. It has no homing head, so decoys are useless: what
+    matters is getting quickly away from where the enemy thinks you are.
+  fonti: ['dossier 14 §1.3 e §2.11 [WPVyuga]', 'dossier 05 §0.1 punto 7, §3.1-3.2 e §7.2 [RWVyuga]',
+    'dossier 01 §6.3 [WPRPK6]', 'carico.toml (armi.vyuga)']
+
+missile.p700:
+  it: >-
+    Il P-700 Granit (SS-N-19) è il grande missile antinave sovietico entrato in servizio nel 1983: 24 sugli Oscar, 20
+    sull'incrociatore Kirov, 12 sulla portaerei Kuznetsov, lanciati da contenitori inclinati e allagati prima del
+    lancio. Vola alto a Mach 2,5 per gran parte della rotta e scende a circa 25 metri, a Mach 1,5-1,6, dopo aver trovato
+    i bersagli; la portata è di circa 550 km, la testata di 750 kg o nucleare. Le fonti descrivono salve fino a 24
+    missili che si scambiano i dati e si dividono i bersagli, ma su questo punto esistono dubbi. Nel 1989 l'ultimo
+    satellite radar sovietico era già stato lanciato: un gruppo navale in silenzio radar era difficile da localizzare.
+  en: >-
+    The P-700 Granit (SS-N-19) is the large Soviet anti-ship missile that entered service in 1983: 24 on the Oscars,
+    20 on the cruiser Kirov, 12 on the carrier Kuznetsov, launched from inclined containers flooded before firing. It
+    flies high at Mach 2.5 for most of the route and drops to about 25 metres, at Mach 1.5-1.6, after finding the
+    targets; the range is about 550 km, the warhead 750 kg or nuclear. Sources describe salvoes of up to 24 missiles
+    that share data and divide the targets among themselves, but this point is doubtful. By 1989 the last Soviet
+    radar satellite had already been launched: a naval group under radar silence was hard to locate.
+  uso_it: >-
+    Non minaccia il battello, ma le navi che il 688 scorta: nelle missioni di scorta un Oscar o un Kirov può lanciarne
+    una salva sul gruppo. Il lancio si sente bene: transitori regolari ogni 3-5 secondi e il rumore dei razzi, a
+    decine di chilometri (STIMA). In volo il missile si scopre solo quando accende il radar della testa, che l'ESM
+    riconosce: la vera difesa è trovare e affondare l'Oscar prima che spari.
+  uso_en: >-
+    It does not threaten the boat but the ships the 688 escorts: in escort missions an Oscar or a Kirov may fire a
+    salvo at the group. The launch is easy to hear: regular transients every 3-5 seconds and the noise of the
+    rockets, at tens of kilometres (estimate). In flight the missile shows up only when it switches on its seeker
+    radar, which the ESM recognises: the real defence is to find and sink the Oscar before it fires.
+  fonti: ['dossier 01 §6.4 [WPGranit]', 'dossier 05 §0.1 punto 8, §3.1, §3.3 e §3.5 [RWP700] [NPK206] [WPUSA]',
+    'emettitori.toml (radar.granit)', 'classi.toml (p700)']
+
+mina.mk60:
+  it: >-
+    La Mk 60 CAPTOR è una mina americana antisommergibile: un siluro leggero Mk 46 chiuso in un
+    contenitore ormeggiato, che si libera e parte all'inseguimento quando sente passare un sottomarino. La
+    versione posata dai sottomarini è lunga 3,35 metri e pesa 935 kg, quella degli aerei e delle navi 3,68 metri e
+    1.077 kg; il diametro è di 533 mm. Nel 1989 era in servizio, sui 688, sugli Sturgeon e sugli aerei da
+    pattugliamento P-3C e S-3.
+  en: >-
+    The Mk 60 CAPTOR is an American anti-submarine mine: a Mk 46 lightweight torpedo enclosed
+    in a moored container, which releases it to give chase when it hears a submarine passing. The
+    submarine-laid version is 3.35 metres long and weighs 935 kg, the aircraft and ship version 3.68 metres and 1,077
+    kg; the diameter is 533 mm. In 1989 it was in service, on the 688s, the Sturgeons and the P-3C and S-3 patrol
+    aircraft.
+  uso_it: >-
+    Si carica nei tubi come un siluro (un posto) e si posa dove passeranno i sottomarini nemici, su fondali profondi
+    fra 200 e 900 metri (STIMA). Dopo 10 minuti si arma; ignora le navi di superficie e i battelli sopra i 30 metri, e
+    contro un sottomarino in immersione entro circa 1 km libera il suo Mk 46. Una volta posata non si comanda più: va
+    lontano dalle rotte dei sottomarini amici.
+  uso_en: >-
+    It is loaded into the tubes like a torpedo (one slot) and laid where enemy submarines will pass, in deep water
+    between 200 and 900 metres (estimate). It arms after 10 minutes; it ignores surface ships and boats shallower than
+    30 metres, and against a submerged submarine within about 1 km it releases its Mk 46. Once laid it can no longer be
+    controlled: lay it away from the routes of friendly submarines.
+  fonti: ['dossier 14 §2.7 [WPCaptor]', 'dossier 01 §2.1-2.2 [FAS688] [WPSturgeon]', 'dossier 17 §2.4-2.5 [FASP3] [TWZS3]',
+    'carico.toml (armi.mk60, mine.mk60)']
+
+mina.pmr1:
+  it: >-
+    La PMR-1 «Kal'mar» è una mina-razzo antisommergibile sovietica in servizio dal 1970: invece di un siluro, quando
+    rileva acusticamente un sottomarino lancia contro di lui un razzo subacqueo. È lunga come un siluro, 7,8 metri per
+    533 mm e 1.700 kg, con una carica di 200 kg, e si posa dai tubi dei sottomarini. Colpisce battelli fra 30 e 400
+    metri che vanno a 6-30 nodi; per coprire tutte le quote servivano due file di mine. Una fonte la descriveva come
+    mina-siluro da 400 mm anche antinave, ma le fonti russe lo smentiscono.
+  en: >-
+    The PMR-1 «Kal'mar» is a Soviet anti-submarine rocket mine in service from 1970: instead of a torpedo, when it
+    acoustically detects a submarine it fires an underwater rocket at it. It is as long as a torpedo, 7.8 metres by
+    533 mm and 1,700 kg, with a 200 kg charge, and is laid from submarine tubes. It hits boats between 30 and 400
+    metres moving at 6-30 knots; covering all depths required two rows of mines. One source described it as a 400 mm
+    torpedo mine also used against ships, but Russian sources contradict this.
+  uso_it: >-
+    Al comando dell'Alfa si carica nei tubi al posto di un siluro (un posto) e si posa su fondali di 200-1.000 metri;
+    la mina resta intorno ai 300 metri (STIMA). Dopo 10 minuti si arma e attacca solo i sottomarini in immersione che
+    passano sopra di lei entro circa 100 metri, ignorando le navi. Per sbarrare un passaggio ne servono più d'una,
+    vicine fra loro.
+  uso_en: >-
+    In command of the Alfa it is loaded into the tubes instead of a torpedo (one slot) and laid on seabeds of
+    200-1,000 metres; the mine sits at about 300 metres (estimate). After 10 minutes it arms and attacks only
+    submerged submarines passing above it within about 100 metres, ignoring ships. Blocking a passage takes several of
+    them, close together.
+  fonti: ['dossier 14 §2.12 [RuPMR1] [AMPMR2] [NavEnc705]', 'carico.toml (armi.pmr1, mine.pmr1)']
+
+mina.pmr2:
+  it: >-
+    La PMR-2 (in Unione Sovietica PMK-1), del 1972 o 1973, è il successore della PMR-1: una mina-razzo antisom lunga
+    7,83 metri, 533 mm di diametro e 1.850 kg, con una carica di 175 kg (la versione d'esportazione ne porta di più).
+    Si posa su fondali di 200-1.000 metri e resta a 200-400 metri di quota; quando sente un sottomarino fra 50 e 200
+    metri, in un settore di 160 gradi verso l'alto, gli lancia contro un razzo a 80-100 metri al secondo e l'attacco
+    dura al più 7 secondi. Il suo raggio, circa 200 metri, è il doppio di quello della PMR-1.
+  en: >-
+    The PMR-2 (PMK-1 in the Soviet Union), from 1972 or 1973, is the successor of the PMR-1: an anti-submarine rocket
+    mine 7.83 metres long, 533 mm in diameter and weighing 1,850 kg, with a 175 kg charge (the export version carries
+    more). It is laid on seabeds of 200-1,000 metres and sits at 200-400 metres depth; when it hears a submarine
+    between 50 and 200 metres, in a 160-degree sector looking upward, it fires a rocket at 80-100 metres per second
+    and the attack lasts at most 7 seconds. Its radius, about 200 metres, is double that of the PMR-1.
+  uso_it: >-
+    È la mina predefinita dell'Alfa: si carica nei tubi (un posto) e si posa su fondali profondi, 200-1.000 metri. Dopo
+    10 minuti si arma e attacca solo i sottomarini in immersione che passano sopra di lei entro circa 200 metri; le
+    navi non la fanno scattare. Va posata nei canali dove il nemico deve passare, lontano dalle rotte amiche: una
+    volta in acqua non si comanda più.
+  uso_en: >-
+    It is the Alfa's default mine: it is loaded into the tubes (one slot) and laid on deep seabeds, 200-1,000 metres.
+    After 10 minutes it arms and attacks only submerged submarines passing above it within about 200 metres; ships do
+    not set it off. Lay it in the channels the enemy must pass through, away from friendly routes: once in the water it
+    can no longer be controlled.
+  fonti: ['dossier 14 §2.12 [AMPMR2] [WFPMR2]', 'carico.toml (armi.pmr2, mine.pmr2, predefinite.urss)']
+
+mina.mdt:
+  it: >-
+    L'MDT è una mina da fondo sovietica che si posa dal tubo da siluro, progettata dal TsKB-145 e in servizio dal
+    1953: scoppia per influenza acustica e magnetica entro circa 50 metri. È corta, circa 2,57 metri per 534,5 mm e
+    1.050 kg, con ben 600 kg di esplosivo, e ne entrano due per tubo, unite da un aggancio che si separa al lancio.
+    Funziona solo in acque basse, su fondali fino a 50 metri, e si posa a 4 nodi in superficie o a 8 in immersione.
+    Compare ancora in un testo sovietico del 1984, e con lei l'Alfa può portare 36 mine al posto di 18 armi.
+  en: >-
+    The MDT is a Soviet bottom mine laid from the torpedo tube, designed by TsKB-145 and in service from 1953: it
+    fires by acoustic and magnetic influence within about 50 metres. It is short, about 2.57 metres by 534.5 mm and
+    1,050 kg, with as much as 600 kg of explosive, and two fit in a tube, joined by a coupling that separates at
+    launch. It works only in shallow water, on seabeds down to 50 metres, and is laid at 4 knots surfaced or 8
+    submerged. It still appears in a Soviet text of 1984, and with it the Alfa can carry 36 mines instead of 18 weapons.
+  uso_it: >-
+    Al comando dell'Alfa occupa mezzo posto: due mine per tubo. Non corre: si posa direttamente sotto il battello, su
+    fondali fra 8 e 50 metri, quindi bisogna entrare nelle acque basse da minare, piano e con prudenza. Dopo 10 minuti
+    si arma e colpisce navi e sottomarini che passano entro circa 50 metri; non distingue gli amici.
+  uso_en: >-
+    In command of the Alfa it takes half a slot: two mines per tube. It does not run: it settles directly beneath the
+    boat, on seabeds between 8 and 50 metres, so you must go into the shallow water to be mined, slowly and carefully.
+    After 10 minutes it arms and strikes ships and submarines passing within about 50 metres; it does not tell friend
+    from foe.
+  fonti: ['dossier 14 §2.12 [WPMDT] [AMMDT]', 'carico.toml (armi.mdt, mine.mdt, carichi.alfa.minamento)']
+
+esca.mg74:
+  it: >-
+    L'MG-74 «Korund» è l'esca semovente sovietica del 1974: ha la forma e la batteria di un siluro elettrico corto,
+    lungo 3,9 metri, e parte dal tubo da 533 mm. Corre fino a 250 metri di quota e fa tre cose: disturba il sonar del
+    siluro, ne imita l'eco del sottomarino o ne imita il rumore. Manovra da sola come un battello, con quota e
+    velocità impostate prima del lancio, e cambia modo secondo i ping che riceve.
+  en: >-
+    The MG-74 «Korund» is the Soviet self-propelled decoy of 1974: it has the shape and battery of a short electric
+    torpedo, 3.9 metres long, and is fired from the 533 mm tube. It runs down to 250 metres depth and does three
+    things: it jams the torpedo's sonar, imitates the submarine's echo or imitates its noise. It manoeuvres by itself
+    like a boat, with depth and speed set before launch, and changes mode according to the pings it receives.
+  uso_it: >-
+    Al comando dell'Alfa c'è sempre: prende il posto di un siluro, nel tubo o in rastrelliera. Lanciatela quando un
+    siluro vi ha agganciato, poi virate, cambiate quota e rallentate: l'esca deve restare più interessante del
+    battello. Contro un siluro filoguidato l'operatore può accorgersene, e contro uno sulla scia non serve.
+  uso_en: >-
+    In command of the Alfa it is always there: it takes the place of a torpedo, in the tube or in the rack. Fire it
+    once a torpedo has locked on, then turn, change depth and slow down: the decoy must stay more interesting than
+    the boat. Against a wire-guided torpedo the operator may notice, and against a wake homer it is useless.
+  fonti: ['dossier 05 §5.2 [WARFOR] [KREM]', 'carico.toml (armi.mg74)']
+
+esca.moss_mk70:
+  it: >-
+    La MOSS Mk 70 (Mobile Submarine Simulator) è l'esca semovente americana dal 1976: un veicolo da 10 pollici
+    costruito sul siluro Mk 37, senza testata, che parte dal tubo da 533 mm dentro un manicotto. Imita il rumore e
+    l'eco del sottomarino e se ne allontana. Negli anni '80 stava sugli SSBN, fino al ritiro a metà anni '90: sul 688
+    del 1989 non c'era.
+  en: >-
+    The MOSS Mk 70 (Mobile Submarine Simulator) is the American self-propelled decoy from 1976: a 10-inch vehicle built
+    on the Mk 37 torpedo, with no warhead, fired from the 533 mm tube inside a sleeve. It imitates the submarine's
+    noise and echo and moves away from it. In the 1980s it was carried by the SSBNs until its retirement in the
+    mid-1990s: the 1989 688 did not have it.
+  uso_it: >-
+    Solo nel modo moderno, come scelta «what-if»: occupa il posto di un siluro. Lanciatela verso un lato e
+    allontanatevi dall'altro, lentamente: un siluro passivo segue la firma più forte, uno attivo l'eco più vicina.
+    Nel modo 1989 il 688 ha soltanto le esche ADC Mk 2 dell'eiettore.
+  uso_en: >-
+    Only in the modern mode, as a «what-if» choice: it takes the place of a torpedo. Fire it to one side and move away
+    to the other, slowly: a passive torpedo follows the loudest signature, an active one the nearest echo. In the 1989
+    mode the 688 only has the ADC Mk 2 decoys from the ejector.
+  fonti: ['dossier 05 §5.1 [WPMOSS] [GOVT]', 'carico.toml (armi.moss_mk70)']
+
+esca.mg84:
+  it: >-
+    L'MG-84 «Korund-705» è, secondo una fonte divulgativa, l'esca da 400 mm dei sottomarini Alfa (1974), capace di
+    disturbare il sonar del siluro o di imitare la firma del battello. Le fonti sovietiche più solide descrivono una
+    famiglia «Korund» dello stesso anno, l'MG-74: un'esca semovente lanciata dal tubo da 533 mm, lunga 3,9 metri, che
+    corre fino a 250 metri di quota disturbando, imitando l'eco o il rumore del sottomarino e manovrando come lui. Dei
+    dati dell'MG-84 come tale non c'è nulla di pubblico.
+  en: >-
+    According to a popular source, the MG-84 «Korund-705» is the 400 mm decoy of the Alfa submarines (1974), able to
+    jam the torpedo's sonar or imitate the boat's signature. The more solid Soviet sources describe a «Korund» family
+    of the same year, the MG-74: a self-propelled decoy launched from the 533 mm tube, 3.9 metres long, which runs down
+    to 250 metres depth jamming, imitating the submarine's echo or noise and manoeuvring like it. Nothing public
+    exists on the MG-84 itself.
+  uso_it: >-
+    Al comando dell'Alfa le esche sono 4 e partono dal sesto tubo, come nel gioco originale; non tolgono posti ai
+    siluri, ma contano fra le armi in acqua (al più 6). Si lancia appena si sente un siluro nemico, poi si cambia rotta
+    e quota e si rallenta per lasciarla più rumorosa del battello. Contro un Mk 48 ancora guidato dal filo vale poco,
+    e contro un siluro sulla scia non serve.
+  uso_en: >-
+    In command of the Alfa there are 4 decoys, fired from the sixth tube as in the original game; they take no
+    torpedo slots, but count among the weapons in the water (at most 6). Fire one as soon as you hear an enemy
+    torpedo, then change course and depth and slow down so it stays louder than the boat. Against a Mk 48 still
+    guided by its wire it is of little use, and against a wake-homing torpedo it is useless.
+  fonti: ['dossier 14 §2.13 e §4.2-4.3 [NavEnc705]', 'dossier 05 §5.2-5.4 [WARFOR] [KREM]',
+    'dossier 01 §6.6', 'carico.toml (armi.mg84, locali.alfa)']

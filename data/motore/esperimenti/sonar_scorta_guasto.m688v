@@ -1,0 +1,33 @@
+# Esperimento pronto del vetrino di Dio (docs/28 §5, D2; formato: nota trailer1-d2-forma-m688v.md). La scena S5 del
+# convoglio: tre Perry di scorta (8, 9, 10), il Victor III (12) che lancia fra 598 e 758 s.
+[esperimento]
+titolo = "Il sonar della scorta guasto"
+mostra = "Che cosa cambia se le tre Perry perdono il sonar prima che il Victor attacchi"
+ipotesi = "Senza sonar la scorta scopre il Victor piu' tardi, o non lo scopre, e il convoglio perde di piu'"
+codice = "8FZD3Q-4G0000-04K000-0000HZ-G002QH"
+semi = 10
+da = 1
+
+[[intervento]]
+tempo = 60.0
+tipo = "sensore"
+unita = 8
+durata_s = 0.0
+parametri = { fattore = 0.0 }
+testi = { sensore = "sonar" }
+
+[[intervento]]
+tempo = 60.0
+tipo = "sensore"
+unita = 9
+durata_s = 0.0
+parametri = { fattore = 0.0 }
+testi = { sensore = "sonar" }
+
+[[intervento]]
+tempo = 60.0
+tipo = "sensore"
+unita = 10
+durata_s = 0.0
+parametri = { fattore = 0.0 }
+testi = { sensore = "sonar" }

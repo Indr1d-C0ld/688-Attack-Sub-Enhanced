@@ -1,0 +1,15 @@
+# Esperimento per il quadro radio ai sottomarini (tools/re/prove/quadro_radio/proposta.md §4, M4). La scena M4: un Victor III (6)
+# di pattuglia, senza limite di salve, e a 40 km un convoglio (2, 3, 4) con una Perry (5), in guerra.
+[esperimento]
+titolo = "Il Victor e la spia"
+mostra = "Un Victor a 40 km da un convoglio con una Perry: la spia da' il quadro, ma lui sente gia' il convoglio da solo e il dato non gli serve"
+ipotesi = "La stessa partita di quella senza spia: col contatto suo il Victor non va sul dato. Misurato il 05/11: stessa impronta in 10 semi su 10"
+codice = "8CDXSF-P80000-04K000-0000HZ-G00295"
+semi = 10
+da = 1
+
+[[intervento]]
+tempo = 0.0
+tipo = "spia"
+durata_s = 0.0
+testi = { parte = "urss", altra = "usa" }

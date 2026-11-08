@@ -1,0 +1,45 @@
+# Maschere ritoccate a mano delle foto del Kirov (tools/navi/maschera_manuale.py), coordinate in pixel.
+# Foto di fianco del 1983 (2820 px): nave scura contro cielo bianco e mare chiaro e velato.
+file: extracted/navi/kirov/foto/fianco_sinistro_1983_full.jpg
+uscita: extracted/navi/kirov/maschere/fianco_sinistro_1983_maschera.png
+# scafo: linea di coperta (insellatura da 14,6 m a prua a ~10 m), specchio inclinato, galleggiamento
+scafo: [[60, 1097], [165, 1097], [268, 1099], [371, 1105], [474, 1110], [577, 1118], [680, 1127], [762, 1130],
+        [989, 1125], [2120, 1106], [2367, 1109], [2419, 1130], [2533, 1133], [2605, 1128], [2660, 1124],
+        [2658, 1160], [2658, 1204], [2534, 1206], [2122, 1214], [1711, 1222], [1299, 1229], [888, 1237],
+        [476, 1245], [219, 1249], [150, 1180]]
+soglia_scafo: 160
+linea_coperta: [[40, 1098], [165, 1098], [268, 1100], [371, 1106], [474, 1111], [577, 1119], [680, 1128], [762, 1131],
+                [989, 1126], [2120, 1107], [2367, 1110], [2419, 1131], [2533, 1134], [2605, 1129], [2700, 1125]]
+inviluppo: [[40, 1140], [40, 1000], [1220, 1000], [1220, 870], [1380, 870], [1380, 680], [1600, 680], [1600, 820], [1950, 820], [1950, 980],
+            [2700, 980], [2700, 1140]]
+soglia_sovrastrutture: 185   # oggetti chiari sul castello, contro il mare velato (~200-225)
+area_minima: 60
+# numero 065 (chiaro) e parte alta dello specchio di poppa illuminato: nave comunque
+# (la parte bassa e' coperta dall'onda di poppa bianca: esclusa dalla soglia, resta l'ombreggiatura)
+includi: [[[352, 1158], [462, 1158], [462, 1218], [352, 1218]], [[2600, 1130], [2658, 1126], [2658, 1165], [2600, 1168]]]
+---
+# Kirov, prua dritta 1985 (metodo cielo: nave chiara contro cielo grigio; era kirov_maschera_prua.py)
+metodo: cielo
+file: extracted/navi/kirov/foto/prua_dritta_1985.jpg
+uscita: extracted/navi/kirov/maschere/prua_dritta_1985_maschera.png
+sfocatura: 1.6
+orizzonte: [[40, 953], [1880, 1003]]
+margine_orizzonte: 2
+soglia: 13
+soglia_mare_chiaro: 135
+inviluppo: [[80, 1000], [80, 880], [200, 860], [380, 860], [420, 690], [520, 520], [620, 380], [650, 250], [700, 230], [740, 150], [790, 140], [860, 240], [860, 360], [980, 360], [990, 580], [1050, 640], [1160, 780], [1500, 740], [1840, 700], [1890, 740], [1880, 790], [1760, 1090], [1600, 1090], [200, 1010]]
+includi:
+  - [[96, 905], [207, 884], [700, 860], [1160, 828], [1500, 790], [1855, 758], [1868, 760], [1830, 860], [1712, 1062], [1300, 1050], [800, 1025], [300, 1003], [120, 997]]
+buco_massimo: 3000
+---
+# Frunze, poppa dritta 1990 (metodo cielo; scafo dello stesso tono del mare: poligono in includi; era kirov_maschera_poppa.py)
+metodo: cielo
+file: extracted/navi/kirov/foto/poppa_dritta_frunze_1990.jpg
+uscita: extracted/navi/kirov/maschere/poppa_dritta_1990_maschera.png
+sfocatura: 2.0
+orizzonte: [[70, 904], [1600, 891]]
+margine_orizzonte: 3
+soglia: 16
+inviluppo: [[480, 875], [480, 690], [700, 690], [800, 640], [860, 560], [950, 480], [1000, 420], [1020, 300], [1120, 300], [1160, 430], [1220, 560], [1330, 690], [1470, 690], [1480, 800], [1500, 875]]
+includi:
+  - [[500, 857], [845, 855], [1005, 832], [1420, 832], [1441, 797], [1447, 806], [1375, 930], [965, 945], [850, 952], [505, 960], [497, 940]]

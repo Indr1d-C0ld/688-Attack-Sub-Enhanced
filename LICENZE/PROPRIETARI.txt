@@ -1,0 +1,103 @@
+FILE PROPRIETARI: USO PERSONALE, NON DISTRIBUIRE
+================================================
+
+64 file ricavati dal gioco originale (688 Attack Sub, Electronic Arts, 1989; software (c) 1988 John
+  W. Ratcliff). Sono qui solo per uso personale di chi possiede il gioco: non si ridistribuiscono.
+
+688 Attack Sub (1989): font, schermate dei titoli, palette e testi di bordo
+  autori: software di John W. Ratcliff, grafica di Michael Kosaka e Wilfredo J. Aguilar; Electronic
+    Arts (1988-1989)
+  nota: Copiati o convertiti dai file del gioco originale: non ridistribuibili. Vanno estratti dalla
+    copia del giocatore al primo avvio (o forniti a parte da chi ne ha i diritti)
+  file:
+    data/motore/font/originale.fnt
+    data/motore/immagini/MAIN.img
+    data/motore/immagini/MAIN.pal
+    data/motore/immagini/TITLE.img
+    data/motore/immagini/TITLE.pal
+    data/motore/palette/giorno.pal
+    data/motore/palette/notte.pal
+    data/motore/testi/messaggi_bordo.tsv
+
+688 Attack Sub (1989): scenari delle missioni (SCENE*.LZA) convertiti in Lua
+  autori: John W. Ratcliff, Paul Grace e Randall Breen (progetto); Electronic Arts (1988-1989)
+  nota: Conversione degli scenari originali: stessi vincoli dei file da cui derivano
+  file:
+    data/missioni/SCENE0A.lua
+    data/missioni/SCENE1A.lua
+    data/missioni/SCENE1B.lua
+    data/missioni/SCENE1C.lua
+    data/missioni/SCENE2A.lua
+    data/missioni/SCENE2B.lua
+    data/missioni/SCENE2C.lua
+    data/missioni/SCENE3B.lua
+    data/missioni/SCENE4A.lua
+    data/missioni/SCENE5A.lua
+    data/missioni/SCENE5B.lua
+    data/missioni/SCENE5C.lua
+    data/missioni/SCENE6A.lua
+    data/missioni/SCENE7A.lua
+    data/missioni/SCENE7B.lua
+    data/missioni/SCENE7C.lua
+    data/missioni/SCENE8A.lua
+    data/missioni/SCENE8B.lua
+    data/missioni/SCENE8C.lua
+    data/missioni/SCENE9A.lua
+    data/missioni/SCENE9B.lua
+    data/missioni/SCENE9C.lua
+
+688 Attack Sub (1989): musica dei titoli (AdLib, Tandy, Covox)
+  autori: Rob Hubbard (musica); Electronic Arts (1988-1989)
+  nota: Copiati o convertiti dai file del gioco originale: non ridistribuibili. Vanno estratti dalla
+    copia del giocatore al primo avvio (o forniti a parte da chi ne ha i diritti). Rese dal
+    sequencer di CALLS.EXE
+  file:
+    data/motore/musica/titolo_adlib.wav
+    data/motore/musica/titolo_covox.wav
+    data/motore/musica/titolo_tandy.wav
+
+688 Attack Sub (1989): i sei campioni .T del classico
+  autori: Rob Hubbard (effetti sonori, crediti della scatola); Electronic Arts (1988-1989)
+  nota: Copiati o convertiti dai file del gioco originale: non ridistribuibili. Vanno estratti dalla
+    copia del giocatore al primo avvio (o forniti a parte da chi ne ha i diritti). Copiati senza
+    modifiche
+  file:
+    data/motore/suoni_classici/exp1.t
+    data/motore/suoni_classici/prop2.t
+    data/motore/suoni_classici/propv2.t
+    data/motore/suoni_classici/sonar1.t
+    data/motore/suoni_classici/torpramp.t
+    data/motore/suoni_classici/whale2.t
+
+Ricavati dalle missioni del 1989: kit delle rapide, obiettivi delle 22 missioni, piano del comandante IA della sandbox
+  autori: melchior-688, dalle missioni di John W. Ratcliff, Paul Grace e Randall Breen; Electronic
+    Arts (1988-1989)
+  nota: Il kit e' estratto dal codice delle missioni convertite; gli obiettivi riassumono briefing e
+    condizioni di vittoria degli script; il piano della sandbox cita i briefing. Senza le missioni
+    originali non servono
+  file:
+    data/missioni/obiettivi/SCENE0A.lua
+    data/missioni/obiettivi/SCENE1A.lua
+    data/missioni/obiettivi/SCENE1B.lua
+    data/missioni/obiettivi/SCENE1C.lua
+    data/missioni/obiettivi/SCENE2A.lua
+    data/missioni/obiettivi/SCENE2B.lua
+    data/missioni/obiettivi/SCENE2C.lua
+    data/missioni/obiettivi/SCENE3B.lua
+    data/missioni/obiettivi/SCENE4A.lua
+    data/missioni/obiettivi/SCENE5A.lua
+    data/missioni/obiettivi/SCENE5B.lua
+    data/missioni/obiettivi/SCENE5C.lua
+    data/missioni/obiettivi/SCENE6A.lua
+    data/missioni/obiettivi/SCENE7A.lua
+    data/missioni/obiettivi/SCENE7B.lua
+    data/missioni/obiettivi/SCENE7C.lua
+    data/missioni/obiettivi/SCENE8A.lua
+    data/missioni/obiettivi/SCENE8B.lua
+    data/missioni/obiettivi/SCENE8C.lua
+    data/missioni/obiettivi/SCENE9A.lua
+    data/missioni/obiettivi/SCENE9B.lua
+    data/missioni/obiettivi/SCENE9C.lua
+    data/motore/missioni_rapide/kit_urss.lua
+    data/motore/missioni_rapide/kit_usa.lua
+    data/motore/sandbox_originali.toml

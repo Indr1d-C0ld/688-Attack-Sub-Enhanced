@@ -1,0 +1,17 @@
+# Esperimento pronto del vetrino di Dio (docs/28 §5, D3; formato: nota trailer1-d2-forma-m688v.md). La scena S5 del
+# convoglio: tre Perry di scorta (8, 9, 10), il Victor III (12) che lancia fra 598 e 758 s. A due minuti uno scoppio senza
+# arma, 300 kg a 40 m, 6 km a sud del convoglio, lontano dal Victor: chi lo sente lo prende per un'arma.
+[esperimento]
+titolo = "Lo scoppio nel transito"
+mostra = "Due minuti dopo l'inizio, molto prima del primo lancio del Victor, una carica di 300 kg scoppia 6 km a sud del convoglio, senza nessuno che l'abbia lanciata"
+ipotesi = "Lo scoppio sveglia la scorta (allerta A3) prima dell'attacco: le Perry scoprono il Victor prima e il convoglio perde meno"
+codice = "8FZD3Q-4G0000-04K000-0000HZ-G002QH"
+semi = 10
+da = 1
+
+[[intervento]]
+tempo = 120.0
+tipo = "incidente"
+punto = { x = 50800.0, y = -20000.0 }
+parametri = { kg = 300.0, quota_m = 40.0 }
+testi = { incidente = "scoppio" }

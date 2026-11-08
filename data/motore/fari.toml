@@ -1,0 +1,7746 @@
+# I fari dei teatri nel 1989: generato da tools/pipeline/fari.py da Wikidata (CC0), non modificare a mano.
+# Le durate dei lampi sono STIMA dove la caratteristica da' solo il periodo; i settori colorati non ci sono.
+
+[[faro]]
+teatro = "baltico"
+id = "Q980133"
+nome = "Sandhammaren lighthouse"
+lat = 55.386666666
+lon = 14.193055555
+quota_m = 31.0
+portata_nm = 22.0
+colore = "bianco"
+caratteristica = "Fl W 5s"
+periodo_s = 5.0
+lampi = [0.5, 4.5]
+anno = 1862
+nga = "116-5648"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1518751"
+nome = "Kullen lighthouse"
+lat = 56.301027777
+lon = 12.4515
+quota_m = 78.5
+portata_nm = 27.5
+colore = "bianco"
+caratteristica = "Fl W 5s"
+periodo_s = 5.0
+lampi = [0.5, 4.5]
+anno = 1899
+nga = "116-5084"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q9367535"
+nome = "Utklippan lighthouse"
+lat = 55.95277778
+lon = 15.70166667
+quota_m = 31.0
+portata_nm = 8.0
+colore = "bianco"
+caratteristica = "Fl(2) WRG 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1870
+nga = "116-7696"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q38699978"
+nome = "Falsterborev"
+lat = 55.308805555
+lon = 12.655916666
+quota_m = 29.0
+portata_nm = 14.0
+colore = "bianco"
+caratteristica = "Fl(4) WR 12s"
+periodo_s = 12.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 5.5]
+anno = 1972
+nga = "116-5560"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39921092"
+nome = "Tärnö lighthouse"
+lat = 56.112972222
+lon = 14.971277777
+quota_m = 31.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Oc WRG 10s"
+periodo_s = 10.0
+lampi = [9.0, 1.0]
+anno = 1910
+nga = "116-7412"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42375960"
+nome = "Lomma fyr"
+lat = 55.675916666
+lon = 13.054833333
+quota_m = 8.3
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Fl WRG 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1902
+nga = "116-5344"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42379749"
+nome = "Industrihamnen"
+lat = 55.622722222
+lon = 13.03075
+quota_m = 24.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Oc WRG 3s"
+periodo_s = 3.0
+lampi = [2.0, 1.0]
+anno = 1965
+nga = "116-5420"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42406230"
+nome = "Flintrännan Nr 4"
+lat = 55.5997
+lon = 12.868333333
+quota_m = 12.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1961
+nga = "116-5491"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42411840"
+nome = "Flintrännan Nr 6"
+lat = 55.5871
+lon = 12.849166666
+quota_m = 11.5
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1962
+nga = "116-5493"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42430371"
+nome = "Falsterbo Canal No 1"
+lat = 55.393055555
+lon = 12.949694444
+quota_m = 7.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Oc WRG 10s"
+periodo_s = 10.0
+lampi = [9.0, 1.0]
+anno = 1942
+nga = "116-5536"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42433507"
+nome = "Skåre fyr"
+lat = 55.374361111
+lon = 13.054166666
+quota_m = 7.5
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Q WRG"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1936
+nga = "116-5568"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42505027"
+nome = "Ystad lower light"
+lat = 55.424966666
+lon = 13.826
+quota_m = 31.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Iso WRG 3s"
+periodo_s = 3.0
+lampi = [1.5, 1.5]
+anno = 1975
+nga = "116-5624"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42507524"
+nome = "Kåseberga Lighthouse"
+lat = 55.383111111
+lon = 14.064277777
+quota_m = 7.5
+portata_nm = 5.0
+colore = "bianco"
+caratteristica = "Q WRG"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1913
+nga = "116-5644"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42532769"
+nome = "Skillinge lower light"
+lat = 55.473611111
+lon = 14.283944444
+quota_m = 5.5
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Fl(2) WRG 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1960
+nga = "116-7136"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42566756"
+nome = "Båkören upper light"
+lat = 55.94675
+lon = 14.326861111
+quota_m = 15.5
+portata_nm = 14.0
+colore = "bianco"
+caratteristica = "Oc WRG 5s"
+periodo_s = 5.0
+lampi = [4.0, 1.0]
+anno = 1963
+nga = "116-7212"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42706403"
+nome = "Tunören"
+lat = 56.000916666
+lon = 14.535166666
+quota_m = 9.0
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "Iso WRG 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1948
+nga = "116-7264"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42750951"
+nome = "Hällevik harbor lighthouse"
+lat = 56.013111111
+lon = 14.70375
+quota_m = 8.0
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Iso WRG 8s"
+periodo_s = 8.0
+lampi = [4.0, 4.0]
+anno = 1892
+nga = "116-7296"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42751414"
+nome = "Hörviks fyr"
+lat = 56.042972222
+lon = 14.76825
+quota_m = 6.4
+portata_nm = 5.0
+colore = "bianco"
+caratteristica = "Fl WRG 2s"
+periodo_s = 2.0
+lampi = [0.5, 1.5]
+anno = 1901
+nga = "116-7364"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42757048"
+nome = "Lörbykladd"
+lat = 56.100888888
+lon = 14.715416666
+quota_m = 6.0
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Fl WRG 4s"
+periodo_s = 4.0
+lampi = [0.5, 3.5]
+anno = 1930
+nga = "116-7372"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42784252"
+nome = "Gunnöns fyr"
+lat = 56.149527777
+lon = 14.774583333
+quota_m = 11.0
+portata_nm = 14.0
+colore = "bianco"
+caratteristica = "Iso WRG 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1968
+nga = "116-7392"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42788249"
+nome = "Kölö lower light"
+lat = 56.155444444
+lon = 14.823861111
+quota_m = 8.6
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Oc WRG 6s"
+periodo_s = 6.0
+lampi = [5.0, 1.0]
+anno = 1968
+nga = "116-7404"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42792156"
+nome = "Ortholmens fyr"
+lat = 56.155666666
+lon = 14.875944444
+quota_m = 6.0
+portata_nm = 11.0
+colore = "bianco"
+caratteristica = "Fl WRG 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1896
+nga = "116-7424"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42797087"
+nome = "Vägga Fiskehamn"
+lat = 56.154944444
+lon = 14.885111111
+quota_m = 3.5
+portata_nm = 8.0
+colore = "bianco"
+caratteristica = "Fl(2) WRG 4s (occas)"
+periodo_s = 4.0
+lampi = [0.5, 1.5, 0.5, 1.5]
+anno = 1949
+nga = "116-7426"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42797468"
+nome = "Vägga Södra"
+lat = 56.152166666
+lon = 14.884694444
+quota_m = 5.5
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1961
+nga = "116-7428"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q42887336"
+nome = "Svanviksudde"
+lat = 56.155416666
+lon = 15.244805555
+quota_m = 4.0
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Fl WRG 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1971
+nga = "116-7488"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42887603"
+nome = "Stekö"
+lat = 56.158694444
+lon = 15.267833333
+quota_m = 4.3
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "Fl WRG 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1899
+nga = "116-7492"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42901204"
+nome = "Sandvikens fyr"
+lat = 56.173194444
+lon = 15.307166666
+quota_m = 5.3
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "Fl(4) WRG 12s"
+periodo_s = 12.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 5.5]
+anno = 1889
+nga = "116-7504"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42901611"
+nome = "Millegarne"
+lat = 56.128277777
+lon = 15.321027777
+quota_m = 8.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Fl WRG 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1946
+nga = "116-7516"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42960762"
+nome = "Hasslö fyr"
+lat = 56.113333333
+lon = 15.438277777
+quota_m = 6.0
+portata_nm = 5.0
+colore = "bianco"
+caratteristica = "F WRG (occas)"
+periodo_s = 0.0
+lampi = []
+anno = 1946
+nga = "116-7532"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42961339"
+nome = "Bollö fyr"
+lat = 56.090666666
+lon = 15.4837
+quota_m = 9.0
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "LFl WRG 10s"
+periodo_s = 10.0
+lampi = [2.0, 8.0]
+anno = 1946
+nga = "116-7540"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43000556"
+nome = "Bergaholmen"
+lat = 56.144638888
+lon = 15.554138888
+quota_m = 6.0
+portata_nm = 5.0
+colore = "bianco"
+caratteristica = "Fl(3) WRG 9s"
+periodo_s = 9.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 4.5]
+anno = 1967
+nga = "116-7576"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43001014"
+nome = "Saltöhammar"
+lat = 56.160027777
+lon = 15.566083333
+quota_m = 7.5
+portata_nm = 8.0
+colore = "bianco"
+caratteristica = "Q WRG"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1948
+nga = "116-7580"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43002337"
+nome = "Äspeskär lighthouse"
+lat = 56.141638888
+lon = 15.630666666
+quota_m = 6.0
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "F WRG"
+periodo_s = 0.0
+lampi = []
+anno = 1950
+nga = "116-7584"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43096543"
+nome = "Verkö lighthouse"
+lat = 56.16975
+lon = 15.629638888
+quota_m = 8.3
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "Fl(2) WRG 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1934
+nga = "116-7616"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43120884"
+nome = "Djupasund"
+lat = 56.106777777
+lon = 15.634055555
+quota_m = 7.0
+portata_nm = 12.0
+colore = "bianco"
+caratteristica = "Oc WRG 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 1961
+nga = "116-7628"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43121279"
+nome = "Tjurkö lower light"
+lat = 56.103972222
+lon = 15.630833333
+quota_m = 7.0
+portata_nm = 11.0
+colore = "bianco"
+caratteristica = "F WRG (occas)"
+periodo_s = 0.0
+lampi = []
+anno = 1933
+nga = "116-7632"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43130320"
+nome = "Flundrebådan"
+lat = 56.042833333
+lon = 15.777111111
+quota_m = 6.5
+portata_nm = 4.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1957
+nga = "116-7652"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q43143137"
+nome = "Hommenabben upper light"
+lat = 56.059027777
+lon = 15.826944444
+quota_m = 7.7
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Fl(3) WRG 9s"
+periodo_s = 9.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 4.5]
+anno = 1931
+nga = "116-7676"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43146875"
+nome = "Torhamn lighthouse"
+lat = 56.092777777
+lon = 15.822861111
+quota_m = 6.0
+portata_nm = 4.0
+colore = "bianco"
+caratteristica = "Fl WRG 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1932
+nga = "116-7680"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43176144"
+nome = "Utklippan East Haven lighthouse"
+lat = 55.954472222
+lon = 15.7055
+quota_m = 8.0
+portata_nm = 4.0
+colore = "bianco"
+caratteristica = "Fl WRG 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1942
+nga = "116-7700"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43192016"
+nome = "Dalskär lower light"
+lat = 56.390916666
+lon = 16.090305555
+quota_m = 8.0
+portata_nm = 7.2
+colore = "bianco"
+caratteristica = "Q WRG"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1953
+nga = "116-7808"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q10503160"
+nome = "Garpen lighthouse"
+lat = 56.39027778
+lon = 16.12861111
+quota_m = 26.6
+portata_nm = 16.0
+colore = "bianco"
+caratteristica = "Oc WRG 8s"
+periodo_s = 8.0
+lampi = [7.0, 1.0]
+anno = 1934
+nga = "116-7776"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q10512569"
+nome = "Gåsfeten lighthouse"
+lat = 56.12166667
+lon = 15.22361111
+quota_m = 12.0
+portata_nm = 9.6
+colore = "bianco"
+caratteristica = "LFl(2) WRG 15s"
+periodo_s = 15.0
+lampi = [2.0, 1.5, 2.0, 9.5]
+anno = 1904
+nga = "116-7468"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q10516112"
+nome = "Haken lighthouse"
+lat = 55.90933
+lon = 12.72481
+quota_m = 15.0
+portata_nm = 16.0
+colore = "bianco"
+caratteristica = "Iso WRG 8s"
+periodo_s = 8.0
+lampi = [4.0, 4.0]
+anno = 1939
+nga = "116-5272"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q10520541"
+nome = "Helsingborg lighthouse"
+lat = 56.04325
+lon = 12.688
+quota_m = 17.0
+portata_nm = 18.5
+colore = "bianco"
+caratteristica = "Oc WRG 15s"
+periodo_s = 15.0
+lampi = [14.0, 1.0]
+anno = 1888
+nga = "116-5184"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q10551436"
+nome = "Kyrkbacken lighthouse"
+lat = 55.90944444
+lon = 12.67166667
+quota_m = 7.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Iso WRG 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1878
+nga = "116-5288"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q10593502"
+nome = "Mölle lighthouse"
+lat = 56.283777777
+lon = 12.491916666
+quota_m = 6.5
+portata_nm = 8.0
+colore = "bianco"
+caratteristica = "Fl(2) WRG 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1881
+nga = "116-5092"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q10669746"
+nome = "Skanör lighthouse"
+lat = 55.41695
+lon = 12.82806
+quota_m = 7.0
+portata_nm = 10.0
+colore = "bianco"
+caratteristica = "Fl(2) WRG 8s"
+periodo_s = 8.0
+lampi = [0.5, 1.5, 0.5, 5.5]
+anno = 1881
+nga = "116-5540"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q10686315"
+nome = "Svinbådan lighthouse"
+lat = 56.15027778
+lon = 12.54111111
+quota_m = 24.0
+portata_nm = 17.0
+colore = "bianco"
+caratteristica = "Iso WRG 8s"
+periodo_s = 8.0
+lampi = [4.0, 4.0]
+anno = 1960
+nga = "116-5124"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q10713981"
+nome = "Ven South Head"
+lat = 55.892055555
+lon = 12.711222222
+quota_m = 35.0
+portata_nm = 8.0
+colore = "bianco"
+caratteristica = "Fl(2) WRG 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1941
+nga = "116-5280"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q10718430"
+nome = "Ven West lighthouse"
+lat = 55.91889954
+lon = 12.66707993
+quota_m = 24.0
+portata_nm = 16.5
+colore = "bianco"
+caratteristica = "LFl WRG 10s"
+periodo_s = 10.0
+lampi = [2.0, 8.0]
+anno = 1968
+nga = "116-5284"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q19760755"
+nome = "Pinhättan lighthouse"
+lat = 55.754138888
+lon = 12.865416666
+quota_m = 12.5
+portata_nm = 14.5
+colore = "bianco"
+caratteristica = "LFl WRG 8s"
+periodo_s = 8.0
+lampi = [2.0, 6.0]
+anno = 1957
+nga = "116-5320"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q21167425"
+nome = "Godnatt"
+lat = 56.141388888
+lon = 15.594416666
+quota_m = 21.5
+portata_nm = 11.0
+colore = "bianco"
+caratteristica = "Fl WRG 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1858
+nga = "116-7572"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q28375728"
+nome = "Laboratorieholmen lighthouse"
+lat = 56.161361111
+lon = 15.600722222
+quota_m = 11.5
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Iso WRG 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1892
+nga = "116-7588"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q28375963"
+nome = "Trelleborg caisson lighthouse"
+lat = 55.356861111
+lon = 13.149194444
+quota_m = 13.0
+portata_nm = 12.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1930
+nga = "116-5572"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q31891692"
+nome = "Asla lighthouse"
+lat = 56.094861111
+lon = 15.42725
+quota_m = 6.0
+portata_nm = 6.2
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1952
+nga = "116-7536"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q32230552"
+nome = "Bönsäcken"
+lat = 56.018416666
+lon = 14.834583333
+quota_m = 11.0
+portata_nm = 8.6
+colore = "bianco"
+caratteristica = "Fl(2) WRG 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1957
+nga = "116-7324"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q32243601"
+nome = "Gräsrännan"
+lat = 55.861611111
+lon = 12.794666666
+quota_m = 4.4
+portata_nm = 12.5
+colore = "bianco"
+caratteristica = "Oc(2) WRG 7s"
+periodo_s = 7.0
+lampi = [4.0, 1.0, 1.0, 1.0]
+anno = 1899
+nga = "116-5296"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q37922402"
+nome = "Kullagrund"
+lat = 55.297777777
+lon = 13.322083333
+quota_m = 18.5
+portata_nm = 8.2
+colore = "bianco"
+caratteristica = "Fl WRG 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1975
+nga = "116-5604"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q38683903"
+nome = "Flintrännan northeast"
+lat = 55.614
+lon = 12.890066666
+quota_m = 12.5
+portata_nm = 16.0
+colore = "bianco"
+caratteristica = "Oc(2) WRG 8s"
+periodo_s = 8.0
+lampi = [5.0, 1.0, 1.0, 1.0]
+anno = 1961
+nga = "116-5480"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q38685437"
+nome = "Flintrännan southwest"
+lat = 55.5182
+lon = 12.744766666
+quota_m = 11.5
+portata_nm = 16.0
+colore = "bianco"
+caratteristica = "Oc(2) WRG 8s"
+periodo_s = 8.0
+lampi = [5.0, 1.0, 1.0, 1.0]
+anno = 1966
+nga = "116-5494"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39771779"
+nome = "Lägerholmen lighthouse"
+lat = 55.964722222
+lon = 14.470638888
+quota_m = 17.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Fl WRG 5s"
+periodo_s = 5.0
+lampi = [0.5, 4.5]
+anno = 1908
+nga = "116-7240"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39793371"
+nome = "Simrishamn lighthouse"
+lat = 55.557444444
+lon = 14.359083333
+quota_m = 16.0
+portata_nm = 13.5
+colore = "bianco"
+caratteristica = "Iso WRG 6s"
+periodo_s = 6.0
+lampi = [3.0, 3.0]
+anno = 1883
+nga = "116-7152"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39796697"
+nome = "Höllviken lighthouse"
+lat = 55.51175
+lon = 12.848833333
+quota_m = 9.5
+portata_nm = 8.6
+colore = "bianco"
+caratteristica = "Fl(2) WRG 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1964
+nga = "116-5496"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39870416"
+nome = "Malmö breakwater lighthouse"
+lat = 55.624916666
+lon = 12.976194444
+quota_m = 11.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Iso WRG 10s"
+periodo_s = 10.0
+lampi = [5.0, 5.0]
+anno = 1925
+nga = "116-5376"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39880273"
+nome = "Råå lighthouse"
+lat = 55.990888888
+lon = 12.740972222
+quota_m = 7.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Q WRG"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1857
+nga = "116-5264"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39888560"
+nome = "Höganäs lighthouse"
+lat = 56.196722222
+lon = 12.542416666
+quota_m = 12.4
+portata_nm = 9.4
+colore = "bianco"
+caratteristica = "Oc(2) WRG 8s"
+periodo_s = 8.0
+lampi = [5.0, 1.0, 1.0, 1.0]
+anno = 1951
+nga = "116-5108"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39893972"
+nome = "Utlängan lighthouse"
+lat = 56.013527777
+lon = 15.788361111
+quota_m = 13.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Oc(2) WRG 12s"
+periodo_s = 12.0
+lampi = [9.0, 1.0, 1.0, 1.0]
+anno = 1931
+nga = "116-7708"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39894739"
+nome = "Flötjen"
+lat = 56.042
+lon = 15.766722222
+quota_m = 10.5
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1957
+nga = "116-7648"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q39900401"
+nome = "Rönneskär"
+lat = 56.129194444
+lon = 15.383027777
+quota_m = 9.1
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1954
+nga = "116-7520"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q39914229"
+nome = "Saltärna lighthouse"
+lat = 56.145583333
+lon = 15.175722222
+quota_m = 7.0
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Fl(3) WRG 9s"
+periodo_s = 9.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 4.5]
+anno = 1933
+nga = "116-7464"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39915217"
+nome = "Vitaskär"
+lat = 56.139388888
+lon = 15.099583333
+quota_m = 7.5
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Q WRG"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1898
+nga = "116-7420"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39922475"
+nome = "Tärnö East lighthouse"
+lat = 56.123888888
+lon = 14.981666666
+quota_m = 5.0
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "F WRG"
+periodo_s = 0.0
+lampi = []
+anno = 1932
+nga = "116-7416"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39924736"
+nome = "Listershuvud lighthouse"
+lat = 56.034861111
+lon = 14.780611111
+quota_m = 11.6
+portata_nm = 8.6
+colore = "bianco"
+caratteristica = "Fl(4) WRG 12s"
+periodo_s = 12.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 5.5]
+anno = 1895
+nga = "116-7352"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39926364"
+nome = "Hällevik lighthouse"
+lat = 56.008888888
+lon = 14.699861111
+quota_m = 9.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Fl WRG 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1922
+nga = "116-7300"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39927161"
+nome = "Sillnäsudde"
+lat = 55.997194444
+lon = 14.611138888
+quota_m = 12.0
+portata_nm = 8.6
+colore = "bianco"
+caratteristica = "Fl(2) WRG 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1966
+nga = "116-7292"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42317020"
+nome = "Svanshall lighthouse"
+lat = 56.2525
+lon = 12.66275
+quota_m = 6.0
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "F WRG"
+periodo_s = 0.0
+lampi = []
+anno = 1953
+nga = "116-1508"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42317092"
+nome = "Arildsläge"
+lat = 56.275555555
+lon = 12.574583333
+quota_m = 6.5
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Iso WRG 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1958
+nga = "116-1512"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42318313"
+nome = "Nyhamnsläge lighthouse"
+lat = 56.244027777
+lon = 12.531333333
+quota_m = 6.0
+portata_nm = 8.0
+colore = "bianco"
+caratteristica = "Fl(3) WRG 9s"
+periodo_s = 9.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 4.5]
+anno = 1919
+nga = "116-5104"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42325447"
+nome = "Viken lighthouse"
+lat = 56.140305555
+lon = 12.57725
+quota_m = 8.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Q WRG"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1895
+nga = "116-5128"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42327275"
+nome = "Domsten lighthouse"
+lat = 56.116316666
+lon = 12.603283333
+quota_m = 3.2
+portata_nm = 5.8
+colore = "bianco"
+caratteristica = "Fl(3) WRG 8s"
+periodo_s = 8.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 3.5]
+anno = 1977
+nga = "116-5140"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42345600"
+nome = "Borstahusen lighthouse"
+lat = 55.894472222
+lon = 12.799583333
+quota_m = 6.8
+portata_nm = 10.0
+colore = "bianco"
+caratteristica = "LFl WRG 7.5s"
+periodo_s = 7.5
+lampi = [2.0, 5.5]
+anno = 1888
+nga = "116-5292"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42350126"
+nome = "Landskrona North lower light"
+lat = 55.867416666
+lon = 12.816166666
+quota_m = 6.5
+portata_nm = 11.5
+colore = "bianco"
+caratteristica = "Oc WRG 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 1947
+nga = "116-5312"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42351649"
+nome = "Vikhögs fyr"
+lat = 55.726972222
+lon = 12.958638888
+quota_m = 4.5
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "F WRG"
+periodo_s = 0.0
+lampi = []
+anno = 1887
+nga = "116-5340"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q833471"
+nome = "Neuland Lighthouse"
+lat = 54.36065
+lon = 10.60093
+quota_m = 40.0
+portata_nm = 15.0
+colore = "giallo"
+caratteristica = "F YR 5s"
+periodo_s = 0.0
+lampi = []
+anno = 1916
+nga = "116-3136"
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q1259936"
+nome = "Drogden Lighthouse"
+lat = 55.53643
+lon = 12.71155
+quota_m = 18.0
+portata_nm = 18.0
+colore = "bianco"
+caratteristica = "Oc(3) WGR 15s"
+periodo_s = 15.0
+lampi = [10.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+anno = 1937
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1349230"
+nome = "Leuchtturm Strukkamphuk"
+lat = 54.409367
+lon = 11.095616
+quota_m = 7.0
+portata_nm = 8.0
+colore = "bianco"
+caratteristica = "Iso WR 3s"
+periodo_s = 3.0
+lampi = [1.5, 1.5]
+anno = 1872
+nga = "116-3216"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1375159"
+nome = "Leuchtturm Pelzerhaken"
+lat = 54.08694444
+lon = 10.86694444
+quota_m = 21.0
+portata_nm = 14.0
+colore = "bianco"
+caratteristica = "LFl(2) WRG 20s"
+periodo_s = 20.0
+lampi = [2.0, 1.5, 2.0, 14.5]
+anno = 1842
+nga = "116-3248"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1428567"
+nome = "Hubertsberg lighthouse"
+lat = 54.378
+lon = 10.5429
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q1471332"
+nome = "Old Westermarkelsdorf lighthouse"
+lat = 54.527329
+lon = 11.058091
+quota_m = 16.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1881
+nga = "116-3164"
+stime = ["caratteristica", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q1497618"
+nome = "Gedser Lighthouse"
+lat = 54.56403
+lon = 11.96362
+quota_m = 26.0
+portata_nm = 18.0
+colore = "bianco"
+caratteristica = "Fl(2) W 15s"
+periodo_s = 15.0
+lampi = [0.5, 1.5, 0.5, 12.5]
+anno = 1802
+nga = "116-4436"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1499942"
+nome = "Keldsnor Lighthouse"
+lat = 54.73105556
+lon = 10.72141667
+quota_m = 39.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl(2) W 20s"
+periodo_s = 20.0
+lampi = [0.5, 1.5, 0.5, 17.5]
+anno = 1905
+nga = ""
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q1697562"
+nome = "Warnemünde Lighthouse"
+lat = 54.1814
+lon = 12.0858
+quota_m = 34.0
+portata_nm = 20.0
+colore = "bianco"
+caratteristica = "Fl(3+1) W 24s"
+periodo_s = 24.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 17.5]
+anno = 1898
+nga = "116-3428"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1707940"
+nome = "Leuchtturm Staberhuk"
+lat = 54.4025
+lon = 11.31083333
+quota_m = 25.5
+portata_nm = 18.0
+colore = "bianco"
+caratteristica = "Oc(2) WG 16s"
+periodo_s = 16.0
+lampi = [13.0, 1.0, 1.0, 1.0]
+anno = 1903
+nga = "116-3192"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1720366"
+nome = "Lighthouse Darßer Ort"
+lat = 54.4728
+lon = 12.5022
+quota_m = 33.0
+portata_nm = 23.0
+colore = "bianco"
+caratteristica = "Fl (2+4) W 22s"
+periodo_s = 22.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 11.5]
+anno = 1848
+nga = "116-3516"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1767868"
+nome = "Leuchtturm Dahmeshöved"
+lat = 54.201777
+lon = 11.09024
+quota_m = 33.5
+portata_nm = 23.0
+colore = "bianco"
+caratteristica = "Fl(3) W 12s"
+periodo_s = 12.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 7.5]
+anno = 1880
+nga = "116-3244"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1821409"
+nome = "Bastorf Lighthouse"
+lat = 54.1319
+lon = 11.6936
+quota_m = 95.3
+portata_nm = 24.0
+colore = "bianco"
+caratteristica = "LFl(4) WR 15s"
+periodo_s = 15.0
+lampi = [2.0, 1.5, 2.0, 1.5, 2.0, 1.5, 2.0, 2.5]
+anno = 1878
+nga = "116-3412"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1821427"
+nome = "Fehmarn Flügge"
+lat = 54.4425
+lon = 11.01916667
+quota_m = 38.0
+portata_nm = 25.0
+colore = "bianco"
+caratteristica = "F W"
+periodo_s = 0.0
+lampi = []
+anno = 1872
+nga = "116-3220"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1821438"
+nome = "Marienleuchte lighthouses"
+lat = 54.495
+lon = 11.238055555
+quota_m = 39.6
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q1821458"
+nome = "Leuchtturm Timmendorf"
+lat = 53.99194444
+lon = 11.37666667
+quota_m = 21.0
+portata_nm = 16.0
+colore = "bianco"
+caratteristica = "Iso WRG 6s"
+periodo_s = 6.0
+lampi = [3.0, 3.0]
+anno = 1872
+nga = "116-3328"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1899371"
+nome = "Maritim Hotel Lübeck-Travemünde"
+lat = 53.961666666
+lon = 10.881944444
+quota_m = 114.5
+portata_nm = 19.0
+colore = "bianco"
+caratteristica = "Fl WR 4s"
+periodo_s = 4.0
+lampi = [0.5, 3.5]
+anno = 1974
+nga = "116-3304"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q4992706"
+nome = "Falsterbo lighthouse"
+lat = 55.383283333
+lon = 12.8163
+quota_m = 23.8
+portata_nm = 10.0
+colore = "bianco"
+caratteristica = "Oc W 5s"
+periodo_s = 5.0
+lampi = [4.0, 1.0]
+anno = 1795
+nga = "116-5556"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q5042885"
+nome = "Carlsberg Lighthouse"
+lat = 55.66606
+lon = 12.53277
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1883
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q7101494"
+nome = "Orehoved Lighthouse"
+lat = 54.96011
+lon = 11.85169
+quota_m = 11.0
+portata_nm = 11.0
+colore = "bianco"
+caratteristica = "Iso WRG 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1895
+nga = "114-4304"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q10679581"
+nome = "Stevns Lighthouse"
+lat = 55.29066
+lon = 12.45361
+quota_m = 64.0
+portata_nm = 26.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1818
+nga = ""
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q12317343"
+nome = "Hov Lighthouse"
+lat = 55.1465564
+lon = 10.9553221
+quota_m = 13.0
+portata_nm = 12.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1893
+nga = ""
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q12336758"
+nome = "Sprogø fyr"
+lat = 55.33075
+lon = 10.96954
+quota_m = 44.0
+portata_nm = 8.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1868
+nga = ""
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q16889793"
+nome = "Heiligenhafen lighthouse"
+lat = 54.367167
+lon = 11.02133
+quota_m = 16.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Oc(2) WRG 9s"
+periodo_s = 9.0
+lampi = [6.0, 1.0, 1.0, 1.0]
+anno = 1885
+nga = "116-3156"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q16902633"
+nome = "Vesborg Lighthouse"
+lat = 55.76986
+lon = 10.55088
+quota_m = 36.0
+portata_nm = 17.0
+colore = "bianco"
+caratteristica = "Oc(2) W 12s"
+periodo_s = 12.0
+lampi = [9.0, 1.0, 1.0, 1.0]
+anno = 1858
+nga = "116-2340"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q17482401"
+nome = "Knudshoved Fyr"
+lat = 55.29022
+lon = 10.85137
+quota_m = 16.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Oc WRG 10s"
+periodo_s = 10.0
+lampi = [9.0, 1.0]
+anno = 0
+nga = ""
+stime = ["portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q17484687"
+nome = "Heiligenhafen warning light"
+lat = 54.3816
+lon = 10.93546
+quota_m = 27.0
+portata_nm = 15.0
+colore = "giallo"
+caratteristica = "Fl Y.5s, Fl R.5s, Al Fl YR.5s"
+periodo_s = 5.0
+lampi = [0.5, 4.5]
+anno = 0
+nga = ""
+stime = ["portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q18410750"
+nome = "Gollwitz lighthouse"
+lat = 54.02388
+lon = 11.47058964
+quota_m = 13.0
+portata_nm = 19.0
+colore = "bianco"
+caratteristica = "Iso WRG 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1929
+nga = "116-3331"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q18647296"
+nome = "Moen lighthouse"
+lat = 54.94653
+lon = 12.53992
+quota_m = 25.0
+portata_nm = 21.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1845
+nga = ""
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q19289152"
+nome = "Wustrow Lighthouse"
+lat = 54.33578
+lon = 12.37584
+quota_m = 11.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Oc(3) W 12s"
+periodo_s = 12.0
+lampi = [7.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+anno = 1933
+nga = "116-3512"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q19689171"
+nome = "Warnemünde harbour entrance lights"
+lat = 54.18700027
+lon = 12.08899975
+quota_m = 14.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q20826461"
+nome = "Wessek warning light"
+lat = 54.3161
+lon = 10.8009
+quota_m = 13.0
+portata_nm = 15.0
+colore = "giallo"
+caratteristica = "Fl Y.5s, Fl R.5s, Al Fl YR.5s"
+periodo_s = 5.0
+lampi = [0.5, 4.5]
+anno = 0
+nga = ""
+stime = ["portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q23748963"
+nome = "Elsehoved"
+lat = 55.1015
+lon = 10.7749
+quota_m = 10.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1894
+nga = ""
+stime = ["caratteristica", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q27580153"
+nome = "Blankeck warning light"
+lat = 54.35363
+lon = 10.86612
+quota_m = 15.0
+portata_nm = 15.0
+colore = "giallo"
+caratteristica = "Fl Y.5s, Fl R.5s, Al Fl YR.5s"
+periodo_s = 5.0
+lampi = [0.5, 4.5]
+anno = 0
+nga = ""
+stime = ["portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q27921367"
+nome = "Nekselø Lighthouse"
+lat = 55.793955428
+lon = 11.282796284
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q28375048"
+nome = "Enebærodde lighthouse"
+lat = 55.5161752
+lon = 10.561
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q28375922"
+nome = "Røsnæs fyr"
+lat = 55.743471616
+lon = 10.869146014
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q28758774"
+nome = "Halsskov kulfyr"
+lat = 55.33666667
+lon = 11.12766667
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q41782955"
+nome = "Omø fyr"
+lat = 55.15981057
+lon = 11.133653483
+quota_m = 32.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1894
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q41785398"
+nome = "Hyllekrog Fyr"
+lat = 54.594961786
+lon = 11.503860018
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q55086892"
+nome = "Helleholm Lighthouse"
+lat = 55.18585
+lon = 11.20885
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q56285367"
+nome = "Ore Lighthouse"
+lat = 55.00686
+lon = 11.86982
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1895
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q56285668"
+nome = "Lohals Lighthouse"
+lat = 55.13505
+lon = 10.9026
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q56285691"
+nome = "Korshavn Fyr"
+lat = 55.60391
+lon = 10.60759
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q64829202"
+nome = "Falsterbo skjutvarningsfyr"
+lat = 55.393333333
+lon = 12.860166666
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "VQ R (occas)"
+periodo_s = 0.5
+lampi = [0.25, 0.25]
+anno = 0
+nga = ""
+stime = ["quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q106876244"
+nome = "Stevns old lighthouse"
+lat = 55.29052
+lon = 12.45366
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1818
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q107631358"
+nome = "Leuchtturm Wustrow"
+lat = 54.352419
+lon = 12.384294
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110299904"
+nome = "Skanörs Inlopp"
+lat = 55.417194444
+lon = 12.827694444
+quota_m = 4.0
+portata_nm = 15.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1983
+nga = "116-5552"
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q118727843"
+nome = "Old Marienleuchte lighthouse"
+lat = 54.49365
+lon = 11.237512
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1832
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q118728256"
+nome = "New Marienleuchte lighthouse"
+lat = 54.494972
+lon = 11.238225
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1967
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q123765976"
+nome = "Bogø fyr"
+lat = 54.93628
+lon = 11.9945
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q140401562"
+nome = "Albuen lighthouse"
+lat = 54.835555555
+lon = 10.962777777
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q141612928"
+nome = "Vejrø lighthouse"
+lat = 55.038611111
+lon = 11.369166666
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1846
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q830182"
+nome = "Cape Arkona Lighthouse"
+lat = 54.6796
+lon = 13.4326
+quota_m = 75.0
+portata_nm = 22.0
+colore = "bianco"
+caratteristica = "Fl(3) W 17s"
+periodo_s = 17.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 12.5]
+anno = 1902
+nga = "116-5900"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1267767"
+nome = "Leuchtturm Kollicker Ort"
+lat = 54.562369
+lon = 13.679564
+quota_m = 30.0
+portata_nm = 10.0
+colore = "bianco"
+caratteristica = "LFl WR 6s"
+periodo_s = 6.0
+lampi = [2.0, 4.0]
+anno = 1905
+nga = "116-5912"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1821420"
+nome = "Dornbusch Lighthouse"
+lat = 54.599166666
+lon = 13.119444444
+quota_m = 95.0
+portata_nm = 25.0
+colore = "bianco"
+caratteristica = "Fl WR 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1888
+nga = "116-5864"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1943419"
+nome = "Molenfeuer Sassnitz"
+lat = 54.5060217
+lon = 13.6373189
+quota_m = 15.0
+portata_nm = 12.0
+colore = "bianco"
+caratteristica = "Oc WRG 6s"
+periodo_s = 6.0
+lampi = [5.0, 1.0]
+anno = 1937
+nga = "116-5916"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q2617672"
+nome = "Świnoujście Lighthouse"
+lat = 53.916
+lon = 14.28425
+quota_m = 68.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl WR 12s"
+periodo_s = 12.0
+lampi = [0.5, 11.5]
+anno = 1828
+nga = "116-6116"
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q10426660"
+nome = "Barsebäckshamn lighthouse"
+lat = 55.75688
+lon = 12.90161
+quota_m = 5.3
+portata_nm = 6.0
+colore = "rosso"
+caratteristica = "Iso RG 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1881
+nga = "116-5324"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q11319173"
+nome = "Kikut Lighthouse"
+lat = 53.98131944
+lon = 14.58054444
+quota_m = 91.0
+portata_nm = 25.0
+colore = "bianco"
+caratteristica = "Iso W 10s"
+periodo_s = 10.0
+lampi = [5.0, 5.0]
+anno = 1962
+nga = "116-6496"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q11686689"
+nome = "Nordre Røse Fyr"
+lat = 55.63601
+lon = 12.68678
+quota_m = 14.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Oc(2) WRG 6s"
+periodo_s = 6.0
+lampi = [3.0, 1.0, 1.0, 1.0]
+anno = 1877
+nga = ""
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q18410748"
+nome = "Peenemünde lighthouse"
+lat = 54.18562
+lon = 13.77528
+quota_m = 12.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Oc WRG 6s"
+periodo_s = 6.0
+lampi = [5.0, 1.0]
+anno = 1954
+nga = "116-5968"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q19946245"
+nome = "Leuchtturm Gellen"
+lat = 54.50805556
+lon = 13.07444444
+quota_m = 10.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Oc(2) WRG 10s"
+periodo_s = 10.0
+lampi = [7.0, 1.0, 1.0, 1.0]
+anno = 1905
+nga = "116-5868"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q21051929"
+nome = "Stawa Młyny"
+lat = 53.926204
+lon = 14.277409
+quota_m = 11.0
+portata_nm = 17.0
+colore = "bianco"
+caratteristica = "Oc W 10s"
+periodo_s = 10.0
+lampi = [9.0, 1.0]
+anno = 1873
+nga = "116-6124"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q28376045"
+nome = "Greifswalder Oie Lighthouse"
+lat = 54.249
+lon = 13.92397
+quota_m = 48.0
+portata_nm = 26.0
+colore = "bianco"
+caratteristica = "Fl W 3.8s"
+periodo_s = 3.8
+lampi = [0.5, 3.3]
+anno = 1832
+nga = "116-5940"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39868900"
+nome = "Malmö outer lighthouse"
+lat = 55.616416666
+lon = 12.991611111
+quota_m = 18.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1878
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q42376428"
+nome = "Malmö Oil Port lower light"
+lat = 55.635055555
+lon = 13.023666666
+quota_m = 22.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Oc W 6s"
+periodo_s = 6.0
+lampi = [5.0, 1.0]
+anno = 1958
+nga = "116-5348"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42376708"
+nome = "Malmö Oil Port upper light"
+lat = 55.631388888
+lon = 13.030888888
+quota_m = 35.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Oc W 6s"
+periodo_s = 6.0
+lampi = [5.0, 1.0]
+anno = 1958
+nga = "116-5352"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42376971"
+nome = "Malmö lower light"
+lat = 55.6165
+lon = 12.994416666
+quota_m = 13.0
+portata_nm = 18.0
+colore = "bianco"
+caratteristica = "Oc W 5s"
+periodo_s = 5.0
+lampi = [4.0, 1.0]
+anno = 0
+nga = "116-5360"
+stime = ["anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q42378172"
+nome = "Malmö upper light"
+lat = 55.613388888
+lon = 12.998638888
+quota_m = 20.0
+portata_nm = 18.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 0
+nga = "116-5364"
+stime = ["anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q42378421"
+nome = "Malmö Free Port lower light"
+lat = 55.615333333
+lon = 13.006277777
+quota_m = 24.5
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Iso W 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1922
+nga = "116-5396"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42378582"
+nome = "Malmö Free Port upper light"
+lat = 55.613916666
+lon = 13.011194444
+quota_m = 32.0
+portata_nm = 14.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1922
+nga = "116-5400"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42379491"
+nome = "Industrirännan nedre"
+lat = 55.625805555
+lon = 13.019861111
+quota_m = 12.0
+portata_nm = 12.0
+colore = "bianco"
+caratteristica = "Oc W 3s"
+periodo_s = 3.0
+lampi = [2.0, 1.0]
+anno = 1924
+nga = "116-5412"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42379593"
+nome = "Industrirännan övre"
+lat = 55.626027777
+lon = 13.022944444
+quota_m = 20.0
+portata_nm = 12.0
+colore = "bianco"
+caratteristica = "Oc W 3s"
+periodo_s = 3.0
+lampi = [2.0, 1.0]
+anno = 1924
+nga = "116-5416"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42405954"
+nome = "Lernacken Light"
+lat = 55.569493
+lon = 12.898233
+quota_m = 30.0
+portata_nm = 16.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1952
+nga = "116-5476"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q42428318"
+nome = "Klagshamn lower light"
+lat = 55.523138888
+lon = 12.894416666
+quota_m = 9.0
+portata_nm = 2.2
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1916
+nga = "116-5504"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42428403"
+nome = "Klagshamn upper light"
+lat = 55.523388888
+lon = 12.896277777
+quota_m = 16.0
+portata_nm = 2.4
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1916
+nga = "116-5508"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42428560"
+nome = "Klagshamnsverket lower light"
+lat = 55.525277777
+lon = 12.903638888
+quota_m = 8.0
+portata_nm = 8.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1973
+nga = "116-5512"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42428673"
+nome = "Klagshamnsverket upper light"
+lat = 55.524388888
+lon = 12.908027777
+quota_m = 14.0
+portata_nm = 8.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1973
+nga = "116-5516"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42428740"
+nome = "Sydgas lower light"
+lat = 55.520361111
+lon = 12.891611111
+quota_m = 14.3
+portata_nm = 10.0
+colore = "giallo"
+caratteristica = "Iso Y 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1985
+nga = "116-5517"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42429068"
+nome = "Sydgas upper light"
+lat = 55.520166666
+lon = 12.899055555
+quota_m = 20.8
+portata_nm = 10.0
+colore = "giallo"
+caratteristica = "Q Y"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1985
+nga = "116-5517.1"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42429560"
+nome = "Höllrevet"
+lat = 55.4485
+lon = 12.901888888
+quota_m = 6.5
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1943
+nga = "116-5520"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42432633"
+nome = "Falsterbo Canal No 2"
+lat = 55.39275
+lon = 12.948555555
+quota_m = 6.0
+portata_nm = 2.0
+colore = "verde"
+caratteristica = "Fl G 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1942
+nga = "116-5532"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42432784"
+nome = "Falsterbo Canal No 3"
+lat = 55.401555555
+lon = 12.942555555
+quota_m = 24.2
+portata_nm = 14.0
+colore = "bianco"
+caratteristica = "Iso W 2s"
+periodo_s = 2.0
+lampi = [1.0, 1.0]
+anno = 1942
+nga = "116-5530"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42433200"
+nome = "Falsterbo Canal No 4"
+lat = 55.40125
+lon = 12.941416666
+quota_m = 24.2
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Iso W 2s"
+periodo_s = 2.0
+lampi = [1.0, 1.0]
+anno = 1942
+nga = "116-5528"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42433318"
+nome = "Falsterbo Canal No 5"
+lat = 55.415694444
+lon = 12.93075
+quota_m = 6.0
+portata_nm = 14.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1942
+nga = "116-5526"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42433382"
+nome = "Falsterbo Canal No 6"
+lat = 55.415388888
+lon = 12.929611111
+quota_m = 6.0
+portata_nm = 14.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1942
+nga = "116-5524"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42433619"
+nome = "Trelleborg West lighthouse"
+lat = 55.360433333
+lon = 13.148083333
+quota_m = 8.0
+portata_nm = 6.0
+colore = "rosso"
+caratteristica = "Fl R 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1974
+nga = "116-5580"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42434501"
+nome = "Östra piren"
+lat = 55.359683333
+lon = 13.150183333
+quota_m = 8.0
+portata_nm = 6.0
+colore = "verde"
+caratteristica = "Fl(2) G 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1974
+nga = "116-5576"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42434621"
+nome = "Trelleborg Channel lower light"
+lat = 55.370388888
+lon = 13.154416666
+quota_m = 12.0
+portata_nm = 14.0
+colore = "giallo"
+caratteristica = "Oc Y 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 1909
+nga = "116-5584"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42434701"
+nome = "Trelleborg Channel upper light"
+lat = 55.372388888
+lon = 13.155416666
+quota_m = 22.0
+portata_nm = 14.0
+colore = "giallo"
+caratteristica = "Oc Y 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 1909
+nga = "116-5588"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42506272"
+nome = "Ystad Yttre Västra"
+lat = 55.416166666
+lon = 13.814583333
+quota_m = 8.0
+portata_nm = 9.0
+colore = "rosso"
+caratteristica = "Fl R 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1977
+nga = "116-5636"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42506772"
+nome = "Ystad East lighthouse"
+lat = 55.416805555
+lon = 13.818333333
+quota_m = 8.0
+portata_nm = 7.0
+colore = "verde"
+caratteristica = "Fl(2) G 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1975
+nga = "116-5632"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q58359944"
+nome = "Mukran harbour entrance light"
+lat = 54.476444444
+lon = 13.597666666
+quota_m = 16.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110322825"
+nome = "Vindhamn nedre"
+lat = 56.145616666
+lon = 14.852083333
+quota_m = 14.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1965
+nga = "116-7452"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110322827"
+nome = "Vindhamn övre"
+lat = 56.14515
+lon = 14.851666666
+quota_m = 17.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1965
+nga = "116-7456"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110994242"
+nome = "Varvsrännan lower light"
+lat = 56.046944444
+lon = 14.583583333
+quota_m = 5.0
+portata_nm = 6.5
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1963
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110994243"
+nome = "Varvsrännan upper light"
+lat = 56.047638888
+lon = 14.583444444
+quota_m = 6.6
+portata_nm = 6.5
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1963
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110995382"
+nome = "Sölvesborg Channel No 6"
+lat = 56.046733333
+lon = 14.584733333
+quota_m = 5.0
+portata_nm = 1.8
+colore = "rosso"
+caratteristica = "Fl R 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1963
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110995384"
+nome = "Sölvesborg Channel No 5"
+lat = 56.0439
+lon = 14.5848
+quota_m = 5.0
+portata_nm = 1.4
+colore = "verde"
+caratteristica = "Fl(2) G 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1963
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110995672"
+nome = "Innerhamnen nedre"
+lat = 56.050666666
+lon = 14.586805555
+quota_m = 7.5
+portata_nm = 5.4
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1963
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110995674"
+nome = "Innerhamnen övre"
+lat = 56.051083333
+lon = 14.586944444
+quota_m = 9.0
+portata_nm = 5.4
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1963
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110996872"
+nome = "Tosteberga lower light"
+lat = 55.997027777
+lon = 14.445277777
+quota_m = 4.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1948
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110996873"
+nome = "Tosteberga upper light"
+lat = 55.997888888
+lon = 14.445083333
+quota_m = 7.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1948
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q123851943"
+nome = "Lighthouses of Świnoujście"
+lat = 53.926204
+lon = 14.277409
+quota_m = 11.0
+portata_nm = 17.0
+colore = "bianco"
+caratteristica = "Oc W 10s"
+periodo_s = 10.0
+lampi = [9.0, 1.0]
+anno = 1987
+nga = "116-6124"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q61145812"
+nome = "Leuchtturm Ranzow"
+lat = 54.584555555
+lon = 13.634388888
+quota_m = 55.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q109519639"
+nome = "MA 7"
+lat = 55.621388888
+lon = 12.984722222
+quota_m = 7.5
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "Oc WRG 3s"
+periodo_s = 3.0
+lampi = [2.0, 1.0]
+anno = 1937
+nga = "116-5380"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q109851610"
+nome = "Limhamn North"
+lat = 55.5975
+lon = 12.929666666
+quota_m = 8.5
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Oc WRG 6s"
+periodo_s = 6.0
+lampi = [5.0, 1.0]
+anno = 1957
+nga = "116-5440"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110289738"
+nome = "Barsebäckshamn övre"
+lat = 55.757
+lon = 12.905472222
+quota_m = 10.0
+portata_nm = 4.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1938
+nga = "116-5328"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110290937"
+nome = "Barsebäcksverket nedre"
+lat = 55.743222222
+lon = 12.925416666
+quota_m = 6.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "F R (occas)"
+periodo_s = 0.0
+lampi = []
+anno = 1973
+nga = "116-5332"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110290938"
+nome = "Barsebäcksverket övre"
+lat = 55.746
+lon = 12.923083333
+quota_m = 12.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "F R (occas)"
+periodo_s = 0.0
+lampi = []
+anno = 1973
+nga = "116-5336"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110291079"
+nome = "MA Röd nedre"
+lat = 55.617583333
+lon = 12.995
+quota_m = 9.0
+portata_nm = 14.0
+colore = "rosso"
+caratteristica = "Oc R 5s"
+periodo_s = 5.0
+lampi = [4.0, 1.0]
+anno = 1972
+nga = "116-5368"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110291080"
+nome = "MA Röd övre"
+lat = 55.616722222
+lon = 12.996166666
+quota_m = 12.0
+portata_nm = 14.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1972
+nga = "116-5372"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110291849"
+nome = "MA Gröna nedre"
+lat = 55.619027777
+lon = 12.988916666
+quota_m = 8.0
+portata_nm = 14.0
+colore = "verde"
+caratteristica = "Oc G 5s"
+periodo_s = 5.0
+lampi = [4.0, 1.0]
+anno = 1974
+nga = "116-5384"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110291851"
+nome = "MA Gröna övre"
+lat = 55.61825
+lon = 12.989861111
+quota_m = 16.0
+portata_nm = 14.0
+colore = "verde"
+caratteristica = "Q G"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1987
+nga = "116-5384.1"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110292133"
+nome = "FH 4"
+lat = 55.618472222
+lon = 12.996944444
+quota_m = 4.0
+portata_nm = 5.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1922
+nga = "116-5404"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110292134"
+nome = "FH 3"
+lat = 55.617527777
+lon = 12.99625
+quota_m = 7.0
+portata_nm = 4.0
+colore = "verde"
+caratteristica = "Q G"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1922
+nga = "116-5408"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110292240"
+nome = "Malmö Nr 11"
+lat = 55.624833333
+lon = 13.019611111
+quota_m = 6.0
+portata_nm = 4.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1924
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110292242"
+nome = "Malmö Nr 10"
+lat = 55.624194444
+lon = 13.01875
+quota_m = 6.0
+portata_nm = 3.0
+colore = "verde"
+caratteristica = "Q G"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1924
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110300865"
+nome = "Smygehamn lower light"
+lat = 55.337861111
+lon = 13.358305555
+quota_m = 7.0
+portata_nm = 5.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1924
+nga = "116-5608"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110300869"
+nome = "Smygehamn upper light"
+lat = 55.338805555
+lon = 13.358361111
+quota_m = 10.0
+portata_nm = 5.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1924
+nga = "116-5612"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110821353"
+nome = "Limhamns Båthamn nedre"
+lat = 55.582138888
+lon = 12.912555555
+quota_m = 4.0
+portata_nm = 2.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1970
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110821354"
+nome = "Limhamns Båthamn övre"
+lat = 55.582111111
+lon = 12.913722222
+quota_m = 9.0
+portata_nm = 2.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1970
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110821597"
+nome = "Ystad Yacht Harbor lower light"
+lat = 55.425166666
+lon = 13.816361111
+quota_m = 6.0
+portata_nm = 2.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1972
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110821598"
+nome = "Ystad Yacht Harbor upper light"
+lat = 55.426555555
+lon = 13.817222222
+quota_m = 11.0
+portata_nm = 2.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1972
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110936484"
+nome = "Leuchtturm Lauterbach"
+lat = 54.34252
+lon = 13.50007
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110370076"
+nome = "Kristianopel lower light"
+lat = 56.256416666
+lon = 16.0463
+quota_m = 9.0
+portata_nm = 4.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1951
+nga = "116-7768"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110370078"
+nome = "Kristianopel upper light"
+lat = 56.258466666
+lon = 16.042333333
+quota_m = 14.0
+portata_nm = 4.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1951
+nga = "116-7772"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110377033"
+nome = "Bergkvara lower light"
+lat = 56.379611111
+lon = 16.091305555
+quota_m = 9.0
+portata_nm = 4.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1921
+nga = "116-7816"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110377035"
+nome = "Bergkvara upper light"
+lat = 56.379416666
+lon = 16.088194444
+quota_m = 15.0
+portata_nm = 4.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1921
+nga = "116-7820"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110983918"
+nome = "Torshamns udde skjutvarningsfyr"
+lat = 56.08
+lon = 15.842166666
+quota_m = 22.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "VQ R (occas)"
+periodo_s = 0.5
+lampi = [0.25, 0.25]
+anno = 0
+nga = ""
+stime = ["portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110992596"
+nome = "Kungsholms skjutvarningsfyr"
+lat = 56.107194444
+lon = 15.586333333
+quota_m = 34.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "VQ R (occas)"
+periodo_s = 0.5
+lampi = [0.25, 0.25]
+anno = 0
+nga = ""
+stime = ["portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110992625"
+nome = "Västra Hästholmen"
+lat = 56.124666666
+lon = 15.457416666
+quota_m = 4.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "F R (occas)"
+periodo_s = 0.0
+lampi = []
+anno = 1930
+nga = ""
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110367699"
+nome = "Sandhamn Fishing Harbor lower light"
+lat = 56.0925
+lon = 15.859027777
+quota_m = 5.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1956
+nga = "116-7712"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110367700"
+nome = "Sandhamn Fishing Harbor upper light"
+lat = 56.096861111
+lon = 15.856861111
+quota_m = 12.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1956
+nga = "116-7716"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110304342"
+nome = "Simrislund lower light"
+lat = 55.532333333
+lon = 14.353833333
+quota_m = 5.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1970
+nga = "116-7156"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110304345"
+nome = "Simrislund upper light"
+lat = 55.532472222
+lon = 14.353333333
+quota_m = 7.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1970
+nga = "116-7160"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110304835"
+nome = "Baskemölla lower light"
+lat = 55.593916666
+lon = 14.315472222
+quota_m = 6.0
+portata_nm = 4.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1935
+nga = "116-7176"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110304836"
+nome = "Baskemölla upper light"
+lat = 55.593416666
+lon = 14.315222222
+quota_m = 11.0
+portata_nm = 4.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1935
+nga = "116-7180"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110305033"
+nome = "Kivik lower light"
+lat = 55.687722222
+lon = 14.226166666
+quota_m = 6.0
+portata_nm = 6.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1888
+nga = "116-7184"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110305037"
+nome = "Kivik upper light"
+lat = 55.687416666
+lon = 14.225833333
+quota_m = 9.0
+portata_nm = 6.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1888
+nga = "116-7188"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110305254"
+nome = "Vitemölla lower light"
+lat = 55.699194444
+lon = 14.208111111
+quota_m = 6.0
+portata_nm = 15.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1933
+nga = "116-7192"
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110305255"
+nome = "Vitemölla upper light"
+lat = 55.698138888
+lon = 14.20725
+quota_m = 10.0
+portata_nm = 15.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1933
+nga = "116-7196"
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110821283"
+nome = "Lundåkrakajen nedre"
+lat = 55.861305555
+lon = 12.85025
+quota_m = 3.0
+portata_nm = 15.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1987
+nga = ""
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110821284"
+nome = "Lundåkrakajen övre"
+lat = 55.862027777
+lon = 12.850777777
+quota_m = 6.0
+portata_nm = 15.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1987
+nga = ""
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q28375724"
+nome = "Karlskrona lower lighthouse"
+lat = 56.159
+lon = 15.597166666
+quota_m = 21.5
+portata_nm = 16.0
+colore = "rosso"
+caratteristica = "Iso R 6s"
+periodo_s = 6.0
+lampi = [3.0, 3.0]
+anno = 1918
+nga = "116-7556"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39898764"
+nome = "Karlskrona upper lighthouse"
+lat = 56.170694444
+lon = 15.601861111
+quota_m = 37.5
+portata_nm = 16.0
+colore = "rosso"
+caratteristica = "Iso R 3s"
+periodo_s = 3.0
+lampi = [1.5, 1.5]
+anno = 1918
+nga = "116-7560"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39912073"
+nome = "Saxemara lower light"
+lat = 56.152611111
+lon = 15.235916666
+quota_m = 3.6
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Iso W 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1904
+nga = "116-7472"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q39912907"
+nome = "Saxemara upper light"
+lat = 56.163222222
+lon = 15.242277777
+quota_m = 10.5
+portata_nm = 11.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1904
+nga = "116-7476"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42886049"
+nome = "Svanvik lower light"
+lat = 56.156277777
+lon = 15.246361111
+quota_m = 4.6
+portata_nm = 5.0
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1904
+nga = "116-7480"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42886621"
+nome = "Svanvik upper light"
+lat = 56.160805555
+lon = 15.250861111
+quota_m = 10.2
+portata_nm = 4.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1904
+nga = "116-7484"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42890241"
+nome = "Aspan nedre"
+lat = 56.157111111
+lon = 15.307111111
+quota_m = 4.5
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Iso W 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1938
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42890419"
+nome = "Aspan övre"
+lat = 56.157416666
+lon = 15.31775
+quota_m = 8.2
+portata_nm = 8.1
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1899
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42902237"
+nome = "Kåsaskär nedre"
+lat = 56.110916666
+lon = 15.428055555
+quota_m = 5.0
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "Iso W 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1944
+nga = "116-7524"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42902310"
+nome = "Kåsaskär övre"
+lat = 56.114194444
+lon = 15.427611111
+quota_m = 10.0
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1944
+nga = "116-7528"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42998717"
+nome = "West Underwater Barrier lighthouse"
+lat = 56.108388888
+lon = 15.5755
+quota_m = 5.7
+portata_nm = 5.8
+colore = "rosso"
+caratteristica = "Iso R 2s"
+periodo_s = 2.0
+lampi = [1.0, 1.0]
+anno = 1957
+nga = "116-7564"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42999808"
+nome = "Kungsholm lighthouse"
+lat = 56.109444444
+lon = 15.590138888
+quota_m = 5.5
+portata_nm = 6.0
+colore = "rosso"
+caratteristica = "F RG"
+periodo_s = 0.0
+lampi = []
+anno = 1925
+nga = "116-7568"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43016696"
+nome = "Merchant Port lower light"
+lat = 56.164555555
+lon = 15.595194444
+quota_m = 10.0
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1883
+nga = "116-7592"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43019638"
+nome = "Merchant Port upper light"
+lat = 56.164972222
+lon = 15.59375
+quota_m = 13.0
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1883
+nga = "116-7596"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43095071"
+nome = "Karlskrona Oil Port lower light"
+lat = 56.168916666
+lon = 15.59525
+quota_m = 3.5
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1967
+nga = "116-7608"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43095747"
+nome = "Karlskrona Oil Port upper light"
+lat = 56.169027777
+lon = 15.593805555
+quota_m = 6.5
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1967
+nga = "116-7612"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43119727"
+nome = "Nättraby lighthouse"
+lat = 56.188222222
+lon = 15.546388888
+quota_m = 2.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "Fl R 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1973
+nga = "116-7620"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43122593"
+nome = "Tjurkö upper light"
+lat = 56.105277777
+lon = 15.631194444
+quota_m = 15.0
+portata_nm = 11.0
+colore = "bianco"
+caratteristica = "F W"
+periodo_s = 0.0
+lampi = []
+anno = 1933
+nga = "116-7636"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43130736"
+nome = "Långören lower light"
+lat = 56.065083333
+lon = 15.821666666
+quota_m = 4.7
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "Iso W 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1931
+nga = "116-7664"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43141733"
+nome = "Långören upper light"
+lat = 56.066694444
+lon = 15.817388888
+quota_m = 7.7
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1931
+nga = "116-7668"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43142264"
+nome = "Hommenabben lower light"
+lat = 56.062166666
+lon = 15.824805555
+quota_m = 4.7
+portata_nm = 5.0
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1931
+nga = "116-7672"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43175962"
+nome = "Utklippan West Haven lighthouse"
+lat = 55.954472222
+lon = 15.701361111
+quota_m = 8.0
+portata_nm = 3.8
+colore = "bianco"
+caratteristica = "Fl(3) W 9s"
+periodo_s = 9.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 4.5]
+anno = 1942
+nga = "116-7704"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q43192264"
+nome = "Dalskär upper light"
+lat = 56.39225
+lon = 16.0865
+quota_m = 14.5
+portata_nm = 6.8
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1953
+nga = "116-7812"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q64933074"
+nome = "Joppö fyr"
+lat = 56.143
+lon = 14.9745
+quota_m = 4.4
+portata_nm = 4.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1945
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q64933586"
+nome = "Baggahegna fyr"
+lat = 56.153833333
+lon = 14.9685
+quota_m = 8.4
+portata_nm = 3.0
+colore = "bianco"
+caratteristica = "Iso W 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1977
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q109860085"
+nome = "Drottningskärs fyr"
+lat = 56.110944444
+lon = 15.565444444
+quota_m = 3.0
+portata_nm = 3.0
+colore = "bianco"
+caratteristica = "F G (occas)"
+periodo_s = 0.0
+lampi = []
+anno = 1930
+nga = "116-7624"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110072157"
+nome = "Båknahall fyr"
+lat = 56.145638888
+lon = 14.752694444
+quota_m = 6.0
+portata_nm = 3.4
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1967
+nga = "116-7388"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110312852"
+nome = "Hanö breakwater"
+lat = 56.010333333
+lon = 14.834083333
+quota_m = 4.0
+portata_nm = 2.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1982
+nga = "116-7320"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110312958"
+nome = "Hanö Hamn nedre"
+lat = 56.009722222
+lon = 14.836027777
+quota_m = 6.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1907
+nga = "116-7328"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110312959"
+nome = "Hanö Hamn övre"
+lat = 56.009333333
+lon = 14.836944444
+quota_m = 9.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1907
+nga = "116-7332"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110313093"
+nome = "Hanö Kraftkabel nedre"
+lat = 56.013
+lon = 14.835333333
+quota_m = 11.0
+portata_nm = 7.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1956
+nga = "116-7336"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110313094"
+nome = "Hanö Kraftkabel övre"
+lat = 56.011111111
+lon = 14.840611111
+quota_m = 26.0
+portata_nm = 7.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1956
+nga = "116-7340"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110315181"
+nome = "Listershuvuds Kraftkabel nedre"
+lat = 56.033611111
+lon = 14.780055555
+quota_m = 19.0
+portata_nm = 7.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1956
+nga = "116-7344"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110315182"
+nome = "Listershuvuds Kraftkabel övre"
+lat = 56.034444444
+lon = 14.777722222
+quota_m = 29.0
+portata_nm = 7.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1956
+nga = "116-7348"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110316032"
+nome = "Norje lower light"
+lat = 56.119333333
+lon = 14.703472222
+quota_m = 7.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1967
+nga = "116-7376"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110316034"
+nome = "Norje upper light"
+lat = 56.119472222
+lon = 14.695555555
+quota_m = 14.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1967
+nga = "116-7380"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110316276"
+nome = "Ljungholmen lower light"
+lat = 56.154861111
+lon = 14.730222222
+quota_m = 6.0
+portata_nm = 6.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1967
+nga = "116-7382"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110316278"
+nome = "Ljungholmen upper light"
+lat = 56.155666666
+lon = 14.730416666
+quota_m = 11.0
+portata_nm = 6.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1967
+nga = "116-7382.1"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110316444"
+nome = "Skåpehåle"
+lat = 56.155083333
+lon = 14.738333333
+quota_m = 6.0
+portata_nm = 3.0
+colore = "bianco"
+caratteristica = "F R (occas)"
+periodo_s = 0.0
+lampi = []
+anno = 1967
+nga = "116-7384"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110322918"
+nome = "Ronneby nedre"
+lat = 56.176666666
+lon = 15.300972222
+quota_m = 14.0
+portata_nm = 15.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1886
+nga = "116-7508"
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110322919"
+nome = "Ronneby övre"
+lat = 56.178027777
+lon = 15.300861111
+quota_m = 18.0
+portata_nm = 15.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1886
+nga = "116-7512"
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110324080"
+nome = "Vämöviken nedre"
+lat = 56.169638888
+lon = 15.605305555
+quota_m = 4.0
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1942
+nga = "116-7600"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110324081"
+nome = "Vämöviken övre"
+lat = 56.170833333
+lon = 15.603555555
+quota_m = 7.0
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1942
+nga = "116-7604"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110335479"
+nome = "Ekenabben Fishing Harbor lower light"
+lat = 56.101138888
+lon = 15.637083333
+quota_m = 5.9
+portata_nm = 2.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1959
+nga = "116-7640"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110335480"
+nome = "Ekenabben Fishing Harbor upper light"
+lat = 56.100694444
+lon = 15.637666666
+quota_m = 8.5
+portata_nm = 2.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1959
+nga = "116-7644"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110337639"
+nome = "Stenshamn lower light"
+lat = 56.030222222
+lon = 15.77825
+quota_m = 6.0
+portata_nm = 5.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1921
+nga = "116-7656"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110337643"
+nome = "Stenshamn upper light"
+lat = 56.028944444
+lon = 15.778138888
+quota_m = 10.0
+portata_nm = 5.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1921
+nga = "116-7660"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110340337"
+nome = "Ungskär nedre"
+lat = 56.040277777
+lon = 15.803972222
+quota_m = 6.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "F W"
+periodo_s = 0.0
+lampi = []
+anno = 1943
+nga = "116-7684"
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q110340338"
+nome = "Ungskär övre"
+lat = 56.040527777
+lon = 15.80325
+quota_m = 8.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "F W"
+periodo_s = 0.0
+lampi = []
+anno = 1943
+nga = "116-7688"
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q28376046"
+nome = "Hanö lighthouse"
+lat = 56.01375
+lon = 14.84625
+quota_m = 70.5
+portata_nm = 23.5
+colore = "bianco"
+caratteristica = "Fl(3) W 12s"
+periodo_s = 12.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 7.5]
+anno = 1906
+nga = "116-7316"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42316806"
+nome = "Ängelholm North lighthouse"
+lat = 56.272388888
+lon = 12.831361111
+quota_m = 3.3
+portata_nm = 5.0
+colore = "rosso"
+caratteristica = "Fl R 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1977
+nga = "116-1492"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42316875"
+nome = "Ängelholm South lighthouse"
+lat = 56.271888888
+lon = 12.831361111
+quota_m = 3.3
+portata_nm = 4.0
+colore = "verde"
+caratteristica = "Fl(2) G 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1977
+nga = "116-1496"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42328717"
+nome = "Helsingborg West Port lower light"
+lat = 56.028972222
+lon = 12.692722222
+quota_m = 26.0
+portata_nm = 12.0
+colore = "rosso"
+caratteristica = "Oc R 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 0
+nga = "116-5197"
+stime = ["anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q42329193"
+nome = "Helsingborg West Port upper light"
+lat = 56.031083333
+lon = 12.692916666
+quota_m = 42.0
+portata_nm = 12.0
+colore = "rosso"
+caratteristica = "Oc R 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 0
+nga = "116-5197.1"
+stime = ["anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q42329273"
+nome = "Helsingborg West Port west lighthouse"
+lat = 56.025527777
+lon = 12.691444444
+quota_m = 14.0
+portata_nm = 12.0
+colore = "rosso"
+caratteristica = "Fl(3) R 10s"
+periodo_s = 10.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 5.5]
+anno = 0
+nga = "116-5198"
+stime = ["anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q42329338"
+nome = "Helsingborg West Port east lighthouse"
+lat = 56.026305555
+lon = 12.693277777
+quota_m = 14.0
+portata_nm = 10.0
+colore = "verde"
+caratteristica = "Fl(3) G 10s"
+periodo_s = 10.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 5.5]
+anno = 0
+nga = "116-5199"
+stime = ["anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q42329581"
+nome = "Helsingborg South Port lower light"
+lat = 56.02525
+lon = 12.69825
+quota_m = 22.2
+portata_nm = 12.0
+colore = "bianco"
+caratteristica = "Iso W 3s"
+periodo_s = 3.0
+lampi = [1.5, 1.5]
+anno = 1961
+nga = "116-5216"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42329631"
+nome = "Helsingborg South Port upper light"
+lat = 56.027527777
+lon = 12.698361111
+quota_m = 28.7
+portata_nm = 12.0
+colore = "bianco"
+caratteristica = "Iso W 3s"
+periodo_s = 3.0
+lampi = [1.5, 1.5]
+anno = 1961
+nga = "116-5220"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42335133"
+nome = "Helsingborg South Port West lighthouse"
+lat = 56.018916666
+lon = 12.697027777
+quota_m = 12.0
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1961
+nga = "116-5224"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42335288"
+nome = "Helsingborg South Port East lighthouse"
+lat = 56.018416666
+lon = 12.698888888
+quota_m = 12.0
+portata_nm = 6.0
+colore = "verde"
+caratteristica = "Q G"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1961
+nga = "116-5228"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42335448"
+nome = "Helsingborg Bulk port lower light"
+lat = 56.00775
+lon = 12.708638888
+quota_m = 27.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Oc W 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 1966
+nga = "116-5232"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42335515"
+nome = "Helsingborg Bulk port upper light"
+lat = 56.011033333
+lon = 12.707533333
+quota_m = 52.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Oc W 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 1966
+nga = "116-5236"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42340873"
+nome = "Helsingborg Bulk port west lighthouse"
+lat = 56.004833333
+lon = 12.707472222
+quota_m = 5.0
+portata_nm = 6.0
+colore = "rosso"
+caratteristica = "Fl R 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1918
+nga = "116-5260"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42340960"
+nome = "Helsingborg Bulk port east lighthouse"
+lat = 56.00425
+lon = 12.711305555
+quota_m = 7.0
+portata_nm = 6.0
+colore = "verde"
+caratteristica = "Fl G 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1918
+nga = "116-5256"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42565979"
+nome = "Gropahålet South light"
+lat = 55.857111111
+lon = 14.239083333
+quota_m = 3.0
+portata_nm = 2.0
+colore = "rosso"
+caratteristica = "Fl R 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1987
+nga = "116-7199"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42566161"
+nome = "Gropahålet North light"
+lat = 55.857777777
+lon = 14.239416666
+quota_m = 3.0
+portata_nm = 2.0
+colore = "verde"
+caratteristica = "Fl G 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1987
+nga = "116-7198"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42566603"
+nome = "Båkören lower light"
+lat = 55.944194444
+lon = 14.339555555
+quota_m = 6.2
+portata_nm = 11.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1963
+nga = "116-7208"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42567130"
+nome = "Revhaken lower light"
+lat = 55.918138888
+lon = 14.33625
+quota_m = 7.2
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Iso W 3s"
+periodo_s = 3.0
+lampi = [1.5, 1.5]
+anno = 1963
+nga = "116-7216"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42567348"
+nome = "Revhaken upper light"
+lat = 55.916083333
+lon = 14.328194444
+quota_m = 14.2
+portata_nm = 7.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1963
+nga = "116-7220"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42662272"
+nome = "Åhus lower light"
+lat = 55.927966666
+lon = 14.3212
+quota_m = 35.0
+portata_nm = 12.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1963
+nga = "116-7222"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42662620"
+nome = "Åhus upper light"
+lat = 55.928183333
+lon = 14.316983333
+quota_m = 50.0
+portata_nm = 12.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1963
+nga = "116-7222.1"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42662947"
+nome = "Rinkaby South warning light"
+lat = 55.947183333
+lon = 14.327033333
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "VQ Y (occas)"
+periodo_s = 0.5
+lampi = [0.25, 0.25]
+anno = 0
+nga = ""
+stime = ["quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q42706174"
+nome = "Rinkaby North beacon"
+lat = 55.962116666
+lon = 14.34845
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "VQ Y (occas)"
+periodo_s = 0.5
+lampi = [0.25, 0.25]
+anno = 0
+nga = ""
+stime = ["quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q42707086"
+nome = "Sölvesborg lower light"
+lat = 56.033333333
+lon = 14.587083333
+quota_m = 7.0
+portata_nm = 10.0
+colore = "bianco"
+caratteristica = "Oc W 6s"
+periodo_s = 6.0
+lampi = [5.0, 1.0]
+anno = 1963
+nga = "116-7268"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42707369"
+nome = "Sölvesborg upper light"
+lat = 56.042694444
+lon = 14.595222222
+quota_m = 17.0
+portata_nm = 14.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1963
+nga = "116-7272"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42707763"
+nome = "Rådmansholmen lower light"
+lat = 56.04425
+lon = 14.589027777
+quota_m = 4.0
+portata_nm = 6.0
+colore = "verde"
+caratteristica = "Iso G 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1963
+nga = "116-7276"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42750275"
+nome = "Rådmansholmen upper light"
+lat = 56.045722222
+lon = 14.589972222
+quota_m = 7.5
+portata_nm = 5.0
+colore = "verde"
+caratteristica = "Q G"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1963
+nga = "116-7280"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42750413"
+nome = "Inner Road lower light"
+lat = 56.037888888
+lon = 14.579666666
+quota_m = 5.0
+portata_nm = 6.8
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1963
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42750570"
+nome = "Inner Road upper light"
+lat = 56.038694444
+lon = 14.579555555
+quota_m = 7.5
+portata_nm = 6.8
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1963
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42788421"
+nome = "Kölö upper light"
+lat = 56.158527777
+lon = 14.824833333
+quota_m = 17.1
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1968
+nga = "116-7408"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42880865"
+nome = "Karlshamn lower light"
+lat = 56.1635
+lon = 14.867083333
+quota_m = 10.0
+portata_nm = 10.0
+colore = "rosso"
+caratteristica = "Iso R 2s"
+periodo_s = 2.0
+lampi = [1.0, 1.0]
+anno = 1881
+nga = "116-7432"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42881043"
+nome = "Karlshamn upper light"
+lat = 56.166333333
+lon = 14.865138888
+quota_m = 15.0
+portata_nm = 10.0
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1871
+nga = "116-7436"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42881240"
+nome = "Sutudden nedre"
+lat = 56.157777777
+lon = 14.860472222
+quota_m = 18.0
+portata_nm = 8.0
+colore = "verde"
+caratteristica = "Iso G 3s"
+periodo_s = 3.0
+lampi = [1.5, 1.5]
+anno = 1945
+nga = "116-7440"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42881341"
+nome = "Sutudden övre"
+lat = 56.1605
+lon = 14.856083333
+quota_m = 37.0
+portata_nm = 8.0
+colore = "verde"
+caratteristica = "Q G"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1945
+nga = "116-7444"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42961756"
+nome = "Rönnfjärdsleden nedre"
+lat = 56.100583333
+lon = 15.474805555
+quota_m = 8.3
+portata_nm = 6.0
+colore = "rosso"
+caratteristica = "Oc R 3s"
+periodo_s = 3.0
+lampi = [2.0, 1.0]
+anno = 1940
+nga = "116-7544"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42962093"
+nome = "Rönnfjärdsleden övre"
+lat = 56.10275
+lon = 15.473555555
+quota_m = 12.3
+portata_nm = 6.0
+colore = "rosso"
+caratteristica = "Oc R 3s"
+periodo_s = 3.0
+lampi = [2.0, 1.0]
+anno = 1940
+nga = "116-7548"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42962442"
+nome = "Garpaviken"
+lat = 56.101166666
+lon = 15.476333333
+quota_m = 5.0
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1940
+nga = "116-7552"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110280120"
+nome = "Ramsjöhamn Röda nedre"
+lat = 56.384666666
+lon = 12.663416666
+quota_m = 5.0
+portata_nm = 2.0
+colore = "bianco"
+caratteristica = "F R (occas)"
+periodo_s = 0.0
+lampi = []
+anno = 1952
+nga = "116-1476"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110280121"
+nome = "Ramsjöhamn Röda övre"
+lat = 56.385083333
+lon = 12.663305555
+quota_m = 10.0
+portata_nm = 2.0
+colore = "bianco"
+caratteristica = "F R (occas)"
+periodo_s = 0.0
+lampi = []
+anno = 1952
+nga = "116-1480"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110280631"
+nome = "Ramsjöhamn Gröna nedre"
+lat = 56.384305555
+lon = 12.661055555
+quota_m = 5.0
+portata_nm = 2.0
+colore = "bianco"
+caratteristica = "F G (occas)"
+periodo_s = 0.0
+lampi = []
+anno = 1952
+nga = "116-1484"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110280632"
+nome = "Ramsjöhamn Gröna övre"
+lat = 56.385222222
+lon = 12.659944444
+quota_m = 11.0
+portata_nm = 2.0
+colore = "bianco"
+caratteristica = "F G (occas)"
+periodo_s = 0.0
+lampi = []
+anno = 1952
+nga = "116-1488"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110281127"
+nome = "Ängelholm lower light"
+lat = 56.271527777
+lon = 12.83925
+quota_m = 8.0
+portata_nm = 7.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1955
+nga = "116-1500"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110281130"
+nome = "Ängelholm upper light"
+lat = 56.271472222
+lon = 12.840194444
+quota_m = 11.0
+portata_nm = 7.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1955
+nga = "116-1504"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110287968"
+nome = "Bulkhamnens Avloppsledning nedre"
+lat = 56.034388888
+lon = 12.691333333
+quota_m = 6.0
+portata_nm = 5.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1972
+nga = "116-5230"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110287969"
+nome = "Bulkhamnens Avloppsledning övre"
+lat = 56.03525
+lon = 12.694861111
+quota_m = 12.0
+portata_nm = 5.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1972
+nga = "116-5230.1"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110288128"
+nome = "Helsingborgs Bulkhamn Gröna nedre"
+lat = 56.009
+lon = 12.708861111
+quota_m = 23.0
+portata_nm = 9.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1969
+nga = "116-5240"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110288129"
+nome = "Helsingborgs Bulkhamn Gröna övre"
+lat = 56.010516666
+lon = 12.708366666
+quota_m = 28.0
+portata_nm = 9.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1969
+nga = "116-5244"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110288277"
+nome = "Helsingborgs Bulkhamn Röda nedre"
+lat = 56.006722222
+lon = 12.708333333
+quota_m = 15.0
+portata_nm = 11.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1969
+nga = "116-5248"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110288278"
+nome = "Helsingborgs Bulkhamn Röda övre"
+lat = 56.009194444
+lon = 12.707472222
+quota_m = 27.0
+portata_nm = 11.0
+colore = "rosso"
+caratteristica = "Iso R 2s"
+periodo_s = 2.0
+lampi = [1.0, 1.0]
+anno = 1969
+nga = "116-5252"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110288385"
+nome = "Råå Hamn"
+lat = 55.988694444
+lon = 12.743694444
+quota_m = 4.0
+portata_nm = 6.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1985
+nga = "116-5265"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110305341"
+nome = "Yngsjö lower light"
+lat = 55.860083333
+lon = 14.224694444
+quota_m = 7.0
+portata_nm = 5.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1956
+nga = "116-7200"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110305342"
+nome = "Yngsjö upper light"
+lat = 55.860305555
+lon = 14.2235
+quota_m = 11.0
+portata_nm = 5.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1956
+nga = "116-7204"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110311640"
+nome = "Herrmans Heja lower light"
+lat = 56.036944444
+lon = 14.552527777
+quota_m = 5.0
+portata_nm = 2.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1977
+nga = "116-7252"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110311641"
+nome = "Herrmans Heja upper light"
+lat = 56.036472222
+lon = 14.554666666
+quota_m = 8.0
+portata_nm = 2.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1977
+nga = "116-7256"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110312157"
+nome = "Torsö lower light"
+lat = 55.999888888
+lon = 14.64975
+quota_m = 4.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1898
+nga = "116-7284"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110312158"
+nome = "Torsö upper light"
+lat = 56.000138888
+lon = 14.649638888
+quota_m = 8.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1898
+nga = "116-7288"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110312344"
+nome = "Nogersund Östra"
+lat = 56.001666666
+lon = 14.735527777
+quota_m = 5.0
+portata_nm = 2.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1880
+nga = "116-7304"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110312394"
+nome = "Nogersund lower light"
+lat = 56.003666666
+lon = 14.735694444
+quota_m = 7.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1925
+nga = "116-7308"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110312396"
+nome = "Nogersund upper light"
+lat = 56.004416666
+lon = 14.735888888
+quota_m = 12.0
+portata_nm = 10.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1925
+nga = "116-7312"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110315712"
+nome = "Krokås lower light"
+lat = 56.049777777
+lon = 14.756194444
+quota_m = 9.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1935
+nga = "116-7356"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110315714"
+nome = "Krokås upper light"
+lat = 56.049583333
+lon = 14.754694444
+quota_m = 14.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1935
+nga = "116-7360"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110316830"
+nome = "Stilleryd lower light"
+lat = 56.160027777
+lon = 14.812972222
+quota_m = 8.0
+portata_nm = 7.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1975
+nga = "116-7396"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110316831"
+nome = "Stilleryd upper light"
+lat = 56.161166666
+lon = 14.8125
+quota_m = 15.0
+portata_nm = 7.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1975
+nga = "116-7400"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110316996"
+nome = "Sutudden Pierhead"
+lat = 56.158055555
+lon = 14.861805555
+quota_m = 6.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1945
+nga = "116-7448"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110316998"
+nome = "Kastellet Pierhead"
+lat = 56.158083333
+lon = 14.863527777
+quota_m = 6.0
+portata_nm = 3.0
+colore = "verde"
+caratteristica = "F G"
+periodo_s = 0.0
+lampi = []
+anno = 1950
+nga = "116-7460"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q1263928"
+nome = "Dueodde Lighthouse"
+lat = 54.99179889
+lon = 15.074293869
+quota_m = 48.0
+portata_nm = 20.0
+colore = "bianco"
+caratteristica = "Fl(3) W 10s"
+periodo_s = 10.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 5.5]
+anno = 1962
+nga = "116-5732"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q2294118"
+nome = "Sletterhage Lighthouse"
+lat = 56.09508
+lon = 10.5129
+quota_m = 17.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Oc WRG 10s"
+periodo_s = 10.0
+lampi = [9.0, 1.0]
+anno = 1894
+nga = "116-2252"
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q2438012"
+nome = "Hammeren Lighthouse"
+lat = 55.286888888
+lon = 14.759368488
+quota_m = 91.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1872
+nga = ""
+stime = ["caratteristica", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q2855206"
+nome = "Hammer Odde Lighthouse"
+lat = 55.29821
+lon = 14.77382
+quota_m = 21.0
+portata_nm = 17.0
+colore = "bianco"
+caratteristica = "Fl(2) W 15s"
+periodo_s = 15.0
+lampi = [0.5, 1.5, 0.5, 12.5]
+anno = 1895
+nga = "116-5844"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q3378400"
+nome = "Stenshuvud lighthouse"
+lat = 55.6661
+lon = 14.2775
+quota_m = 13.0
+portata_nm = 11.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1916
+nga = "116-7172"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q3437785"
+nome = "Nakkehoved Lighthouse"
+lat = 56.1193
+lon = 12.343
+quota_m = 54.0
+portata_nm = 20.0
+colore = "bianco"
+caratteristica = "Fl(3) W 30s"
+periodo_s = 30.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 25.5]
+anno = 1772
+nga = "116-4592"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q5110646"
+nome = "Christiansø Lighthouse"
+lat = 55.32062
+lon = 15.186987
+quota_m = 29.0
+portata_nm = 18.0
+colore = "bianco"
+caratteristica = "Fl W 5s"
+periodo_s = 5.0
+lampi = [0.5, 4.5]
+anno = 1805
+nga = "116-5848"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q7651631"
+nome = "Svaneke Lighthouse"
+lat = 55.1317
+lon = 15.15277
+quota_m = 20.0
+portata_nm = 19.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1920
+nga = "116-5768"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q11290411"
+nome = "Gąski Lighthouse"
+lat = 54.24277778
+lon = 15.87277778
+quota_m = 51.0
+portata_nm = 23.5
+colore = "bianco"
+caratteristica = "Oc(3) W 15s"
+periodo_s = 15.0
+lampi = [10.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+anno = 1878
+nga = "116-6560"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q11309665"
+nome = "Kołobrzeg Lighthouse"
+lat = 54.1864
+lon = 15.554238888
+quota_m = 36.0
+portata_nm = 16.0
+colore = "bianco"
+caratteristica = "Fl W 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1945
+nga = "116-6552"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q11321434"
+nome = "Niechorze Lighthouse"
+lat = 54.09472
+lon = 15.06387
+quota_m = 63.0
+portata_nm = 20.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1866
+nga = "116-6520"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q20042645"
+nome = "Kronborg Lighthouse"
+lat = 56.03931
+lon = 12.62232
+quota_m = 34.0
+portata_nm = 22.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q28374919"
+nome = "Hesselø Lighthouse"
+lat = 56.197058685
+lon = 11.709714242
+quota_m = 34.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1864
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q28375534"
+nome = "Spodsbjerg Lighthouse"
+lat = 55.97598254
+lon = 11.855970318
+quota_m = 40.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1907
+nga = ""
+stime = ["caratteristica", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q28375542"
+nome = "Sejerø fyr"
+lat = 55.9191271
+lon = 11.0813805
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q28375543"
+nome = "Rønne havnfyr"
+lat = 55.097573993
+lon = 14.691314017
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1930
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q28375550"
+nome = "Hjelm Lighthouse"
+lat = 56.13329
+lon = 10.8048814
+quota_m = 61.0
+portata_nm = 14.0
+colore = "bianco"
+caratteristica = "Iso WRG 8s"
+periodo_s = 8.0
+lampi = [4.0, 4.0]
+anno = 1856
+nga = "116-2208"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q28376041"
+nome = "Tat fyr"
+lat = 55.330229156
+lon = 15.174259004
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q33130423"
+nome = "Dueodde Nord Lighthouse"
+lat = 55.0019073
+lon = 15.0730381
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q33130446"
+nome = "Dueodde Syd Lighthouse"
+lat = 54.99246
+lon = 15.074
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q37745051"
+nome = "Kullen West lighthouse"
+lat = 56.302472222
+lon = 12.44675
+quota_m = 11.5
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Oc(3) W 20s"
+periodo_s = 20.0
+lampi = [15.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+anno = 1898
+nga = "116-5088"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42318557"
+nome = "Höganäs Channel lower light"
+lat = 56.195916666
+lon = 12.554805555
+quota_m = 16.0
+portata_nm = 10.0
+colore = "bianco"
+caratteristica = "Iso W 3s"
+periodo_s = 3.0
+lampi = [1.5, 1.5]
+anno = 1975
+nga = "116-5112"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42318601"
+nome = "Höganäs Channel upper light"
+lat = 56.195833333
+lon = 12.556944444
+quota_m = 21.0
+portata_nm = 10.0
+colore = "bianco"
+caratteristica = "Iso W 3s"
+periodo_s = 3.0
+lampi = [1.5, 1.5]
+anno = 1975
+nga = "116-5116"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42324272"
+nome = "Lerberget lighthouse"
+lat = 56.176805555
+lon = 12.553833333
+quota_m = 3.5
+portata_nm = 6.0
+colore = "bianco"
+caratteristica = "Fl W 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1892
+nga = "116-5120"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42326965"
+nome = "Kristinelund North lower light"
+lat = 56.137861111
+lon = 12.588666666
+quota_m = 19.0
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Iso R 6s"
+periodo_s = 6.0
+lampi = [3.0, 3.0]
+anno = 1985
+nga = "116-5130"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42327010"
+nome = "Kristinelund North upper light"
+lat = 56.139333333
+lon = 12.591972222
+quota_m = 25.5
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Iso R 6s"
+periodo_s = 6.0
+lampi = [3.0, 3.0]
+anno = 1985
+nga = "116-5130.1"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42327157"
+nome = "Kristinelund South lower light"
+lat = 56.132
+lon = 12.592277777
+quota_m = 19.5
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Oc R 5s"
+periodo_s = 5.0
+lampi = [4.0, 1.0]
+anno = 1985
+nga = "116-5132"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42327216"
+nome = "Kristinelund South upper light"
+lat = 56.1335
+lon = 12.595611111
+quota_m = 29.5
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Oc R 5s"
+periodo_s = 5.0
+lampi = [4.0, 1.0]
+anno = 1985
+nga = "116-5136"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42327438"
+nome = "Sofiero lower light"
+lat = 56.084416666
+lon = 12.655583333
+quota_m = 22.0
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1930
+nga = "116-5144"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42327474"
+nome = "Sofiero upper light"
+lat = 56.085194444
+lon = 12.657055555
+quota_m = 31.0
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1930
+nga = "116-5148"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42327752"
+nome = "Pålsjö lower light"
+lat = 56.068805555
+lon = 12.675194444
+quota_m = 26.0
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1954
+nga = "116-5160"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42327787"
+nome = "Pålsjö upper light"
+lat = 56.070166666
+lon = 12.679722222
+quota_m = 57.0
+portata_nm = 7.0
+colore = "rosso"
+caratteristica = "Iso R 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1954
+nga = "116-5164"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42327932"
+nome = "Helsingborg West lower light"
+lat = 56.043277777
+lon = 12.687527777
+quota_m = 11.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1951
+nga = "116-5192"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42328683"
+nome = "Helsingborg West upper light"
+lat = 56.044611111
+lon = 12.687555555
+quota_m = 16.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1951
+nga = "116-5196"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42344276"
+nome = "Ålabodarna lighthouse"
+lat = 55.939027777
+lon = 12.7725
+quota_m = 5.5
+portata_nm = 4.0
+colore = "bianco"
+caratteristica = "Fl W 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1884
+nga = "116-5268"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42350255"
+nome = "Landskrona North upper light"
+lat = 55.867111111
+lon = 12.823638888
+quota_m = 14.0
+portata_nm = 10.0
+colore = "rosso"
+caratteristica = "Oc R 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 1947
+nga = "116-5316"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42350557"
+nome = "Landskrona South lower light"
+lat = 55.86675
+lon = 12.816166666
+quota_m = 6.5
+portata_nm = 7.6
+colore = "verde"
+caratteristica = "Oc G 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 1947
+nga = "116-5304"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42350728"
+nome = "Landskrona South upper light"
+lat = 55.866444444
+lon = 12.8245
+quota_m = 14.0
+portata_nm = 10.0
+colore = "verde"
+caratteristica = "Oc G 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 1947
+nga = "116-5308"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42350869"
+nome = "Gråen lighthouse"
+lat = 55.865611111
+lon = 12.820805555
+quota_m = 10.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Oc W 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 1970
+nga = "116-5317"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42505457"
+nome = "Ystad upper light"
+lat = 55.426833333
+lon = 13.8281
+quota_m = 37.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Q W"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1975
+nga = "116-5628"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42532850"
+nome = "Skillinge upper light"
+lat = 55.473888888
+lon = 14.282611111
+quota_m = 9.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Fl(2) W 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 1960
+nga = "116-7140"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42562055"
+nome = "Simrishamn nedre"
+lat = 55.557555555
+lon = 14.354777777
+quota_m = 10.5
+portata_nm = 9.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1887
+nga = "116-7164"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42562155"
+nome = "Simrishamn övre"
+lat = 55.557222222
+lon = 14.353111111
+quota_m = 12.5
+portata_nm = 9.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1887
+nga = "116-7168"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q42565566"
+nome = "Ravlunda South warning light"
+lat = 55.726933333
+lon = 14.195016666
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "VQ Y (occas)"
+periodo_s = 0.5
+lampi = [0.25, 0.25]
+anno = 0
+nga = ""
+stime = ["quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q42565814"
+nome = "Ravlunda North warning light"
+lat = 55.764983333
+lon = 14.19625
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "VQ Y (occas)"
+periodo_s = 0.5
+lampi = [0.25, 0.25]
+anno = 0
+nga = ""
+stime = ["quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "baltico"
+id = "Q109851800"
+nome = "Bäckvikens fyr"
+lat = 55.903388888
+lon = 12.723333333
+quota_m = 4.5
+portata_nm = 4.4
+colore = "rosso"
+caratteristica = "F RG"
+periodo_s = 0.0
+lampi = []
+anno = 1892
+nga = "116-5276"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110281719"
+nome = "Mölle Hamn nedre"
+lat = 56.283416666
+lon = 12.494611111
+quota_m = 9.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1961
+nga = "116-5096"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110281720"
+nome = "Mölle Hamn övre"
+lat = 56.283305555
+lon = 12.494972222
+quota_m = 10.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1961
+nga = "116-5100"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110281997"
+nome = "Helsingborg Nr 1"
+lat = 56.040083333
+lon = 12.687972222
+quota_m = 8.0
+portata_nm = 4.0
+colore = "verde"
+caratteristica = "Iso G 3s"
+periodo_s = 3.0
+lampi = [1.5, 1.5]
+anno = 1922
+nga = "116-5212"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110281998"
+nome = "Helsingborg Nr 2"
+lat = 56.039416666
+lon = 12.686722222
+quota_m = 8.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "Iso R 3s"
+periodo_s = 3.0
+lampi = [1.5, 1.5]
+anno = 1922
+nga = "116-5208"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110282000"
+nome = "Helsingborg Nr 3"
+lat = 56.0405
+lon = 12.685638888
+quota_m = 8.0
+portata_nm = 7.0
+colore = "verde"
+caratteristica = "Q G"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1922
+nga = "116-5204"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110282001"
+nome = "Helsingborg Nr 4"
+lat = 56.041055555
+lon = 12.684472222
+quota_m = 8.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 1920
+nga = "116-5200"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110289029"
+nome = "Vens Kraftkabel"
+lat = 55.908944444
+lon = 12.723388888
+quota_m = 22.0
+portata_nm = 12.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1939
+nga = "116-5272.1"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110289122"
+nome = "Rustningshamns Kraftkabel nedre"
+lat = 55.926833333
+lon = 12.791638888
+quota_m = 10.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1939
+nga = "116-5290"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110289123"
+nome = "Rustningshamns Kraftkabel övre"
+lat = 55.927166666
+lon = 12.792861111
+quota_m = 25.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1939
+nga = "116-5290.1"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110301055"
+nome = "Abbekås lower light"
+lat = 55.394277777
+lon = 13.604111111
+quota_m = 8.0
+portata_nm = 2.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1983
+nga = "116-5616"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110301056"
+nome = "Abbekås upper light"
+lat = 55.394694444
+lon = 13.602611111
+quota_m = 10.0
+portata_nm = 2.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1983
+nga = "116-5620"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110304074"
+nome = "Brantevik lower light"
+lat = 55.513444444
+lon = 14.349472222
+quota_m = 7.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1938
+nga = "116-7144"
+stime = []
+
+[[faro]]
+teatro = "baltico"
+id = "Q110304079"
+nome = "Brantevik upper light"
+lat = 55.513222222
+lon = 14.348222222
+quota_m = 11.0
+portata_nm = 3.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 1938
+nga = "116-7148"
+stime = []
+
+[[faro]]
+teatro = "barents"
+id = "Q7915576"
+nome = "Vardø Lighthouse"
+lat = 70.38893
+lon = 31.15726
+quota_m = 77.2
+portata_nm = 23.0
+colore = "bianco"
+caratteristica = "Fl W 30s"
+periodo_s = 30.0
+lampi = [0.5, 29.5]
+anno = 1896
+nga = "115-14616"
+stime = []
+
+[[faro]]
+teatro = "barents"
+id = "Q11884849"
+nome = "маяк Мыс Романовский"
+lat = 69.673333333
+lon = 31.473333333
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "barents"
+id = "Q11890870"
+nome = "маяк Мыс Крестовый"
+lat = 69.13731
+lon = 33.51072
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 5s"
+periodo_s = 5.0
+lampi = [0.5, 4.5]
+anno = 0
+nga = "115-15144"
+stime = ["quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "barents"
+id = "Q33231902"
+nome = "Kildinsky-North lighthouse"
+lat = 69.381944444
+lon = 34.148333333
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "barents"
+id = "Q33231910"
+nome = "Gavrilovsky lighthouse"
+lat = 69.201111111
+lon = 35.816666666
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "barents"
+id = "Q33231920"
+nome = "Harlovsky lighthouse"
+lat = 68.815833333
+lon = 37.331666666
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "barents"
+id = "Q33231924"
+nome = "Tsypnavoloksky lighthouse"
+lat = 69.7275
+lon = 35.096944444
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "barents"
+id = "Q33231928"
+nome = "Palagubsky lighthouse"
+lat = 69.220833333
+lon = 33.414444444
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "barents"
+id = "Q111236576"
+nome = "Mayak Sedlovatyy"
+lat = 69.2592
+lon = 33.47789
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "barents"
+id = "Q111236743"
+nome = "Mayak Palagubskiy"
+lat = 69.22049
+lon = 33.41892
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "barents"
+id = "Q111236907"
+nome = "Mayak Velikiy"
+lat = 69.08469
+lon = 33.27831
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "barents"
+id = "Q111236924"
+nome = "Mayak Belokamennyy"
+lat = 69.07531
+lon = 33.17695
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "faroe"
+id = "Q16482633"
+nome = "Akraberg Lighthouse"
+lat = 61.39305556
+lon = -6.67861111
+quota_m = 94.0
+portata_nm = 20.0
+colore = "bianco"
+caratteristica = "LFl(2) WRG 20s"
+periodo_s = 20.0
+lampi = [2.0, 1.5, 2.0, 14.5]
+anno = 0
+nga = "115-17852"
+stime = ["anno"]
+
+[[faro]]
+teatro = "faroe"
+id = "Q28374628"
+nome = "Lighthouse at Skansin"
+lat = 62.00767
+lon = -6.76324
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "faroe"
+id = "Q28374630"
+nome = "Borðan Lighthouse"
+lat = 61.9487
+lon = -6.6391
+quota_m = 39.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Iso WRG 2s"
+periodo_s = 2.0
+lampi = [1.0, 1.0]
+anno = 1900
+nga = "115-17924"
+stime = []
+
+[[faro]]
+teatro = "faroe"
+id = "Q28374633"
+nome = "Mykineshólmur Lighthouse"
+lat = 62.09726683
+lon = -7.682024763
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "faroe"
+id = "Q28374859"
+nome = "Lighthouse Nólsoy"
+lat = 61.9573
+lon = -6.6146
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "faroe"
+id = "Q28374928"
+nome = "Kallur Lighthouse"
+lat = 62.37018
+lon = -6.8116
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "faroe"
+id = "Q113481293"
+nome = "Kallur lighthouse"
+lat = 62.370194444
+lon = -6.812444444
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q1190267"
+nome = "Chipiona Lighthouse"
+lat = 36.73789167
+lon = -6.44210278
+quota_m = 69.0
+portata_nm = 25.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1863
+nga = "113-3880"
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q3183461"
+nome = "Isla Verde Lighthouse"
+lat = 36.12277778
+lon = -5.43388889
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q3183741"
+nome = "Marbella Lighthouse"
+lat = 36.50727
+lon = -4.89
+quota_m = 35.0
+portata_nm = 22.0
+colore = "bianco"
+caratteristica = "Fl(2) W 14.5s"
+periodo_s = 14.5
+lampi = [0.5, 1.5, 0.5, 12.0]
+anno = 1923
+nga = "113-4304"
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q3211185"
+nome = "Punta Carnero Lighthouse"
+lat = 36.07722222
+lon = -5.42638889
+quota_m = 42.0
+portata_nm = 16.0
+colore = "bianco"
+caratteristica = "Fl(4) WR 20s"
+periodo_s = 20.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 13.5]
+anno = 1608
+nga = "113-4128"
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q3739779"
+nome = "Europa Point Lighthouse"
+lat = 36.109634
+lon = -5.344798
+quota_m = 49.0
+portata_nm = 18.0
+colore = "bianco"
+caratteristica = "Iso W 10s"
+periodo_s = 10.0
+lampi = [5.0, 5.0]
+anno = 1838
+nga = "113-4220"
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q5559122"
+nome = "Gibraltar Aerobeacon"
+lat = 36.143884
+lon = -5.343053
+quota_m = 20.0
+portata_nm = 15.0
+colore = "rosso"
+caratteristica = "Mo.(GB) R., period 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = "113-4256"
+stime = ["quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q5559144"
+nome = "Gibraltar Detached Mole (\"B\" Head) Lighthouse"
+lat = 36.1357
+lon = -5.3641
+quota_m = 20.0
+portata_nm = 15.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 0
+nga = "113-4228"
+stime = ["quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q5559147"
+nome = "Gibraltar Detached Mole (\"C\" Head) Lighthouse"
+lat = 36.1426
+lon = -5.3673
+quota_m = 20.0
+portata_nm = 15.0
+colore = "verde"
+caratteristica = "Q G"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 0
+nga = "113-4232"
+stime = ["quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q5559204"
+nome = "Gibraltar South Mole Lighthouse"
+lat = 36.133885
+lon = -5.364132
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 2s"
+periodo_s = 2.0
+lampi = [0.5, 1.5]
+anno = 0
+nga = "113-4224"
+stime = ["quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q5647786"
+nome = "Calaburras Lighthouse"
+lat = 36.507368
+lon = -4.639787
+quota_m = 46.0
+portata_nm = 18.0
+colore = "bianco"
+caratteristica = "Fl W 5s"
+periodo_s = 5.0
+lampi = [0.5, 4.5]
+anno = 1863
+nga = "113-4320"
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q5669119"
+nome = "La Farola, Málaga"
+lat = 36.71414723
+lon = -4.414568228
+quota_m = 38.0
+portata_nm = 25.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1816
+nga = "113-4360"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q5856371"
+nome = "Cape Trafalgar lighthouse"
+lat = 36.182913
+lon = -6.035171
+quota_m = 51.0
+portata_nm = 22.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1862
+nga = "113-4080"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q5856461"
+nome = "Faro de Punta Doncella"
+lat = 36.416883
+lon = -5.15462
+quota_m = 32.0
+portata_nm = 18.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1863
+nga = "113-4280"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q5856492"
+nome = "Tarifa Lighthouse"
+lat = 36.0011
+lon = -5.609588888
+quota_m = 41.0
+portata_nm = 26.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = "113-4116"
+stime = ["caratteristica", "anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q5856504"
+nome = "Rota Lighthouse"
+lat = 36.616111111
+lon = -6.357222222
+quota_m = 34.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Oc W 4s"
+periodo_s = 4.0
+lampi = [3.0, 1.0]
+anno = 1910
+nga = "113-3908"
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q5856534"
+nome = "Faro de Torrox"
+lat = 36.726566666
+lon = -3.957386111
+quota_m = 29.0
+portata_nm = 20.0
+colore = "bianco"
+caratteristica = "Fl(4) W 15s"
+periodo_s = 15.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 8.5]
+anno = 1864
+nga = "113-4408"
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q11034482"
+nome = "Faro de Camarinal"
+lat = 36.09014151
+lon = -5.810462003
+quota_m = 75.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1989
+nga = "113-4110"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q15221662"
+nome = "Gibraltar North Mole Elbow Lighthouse"
+lat = 36.148395
+lon = -5.365958
+quota_m = 20.0
+portata_nm = 15.0
+colore = "rosso"
+caratteristica = "F R"
+periodo_s = 0.0
+lampi = []
+anno = 0
+nga = "113-4240"
+stime = ["quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q15221663"
+nome = "Gibraltar North Mole Lighthouse"
+lat = 36.144118
+lon = -5.365774
+quota_m = 18.0
+portata_nm = 15.0
+colore = "rosso"
+caratteristica = "Q R"
+periodo_s = 1.0
+lampi = [0.5, 0.5]
+anno = 0
+nga = "113-4236"
+stime = ["portata_nm", "anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q16566375"
+nome = "Faro de Torre del Mar"
+lat = 36.735027777
+lon = -4.096083333
+quota_m = 30.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1864
+nga = "113-4392"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q27919721"
+nome = "Punta Nador Lighthouse"
+lat = 35.193611111
+lon = -6.168611111
+quota_m = 80.0
+portata_nm = 26.0
+colore = "bianco"
+caratteristica = "Fl(2) W 15s"
+periodo_s = 15.0
+lampi = [0.5, 1.5, 0.5, 12.5]
+anno = 0
+nga = "113-22912"
+stime = ["anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q28375388"
+nome = "Faro de Roche"
+lat = 36.295519444
+lon = -6.140019444
+quota_m = 45.0
+portata_nm = 20.0
+colore = "bianco"
+caratteristica = "Fl(4) W 24s"
+periodo_s = 24.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 17.5]
+anno = 0
+nga = "113-4077"
+stime = ["anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q30069010"
+nome = "Carbonera Lighthouse"
+lat = 36.244561111
+lon = -5.3013
+quota_m = 39.0
+portata_nm = 14.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1588
+nga = "113-4266"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q30134302"
+nome = "Beacon of Barbate"
+lat = 36.188055555
+lon = -5.923611111
+quota_m = 23.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = "113-4084"
+stime = ["caratteristica", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q30158547"
+nome = "Punta de la Mona Lighthouse"
+lat = 36.7237
+lon = -3.732061111
+quota_m = 140.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = "113-4411"
+stime = ["caratteristica", "anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q30302794"
+nome = "Punta Almina Lighthouse"
+lat = 35.8982
+lon = -5.28065
+quota_m = 148.0
+portata_nm = 22.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1851
+nga = "113-22840"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q30308534"
+nome = "Faro del peñón de Vélez de la Gomera"
+lat = 35.17298
+lon = -4.30083
+quota_m = 47.0
+portata_nm = 12.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1859
+nga = "113-22812"
+stime = ["caratteristica"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q30754792"
+nome = "Faro de San Sebastián"
+lat = 36.5283813
+lon = -6.31588888
+quota_m = 39.0
+portata_nm = 25.0
+colore = "bianco"
+caratteristica = "Fl(2) W 10s"
+periodo_s = 10.0
+lampi = [0.5, 1.5, 0.5, 7.5]
+anno = 1913
+nga = "113-3940"
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q38187807"
+nome = "Faro de Cabo Quilates"
+lat = 35.282877777
+lon = -3.680461111
+quota_m = 82.0
+portata_nm = 8.0
+colore = "bianco"
+caratteristica = "Fl(3) W 12s"
+periodo_s = 12.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 7.5]
+anno = 1930
+nga = "113-22784"
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q38189686"
+nome = "Cap Malabata Lighthouse"
+lat = 35.816863888
+lon = -5.749319444
+quota_m = 76.0
+portata_nm = 22.0
+colore = "bianco"
+caratteristica = "Fl W 5s"
+periodo_s = 5.0
+lampi = [0.5, 4.5]
+anno = 1924
+nga = "113-22872"
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q38217997"
+nome = "Cape Spartel Lighthouse"
+lat = 35.791006
+lon = -5.923794
+quota_m = 95.0
+portata_nm = 30.0
+colore = "bianco"
+caratteristica = "Fl(4) W 20s"
+periodo_s = 20.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 13.5]
+anno = 1864
+nga = "113-22896"
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q46114336"
+nome = "Sidi Abed lighthouse"
+lat = 35.261111
+lon = -3.929167
+quota_m = 138.8
+portata_nm = 28.0
+colore = "bianco"
+caratteristica = "Fl(2) W 10s"
+periodo_s = 10.0
+lampi = [0.5, 1.5, 0.5, 7.5]
+anno = 0
+nga = ""
+stime = ["anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q46147140"
+nome = "Faro del Cabo Negro"
+lat = 35.684780555
+lon = -5.274533333
+quota_m = 134.8
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl(1) W 4s"
+periodo_s = 4.0
+lampi = [0.5, 3.5]
+anno = 0
+nga = ""
+stime = ["anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q46259636"
+nome = "Faro de Oued Laou"
+lat = 35.473911
+lon = -5.108794
+quota_m = 200.0
+portata_nm = 13.0
+colore = "bianco"
+caratteristica = "Oc(2) W 6s"
+periodo_s = 6.0
+lampi = [3.0, 1.0, 1.0, 1.0]
+anno = 1986
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q46405761"
+nome = "Faro de Punta Cires"
+lat = 35.906867
+lon = -5.481681
+quota_m = 46.5
+portata_nm = 18.0
+colore = "bianco"
+caratteristica = "Fl(3) W 12s"
+periodo_s = 12.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 7.5]
+anno = 0
+nga = ""
+stime = ["anno"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q46648571"
+nome = "Faro de Charf"
+lat = 35.768333
+lon = -5.788333
+quota_m = 101.0
+portata_nm = 16.0
+colore = "bianco"
+caratteristica = "Oc(3) WRG 12s"
+periodo_s = 12.0
+lampi = [7.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+anno = 1949
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q131824651"
+nome = "Tower of Caepio"
+lat = 36.737888331
+lon = -6.442082206
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = -139
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "gibilterra"
+id = "Q138009798"
+nome = "Faro de las Puercas"
+lat = 36.548475521
+lon = -6.303629934
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "kunashir"
+id = "Q901053"
+nome = "Nosappumisaki Lighthouse"
+lat = 43.38527778
+lon = 145.81694444
+quota_m = 23.2
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Iso WR 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1872
+nga = "112-0448"
+stime = ["portata_nm"]
+
+[[faro]]
+teatro = "kunashir"
+id = "Q11584576"
+nome = "Shiretokomisaki lighthouse"
+lat = 44.340833
+lon = 145.336389
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1963
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "kunashir"
+id = "Q17212117"
+nome = "Rausu Lighthouse"
+lat = 44.03694444
+lon = 145.21972222
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1971
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "kunashir"
+id = "Q17229708"
+nome = "Notsukesaki Lighthouse"
+lat = 43.56363889
+lon = 145.34755556
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "kunashir"
+id = "Q125932508"
+nome = "Shpanberg Lighthouse"
+lat = 43.836511
+lon = 146.919053
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1943
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm"]
+
+[[faro]]
+teatro = "otranto"
+id = "Q12885679"
+nome = "Kastri Lighthouse"
+lat = 39.8649
+lon = 19.4292
+quota_m = 103.0
+portata_nm = 18.0
+colore = "bianco"
+caratteristica = "Fl(1) W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 1872
+nga = "113-14380"
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q18410751"
+nome = "Sideros lighthouse"
+lat = 39.62344
+lon = 19.92912
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl(2) W 6s"
+periodo_s = 6.0
+lampi = [0.5, 1.5, 0.5, 3.5]
+anno = 0
+nga = ""
+stime = ["quota_m", "portata_nm", "anno"]
+
+[[faro]]
+teatro = "otranto"
+id = "Q28375947"
+nome = "Capo Santa Maria di Leuca Lighthouse"
+lat = 39.795916666
+lon = 18.368527777
+quota_m = 102.0
+portata_nm = 24.0
+colore = "bianco"
+caratteristica = "Fl(3) W 15s"
+periodo_s = 15.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 10.5]
+anno = 1866
+nga = "113-10780"
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q28376110"
+nome = "Isola Sant'Andrea lighthouse"
+lat = 40.050083333
+lon = 17.949472222
+quota_m = 45.0
+portata_nm = 19.0
+colore = "bianco"
+caratteristica = "Fl(2) W 10s"
+periodo_s = 10.0
+lampi = [0.5, 1.5, 0.5, 7.5]
+anno = 1866
+nga = "113-10760"
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q28376111"
+nome = "San Cataldo lighthouse"
+lat = 40.390806
+lon = 18.306722
+quota_m = 25.0
+portata_nm = 16.0
+colore = "bianco"
+caratteristica = "LFl W 5s"
+periodo_s = 5.0
+lampi = [2.0, 3.0]
+anno = 1866
+nga = "113-10808"
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q28376112"
+nome = "Punta Torre Canne lighthouse"
+lat = 40.8415
+lon = 17.46964
+quota_m = 35.0
+portata_nm = 16.0
+colore = "bianco"
+caratteristica = "Fl(2) W 10s"
+periodo_s = 10.0
+lampi = [0.5, 1.5, 0.5, 7.5]
+anno = 1929
+nga = "113-10856"
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q28376116"
+nome = "Torre San Giovanni lighthouse"
+lat = 39.88623
+lon = 18.11378
+quota_m = 24.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Iso WR 4s"
+periodo_s = 4.0
+lampi = [2.0, 2.0]
+anno = 1932
+nga = "113-10776"
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q28376392"
+nome = "Torre Sant'Andrea di Missipezza Lighthouse"
+lat = 40.255280555
+lon = 18.444986111
+quota_m = 24.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl(2) WR 7s"
+periodo_s = 7.0
+lampi = [0.5, 1.5, 0.5, 4.5]
+anno = 1936
+nga = "113-10800"
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q29519714"
+nome = "Molo Margherita Lighthouse"
+lat = 40.9558
+lon = 17.3045
+quota_m = 15.0
+portata_nm = 8.0
+colore = "rosso"
+caratteristica = "Fl R 3s"
+periodo_s = 3.0
+lampi = [0.5, 2.5]
+anno = 1878
+nga = "113-10868"
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q29533878"
+nome = "Grama Bay Lighthouse"
+lat = 40.216666666
+lon = 19.475
+quota_m = 52.0
+portata_nm = 8.0
+colore = "bianco"
+caratteristica = "Fl W 6s"
+periodo_s = 6.0
+lampi = [0.5, 5.5]
+anno = 0
+nga = "113-14364"
+stime = ["anno"]
+
+[[faro]]
+teatro = "otranto"
+id = "Q33411064"
+nome = "Kep i Palermos Lighthouse"
+lat = 40.049694
+lon = 19.794278
+quota_m = 113.0
+portata_nm = 8.0
+colore = "bianco"
+caratteristica = "Fl W 8s"
+periodo_s = 8.0
+lampi = [0.5, 7.5]
+anno = 0
+nga = "113-14368"
+stime = ["anno"]
+
+[[faro]]
+teatro = "otranto"
+id = "Q33412384"
+nome = "Sazan Lighthouse"
+lat = 40.503972222
+lon = 19.266611111
+quota_m = 157.0
+portata_nm = 14.0
+colore = "bianco"
+caratteristica = "Fl(4) W 15s"
+periodo_s = 15.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 1.5, 0.5, 8.5]
+anno = 1871
+nga = "113-14328"
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q55624011"
+nome = "phare du cap Oštra"
+lat = 42.399166666
+lon = 18.517777777
+quota_m = 73.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl(2) W 10s"
+periodo_s = 10.0
+lampi = [0.5, 1.5, 0.5, 7.5]
+anno = 1854
+nga = "113-14100"
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q56010416"
+nome = "Lighthouse of Capo San Vito"
+lat = 40.411666666
+lon = 17.203333333
+quota_m = 46.0
+portata_nm = 22.0
+colore = "bianco"
+caratteristica = "Fl(3) W 15s"
+periodo_s = 15.0
+lampi = [0.5, 1.5, 0.5, 1.5, 0.5, 10.5]
+anno = 1869
+nga = "113-10640"
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q106212473"
+nome = "Cape of Gjuhëza Lighthouse"
+lat = 40.422028
+lon = 19.2915
+quota_m = 58.0
+portata_nm = 11.0
+colore = "bianco"
+caratteristica = "Fl W 6s"
+periodo_s = 6.0
+lampi = [0.5, 5.5]
+anno = 0
+nga = "113-14338"
+stime = ["anno"]
+
+[[faro]]
+teatro = "otranto"
+id = "Q106212574"
+nome = "Cape of Rodon Lighthouse"
+lat = 41.584167
+lon = 19.449722
+quota_m = 40.0
+portata_nm = 8.0
+colore = "bianco"
+caratteristica = "Fl(2) W 10s"
+periodo_s = 10.0
+lampi = [0.5, 1.5, 0.5, 7.5]
+anno = 1884
+nga = "113-14296"
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q106440145"
+nome = "Kep i Treporteve Lighthouse"
+lat = 40.51225
+lon = 19.396056
+quota_m = 70.0
+portata_nm = 9.0
+colore = "bianco"
+caratteristica = "Fl W 5s"
+periodo_s = 5.0
+lampi = [0.5, 4.5]
+anno = 0
+nga = "113-14344"
+stime = ["anno"]
+
+[[faro]]
+teatro = "otranto"
+id = "Q131381486"
+nome = "Durrës lighthouse"
+lat = 41.31541086
+lon = 19.43526098
+quota_m = 126.0
+portata_nm = 20.0
+colore = "bianco"
+caratteristica = "Fl.(2) 10s"
+periodo_s = 10.0
+lampi = [0.5, 1.5, 0.5, 7.5]
+anno = 1878
+nga = ""
+stime = []
+
+[[faro]]
+teatro = "otranto"
+id = "Q134691961"
+nome = "lighthouse"
+lat = 39.611804771
+lon = 19.928196072
+quota_m = 20.0
+portata_nm = 15.0
+colore = "bianco"
+caratteristica = "Fl W 10s"
+periodo_s = 10.0
+lampi = [0.5, 9.5]
+anno = 0
+nga = ""
+stime = ["caratteristica", "quota_m", "portata_nm", "anno"]

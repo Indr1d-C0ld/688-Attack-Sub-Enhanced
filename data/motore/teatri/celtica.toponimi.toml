@@ -1,0 +1,72 @@
+# Toponimi del teatro celtica: generato da tools/pipeline/toponimi.py, non modificare a mano.
+# x, y in metri sul piano del teatro (come il fondale); rango 1 il più importante; acqua = nome di mare.
+
+[[nome]]
+testo = "Oceano Atlantico"
+en = "Atlantic Ocean"
+tipo = "oceano"
+acqua = true
+rango = 1
+x = -28600
+y = 500
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Mar Celtico"
+en = "Celtic Sea"
+tipo = "mare"
+acqua = true
+rango = 2
+x = 105672
+y = 106647
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Golfo di Biscaglia"
+en = "Bay of Biscay"
+tipo = "golfo"
+acqua = true
+rango = 3
+x = 117334
+y = -110007
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Banco Grande Sole"
+en = "Great Sole Bank"
+tipo = "secca"
+acqua = true
+rango = 5
+x = -3659
+y = 83403
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Canyon Whittard"
+en = "Whittard Canyon"
+tipo = "secca"
+acqua = true
+rango = 5
+x = -47988
+y = 33563
+fonte = "dossier 03 §A6"
+
+[[nome]]
+testo = "Goban Spur"
+en = "Goban Spur"
+tipo = "secca"
+acqua = true
+rango = 5
+x = -127660
+y = 101545
+fonte = "dossier 03 §A6"
+
+[[nome]]
+testo = "Ciglio della piattaforma"
+en = "Shelf break"
+tipo = "secca"
+acqua = true
+rango = 6
+x = 33516
+y = -16581
+fonte = "dossier 03 §A6 (ciglio a 200 m)"

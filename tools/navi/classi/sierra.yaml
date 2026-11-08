@@ -1,0 +1,65 @@
+# Sottomarino d'attacco Progetto 945 "Barrakuda" (NATO: Sierra I), configurazione 1989: scafo in titanio largo e corto
+# a sezione circolare, vela lunga, bassa e liscia ad angoli arrotondati («limousine»), il bulbo della schiera
+# rimorchiata sul timone verticale. Misure dal dossier docs/ricerca/31_firme_lotto1.md (107,2 x 12,3 x 8,8 m); la vela
+# e gli alberi dalla foto aerea di fianco (STIMA dove la poppa esce dall'inquadratura). Passo 3 del primo lotto,
+# approvato dall'utente il 29/10/2026.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua. Quote assolute rispetto al galleggiamento in emersione normale.
+nome: Sierra I (Progetto 945)
+uscita: extracted/navi/sierra
+tono: 0.22
+contrasto: 0.12
+moduli_parti: [sottomarini_parti.py]
+peso_ombra: 0.03
+
+scafo:
+  generatore: scafo_sottomarino
+  L: 107.2
+  B: 12.3
+  # prua tonda e corta, cilindro lungo, cono di poppa (STIMA come l'Akula, piu' corto); l'asse 2,65 m sotto il
+  # galleggiamento (immersione 8,8 m su 12,3 di diametro: la sommita' a 3,5 m)
+  raggio: [[0.0, 0.0], [0.7, 2.4], [2.4, 4.3], [5.0, 5.4], [8.0, 5.95], [11.0, 6.15], [62.0, 6.15], [74.0, 5.6], [84.0, 4.8],
+           [90.0, 4.0], [94.0, 3.2], [98.0, 2.3], [103.0, 1.0], [105.5, 0.4], [107.2, 0.0]]
+  asse: [[0.0, -2.65], [62.0, -2.65], [74.0, -3.1], [84.0, -3.4], [94.0, -3.3], [107.2, -3.1]]
+  stazioni: 100
+  punti_sezione: 48
+
+parti:
+  # vela: fianchi quasi verticali, cielo piatto 4 m sullo scafo, spigoli molto arrotondati davanti e dietro
+  - tipo: vela
+    nome: vela
+    pianta: ovale
+    esponente: 4.0
+    livelli:
+      - [3.0, {prua: 33.6}, {prua: 55.4}, 2.4]
+      - [4.5, {prua: 33.8}, {prua: 55.2}, 2.4]
+      - [6.4, {prua: 34.2}, {prua: 54.9}, 2.3]
+      - [7.1, {prua: 34.8}, {prua: 54.4}, 2.1]
+      - [7.5, {prua: 35.6}, {prua: 53.4}, 1.7]
+  # alberi e periscopi alzati come nella foto aerea
+  - {tipo: cilindro, nome: periscopio, x: {prua: 38.4}, y: 0, r: 0.15, z0: 7.5, z1: 12.4, n: 6, mat: scuro}
+  - {tipo: cilindro, nome: albero, x: {prua: 45.4}, y: 0, r: 0.15, z0: 7.5, z1: 15.4, n: 6, mat: scuro}
+  - {tipo: cilindro, nome: albero_cono, x: {prua: 46.6}, y: 0, r: 0.3, z0: 7.5, z1: 13.4, n: 8, mat: scuro}
+  - {tipo: cilindro, nome: antenna, x: {prua: 47.8}, y: 0, r: 0.15, z0: 7.5, z1: 13.4, n: 6, mat: scuro}
+  # il bulbo della schiera rimorchiata sul timone verticale (STIMA, come l'Akula in proporzione)
+  - {tipo: timone_verticale, nome: timone_pod, x: {prua: 95.0}, z0: -2.0, z1: 4.0, corda: 4.3, corda_estremita: 4.5, spessore: 0.8, freccia: -0.8, pod: [{prua: 92.0}, 4.0, 10.0, 2.4], muso_pod: 0.3, coda_pod: 0.45}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 29/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: fianco_sinistra_aerea
+    file: extracted/navi/sierra/foto/Sierra_class_submarine.jpg
+    nave: Sierra I (Progetto 945), anni '80 (DoD, pubblico dominio)
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    # maschera a mano (classi/sierra_maschere.yaml): la coperta al sole e' chiara come il mare e la soglia la perdeva
+    maschera_file: extracted/navi/sierra/foto/fianco_sinistra_aerea_maschera.png
+    fotocamera_iniziale: {posizione: [300, 900, 450], bersaglio: [0, 0, 2], f: 3500}
+    # la foto aerea obliqua: l'errore sui punti (28 px su 3000) viene quasi tutto dal piede della vela, incerto sullo
+    # scafo tondo
+    punti:
+      - [[{prua: 0.5}, 0, 0.0], [195, 1105]]       # prua al galleggiamento
+      - [[{prua: 34.6}, 0, 7.4], [1890, 712]]      # spigolo prodiero del cielo della vela
+      - [[{prua: 54.4}, 0, 7.2], [2820, 760]]      # spigolo poppiero del cielo della vela
+      - [[{prua: 34.0}, 0, 3.6], [1856, 860]]      # piede prodiero della vela in coperta
+      - [[{prua: 45.4}, 0, 15.4], [2390, 302]]     # cima dell'albero piu' alto

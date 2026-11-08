@@ -1,0 +1,116 @@
+# Fregata classe Krivak II (Progetto 1135M "Burevestnik-M"), configurazione anni '80.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua.
+# Versione 2. Misure degli elementi principali da triangolazione su tre foto calibrate insieme
+# (tools/navi/triangola.py; errori 4,3 / 11,1 / 5,2 px); le altre quote dalla foto di fianco del
+# Pytlivyy (1986). Presenza e forma delle parti dal profilo di riconoscimento US Navy del 1987
+# (extracted/navi/krivak2/disegni/profilo_1987.png) e dalle foto di dettaglio: il profilo non e'
+# metricamente affidabile (le foto ne escludono quote e posizioni), quindi non e' usato per misurare.
+# Prima versione conservata in extracted/navi/krivak2_v1/.
+nome: Krivak II (Progetto 1135M)
+uscita: extracted/navi/krivak2
+
+scafo:
+  L: 123.5
+  B: 14.1
+  # coperta: alta a prua, ponte principale ~5 m, gradino a ~101 m verso il cassero di poppa basso
+  bordo: [[0, 8.5], [15, 7.0], [35, 5.6], [60, 5.0], [100.5, 4.8], [101.5, 2.5], [123.5, 2.4]]
+  slancio: 8.2
+  finezza_prua: 38
+  specchio: 0.80
+  svasatura: 0.05
+  pienezza: [0.8, 0.5]
+
+parti:
+  # prua: URPK-5 Rastrub (SS-N-14), quattro tubi in cassone; sommita' triangolata a 9,9 m
+  - {tipo: lanciatore_quadruplo, nome: rastrub, x0: {prua: 32.5}, x1: {prua: 18.1}, z0: 5.6, larghezza: 4.6, altezza: 4.3}
+  # Osa-M (SA-N-4) prodiero a scomparsa, tra Rastrub e plancia (dal profilo 1987)
+  - {tipo: lanciatore_scomparsa, nome: osa_m_prodiero, x: {prua: 38.3}, z0: 5.3}
+  # piattaforma con i due RBU-6000 davanti alla plancia
+  - {tipo: tuga, nome: piattaforma_rbu, x0: {prua: 44.5}, x1: {prua: 41.0}, y0: -3.2, y1: 3.2, z0: 5.0, z1: 8.0}
+  - {tipo: lanciarazzi_rbu, nome: rbu6000_dritta, x: {prua: 42.7}, y: -1.7, z0: 8.0}
+  - {tipo: lanciarazzi_rbu, nome: rbu6000_sinistra, x: {prua: 42.7}, y: 1.7, z0: 8.0}
+  # sovrastruttura prodiera e plancia
+  - {tipo: tuga, nome: tuga_prodiera, x0: {prua: 67.4}, x1: {prua: 44.5}, y0: -5.8, y1: 5.8, z0: 4.8, z1: 11.6, rastrema: 0.95}
+  - {tipo: tuga, nome: plancia, x0: {prua: 55.8}, x1: {prua: 44.5}, y0: -4.5, y1: 4.5, z0: 11.6, z1: 15.2, rastrema: 0.9, smusso_prua: 1.0}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 46.1}, x1: {prua: 44.3}, y0: -4.3, y1: 4.3, z0: 13.8, z1: 14.6, mat: nero, rastrema: 0.95}
+  # direttore prodiero (Pop Group) sulla plancia
+  - {tipo: direttore_tiro, nome: pop_group, x: {prua: 53.5}, z0: 15.2, altezza_base: 2.5}
+  # albero principale con radar Head Net (cima triangolata a 26,5 m, a 60,7 m dalla prua)
+  - {tipo: traliccio, nome: albero_principale, x: {prua: 60.7}, base: 4.0, cima: 1.2, z0: 11.6, z1: 23.6, piani: [18.0, 23.6]}
+  - {tipo: head_net, nome: head_net, x: {prua: 60.7}, z0: 23.6, larghezza: 6.5, altezza: 1.6}
+  # secondo traliccio, alto e sottile (cima triangolata a 28,7 m, a 66,2 m dalla prua)
+  - {tipo: traliccio, nome: albero_poppiero, x: {prua: 66.2}, base: 1.6, cima: 0.4, z0: 11.6, z1: 28.7, piani: [20.0]}
+  # sovrastruttura poppiera, fumaiolo, direttore poppiero (Owl Screech) e Osa-M poppiero
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 91.5}, x1: {prua: 67.4}, y0: -5.8, y1: 5.8, z0: 4.8, z1: 11.5, rastrema: 0.95}
+  - {tipo: fumaiolo, nome: fumaiolo, x0: {prua: 78.0}, x1: {prua: 71.0}, semilarghezza: 2.8, z0: 11.5, z1: 14.5}
+  - {tipo: direttore_tiro, nome: owl_screech, x: {prua: 70.2}, z0: 11.5, altezza_base: 3.0, orientamento: 180}
+  - {tipo: lanciatore_scomparsa, nome: osa_m_poppiero, x: {prua: 86.0}, z0: 11.0}
+  # torri singole AK-100 da 100 mm, canne verso poppa (sommita' triangolate 8,6 e 7,2 m)
+  - {tipo: tuga, nome: base_torre_x, x0: {prua: 99.0}, x1: {prua: 91.5}, y0: -3.6, y1: 3.6, z0: 4.8, z1: 5.2}
+  - {tipo: torre_singola, nome: ak100_x, x: {prua: 95.3}, z0: 5.2, altezza: 3.4, verso: -1}
+  - {tipo: tuga, nome: piattaforma_torre_y, x0: {prua: 107.9}, x1: {prua: 100.5}, y0: -4.0, y1: 4.0, z0: 2.4, z1: 4.6}
+  - {tipo: torre_singola, nome: ak100_y, x: {prua: 103.6}, z0: 4.6, altezza: 2.6, verso: -1}
+  # alloggiamento del sonar a profondita' variabile (Vega VDS) sul cassero di poppa
+  - {tipo: tuga, nome: alloggiamento_vds, x0: {prua: 121.3}, x1: {prua: 107.9}, y0: -4.8, y1: 4.8, z0: 2.4, z1: 5.3, rastrema: 0.97}
+
+foto:
+  - nome: fianco_dritta
+    file: extracted/navi/krivak2/foto/fianco_dritta_1986_full.jpg
+    nave: Pytlivyy (FFG 826), 1986
+    maschera_file: extracted/navi/krivak2/foto/fianco_dritta_1986_maschera.png   # ritoccata a mano (classi/krivak2_maschera_fianco.yaml)
+    qualita: 1.0
+    esponente_peso: 6        # peso piu' selettivo: prevale la foto meglio orientata (meno macchie)
+    specchiabile: true
+    orizzonte_y: 845          # orizzonte inclinato tra y 850 e 893: solo gli alberi stanno sopra
+    soglia_cielo: 175
+    riquadro: [300, 650, 2560, 845]
+    cancella: [[1865, 1140, 1962, 1192], [465, 1140, 542, 1162]]   # numero 826 a prua, nome a poppa
+    soglia_schiuma: 175
+    fotocamera_iniziale: {posizione: [0, -1500, 50], bersaglio: [0, 0, 8], f: 25700}
+    punti:
+      - [[{prua: 0}, 0, 8.5], [2479, 1097]]        # dritto di prua in coperta
+      - [[{prua: 8.2}, 0, 0], [2336, 1236]]        # piede del dritto al galleggiamento
+      - [[{prua: 123.5}, 0, 2.4], [356, 1129]]     # specchio di poppa in coperta
+      - [[{prua: 60.7}, 0, 26.5], [1428, 750]]     # sommita' dell'antenna Head Net
+      - [[{prua: 66.2}, 0, 28.7], [1347, 707]]     # cima del traliccio poppiero
+      - [[{prua: 18.1}, 0, 9.9], [2164, 1057]]     # Rastrub, estremita' prodiera in alto
+      - [[{prua: 32.5}, 0, 9.9], [1921, 1057]]     # Rastrub, estremita' poppiera in alto
+      - [[{prua: 95.3}, 0, 8.6], [834, 1029]]      # sommita' della torre X
+      - [[{prua: 103.6}, 0, 7.2], [700, 1048]]     # sommita' della torre Y
+  - nome: prua_dritta
+    file: extracted/navi/krivak2/foto/prua_dritta_1983_full.jpg
+    nave: Rezvyy (FFG 942), 1983
+    qualita: 0.8
+    esponente_peso: 6        # peso piu' selettivo: prevale la foto meglio orientata (meno macchie)
+    specchiabile: true
+    orizzonte_y: 690
+    soglia_cielo: 170
+    riquadro: [1000, 470, 1600, 690]
+    cancella: [[1300, 1148, 1415, 1240]]     # numero 942
+    soglia_schiuma: 175
+    fotocamera_iniziale: {posizione: [800, -1000, 200], bersaglio: [0, 0, 8], f: 20000}
+    punti:
+      - [[{prua: 0}, 0, 8.5], [2425, 1113]]        # dritto di prua in coperta
+      - [[{prua: 8.2}, 0, 0], [2233, 1375]]        # piede del dritto al galleggiamento
+      - [[{prua: 60.7}, 0, 26.5], [1400, 542]]     # sommita' dell'antenna Head Net
+      - [[{prua: 66.2}, 0, 28.7], [1300, 508]]     # cima del traliccio poppiero
+      - [[{prua: 123.5}, -5.6, 2.4], [500, 1092]]  # specchio di poppa, spigolo di dritta in coperta
+  - nome: poppa_sinistra_aerea
+    file: extracted/navi/krivak2/foto/poppa_sinistra_aerea_1985_full.jpg
+    nave: Gordelivyy, 1985 (ripresa aerea)
+    qualita: 0.7
+    esponente_peso: 6        # peso piu' selettivo: prevale la foto meglio orientata (meno macchie)
+    specchiabile: true
+    orizzonte_y: 0            # nessun cielo nell'inquadratura: calibrazione solo sui punti
+    soglia_cielo: 0
+    cancella: [[362, 970, 482, 1046]]        # numero 758
+    soglia_schiuma: 175
+    fotocamera_iniziale: {posizione: [-500, 1300, 500], bersaglio: [0, 0, 5], f: 25000}
+    punti:
+      - [[{prua: 60.7}, 0, 26.5], [1167, 435]]     # sommita' dell'antenna Head Net
+      - [[{prua: 66.2}, 0, 28.7], [1287, 362]]     # cima del traliccio poppiero
+      - [[{prua: 95.3}, 0, 8.6], [2042, 935]]      # sommita' della torre X da 100 mm
+      - [[{prua: 103.6}, 0, 7.2], [2263, 983]]     # sommita' della torre Y da 100 mm
+      - [[{prua: 18.1}, 0, 9.9], [302, 823]]       # Rastrub, estremita' prodiera in alto
+      - [[{prua: 32.5}, 0, 9.9], [604, 838]]       # Rastrub, estremita' poppiera in alto

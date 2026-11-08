@@ -1,0 +1,203 @@
+# Nave raccolta informazioni (AGI) classe Okean: peschereccio laterale da pesca costruito in RDT (Volkswerft
+# Stralsund, 1959-61) e convertito in nave da ricognizione. Configurazione modellata: la LINZA durante
+# l'esercitazione NATO Northern Wedding del 1986 (7 foto US Navy di pubblico dominio, extracted/navi/agi/foto).
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua.
+#
+# Misure: L 50,8 m e B 8,8 m (fonti in extracted/navi/agi/RAPPORTO.md); profilo, sovrastrutture e alberi dalla
+# foto di fianco calibrata (fianco_dritta, circa 49,4 pixel/m), quote corrette per l'inclinazione dell'orizzonte;
+# alberi, radome e plancia triangolati su sei foto (extracted/navi/agi/triangolazione/). Le larghezze delle
+# sovrastrutture sono stimate dalle foto di prua.
+# Quote: la triangolazione (ancorata all'orizzonte e al piede del dritto) dava quote circa 0,6 m piu' basse di
+# quelle misurate sulla foto di fianco; con quei valori, in tutte e sei le foto la carena scura usciva sotto il
+# galleggiamento del modello. Tutte le quote sono state alzate di 0,6 m (vedi RAPPORTO.md).
+# Particolarita' della LINZA (gruppo Linza/Lotlin/Reduktor/Zond): la tuga di coperta (ponte di riparo) va da
+# murata a murata dalla poppa a 18,6 m dalla prua; a dritta ha una galleria aperta (fascia scura), a sinistra
+# la murata e' chiusa. Il modello la fa piena da entrambi i lati: la galleria la dipinge la foto.
+nome: AGI classe Okean (LINZA, 1986)
+uscita: extracted/navi/agi
+moduli_parti: [agi_parti.py]
+
+scafo:
+  L: 50.8
+  B: 8.8
+  # orlo della murata: castello a prua, pozzo prodiero basso (2,85 m), ponte di riparo da 18,6 m a poppa
+  bordo: [[0, 4.7], [3, 4.2], [6.3, 3.7], [10.4, 3.25], [14, 3], [18.3, 2.85], [18.7, 3.9], [26, 4.15], [33, 4.45], [42, 4.65], [50.8, 4.7]]
+  slancio: 2.7
+  finezza_prua: 19
+  specchio: 0.35
+  lunghezza_poppa: 9
+  svasatura: 0.10
+  pienezza: [0.85, 0.55]
+
+parti:
+  # chiusura sotto il dritto slanciato (stessi parametri dello scafo)
+  - {tipo: chiusura_dritto, nome: chiusura_dritto, L: 50.8, B: 8.8, bordo: [[0, 4.7], [3, 4.2], [6.3, 3.7], [10.4, 3.25], [14, 3], [18.3, 2.85], [18.7, 3.9], [26, 4.15], [33, 4.45], [42, 4.65], [50.8, 4.7]], slancio: 2.7, finezza_prua: 19, specchio: 0.35, lunghezza_poppa: 9, svasatura: 0.10, pienezza: [0.85, 0.55]}
+  # poppa tonda chiara (nessuna foto la vede di fronte, vedi agi_parti.py)
+  - {tipo: pannello_poppa, nome: pannello_poppa, L: 50.8, B: 8.8, bordo: [[0, 4.7], [3, 4.2], [6.3, 3.7], [10.4, 3.25], [14, 3], [18.3, 2.85], [18.7, 3.9], [26, 4.15], [33, 4.45], [42, 4.65], [50.8, 4.7]], slancio: 2.7, finezza_prua: 19, specchio: 0.35, lunghezza_poppa: 9, svasatura: 0.10, pienezza: [0.85, 0.55]}
+  # salpancore sul castello
+  - {tipo: verricello, nome: salpancore, x: {prua: 3.6}, z0: 4.2, larghezza: 2.2, r: 0.35, lunghezza: 1.2}
+  # verricello del pozzo prodiero (ex verricello da traino), davanti alla tuga di coperta
+  - {tipo: verricello, nome: verricello_prua, x: {prua: 15.7}, z0: 2.85, larghezza: 3.4, r: 0.4, lunghezza: 1.4}
+  # albero prodiero: palo con il bipode (due puntoni verso prua ai lati del pozzo), radome piccolo, crocette e gabbia
+  - {tipo: asta, nome: albero_prua_basso, da: [{prua: 12.9}, 0, 2.9], a: [{prua: 13.4}, 0, 10.8], spessore: 0.65, mat: sovrastruttura}
+  - {tipo: asta, nome: albero_prua_alto, da: [{prua: 13.4}, 0, 10.8], a: [{prua: 14.0}, 0, 18.3], spessore: 0.35, mat: sovrastruttura}
+  - {tipo: asta, nome: puntone_dritta, da: [{prua: 13.4}, -0.2, 10.6], a: [{prua: 9.8}, -3.0, 3.3], spessore: 0.35, mat: sovrastruttura}
+  - {tipo: asta, nome: puntone_sinistra, da: [{prua: 13.4}, 0.2, 10.6], a: [{prua: 9.8}, 3.0, 3.3], spessore: 0.35, mat: sovrastruttura}
+  - {tipo: pennone, nome: crocetta_prua, x: {prua: 13.9}, z: 16.9, semilunghezza: 0.9}
+  - {tipo: pennone, nome: crocetta_prua_bassa, x: {prua: 13.7}, z: 14.9, semilunghezza: 0.7}
+  - {tipo: cilindro, nome: radome_albero, x: {prua: 12.6}, y: 0, r: 0.35, z0: 11.6, z1: 12.3, mat: bianco, n: 10}
+  - {tipo: sfera, nome: radome_albero_cupola, x: {prua: 12.6}, y: 0, z: 12.3, r: 0.35, mat: bianco, n: 8, mezza: true}
+  - {tipo: sfera_filo, nome: sfera_prua, x: {prua: 14.0}, z: 17.6, r: 0.65}
+  # bigo bianco orizzontale dall'albero prodiero alla plancia
+  - {tipo: asta, nome: bigo, da: [{prua: 13.8}, 0, 4.8], a: [{prua: 25.0}, 0, 4.8], spessore: 0.3, mat: bianco}
+  # tuga bianca: plancia a prua (fronte inclinato, cielo a 7,8 m), parte poppiera piu' bassa con le zattere sul cielo
+  - {tipo: tuga, nome: plancia, x0: {prua: 31.2}, x1: {prua: 25.5}, y0: -2.8, y1: 2.8, z0: 4.2, z1: 7.8, smusso_prua: 0.8, rastrema: 0.92, mat: bianco}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 26.3}, x1: {prua: 25.95}, y0: -2.3, y1: 2.3, z0: 6.3, z1: 6.8, mat: nero}
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 34.3}, x1: {prua: 31.2}, y0: -2.8, y1: 2.8, z0: 4.5, z1: 6.9, mat: bianco}
+  - {tipo: tubo, nome: zattere_dritta, x0: {prua: 33.8}, x1: {prua: 29.6}, y: -2.3, z: 7.2, r: 0.3, mat: bianco}
+  - {tipo: tubo, nome: zattere_sinistra, x0: {prua: 33.8}, x1: {prua: 29.6}, y: 2.3, z: 7.2, r: 0.3, mat: bianco}
+  # casotto grigio a volta sopra la tuga (sala apparati e cassa dei fumi: il fumo esce da qui nelle foto)
+  - {tipo: casotto_tondo, nome: casotto, x0: {prua: 33.5}, x1: {prua: 31.2}, y0: -1.6, y1: 1.6, z0: 6.9, z1: 9.95}
+  - {tipo: tuga, nome: casotto_prodiero, x0: {prua: 31.2}, x1: {prua: 29.4}, y0: -1.1, y1: 1.1, z0: 7.8, z1: 9.8}
+  # fumaiolo: scarico corto sul cielo del casotto, lato sinistro (il fumo esce da qui nelle foto di dritta e di sinistra)
+  - {tipo: cilindro, nome: fumaiolo, x: {prua: 33.0}, y: 0.6, r: 0.3, z0: 9.0, z1: 10.25, mat: scuro, n: 10}
+  # cupola radar su colonna bianca sul cielo della plancia, e radar di navigazione
+  - {tipo: cilindro, nome: radome_colonna, x: {prua: 29.9}, y: 2.6, r: 0.28, z0: 6.9, z1: 10.5, mat: bianco, n: 10}
+  - {tipo: cilindro, nome: radome, x: {prua: 29.9}, y: 2.6, r: 0.5, z0: 10.4, z1: 11, mat: sovrastruttura, n: 12}
+  - {tipo: sfera, nome: radome_cupola, x: {prua: 29.9}, y: 2.6, z: 11, r: 0.5, mat: sovrastruttura, n: 10, mezza: true}
+  - {tipo: cilindro, nome: radar_nav_colonna, x: {prua: 29.2}, y: 0, r: 0.15, z0: 9.8, z1: 10.7, mat: scuro, n: 8}
+  - {tipo: scatola, nome: radar_nav, x0: {prua: 29.4}, x1: {prua: 29.0}, y0: -0.9, y1: 0.9, z0: 10.7, z1: 10.9, mat: scuro}
+  # antenne ad anello su pali sopra la tuga
+  - {tipo: anello, nome: anello_poppiero, x: {prua: 34.0}, z: 11.4, r: 0.45, orientamento: 90, palo: 0.15, palo_base: 6.9}
+  # albero poppiero (palo leggermente inclinato a poppa) con il braccio poppiero, crocetta e gabbia
+  - {tipo: asta, nome: albero_poppa_basso, da: [{prua: 41.9}, 0, 4.6], a: [{prua: 42.7}, 0, 12.2], spessore: 0.6, mat: sovrastruttura}
+  - {tipo: asta, nome: albero_poppa_alto, da: [{prua: 42.7}, 0, 12.2], a: [{prua: 43.6}, 0, 17.7], spessore: 0.32, mat: sovrastruttura}
+  - {tipo: asta, nome: braccio_poppa, da: [{prua: 42.7}, 0, 12.2], a: [{prua: 45.0}, 0, 12], spessore: 0.3, mat: sovrastruttura}
+  - {tipo: pennone, nome: crocetta_poppa, x: {prua: 43.6}, z: 16.8, semilunghezza: 0.9}
+  - {tipo: sfera_filo, nome: sfera_poppa, x: {prua: 43.7}, z: 17.4, r: 0.65}
+  # lance sotto le gruette a gravita' ai lati del ponte di riparo
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 43.9}, x1: {prua: 36.4}, y: -3.0, z0: 5.35, larghezza: 2.3, altezza: 1.8}
+  - {tipo: imbarcazione, nome: lancia_sinistra, x0: {prua: 43.9}, x1: {prua: 36.4}, y: 3.0, z0: 5.35, larghezza: 2.3, altezza: 1.8}
+  - {tipo: gru_lancia, nome: gruetta_dritta_poppa, x: {prua: 45.4}, y: -3.4, z0: 4.65, altezza: 3.7}
+  - {tipo: gru_lancia, nome: gruetta_dritta_prua, x: {prua: 35.2}, y: -3.4, z0: 4.55, altezza: 3.7}
+  - {tipo: gru_lancia, nome: gruetta_sinistra_poppa, x: {prua: 45.4}, y: 3.4, z0: 4.65, altezza: 3.7}
+  - {tipo: gru_lancia, nome: gruetta_sinistra_prua, x: {prua: 35.2}, y: 3.4, z0: 4.55, altezza: 3.7}
+  # verricello di poppa
+  - {tipo: verricello, nome: verricello_poppa, x: {prua: 48.6}, z0: 4.75, larghezza: 3.0, r: 0.45, lunghezza: 1.4}
+
+foto:
+  - nome: fianco_dritta
+    file: extracted/navi/agi/foto/fianco_dritta_linza_1986.jpg
+    maschera_file: extracted/navi/agi/foto/fianco_dritta_linza_1986_maschera.png   # ritoccata a mano (classi/agi_maschere.yaml)
+    nave: LINZA, Northern Wedding 1986 (fianco di dritta, quasi al traverso, ~1 km)
+    qualita: 1.0
+    specchiabile: true
+    qualita_speculare: 0.6
+    orizzonte: [[30, 1027], [2780, 971]]
+    soglia_cielo: 185
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [-103, -1035, 12], bersaglio: [1.0, 0, 11.2], f: 51660}
+    prior_fotocamera: {elevazione: 0.7, sigma_el: 1.0, distanza: 1000, sigma_logD: 0.5}
+    orizzonte_punti: [[30, 1027], [200, 1023], [2700, 975], [2780, 971]]
+    punti:
+      - [[{prua: 50.8}, 0, 4.7], [97, 1308]]         # poppa all'asse, orlo della murata
+      - [[{prua: 14.0}, 0, 17.6], [1925, 647]]       # centro della gabbia sferica prodiera
+      - [[{prua: 43.7}, 0, 17.4], [439, 677]]        # centro della gabbia sferica poppiera
+      - [[{prua: 29.9}, 2.6, 11.5], [1113, 956]]     # sommita' della cupola radar (a sinistra dell'asse)
+      - [[{prua: 25.5}, -2.8, 4.4], [1343, 1290]]    # spigolo prodiero basso di dritta della plancia
+  - nome: fianco_dritta_2
+    file: extracted/navi/agi/foto/fianco_dritta_2_linza_1986.jpg
+    maschera_file: extracted/navi/agi/foto/fianco_dritta_2_linza_1986_maschera.png   # ritoccata a mano (classi/agi_maschere.yaml)
+    nave: LINZA, 1986 (in bianco e nero, dritta, ~70 gradi dalla prua, ~1,5 km; costa sullo sfondo)
+    qualita: 0.6
+    specchiabile: true
+    qualita_speculare: 0.5
+    orizzonte_y: 1029           # linea mare/costa: sopra c'e' la costa, la soglia sul cielo non serve
+    limiti_fotocamera: {elevazione: [0.3, 10]}
+    soglia_cielo: 0
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [491, -1370, 25], bersaglio: [9.3, 0, 10.7], f: 49480}
+    prior_fotocamera: {elevazione: 0.8, sigma_el: 0.8, distanza: 1450, sigma_logD: 0.5}
+    punti:
+      - [[{prua: 0}, 0, 4.7], [1975, 1179]]          # dritto di prua in coperta
+      - [[{prua: 2.4}, 0, 0], [1912, 1333]]          # piede del dritto al galleggiamento
+      - [[{prua: 50.8}, 0, 4.7], [353, 1222]]        # poppa all'asse
+      - [[{prua: 13.9}, 0, 17], [1525, 800]]       # crocetta alta dell'albero prodiero
+      - [[{prua: 43.7}, 0, 17.4], [562, 789]]        # gabbia sferica poppiera
+      - [[{prua: 29.9}, 2.6, 11.5], [1040, 972]]     # cupola radar
+  - nome: prua_dritta
+    file: extracted/navi/agi/foto/prua_dritta_linza_1986.jpg
+    maschera_file: extracted/navi/agi/foto/prua_dritta_linza_1986_maschera.png   # ritoccata a mano (classi/agi_maschere.yaml)
+    nave: LINZA, 1986 (in bianco e nero, mascone di dritta, ~300 m)
+    qualita: 0.9
+    specchiabile: true
+    qualita_speculare: 0.6
+    orizzonte: [[40, 718], [2850, 715]]
+    soglia_cielo: 185
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [262, -162, 11.3], bersaglio: [6.3, 0, 7.5], f: 22160}
+    prior_fotocamera: {elevazione: 1.5, sigma_el: 1.0, distanza: 310, sigma_logD: 0.4}
+    orizzonte_punti: [[40, 718], [200, 719], [2500, 716], [2850, 715]]
+    punti:
+      - [[{prua: 0}, 0, 4.7], [2248, 1228]]          # dritto di prua in coperta
+      - [[{prua: 14.0}, 0, 17.6], [1638, 270]]       # gabbia sferica prodiera
+      - [[{prua: 43.7}, 0, 17.4], [555, 303]]        # gabbia sferica poppiera
+      - [[{prua: 29.9}, 2.6, 11.5], [1212, 683]]     # cupola radar
+      - [[{prua: 26.6}, -2.85, 7.3], [983, 1022]]    # spigolo alto prodiero di dritta della plancia
+      - [[{prua: 26.6}, 2.85, 7.3], [1350, 1028]]    # spigolo alto prodiero di sinistra della plancia
+  - nome: prua_dritta_2
+    file: extracted/navi/agi/foto/prua_dritta_2_linza_1986.jpg
+    maschera_file: extracted/navi/agi/foto/prua_dritta_2_linza_1986_maschera.png   # ritoccata a mano (classi/agi_maschere.yaml)
+    nave: LINZA, 1986 (mascone di dritta, ~270 m)
+    qualita: 0.9
+    specchiabile: true
+    qualita_speculare: 0.6
+    orizzonte: [[40, 847], [2900, 741]]
+    soglia_cielo: 185
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [241, -113, 11.1], bersaglio: [6.1, 0, 8.6], f: 23320}
+    prior_fotocamera: {elevazione: 1.5, sigma_el: 1.0, distanza: 270, sigma_logD: 0.4}
+    orizzonte_punti: [[40, 847], [200, 842], [2500, 759], [2900, 741]]
+    punti:
+      - [[{prua: 0}, 0, 4.7], [2290, 1388]]          # dritto di prua in coperta
+      - [[{prua: 14.0}, 0, 17.6], [1631, 198]]       # gabbia sferica prodiera
+      - [[{prua: 43.7}, 0, 17.4], [569, 336]]        # gabbia sferica poppiera
+      - [[{prua: 29.9}, 2.6, 11.5], [1290, 785]]     # cupola radar
+  - nome: prua_verticale
+    file: extracted/navi/agi/foto/prua_dritta_verticale_linza_1986.jpg
+    maschera_file: extracted/navi/agi/foto/prua_dritta_verticale_linza_1986_maschera.png   # ritoccata a mano (classi/agi_maschere.yaml)
+    nave: LINZA, 1986 (quasi di prua, poco a dritta, ~200 m; foto verticale)
+    qualita: 0.8
+    specchiabile: true
+    qualita_speculare: 0.7
+    orizzonte: [[40, 1106], [1850, 1073]]
+    soglia_cielo: 185
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [210, -28, 10.4], bersaglio: [-5.0, 0, 4.9], f: 13080}
+    prior_fotocamera: {elevazione: 1.5, sigma_el: 1.0, distanza: 215, sigma_logD: 0.4}
+    orizzonte_punti: [[40, 1106], [300, 1100], [1500, 1080], [1850, 1073]]
+    punti:
+      - [[{prua: 0}, 0, 4.7], [1219, 1504]]          # dritto di prua in coperta
+      - [[{prua: 2.4}, 0, 0], [1173, 1781]]          # piede del dritto al galleggiamento
+      - [[{prua: 14.0}, 0, 17.6], [1078, 640]]       # gabbia sferica prodiera
+      - [[{prua: 43.7}, 0, 17.4], [830, 715]]        # gabbia sferica poppiera
+  - nome: prua_sinistra
+    file: extracted/navi/agi/foto/prua_sinistra_linza_1986.jpg
+    maschera_file: extracted/navi/agi/foto/prua_sinistra_linza_1986_maschera.png   # ritoccata a mano (classi/agi_maschere.yaml)
+    nave: LINZA, 1986 (mascone di sinistra, ~55 gradi dalla prua; costa sullo sfondo)
+    qualita: 1.0
+    specchiabile: true
+    qualita_speculare: 0.6
+    orizzonte_y: 724            # linea mare/costa
+    limiti_fotocamera: {elevazione: [0.3, 10]}   # niente orizzonte vero: fotocamera da una plancia, sopra l'acqua
+    soglia_cielo: 185
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [771, 632, 20], bersaglio: [1.5, 0, 7.3], f: 70380}
+    prior_fotocamera: {elevazione: 1.2, sigma_el: 0.5, distanza: 1000, sigma_logD: 0.5}
+    punti:
+      - [[{prua: 0}, 0, 4.7], [305, 1100]]           # dritto di prua in coperta
+      - [[{prua: 50.8}, 0, 4.7], [2580, 1185]]       # poppa all'asse
+      - [[{prua: 14.0}, 0, 17.6], [982, 218]]        # gabbia sferica prodiera
+      - [[{prua: 43.7}, 0, 17.4], [2276, 297]]       # gabbia sferica poppiera
+      - [[{prua: 29.9}, 2.6, 11.5], [1821, 666]]     # cupola radar

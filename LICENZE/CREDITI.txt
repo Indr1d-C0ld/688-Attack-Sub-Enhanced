@@ -1,0 +1,1297 @@
+688 ATTACK SUB - REMAKE (MELCHIOR): CREDITI
+==========================================
+
+Generato da tools/pipeline/licenze.py da data/motore/crediti.toml, che resta nel pacchetto con tutte
+  le voci (anche le fonti solo consultate). Tre categorie: il gioco originale del 1989, proprieta'
+  di Electronic Arts; il lavoro di questo progetto; le opere di terzi, ognuna con la sua licenza. Un
+  file puo' derivare da piu' voci: i suoi obblighi si sommano.
+
+1. IL GIOCO ORIGINALE
+---------------------
+
+688 Attack Sub, Electronic Arts, 1989 (copyright 1988). Software (c) 1988 John W. Ratcliff; progetto
+  di John W. Ratcliff, Paul Grace e Randall Breen; produttore Paul Grace; grafica di Michael Kosaka
+  e Wilfredo J. Aguilar; effetti sonori e musica dei titoli di Rob Hubbard; manuale di David Luoto.
+  Il remake non e' affiliato a Electronic Arts.
+
+Questo pacchetto contiene file ricavati dal gioco originale, per uso personale: l'elenco e' in
+  PROPRIETARI.txt.
+
+- 688 Attack Sub (1989): font, schermate dei titoli, palette e testi di bordo: 8 file
+- 688 Attack Sub (1989): scenari delle missioni (SCENE*.LZA) convertiti in Lua: 22 file
+- 688 Attack Sub (1989): musica dei titoli (AdLib, Tandy, Covox): 3 file
+- 688 Attack Sub (1989): i sei campioni .T del classico: 6 file
+- Ricavati dalle missioni del 1989: kit delle rapide, obiettivi delle 22 missioni, piano del
+  comandante IA della sandbox: 25 file
+
+2. IL LAVORO DEL PROGETTO
+-------------------------
+
+Motore (bin/melchior688), strumenti della sandbox (bin/serie_sandbox, bin/serie_ab), manuale
+  (manuale/), dati, missioni, modelli 3D, sprite, font, musica FM ed effetti sintetizzati sono fatti
+  da melchior-688. Le musiche FM e i loro timbri sono dichiarati CC0. I numeri dei dati vengono dai
+  dossier di ricerca del progetto, con la fonte campo per campo.
+
+- Effetti di bordo sintetizzati (periscopio, tubi, zavorra, scafo, allarmi sovietici...) (17 file).
+  sintesi, nessuna fonte esterna
+- Musiche FM e timbri del remake (10 file). composte per il progetto e dichiarate CC0
+  (musiche_fm.py, timbri_fm.py); nessun tema o banco d'epoca copiato
+- Fosforo 688, Incisione 688, Stampino URSS e Cifre (font bitmap delle stazioni) (12 file). nessuna
+  fonte esterna: tracciato 5x7 disegnato a mano, alla Hershey
+- Cataloghi, regole e tabelle del motore (classi, armi, sensori, acustica, meteo, carriera,
+  enciclopedia, tasti...) (28 file). scritti dal progetto: i numeri vengono dai dossier di
+  docs/ricerca, con la fonte per campo
+- Modelli 3D, sprite e scafi delle unita' (il kit grafico) (194 file). geometria del progetto; le
+  tessiture fotografiche hanno la voce della loro foto
+- Foto del Museo digitalizzate «alla 1989» (320x200, 16 grigi) (70 file). elaborazione del progetto:
+  ogni immagine ha anche la voce della sua foto, con la licenza di quella
+- Fondali, carte d'epoca, carte delle basi, profili del suono, toponimi e traffico dei teatri (73
+  file). elaborazione del progetto dai dati di batimetria e oceanografia, che hanno le loro voci
+- Missioni del progetto: libreria, prove della sandbox, esperimenti, video d'apertura, radio e ASW
+  aereo delle missioni originali (145 file). radio/ e asw/ aggiungono alle missioni originali
+  contenuti scritti dal progetto; non contengono testi del 1989
+
+3. OPERE DI TERZI
+-----------------
+
+3.1 Codice
+
+- Lua 5.4.7, Lua.org, PUC-Rio (R. Ierusalimschy, L. H. de Figueiredo, W. Celes). Licenza MIT.
+  https://www.lua.org. Uso: compilata nel gioco: le missioni. Testo della licenza: Lua.txt.
+
+- toml++ 3.4.0, Mark Gillard. Licenza MIT. https://marzer.github.io/tomlplusplus/. Uso: compilata
+  nel gioco: i file di dati. Testo della licenza: tomlplusplus.txt.
+
+- ymfm, Aaron Giles. Licenza BSD 3-Clause. https://github.com/aaronsgiles/ymfm. Uso: compilata nel
+  gioco: la musica FM dal vivo (nucleo/musica_fm); negli strumenti, l'analisi della musica
+  originale. Testo della licenza: ymfm.txt.
+
+- SDL3 3.2.10, Sam Lantinga e collaboratori. Licenza zlib. https://www.libsdl.org. Uso: nel
+  pacchetto (lib/libSDL3.so.0): finestra, ingresso, audio. Testo della licenza: SDL3.txt.
+
+- sndio 1.10, Alexandre Ratchov e collaboratori. Licenza ISC. https://sndio.org. Uso: nel pacchetto
+  (lib/libsndio.so.7): dipendenza di SDL3. Testo della licenza: sndio.txt.
+
+- doctest, Viktor Kirilov. Licenza MIT. https://github.com/doctest/doctest. Uso: solo le prove: non
+  entra nel gioco ne' nel pacchetto.
+
+- libmt32emu (Munt) 2.8.3, Dean Beeler, Jerome Fisher e il gruppo Munt (mt32emu/AUTHORS.txt).
+  Licenza LGPL-2.1+. https://github.com/munt/munt. Uso: solo lo strumento tools/mt32, che rende i
+  brani MT-32: non entra nel gioco ne' nel pacchetto.
+
+3.1b Caratteri incorporati nei PDF del manuale
+
+- Charis 7.000, SIL Global (1997-2025), nomi riservati «Charis» e «SIL». Licenza SIL OFL 1.1.
+  https://software.sil.org/charis/. Uso: il testo dei PDF del manuale (Regular, Italic, Bold,
+  BoldItalic). Testo della licenza: Charis.txt.
+
+- Liberation Sans e Serif 2.1.5, Red Hat, Inc. (2012), nome riservato «Liberation»; dati digitali
+  Google (2010). Licenza SIL OFL 1.1. https://github.com/liberationfonts. Uso: incorporato nei PDF
+  del manuale (Serif solo per le lettere greche). Testo della licenza: Liberation.txt.
+
+- Liberation Sans Narrow 1.07.6, Red Hat, Inc. (2007-2011). Licenza GPL-2 con l'eccezione dei
+  caratteri. https://github.com/liberationfonts/liberation-sans-narrow. Uso: incorporato nei PDF del
+  manuale. Testo della licenza: LiberationSansNarrow.txt.
+
+- JetBrains Mono 2.304, The JetBrains Mono Project Authors (2020). Licenza SIL OFL 1.1 (progetto);
+  Apache-2.0 (file Debian). https://github.com/JetBrains/JetBrainsMono. Uso: incorporato nei PDF del
+  manuale. Testo della licenza: JetBrainsMono.txt.
+
+- DejaVu Sans e Sans Mono 2.37, Bitstream, Inc. (2003); modifiche DejaVu in pubblico dominio.
+  Licenza Bitstream Vera. https://dejavu-fonts.github.io. Uso: incorporato nel PDF del volume 2
+  (riferimento). Testo della licenza: DejaVu.txt.
+
+3.2 Foto e disegni
+
+- File:Beriev Be-12 Chayka 25 yellow (10071687574).jpg
+  Autore: Alan Wilson
+  Licenza: CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/)
+  Fonte: https://commons.wikimedia.org/wiki/File:Beriev_Be-12_Chayka_25_yellow_(10071687574).jpg
+  Modificato: ritagliata e proiettata come tessitura sul modello 3D e negli sprite della classe;
+    ridotta a 320x200 in 16 grigi per il Museo
+  File:
+    data/motore/immagini/enciclopedia/aereo.be12_foto1.img
+    data/motore/modelli/be12.mdl
+    data/motore/navi/be12.spr
+
+- File:БМРТ АБ-0122 «Амбарчик» Paljassaare sadamas 92.jpg
+  Autore: Jaan Künnap
+  Licenza: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+  Fonte:
+    https://commons.wikimedia.org/wiki/File%3A%D0%91%D0%9C%D0%A0%D0%A2_%D0%90%D0%91-0122_%C2%AB%D0%90%D0%BC%D0%B1%D0%B0%D1%80%D1%87%D0%B8%D0%BA%C2%BB_Paljassaare_sadamas_92.jpg
+  Modificato: ritagliata e proiettata come tessitura sul modello 3D e negli sprite della classe
+  File:
+    data/motore/navi/bmrt.spr
+    data/motore/modelli/bmrt.mdl
+
+- File:Hkp 4B 01.jpg
+  Autore: Towpilot
+  Licenza: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
+  Fonte: https://commons.wikimedia.org/wiki/File%3AHkp_4B_01.jpg
+  Modificato: ritagliata e proiettata come tessitura sul modello 3D e negli sprite della classe
+  File:
+    data/motore/navi/hkp4.spr
+    data/motore/modelli/hkp4.mdl
+
+- File:Johan Hjort IMG 7563 Adventfjorden.JPG
+  Autore: Bjoertvedt
+  Licenza: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
+  Fonte: https://commons.wikimedia.org/wiki/File%3AJohan_Hjort_IMG_7563_Adventfjorden.JPG
+  Modificato: ritagliata e proiettata come tessitura sul modello 3D e negli sprite della classe
+  File:
+    data/motore/navi/nave_ricerca.spr
+    data/motore/modelli/nave_ricerca.mdl
+
+- File:Longliner Argenova-XXI.jpg
+  Autore: GeSHaFish
+  Licenza: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
+  Fonte: https://commons.wikimedia.org/wiki/File%3ALongliner_Argenova-XXI.jpg
+  Modificato: ritagliata e proiettata come tessitura sul modello 3D e negli sprite della classe
+  File:
+    data/motore/navi/peschereccio_costiero.spr
+    data/motore/modelli/peschereccio_costiero.mdl
+
+- File:2023-05-26 BULK DESTINY - IMO 9781994.jpg
+  Autore: Gordon Leggett
+  Licenza: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+  Fonte: https://commons.wikimedia.org/wiki/File%3A2023-05-26_BULK_DESTINY_-_IMO_9781994.jpg
+  Modificato: ritagliata e proiettata come tessitura sul modello 3D e negli sprite della classe
+  File:
+    data/motore/navi/portarinfuse.spr
+    data/motore/modelli/portarinfuse.mdl
+
+- File:HMS Stockholm.JPG
+  Autore: Marcusroos
+  Licenza: CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
+  Fonte: https://commons.wikimedia.org/wiki/File%3AHMS_Stockholm.JPG
+  Modificato: ritagliata e proiettata come tessitura sul modello 3D e negli sprite della classe
+  File:
+    data/motore/navi/stockholm.spr
+    data/motore/modelli/stockholm.mdl
+
+- File:U 17 vor Koblenz.jpg
+  Autore: Rolf Kranz
+  Licenza: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+  Fonte: https://commons.wikimedia.org/wiki/File%3AU_17_vor_Koblenz.jpg
+  Modificato: ritagliata e proiettata come tessitura sul modello 3D e negli sprite della classe
+  File:
+    data/motore/navi/type206.spr
+    data/motore/modelli/type206.mdl
+
+Pubblico dominio e CC0 (148 opere): nessun obbligo, si citano per correttezza.
+
+- File:Intelligence collection ship LINZA side view.JPEG. PH1 Jeff Hilton. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Intelligence_collection_ship_LINZA_side_view.JPEG> File:
+  data/motore/immagini/enciclopedia/nave.agi_foto1.img, data/motore/modelli/agi.mdl,
+  data/motore/navi/agi.spr
+- File:Soviet Okean class intelligence collection ship LINZA.JPEG. PH1 Jeff Hilton. pubblico
+  dominio.
+  <https://commons.wikimedia.org/wiki/File:Soviet_Okean_class_intelligence_collection_ship_LINZA.JPEG>
+  File: data/motore/immagini/enciclopedia/nave.agi_foto2.img, data/motore/modelli/agi.mdl,
+  data/motore/navi/agi.spr
+- File:Okean class intelligence collection ship LINZA -3.JPEG. PH1 Jeff Hilton. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Okean_class_intelligence_collection_ship_LINZA_-3.JPEG>
+  File: data/motore/navi/agi.spr, data/motore/modelli/agi.mdl
+- File:Soviet intelligence collection ship, 1986.JPEG. PH1 Jeff Hilton. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Soviet_intelligence_collection_ship,_1986.JPEG> File:
+  data/motore/navi/agi.spr, data/motore/modelli/agi.mdl
+- File:LINZA observing NATO ships participating in exercise Northern Wedding '86.JPEG. PH1 Jeff
+  Hilton. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:LINZA_observing_NATO_ships_participating_in_exercise_Northern_Wedding_%2786.JPEG>
+  File: data/motore/navi/agi.spr, data/motore/modelli/agi.mdl
+- File:LINZA observing NATO ships during Exercise Northern Wedding 86.JPEG. PH1 Jeff Hilton.
+  pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:LINZA_observing_NATO_ships_during_Exercise_Northern_Wedding_86.JPEG>
+  File: data/motore/navi/agi.spr, data/motore/modelli/agi.mdl
+- File:Akula submarine DN-SN-91-00616.JPG. autore non indicato. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AAkula_submarine_DN-SN-91-00616.JPG> File:
+  data/motore/immagini/enciclopedia/sottomarino.akula_foto1.img, data/motore/modelli/akula.mdl,
+  data/motore/navi/akula.spr
+- File:Akula class submarine starboard quarter view.JPEG. autore non indicato. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AAkula_class_submarine_starboard_quarter_view.JPEG>
+  File: data/motore/immagini/enciclopedia/sottomarino.akula_foto2.img,
+  data/motore/modelli/akula.mdl, data/motore/navi/akula.spr
+- File:Alfa class submarine.jpg. autore non indicato. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AAlfa_class_submarine.jpg> File:
+  data/motore/immagini/enciclopedia/sottomarino.alfa_foto1.img, data/motore/modelli/alfa.mdl,
+  data/motore/navi/alfa.spr
+- File:A port quarter view of a Soviet Alfa class nuclear-powered fleet ballistic missile submarine
+  (SSN) underway - DPLA - 80378994ca2135cfdf1eab39887b1190.jpeg. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AA_port_quarter_view_of_a_Soviet_Alfa_class_nuclear-powered_fleet_ballistic_missile_submarine_%28SSN%29_underway_-_DPLA_-_80378994ca2135cfdf1eab39887b1190.jpeg>
+  File: data/motore/immagini/enciclopedia/sottomarino.alfa_foto2.img
+- File:Alfa class submarine 2.jpg. Department of Defense. American Forces Information Service.
+  Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AAlfa_class_submarine_2.jpg> File:
+  data/motore/navi/alfa.spr, data/motore/modelli/alfa.mdl
+- File:BQM-74C Chukar III.JPEG. DON S. MONTGOMERY, USN (RET.). pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ABQM-74C_Chukar_III.JPEG> File:
+  data/motore/immagini/enciclopedia/bersaglio.bqm74_foto1.img, data/motore/navi/bqm74.spr
+- File:A tug boat positions the vehicle cargo ship CPL. LOUIS J. HAUGE, JR. (T-AK-3000). The HAUGE,
+  along with other maritime prepositioning ships, is scheduled t. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_tug_boat_positions_the_vehicle_cargo_ship_CPL._LOUIS_J._HAUGE,_JR._(T-AK-3000)._The_HAUGE,_along_with_other_maritime_prepositioning_ships,_is_scheduled_to_transport_equipment_that_-_DPLA_-_f36a97bd60156de27bd8f410c50fd827.jpeg>
+  File: data/motore/immagini/enciclopedia/nave.cargo_foto1.img, data/motore/modelli/cargo.mdl,
+  data/motore/navi/cargo.spr
+- File:1ST LT. ALEX BONNYMAN JR. (T-AK-3003).jpg. U.S. Navy's Military Sealift Command. pubblico
+  dominio. <https://commons.wikimedia.org/wiki/File:1ST_LT._ALEX_BONNYMAN_JR._(T-AK-3003).jpg> File:
+  data/motore/immagini/enciclopedia/nave.cargo_foto2.img, data/motore/modelli/cargo.mdl,
+  data/motore/navi/cargo.spr
+- File:USNS PVT. HARRY FISHER (T-AK 3004).jpg. U.S. Navy's Military Sealift Command. pubblico
+  dominio. <https://commons.wikimedia.org/wiki/File:USNS_PVT._HARRY_FISHER_(T-AK_3004).jpg> File:
+  data/motore/navi/cargo.spr, data/motore/modelli/cargo.mdl
+- File:USNS PVT. HARRY FISHER (T-AK 3004) underway.jpg. U.S. Navy's Military Sealift Command.
+  pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:USNS_PVT._HARRY_FISHER_(T-AK_3004)_underway.jpg> File:
+  data/motore/navi/cargo.spr, data/motore/modelli/cargo.mdl
+- File:An aerial starboard quarter view of the maritime prepositioning ship SS PFC. WILLIAM B. BAUGH
+  JR. (T-AK-3001) being maneuvered by tugs - DPLA - 42a4ca71c7e. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:An_aerial_starboard_quarter_view_of_the_maritime_prepositioning_ship_SS_PFC._WILLIAM_B._BAUGH_JR._(T-AK-3001)_being_maneuvered_by_tugs_-_DPLA_-_42a4ca71c7edc3ded7d6527c1e7716ea.jpeg>
+  File: data/motore/navi/cargo.spr, data/motore/modelli/cargo.mdl
+- File:Charlie class submarine.jpg. autore non indicato. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ACharlie_class_submarine.jpg> File:
+  data/motore/immagini/enciclopedia/sottomarino.charlie2_foto1.img,
+  data/motore/modelli/charlie2.mdl, data/motore/navi/charlie2.spr
+- File:Soviet Charlie I class nuclear-powered missile submarine.jpg. Unknown author. pubblico
+  dominio.
+  <https://commons.wikimedia.org/wiki/File%3ASoviet_Charlie_I_class_nuclear-powered_missile_submarine.jpg>
+  File: data/motore/immagini/enciclopedia/sottomarino.charlie2_foto2.img,
+  data/motore/modelli/charlie2.mdl, data/motore/navi/charlie2.spr
+- File:Foxtrot Class submarine.JPEG. Unknown author. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AFoxtrot_Class_submarine.JPEG> File:
+  data/motore/immagini/enciclopedia/sottomarino.foxtrot_foto1.img, data/motore/modelli/foxtrot.mdl,
+  data/motore/navi/foxtrot.spr
+- File:Cuban Foxtrot submarine.jpg. Unknown, US Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ACuban_Foxtrot_submarine.jpg> File:
+  data/motore/immagini/enciclopedia/sottomarino.foxtrot_foto2.img, data/motore/modelli/foxtrot.mdl,
+  data/motore/navi/foxtrot.spr
+- File:A port bow view of a Soviet-built Cuban Foxtrot class patrol submarine underway.jpg. Unknown,
+  US Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AA_port_bow_view_of_a_Soviet-built_Cuban_Foxtrot_class_patrol_submarine_underway.jpg>
+  File: data/motore/navi/foxtrot.spr, data/motore/modelli/foxtrot.mdl
+- File:AGM-84 Harpoon carried by an F-16.jpg. Service Depicted:  Air ForceCamera Operator: CINDY
+  FARMER. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AAGM-84_Harpoon_carried_by_an_F-16.jpg> File:
+  data/motore/navi/harpoon.spr
+- File:Air-to-air right underside view of the Soviet I1-38 May aircraft. (SUBSTANDARD) - DPLA -
+  d20ef6e5055d46d43429a51deee0cb0a.jpeg. Department of Defense. American Forces Information Service.
+  Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Air-to-air_right_underside_view_of_the_Soviet_I1-38_May_aircraft._(SUBSTANDARD)_-_DPLA_-_d20ef6e5055d46d43429a51deee0cb0a.jpeg>
+  File: data/motore/immagini/enciclopedia/aereo.il38_foto1.img, data/motore/modelli/il38.mdl,
+  data/motore/navi/il38.spr
+- File:Ilyushin Il-38 from below Apr 1987.JPEG. USN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Ilyushin_Il-38_from_below_Apr_1987.JPEG> File:
+  data/motore/immagini/enciclopedia/aereo.il38_foto2.img, data/motore/modelli/il38.mdl,
+  data/motore/navi/il38.spr
+- File:Ilyushin Il-38 side view 1986.JPEG. Unknown author. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Ilyushin_Il-38_side_view_1986.JPEG> File:
+  data/motore/navi/il38.spr, data/motore/modelli/il38.mdl
+- File:A starboard beam view of the battleship USS IOWA (BB 61) underway during sea trials - DPLA -
+  4b14533573f35b608882773af4e9a767.jpeg. Department of Defense. American Forces Information Service.
+  Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_starboard_beam_view_of_the_battleship_USS_IOWA_(BB_61)_underway_during_sea_trials_-_DPLA_-_4b14533573f35b608882773af4e9a767.jpeg>
+  File: data/motore/immagini/enciclopedia/nave.iowa_foto1.img, data/motore/modelli/iowa.mdl,
+  data/motore/navi/iowa.spr
+- File:A starboard beam view of the battleship USS IOWA (BB 61) underway during sea trials - DPLA -
+  4b14533573f35b608882773af4e9a767.jpeg. Department of Defense. American Forces Information Service.
+  Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_starboard_beam_view_of_the_battleship_USS_IOWA_(BB_61)_underway_during_sea_trials_-_DPLA_-_4b14533573f35b608882773af4e9a767.jpeg>
+  File: data/motore/immagini/enciclopedia/nave.iowa_foto2.img
+- File:A port bow view of the battleship USS Iowa.jpg. National Museum of the U.S. Navy. pubblico
+  dominio. <https://commons.wikimedia.org/wiki/File:A_port_bow_view_of_the_battleship_USS_Iowa.jpg>
+  File: data/motore/navi/iowa.spr, data/motore/modelli/iowa.mdl
+- File:A starboard bow view of the battleship USS IOWA underway - DPLA -
+  0c86cecfd99e3f21487abd2c24f16d19.jpeg. Department of Defense. American Forces Information Service.
+  Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_starboard_bow_view_of_the_battleship_USS_IOWA_underway_-_DPLA_-_0c86cecfd99e3f21487abd2c24f16d19.jpeg>
+  File: data/motore/navi/iowa.spr, data/motore/modelli/iowa.mdl
+- File:A port quarter view of the battleship USS IOWA (BB-61) underway during NATO Exercise Northern
+  Wedding '86 - DPLA - da69c274312bf4f6447ac72fe4247f70.jpeg. Department of Defense. American Forces
+  Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_port_quarter_view_of_the_battleship_USS_IOWA_(BB-61)_underway_during_NATO_Exercise_Northern_Wedding_'86_-_DPLA_-_da69c274312bf4f6447ac72fe4247f70.jpeg>
+  File: data/motore/navi/iowa.spr, data/motore/modelli/iowa.mdl
+- File:Ka-2583.jpg. Department of Defense. American Forces Information Service. Defense Visual
+  Information Center. 1994. pubblico dominio. <https://commons.wikimedia.org/wiki/File:Ka-2583.jpg>
+  File: data/motore/immagini/enciclopedia/elicottero.ka25_foto1.img, data/motore/modelli/ka25.mdl,
+  data/motore/navi/ka25.spr
+- File:Soviet Ka-25 Hormone-C helicopter.JPEG. SK3 Bob Marsh. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Soviet_Ka-25_Hormone-C_helicopter.JPEG> File:
+  data/motore/immagini/enciclopedia/elicottero.ka25_foto2.img, data/motore/modelli/ka25.mdl,
+  data/motore/navi/ka25.spr
+- File:Ka-25 Kiev2.jpg. Аимаина хикари. CC0.
+  <https://commons.wikimedia.org/wiki/File:Ka-25_Kiev2.jpg> File: data/motore/navi/ka25.spr,
+  data/motore/modelli/ka25.mdl
+- File:Ka-25 Kiev1.jpg. Аимаина хикари. CC0.
+  <https://commons.wikimedia.org/wiki/File:Ka-25_Kiev1.jpg> File: data/motore/navi/ka25.spr,
+  data/motore/modelli/ka25.mdl
+- File:A Russian Helix KA-27.jpg. Jason R. Zalasky, U.S. Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_Russian_Helix_KA-27.jpg> File:
+  data/motore/immagini/enciclopedia/elicottero.ka27_foto1.img, data/motore/modelli/ka27.mdl,
+  data/motore/navi/ka27.spr
+- File:Nikolaev1986b.jpg. Photographer's Name: UNKNOWN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ANikolaev1986b.jpg> File:
+  data/motore/immagini/enciclopedia/nave.kara_foto1.img, data/motore/modelli/kara.mdl,
+  data/motore/navi/kara.spr
+- File:Nikolaev1977.jpg. Photographer's Name: Unknown. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ANikolaev1977.jpg> File:
+  data/motore/immagini/enciclopedia/nave.kara_foto2.img, data/motore/modelli/kara.mdl,
+  data/motore/navi/kara.spr
+- File:A starboard bow view of a Soviet Kara class guided missile cruiser PETROPAVLOVSK (565)
+  shadowing salvage operations for downed Korean Air Lines Flight 007. Department of Defense.
+  American Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AA_starboard_bow_view_of_a_Soviet_Kara_class_guided_missile_cruiser_PETROPAVLOVSK_%28565%29_shadowing_salvage_operations_for_downed_Korean_Air_Lines_Flight_007_%28KAL_007%29._The_commercial_-_DPLA_-_92467449ecec4f4686e60ca8ca06f2af.jpeg>
+  File: data/motore/navi/kara.spr, data/motore/modelli/kara.mdl
+- File:Tashkent1985.jpg. Photographer's Name: UNKNOWN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ATashkent1985.jpg> File: data/motore/navi/kara.spr,
+  data/motore/modelli/kara.mdl
+- File:The large harbor tug DAHLONEGA (YTB-770) escorts the guided missile destroyer USS KIDD
+  (DDG-993) as the ship gets underway en route to the Persian Gulf - D. Department of Defense.
+  American Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AThe_large_harbor_tug_DAHLONEGA_%28YTB-770%29_escorts_the_guided_missile_destroyer_USS_KIDD_%28DDG-993%29_as_the_ship_gets_underway_en_route_to_the_Persian_Gulf_-_DPLA_-_00271fad0f634f0001ca435d808a5a49.jpeg>
+  File: data/motore/immagini/enciclopedia/nave.kidd_foto1.img, data/motore/modelli/kidd.mdl,
+  data/motore/navi/kidd.spr
+- File:USS Kidd (DDG-993) 1989.jpg. PHAA Cinelli, USN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AUSS_Kidd_%28DDG-993%29_1989.jpg> File:
+  data/motore/immagini/enciclopedia/nave.kidd_foto2.img, data/motore/modelli/kidd.mdl,
+  data/motore/navi/kidd.spr
+- File:USS Chandler (DDG-996).jpg. PH2 Tracy Lee Didas, USN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AUSS_Chandler_%28DDG-996%29.jpg> File:
+  data/motore/navi/kidd.spr, data/motore/modelli/kidd.mdl
+- File:USS Kidd (DDG-993) returning to Norfolk in December 1987.JPEG. PH2 Alexander C. Hicks, USN.
+  pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AUSS_Kidd_%28DDG-993%29_returning_to_Norfolk_in_December_1987.JPEG>
+  File: data/motore/navi/kidd.spr, data/motore/modelli/kidd.mdl
+- File:A starboard quarter view of the guided missile destroyer USS CHANDLER (DDG 996) underway -
+  DPLA - 8535a29bac7b3c87225283a05f69bc69.jpeg. Department of Defense. American Forces Information
+  Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AA_starboard_quarter_view_of_the_guided_missile_destroyer_USS_CHANDLER_%28DDG_996%29_underway_-_DPLA_-_8535a29bac7b3c87225283a05f69bc69.jpeg>
+  File: data/motore/navi/kidd.spr, data/motore/modelli/kidd.mdl
+- File:Submarine Kilo class.jpg. Unknown author. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ASubmarine_Kilo_class.jpg> File:
+  data/motore/immagini/enciclopedia/sottomarino.kilo_foto1.img, data/motore/modelli/kilo.mdl,
+  data/motore/navi/kilo.spr
+- File:Iranian kilo class submarine.jpg. autore non indicato. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AIranian_kilo_class_submarine.jpg> File:
+  data/motore/immagini/enciclopedia/sottomarino.kilo_foto2.img, data/motore/modelli/kilo.mdl,
+  data/motore/navi/kilo.spr
+- File:Kilo Submarine DN-SC-96-00528.jpg. ID: DN-SC-96-00528 Service Depicted: Other Service.
+  pubblico dominio. <https://commons.wikimedia.org/wiki/File%3AKilo_Submarine_DN-SC-96-00528.jpg>
+  File: data/motore/navi/kilo.spr, data/motore/modelli/kilo.mdl
+- File:BCGN Kirov 1983.JPG. Camera Operator: PH2 BEECH. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:BCGN_Kirov_1983.JPG> File:
+  data/motore/immagini/enciclopedia/nave.kirov_foto1.img, data/motore/modelli/kirov.mdl,
+  data/motore/navi/kirov.spr
+- File:ARKR Kirov 1985 anchored.jpg. USN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:ARKR_Kirov_1985_anchored.jpg> File:
+  data/motore/immagini/enciclopedia/nave.kirov_foto2.img, data/motore/modelli/kirov.mdl,
+  data/motore/navi/kirov.spr
+- File:A starboard quarter view of the Soviet Kirov class nuclear-powered guided missile cruiser
+  Frunze at anchor during a U.S. Navy visit to the city - DPLA - e6. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_starboard_quarter_view_of_the_Soviet_Kirov_class_nuclear-powered_guided_missile_cruiser_Frunze_at_anchor_during_a_U.S._Navy_visit_to_the_city_-_DPLA_-_e69bcfc09cece37f11f18679809ef602.jpeg>
+  File: data/motore/navi/kirov.spr, data/motore/modelli/kirov.mdl
+- File:Fragatas-Cubana-356.jpg. Photographer's Name: Unknown (DefenseImagery.mil). pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Fragatas-Cubana-356.jpg> File:
+  data/motore/immagini/enciclopedia/nave.koni_foto1.img, data/motore/modelli/koni.mdl,
+  data/motore/navi/koni.spr
+- File:Del'fin1982-2.jpg. Photographer's Name: Unknown (DefenseImagery.mil). pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Del'fin1982-2.jpg> File:
+  data/motore/immagini/enciclopedia/nave.koni_foto2.img, data/motore/modelli/koni.mdl,
+  data/motore/navi/koni.spr
+- File:Del'fin1982-1.jpg. Photographer's Name: Unknown (DefenseImagery.mil). pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Del'fin1982-1.jpg> File: data/motore/navi/koni.spr,
+  data/motore/modelli/koni.mdl
+- File:Berlin1982-1.jpg. DefenseImagery.mil. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Berlin1982-1.jpg> File: data/motore/navi/koni.spr,
+  data/motore/modelli/koni.mdl
+- File:Pytlivyy1986.jpg. Photographer's Name: PH2 Don Koralewski. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Pytlivyy1986.jpg> File:
+  data/motore/immagini/enciclopedia/nave.krivak2_foto1.img, data/motore/modelli/krivak2.mdl,
+  data/motore/navi/krivak2.spr
+- File:Krivak II class frigate, port beam view.jpg. PH2 PAUL A. VISE. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Krivak_II_class_frigate,_port_beam_view.jpg> File:
+  data/motore/immagini/enciclopedia/nave.krivak2_foto2.img
+- File:Rezvyy1983.JPEG. Photographer's Name: PH2 D. Beech. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Rezvyy1983.JPEG> File: data/motore/navi/krivak2.spr,
+  data/motore/modelli/krivak2.mdl
+- File:Gordelivyy1985.jpg. Photographer's Name: Unknown. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Gordelivyy1985.jpg> File: data/motore/navi/krivak2.spr,
+  data/motore/modelli/krivak2.mdl
+- File:US Navy 091020-N-1722W-210 he fast-attack submarine USS Los Angeles (SSN 688) transits near
+  Apra Harbor, Guam after returning from an underway period. Los. U.S. Navy photo by Mass
+  Communication Specialist 3rd Class Trevor Welsh. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AUS_Navy_091020-N-1722W-210_he_fast-attack_submarine_USS_Los_Angeles_%28SSN_688%29_transits_near_Apra_Harbor%2C_Guam_after_returning_from_an_underway_period._Los_Angeles%2C_the_4th_naval_ship_to_be_named_after_the_city_of_Los_Angeles.jpg>
+  File: data/motore/immagini/enciclopedia/sottomarino.los_angeles_foto1.img,
+  data/motore/modelli/los_angeles.mdl, data/motore/navi/los_angeles.spr
+- File:Port bow view of the nuclear-powered attack submarine USS OLYMPIA (SSN 717) underway - DPLA -
+  1c53983eab9753c69b08dd2514c4fe87.jpeg. Department of Defense. American Forces Information Service.
+  Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3APort_bow_view_of_the_nuclear-powered_attack_submarine_USS_OLYMPIA_%28SSN_717%29_underway_-_DPLA_-_1c53983eab9753c69b08dd2514c4fe87.jpeg>
+  File: data/motore/immagini/enciclopedia/sottomarino.los_angeles_foto2.img,
+  data/motore/modelli/los_angeles.mdl, data/motore/navi/los_angeles.spr
+- File:US Navy 101116-N-4047W-005 The Los Angeles-class attack submarine USS San Francisco (SSN 711)
+  departs for its six-month western Pacific Ocean.jpg. U.S. Navy photo by Mass Communication
+  Specialist 2nd Class Shannon Warner. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AUS_Navy_101116-N-4047W-005_The_Los_Angeles-class_attack_submarine_USS_San_Francisco_%28SSN_711%29_departs_for_its_six-month_western_Pacific_Ocean.jpg>
+  File: data/motore/navi/los_angeles.spr, data/motore/modelli/los_angeles.mdl
+- File:Soviet ship Ravenstvo, 1979.JPEG. PH2 K. Brewer. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Soviet_ship_Ravenstvo,_1979.JPEG> File:
+  data/motore/immagini/enciclopedia/nave.mercantile_foto1.img, data/motore/modelli/mercantile.mdl,
+  data/motore/navi/mercantile.spr
+- File:P-3A VP-44 over USS Barry (DD-933) and Metallurg Anosov during Cuban Missile Crisis 1962.jpg.
+  U.S. Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:P-3A_VP-44_over_USS_Barry_(DD-933)_and_Metallurg_Anosov_during_Cuban_Missile_Crisis_1962.jpg>
+  File: data/motore/immagini/enciclopedia/nave.mercantile_foto2.img
+- File:Soviet Nanuchka class guided missile corvette.JPEG. US Navy (autore non indicato), VIRIN
+  DN-SN-86-00965, NARA 6406073. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Soviet_Nanuchka_class_guided_missile_corvette.JPEG> File:
+  data/motore/immagini/enciclopedia/nave.nanuchka_foto1.img, data/motore/modelli/nanuchka.mdl,
+  data/motore/navi/nanuchka.spr
+- File:Nanuchka-I DN-SC-88-09637.jpg. US military, DN-SC-88-09637. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Nanuchka-I_DN-SC-88-09637.jpg> File:
+  data/motore/immagini/enciclopedia/nave.nanuchka_foto2.img, data/motore/modelli/nanuchka.mdl,
+  data/motore/navi/nanuchka.spr
+- File:Nanuchka class corvette.JPG. US military, DN-ST-82-04639, NARA NN33300514. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Nanuchka_class_corvette.JPG> File:
+  data/motore/navi/nanuchka.spr, data/motore/modelli/nanuchka.mdl
+- File:A bow view of the nuclear-powered aircraft carrier USS DWIGHT D. EISENHOWER (CVN 69) underway
+  off the coast of St. Thomas, Virgin Islands - DPLA - afe9b912. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_bow_view_of_the_nuclear-powered_aircraft_carrier_USS_DWIGHT_D._EISENHOWER_(CVN_69)_underway_off_the_coast_of_St._Thomas,_Virgin_Islands_-_DPLA_-_afe9b91218859664d7e31b76bb3079ca.jpeg>
+  File: data/motore/immagini/enciclopedia/nave.nimitz_foto1.img, data/motore/modelli/nimitz.mdl,
+  data/motore/navi/nimitz.spr
+- File:A starboard quarter view of the nuclear-powered aircraft carrier USS DWIGHT D. EISENHOWER
+  (CVN 69) and the aircraft carrier USS INDENPENDENCE (CV 62) under. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_starboard_quarter_view_of_the_nuclear-powered_aircraft_carrier_USS_DWIGHT_D._EISENHOWER_(CVN_69)_and_the_aircraft_carrier_USS_INDENPENDENCE_(CV_62)_underway._The_INDENPENDENCE_is_-_DPLA_-_72a4fdb119bf58e0f3c4009083cef756.jpeg>
+  File: data/motore/immagini/enciclopedia/nave.nimitz_foto2.img, data/motore/modelli/nimitz.mdl,
+  data/motore/navi/nimitz.spr
+- File:A port beam view of the nuclear-powered aircraft carrier USS THEODORE ROOSEVELT (CVN 71)
+  underway - DPLA - 11918d1c1f8c8aa489083a5dc10c9b21.jpeg. Department of Defense. American Forces
+  Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_port_beam_view_of_the_nuclear-powered_aircraft_carrier_USS_THEODORE_ROOSEVELT_(CVN_71)_underway_-_DPLA_-_11918d1c1f8c8aa489083a5dc10c9b21.jpeg>
+  File: data/motore/navi/nimitz.spr, data/motore/modelli/nimitz.mdl
+- File:A starboard beam view of the nuclear-powered aircraft carrier USS THEODORE ROOSEVELT (CVN 71)
+  underway - DPLA - da85f279b68fda546efbfe8777a1c8e8.jpeg. Department of Defense. American Forces
+  Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_starboard_beam_view_of_the_nuclear-powered_aircraft_carrier_USS_THEODORE_ROOSEVELT_(CVN_71)_underway_-_DPLA_-_da85f279b68fda546efbfe8777a1c8e8.jpeg>
+  File: data/motore/navi/nimitz.spr, data/motore/modelli/nimitz.mdl
+- File:A port bow view of the nuclear-powered aircraft carrier CARL VINSON (CVN-70) underway off the
+  coast of Virginia during sea trials prior to commissioning -. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_port_bow_view_of_the_nuclear-powered_aircraft_carrier_CARL_VINSON_(CVN-70)_underway_off_the_coast_of_Virginia_during_sea_trials_prior_to_commissioning_-_DPLA_-_22115155fc6cccbf34d341502d3d2117.jpeg>
+  File: data/motore/navi/nimitz.spr, data/motore/modelli/nimitz.mdl
+- File:Oscar class submarine 3.jpg. USN, VP9. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AOscar_class_submarine_3.jpg> File:
+  data/motore/immagini/enciclopedia/sottomarino.oscar_foto1.img, data/motore/modelli/oscar.mdl,
+  data/motore/navi/oscar.spr
+- File:Oscar class submarine 1.JPG. U.S. Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AOscar_class_submarine_1.JPG> File:
+  data/motore/immagini/enciclopedia/sottomarino.oscar_foto2.img
+- File:Oscar class submarine 2.JPG. autore non indicato. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AOscar_class_submarine_2.JPG> File:
+  data/motore/navi/oscar.spr, data/motore/modelli/oscar.mdl
+- File:Orion.usnavy.750pix.jpg. SGT. GARY COPPAGE. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Orion.usnavy.750pix.jpg> File:
+  data/motore/immagini/enciclopedia/aereo.p3c_foto1.img, data/motore/modelli/p3c.mdl,
+  data/motore/navi/p3c.spr
+- File:P-3C VP-44 in flight over New England 1980s.JPEG. USN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:P-3C_VP-44_in_flight_over_New_England_1980s.JPEG> File:
+  data/motore/immagini/enciclopedia/aereo.p3c_foto2.img
+- File:US Navy 030130-N-0226M-001 A P-3C Orion patrol aircraft takes off from Naval Air Station
+  North Island.jpg. U.S. Navy photo by Senior Chief Photographer’s Mate Mahlon K. Miller. pubblico
+  dominio.
+  <https://commons.wikimedia.org/wiki/File:US_Navy_030130-N-0226M-001_A_P-3C_Orion_patrol_aircraft_takes_off_from_Naval_Air_Station_North_Island.jpg>
+  File: data/motore/navi/p3c.spr, data/motore/modelli/p3c.mdl
+- File:A left side view of a P-3 Orion aircraft in-flight during exercise Gallant Eagle '88 - DPLA -
+  734a0e2a703aba9df74a1dc291550d8a.jpeg. Department of Defense. American Forces Information Service.
+  Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_left_side_view_of_a_P-3_Orion_aircraft_in-flight_during_exercise_Gallant_Eagle_'88_-_DPLA_-_734a0e2a703aba9df74a1dc291550d8a.jpeg>
+  File: data/motore/navi/p3c.spr, data/motore/modelli/p3c.mdl
+- File:Trawler Atlantic Peace (5).jpg. Tvabutzku1234. CC0.
+  <https://commons.wikimedia.org/wiki/File:Trawler_Atlantic_Peace_(5).jpg> File:
+  data/motore/immagini/enciclopedia/nave.peschereccio_foto1.img,
+  data/motore/modelli/peschereccio.mdl, data/motore/navi/peschereccio.spr
+- File:Trawler Atlantic Peace (1).jpg. Tvabutzku1234. CC0.
+  <https://commons.wikimedia.org/wiki/File:Trawler_Atlantic_Peace_(1).jpg> File:
+  data/motore/immagini/enciclopedia/nave.peschereccio_foto2.img
+- File:Trawler Atlantic Peace (4).jpg. Tvabutzku1234. CC0.
+  <https://commons.wikimedia.org/wiki/File:Trawler_Atlantic_Peace_(4).jpg> File:
+  data/motore/navi/peschereccio.spr, data/motore/modelli/peschereccio.mdl
+- File:MV Sea Isle City 1987.jpg. PH2 Tolliver (USN). pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:MV_Sea_Isle_City_1987.jpg> File:
+  data/motore/immagini/enciclopedia/nave.petroliera_foto1.img, data/motore/modelli/petroliera.mdl,
+  data/motore/navi/petroliera.spr
+- File:S-3A Viking of VS-33 in flight 1985.JPEG. USN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:S-3A_Viking_of_VS-33_in_flight_1985.JPEG> File:
+  data/motore/immagini/enciclopedia/aereo.s3a_foto1.img, data/motore/modelli/s3a.mdl,
+  data/motore/modelli/s3b.mdl, data/motore/navi/s3a.spr, data/motore/navi/s3b.spr
+- File:Lockheed S-3A Viking of VS-31 in flight over the Mediterranean Sea on 21 May 1983
+  (6417630).jpg. U.S. Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Lockheed_S-3A_Viking_of_VS-31_in_flight_over_the_Mediterranean_Sea_on_21_May_1983_(6417630).jpg>
+  File: data/motore/immagini/enciclopedia/aereo.s3a_foto2.img, data/motore/modelli/s3a.mdl,
+  data/motore/modelli/s3b.mdl, data/motore/navi/s3a.spr, data/motore/navi/s3b.spr
+- File:USS Sacramento (AOE-1) underway in 1988.jpg. PH3 John Cross, USN (U.S. DefenseImagery VIRIN
+  DN-SC-93-01179). pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:USS_Sacramento_(AOE-1)_underway_in_1988.jpg> File:
+  data/motore/immagini/enciclopedia/nave.sacramento_foto1.img, data/motore/modelli/sacramento.mdl,
+  data/motore/navi/sacramento.spr
+- File:USS Camden (AOE-2) underway in August 1987.jpeg. Barrett, U.S. Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:USS_Camden_(AOE-2)_underway_in_August_1987.jpeg> File:
+  data/motore/immagini/enciclopedia/nave.sacramento_foto2.img, data/motore/modelli/sacramento.mdl,
+  data/motore/navi/sacramento.spr
+- File:USS Seattle (AOE-3) underway in October 1983.jpeg. PH2 Wujcik, U.S. Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:USS_Seattle_(AOE-3)_underway_in_October_1983.jpeg> File:
+  data/motore/navi/sacramento.spr, data/motore/modelli/sacramento.mdl
+- File:A starboard quarter view of the fast combat support ship USS SEATTLE (AOE 3) underway - DPLA
+  - 87ff539207eb3b6b50766b05d3afa29a.jpeg. Department of Defense. American Forces Information
+  Service. Defense Visual Information Center (NARA, College Park). pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_starboard_quarter_view_of_the_fast_combat_support_ship_USS_SEATTLE_(AOE_3)_underway_-_DPLA_-_87ff539207eb3b6b50766b05d3afa29a.jpeg>
+  File: data/motore/navi/sacramento.spr, data/motore/modelli/sacramento.mdl
+- File:Sikorsky SH-3H Sea King of HS-17 in flight in 1990.jpeg. Don S. Montgomery, USN (Ret.).
+  pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Sikorsky_SH-3H_Sea_King_of_HS-17_in_flight_in_1990.jpeg>
+  File: data/motore/immagini/enciclopedia/elicottero.sh3h_foto1.img, data/motore/modelli/sh3h.mdl,
+  data/motore/navi/sh3h.spr
+- File:SH-3H Sea King of HS-17 in flight over the Med in April 1986.jpeg. PH2 Knepp, USN. pubblico
+  dominio.
+  <https://commons.wikimedia.org/wiki/File:SH-3H_Sea_King_of_HS-17_in_flight_over_the_Med_in_April_1986.jpeg>
+  File: data/motore/immagini/enciclopedia/elicottero.sh3h_foto2.img, data/motore/modelli/sh3h.mdl,
+  data/motore/navi/sh3h.spr
+- File:A right side view of the Navy's first operational Mark III LAMPS (Light Airborne
+  Multi-Purpose System) SH-60B Seahawk helicopter hovering over the flight d. Department of Defense.
+  American Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_right_side_view_of_the_Navy%27s_first_operational_Mark_III_LAMPS_(Light_Airborne_Multi-Purpose_System)_SH-60B_Seahawk_helicopter_hovering_over_the_flight_deck_of_the_guided_missile_-_DPLA_-_addbbdbf36762014f926292090212754.jpeg>
+  File: data/motore/immagini/enciclopedia/elicottero.sh60b_foto1.img, data/motore/modelli/sh60b.mdl,
+  data/motore/modelli/sh60f.mdl, data/motore/navi/sh60b.spr, data/motore/navi/sh60f.spr
+- File:An SH-60B helicopter from Helicopter Light Anti-Submarine Squadron 42 conducts an in-flight
+  helicopter refueling operation with the guided missile frigate. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:An_SH-60B_helicopter_from_Helicopter_Light_Anti-Submarine_Squadron_42_conducts_an_in-flight_helicopter_refueling_operation_with_the_guided_missile_frigate_USS_HALYBURTON_(FFG_40)_du_-_DPLA_-_471f09ca4d65c63d2b69f450396aab0a.jpeg>
+  File: data/motore/immagini/enciclopedia/elicottero.sh60b_foto2.img, data/motore/modelli/sh60b.mdl,
+  data/motore/modelli/sh60f.mdl, data/motore/navi/sh60b.spr, data/motore/navi/sh60f.spr
+- File:An SH-60B Sea Hawk helicopter of Light Helicopter Squadron 38 (HSL-38) detachment assigned to
+  the destroyer USS CONOLLY (DD-979) is shown in-flight just af. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:An_SH-60B_Sea_Hawk_helicopter_of_Light_Helicopter_Squadron_38_(HSL-38)_detachment_assigned_to_the_destroyer_USS_CONOLLY_(DD-979)_is_shown_in-flight_just_after_takeoff_from_the_ship_-_DPLA_-_1de2a5aef8c1a5b18229700972dcb87d.jpeg>
+  File: data/motore/navi/sh60b.spr, data/motore/modelli/sh60b.mdl, data/motore/navi/sh60f.spr,
+  data/motore/modelli/sh60f.mdl
+- File:PH1(AC) Chuck Dutkiewicz ....A Light Helicopter Anti-submarine Squadron 43 (HSL-43) SH-60B
+  Sea Hawk helicopter releases a sonobuoy from its dispenser while. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:PH1(AC)_Chuck_Dutkiewicz_....A_Light_Helicopter_Anti-submarine_Squadron_43_(HSL-43)_SH-60B_Sea_Hawk_helicopter_releases_a_sonobuoy_from_its_dispenser_while_taking_part_in_an_anti-su_-_DPLA_-_5ad37d8d881bb985fd931de583a047eb.jpeg>
+  File: data/motore/navi/sh60b.spr, data/motore/modelli/sh60b.mdl, data/motore/navi/sh60f.spr,
+  data/motore/modelli/sh60f.mdl
+- File:An air-to-air left front view of an SH-60B Seahawk light airborne multi-purpose system (LAMPS
+  III) helicopter from Light Helicopter Anti-submarine Squadron. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:An_air-to-air_left_front_view_of_an_SH-60B_Seahawk_light_airborne_multi-purpose_system_(LAMPS_III)_helicopter_from_Light_Helicopter_Anti-submarine_Squadron_(HSL-41)_-_DPLA_-_d99916165908b6c517b55ced32fb7fc8.jpeg>
+  File: data/motore/navi/sh60b.spr, data/motore/modelli/sh60b.mdl, data/motore/navi/sh60f.spr,
+  data/motore/modelli/sh60f.mdl
+- File:A starboard bow view of the Soviet guided missile cruiser SLAVA underway. (SUBSTANDARD) -
+  DPLA - 4faaa449a2d7f0872400c52d0e581bd5.jpeg. Department of Defense. American Forces Information
+  Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_starboard_bow_view_of_the_Soviet_guided_missile_cruiser_SLAVA_underway._(SUBSTANDARD)_-_DPLA_-_4faaa449a2d7f0872400c52d0e581bd5.jpeg>
+  File: data/motore/immagini/enciclopedia/nave.slava_foto1.img, data/motore/modelli/slava.mdl,
+  data/motore/navi/slava.spr
+- File:Slava-Cruiser-DN-SC-86-03642.JPEG. Camera Operator: PH1 PAUL D. GOODRICH. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Slava-Cruiser-DN-SC-86-03642.JPEG> File:
+  data/motore/immagini/enciclopedia/nave.slava_foto2.img, data/motore/modelli/slava.mdl,
+  data/motore/navi/slava.spr
+- File:ChervonaUkraina1990b.jpg. Photographer's Name: UNKNOWN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:ChervonaUkraina1990b.jpg> File:
+  data/motore/navi/slava.spr, data/motore/modelli/slava.mdl
+- File:ChervonaUkraina1990a.jpg. Photographer's Name: UNKNOWN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:ChervonaUkraina1990a.jpg> File:
+  data/motore/navi/slava.spr, data/motore/modelli/slava.mdl
+- File:Cruiser Chervona Ukrayina 1990.jpg. USN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Cruiser_Chervona_Ukrayina_1990.jpg> File:
+  data/motore/navi/slava.spr, data/motore/modelli/slava.mdl
+- File:MarshalUstinov1991Mayport.jpg. Photographer's Name: Don S. Montgomery. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:MarshalUstinov1991Mayport.jpg> File:
+  data/motore/navi/slava.spr, data/motore/modelli/slava.mdl
+- File:US Navy 330-CFD DN-SC-92-06798 Starboard beam view of USS Leftwich (DD-984) underway.jpg.
+  National Museum of the U.S. Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:US_Navy_330-CFD_DN-SC-92-06798_Starboard_beam_view_of_USS_Leftwich_(DD-984)_underway.jpg>
+  File: data/motore/immagini/enciclopedia/nave.spruance_foto1.img, data/motore/modelli/spruance.mdl,
+  data/motore/navi/spruance.spr
+- File:A port beam view of the destroyer USS CARON (DD 970) underway - DPLA -
+  bdf3dcc61f8b963b7225faa07207bbbd.jpeg. Department of Defense. American Forces Information Service.
+  Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_port_beam_view_of_the_destroyer_USS_CARON_(DD_970)_underway_-_DPLA_-_bdf3dcc61f8b963b7225faa07207bbbd.jpeg>
+  File: data/motore/immagini/enciclopedia/nave.spruance_foto2.img, data/motore/modelli/spruance.mdl,
+  data/motore/navi/spruance.spr
+- File:USS Ingersoll DD-990.jpg. U.S. Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:USS_Ingersoll_DD-990.jpg> File:
+  data/motore/navi/spruance.spr, data/motore/modelli/spruance.mdl
+- File:330-CFD-DN-SC-83-06747 (21910535349).jpg. National Museum of the U.S. Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:330-CFD-DN-SC-83-06747_(21910535349).jpg> File:
+  data/motore/navi/spruance.spr, data/motore/modelli/spruance.mdl
+- File:USS Oldendorf (DD-972) underway.jpg. PHC KRISTOFFERSEN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:USS_Oldendorf_(DD-972)_underway.jpg> File:
+  data/motore/navi/spruance.spr, data/motore/modelli/spruance.mdl
+- File:USS Hawkbill (SSN-666) Pearl Harbor.jpg. Service Depicted:  Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AUSS_Hawkbill_%28SSN-666%29_Pearl_Harbor.jpg> File:
+  data/motore/immagini/enciclopedia/sottomarino.sturgeon_foto1.img,
+  data/motore/modelli/sturgeon.mdl, data/motore/navi/sturgeon.spr
+- File:A port quarter view of a Sturgeon class nuclear-powered attack submarine departing the bay
+  for the open sea as seen from the USS GUADALCANAL (not shown) wh. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AA_port_quarter_view_of_a_Sturgeon_class_nuclear-powered_attack_submarine_departing_the_bay_for_the_open_sea_as_seen_from_the_USS_GUADALCANAL_%28not_shown%29_which_is_also_underway_for_t_-_DPLA_-_825f019e2fc53e26a86cdc7def6704d1.jpeg>
+  File: data/motore/immagini/enciclopedia/sottomarino.sturgeon_foto2.img,
+  data/motore/modelli/sturgeon.mdl, data/motore/navi/sturgeon.spr
+- File:23 0055787 Convair Negative Image - Tomahawk missile in flight (53938034541).jpg. San Diego
+  Air &amp; Space Museum Archives. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3A23_0055787_Convair_Negative_Image_-_Tomahawk_missile_in_flight_%2853938034541%29.jpg>
+  File: data/motore/navi/tomahawk.spr
+- File:23 0055791 Convair Negative Image - Tomahawk missile in flight (53938489030).jpg. San Diego
+  Air &amp; Space Museum Archives. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3A23_0055791_Convair_Negative_Image_-_Tomahawk_missile_in_flight_%2853938489030%29.jpg>
+  File: data/motore/navi/tomahawk.spr
+- File:US Navy 110520-N-VQ827-895 The Royal Navy Trafalgar-class submarine HMS Torbay (S90) is
+  underway in formation with the Military Sealift Command fle.jpg. U.S. Navy photo by Mass
+  Communication Specialist 3rd Class Nicholas Hall. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AUS_Navy_110520-N-VQ827-895_The_Royal_Navy_Trafalgar-class_submarine_HMS_Torbay_%28S90%29_is_underway_in_formation_with_the_Military_Sealift_Command_fle.jpg>
+  File: data/motore/immagini/enciclopedia/sottomarino.trafalgar_foto1.img,
+  data/motore/modelli/trafalgar.mdl, data/motore/navi/trafalgar.spr
+- File:Royal Navy Trafalgar-class submarine HMS Trenchant (2).jpg. U.S. Navy photo by Mass
+  Communication Specialist Seaman Zachary Wickline. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ARoyal_Navy_Trafalgar-class_submarine_HMS_Trenchant_%282%29.jpg>
+  File: data/motore/immagini/enciclopedia/sottomarino.trafalgar_foto2.img,
+  data/motore/modelli/trafalgar.mdl, data/motore/navi/trafalgar.spr
+- File:US Navy 110520-N-VQ827-880 The Royal Navy Trafalgar-class submarine HMS Torbay (S90) is
+  underway in formation with the George H.W. Bush Carrier Str.jpg. U.S. Navy photo by Mass
+  Communication Specialist 3rd Class Nicholas Hall. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AUS_Navy_110520-N-VQ827-880_The_Royal_Navy_Trafalgar-class_submarine_HMS_Torbay_%28S90%29_is_underway_in_formation_with_the_George_H.W._Bush_Carrier_Str.jpg>
+  File: data/motore/navi/trafalgar.spr, data/motore/modelli/trafalgar.mdl
+- File:F-15A 48th FIS intercepting Bear F 1987.jpg. USAF. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:F-15A_48th_FIS_intercepting_Bear_F_1987.jpg> File:
+  data/motore/immagini/enciclopedia/aereo.tu142_foto1.img, data/motore/modelli/tu142.mdl,
+  data/motore/navi/tu142.spr
+- File:Tu-142M-1982-DN-SN-82-10842-DPLS.jpg. Photographer's Name: Unknown. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Tu-142M-1982-DN-SN-82-10842-DPLS.jpg> File:
+  data/motore/immagini/enciclopedia/aereo.tu142_foto2.img, data/motore/modelli/tu142.mdl,
+  data/motore/navi/tu142.spr
+- File:Tu-95 Bear F with open weapons bay 1987.JPEG. USN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:Tu-95_Bear_F_with_open_weapons_bay_1987.JPEG> File:
+  data/motore/navi/tu142.spr, data/motore/modelli/tu142.mdl
+- File:Akula (Typhoon) class submarine DD-ST-85-06625.jpg. [1]. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AAkula_%28Typhoon%29_class_submarine_DD-ST-85-06625.jpg>
+  File: data/motore/immagini/enciclopedia/sottomarino.typhoon_foto1.img,
+  data/motore/modelli/typhoon.mdl, data/motore/navi/typhoon.spr
+- File:A stern view of Soviet Typhoon class nuclear-powered fleet ballistic missile submarine
+  underway - DPLA - 205ee28f728020ce2e31a8673f466985.jpeg. Department of Defense. American Forces
+  Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AA_stern_view_of_Soviet_Typhoon_class_nuclear-powered_fleet_ballistic_missile_submarine_underway_-_DPLA_-_205ee28f728020ce2e31a8673f466985.jpeg>
+  File: data/motore/immagini/enciclopedia/sottomarino.typhoon_foto2.img,
+  data/motore/modelli/typhoon.mdl, data/motore/navi/typhoon.spr
+- File:Russian Typhoon-class submarine.jpg. DTRA photo. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ARussian_Typhoon-class_submarine.jpg> File:
+  data/motore/navi/typhoon.spr, data/motore/modelli/typhoon.mdl
+- File:Disabled project 671 submarine 1983.jpg. LCDR CARPENTER. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ADisabled_project_671_submarine_1983.jpg> File:
+  data/motore/immagini/enciclopedia/sottomarino.victor3_foto1.img, data/motore/modelli/victor3.mdl,
+  data/motore/navi/victor3.spr
+- File:Victor III class submarine.jpg. autore non indicato. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AVictor_III_class_submarine.jpg> File:
+  data/motore/immagini/enciclopedia/sottomarino.victor3_foto2.img
+- File:A port beam view of the guided missile frigate USS NICHOLAS (FFG 47) underway - DPLA -
+  42a831060da1fe7e805c65ac7202a866.jpeg. Department of Defense. American Forces Information Service.
+  Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_port_beam_view_of_the_guided_missile_frigate_USS_NICHOLAS_(FFG_47)_underway_-_DPLA_-_42a831060da1fe7e805c65ac7202a866.jpeg>
+  File: data/motore/navi/perry.spr, data/motore/modelli/perry.mdl
+- File:A bow view of the guided missile frigate SIMPSON (FFG 56) underway off the coast of New
+  England prior to its commissioning - DPLA - 56e300e9537b49cca946f41. Department of Defense.
+  American Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_bow_view_of_the_guided_missile_frigate_SIMPSON_(FFG_56)_underway_off_the_coast_of_New_England_prior_to_its_commissioning_-_DPLA_-_56e300e9537b49cca946f416175d4845.jpeg>
+  File: data/motore/navi/perry.spr, data/motore/modelli/perry.mdl
+- File:A port quarter view of the guided missile frigate ELROD (FFG 55) underway off the coast of
+  New England prior to its commissioning - DPLA - 18734f1a25373448. Department of Defense. American
+  Forces Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File:A_port_quarter_view_of_the_guided_missile_frigate_ELROD_(FFG_55)_underway_off_the_coast_of_New_England_prior_to_its_commissioning_-_DPLA_-_18734f1a253734482c608db606c68175.jpeg>
+  File: data/motore/navi/perry.spr, data/motore/modelli/perry.mdl
+- File:French tuna purse seiner.jpg. Jose Cort. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AFrench_tuna_purse_seiner.jpg> File:
+  data/motore/navi/cianciolo.spr, data/motore/modelli/cianciolo.mdl
+- File:Delta-III nuclear-powered ballistic missle submarine.jpg. ?. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ADelta-III_nuclear-powered_ballistic_missle_submarine.jpg>
+  File: data/motore/navi/delta3.spr, data/motore/modelli/delta3.mdl
+- File:MPK-52-1983.jpg. Photographer's Name: Unknown. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AMPK-52-1983.jpg> File: data/motore/navi/grisha3.spr,
+  data/motore/modelli/grisha3.mdl
+- File:Hauk class MTB LOM.JPG. originally User:Inge edited by WerWil 17:35, 18 April 2007 (UTC).
+  pubblico dominio. <https://commons.wikimedia.org/wiki/File%3AHauk_class_MTB_LOM.JPG> File:
+  data/motore/navi/hauk.spr, data/motore/modelli/hauk.mdl
+- File:An aerial starboard beam view of the aircraft carrier USS KITTY HAWK (CV 63) underway - DPLA
+  - 6f603b2a3c6b7844547858feeafc59b2.jpg. Department of Defense. American Forces Information
+  Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AAn_aerial_starboard_beam_view_of_the_aircraft_carrier_USS_KITTY_HAWK_%28CV_63%29_underway_-_DPLA_-_6f603b2a3c6b7844547858feeafc59b2.jpg>
+  File: data/motore/navi/kitty_hawk.spr, data/motore/modelli/kitty_hawk.mdl
+- File:USS Knox (FF-1052) underway at sea on 9 December 1981 (6349375).jpeg. PHCS Steven Harris,
+  U.S. Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AUSS_Knox_%28FF-1052%29_underway_at_sea_on_9_December_1981_%286349375%29.jpeg>
+  File: data/motore/navi/knox.spr, data/motore/modelli/knox.mdl
+- File:SeaLynxHAS3 CV-59 1988.jpeg. PH1 Caffaro, USN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ASeaLynxHAS3_CV-59_1988.jpeg> File:
+  data/motore/navi/lynx.spr, data/motore/modelli/lynx.mdl
+- File:HMS Näcken original appearance.png. Marcusroos. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AHMS_N%C3%A4cken_original_appearance.png> File:
+  data/motore/navi/nacken.spr, data/motore/modelli/nacken.mdl
+- File:A port beam view of the nuclear-powered strategic missile submarine USS OHIO (SSBN-726) as
+  the large harbor tugs MANHATTAN (YTB-779) and OTTUMWA (YTB-761). Department of Defense. American
+  Forces Information. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AA_port_beam_view_of_the_nuclear-powered_strategic_missile_submarine_USS_OHIO_%28SSBN-726%29_as_the_large_harbor_tugs_MANHATTAN_%28YTB-779%29_and_OTTUMWA_%28YTB-761%29_escort_it_through_the_Hood_-_DPLA_-_d2a8b26a0d3ae87a7e6924db6ecabf65.jpeg>
+  File: data/motore/navi/ohio.spr, data/motore/modelli/ohio.mdl
+- File:An aerial port quarter view of the nuclear-powered strategic missile submarine USS OHIO
+  (SSBN-726) as the large harbor tugs MANHATTAN (YTB-779) and OTTUMWA. Department of Defense.
+  American Forces Information. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AAn_aerial_port_quarter_view_of_the_nuclear-powered_strategic_missile_submarine_USS_OHIO_%28SSBN-726%29_as_the_large_harbor_tugs_MANHATTAN_%28YTB-779%29_and_OTTUMWA_%28YTB-761%29_assist_in_docki_-_DPLA_-_77650abe51d6f373b197267b678dae70.jpeg>
+  File: data/motore/navi/ohio.spr, data/motore/modelli/ohio.mdl
+- File:Frigate knm trondheim.jpg. OS2 John Bouvia, USN. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AFrigate_knm_trondheim.jpg> File:
+  data/motore/navi/oslo.spr, data/motore/modelli/oslo.mdl
+- File:Tanker Pegasus.jpg. Tvabutzku1234. CC0.
+  <https://commons.wikimedia.org/wiki/File%3ATanker_Pegasus.jpg> File:
+  data/motore/navi/petroliera_costiera.spr, data/motore/modelli/petroliera_costiera.mdl
+- File:USNS Powhatan port side.jpg. Don S. Montgomery. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AUSNS_Powhatan_port_side.jpg> File:
+  data/motore/navi/rimorchiatore.spr, data/motore/modelli/rimorchiatore.mdl
+- File:KAPITAN DRANITSYN Icebreaker.jpg (raddrizzata). Mike Dunn, NC State Museum of Natural
+  Sciences. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AKAPITAN_DRANITSYN_Icebreaker.jpg> File:
+  data/motore/navi/rompighiaccio.spr, data/motore/modelli/rompighiaccio.mdl
+- File:Kaman SH-2F Seasprite of HSL-33 in flight on 18 April 1988 (6430152).jpg. PH2 Harnar, U.S.
+  Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AKaman_SH-2F_Seasprite_of_HSL-33_in_flight_on_18_April_1988_%286430152%29.jpg>
+  File: data/motore/navi/sh2f.spr, data/motore/modelli/sh2f.mdl
+- File:Sierra class submarine.jpg. ?. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3ASierra_class_submarine.jpg> File:
+  data/motore/navi/sierra.spr, data/motore/modelli/sierra.mdl
+- File:A port view of the guided missile cruiser USS TICONDEROGA (CG-47) underway on the Atlantic
+  Fleet Weapons Training Facility, Puerto Rico, prior to a missile. Department of Defense. American
+  Forces Information. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AA_port_view_of_the_guided_missile_cruiser_USS_TICONDEROGA_%28CG-47%29_underway_on_the_Atlantic_Fleet_Weapons_Training_Facility%2C_Puerto_Rico%2C_prior_to_a_missile_launch_-_DPLA_-_e7ab4fa4f1b4ed775625721bed1d22ba.jpeg>
+  File: data/motore/navi/ticonderoga.spr, data/motore/modelli/ticonderoga.mdl
+- File:Ferry PRIDE OF DOVER, Calais (10509082664).jpg. Gary Todd from Xinzheng, China. CC0.
+  <https://commons.wikimedia.org/wiki/File%3AFerry_PRIDE_OF_DOVER%2C_Calais_%2810509082664%29.jpg>
+  File: data/motore/navi/traghetto.spr, data/motore/modelli/traghetto.mdl
+- File:A starboard bow view of the British frigate HMS BROADSWORD (F-88) underway
+  (330-CFD-DN-SC-87-01110).jpg. Unknown author. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AA_starboard_bow_view_of_the_British_frigate_HMS_BROADSWORD_%28F-88%29_underway_%28330-CFD-DN-SC-87-01110%29.jpg>
+  File: data/motore/navi/type22.spr, data/motore/modelli/type22.mdl
+- File:A starboard beam view of the British frigate HMS BEAVER (F 93) entering port during Exercise
+  RIMPAC '86 - DPLA - 397f244859eaba6b9adeb6c9b8b1d259.jpeg. Department of Defense. American Forces
+  Information Service. Defense Visual Information Center. 1994. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AA_starboard_beam_view_of_the_British_frigate_HMS_BEAVER_%28F_93%29_entering_port_during_Exercise_RIMPAC_%2786_-_DPLA_-_397f244859eaba6b9adeb6c9b8b1d259.jpeg>
+  File: data/motore/navi/type22b2.spr, data/motore/modelli/type22b2.mdl
+- File:AdmiralKharlamov1993.jpg. Photographer's Name: Unknown. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AAdmiralKharlamov1993.jpg> File:
+  data/motore/navi/udaloy.spr, data/motore/modelli/udaloy.mdl
+- File:Ugra-class.jpg. US Navy. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AUgra-class.jpg> File: data/motore/navi/ugra.spr,
+  data/motore/modelli/ugra.mdl
+- File:Victor I class submarine.jpg. ?. pubblico dominio.
+  <https://commons.wikimedia.org/wiki/File%3AVictor_I_class_submarine.jpg> File:
+  data/motore/navi/victor1.spr, data/motore/modelli/victor1.mdl
+
+3.3 Suoni
+
+- Campione «aereo_il38» (aereo_il38)
+  Autore: "Antonov An-12 taking off from Malta International Airport" di Joluqa (YouTube
+    blzV1AvMPoY), CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/), via Wikimedia Commons,
+    https://commons.wikimedia.org/wiki/File:Antonov_An-12_taking_off_from_Malta_International_Airport.ogv.
+    Modificato.
+  Licenza: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+  Fonte:
+    https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b4/Antonov_An-12_taking_off_from_Malta_International_Airport.ogv/Antonov_An-12_taking_off_from_Malta_International_Airport.ogv.240p.vp9.webm
+  Modificato: tessitura della libreria di campioni (R4/R5), sbiancata e ricolorata dal modello
+  An-12 con gli AI-20M dell'Il-38; credito come chiede la licenza
+  File:
+    data/suoni/campioni/aereo_il38.wav
+
+- Campione «aereo_tu142» (aereo_tu142)
+  Autore: Ministry of Defence of the Russian Federation (mil.ru), CC BY 4.0
+    (https://creativecommons.org/licenses/by/4.0/), via Wikimedia Commons,
+    https://commons.wikimedia.org/wiki/File:Полеты_Ту-95МС_в_условиях_низких_температур.webm.
+    Modificato: estratto audio, sbiancato e ricolorato.
+  Licenza: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Fonte:
+    https://upload.wikimedia.org/wikipedia/commons/5/57/%D0%9F%D0%BE%D0%BB%D0%B5%D1%82%D1%8B_%D0%A2%D1%83-95%D0%9C%D0%A1_%D0%B2_%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85_%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D1%85_%D1%82%D0%B5%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80.webm
+  Modificato: tessitura della libreria di campioni (R4/R5), sbiancata e ricolorata dal modello
+  Tu-95MS a Engels (NK-12, eliche controrotanti); credito come chiede la licenza
+  File:
+    data/suoni/campioni/aereo_tu142.wav
+
+- Campione «elicottero_sh60» (elicottero_sh60)
+  Autore: "JMSDF SH-60J Sapporo Airshow Okadama Airport" di RUNWAY FUN Aviation & Military & plus
+    (YouTube zCGzVZeXj6s), CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/), via Wikimedia
+    Commons,
+    https://commons.wikimedia.org/wiki/File:JMSDF_SH-60J_Sapporo_Airshow_Okadama_Airport.ogv.
+    Modificato.
+  Licenza: CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
+  Fonte:
+    https://upload.wikimedia.org/wikipedia/commons/transcoded/8/85/JMSDF_SH-60J_Sapporo_Airshow_Okadama_Airport.ogv/JMSDF_SH-60J_Sapporo_Airshow_Okadama_Airport.ogv.240p.vp9.webm
+  Modificato: tessitura della libreria di campioni (R4/R5), sbiancata e ricolorata dal modello
+  SH-60J in arrivo; credito come chiede la licenza
+  File:
+    data/suoni/campioni/elicottero_sh60.wav
+
+- Campione «elicottero_sh60_2» (elicottero_sh60)
+  Autore: "BlackhawksLilburnGeorgia" di BeeboMan, CC BY 4.0, via Wikimedia Commons,
+    https://commons.wikimedia.org/wiki/File:BlackhawksLilburnGeorgia.webm. Modificato.
+  Licenza: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Fonte: https://upload.wikimedia.org/wikipedia/commons/7/74/BlackhawksLilburnGeorgia.webm
+  Modificato: tessitura della libreria di campioni (R4/R5), sbiancata e ricolorata dal modello
+  quattro UH-60 in passaggio; credito come chiede la licenza
+  File:
+    data/suoni/campioni/elicottero_sh60_2.wav
+
+- Campione «foca_barbata» (foca_barbata)
+  Autore: Registrazione: Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research
+    (AWI), 2022, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), dal progetto Polar Sounds
+    (AWI, HIFMB, Cities and Memory),
+    https://audioboom.com/posts/8232592-bearded-seal-erignathus-barbatus. Modificato: sbiancato e
+    ricolorato dal motore del gioco.
+  Licenza: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Fonte: https://audioboom.com/posts/8232592.mp3
+  Modificato: tessitura della libreria di campioni (R4/R5), sbiancata e ricolorata dal modello
+  trilli discendenti sotto la banchisa artica; credito come chiede la licenza
+  File:
+    data/suoni/campioni/foca_barbata.wav
+
+- Campione «fessurazione_ghiaccio» (fessurazione_ghiaccio)
+  Autore: Registrazione: Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research
+    (AWI), 2022, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), dal progetto Polar Sounds
+    (AWI, HIFMB, Cities and Memory),
+    https://audioboom.com/posts/8230903-rubbing-sea-ice-recording-2. Modificato: sbiancato e
+    ricolorato dal motore del gioco.
+  Licenza: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Fonte: https://audioboom.com/posts/8230903.mp3
+  Modificato: tessitura della libreria di campioni (R4/R5), sbiancata e ricolorata dal modello
+  lastroni che si sfregano e si piegano (pressione), Oceano Australe; credito come chiede la licenza
+  File:
+    data/suoni/campioni/fessurazione_ghiaccio.wav
+
+- Campione «fessurazione_ghiaccio_2» (fessurazione_ghiaccio)
+  Autore: Registrazione: Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research
+    (AWI), 2022, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), dal progetto Polar Sounds
+    (AWI, HIFMB, Cities and Memory),
+    https://audioboom.com/posts/8231522-singing-sea-ice-recording-1. Modificato: sbiancato e
+    ricolorato dal motore del gioco.
+  Licenza: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Fonte: https://audioboom.com/posts/8231522.mp3
+  Modificato: tessitura della libreria di campioni (R4/R5), sbiancata e ricolorata dal modello
+  «singing sea ice», Oceano Australe; credito come chiede la licenza
+  File:
+    data/suoni/campioni/fessurazione_ghiaccio_2.wav
+
+- Effetto «posti_combattimento_gong» (il segnale del general alarm sul 1MC di una nave USN, senza
+  voce)
+  Autore: lancelindley (freesound.org)
+  Licenza: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Fonte: https://freesound.org/people/lancelindley/sounds/423949/
+  Modificato: effetti di bordo e della sala radio
+  solo il tratto 18-32,5 s: il segnale a 391 Hz senza voce (la voce del file dice «this is a drill»)
+  File:
+    data/suoni/effetti/posti_combattimento_gong.wav
+
+- Effetto «cw_fading» (CW vero con fading, WebSDR)
+  Autore: klankbeeld (freesound.org)
+  Licenza: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Fonte: https://freesound.org/people/klankbeeld/sounds/554164/
+  Modificato: effetti di bordo e della sala radio
+  il primo minuto
+  File:
+    data/suoni/effetti/cw_fading.wav
+
+- Effetto «telescrivente» (telescrivente Lorenz Lo 133 che stampa)
+  Autore: Work With Sounds / Konrad Gutkowski
+  Licenza: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Fonte: https://commons.wikimedia.org/wiki/File:WWS_Teleprinterautomaticprinting.ogg
+  Modificato: effetti di bordo e della sala radio
+  File:
+    data/suoni/effetti/telescrivente.wav
+
+- Effetto «telescrivente_strappo» (telescrivente con lo strappo della carta)
+  Autore: Halleck (freesound.org)
+  Licenza: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Fonte: https://freesound.org/people/Halleck/sounds/19488/
+  Modificato: effetti di bordo e della sala radio
+  File:
+    data/suoni/effetti/telescrivente_strappo.wav
+
+- Effetto «vlf_naturale» (VLF naturale: sferics e chorus, senza elaborazione)
+  Autore: awg (freesound.org)
+  Licenza: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Fonte: https://freesound.org/people/awg/sounds/395575/
+  Modificato: effetti di bordo e della sala radio
+  un minuto, da 1:00 a 2:00 (il file intero e' di 9:37)
+  File:
+    data/suoni/effetti/vlf_naturale.wav
+
+- Effetto «segnali_sonar» (segnali sonar veri, dal CD «Schall im Meer» del FWG della Bundeswehr
+  (2000))
+  Autore: L. Ginzkey (Wikimedia Commons)
+  Licenza: CC BY-SA 2.5 (https://creativecommons.org/licenses/by-sa/2.5/)
+  Fonte: https://commons.wikimedia.org/wiki/File:Sonar_Signals.ogg
+  Modificato: effetti di bordo e della sala radio
+  CC BY-SA: resta un file a se', non si fonde con altro
+  File:
+    data/suoni/effetti/segnali_sonar.wav
+
+Pubblico dominio e CC0 (47 opere): nessun obbligo, si citano per correttezza.
+
+- Campione «balenottera_comune» (balenottera_comune). NOAA Office of National Marine Sanctuaries and
+  U.S. Navy. 2021. SanctSound Raw Passive Acoustic Data. NOAA National Centers for Environmental
+  Information. https://doi.org/10.25921/saca-sp25. pubblico dominio (17 U.S.C. §105).
+  <https://storage.googleapis.com/noaa-passive-bioacoustic/sanctsound/products/sound_clips/sb03/sanctsound_sb03_05_sound_clips/data/SanctSound_SB03_05_finwhale_20190923T074930Z.wav>
+  File: data/suoni/campioni/balenottera_comune.wav
+- Campione «megattera» (megattera). National Park Service, Glacier Bay National Park & Preserve
+  (NPS), https://www.nps.gov/glba/learn/nature/soundclips.htm. pubblico dominio (17 U.S.C. §105).
+  <https://www.nps.gov/nps-audiovideo/audiovideo/cde82ded-68b8-4c67-b6c3-9ab190908357.mp3> File:
+  data/suoni/campioni/megattera.wav
+- Campione «orca» (orca). National Park Service, Glacier Bay National Park & Preserve (C. Gabriele /
+  NPS), https://www.nps.gov/glba/learn/nature/soundclips.htm. pubblico dominio (17 U.S.C. §105).
+  <https://www.nps.gov/nps-audiovideo/audiovideo/e60488c2-30fb-414b-bc9f-ee16f886a897.mp3> File:
+  data/suoni/campioni/orca.wav
+- Campione «delfini» (delfini). NOAA Office of National Marine Sanctuaries and U.S. Navy. 2021.
+  SanctSound Raw Passive Acoustic Data. NOAA National Centers for Environmental Information.
+  https://doi.org/10.25921/saca-sp25. pubblico dominio (17 U.S.C. §105).
+  <https://storage.googleapis.com/noaa-passive-bioacoustic/sanctsound/products/sound_clips/ci04/sanctsound_ci04_05_sound_clips/data/SanctSound_CI04_05_dolphins_20200921T232749Z.wav>
+  File: data/suoni/campioni/delfini.wav
+- Campione «merluzzo» (merluzzo). NOAA Office of National Marine Sanctuaries and U.S. Navy. 2021.
+  SanctSound Raw Passive Acoustic Data. NOAA National Centers for Environmental Information.
+  https://doi.org/10.25921/saca-sp25. pubblico dominio (17 U.S.C. §105).
+  <https://storage.googleapis.com/noaa-passive-bioacoustic/sanctsound/products/sound_clips/sb01/sanctsound_sb01_01_sound_clips/data/SanctSound_SB01_01_atlanticcod_20181113T024154Z.wav>
+  File: data/suoni/campioni/merluzzo.wav
+- Campione «eglefino» (eglefino). NOAA Fisheries, Northeast Fisheries Science Center, Passive
+  Acoustics Group,
+  https://www.fisheries.noaa.gov/new-england-mid-atlantic/science-data/fish-and-invertebrate-acoustics.
+  pubblico dominio (17 U.S.C. §105).
+  <https://www.fisheries.noaa.gov/s3/2023-04/Meae-knock-NOAA-PAGroup-01-haddock-clip.mp3> File:
+  data/suoni/campioni/eglefino.wav
+- Campione «coro_pesci» (coro_pesci). NOAA Office of National Marine Sanctuaries and U.S. Navy.
+  2021. SanctSound Raw Passive Acoustic Data. NOAA National Centers for Environmental Information.
+  https://doi.org/10.25921/saca-sp25. pubblico dominio (17 U.S.C. §105).
+  <https://storage.googleapis.com/noaa-passive-bioacoustic/sanctsound/products/sound_clips/gr01/sanctsound_gr01_02_sound_clips/data/SanctSound_GR01_02_fishchorus_20190902T004059Z.wav>
+  File: data/suoni/campioni/coro_pesci.wav
+- Campione «gamberi» (gamberi). NOAA Office of National Marine Sanctuaries and U.S. Navy. 2021.
+  SanctSound Raw Passive Acoustic Data. NOAA National Centers for Environmental Information.
+  https://doi.org/10.25921/saca-sp25. pubblico dominio (17 U.S.C. §105).
+  <https://storage.googleapis.com/noaa-passive-bioacoustic/sanctsound/products/sound_clips/ci01/sanctsound_ci01_03_sound_clips/data/SanctSound_CI01_03_snappingshrimp_20190906T230827Z.wav>
+  File: data/suoni/campioni/gamberi.wav
+- Campione «t_phase_tettonico» (t_phase_tettonico). NOAA PMEL Acoustics Program,
+  https://www.pmel.noaa.gov/acoustics/sounds_seismic.html. pubblico dominio (17 U.S.C. §105).
+  <https://www.pmel.noaa.gov/acoustics/pioneer/sounds/pio_eq_244_1159.wav> File:
+  data/suoni/campioni/t_phase_tettonico.wav
+- Campione «t_phase_vulcanico» (t_phase_vulcanico). NOAA PMEL Acoustics Program,
+  https://www.pmel.noaa.gov/acoustics/sounds_seismic.html. pubblico dominio (17 U.S.C. §105).
+  <https://www.pmel.noaa.gov/acoustics/sounds/whistle16x.wav> File:
+  data/suoni/campioni/t_phase_vulcanico.wav
+- Campione «distacco_iceberg» (distacco_iceberg). NOAA PMEL Acoustics Program,
+  https://www.pmel.noaa.gov/acoustics/sounds_cryogenic.html. pubblico dominio (17 U.S.C. §105).
+  <https://www.pmel.noaa.gov/acoustics/sounds/A53JD33Calving_3x.wav> File:
+  data/suoni/campioni/distacco_iceberg.wav
+- Campione «tremore_iceberg» (tremore_iceberg). NOAA PMEL Acoustics Program,
+  https://www.pmel.noaa.gov/acoustics/sounds_cryogenic.html. pubblico dominio (17 U.S.C. §105).
+  <https://www.pmel.noaa.gov/acoustics/sounds/HarmonicTremor2006_215_09_20UsedOnBloopWebsite.wav>
+  File: data/suoni/campioni/tremore_iceberg.wav
+- Campione «incaglio_iceberg» (incaglio_iceberg). NOAA PMEL Acoustics Program,
+  https://www.pmel.noaa.gov/acoustics/sounds_cryogenic.html. pubblico dominio (17 U.S.C. §105).
+  <https://www.pmel.noaa.gov/acoustics/sounds/noise97139.wav> File:
+  data/suoni/campioni/incaglio_iceberg.wav
+- Campione «fusione_ghiaccio» (fusione_ghiaccio). National Park Service, Glacier Bay National Park &
+  Preserve (H. Lentfer / NPS), https://www.nps.gov/glba/learn/nature/soundclips.htm. pubblico
+  dominio (17 U.S.C. §105).
+  <https://www.nps.gov/nps-audiovideo/legacy/mp3/akr/avElement/glba-seltzer.mp3> File:
+  data/suoni/campioni/fusione_ghiaccio.wav
+- Campione «pioggia» (pioggia). NOAA Office of National Marine Sanctuaries and U.S. Navy. 2021.
+  SanctSound Raw Passive Acoustic Data. NOAA National Centers for Environmental Information.
+  https://doi.org/10.25921/saca-sp25. pubblico dominio (17 U.S.C. §105).
+  <https://storage.googleapis.com/noaa-passive-bioacoustic/sanctsound/products/sound_clips/mb01/sanctsound_mb01_05_sound_clips/data/SanctSound_MB01_05_rain_20200816T093204Z_28dBgain.wav>
+  File: data/suoni/campioni/pioggia.wav
+- Campione «vento» (vento). NOAA Office of National Marine Sanctuaries and U.S. Navy. 2021.
+  SanctSound Raw Passive Acoustic Data. NOAA National Centers for Environmental Information.
+  https://doi.org/10.25921/saca-sp25. pubblico dominio (17 U.S.C. §105).
+  <https://storage.googleapis.com/noaa-passive-bioacoustic/sanctsound/products/sound_clips/ci02/sanctsound_ci02_03_sound_clips/data/SanctSound_CI02_03_wind_20191026T155434Z.wav>
+  File: data/suoni/campioni/vento.wav
+- Campione «mercantile» (mercantile). NOAA Office of National Marine Sanctuaries and U.S. Navy.
+  2021. SanctSound Raw Passive Acoustic Data. NOAA National Centers for Environmental Information.
+  https://doi.org/10.25921/saca-sp25. pubblico dominio (17 U.S.C. §105).
+  <https://storage.googleapis.com/noaa-passive-bioacoustic/sanctsound/products/sound_clips/ci05/sanctsound_ci05_03_sound_clips/data/SanctSound_CI05_03_largeship_20190925T135956Z.wav>
+  File: data/suoni/campioni/mercantile.wav
+- Campione «mercantile_2» (mercantile). NOAA Office of National Marine Sanctuaries and U.S. Navy.
+  2021. SanctSound Raw Passive Acoustic Data. NOAA National Centers for Environmental Information.
+  https://doi.org/10.25921/saca-sp25. pubblico dominio (17 U.S.C. §105).
+  <https://storage.googleapis.com/noaa-passive-bioacoustic/sanctsound/products/sound_clips/oc02/sanctsound_oc02_01_sound_clips/data/SanctSound_OC02_01_ship_20190419T233040Z.wav>
+  File: data/suoni/campioni/mercantile_2.wav
+- Campione «mercantile_3» (mercantile). National Park Service, Glacier Bay National Park & Preserve
+  (C. Gabriele / NPS), https://www.nps.gov/glba/learn/nature/soundclips.htm. pubblico dominio (17
+  U.S.C. §105).
+  <https://www.nps.gov/nps-audiovideo/audiovideo/7dd6d0fe-831f-4a11-9837-1b4f629d429b.mp3> File:
+  data/suoni/campioni/mercantile_3.wav
+- Campione «peschereccio_piccolo» (peschereccio_piccolo). National Park Service, Glacier Bay
+  National Park & Preserve (C. Gabriele / NPS),
+  https://www.nps.gov/glba/learn/nature/soundclips.htm. pubblico dominio (17 U.S.C. §105).
+  <https://www.nps.gov/nps-audiovideo/audiovideo/cb678cb6-5627-4544-9fbb-c8e3884f0827.mp3> File:
+  data/suoni/campioni/peschereccio_piccolo.wav
+- Campione «fuoribordo» (fuoribordo). National Park Service, Glacier Bay National Park & Preserve
+  (C. Gabriele / NPS), https://www.nps.gov/glba/learn/nature/soundclips.htm. pubblico dominio (17
+  U.S.C. §105).
+  <https://www.nps.gov/nps-audiovideo/audiovideo/39f7562b-1d7a-4fe4-a969-6be98e7d4886.mp3> File:
+  data/suoni/campioni/fuoribordo.wav
+- Campione «airgun» (airgun). NOAA PMEL Acoustics Program,
+  https://www.pmel.noaa.gov/acoustics/sounds_enviro.html. pubblico dominio (17 U.S.C. §105).
+  <https://www.pmel.noaa.gov/acoustics/env-noise/sounds/airguns_00_03_05_marCE-Airguns-10x.wav>
+  File: data/suoni/campioni/airgun.wav
+- Campione «ecoscandaglio_profondo» (ecoscandaglio_profondo). NOAA Office of National Marine
+  Sanctuaries and U.S. Navy. 2021. SanctSound Raw Passive Acoustic Data. NOAA National Centers for
+  Environmental Information. https://doi.org/10.25921/saca-sp25. pubblico dominio (17 U.S.C. §105).
+  <https://storage.googleapis.com/noaa-passive-bioacoustic/sanctsound/products/sound_clips/ci05/sanctsound_ci05_03_sound_clips/data/SanctSound_CI05_03_echosounder_20191003T132915Z_36dBgain.wav>
+  File: data/suoni/campioni/ecoscandaglio_profondo.wav
+- Campione «esplosione» (esplosione). NOAA Office of National Marine Sanctuaries and U.S. Navy.
+  2021. SanctSound Raw Passive Acoustic Data. NOAA National Centers for Environmental Information.
+  https://doi.org/10.25921/saca-sp25. pubblico dominio (17 U.S.C. §105).
+  <https://storage.googleapis.com/noaa-passive-bioacoustic/sanctsound/products/sound_clips/fk03/sanctsound_fk03_01_sound_clips/data/SanctSound_FK03_01_explosion_20190131T220530Z.wav>
+  File: data/suoni/campioni/esplosione.wav
+- Campione «aereo_p3c» (aereo_p3c). U.S. Marine Corps video by SSgt Oscar L. Olive IV, via DVIDS /
+  Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Fat_Albert_low_pass.ogv. pubblico
+  dominio (17 U.S.C. §105).
+  <https://upload.wikimedia.org/wikipedia/commons/9/93/Fat_Albert_low_pass.ogv> File:
+  data/suoni/campioni/aereo_p3c.wav
+- Campione «aereo_p3c_2» (aereo_p3c). John Veit (CC0), via Wikimedia Commons,
+  https://commons.wikimedia.org/wiki/File:US_Navy_Lockheed_WP-3D_Orion_recon_aircraft.ogv. CC0.
+  <https://upload.wikimedia.org/wikipedia/commons/2/2a/US_Navy_Lockheed_WP-3D_Orion_recon_aircraft.ogv>
+  File: data/suoni/campioni/aereo_p3c_2.wav
+- Campione «aereo_be12» (aereo_be12). Grachev (pubblico dominio), via Wikimedia Commons,
+  https://commons.wikimedia.org/wiki/File:Sound_of_AN-24_airplane.ogg. pubblico dominio (rilasciato
+  dall'autore). <https://upload.wikimedia.org/wikipedia/commons/5/59/Sound_of_AN-24_airplane.ogg>
+  File: data/suoni/campioni/aereo_be12.wav
+- Campione «elicottero_sh3» (elicottero_sh3). White House Television video by Courtesy; William J.
+  Clinton Presidential Library, via DVIDS / Wikimedia Commons,
+  https://commons.wikimedia.org/wiki/File:President_Clinton_Departing_the_White_House_via_Marine_One_(1998).webm.
+  pubblico dominio (17 U.S.C. §105).
+  <https://upload.wikimedia.org/wikipedia/commons/transcoded/0/0d/President_Clinton_Departing_the_White_House_via_Marine_One_%281998%29.webm/President_Clinton_Departing_the_White_House_via_Marine_One_%281998%29.webm.240p.vp9.webm>
+  File: data/suoni/campioni/elicottero_sh3.wav
+- Campione «elicottero_sh3_2» (elicottero_sh3). U.S. Navy video by U.S. Navy, via DVIDS / Wikimedia
+  Commons, https://commons.wikimedia.org/wiki/File:Desert_Duck_744_Accident.webm. pubblico dominio
+  (17 U.S.C. §105).
+  <https://upload.wikimedia.org/wikipedia/commons/0/0b/Desert_Duck_744_Accident.webm> File:
+  data/suoni/campioni/elicottero_sh3_2.wav
+- Campione «capodoglio» (capodoglio). NOAA Fisheries, Southwest Fisheries Science Center, Marine
+  Mammal and Turtle Division, via Wikimedia Commons,
+  https://commons.wikimedia.org/wiki/File:Sperm_Whale_Normal_Clicks.ogg. pubblico dominio (17 U.S.C.
+  §105). <https://upload.wikimedia.org/wikipedia/commons/2/29/Sperm_Whale_Normal_Clicks.ogg> File:
+  data/suoni/campioni/capodoglio.wav
+- Campione «tricheco» (tricheco). NOAA Fisheries, Alaska Fisheries Science Center, Marine Mammal
+  Laboratory,
+  https://apps-afsc.fisheries.noaa.gov/Audio/Alaska-Marine-Mammal-Acoustic-Studies/index.html.
+  pubblico dominio presunto (sito federale NOAA senza credito per il clip, 17 U.S.C. §105).
+  <https://apps-afsc.fisheries.noaa.gov/Audio/Alaska-Marine-Mammal-Acoustic-Studies/assets/walrus-knocks.mp3>
+  File: data/suoni/campioni/tricheco.wav
+- Campione «balenottera_minore_pacifica» (balenottera_minore_pacifica). NOAA Fisheries, Southwest
+  Fisheries Science Center, Marine Mammal and Turtle Division, copia della Wayback Machine del
+  16/10/2011
+  (https://web.archive.org/web/20111016181104id_/http://swfsc.noaa.gov/uploadedFiles/Divisions/PRD/Sounds/MinkWhaBoin.wav).
+  pubblico dominio (17 U.S.C. §105).
+  <https://web.archive.org/web/20111016181104id_/http://swfsc.noaa.gov/uploadedFiles/Divisions/PRD/Sounds/MinkWhaBoin.wav>
+  File: data/suoni/campioni/balenottera_minore_pacifica.wav
+- Campione «orca_2» (orca). NOAA Office of National Marine Sanctuaries and U.S. Navy. 2021.
+  SanctSound Raw Passive Acoustic Data. NOAA National Centers for Environmental Information.
+  https://doi.org/10.25921/saca-sp25. pubblico dominio (17 U.S.C. §105).
+  <https://storage.googleapis.com/noaa-passive-bioacoustic/sanctsound/products/sound_clips/mb02/sanctsound_mb02_04_sound_clips/data/SanctSound_MB02_04_killerwhales_20200414T081659Z.wav>
+  File: data/suoni/campioni/orca_2.wav
+- Effetto «allarme_immersione» (allarme d'immersione elettronico di un sottomarino (stack AN/WIC)).
+  U.S. Navy. PD-USNavy. <https://commons.wikimedia.org/wiki/File:Alarm_-_Diving_-_Cow_Fart.ogg>
+  File: data/suoni/effetti/allarme_immersione.wav
+- Effetto «allarme_immersione_federal» (allarme d'immersione della USS Woodrow Wilson (Federal Sign
+  and Signal)). mkjunker (freesound.org). CC0.
+  <https://freesound.org/people/mkjunker/sounds/156672/> File:
+  data/suoni/effetti/allarme_immersione_federal.wav
+- Effetto «tromba_immersione_h8» (tromba d'immersione meccanica H8 (il klaxon)). U.S. Navy.
+  PD-USNavy. <https://commons.wikimedia.org/wiki/File:Alarm_-_Diving_-_H8.ogg> File:
+  data/suoni/effetti/tromba_immersione_h8.wav
+- Effetto «allarme_collisione» (allarme di collisione di un sottomarino (SSN-625, stack AN/WIC)).
+  U.S. Navy. PD-USNavy. <https://commons.wikimedia.org/wiki/File:Alarm_-_Collision.ogg> File:
+  data/suoni/effetti/allarme_collisione.wav
+- Effetto «allarme_collisione_nave» (allarme di collisione di una nave (AN/SIA-114B, USS San Diego
+  AFS-6)). U.S. Navy. PD-USNavy.
+  <https://commons.wikimedia.org/wiki/File:Surface_ship_-_Collision_Alarm_-_USS_San_Diego_(AFS-6)_-_AN-SIA-114B.ogg>
+  File: data/suoni/effetti/allarme_collisione_nave.wav
+- Effetto «posti_combattimento» (general quarters a bordo di una nave USN (gong e voce)). United
+  States Navy (defenselink.mil). PD-USNavy.
+  <https://commons.wikimedia.org/wiki/File:General_quarters.ogg> File:
+  data/suoni/effetti/posti_combattimento.wav
+- Effetto «allarme_propulsione» (allarme di avaria della propulsione (per lo SCRAM)). U.S. Navy.
+  PD-USNavy. <https://commons.wikimedia.org/wiki/File:Alarm_-_Propul_Casualty.ogg> File:
+  data/suoni/effetti/allarme_propulsione.wav
+- Effetto «fischietto_chiamata» (fischietto del nostromo, chiamata generale). Seloloving (Wikimedia
+  Commons). CC0. <https://commons.wikimedia.org/wiki/File:Pipegeneralcall.ogg> File:
+  data/suoni/effetti/fischietto_chiamata.wav
+- Effetto «fischietto_a_bordo» (fischietto del nostromo, «piping aboard»). U.S. Department of
+  Defense. PD-USGov. <https://commons.wikimedia.org/wiki/File:Pipeaboard.ogg> File:
+  data/suoni/effetti/fischietto_a_bordo.wav
+- Effetto «cw_rumoroso» (CW vero sui 40 m, ricevitore Kenwood R-2000). xperseai (freesound.org).
+  CC0. <https://freesound.org/people/xperseai/sounds/752469/> File:
+  data/suoni/effetti/cw_rumoroso.wav
+- Effetto «fruscio_onde_corte» (fruscio e toni delle onde corte (Grundig Yacht Boy 207)).
+  nakkivene66 (freesound.org). CC0. <https://freesound.org/people/nakkivene66/sounds/583364/> File:
+  data/suoni/effetti/fruscio_onde_corte.wav
+- Effetto «rtty» (RTTY vero ricevuto in HF (DX394)). benj500 (freesound.org). CC0.
+  <https://freesound.org/people/benj500/sounds/369476/> File: data/suoni/effetti/rtty.wav
+- Effetto «radiofax» (radiofax del National Weather Service). National Weather Service, USA.
+  PD-USGov-NOAA. <https://commons.wikimedia.org/wiki/File:Radiofax.ogg> File:
+  data/suoni/effetti/radiofax.wav
+- Effetto «uvb76» («The Buzzer» UVB-76, la radio sovietica (dalla fine degli anni '70)). Mysid
+  (Wikimedia Commons). PD-autore. <https://commons.wikimedia.org/wiki/File:UVB-76.ogg> File:
+  data/suoni/effetti/uvb76.wav
+
+3.4 Batimetria, oceanografia, geografia e meteo
+
+- EMODnet Bathymetry DTM (release corrente, 1/16 di primo)
+  Autore: EMODnet Bathymetry Consortium (2024): EMODnet Digital Bathymetry (DTM)
+  Licenza: CC-BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Fonte: https://ows.emodnet-bathymetry.eu/wcs coverage emodnet__mean
+  Modificato: elaborati nei fondali, nelle carte, nei profili del suono e nel meteo del gioco
+  File:
+    data/motore/teatri/baltico.fdl
+    data/motore/teatri/baltico_carta_nato.fdl
+    data/motore/teatri/baltico_carta_urss.fdl
+    data/motore/teatri/barents.fdl
+    data/motore/teatri/barents_carta_nato.fdl
+    data/motore/teatri/barents_carta_urss.fdl
+    data/motore/teatri/celtica.fdl
+    data/motore/teatri/celtica_carta_nato.fdl
+    data/motore/teatri/celtica_carta_urss.fdl
+    data/motore/teatri/faroe.fdl
+    data/motore/teatri/faroe_carta_nato.fdl
+    data/motore/teatri/faroe_carta_urss.fdl
+    data/motore/teatri/gibilterra.fdl
+    data/motore/teatri/gibilterra_carta_nato.fdl
+    data/motore/teatri/gibilterra_carta_urss.fdl
+    data/motore/teatri/otranto.fdl
+    data/motore/teatri/otranto_carta_nato.fdl
+    data/motore/teatri/otranto_carta_urss.fdl
+
+- ERA5, rianalisi oraria 1981-1990 (atmosfera e onde), 33 punti dei teatri
+  Autore: Copernicus Climate Change Service (C3S), ECMWF; Hersbach et al. 2020 (doi:10.1002/qj.3803)
+  Licenza: CC BY 4.0 (licenza Copernicus) (https://creativecommons.org/licenses/by/4.0/)
+  Fonte: https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels
+  Modificato: elaborati nei fondali, nelle carte, nei profili del suono e nel meteo del gioco
+  «Contiene informazioni modificate del Copernicus Climate Change Service (1981-1990)»
+  File:
+    data/motore/meteo.toml
+
+- Open-Meteo, API storiche (meteo e mare)
+  Autore: Open-Meteo (P. Zippenfenig)
+  Licenza: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+  Fonte: https://open-meteo.com
+  Modificato: elaborati nei fondali, nelle carte, nei profili del suono e nel meteo del gioco
+  dati via Open-Meteo.com
+  File:
+    data/motore/meteo.toml
+
+Pubblico dominio e CC0 (5 opere): nessun obbligo, si citano per correttezza.
+
+- NOAA NCEI ETOPO 2022 15 secondi d'arco. NOAA NCEI (2022), doi:10.25921/fd45-gt74. pubblico
+  dominio. File: data/motore/basi/alboran.fdl, data/motore/basi/baltijsk.fdl,
+  data/motore/basi/brawdy.fdl, data/motore/basi/brindisi.fdl, data/motore/basi/eckernforde.fdl,
+  data/motore/basi/gadzhievo.fdl, data/motore/basi/gdynia.fdl, data/motore/basi/gibilterra.fdl,
+  data/motore/basi/gremikha.fdl, data/motore/basi/hachinohe.fdl, data/motore/basi/ile_longue.fdl,
+  data/motore/basi/keflavik.fdl, data/motore/basi/kiel.fdl, data/motore/basi/kinloss.fdl,
+  data/motore/basi/lann_bihoue.fdl, data/motore/basi/misawa.fdl, data/motore/basi/murmansk.fdl,
+  data/motore/basi/pasha_liman.fdl, data/motore/basi/peenemunde.fdl, data/motore/basi/polyarny.fdl,
+  data/motore/basi/rota.fdl, data/motore/basi/rybachiy.fdl, data/motore/basi/sassnitz.fdl,
+  data/motore/basi/severomorsk.fdl, data/motore/basi/st_mawgan.fdl, data/motore/basi/taranto.fdl,
+  data/motore/basi/tivat.fdl, data/motore/basi/vladivostok.fdl, data/motore/basi/wakkanai.fdl,
+  data/motore/basi/warnemunde.fdl, data/motore/basi/zapadnaya_litsa.fdl,
+  data/motore/teatri/baltico.fdl, data/motore/teatri/baltico_carta_nato.fdl,
+  data/motore/teatri/baltico_carta_urss.fdl, data/motore/teatri/barents.fdl,
+  data/motore/teatri/barents_carta_nato.fdl, data/motore/teatri/barents_carta_urss.fdl,
+  data/motore/teatri/celtica.fdl, data/motore/teatri/celtica_carta_nato.fdl,
+  data/motore/teatri/celtica_carta_urss.fdl, data/motore/teatri/faroe.fdl,
+  data/motore/teatri/faroe_carta_nato.fdl, data/motore/teatri/faroe_carta_urss.fdl,
+  data/motore/teatri/gibilterra.fdl, data/motore/teatri/gibilterra_carta_nato.fdl,
+  data/motore/teatri/gibilterra_carta_urss.fdl, data/motore/teatri/kunashir.fdl,
+  data/motore/teatri/kunashir_carta_nato.fdl, data/motore/teatri/kunashir_carta_urss.fdl,
+  data/motore/teatri/otranto.fdl, data/motore/teatri/otranto_carta_nato.fdl,
+  data/motore/teatri/otranto_carta_urss.fdl
+- NOAA World Ocean Atlas 2023, decav 1955-2022, 0.25 gradi. NOAA NCEI, World Ocean Atlas 2023.
+  pubblico dominio. <https://www.ncei.noaa.gov/products/world-ocean-atlas> File:
+  data/motore/teatri/baltico.suono.toml, data/motore/teatri/barents.suono.toml,
+  data/motore/teatri/celtica.suono.toml, data/motore/teatri/faroe.suono.toml,
+  data/motore/teatri/gibilterra.suono.toml, data/motore/teatri/kunashir.suono.toml,
+  data/motore/teatri/otranto.suono.toml
+- NOAA World Ocean Atlas 2023, decennio 1985-1994 (8594): mensile a 1 grado, stagionale a 0.25
+  gradi. NOAA NCEI, World Ocean Atlas 2023 (Locarnini et al. 2024, vol. 1 Temperature, NOAA Atlas
+  NESDIS 89; Reagan et al. 2024, vol. 2 Salinity, NOAA Atlas NESDIS 90). pubblico dominio.
+  <https://www.ncei.noaa.gov/products/world-ocean-atlas> File:
+  data/motore/teatri/baltico.suono.toml, data/motore/teatri/barents.suono.toml,
+  data/motore/teatri/celtica.suono.toml, data/motore/teatri/faroe.suono.toml,
+  data/motore/teatri/gibilterra.suono.toml, data/motore/teatri/kunashir.suono.toml,
+  data/motore/teatri/otranto.suono.toml
+- Natural Earth 1:10m: aree marine, regioni fisiche e localita'. Natural Earth
+  (naturalearthdata.com). pubblico dominio. <https://www.naturalearthdata.com> File:
+  data/motore/teatri/baltico.toponimi.toml, data/motore/teatri/barents.toponimi.toml,
+  data/motore/teatri/celtica.toponimi.toml, data/motore/teatri/faroe.toponimi.toml,
+  data/motore/teatri/gibilterra.toponimi.toml, data/motore/teatri/kunashir.toponimi.toml,
+  data/motore/teatri/otranto.toponimi.toml
+- Wikidata: i fari dei teatri (posizione, caratteristica, altezza focale, portata, prima
+  accensione). i contributori di Wikidata. CC0. <https://www.wikidata.org> File:
+  data/motore/fari.toml
+
+- Musica del remake resa con le ROM Roland MT-32 (i WAV di data/mt32/ nel pacchetto privato):
+  composizioni di melchior-688 (musica/fm, CC0); timbri delle ROM di Roland Corporation; resa con
+  libmt32emu (Munt). I WAV contengono i campioni delle ROM Roland: solo nel pacchetto privato, per
+  uso personale, mai ridistribuiti. Le ROM non sono nel progetto ne' nel pacchetto.
+
+3.5 File sotto CC BY-SA
+
+Questi file derivano da opere CC BY-SA: restano sotto la stessa licenza (la versione piu' alta fra
+  le loro fonti, o una successiva), con l'attribuzione qui sopra. Il resto del pacchetto non ne e'
+  toccato.
+
+  data/motore/immagini/enciclopedia/aereo.be12_foto1.img
+      CC BY-SA 2.0: File:Beriev Be-12 Chayka 25 yellow (10071687574).jpg
+  data/motore/modelli/be12.mdl
+      CC BY-SA 2.0: File:Beriev Be-12 Chayka 25 yellow (10071687574).jpg
+  data/motore/modelli/bmrt.mdl
+      CC BY-SA 4.0: File:БМРТ АБ-0122 «Амбарчик» Paljassaare sadamas 92.jpg
+  data/motore/modelli/hkp4.mdl
+      CC BY-SA 3.0: File:Hkp 4B 01.jpg
+  data/motore/modelli/nave_ricerca.mdl
+      CC BY-SA 3.0: File:Johan Hjort IMG 7563 Adventfjorden.JPG
+  data/motore/modelli/peschereccio_costiero.mdl
+      CC BY-SA 3.0: File:Longliner Argenova-XXI.jpg
+  data/motore/modelli/portarinfuse.mdl
+      CC BY-SA 4.0: File:2023-05-26 BULK DESTINY - IMO 9781994.jpg
+  data/motore/modelli/stockholm.mdl
+      CC BY-SA 3.0: File:HMS Stockholm.JPG
+  data/motore/modelli/type206.mdl
+      CC BY-SA 4.0: File:U 17 vor Koblenz.jpg
+  data/motore/navi/be12.spr
+      CC BY-SA 2.0: File:Beriev Be-12 Chayka 25 yellow (10071687574).jpg
+  data/motore/navi/bmrt.spr
+      CC BY-SA 4.0: File:БМРТ АБ-0122 «Амбарчик» Paljassaare sadamas 92.jpg
+  data/motore/navi/hkp4.spr
+      CC BY-SA 3.0: File:Hkp 4B 01.jpg
+  data/motore/navi/nave_ricerca.spr
+      CC BY-SA 3.0: File:Johan Hjort IMG 7563 Adventfjorden.JPG
+  data/motore/navi/peschereccio_costiero.spr
+      CC BY-SA 3.0: File:Longliner Argenova-XXI.jpg
+  data/motore/navi/portarinfuse.spr
+      CC BY-SA 4.0: File:2023-05-26 BULK DESTINY - IMO 9781994.jpg
+  data/motore/navi/stockholm.spr
+      CC BY-SA 3.0: File:HMS Stockholm.JPG
+  data/motore/navi/type206.spr
+      CC BY-SA 4.0: File:U 17 vor Koblenz.jpg
+  data/suoni/effetti/segnali_sonar.wav
+      CC BY-SA 2.5: Effetto «segnali_sonar» (segnali sonar veri, dal CD «Schall im Meer» del FWG
+        della Bundeswehr (2000))
+
+4. FONTI CONSULTATE
+-------------------
+
+90 foto e disegni sono serviti solo per misure e verifiche: nessun file del pacchetto ne deriva.
+  Sono in data/motore/crediti.toml con uso = "consultata".

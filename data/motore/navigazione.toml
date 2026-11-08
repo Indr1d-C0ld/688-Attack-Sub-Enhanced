@@ -1,0 +1,471 @@
+# Navigazione: sistemi, punti nave, teatri (generato da tools/pipeline/navigazione.py: non modificare a mano).
+sistema_predefinito = "stimata"
+schuler_min = 84.4
+latitudine_polare = 80.0
+fattore_polare = 2.0
+
+[sistemi.dmins]
+nome = "AN/WSN-1 DMINS"
+deriva_nm_giorno = 1.5
+schuler_nm = 0.15
+correlazione_h = 72.0
+fonte = "06 §2.1: STIMA DI GIOCO (deriva non pubblicata)"
+confidenza = "bassa"
+
+[sistemi.wsn3]
+nome = "AN/WSN-3 ESGN"
+deriva_nm_giorno = 0.5
+schuler_nm = 0.15
+correlazione_h = 72.0
+fonte = "06 §2.1: giroscopio elettrostatico dei 688 con Tomahawk, STIMA"
+confidenza = "bassa"
+
+[sistemi.sins_uk]
+nome = "SINS Mk 2"
+deriva_nm_giorno = 1.0
+schuler_nm = 0.15
+correlazione_h = 72.0
+fonte = "06 §2.1 [RNSINS]: classe 1 nm/giorno"
+confidenza = "media"
+
+[sistemi.medvedica]
+nome = "Medvedica"
+deriva_nm_giorno = 1.75
+schuler_nm = 0.15
+correlazione_h = 72.0
+fonte = "06 §6: STIMA 1,5-2 nm/giorno"
+confidenza = "bassa"
+
+[sistemi.soz]
+nome = "Soz"
+deriva_nm_giorno = 3.0
+schuler_nm = 0.15
+correlazione_h = 72.0
+fonte = "06 §6: STIMA 3 nm/giorno (Alfa)"
+confidenza = "bassa"
+
+[sistemi.sigma]
+nome = "Sigma"
+deriva_nm_giorno = 3.0
+schuler_nm = 0.15
+correlazione_h = 72.0
+fonte = "06 §6: STIMA 3 nm/giorno (Victor I/II, Charlie)"
+confidenza = "bassa"
+
+[sistemi.stimata]
+nome = "Solcometro e girobussola"
+deriva_nm_giorno = 0.0
+schuler_nm = 0.0
+correlazione_h = 12.0
+fonte = "06 §2.1: la stima accumula la corrente non nota"
+confidenza = "media"
+
+[classi]
+los_angeles = "dmins"
+los_angeles_flight2 = "wsn3"
+los_angeles_688i = "wsn3"
+sturgeon = "dmins"
+trafalgar = "sins_uk"
+victor3 = "medvedica"
+akula = "medvedica"
+oscar = "medvedica"
+typhoon = "medvedica"
+alfa = "soz"
+charlie2 = "sigma"
+kilo = "stimata"
+foxtrot = "stimata"
+
+[punti.transit]
+sigma_min = 0.05
+sigma_max = 0.1
+per_kn = 0.2
+durata_s = 120.0
+quota_max_m = 18.0
+velocita_max_kn = 8.0
+albero = true
+filo = false
+emissione = false
+cielo = false
+notte = false
+costa_km = 0.0
+teatri = []
+anno_dal = 1964.0
+marina = "nato"
+opzione = ""
+attesa_40 = 100.0
+attesa_60 = 60.0
+attesa_70 = 40.0
+scartati = 0.25
+corsia_nm = 0.0
+allungamento = 1.0
+frazione_isobate = 0.0
+carta = false
+fari_min = 0.0
+fonte = "06 §2.2 [APL-Danchik] [WPTransit] [GSTransit]; attese STIMA"
+confidenza = "alta"
+nome = "Transit (NAVSAT)"
+
+[punti.gps]
+sigma_min = 0.01
+sigma_max = 0.01
+per_kn = 0.0
+durata_s = 60.0
+quota_max_m = 18.0
+velocita_max_kn = 1000000000.0
+albero = true
+filo = false
+emissione = false
+cielo = false
+notte = false
+costa_km = 0.0
+teatri = []
+anno_dal = 1990.0
+marina = "nato"
+opzione = "gps"
+attesa_40 = 0.0
+attesa_60 = 0.0
+attesa_70 = 0.0
+scartati = 0.0
+corsia_nm = 0.0
+allungamento = 1.0
+frazione_isobate = 0.0
+carta = false
+fari_min = 0.0
+fonte = "06 §2.3: assente nel 1989, opzione «1990+»"
+confidenza = "alta"
+nome = "GPS"
+
+[punti.loran_c]
+sigma_min = 0.1
+sigma_max = 0.25
+per_kn = 0.0
+durata_s = 180.0
+quota_max_m = 18.0
+velocita_max_kn = 1000000000.0
+albero = true
+filo = false
+emissione = false
+cielo = false
+notte = false
+costa_km = 0.0
+teatri = ["faroe", "otranto", "kunashir", "barents", "baltico", "celtica"]
+anno_dal = 1958.0
+marina = "nato"
+opzione = ""
+attesa_40 = 0.0
+attesa_60 = 0.0
+attesa_70 = 0.0
+scartati = 0.0
+corsia_nm = 0.0
+allungamento = 1.0
+frazione_isobate = 0.0
+carta = false
+fari_min = 0.0
+fonte = "06 §2.4 [WPLoran]: Norvegia, Mediterraneo, Hokkaido; Barents solo occidentale, Baltico parziale"
+confidenza = "media"
+nome = "Loran-C"
+
+[punti.cajka]
+sigma_min = 0.1
+sigma_max = 0.3
+per_kn = 0.0
+durata_s = 180.0
+quota_max_m = 18.0
+velocita_max_kn = 1000000000.0
+albero = true
+filo = false
+emissione = false
+cielo = false
+notte = false
+costa_km = 0.0
+teatri = ["barents", "baltico", "kunashir"]
+anno_dal = 1970.0
+marina = "vmf"
+opzione = ""
+attesa_40 = 0.0
+attesa_60 = 0.0
+attesa_70 = 0.0
+scartati = 0.0
+corsia_nm = 0.0
+allungamento = 1.0
+frazione_isobate = 0.0
+carta = false
+fari_min = 0.0
+fonte = "06 §6 [WPLoran]: l'equivalente sovietico del Loran-C, nelle acque sovietiche (STIMA)"
+confidenza = "bassa"
+nome = "Cajka"
+
+[punti.omega]
+sigma_min = 2.0
+sigma_max = 4.0
+per_kn = 0.0
+durata_s = 300.0
+quota_max_m = 60.0
+velocita_max_kn = 1000000000.0
+albero = false
+filo = true
+emissione = false
+cielo = false
+notte = false
+costa_km = 0.0
+teatri = []
+anno_dal = 1971.0
+marina = "nato"
+opzione = ""
+attesa_40 = 0.0
+attesa_60 = 0.0
+attesa_70 = 0.0
+scartati = 0.0
+corsia_nm = 8.0
+allungamento = 1.0
+frazione_isobate = 0.0
+carta = false
+fari_min = 0.0
+fonte = "06 §2.4, §7.3 [WPOmega]: 2-4 nm, ambiguita' di corsia se sigma > 4 nm"
+confidenza = "alta"
+nome = "Omega"
+
+[punti.rsdn20]
+sigma_min = 1.35
+sigma_max = 3.8
+per_kn = 0.0
+durata_s = 300.0
+quota_max_m = 60.0
+velocita_max_kn = 1000000000.0
+albero = false
+filo = true
+emissione = false
+cielo = false
+notte = false
+costa_km = 0.0
+teatri = []
+anno_dal = 1970.0
+marina = "vmf"
+opzione = ""
+attesa_40 = 0.0
+attesa_60 = 0.0
+attesa_70 = 0.0
+scartati = 0.0
+corsia_nm = 0.0
+allungamento = 1.0
+frazione_isobate = 0.0
+carta = false
+fari_min = 0.0
+fonte = "06 §6 [WPAlpha]: 2,5-7 km, ricevibile in immersione"
+confidenza = "media"
+nome = "RSDN-20 «Alfa»"
+
+[punti.parus]
+sigma_min = 0.05
+sigma_max = 0.15
+per_kn = 0.2
+durata_s = 120.0
+quota_max_m = 18.0
+velocita_max_kn = 8.0
+albero = true
+filo = false
+emissione = false
+cielo = false
+notte = false
+costa_km = 0.0
+teatri = []
+anno_dal = 1974.0
+marina = "vmf"
+opzione = ""
+attesa_40 = 110.0
+attesa_60 = 70.0
+attesa_70 = 45.0
+scartati = 0.25
+corsia_nm = 0.0
+allungamento = 1.0
+frazione_isobate = 0.0
+carta = false
+fari_min = 0.0
+fonte = "06 §6 [WPParus]: come il Transit (STIMA)"
+confidenza = "bassa"
+nome = "Parus (Ciklon-B)"
+
+[punti.astronomico]
+sigma_min = 1.0
+sigma_max = 3.0
+per_kn = 0.0
+durata_s = 450.0
+quota_max_m = 18.0
+velocita_max_kn = 1000000000.0
+albero = true
+filo = false
+emissione = false
+cielo = true
+notte = true
+costa_km = 0.0
+teatri = []
+anno_dal = 0.0
+marina = "tutte"
+opzione = ""
+attesa_40 = 0.0
+attesa_60 = 0.0
+attesa_70 = 0.0
+scartati = 0.0
+corsia_nm = 0.0
+allungamento = 1.0
+frazione_isobate = 0.0
+carta = false
+fari_min = 0.0
+fonte = "06 §2.5 [USNI21]: STIMA 1-3 nm, 5-10 min, sereno, crepuscolo o notte"
+confidenza = "media"
+nome = "Astronomico al periscopio"
+
+[punti.radar_costa]
+sigma_min = 0.05
+sigma_max = 0.2
+per_kn = 0.0
+durata_s = 60.0
+quota_max_m = 18.0
+velocita_max_kn = 1000000000.0
+albero = true
+filo = false
+emissione = true
+cielo = false
+notte = false
+costa_km = 37.0
+teatri = []
+anno_dal = 0.0
+marina = "tutte"
+opzione = ""
+attesa_40 = 0.0
+attesa_60 = 0.0
+attesa_70 = 0.0
+scartati = 0.0
+corsia_nm = 0.0
+allungamento = 1.0
+frazione_isobate = 0.0
+carta = true
+fari_min = 0.0
+fonte = "06 §7.1, §7.3: entro 20 nm dalla costa, emissione radar"
+confidenza = "media"
+nome = "Radar sulla costa"
+
+[punti.visivo]
+sigma_min = 0.05
+sigma_max = 0.1
+per_kn = 0.0
+durata_s = 60.0
+quota_max_m = 18.0
+velocita_max_kn = 1000000000.0
+albero = true
+filo = false
+emissione = false
+cielo = false
+notte = false
+costa_km = 20.0
+teatri = []
+anno_dal = 0.0
+marina = "tutte"
+opzione = ""
+attesa_40 = 0.0
+attesa_60 = 0.0
+attesa_70 = 0.0
+scartati = 0.0
+corsia_nm = 0.0
+allungamento = 1.0
+frazione_isobate = 0.0
+carta = true
+fari_min = 0.0
+fonte = "06 §7.3: periscopio, costa in vista"
+confidenza = "media"
+nome = "Visivo su punti cospicui"
+
+[punti.fari]
+sigma_min = 0.1
+sigma_max = 0.3
+per_kn = 0.0
+durata_s = 120.0
+quota_max_m = 18.0
+velocita_max_kn = 1000000000.0
+albero = true
+filo = false
+emissione = false
+cielo = false
+notte = true
+costa_km = 0.0
+teatri = []
+anno_dal = 0.0
+marina = "tutte"
+opzione = ""
+attesa_40 = 0.0
+attesa_60 = 0.0
+attesa_70 = 0.0
+scartati = 0.0
+corsia_nm = 0.0
+allungamento = 1.0
+frazione_isobate = 0.0
+carta = true
+fari_min = 2.0
+fonte = "06 §7.3: due rilevamenti di luci di costa al periscopio di notte (fari.toml del kit, Wikidata); STIMA 0,1-0,3 nm, l'errore di un grado a 10 nm"
+confidenza = "bassa"
+nome = "Rilevamenti di fari"
+
+[punti.batimetrico]
+sigma_min = 0.05
+sigma_max = 0.5
+per_kn = 0.0
+durata_s = 900.0
+quota_max_m = 1000000000.0
+velocita_max_kn = 1000000000.0
+albero = false
+filo = false
+emissione = true
+cielo = false
+notte = false
+costa_km = 0.0
+teatri = []
+anno_dal = 0.0
+marina = "tutte"
+opzione = ""
+attesa_40 = 0.0
+attesa_60 = 0.0
+attesa_70 = 0.0
+scartati = 0.0
+corsia_nm = 0.0
+allungamento = 3.0
+frazione_isobate = 0.25
+carta = true
+fari_min = 0.0
+fonte = "06 §2.6 [BOW26]: max(1/4 della spaziatura delle isobate, 100 yd) piu' l'errore della carta; serie di sondaggi su rotta costante"
+confidenza = "alta"
+nome = "Batimetrico (contorni)"
+
+[teatri.faroe]
+latitudine = 62.0
+corrente_kn = 0.4
+fonte = "06 §7.3: corrente non nota 0,2-1 kn, alta negli stretti (Gibilterra, Kunashir); STIMA"
+
+[teatri.barents]
+latitudine = 72.0
+corrente_kn = 0.4
+fonte = "06 §7.3: corrente non nota 0,2-1 kn, alta negli stretti (Gibilterra, Kunashir); STIMA"
+
+[teatri.kunashir]
+latitudine = 44.5
+corrente_kn = 0.8
+fonte = "06 §7.3: corrente non nota 0,2-1 kn, alta negli stretti (Gibilterra, Kunashir); STIMA"
+
+[teatri.celtica]
+latitudine = 50.0
+corrente_kn = 0.4
+fonte = "06 §7.3: corrente non nota 0,2-1 kn, alta negli stretti (Gibilterra, Kunashir); STIMA"
+
+[teatri.otranto]
+latitudine = 40.5
+corrente_kn = 0.3
+fonte = "06 §7.3: corrente non nota 0,2-1 kn, alta negli stretti (Gibilterra, Kunashir); STIMA"
+
+[teatri.baltico]
+latitudine = 56.0
+corrente_kn = 0.2
+fonte = "06 §7.3: corrente non nota 0,2-1 kn, alta negli stretti (Gibilterra, Kunashir); STIMA"
+
+[teatri.gibilterra]
+latitudine = 36.0
+corrente_kn = 1.0
+fonte = "06 §7.3: corrente non nota 0,2-1 kn, alta negli stretti (Gibilterra, Kunashir); STIMA"

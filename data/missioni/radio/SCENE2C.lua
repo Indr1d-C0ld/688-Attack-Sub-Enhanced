@@ -1,0 +1,35 @@
+-- Contenuti radio dell'Enhanced per SCENE2C, SHAKE 'EM a due (lato del 688; l'Alfa e' l'id 1, Fær Øer). R3 (docs/11):
+-- colore e contesto, obiettivi ed esiti restano quelli dell'originale.
+return {
+  ordini = { da = "CINCLANTFLT", a = "USS LOS ANGELES (SSN 688)", oggetto = "SHAKE 'EM", classifica = "SECRET", data = { giorno = 2, mese = 4, anno = 1989, ora_utc = 6 } },
+  parametri = { ciclo_s = 300, fondo_ogni_s = 240 },
+  stato_iniziale = {
+    roe = { sottomarini = "trattenuto", navi = "trattenuto", mercantili = "trattenuto", neutrali = "trattenuto", aerei = "trattenuto" },
+    neutrali = { 2, 3, 4 },
+  },
+  { id = "CODA", dopo_s = 60, precedenza = "immediate", da = "COMSUBLANT", oggetto = "TRAIL ALERT",
+    classifica = "SECRET",
+    testo = { it = "SOSUS: SOTTOMARINO CLASSE ALFA NEL VOSTRO SETTORE POPPIERO, DISTANZA STIMATA 4-6 MIGLIA.",
+              en = "SOSUS: ALFA CLASS SSN IN YOUR BAFFLES, ESTIMATED RANGE 4 TO 6 MILES." },
+    contatto = { unita = { 1 }, eta_s = 300, errore_m = 3000, sensore = "sosus", rotta_err = 25, velocita_err_kn = 3 } },
+  { id = "TRAFFICO", dopo_s = 240, precedenza = "priority", da = "COMSUBLANT", oggetto = "SHIPPING IN CHANNEL",
+    classifica = "CONFIDENTIAL",
+    testo = { it = "TRE MERCANTILI IN TRANSITO NEL CANALE, ROTTA NORD-OVEST. IL LORO RUMORE PUO' COPRIRE UN'ACCOSTATA.",
+              en = "THREE MERCHANTS TRANSITING THE CHANNEL, COURSE NORTHWEST. THEIR NOISE MAY COVER A TURN." },
+    contatto = { unita = { 2, 3, 4 }, eta_s = 600, errore_m = 4000, sensore = "costiera", rotta_err = 15, velocita_err_kn = 2 } },
+  { id = "ROE", dopo_s = 840, precedenza = "priority", da = "CINCLANTFLT", oggetto = "ROE REMINDER",
+    classifica = "SECRET",
+    testo = { it = "REGOLE D'INGAGGIO INVARIATE: ARMI TRATTENUTE. FUOCO SOLO IN RISPOSTA A UN ATTACCO.",
+              en = "ROE UNCHANGED: WEAPONS HOLD. FIRE ONLY IN RESPONSE TO AN ATTACK." },
+    roe = { sottomarini = "trattenuto" } },
+  { id = "METEO", dopo_s = 960, precedenza = "routine", da = "NAVOCEANCOM", oggetto = "WX FAEROES",
+    classifica = "UNCLASSIFIED",
+    testo = { it = "FÆR ØER: VENTO DA OVEST 25 NODI, MARE 5. RUMORE DI SUPERFICIE ALTO SOPRA LO STRATO A 90 METRI.",
+              en = "FAEROES: WIND WEST 25 KNOTS, SEA STATE 5. HIGH SURFACE NOISE ABOVE LAYER AT 300 FEET." } },
+  -- legati agli eventi (E6): vanno in onda la prima volta che la condizione e' vera
+  { id = "ARMI", se = { evento = "lancio_nemico" }, precedenza = "flash", da = "CINCLANTFLT", oggetto = "ROE CHANGE",
+    classifica = "SECRET",
+    roe = { sottomarini = "libero" },
+    testo = { it = "I SOVIETICI HANNO APERTO IL FUOCO. ARMI LIBERE CONTRO I SOTTOMARINI SOVIETICI.",
+              en = "SOVIETS HAVE OPENED FIRE. WEAPONS FREE ON SOVIET SUBMARINES." } },
+}

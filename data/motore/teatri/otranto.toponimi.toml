@@ -1,0 +1,422 @@
+# Toponimi del teatro otranto: generato da tools/pipeline/toponimi.py, non modificare a mano.
+# x, y in metri sul piano del teatro (come il fondale); rango 1 il più importante; acqua = nome di mare.
+
+[[nome]]
+testo = "Canale d'Otranto"
+en = "Strait of Otranto"
+tipo = "stretto"
+acqua = true
+rango = 2
+x = 21255
+y = -77703
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Mare Adriatico"
+en = "Adriatic Sea"
+tipo = "mare"
+acqua = true
+rango = 3
+x = -51700
+y = 62100
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Mar Ionio"
+en = "Ionian Sea"
+tipo = "mare"
+acqua = true
+rango = 4
+x = -104700
+y = -123900
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Taranto"
+en = "Taranto"
+tipo = "base"
+acqua = false
+rango = 4
+x = -128900
+y = -57738
+fonte = "dossier 03 §A4"
+
+[[nome]]
+testo = "Tirana"
+en = "Tirana"
+tipo = "citta"
+acqua = false
+rango = 4
+x = 89482
+y = 36925
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Baia di Valona"
+en = "Bay of Vlorë"
+tipo = "baia"
+acqua = true
+rango = 5
+x = 57702
+y = -63074
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Bocche di Cattaro"
+en = "Bay of Kotor"
+tipo = "baia"
+acqua = true
+rango = 5
+x = -10699
+y = 158835
+fonte = "dossier 03 §A4 (Tivat)"
+
+[[nome]]
+testo = "Brindisi"
+en = "Brindisi"
+tipo = "base"
+acqua = false
+rango = 5
+x = -68518
+y = -39661
+fonte = "dossier 03 §A4"
+
+[[nome]]
+testo = "Capo Santa Maria di Leuca"
+en = "Cape Santa Maria di Leuca"
+tipo = "capo"
+acqua = false
+rango = 5
+x = -33403
+y = -133177
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Fossa Sud-Adriatica"
+en = "South Adriatic Pit"
+tipo = "mare"
+acqua = true
+rango = 5
+x = -62382
+y = 83565
+fonte = "dossier 03 §A4"
+
+[[nome]]
+testo = "Otranto"
+en = "Otranto"
+tipo = "citta"
+acqua = false
+rango = 5
+x = -22155
+y = -94356
+fonte = "dossier 03 §A4"
+
+[[nome]]
+testo = "Pasha Liman"
+en = "Pasha Liman"
+tipo = "base"
+acqua = false
+rango = 5
+x = 56938
+y = -74184
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Penisola di Karaburun"
+en = "Karaburun Peninsula"
+tipo = "penisola"
+acqua = false
+rango = 5
+x = 51786
+y = -66449
+fonte = "dossier 03 §A4"
+
+[[nome]]
+testo = "Podgorica"
+en = "Podgorica"
+tipo = "citta"
+acqua = false
+rango = 5
+x = 42467
+y = 162950
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Tivat"
+en = "Tivat"
+tipo = "base"
+acqua = false
+rango = 5
+x = -4115
+y = 158828
+fonte = "dossier 03 §A4"
+
+[[nome]]
+testo = "Capo d'Otranto"
+en = "Cape Otranto"
+tipo = "capo"
+acqua = false
+rango = 6
+x = -19613
+y = -99915
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Saseno"
+en = "Sazan"
+tipo = "isola"
+acqua = false
+rango = 6
+x = 44927
+y = -55389
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Gallipoli"
+en = "Gallipoli"
+tipo = "citta"
+acqua = false
+rango = 7
+x = -65698
+y = -104094
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Corfù"
+en = "Corfu"
+tipo = "citta"
+acqua = false
+rango = 8
+x = 100024
+y = -153083
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Durazzo"
+en = "Durrës"
+tipo = "citta"
+acqua = false
+rango = 8
+x = 58460
+y = 35528
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Lecce"
+en = "Lecce"
+tipo = "citta"
+acqua = false
+rango = 8
+x = -50967
+y = -70853
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Scutari"
+en = "Shkodër"
+tipo = "citta"
+acqua = false
+rango = 8
+x = 63634
+y = 118949
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Elbasan"
+en = "Elbasan"
+tipo = "citta"
+acqua = false
+rango = 9
+x = 112011
+y = 14350
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Valona"
+en = "Vlorë"
+tipo = "citta"
+acqua = false
+rango = 9
+x = 63447
+y = -57768
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Alessio"
+en = "Lezhë"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 75146
+y = 87907
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Argirocastro"
+en = "Gjirokastër"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 119329
+y = -101323
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Bajram Curri"
+en = "Bajram Curri"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 109892
+y = 148932
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Berat"
+en = "Berat"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 103260
+y = -31484
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Burrel"
+en = "Burrel"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 105499
+y = 70291
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Croia"
+en = "Krujë"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 87394
+y = 58165
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Fier"
+en = "Fier"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 69525
+y = -29656
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Gramsh"
+en = "Gramsh"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 122236
+y = -13790
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Kukës"
+en = "Kukës"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 139338
+y = 121636
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Librazhd"
+en = "Librazhd"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 135602
+y = 23468
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Lushnjë"
+en = "Lushnjë"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 81347
+y = -6213
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Peshkopi"
+en = "Peshkopi"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 140147
+y = 77245
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Pukë"
+en = "Pukë"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 93849
+y = 115376
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Përmet"
+en = "Përmet"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 136329
+y = -83818
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Rrëshen"
+en = "Rrëshen"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 88677
+y = 87539
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Saranda"
+en = "Saranda"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 106937
+y = -123942
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Tepelenë"
+en = "Tepelenë"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 109131
+y = -78790
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Çorovodë"
+en = "Çorovodë"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 125700
+y = -52606
+fonte = "Natural Earth 1:10m (pubblico dominio)"

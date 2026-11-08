@@ -1,0 +1,175 @@
+# Fregata classe Koni (Progetto 1159, export), configurazione 1989.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua.
+#
+# Configurazione modellata: 1159T ("Koni II", versione per acque calde: Algeria, Cuba; base anche della
+# 1159TR libica), cioe' la 1159 con la tuga in piu' tra fumaiolo e torretta poppiera (foto della 356
+# cubana, 1984). Senza i lanciatori P-15/P-20 delle unita' libiche, la cui posizione esatta non e'
+# documentata da fonti verificabili (vedi extracted/navi/koni/RAPPORTO.md).
+#
+# Misure: elementi principali triangolati su quattro foto (extracted/navi/koni/lavoro/triangola_koni.yaml,
+# errori 2,9 / 3,4 / 5,2 / 5,8 px); il resto proiettando i pixel della foto di fianco del Del'fin sul
+# piano di simmetria con la fotocamera calibrata (scala circa 0,051 m/pixel), le quote della tuga 1159T,
+# degli AK-230 e del fumaiolo dalla foto della 356. Lunghezza 96,5 m e larghezza 12,6 m (Progetto 1159:
+# 96,51 x 12,56 m); le larghezze delle sovrastrutture sono stimate dalle foto aeree.
+nome: Koni (Progetto 1159T)
+uscita: extracted/navi/koni
+moduli_parti: [koni_parti.py]
+
+scafo:
+  L: 96.5
+  B: 12.6
+  # coperta: forte insellatura a prua (7,7 m al dritto), ~3,5 m da mezzanave a poppa
+  bordo: [[0, 7.7], [5, 7.35], [11, 6.6], [20, 5.35], [31, 4.05], [45, 3.6], [62, 3.5], [85, 3.55], [96.5, 3.8]]
+  slancio: 5.2
+  finezza_prua: 32
+  specchio: 0.75
+  svasatura: 0.06
+  pienezza: [1.2, 0.85]
+
+parti:
+  # chiusura sotto il dritto slanciato (stessi parametri dello scafo)
+  - {tipo: chiusura_dritto, nome: chiusura_dritto, L: 96.5, B: 12.6, bordo: [[0, 7.7], [5, 7.35], [11, 6.6], [20, 5.35], [31, 4.05], [45, 3.6], [62, 3.5], [85, 3.55], [96.5, 3.8]], slancio: 5.2, finezza_prua: 32, specchio: 0.75, svasatura: 0.06, pienezza: [1.2, 0.85]}
+  # torre A: AK-726 binato da 76 mm (sommita' triangolata 9,5 m a 17,4 m dalla prua)
+  - {tipo: ak726, nome: ak726_a, x: {prua: 17.3}, y: 0, z0: 5.7, verso: 1, lunghezza: 5.2, larghezza: 3.6, altezza: 3.9, canna: 3.2, smusso: 1.2}
+  # sovrastruttura prodiera: ponte 01 (con gli RBU sul tetto), ponte 02, plancia
+  - {tipo: tuga, nome: tuga_01, x0: {prua: 50.6}, x1: {prua: 20.6}, y0: -5.0, y1: 5.0, z0: 3.0, z1: 7.6, smusso_prua: 0.5, mat: bianco}
+  - {tipo: tuga, nome: tuga_02, x0: {prua: 47.5}, x1: {prua: 27.0}, y0: -4.2, y1: 4.2, z0: 7.6, z1: 9.9, mat: bianco}
+  - {tipo: tuga, nome: plancia, x0: {prua: 41.5}, x1: {prua: 29.9}, y0: -3.6, y1: 3.6, z0: 9.9, z1: 13.0, rastrema: 0.95, smusso_prua: 0.3, mat: bianco}
+  # due RBU-6000 sfalsati sul tetto del ponte 01 (sinistro piu' a prua: foto aerea della Rostock)
+  - {tipo: lanciarazzi_rbu, nome: rbu6000_sinistra, x: {prua: 22.2}, y: 1.5, z0: 7.6}
+  - {tipo: lanciarazzi_rbu, nome: rbu6000_dritta, x: {prua: 24.6}, y: -1.5, z0: 7.6}
+  # Hawk Screech (MR-105 Turel, tiro dei 76 mm) sul cielo della plancia (sommita' 15,0 m a 33,7 m)
+  - {tipo: direttore_tiro, nome: hawk_screech, x: {prua: 33.7}, z0: 13.0, altezza_base: 0.2, disco: 2.0}
+  # albero: torre tronco-piramidale, Strut Curve, pennone, alberetto a traliccio (cima 23,5 m a 45,9 m)
+  - {tipo: tuga, nome: albero_torre, x0: {prua: 45.4}, x1: {prua: 41.7}, y0: -1.7, y1: 1.7, z0: 9.9, z1: 15.8, rastrema: 0.93, mat: bianco}
+  - {tipo: tuga, nome: albero_torre_alta, x0: {prua: 44.8}, x1: {prua: 42.2}, y0: -1.2, y1: 1.2, z0: 15.8, z1: 17.7, rastrema: 0.8, mat: bianco}
+  - {tipo: cilindro, nome: strut_curve_base, x: {prua: 42.2}, y: 0, r: 0.3, z0: 17.7, z1: 18.5, n: 8}
+  - {tipo: paraboloide, nome: strut_curve, x: {prua: 42.0}, y: 0, z: 19.1, larghezza: 2.4, altezza: 1.3, profondita: 0.5, orientamento: 60}
+  - {tipo: pennone, nome: pennone, x: {prua: 43.0}, z: 17.6, semilunghezza: 4.5}
+  - {tipo: asta, nome: piattaforma_prodiera_albero, da: [{prua: 41.0}, 0, 17.6], a: [{prua: 38.9}, 0, 17.6], spessore: 0.3}
+  - {tipo: asta, nome: puntone_alberetto, da: [{prua: 44.8}, 0, 16.6], a: [{prua: 45.8}, 0, 18.4], spessore: 0.25}
+  - {tipo: traliccio, nome: alberetto, x: {prua: 46.0}, base: 1.0, cima: 0.35, z0: 16.0, z1: 23.5, piani: [20.0], spessore: 0.22}
+  # due AK-230 binati da 30 mm affiancati all'albero (quote dalla foto della 356)
+  - {tipo: ak230, nome: ak230_sinistra, x: {prua: 43.0}, y: 3.6, z0: 7.6, altezza: 1.9}
+  - {tipo: ak230, nome: ak230_dritta, x: {prua: 43.0}, y: -3.6, z0: 7.6, altezza: 1.9}
+  # Drum Tilt (MR-104 Rys', tiro degli AK-230): radome sferico su colonna (centro triangolato 13,1 m a 48,7 m)
+  - {tipo: cilindro, nome: drum_tilt_colonna, x: {prua: 48.8}, y: 0, r: 1.4, r_alto: 0.8, z0: 7.6, z1: 11.6, n: 10}
+  - {tipo: tuga, nome: drum_tilt_piattaforma, x0: {prua: 49.9}, x1: {prua: 47.8}, y0: -1.0, y1: 1.0, z0: 11.45, z1: 11.7}
+  - {tipo: sfera, nome: drum_tilt, x: {prua: 48.7}, y: 0, z: 13.0, r: 0.8, mat: sovrastruttura, n: 8}
+  # fumaiolo basso a cielo inclinato verso poppa
+  - {tipo: prisma_xz, nome: fumaiolo, profilo: [[{prua: 57.3}, 3.4], [{prua: 57.9}, 9.6], [{prua: 50.4}, 11.4], [{prua: 50.4}, 3.4]], y0: -2.1, y1: 2.1, mat: bianco}
+  # lance sulle grue ai lati del fumaiolo
+  - {tipo: tuga, nome: lancia_sinistra, x0: {prua: 54.6}, x1: {prua: 47.5}, y0: 3.9, y1: 5.9, z0: 4.3, z1: 5.9, rastrema: 0.8}
+  - {tipo: tuga, nome: lancia_dritta, x0: {prua: 54.6}, x1: {prua: 47.5}, y0: -5.9, y1: -3.9, z0: 4.3, z1: 5.9, rastrema: 0.8}
+  # tuga della versione 1159T tra fumaiolo e torretta poppiera (sommita' 6,5 m)
+  - {tipo: tuga, nome: tuga_1159t, x0: {prua: 66.0}, x1: {prua: 57.3}, y0: -4.2, y1: 4.2, z0: 3.0, z1: 6.5, mat: bianco}
+  # torretta poppiera con il Pop Group (direzione del tiro dell'Osa-M, sommita' 12,0 m a 68,9 m)
+  - {tipo: tuga, nome: torretta_poppiera, x0: {prua: 71.0}, x1: {prua: 66.0}, y0: -2.6, y1: 2.6, z0: 3.0, z1: 8.05, mat: bianco}
+  - {tipo: tuga, nome: torretta_poppiera_alta, x0: {prua: 69.6}, x1: {prua: 67.4}, y0: -1.3, y1: 1.3, z0: 8.05, z1: 9.75, mat: bianco}
+  - {tipo: direttore_tiro, nome: pop_group, x: {prua: 68.8}, z0: 9.75, altezza_base: 0.6, larghezza: 2.2, disco: 1.2, orientamento: 180}
+  # tuga poppiera con il lanciatore Osa-M (SA-N-4) a scomparsa (pozzo ZIF-122)
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 78.8}, x1: {prua: 71.0}, y0: -4.0, y1: 4.0, z0: 3.0, z1: 6.6, mat: bianco}
+  # (lanciatore a scomparsa abbassato: il pozzo ZIF-122 e' chiuso da un coperchio quasi a filo della tuga)
+  - {tipo: cilindro, nome: osa_m, x: {prua: 75.0}, y: 0, r: 1.9, z0: 6.6, z1: 6.95, n: 16}
+  # torre Y: AK-726 binato da 76 mm, canne verso poppa (sommita' triangolata 7,4 m a 83,5 m)
+  - {tipo: ak726, nome: ak726_y, x: {prua: 83.5}, y: 0, z0: 3.6, verso: -1, lunghezza: 5.2, larghezza: 3.6, altezza: 3.8, canna: 3.2, smusso: 1.2}
+  # ferroguide per bombe di profondita' e mine sul cassero di poppa
+  - {tipo: scatola, nome: ferroguide_sinistra, x0: {prua: 96.2}, x1: {prua: 88.0}, y0: 2.6, y1: 3.2, z0: 3.6, z1: 4.3, mat: scuro}
+  - {tipo: scatola, nome: ferroguide_dritta, x0: {prua: 96.2}, x1: {prua: 88.0}, y0: -3.2, y1: -2.6, z0: 3.6, z1: 4.3, mat: scuro}
+  # rivestimento chiaro dello specchio di poppa (visto solo dall'ombreggiatura del modello: nessuna foto da poppa)
+  - {tipo: scatola, nome: specchio_poppa, x0: {prua: 96.55}, x1: {prua: 96.45}, y0: -4.6, y1: 4.6, z0: 1.0, z1: 3.75, mat: sovrastruttura}
+  # aste di bandiera e di bompresso
+  - {tipo: asta, nome: asta_prua, da: [{prua: 0.8}, 0, 7.6], a: [{prua: 0.8}, 0, 10.6], spessore: 0.15}
+  - {tipo: asta, nome: asta_poppa, da: [{prua: 96.0}, 0, 3.8], a: [{prua: 96.0}, 0, 7.6], spessore: 0.15}
+
+foto:
+  - nome: fianco_sinistro
+    file: extracted/navi/koni/foto/fianco_sinistro_cuba356_1984_full.jpg
+    nave: 356 cubana (Progetto 1159T, ex SKR-471), 1984
+    maschera_file: extracted/navi/koni/foto/fianco_sinistro_cuba356_1984_maschera.png   # ritoccata a mano (classi/koni_maschere.yaml)
+    qualita: 1.0
+    specchiabile: true
+    orizzonte_y: 1384
+    soglia_cielo: 195
+    riquadro: [60, 850, 2988, 1384]
+    escludi: [[2375, 850, 2988, 1395]]          # portaerei classe Kiev sullo sfondo
+    cancella: [[570, 1595, 722, 1680]]          # numero 356
+    soglia_schiuma: 190
+    fotocamera_iniziale: {posizione: [530, 1670, 14], bersaglio: [5, 0, 8], f: 60000}
+    orizzonte_punti: [[300, 1388], [2850, 1380]]
+    punti:
+      - [[{prua: 0}, 0, 7.7], [76, 1468]]           # dritto di prua in coperta
+      - [[{prua: 45.9}, 0, 23.5], [1577, 920]]      # cima dell'alberetto
+      - [[{prua: 41.8}, 0, 19.7], [1445, 1050]]     # sommita' dello Strut Curve
+      - [[{prua: 33.7}, 0, 15.0], [1183, 1218]]     # sommita' dell'Hawk Screech
+      - [[{prua: 48.7}, 0, 13.1], [1665, 1276]]     # centro del radome del Drum Tilt
+      - [[{prua: 68.9}, 0, 12.0], [2330, 1313]]     # sommita' del Pop Group
+      - [[{prua: 17.4}, 0, 9.5], [650, 1404]]       # cielo della torre A
+      - [[{prua: 83.5}, 0, 7.4], [2800, 1466]]      # cielo della torre Y
+      - [[{prua: 43.0}, 3.6, 9.5], [1525, 1400]]    # cupola dell'AK-230 di sinistra
+  - nome: fianco_dritto
+    file: extracted/navi/koni/foto/fianco_dritto_delfin_1982.jpg
+    nave: Del'fin (Progetto 1159, VMF), 1982
+    maschera_file: extracted/navi/koni/foto/fianco_dritto_delfin_1982_maschera.png      # ritoccata a mano (classi/koni_maschere.yaml)
+    qualita: 0.8
+    specchiabile: true
+    orizzonte_y: 784
+    soglia_cielo: 200
+    riquadro: [0, 400, 1920, 784]
+    cancella: [[1535, 828, 1622, 868]]          # numero 693
+    soglia_schiuma: 190
+    fotocamera_iniziale: {posizione: [50, -1900, 10], bersaglio: [0, 0, 8], f: 37000}
+    orizzonte_punti: [[160, 786], [1720, 782]]
+    punti:
+      - [[{prua: 0}, 0, 7.7], [1916, 752]]          # dritto di prua in coperta
+      - [[{prua: 5.2}, 0, 0], [1820, 902]]          # piede del dritto al galleggiamento
+      - [[{prua: 96.5}, -4.7, 3.7], [34, 839]]      # specchio di poppa, spigolo di dritta
+      - [[{prua: 45.9}, 0, 23.5], [1022, 448]]      # cima dell'alberetto
+      - [[{prua: 41.8}, 0, 19.7], [1100, 520]]      # sommita' dello Strut Curve
+      - [[{prua: 33.7}, 0, 15.0], [1260, 610]]      # sommita' dell'Hawk Screech
+      - [[{prua: 48.7}, 0, 13.1], [967, 652]]       # centro del radome del Drum Tilt
+      - [[{prua: 68.9}, 0, 12.0], [578, 670]]       # sommita' del Pop Group
+      - [[{prua: 17.4}, 0, 9.5], [1581, 723]]       # cielo della torre A
+      - [[{prua: 83.5}, 0, 7.4], [291, 763]]        # cielo della torre Y
+  - nome: prua_sinistra
+    file: extracted/navi/koni/foto/prua_sinistra_delfin_1982.jpg
+    nave: Del'fin (Progetto 1159, VMF), 1982
+    maschera_file: extracted/navi/koni/foto/prua_sinistra_delfin_1982_maschera.png      # ritoccata a mano (classi/koni_maschere.yaml)
+    qualita: 0.8
+    specchiabile: true
+    orizzonte_y: 0              # orizzonte invisibile nella foschia (la maschera a mano lo rende superfluo)
+    soglia_cielo: 0
+    cancella: [[465, 922, 565, 985]]            # numero 693
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [346, 252, 12], bersaglio: [0, 0, 8], f: 20000}
+    punti:
+      - [[{prua: 0}, 0, 7.7], [57, 792]]            # dritto di prua in coperta
+      - [[{prua: 5.2}, 0, 0], [157, 1045]]          # piede del dritto al galleggiamento
+      - [[{prua: 96.5}, 4.7, 3.9], [1875, 970]]     # specchio di poppa, spigolo di sinistra
+      - [[{prua: 45.9}, 0, 23.5], [979, 357]]       # cima dell'alberetto
+      - [[{prua: 41.8}, 0, 19.7], [892, 465]]       # sommita' dello Strut Curve
+      - [[{prua: 33.7}, 0, 15.0], [738, 590]]       # sommita' dell'Hawk Screech
+      - [[{prua: 48.7}, 0, 13.1], [1010, 663]]      # centro del radome del Drum Tilt
+      - [[{prua: 68.9}, 0, 12.0], [1340, 720]]      # sommita' del Pop Group
+      - [[{prua: 83.5}, 0, 7.4], [1561, 860]]       # cielo della torre Y
+  - nome: fianco_dritto_aereo
+    file: extracted/navi/koni/foto/fianco_dritto_aereo_berlin_1982.jpg
+    nave: Berlin (Progetto 1159, Volksmarine), 1982 (ripresa aerea, ~17 gradi dall'alto, quasi al traverso)
+    qualita: 0.6
+    specchiabile: true
+    orizzonte_y: 0              # nessun cielo nell'inquadratura
+    soglia_cielo: 0
+    cancella: [[1310, 770, 1395, 818]]          # numero 142
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [230, -3510, 1110], bersaglio: [0, 0, 5], f: 50000}
+    punti:
+      - [[{prua: 0}, 0, 7.7], [1648, 702]]          # dritto di prua in coperta
+      - [[{prua: 96.5}, -4.7, 3.7], [95, 875]]      # specchio di poppa, spigolo di dritta
+      - [[{prua: 96.5}, 4.7, 3.9], [88, 828]]       # specchio di poppa, spigolo di sinistra
+      - [[{prua: 45.9}, 0, 23.5], [878, 499]]       # cima dell'alberetto
+      - [[{prua: 33.7}, 0, 15.0], [1084, 626]]      # sommita' dell'Hawk Screech
+      - [[{prua: 48.7}, 0, 13.1], [845, 663]]       # centro del radome del Drum Tilt
+      - [[{prua: 68.9}, 0, 12.0], [520, 700]]       # sommita' del Pop Group
+      - [[{prua: 17.4}, 0, 9.5], [1361, 686]]       # cielo della torre A
+      - [[{prua: 83.5}, 0, 7.4], [291, 785]]        # cielo della torre Y

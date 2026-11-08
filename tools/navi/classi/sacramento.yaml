@@ -1,0 +1,144 @@
+# Nave da rifornimento rapido classe Sacramento (AOE-1), configurazione 1989.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua (x = L/2 - d).
+# Lunghezza e larghezza ufficiali (793 x 107 piedi). Quote e posizioni misurate sulla foto di fianco della
+# USS Sacramento (1988) calibrata con orizzonte e coppie coperta/galleggiamento (fotocamera a ~220 m,
+# quota ~30 m, focale ~2250 px sull'immagine ritagliata); dettagli in extracted/navi/sacramento/RAPPORTO.md.
+# Le foto di fianco sono ritagliate in alto: con l'orizzonte sotto il centro dell'immagine la fotocamera
+# uscirebbe dai limiti di camera.LIMITI (punto mirato z <= 40 m).
+# Parti proprie (kingpost e bracci di rifornimento, fumaiolo, Mk 29, Mk 91, gru, alberi a palo) in
+# classi/sacramento_parti.py; maschere delle foto in classi/sacramento_maschere.yaml.
+nome: Sacramento (AOE-1)
+uscita: extracted/navi/sacramento
+moduli_parti: [sacramento_parti.py]
+
+scafo:
+  L: 241.7
+  B: 32.6
+  bordo: [[0, 15.8], [15, 15.6], [50, 13.7], [90, 13.8], [190, 14.1], [241.7, 14.1]]
+  slancio: 4.0
+  finezza_prua: 70
+  specchio: 0.80
+  svasatura: 0.03
+  pienezza: [0.85, 0.5]
+  bagnasciuga: 2.0
+
+parti:
+  # superficie inclinata sotto il dritto di prua (vedi sacramento_parti.chiusura_dritto): stessi parametri dello scafo
+  - {tipo: chiusura_dritto, nome: chiusura_dritto, L: 241.7, B: 32.6, bordo: [[0, 15.8], [15, 15.6], [50, 13.7], [90, 13.8], [190, 14.1], [241.7, 14.1]],
+     slancio: 4.0, finezza_prua: 70, specchio: 0.80, svasatura: 0.03, pienezza: [0.85, 0.5], bagnasciuga: 2.0}
+  # castello: tuga del livello 01 con il lanciatore Sea Sparrow Mk 29
+  - {tipo: tuga, nome: tuga_castello, x0: {prua: 58.4}, x1: {prua: 25.7}, y0: -12.0, y1: 12.0, z0: 13.6, z1: 18.6, rastrema: 0.98}
+  - {tipo: lanciatore_mk29, nome: sea_sparrow_mk29, x: {prua: 32.2}, z0: 18.6}
+  # sovrastruttura prodiera (plancia), parte poppiera piu' stretta, livello 03 con i direttori Mk 91
+  - {tipo: tuga, nome: sovrastruttura_prodiera, x0: {prua: 58.4}, x1: {prua: 37.6}, y0: -13.0, y1: 13.0, z0: 18.6, z1: 29.5, rastrema: 0.97}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 38.6}, x1: {prua: 37.4}, y0: -12.6, y1: 12.6, z0: 25.6, z1: 27.2, mat: scuro, rastrema: 0.98}
+  - {tipo: tuga, nome: sovrastruttura_poppiera_plancia, x0: {prua: 72.0}, x1: {prua: 58.4}, y0: -11.0, y1: 11.0, z0: 13.6, z1: 31.0, rastrema: 0.97}
+  - {tipo: tuga, nome: sovrastruttura_poppiera_bassa, x0: {prua: 74.9}, x1: {prua: 72.0}, y0: -11.0, y1: 11.0, z0: 13.6, z1: 28.0, rastrema: 0.97}
+  - {tipo: tuga, nome: livello_03, x0: {prua: 58.4}, x1: {prua: 46.0}, y0: -8.0, y1: 8.0, z0: 29.5, z1: 33.4, rastrema: 0.95}
+  - {tipo: direttore_mk91, nome: mk91_prodiero, x: {prua: 50.0}, z0: 33.4, altezza: 0.8}
+  - {tipo: direttore_mk91, nome: mk91_poppiero, x: {prua: 58.1}, z0: 33.4, altezza: 2.6}
+  - {tipo: ciws, nome: phalanx_prodiero, x: {prua: 70.0}, z0: 31.0}
+  # albero prodiero: traliccio fino al pennone, alberetto, antenna radar
+  - {tipo: traliccio, nome: albero_prodiero, x: {prua: 64.6}, base: 3.0, cima: 1.2, z0: 29.5, z1: 46.5, piani: [38.5]}
+  - {tipo: pennone, nome: pennone_prodiero, x: {prua: 64.6}, z: 46.5, semilunghezza: 8.5}
+  - {tipo: asta, nome: alberetto_prodiero, da: [{prua: 64.6}, 0, 46.5], a: [{prua: 64.6}, 0, 62.1], spessore: 0.35}
+  - {tipo: antenna_radar, nome: radar_prodiero, x: {prua: 63.5}, z0: 57.2, larghezza: 3.0, altezza: 1.2, sbarre: 2, orientamento: 90}
+  # zona di carico: tuga centrale bassa tra le stazioni
+  - {tipo: tuga, nome: tuga_carico, x0: {prua: 160.0}, x1: {prua: 74.9}, y0: -12.0, y1: 12.0, z0: 13.6, z1: 20.4, rastrema: 0.99}
+  # case delle stazioni (verricelli, selle delle manichette): livello stretto sopra la tuga di carico
+  - {tipo: tuga, nome: tuga_carico_superiore, x0: {prua: 158.0}, x1: {prua: 76.0}, y0: -6.0, y1: 6.0, z0: 20.4, z1: 22.0, rastrema: 0.97}
+  # stazioni di rifornimento: kingpost [d, cima] e bracci inclinati (spezzate [d, z]) misurati sulla foto
+  - tipo: stazioni_rifornimento
+    nome: stazioni_rifornimento
+    z0: 22.0
+    kingpost: [[{prua: 96.5}, 29.2], [{prua: 115.3}, 28.4], [{prua: 135.7}, 28.4], [{prua: 155.2}, 27.0]]
+    bracci:
+      - [[{prua: 73.7}, 25.5], [{prua: 84.6}, 33.0], [{prua: 92.0}, 26.0]]
+      - [[{prua: 71.4}, 32.2], [{prua: 79.0}, 25.5]]
+      - [[{prua: 85.9}, 24.0], [{prua: 96.5}, 29.2], [{prua: 103.5}, 25.3]]
+      - [[{prua: 115.3}, 28.4], [{prua: 123.9}, 33.9], [{prua: 135.7}, 28.4], [{prua: 142.5}, 25.0], [{prua: 164.7}, 34.8]]
+  - {tipo: asta, nome: palo_stazione_1, da: [{prua: 84.6}, 0, 22.0], a: [{prua: 84.6}, 0, 33.0], spessore: 0.6, mat: scuro}
+  # braccio da carico bianco (inclinato verso poppa)
+  - {tipo: asta, nome: braccio_carico, da: [{prua: 98.0}, 0, 17.8], a: [{prua: 112.7}, 0, 28.6], spessore: 0.7, mat: bianco}
+  # sovrastruttura poppiera (apparato motore), fumaiolo, albero poppiero, gru, hangar e ponte di volo
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 208.5}, x1: {prua: 160.0}, y0: -13.5, y1: 13.5, z0: 13.8, z1: 25.3, rastrema: 0.98}
+  - {tipo: tuga, nome: tuga_fumaiolo, x0: {prua: 191.0}, x1: {prua: 165.0}, y0: -9.0, y1: 9.0, z0: 25.3, z1: 28.0, rastrema: 0.97}
+  - {tipo: fumaiolo_cilindrico, nome: fumaiolo, x: {prua: 178.3}, z0: 28.0, z1: 39.6, r: 5.6, cappello: 3.9, allungamento: 1.05}
+  - {tipo: albero_palo, nome: albero_poppiero, x: {prua: 166.2}, z0: 28.0, z_pennone: 45.8, z_cima: 69.9, semilunghezza_pennone: 6.0}
+  - {tipo: albero_palo, nome: alberetto_poppiero, x: {prua: 195.9}, z0: 25.3, z_pennone: 41.0, z_cima: 41.5, semilunghezza_pennone: 2.5, spessore: 0.5}
+  - {tipo: gru, nome: gru_poppiera, base: [{prua: 190.0}, 0, 26.5], cima: [{prua: 203.3}, 0, 33.4], z0: 25.3}
+  - {tipo: tuga, nome: tuga_gru, x0: {prua: 207.0}, x1: {prua: 197.0}, y0: -8.0, y1: 8.0, z0: 25.3, z1: 28.0, rastrema: 0.97}
+  - {tipo: tuga, nome: hangar, x0: {prua: 215.0}, x1: {prua: 208.5}, y0: -10.0, y1: 10.0, z0: 14.0, z1: 26.8, rastrema: 0.98}
+  - {tipo: tuga, nome: hangar_basso, x0: {prua: 221.0}, x1: {prua: 215.0}, y0: -10.0, y1: 10.0, z0: 14.0, z1: 23.1, rastrema: 0.98}
+  - {tipo: ciws, nome: phalanx_poppiero, x: {prua: 216.8}, z0: 26.8}
+  - {tipo: imbarcazione, nome: lancia_dritta_1, x0: {prua: 186.0}, x1: {prua: 176.0}, y: -14.5, z0: 16.5, larghezza: 3.0, altezza: 1.8}
+  - {tipo: imbarcazione, nome: lancia_dritta_2, x0: {prua: 200.0}, x1: {prua: 190.0}, y: -14.5, z0: 16.5, larghezza: 3.0, altezza: 1.8}
+
+foto:
+  - nome: fianco_sinistro
+    file: extracted/navi/sacramento/foto/fianco_sinistro_1988_ritaglio.jpg   # originale senza le prime 540 righe di cielo
+    nave: USS Sacramento (AOE-1), dicembre 1988
+    maschera_file: extracted/navi/sacramento/foto/fianco_sinistro_1988_ritaglio_maschera.png   # classi/sacramento_maschere.yaml
+    qualita: 1.0
+    esponente_peso: 2
+    specchiabile: true
+    orizzonte_y: 763
+    soglia_cielo: 0
+    cancella: [[520, 965, 670, 1030]]        # numero di scafo "AOE 1" a prua
+    fotocamera_iniziale: {posizione: [90, 200, 30], bersaglio: [0, 0, 25], f: 2250}
+    punti:
+      - [[{prua: 0}, 0, 15.8], [277, 933]]           # dritto di prua in coperta
+      - [[{prua: 4.0}, 0, 0], [333, 1129]]           # piede del dritto al galleggiamento
+      - [[{prua: 241.7}, 13.0, 14.1], [2728, 901]]   # specchio di poppa, spigolo di sinistra in coperta
+      - [[{prua: 37.6}, 13.0, 29.5], [780, 760]]     # plancia, spigolo prodiero di sinistra in alto
+      - [[{prua: 64.6}, 0, 46.5], [1094, 569]]       # albero prodiero all'altezza del pennone
+      - [[{prua: 166.2}, 0, 45.8], [2072, 604]]      # albero poppiero all'altezza del pennone
+      - [[{prua: 178.8}, 0, 39.6], [2172, 665]]      # cima del fumaiolo, centro
+      - [[{prua: 123.9}, 0, 33.9], [1702, 715]]      # vertice del telaio ad A centrale
+  - nome: fianco_dritta
+    file: extracted/navi/sacramento/foto/fianco_dritta_camden_1987_ritaglio.jpg   # miniatura 1920 px senza le prime 650 righe
+    nave: USS Camden (AOE-2), agosto 1987
+    maschera_file: extracted/navi/sacramento/foto/fianco_dritta_camden_1987_ritaglio_maschera.png
+    qualita: 0.5
+    esponente_peso: 2
+    specchiabile: true
+    cancella: [[1408, 320, 1472, 354]]        # numero di scafo "AOE 2" a prua
+    fotocamera_iniziale: {posizione: [300, -1200, 45], bersaglio: [0, 0, 12], f: 6000}
+    punti:
+      - [[{prua: 0}, 0, 15.8], [1593, 312]]          # dritto di prua in coperta
+      - [[{prua: 4.0}, 0, 0], [1558, 410]]          # piede del dritto al galleggiamento
+      - [[{prua: 241.7}, -13.0, 14.1], [340, 311]]   # specchio di poppa, spigolo di dritta in coperta
+      - [[{prua: 37.6}, -13.0, 29.5], [1343, 245]]   # plancia, spigolo prodiero di dritta in alto
+      - [[{prua: 178.3}, 0, 39.6], [650, 202]]       # cima del fumaiolo, centro
+      - [[{prua: 32.2}, 0, 21.0], [1398, 290]]       # lanciatore Mk 29, sommita'
+  - nome: prua_dritta
+    file: extracted/navi/sacramento/foto/prua_dritta_seattle_1983_1920.jpg
+    nave: USS Seattle (AOE-3), ottobre 1983
+    maschera_file: extracted/navi/sacramento/foto/prua_dritta_seattle_1983_maschera.png
+    qualita: 0.6
+    esponente_peso: 2
+    specchiabile: true
+    cancella: [[1495, 790, 1580, 838]]        # numero di scafo "AOE 3" a prua
+    fotocamera_iniziale: {posizione: [500, -600, 200], bersaglio: [0, 0, 15], f: 5000}
+    punti:
+      - [[{prua: 0}, 0, 15.8], [1756, 791]]          # dritto di prua in coperta
+      - [[{prua: 4.0}, 0, 0], [1695, 905]]           # piede del dritto al galleggiamento
+      - [[{prua: 241.7}, -13.0, 14.1], [54, 572]]    # specchio di poppa, spigolo di dritta in coperta
+      - [[{prua: 32.2}, 0, 21.0], [1457, 725]]       # lanciatore Mk 29, sommita'
+      - [[{prua: 25.7}, -12.0, 18.6], [1500, 755]]   # tuga del castello, spigolo prodiero di dritta in alto
+  - nome: poppa_dritta
+    file: extracted/navi/sacramento/foto/poppa_dritta_seattle_1983_1920.jpg
+    nave: USS Seattle (AOE-3), ottobre 1983
+    maschera_file: extracted/navi/sacramento/foto/poppa_dritta_seattle_1983_maschera.png
+    qualita: 0.6
+    esponente_peso: 2
+    specchiabile: true
+    cancella: [[560, 962, 606, 992], [474, 966, 510, 982]]   # numero "AOE 3" e nome "SEATTLE" a poppa
+    fotocamera_iniziale: {posizione: [-450, -450, 150], bersaglio: [0, 0, 15], f: 4000}
+    punti:
+      - [[{prua: 0}, 0, 15.8], [1590, 822]]          # dritto di prua in coperta
+      - [[{prua: 241.7}, -13.0, 14.1], [560, 933]]   # specchio di poppa, spigolo di dritta in coperta (sopra il camminamento)
+      - [[{prua: 241.7}, 13.0, 14.1], [434, 921]]    # specchio di poppa, spigolo di sinistra in coperta (sopra il camminamento)
+      - [[{prua: 241.7}, -12.5, 0], [560, 1025]]   # specchio di poppa, spigolo di dritta al galleggiamento
+      - [[{prua: 241.7}, 12.5, 0], [452, 1016]]    # specchio di poppa, spigolo di sinistra al galleggiamento

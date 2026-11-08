@@ -1,0 +1,19 @@
+# Maschera tracciata a mano della foto di fianco sinistro della Kidd (1989), 636 px (unica risoluzione
+# disponibile). Nave tutta contro il mare: scafo e sovrastrutture come poligoni pieni (soglia 256);
+# alberi a traliccio dentro un inviluppo con soglia bassa (il traliccio e' nero, il mare grigio).
+file: extracted/navi/kidd/foto/fianco_sinistro_kidd_1989.jpg
+uscita: extracted/navi/kidd/foto/fianco_sinistro_kidd_1989_maschera.png
+scafo: [[31, 255], [100, 258], [200, 258], [300, 256], [420, 254], [583, 250], [585, 266], [500, 271],
+        [420, 275], [330, 279], [250, 284], [150, 289], [100, 288], [60, 272]]
+soglia_scafo: 256
+linea_coperta: [[25, 256], [100, 259], [200, 259], [300, 257], [420, 255], [590, 251]]
+inviluppo: [[205, 112], [355, 112], [355, 216], [205, 216]]
+soglia_sovrastrutture: 85
+includi:
+  - [[200, 258], [200, 228], [212, 226], [212, 214], [250, 212], [262, 210], [262, 203], [283, 203],
+     [283, 212], [305, 213], [313, 208], [350, 208], [355, 212], [385, 212], [400, 203], [410, 203],
+     [412, 212], [420, 212], [420, 236], [482, 236], [484, 250], [200, 258]]
+  - [[130, 252], [132, 244], [145, 244], [146, 252]]
+  - [[353, 198], [393, 198], [393, 212], [353, 212]]
+area_minima: 6
+buco_massimo: 20

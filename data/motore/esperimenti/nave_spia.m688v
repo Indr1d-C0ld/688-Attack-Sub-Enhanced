@@ -1,0 +1,17 @@
+# Esperimento pronto del vetrino di Dio (docs/28 §5, D3; formato: nota trailer1-d2-forma-m688v.md). La scena S5 del
+# convoglio: tre Perry di scorta (8, 9, 10), il Victor III (12) che lancia fra 598 e 758 s. Una spia da' al Patto, ogni
+# minuto e per tutta la partita, il quadro vero della NATO: dove sono il convoglio e la scorta. Verso i sottomarini passa dal
+# canale, come ogni rapporto (tools/re/prove/quadro_radio/proposta.md): il Victor lo copia solo a quota d'antenna, al ciclo.
+[esperimento]
+titolo = "La nave spia che vede tutto"
+mostra = "La spia ha il quadro vero della NATO, ma il Victor lo copia solo quando sale a quota d'antenna, al ciclo del broadcast"
+ipotesi = "La stessa partita di quella senza spia: il Victor e' sempre impegnato e non sale mai a copiare. Misurato il 05/11: stessa impronta in 10 semi su 10"
+codice = "8FZD3Q-4G0000-04K000-0000HZ-G002QH"
+semi = 10
+da = 1
+
+[[intervento]]
+tempo = 0.0
+tipo = "spia"
+durata_s = 0.0
+testi = { parte = "urss", altra = "usa" }

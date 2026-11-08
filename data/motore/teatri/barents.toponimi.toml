@@ -1,0 +1,132 @@
+# Toponimi del teatro barents: generato da tools/pipeline/toponimi.py, non modificare a mano.
+# x, y in metri sul piano del teatro (come il fondale); rango 1 il più importante; acqua = nome di mare.
+
+[[nome]]
+testo = "Mare di Barents"
+en = "Barents Sea"
+tipo = "mare"
+acqua = true
+rango = 2
+x = 26000
+y = 30700
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Costa del Murman"
+en = "Murman Coast"
+tipo = "costa"
+acqua = false
+rango = 3
+x = 23953
+y = -122595
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Golfo di Kola"
+en = "Kola Bay"
+tipo = "golfo"
+acqua = true
+rango = 3
+x = -60516
+y = -99644
+fonte = "dossier 03 §A2 (ingresso del Golfo di Kola)"
+
+[[nome]]
+testo = "Severomorsk"
+en = "Severomorsk"
+tipo = "base"
+acqua = false
+rango = 3
+x = -63012
+y = -119666
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Gadžievo"
+en = "Gadzhiyevo"
+tipo = "base"
+acqua = false
+rango = 4
+x = -66052
+y = -99499
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Isola Kildin"
+en = "Kildin Island"
+tipo = "isola"
+acqua = false
+rango = 4
+x = -33498
+y = -91245
+fonte = "dossier 03 §A2"
+
+[[nome]]
+testo = "Murmansk"
+en = "Murmansk"
+tipo = "citta"
+acqua = false
+rango = 4
+x = -76115
+y = -130454
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Penisola Rybačij"
+en = "Rybachy Peninsula"
+tipo = "penisola"
+acqua = false
+rango = 4
+x = -100444
+y = -42482
+fonte = "dossier 03 §A2"
+
+[[nome]]
+testo = "Poljarnyj"
+en = "Polyarny"
+tipo = "base"
+acqua = false
+rango = 4
+x = -61448
+y = -105200
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Zapadnaja Lica"
+en = "Zapadnaya Litsa"
+tipo = "base"
+acqua = false
+rango = 4
+x = -100050
+y = -79347
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Golfo Motovskij"
+en = "Motovsky Gulf"
+tipo = "golfo"
+acqua = true
+rango = 5
+x = -91778
+y = -68515
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Teriberka"
+en = "Teriberka"
+tipo = "citta"
+acqua = false
+rango = 5
+x = 5955
+y = -109319
+fonte = "dossier 03 §A2"
+
+[[nome]]
+testo = "Vidjaevo"
+en = "Vidyayevo"
+tipo = "base"
+acqua = false
+rango = 5
+x = -85938
+y = -91058
+fonte = "a mano, coordinate al chilometro (curatore kit)"

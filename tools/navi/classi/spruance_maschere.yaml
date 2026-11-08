@@ -1,0 +1,69 @@
+# Maschere ritoccate a mano delle foto della Spruance (tools/navi/maschera_manuale.py), coordinate in pixel.
+# Leftwich 1987, fianco dritto (2684 x 1570 px, copia corretta: altezza x 0,90, vedi RAPPORTO.md): ripresa al livello del mare, orizzonte all'altezza della coperta;
+# sovrastrutture chiare e alberi scuri contro un cielo grigio chiaro: metodo cielo. Sotto l'orizzonte le
+# sovrastrutture chiare si staccano dal mare scuro (soglia_mare_chiaro); lo scafo e' un poligono pieno.
+metodo: cielo
+file: extracted/navi/spruance/foto/fianco_dritto_leftwich_1987_corretta.jpg
+uscita: extracted/navi/spruance/foto/fianco_dritto_leftwich_1987_maschera.png
+sfocatura: 1.8
+orizzonte: [[460, 866], [1930, 858]]   # 3 px sotto la linea vera: la fascia sfumata dell orizzonte va col cielo
+margine_orizzonte: 0
+soglia: 16
+soglia_mare_chiaro: 150
+inviluppo: [[465, 932], [465, 842], [870, 842], [870, 666], [1060, 666], [1060, 576], [1200, 576], [1200, 738],
+            [1320, 738], [1320, 567], [1470, 567], [1470, 774], [1500, 774], [1500, 842], [1915, 842], [1915, 932]]
+includi:
+  - [[477, 888], [700, 889], [1000, 890], [1300, 889], [1600, 886], [1898, 878], [1870, 900], [1850, 920],
+     [1500, 923], [1000, 924], [478, 925]]
+  - [[905, 814], [975, 806], [975, 783], [1040, 783], [1062, 792], [1062, 861], [905, 861]]   # pareti chiare della tuga poppiera e del mack
+  - [[1200, 814], [1484, 810], [1484, 866], [1200, 866]]   # parte bassa della tuga prodiera, chiara come il cielo
+  - [[1608, 861], [1646, 861], [1652, 887], [1604, 887]]   # torre Mk45 prodiera
+  - [[1484, 864], [1568, 864], [1568, 889], [1484, 889]]   # lanciatore ASROC
+escludi:
+  - [[465, 844], [537, 844], [537, 868], [465, 868]]       # fascia dell'orizzonte a poppa (tranne i due candelieri)
+  - [[558, 844], [676, 844], [676, 868], [558, 868]]
+  - [[750, 844], [900, 844], [900, 865], [750, 865]]
+  - [[1488, 842], [1604, 842], [1604, 862], [1488, 862]]   # fascia dell'orizzonte sopra l'ASROC
+  - [[1655, 842], [1915, 842], [1915, 866], [1655, 866]]   # fascia dell'orizzonte davanti alla torre prodiera
+area_minima: 40
+buco_massimo: 400
+---
+# Oldendorf 1984, poppa sinistra (2715 px): nave chiara su mare blu scuro, alberi contro il cielo.
+# Elicottero SH-2F sul ponte di volo escluso (non fa parte della nave). Porta dell'hangar e zone in ombra
+# (scure come il mare) aggiunte con includi.
+metodo: cielo
+file: extracted/navi/spruance/foto/poppa_sinistra_oldendorf_1984.jpg
+uscita: extracted/navi/spruance/foto/poppa_sinistra_oldendorf_1984_maschera.png
+sfocatura: 1.6
+orizzonte: [[1300, 474], [2650, 467]]
+margine_orizzonte: 0
+soglia: 18
+soglia_mare_chiaro: 150
+inviluppo: [[40, 900], [400, 700], [400, 0], [1250, 0], [1250, 600], [1600, 680], [1650, 900], [2700, 1250],
+            [2700, 1700], [2100, 1700], [100, 1100]]
+includi:
+  - [[1150, 880], [1590, 870], [1590, 1110], [1150, 1110]]      # parete poppiera dell'hangar (in ombra)
+  - [[2133, 1462], [2622, 1442], [2620, 1640], [2144, 1662]]     # specchio di poppa (in ombra)
+  - [[612, 668], [818, 668], [818, 770], [612, 770]]             # cappello nero del mack prodiero
+  - [[1180, 690], [1418, 690], [1418, 776], [1180, 776]]         # cappello nero del mack poppiero
+escludi:
+  - [[2150, 1668], [2715, 1645], [2715, 1786], [2150, 1786]]     # scia di poppa
+  - [[1500, 990], [1850, 990], [1880, 1070], [1830, 1160], [1560, 1160], [1500, 1100]]   # elicottero SH-2F
+area_minima: 60
+buco_massimo: 1500
+---
+# Caron 1987, fianco sinistro (3000 px): ripresa dall'alto (~4 gradi), nave tutta contro il mare chiaro (~200).
+# Scafo e coperta: poligono pieno ricavato dalla sagoma dello scafo del modello proiettata con la fotocamera
+# calibrata (errore sui punti 3,6 px). Sopra la coperta: nave = piu' scuro del mare alle spalle.
+file: extracted/navi/spruance/foto/fianco_sinistro_caron_1987.jpg
+uscita: extracted/navi/spruance/foto/fianco_sinistro_caron_1987_maschera.png
+scafo: [[149, 1197], [209, 1201], [269, 1208], [329, 1213], [389, 1218], [449, 1223], [509, 1227], [569, 1231], [629, 1234], [689, 1237], [749, 1241], [809, 1243], [869, 1246], [929, 1248], [989, 1251], [1049, 1253], [1109, 1254], [1169, 1255], [1229, 1256], [1289, 1258], [1349, 1259], [1409, 1260], [1469, 1261], [1529, 1263], [1589, 1264], [1649, 1265], [1709, 1266], [1769, 1268], [1829, 1269], [1889, 1270], [1949, 1271], [2009, 1273], [2069, 1274], [2129, 1275], [2189, 1284], [2249, 1298], [2309, 1299], [2369, 1300], [2429, 1302], [2489, 1303], [2509, 1303], [2509, 1333], [2489, 1380], [2429, 1379], [2369, 1378], [2309, 1377], [2249, 1376], [2189, 1376], [2129, 1375], [2069, 1374], [2009, 1372], [1949, 1371], [1889, 1370], [1829, 1369], [1769, 1367], [1709, 1366], [1649, 1365], [1589, 1364], [1529, 1362], [1469, 1361], [1409, 1360], [1349, 1359], [1289, 1357], [1229, 1356], [1169, 1355], [1109, 1354], [1049, 1352], [989, 1351], [929, 1350], [869, 1349], [809, 1347], [749, 1346], [689, 1344], [629, 1342], [569, 1340], [509, 1338], [449, 1335], [389, 1333], [329, 1331], [269, 1327], [209, 1275], [149, 1199]]
+soglia_scafo: 256
+linea_coperta: [[119, 1197], [149, 1197], [209, 1201], [269, 1208], [329, 1213], [389, 1218], [449, 1223], [509, 1227], [569, 1231], [629, 1234], [689, 1237], [749, 1241], [809, 1243], [869, 1246], [929, 1248], [989, 1251], [1049, 1253], [1109, 1254], [1169, 1255], [1229, 1256], [1289, 1258], [1349, 1259], [1409, 1260], [1469, 1261], [1529, 1263], [1589, 1264], [1649, 1265], [1709, 1266], [1769, 1268], [1829, 1269], [1889, 1270], [1949, 1271], [2009, 1273], [2069, 1274], [2129, 1275], [2189, 1284], [2249, 1298], [2309, 1299], [2369, 1300], [2429, 1302], [2489, 1303], [2509, 1303], [2539, 1303]]
+inviluppo: [[540, 1250], [540, 1185], [610, 1185], [610, 1225], [740, 1225], [740, 1180], [840, 1180], [840, 1060],
+            [850, 1060], [850, 730], [1010, 730], [1010, 1040], [1300, 1040], [1300, 770], [1480, 770], [1480, 1040],
+            [1700, 1040], [1700, 1150], [1820, 1150], [1820, 1200], [2140, 1200], [2140, 1235], [2280, 1235],
+            [2280, 1245], [2340, 1245], [2340, 1290], [2480, 1290], [2480, 1320], [540, 1320]]
+soglia_sovrastrutture: 165
+area_minima: 40
+buco_massimo: 600

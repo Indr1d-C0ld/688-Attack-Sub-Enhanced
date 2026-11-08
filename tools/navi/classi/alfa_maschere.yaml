@@ -1,0 +1,58 @@
+# Maschere tracciate a mano delle foto dell'Alfa (tools/navi/maschera_manuale.py).
+# Fianco sinistro 1983 (640 x 423 px): scafo nero (15-80) su mare grigio (95-115) e schiuma bianca (>200): poligono
+# stretto attorno a scafo e vela, dentro e' nave cio' che e' piu' scuro di 100 (schiuma esclusa); alberi forzati.
+file: extracted/navi/alfa/foto/fianco_sinistro_1983.jpg
+uscita: extracted/navi/alfa/foto/fianco_sinistro_1983_maschera.png
+scafo: [[18, 262], [22, 250], [30, 243], [45, 238], [100, 236], [150, 236], [200, 237], [206, 233], [212, 222], [220, 212],
+        [230, 205], [245, 200], [268, 199], [330, 199], [360, 200], [375, 204], [383, 208], [395, 216], [408, 228],
+        [420, 240], [432, 249], [470, 253], [520, 257], [560, 261], [600, 265], [640, 268], [640, 292], [600, 288],
+        [560, 285], [520, 284], [480, 283], [440, 283], [400, 282], [340, 282], [250, 272], [150, 268], [80, 270],
+        [40, 272]]
+soglia_scafo: 100
+linea_coperta: [[0, 0], [640, 0]]
+inviluppo: [[0, 0], [1, 0], [1, 1]]
+soglia_sovrastrutture: 0
+includi:
+  - [[312, 140], [318, 140], [318, 200], [312, 200]]      # albero prodiero
+  - [[339, 126], [349, 126], [349, 146], [346, 146], [346, 200], [341, 200], [341, 146], [339, 146]]   # albero a bulbo
+  - [[360, 118], [363, 118], [363, 200], [360, 200]]      # antenna
+  - [[368, 131], [379, 131], [379, 145], [376, 145], [376, 204], [370, 204], [370, 145], [368, 145]]   # albero a gabbia
+escludi:
+  - [[266, 183], [294, 183], [294, 199], [266, 199]]      # uomini sulla plancia
+area_minima: 30
+---
+# Giardinetto di sinistra 1983 (1920 x 1269 px): scafo illuminato (~126) piu' chiaro del mare (~103), vela nera:
+# poligono tracciato a mano sopra la schiuma, dentro e' nave cio' che e' piu' scuro di 170 (schiuma esclusa).
+# Alberi esclusi (alzati a quote diverse: escludi_parti nella classe).
+file: extracted/navi/alfa/foto/poppa_sinistra_1983.jpg
+uscita: extracted/navi/alfa/foto/poppa_sinistra_1983_maschera.png
+scafo: [[0, 405], [40, 415], [100, 438], [110, 460], [140, 478], [170, 500], [200, 530], [220, 555], [240, 570], [260, 575],
+        [300, 578], [350, 585], [400, 592], [450, 600], [500, 610], [550, 620], [600, 630], [650, 640], [700, 648],
+        [740, 654], [770, 658], [770, 662], [600, 652], [400, 642], [200, 632], [0, 634]]
+soglia_scafo: 170
+linea_coperta: [[0, 0], [1920, 0]]
+inviluppo: [[0, 0], [1, 0], [1, 1]]
+soglia_sovrastrutture: 0
+includi:
+  - [[1468, 640], [1505, 636], [1545, 644], [1552, 660], [1572, 712], [1545, 706], [1505, 688], [1468, 666]]   # timone
+escludi:
+  - [[276, 556], [302, 556], [302, 577], [276, 577]]      # attrezzatura in coperta
+area_minima: 60
+---
+# Giardinetto di dritta dall'aereo 1984 (640 x 312 px): scafo nero (~11) su mare mosso con cavi scuri: poligono
+# stretto, dentro e' nave cio' che e' piu' scuro di 70.
+file: extracted/navi/alfa/foto/poppa_dritta_aerea_1984.jpg
+uscita: extracted/navi/alfa/foto/poppa_dritta_aerea_1984_maschera.png
+scafo: [[158, 243], [180, 232], [200, 222], [220, 212], [240, 203], [260, 195], [280, 186], [300, 177], [320, 168],
+        [340, 158], [347, 147], [355, 140], [365, 130], [375, 120], [385, 110], [392, 103], [400, 98], [420, 92],
+        [440, 88], [460, 86], [480, 85], [490, 85], [520, 76], [550, 70], [580, 67], [600, 68], [612, 75], [617, 88],
+        [613, 97], [605, 103], [590, 110], [570, 118], [550, 127], [530, 137], [510, 143], [490, 150], [467, 160],
+        [450, 168], [430, 175], [400, 187], [370, 196], [333, 207], [300, 217], [267, 227], [230, 238], [200, 245],
+        [170, 250], [160, 249]]
+soglia_scafo: 70
+linea_coperta: [[0, 0], [640, 0]]
+inviluppo: [[0, 0], [1, 0], [1, 1]]
+soglia_sovrastrutture: 0
+includi:
+  - [[13, 272], [30, 266], [43, 269], [43, 290], [30, 297], [15, 296]]   # timone superiore
+area_minima: 20

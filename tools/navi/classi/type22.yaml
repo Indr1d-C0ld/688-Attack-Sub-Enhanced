@@ -1,0 +1,84 @@
+# Fregata Type 22 Batch 1 (classe Broadsword, Royal Navy), configurazione 1989: niente cannone; il Sea Wolf a sestuplo
+# sul castello e il secondo sopra l'hangar, coi Type 910 a prua e a poppa; i quattro Exocet MM38 davanti alla plancia;
+# la torre prodiera col Type 967/968, il fumaiolo largo col cappello nero, l'albero poppiero, i radomi del SCOT;
+# l'hangar doppio e il ponte di volo.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure: 131,2 x 14,8 m (dossier docs/ricerca/32_firme_lotto2.md); posizioni e quote
+# misurate sulla foto di dritta del 1987 (HMS Broadsword, DoD, ~16,8 px/m), affinate con gli scarti della calibrazione
+# (STIMA dove la foto non arriva). Modello proprio approvato dalla principale e dall'utente il 30/10/2026.
+nome: Type 22 Broadsword (Batch 1)
+uscita: extracted/navi/type22
+
+scafo:
+  L: 131.2
+  B: 14.8
+  bordo: [[0, 8.2], [40, 7.9], [90, 7.2], [110, 6.7], [131.2, 6.1]]
+  slancio: 4.0
+  finezza_prua: 42
+  specchio: 0.8
+  svasatura: 0.05
+  pienezza: [0.8, 0.5]
+
+parti:
+  # ---------------- castello: il Sea Wolf prodiero, gli Exocet davanti alla plancia
+  - {tipo: tuga, nome: basamento_sea_wolf_prodiero, x0: {prua: 34.0}, x1: {prua: 30.0}, y0: -1.8, y1: 1.8, z0: 7.8, z1: 8.6}
+  - {tipo: scatola, nome: sea_wolf_prodiero, x0: {prua: 33.6}, x1: {prua: 30.4}, y0: -1.4, y1: 1.4, z0: 8.6, z1: 10.6, mat: bianco}
+  - {tipo: harpoon, nome: exocet_dritta_1, x: {prua: 38.5}, y: -3.6, z0: 7.9, verso: 1, lunghezza: 5.6, elevazione: 12}
+  - {tipo: harpoon, nome: exocet_dritta_2, x: {prua: 38.5}, y: -2.2, z0: 7.9, verso: 1, lunghezza: 5.6, elevazione: 12}
+  - {tipo: harpoon, nome: exocet_sinistra_1, x: {prua: 38.5}, y: 2.2, z0: 7.9, verso: 1, lunghezza: 5.6, elevazione: 12}
+  - {tipo: harpoon, nome: exocet_sinistra_2, x: {prua: 38.5}, y: 3.6, z0: 7.9, verso: 1, lunghezza: 5.6, elevazione: 12}
+  # ---------------- la sovrastruttura prodiera, la plancia e il Type 910 prodiero
+  - {tipo: tuga, nome: tuga_prodiera, x0: {prua: 73.0}, x1: {prua: 39.4}, y0: -6.4, y1: 6.4, z0: 7.0, z1: 12.8, rastrema: 0.98}
+  - {tipo: tuga, nome: plancia, x0: {prua: 52.0}, x1: {prua: 41.8}, y0: -5.6, y1: 5.6, z0: 12.8, z1: 15.8, rastrema: 0.96}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 42.2}, x1: {prua: 41.7}, y0: -5.0, y1: 5.0, z0: 14.3, z1: 15.1, mat: nero, rastrema: 0.98}
+  - {tipo: tuga, nome: piattaforma_910_prodiero, x0: {prua: 58.0}, x1: {prua: 52.0}, y0: -3.5, y1: 3.5, z0: 12.8, z1: 15.6}
+  - {tipo: direttore_tiro, nome: type910_prodiero, x: {prua: 55.0}, z0: 15.6, altezza_base: 1.6, larghezza: 2.2, disco: 1.3}
+  # ---------------- la torre prodiera (grigia, nera in cima) col Type 967/968
+  - {tipo: tuga, nome: torre_prodiera, x0: {prua: 64.8}, x1: {prua: 60.6}, y0: -2.4, y1: 2.4, z0: 12.8, z1: 22.1, rastrema: 0.92}
+  - {tipo: tuga, nome: torre_prodiera_nera, x0: {prua: 64.6}, x1: {prua: 60.8}, y0: -2.2, y1: 2.2, z0: 22.1, z1: 26.8, rastrema: 0.85, mat: nero}
+  - {tipo: pennone, nome: pennone_prodiero, x: {prua: 62.7}, z: 26.1, semilunghezza: 5.5}
+  - {tipo: cilindro, nome: colonna_967, x: {prua: 62.7}, y: 0, r: 0.8, z0: 26.8, z1: 30.0, mat: nero}
+  - {tipo: antenna_radar, nome: type967_968, x: {prua: 62.7}, z0: 31.0, larghezza: 3.6, altezza: 1.3, orientamento: 90}
+  - {tipo: cilindro, nome: piattaforma_967, x: {prua: 62.7}, y: 0, r: 1.4, z0: 30.0, z1: 31.0}
+  # ---------------- il fumaiolo largo col cappello nero e i radomi del SCOT ai lati
+  - {tipo: mack, nome: fumaiolo, x0: {prua: 84.5}, x1: {prua: 75.5}, y0: -3.6, y1: 3.6, z0: 12.8, z1: 21.4, cappello: 1.6}
+  - {tipo: radome, nome: scot_prodiero, x: {prua: 69.3}, y: -4.5, z: 15.0, r: 1.0}
+  - {tipo: radome, nome: scot_poppiero, x: {prua: 80.6}, y: 4.5, z: 15.0, r: 1.0}
+  # ---------------- l'albero poppiero (palo grigio, nero in alto) e la sovrastruttura poppiera col Type 910
+  - {tipo: tuga, nome: tuga_centrale, x0: {prua: 93.7}, x1: {prua: 73.0}, y0: -5.8, y1: 5.8, z0: 7.0, z1: 12.8}
+  - {tipo: tuga, nome: albero_poppiero, x0: {prua: 92.8}, x1: {prua: 90.4}, y0: -1.3, y1: 1.3, z0: 12.8, z1: 20.1, rastrema: 0.9}
+  - {tipo: tuga, nome: albero_poppiero_nero, x0: {prua: 92.6}, x1: {prua: 90.6}, y0: -1.2, y1: 1.2, z0: 20.1, z1: 27.5, rastrema: 0.85, mat: nero}
+  - {tipo: pennone, nome: pennone_poppiero, x: {prua: 91.6}, z: 26.8, semilunghezza: 4.5}
+  - {tipo: asta, nome: alberetto_poppiero, da: [{prua: 91.6}, 0, 27.5], a: [{prua: 91.6}, 0, 33.2], spessore: 0.35}
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 105.9}, x1: {prua: 93.7}, y0: -6.4, y1: 6.4, z0: 6.5, z1: 14.6, rastrema: 0.98}
+  - {tipo: direttore_tiro, nome: type910_poppiero, x: {prua: 100.4}, z0: 14.6, altezza_base: 1.6, larghezza: 2.2, disco: 1.3}
+  # ---------------- l'hangar doppio col Sea Wolf poppiero sul tetto, il ponte di volo
+  - {tipo: tuga, nome: hangar, x0: {prua: 117.2}, x1: {prua: 105.9}, y0: -6.6, y1: 6.6, z0: 5.6, z1: 11.7}
+  - {tipo: scatola, nome: sea_wolf_poppiero, x0: {prua: 110.8}, x1: {prua: 107.6}, y0: -1.4, y1: 1.4, z0: 11.7, z1: 13.7, mat: bianco}
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 88.0}, x1: {prua: 82.0}, y: -6.0, z0: 9.6}
+  - {tipo: imbarcazione, nome: lancia_sinistra, x0: {prua: 88.0}, x1: {prua: 82.0}, y: 6.0, z0: 9.6}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 30/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: dritta_prua
+    file: extracted/navi/type22/foto/A_starboard_bow_view_of_the_British_frigate_HMS_BROADSWORD_(F-88)_underway_(330-CFD-DN-SC-87-01110).jpg
+    nave: HMS Broadsword (F88), 1987 (DoD, pubblico dominio), di dritta e un poco dall'alto
+    qualita: 1.0
+    specchiabile: true
+    # il mare grigio come lo scafo: la maschera e' la sagoma del modello calibrato sui punti, erosa di 4 px
+    # (tools/navi/contorno_modello.py --maschera --erodi 4)
+    maschera_file: extracted/navi/type22/foto/dritta_prua_1987_maschera.png
+    solo_punti: true
+    orizzonte_punti: [[400, 754], [2500, 754]]
+    riquadro: [300, 700, 2700, 1400]
+    fotocamera_iniziale: {posizione: [400, -1800, 300], bersaglio: [0, 0, 8], f: 9000}
+    limiti_fotocamera: {elevazione: [-3, 25], distanza: [400, 6000], focale: [2000, 40000]}
+    punti:
+      - [[{prua: 0}, 0, 8.2], [2618, 1193]]          # dritto di prua in coperta
+      - [[{prua: 4.0}, 0, 0.0], [2552, 1342]]        # piede del dritto al galleggiamento
+      - [[{prua: 131.2}, -5.9, 6.1], [415, 1218]]    # specchio, spigolo di dritta in coperta
+      - [[{prua: 62.7}, 0, 31.7], [1564, 776]]       # il Type 967/968 in cima alla torre
+      - [[{prua: 91.6}, 0, 33.2], [1079, 750]]       # cima dell'albero poppiero
+      - [[{prua: 39.4}, -6.4, 12.8], [1990, 1105]]   # spigolo prodiero alto di dritta della tuga prodiera
+      - [[{prua: 117.2}, -6.6, 11.7], [650, 1120]]   # spigolo poppiero alto di dritta dell'hangar
+      - [[{prua: 75.5}, 0, 21.4], [1352, 962]]       # spigolo prodiero del cappello del fumaiolo

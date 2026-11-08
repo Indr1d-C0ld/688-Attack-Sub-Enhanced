@@ -1,0 +1,88 @@
+# Sottomarino d'attacco Progetto 705/705K "Lira" (NATO: Alfa), configurazione 1983-1989: scafo in titanio a goccia
+# con prua tonda e corta, vela bassa e lunga "a limousine" raccordata allo scafo (fronte arrotondato, dorso che
+# scende dolcemente verso poppa), alberi nella meta' poppiera della vela, timone superiore staccato dallo scafo.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua. Quote assolute rispetto al galleggiamento in emersione normale.
+nome: Alfa (Progetto 705/705K)
+uscita: extracted/navi/alfa
+tono: 0.22
+contrasto: 0.12
+peso_ombra: 0.03
+
+scafo:
+  generatore: scafo_sottomarino
+  L: 81.4
+  B: 9.5
+  # raggio tabulato dal profilo di riferimento (vedi RAPPORTO.md): prua tonda e corta, cilindro da ~18 a ~45 m,
+  # cono di poppa lungo fino al mozzo dell'elica
+  raggio: [[0.0, 0.0], [0.4, 1.0], [1.6, 1.75], [3.0, 2.55], [5.0, 3.2], [7.0, 3.65], [9.3, 4.0], [13.0, 4.4],
+           [18.0, 4.7], [22.0, 4.75], [45.0, 4.75], [50.0, 4.55], [56.0, 3.95], [60.5, 3.5], [64.5, 3.05], [68.0, 2.6],
+           [70.9, 2.15], [74.0, 1.6], [76.0, 1.25], [78.5, 0.8], [80.5, 0.45], [81.4, 0.0]]
+  bordo_libero: 4.0        # sommita' dello scafo sul galleggiamento (l'Alfa in emersione sta alto: asse a ~0,75 m sotto)
+  stazioni: 100
+  punti_sezione: 48
+
+parti:
+  # vela "a limousine": fronte corto e arrotondato a ~19 m dalla prua, cielo piatto 2,8 m sopra lo scafo, dorso
+  # lungo che scende fino alla coperta a ~39 m
+  - tipo: vela
+    nome: vela
+    pianta: ovale
+    esponente: 2.2
+    livelli:
+      - [2.5, {prua: 18.6}, {prua: 41.5}, 2.6]
+      - [4.0, {prua: 19.0}, {prua: 39.2}, 2.45]
+      - [4.4, {prua: 19.1}, {prua: 38.6}, 2.4]
+      - [5.25, {prua: 19.5}, {prua: 36.9}, 2.25]
+      - [5.9, {prua: 19.9}, {prua: 34.7}, 2.1]
+      - [6.6, {prua: 20.4}, {prua: 32.9}, 1.9]
+      - [7.0, {prua: 21.4}, {prua: 32.2}, 1.55]
+  # alberi alzati (posizioni dal profilo, quote dalla foto di fianco)
+  - {tipo: cilindro, nome: albero_cono, x: {prua: 27.9}, y: 0, r: 0.2, z0: 6.0, z1: 12.8, n: 8, mat: scuro}
+  - {tipo: cilindro, nome: albero_bulbo, x: {prua: 30.5}, y: 0, r: 0.25, z0: 6.0, z1: 13.9, n: 8, mat: scuro}
+  - {tipo: cilindro, nome: antenna, x: {prua: 31.9}, y: 0, r: 0.08, z0: 6.0, z1: 14.4, n: 6, mat: scuro}
+  - {tipo: cilindro, nome: albero_gabbia, x: {prua: 32.8}, y: 0, r: 0.3, z0: 6.0, z1: 13.4, n: 8, mat: scuro}
+  # timone superiore: bordo d'uscita verticale a 76 m dalla prua, bordo d'attacco a freccia, cima a ~5 m
+  - {tipo: timone_verticale, nome: timone, x: {prua: 71.2}, z0: 0.0, z1: 5.1, corda: 4.8, corda_estremita: 2.0, spessore: 0.6, freccia: 2.8}
+
+foto:
+  - nome: fianco_sinistro
+    file: extracted/navi/alfa/foto/fianco_sinistro_1983.jpg
+    maschera_file: extracted/navi/alfa/foto/fianco_sinistro_1983_maschera.png   # classi/alfa_maschere.yaml
+    nave: Alfa non identificato, Atlantico, 26/10/1983 (DN-ST-84-01604)
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    orizzonte_y: 142
+    soglia_cielo: 150
+    orizzonte_punti: [[10, 132], [200, 138], [500, 143], [630, 145]]
+    fotocamera_iniziale: {posizione: [0, 480, 13], bersaglio: [0, 0, 3], f: 5300}
+    limiti_fotocamera: {azimut: [50, 130]}
+    assetto_nave: {beccheggio: 2.5}   # a velocita' l'Alfa appoppa: coperta che scende verso poppa
+    punti:
+      - [[{prua: 19.0}, 0, 4.0], [205, 238]]      # piede del fronte della vela
+      - [[{prua: 21.0}, 0, 6.95], [238, 202]]     # inizio del cielo della vela
+      - [[{prua: 39.2}, 0, 4.0], [430, 250]]      # piede del dorso della vela
+      - [[{prua: 32.8}, 0, 13.4], [373, 133]]     # cima dell'albero a gabbia
+      - [[{prua: 27.9}, 0, 12.8], [315, 140]]     # cima dell'albero prodiero
+      - [[{prua: 30.5}, 0, 13.9], [343, 128]]     # cima dell'albero a bulbo
+      - [[{prua: 30.0}, 4.69, 0.0], [330, 281]]   # galleggiamento sul fianco sinistro sotto la vela
+  - nome: poppa_dritta_aerea
+    file: extracted/navi/alfa/foto/poppa_dritta_aerea_1984.jpg
+    maschera_file: extracted/navi/alfa/foto/poppa_dritta_aerea_1984_maschera.png   # classi/alfa_maschere.yaml
+    nave: Alfa non identificato (Soviet Military Power 1984, DD-ST-84-07857)
+    esponente_peso: 1.0
+    qualita: 0.8
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    fotocamera_iniziale: {posizione: [-200, -150, 150], bersaglio: [0, 0, 2], f: 1500}
+    limiti_fotocamera: {azimut: [-175, -95], elevazione: [15, 60], rollio: [-12, 12]}
+    escludi_parti: [albero_cono, albero_bulbo, antenna, albero_gabbia, timone]   # alberi alzati diversamente; timone nella schiuma
+    affondamento: 1.5        # in questa foto l'Alfa sta piu' basso (fianco vicino piu' stretto della sagoma del modello)
+    prior_fotocamera: {elevazione: 28, sigma_el: 4}
+    punti:
+      - [[{prua: 0.3}, 0, 0.0], [615, 90]]         # prua al galleggiamento
+      - [[{prua: 39.2}, 0, 4.0], [347, 145]]      # piede del dorso della vela
+      - [[{prua: 19.0}, 0, 4.0], [482, 93]]       # piede del fronte della vela
+      - [[{prua: 74.0}, 0, 5.1], [42, 268]]       # timone superiore, spigolo prodiero in cima

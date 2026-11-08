@@ -1,0 +1,273 @@
+# Testi dell'enciclopedia, lotto del 31/10/2026: i sottomarini delle firme nuove (dossier 31, 32 e 35) e il Tp 42.
+# Stesso formato di sottomarini.yaml e armi.yaml. Scritti a mano, in parafrasi dai dossier di docs/ricerca, dai RAPPORTO
+# dei modelli (extracted/navi) e dai dati del motore (data/motore); nessun testo copiato.
+# Campi: it, en (storia e impiego); uso_it, uso_en (che cosa significa in partita); fonti (elenco);
+# armi_tipiche (classi senza carico in carico.toml): voci (id dell'indice), altre (testo libero), fonte.
+# Le quote di collaudo e le cifre di rumore sono valori del gioco (STIMA dove le fonti non danno numeri).
+# Nel gioco il nome svedese e' «Nacken», senza dieresi: i font hanno solo le accentate italiane.
+
+sottomarino.victor1:
+  it: >-
+    Il Progetto 671 «Ersh», Victor I per la NATO, è nel 1989 il sottomarino d'attacco nucleare sovietico più numeroso.
+    Lungo 93 metri, da 4.700 tonnellate in immersione, ha due reattori VM-4 e una turbina da circa 31.000 cavalli su un
+    solo asse, con un'elica a 5 pale e due piccole eliche ausiliarie sui motori elettrici; in immersione arriva a 32
+    nodi. Fu il primo sottomarino sovietico con la rete di bordo in alternata a 50 Hz. Il sonar è l'MGK-300 «Rubin»,
+    senza antenna rimorchiata, e solo due battelli ricevono il Rubikon a metà degli anni '80; le macchine non poggiano
+    su piattaforme antivibranti e i rivestimenti arrivano solo con le unità successive. Il suo mestiere è il
+    pedinamento: per le fonti russe era un Victor I, il K-306, il battello che nel 1974 urtò l'SSBN americano James
+    Madison all'uscita di Holy Loch, e nel marzo 1984 il K-314, risalito alla cieca a quota periscopica sulla rotta
+    della Kitty Hawk che pedinava da giorni, fu investito dalla portaerei, perse un'elica e dovette essere rimorchiato.
+  en: >-
+    Project 671 «Ersh», NATO's Victor I, is in 1989 the most numerous Soviet nuclear attack submarine. 93 metres long,
+    displacing 4,700 tonnes submerged, it has two VM-4 reactors and a turbine of about 31,000 hp on a single shaft,
+    with a 5-blade propeller and two small auxiliary propellers on the electric motors; submerged it reaches 32 knots.
+    It was the first Soviet submarine with an alternating-current 50 Hz power grid. Its sonar is the MGK-300 «Rubin»,
+    with no towed array, and only two boats received the Rubikon in the mid-1980s; its machinery is not mounted on
+    anti-vibration rafts and coatings only came with the later boats. Its trade is trailing: according to Russian
+    sources it was a Victor I, K-306, that struck the American SSBN James Madison off Holy Loch in 1974, and in March
+    1984 K-314, coming up blind to periscope depth on the track of the Kitty Hawk it had been trailing for days, was
+    run down by the carrier, lost a propeller and had to be towed.
+  uso_it: >-
+    È il sottomarino più rumoroso del catalogo: circa 135 dB a velocità silenziosa, oltre venti più del 688, con un
+    tonale forte a 250 Hz e le righe di rete a 50 Hz; vicino alla superficie cavita già a 3 nodi. Ha i sensori sovietici
+    di seconda generazione, senza schiera rimorchiata, e l'intercettatore «Rubin», che ha due sole bande e molti falsi
+    allarmi, e a poppa è sordo: di solito lo si sente molto prima di essere sentiti. Nel gioco non supera i 32 nodi e il collaudo è a 400
+    metri (una stima); alcune unità possono portare il razzo antisom Vyuga, solo nucleare.
+  uso_en: >-
+    It is the loudest submarine in the catalogue: about 135 dB at quiet speed, more than twenty above the 688, with a
+    strong 250 Hz tonal and 50 Hz power-line tonals; near the surface it already cavitates at 3 knots. It has
+    second-generation Soviet sensors, with no towed array, and the «Rubin» intercept receiver, which has only two bands
+    and many false alarms, and it is deaf astern: you usually hear it long before it hears you. In the game it cannot exceed 32 knots and its
+    test depth is 400 metres (an estimate); some boats can carry the Vyuga anti-submarine rocket, nuclear only.
+  fonti: ['dossier 31 §1 [navypedia ru_ss_k38] [ru.wikipedia 671] [naval-encyclopedia, Conway]',
+          'dossier 23 E13 [WP-JM], E20 [WP-K314] [NI-K314]', 'dossier 03 §C3 [WIKI K-314]', 'dossier 05 §3.1 [RWVyuga]',
+          'extracted/navi/victor1/RAPPORTO.md', 'acustica.toml (firme.victor1, suite.victor1, intercettatori.rubin)',
+          'scafi/victor1.toml (collaudo, STIMA)']
+  armi_tipiche:
+    voci: [missile.vyuga]
+    altre: ['siluri da 533 mm da 6 tubi (tipi non precisati nei dossier)',
+            'razzo antisom RPK-2 Vyuga (SS-N-15) solo sui 671V, a testata nucleare']
+    fonte: 'dossier 05 §3.1 [RWVyuga] (671V); libretto.toml (6 tubi da 533, SS-N-15)'
+
+sottomarino.delta3:
+  it: >-
+    Il Progetto 667BDR «Kal'mar», Delta III per la NATO, è un sottomarino lanciamissili balistici sovietico lungo circa
+    156 metri, da 13.700 tonnellate in immersione. Dietro la vela, che porta i timoni orizzontali, la gobba dei silos
+    custodisce 16 missili SS-N-18; due reattori VM-4S muovono due eliche a 5 pale, disegnate per un rumore più basso, e
+    in immersione arriva a 24 nodi. Il sonar è l'MGK-400 «Rubikon», tranne su un battello che conserva il vecchio
+    MGK-100 «Kerch»; la sua boa «Paravan» serve a ricevere le comunicazioni ELF e non è un sonar. Negli studi di
+    Miasnikov sta fra 125 e 130 dB a circa 4 nodi: meno dei Delta I e II, più del Delta IV. Con missili di portata
+    intercontinentale non ha bisogno di uscire in oceano: come gli altri SSBN sovietici, in guerra avrebbe atteso nei
+    «bastioni» del Barents e dell'Artico o del Mare di Ochotsk, difeso da sottomarini d'attacco, navi, aerei e mine.
+  en: >-
+    Project 667BDR «Kal'mar», NATO's Delta III, is a Soviet ballistic-missile submarine about 156 metres long,
+    displacing 13,700 tonnes submerged. Behind the sail, which carries the diving planes, the hump of the silos holds
+    16 SS-N-18 missiles; two VM-4S reactors drive two 5-blade propellers designed for lower noise, and submerged it
+    reaches 24 knots. Its sonar is the MGK-400 «Rubikon», except on one boat that keeps the old MGK-100 «Kerch»; its
+    «Paravan» buoy is for receiving ELF communications and is not a sonar. In Miasnikov's studies it lies between 125
+    and 130 dB at about 4 knots: less than the Delta I and II, more than the Delta IV. With intercontinental-range
+    missiles it has no need to go out into the ocean: like the other Soviet SSBNs, in wartime it would have waited in
+    the «bastions» of the Barents and the Arctic or of the Sea of Okhotsk, guarded by attack submarines, ships,
+    aircraft and mines.
+  uso_it: >-
+    A velocità silenziosa fa circa 127 dB, quanto l'Alfa e un po' più del Typhoon, con le righe di rete a 50 Hz; i due
+    assi con eliche a 5 pale lo distinguono al conteggio delle pale, e lo scafo lungo dà un'eco forte di traverso. Non
+    ha schiera rimorchiata e il suo intercettatore «Rubikon» è meno fine di quelli dei battelli più nuovi: il pericolo
+    vero sono i sottomarini d'attacco che lo scortano. Nel gioco non supera i 24 nodi e il collaudo è a 320 metri; con
+    quattro tubi da 533 mm, però, può rispondere a chi lo pedina.
+  uso_en: >-
+    At quiet speed it makes about 127 dB, as much as the Alfa and a little more than the Typhoon, with 50 Hz
+    power-line tonals; its two shafts with 5-blade propellers set it apart in a blade count, and its long hull returns
+    a strong echo on the beam. It has no towed array and its «Rubikon» intercept receiver is less sensitive than those
+    of newer boats: the real danger is the attack submarines escorting it. In the game it cannot exceed 24 knots and
+    its test depth is 320 metres; with four 533 mm tubes, however, it can fight back against a trailer.
+  fonti: ['dossier 31 §0 (Miasnikov) e §2 [dewiki Projekt_667BDR] [navypedia ru_ss_k424]',
+          'dossier 01 §3.1 (Miasnikov, tabella A2)', 'dossier 02 §7.3 [CIA-bastion] [NSL-bastion]',
+          'dossier 23 E31 [CIMSEC-DIS] [NSL-BAS]', 'extracted/navi/delta3/RAPPORTO.md',
+          'acustica.toml (firme.delta3, suite.delta3, intercettatori.rubikon)', 'scafi/delta3.toml (collaudo)']
+  armi_tipiche:
+    voci: []
+    altre: ['16 missili balistici SS-N-18', 'siluri da 533 mm da 4 tubi (tipi non precisati nei dossier)']
+    fonte: 'extracted/navi/delta3/RAPPORTO.md (16 silos); dossier 02 §7.3 (SS-N-18); libretto.toml (4 tubi da 533)'
+
+sottomarino.sierra:
+  it: >-
+    Il Progetto 945 «Barrakuda», Sierra I per la NATO, è un sottomarino d'attacco nucleare sovietico con lo scafo
+    resistente in titanio, che gli permette di scendere fino a 550 metri. Lungo 107,2 metri e largo 12,3, ha un reattore
+    OK-650A e un solo asse, più due propulsori ausiliari, e in immersione arriva a 35 nodi; sul dislocamento le fonti
+    non concordano. Le macchine poggiano su una piattaforma antivibrante e lo scafo ha un rivestimento anecoico: secondo
+    alcune fonti fa rumore quanto i primi Los Angeles. Con l'Akula e il Mike è una delle tre classi nuove della metà
+    degli anni '80 che per la CIA segnano un salto nel silenziamento sovietico, e che riducono di molto il vantaggio
+    acustico americano. Il sonar è l'MGK-503 «Skat-KS», che secondo le fonti russe scopre a una distanza più che doppia
+    rispetto alla generazione precedente; della sua antenna rimorchiata non si è trovata conferma.
+  en: >-
+    Project 945 «Barrakuda», NATO's Sierra I, is a Soviet nuclear attack submarine with a titanium pressure hull that
+    allows it to dive to 550 metres. 107.2 metres long and 12.3 wide, it has an OK-650A reactor and a single shaft, plus
+    two auxiliary thrusters, and submerged it reaches 35 knots; sources disagree on its displacement. Its machinery
+    sits on an anti-vibration raft and the hull has an anechoic coating: according to some sources it is as quiet as
+    the early Los Angeles boats. With the Akula and the Mike it is one of the three new classes of the mid-1980s that,
+    for the CIA, mark a leap in Soviet quieting, and that greatly narrow the American acoustic advantage. Its sonar is
+    the MGK-503 «Skat-KS», which according to Russian sources detects at more than twice the range of the previous
+    generation; no confirmation has been found of its towed array.
+  uso_it: >-
+    A velocità silenziosa fa circa 117 dB, cinque più del 688 e quanto uno Sturgeon, con le righe di rete a 50 Hz e
+    un'elica a 7 pale (una stima); il rivestimento anecoico rende debole l'eco del sonar attivo. Nel gioco ha i sensori
+    sovietici di terza generazione e l'intercettatore «Skat», ma non la schiera rimorchiata: il bulbo sul timone c'è,
+    l'antenna no, e il cono cieco a poppa resta largo 40 gradi: da dietro lo si avvicina meglio che un Akula. È più veloce del 688, fino a 35 nodi, e il collaudo è
+    a 450 metri: scendere in profondità non basta a seminarlo.
+  uso_en: >-
+    At quiet speed it makes about 117 dB, five above the 688 and as much as a Sturgeon, with 50 Hz power-line tonals
+    and a 7-blade propeller (an estimate); the anechoic coating makes its active sonar echo weak. In the game it has
+    third-generation Soviet sensors and the «Skat» intercept receiver, but no towed array: the pod on the rudder is
+    there, the array is not, and its blind cone astern stays 40 degrees wide: from behind it is easier to approach than an Akula. It is faster than the 688, up to
+    35 knots, and its test depth is 450 metres: going deep is not enough to shake it off.
+  fonti: ['dossier 31 §3 [ru.wikipedia 945] [Wikipedia EN]', 'dossier 02 §1.4 e §7.2 [CIA-NS]', 'dossier 03 §C2 (Cote)',
+          'dossier 09 §1.2 [RU-SKAT]', 'dossier 04 §3 [RU-SKAT] [WP-Sierra]', 'extracted/navi/sierra/RAPPORTO.md',
+          'acustica.toml (firme.sierra, suite.sierra, intercettatori.skat_ogs)', 'scafi/sierra.toml (collaudo, STIMA)']
+  armi_tipiche:
+    voci: []
+    altre: ['siluri da 533 e 650 mm (tipi non precisati nei dossier)',
+            'missili antisom RPK-6 Vodopad (SS-N-16), attestati con riserva', 'missili da crociera S-10 Granat (SS-N-21)']
+    fonte: 'dossier 05 §3.1 [RWVodopad] [WPRK55]; dossier 01 §6.4 [WPRK55]; libretto.toml (tubi da 533 e 650)'
+
+sottomarino.ohio:
+  it: >-
+    L'Ohio (SSBN-726) è il sottomarino lanciamissili balistici della US Navy: lungo 170,7 metri, sposta 18.750
+    tonnellate in immersione e porta dietro la vela 24 silos per i missili Trident. Il reattore S8G da 220 MW termici
+    muove due turbine e un solo asse con un'elica a 7 pale; ufficialmente supera i 20 nodi, e se ne riportano circa 25.
+    Il reattore può lavorare a una parte notevole della potenza per circolazione naturale, senza le pompe del primario e
+    quindi senza il loro rumore. Le cifre del rumore sono segrete: si dice solo che a 20 nodi sia silenzioso quanto un
+    Lafayette a 6. Il sonar è il BQQ-6, il BQQ-5 del 688 senza la parte attiva, con a parte l'attivo BQS-13 e la schiera
+    rimorchiata TB-16.
+  en: >-
+    The Ohio (SSBN-726) is the US Navy's ballistic-missile submarine: 170.7 metres long, it displaces 18,750 tonnes
+    submerged and carries 24 silos for Trident missiles behind the sail. The 220 MW thermal S8G reactor drives two
+    turbines and a single shaft with a 7-blade propeller; officially it exceeds 20 knots, and about 25 are reported.
+    The reactor can run at a considerable share of its power by natural circulation, without the primary pumps and so
+    without their noise. Noise figures are classified: it is only said that at 20 knots it is as quiet as a Lafayette
+    at 6. Its sonar is the BQQ-6, the 688's BQQ-5 without the active part, with the separate BQS-13 active set and the
+    TB-16 towed array.
+  uso_it: >-
+    È un alleato, e il battello più silenzioso del catalogo: circa 105 dB a velocità silenziosa, sette meno del 688,
+    senza righe di pompa sotto i 10 nodi e con le righe d'asse più deboli di tutti; ha le righe di rete a 60 Hz e
+    un'elica a 7 pale. Nel gioco ha i sensori del 688, schiera rimorchiata compresa, non supera i 25 nodi e il collaudo
+    è a 250 metri, una stima. Per chi gioca con l'Alfa è la preda più difficile: lo si sente meglio quando accelera,
+    perché sopra i 10 e i 18 nodi entrano le pompe.
+  uso_en: >-
+    It is an ally, and the quietest boat in the catalogue: about 105 dB at quiet speed, seven below the 688, with no
+    pump lines below 10 knots and the weakest shaft lines of all; it has 60 Hz power-line tonals and a 7-blade
+    propeller. In the game it has the 688's sensors, towed array included, cannot exceed 25 knots and its test depth
+    is 250 metres, an estimate. For whoever plays the Alfa it is the hardest prey: it is heard best when it speeds up,
+    because the pumps come in above 10 and 18 knots.
+  fonti: ['dossier 32 §1 [Wikipedia EN] [seaforces.org] [nuke.fas.org ssbn-726]', 'dossier 04 §1.1 [NC-BQR15]',
+          'extracted/navi/ohio/RAPPORTO.md', 'acustica.toml (firme.ohio, suite.ohio)', 'scafi/ohio.toml (collaudo, STIMA)']
+  armi_tipiche:
+    voci: []
+    altre: ['24 missili balistici Trident', 'siluri da 533 mm da 4 tubi (tipo non precisato nei dossier)']
+    fonte: 'extracted/navi/ohio/RAPPORTO.md (24 silos); libretto.toml (24 Trident, 4 tubi da 533)'
+
+sottomarino.type206:
+  it: >-
+    Il Type 206 è il piccolo sottomarino diesel-elettrico della Bundesmarine per il Baltico: nel 1989 ce ne sono 18, da
+    U 13 a U 30. Lungo 48,5 metri e largo 4,6, sposta circa 500 tonnellate in immersione; lo scafo è d'acciaio
+    amagnetico, contro le mine magnetiche e il MAD degli aerei. Due diesel MTU e un motore elettrico Siemens muovono un
+    solo asse con un'elica a 5 pale, e in immersione tocca i 17 nodi; sulla quota operativa le fonti non concordano,
+    200 metri o più secondo alcune, 100 secondo altre. Dodici battelli sono destinati alla conversione nel tipo 206A,
+    con un'elica a 7 pale: alla fine del 1989 sono pronti U 29, U 23 e U 16. Il sonar DBQS-21 (CSU 83), attivo e
+    passivo nella cupola alta di prua, provato sui 206 dal 1985, arriva con la conversione, accanto a un passivo DUUX 2
+    e a un sonar per le mine.
+  en: >-
+    The Type 206 is the Bundesmarine's small diesel-electric submarine for the Baltic: in 1989 there are 18, from U 13
+    to U 30. 48.5 metres long and 4.6 wide, it displaces about 500 tonnes submerged; its hull is of non-magnetic steel,
+    against magnetic mines and aircraft MAD. Two MTU diesels and a Siemens electric motor drive a single shaft with a
+    5-blade propeller, and submerged it reaches 17 knots; sources disagree on its operating depth, 200 metres or more
+    according to some, 100 according to others. Twelve boats are due for conversion to the Type 206A, with a 7-blade
+    propeller: by the end of 1989 U 29, U 23 and U 16 are ready. The DBQS-21 (CSU 83) sonar, active and passive in the
+    tall bow dome, tried on the 206s from 1985, comes with the conversion, alongside a DUUX 2 passive set and a
+    mine-avoidance sonar.
+  uso_it: >-
+    In batteria fa circa 110 dB, un paio meno del 688, ed è così piccolo che l'eco al sonar attivo è debole. A snorkel
+    il rumore sale di 22,5 dB e compaiono le righe dei diesel a 16,5, 33 e 49,5 Hz; la rete di bordo nel gioco è a 60
+    Hz, come sugli altri battelli NATO, ed è il modo per non scambiarlo per un Kilo. Ha il sonar CSU-83 con un'antenna di
+    fianco, senza schiera rimorchiata, e l'intercettatore occidentale WLR-9. Nel gioco non supera i 17 nodi e il
+    collaudo è a 200 metri.
+  uso_en: >-
+    On battery it makes about 110 dB, a couple below the 688, and it is so small that its active sonar echo is weak.
+    On snorkel its noise rises by 22.5 dB and the diesel lines at 16.5, 33 and 49.5 Hz appear; in the game its power
+    grid is at 60 Hz, as on the other NATO boats, and that is the way not to mistake it for a Kilo. It has the CSU-83
+    sonar with a flank array, no towed array, and the Western WLR-9 intercept receiver. In the game it cannot exceed
+    17 knots and its test depth is 200 metres.
+  fonti: ['dossier 32 §5 [seaforces] [Wikipedia EN e DE]', 'dossier 35 §4 [Military Periscope] [Watts 2000]',
+          'extracted/navi/type206/RAPPORTO.md', 'acustica.toml (firme.type206, suite.type206)',
+          'scafi/type206.toml (collaudo)']
+  armi_tipiche:
+    voci: []
+    altre: ['siluri da 533 mm da 8 tubi (tipi non precisati nei dossier)', 'mine']
+    fonte: 'libretto.toml (8 tubi da 533, mine)'
+
+sottomarino.nacken:
+  it: >-
+    La classe Nacken (A14) è il sottomarino della marina svedese degli anni '80: tre battelli, Nacken, Najad e Neptun,
+    entrati in servizio nel 1980-81. Corto e largo, 49,5 metri per 5,7, sposta circa 1.085 tonnellate in immersione; ha
+    la coda a X, un diesel MTU e un motore elettrico su un solo asse, e in immersione tocca i 20 nodi, con una quota di
+    300 metri. Il sonar è il CSU-83, quello delle U-Boot tedesche, con il cilindro di prua e una schiera di fianco. Nel
+    1988-89 il solo Nacken riceve due motori Stirling, che non hanno bisogno d'aria: lo scafo si allunga a 57,5 metri e
+    il battello può restare in immersione per 14 giorni. Negli stessi anni la marina svedese dà la caccia nei suoi
+    arcipelaghi a sottomarini sconosciuti: nel 1982, vicino alla base di Musko, fece esplodere decine di bombe di
+    profondità e alcune mine, in una vicenda che resta controversa.
+  en: >-
+    The Nacken class (A14) is the Swedish navy's submarine of the 1980s: three boats, Nacken, Najad and Neptun,
+    commissioned in 1980-81. Short and broad, 49.5 metres by 5.7, it displaces about 1,085 tonnes submerged; it has an
+    X tail, an MTU diesel and an electric motor on a single shaft, and submerged it reaches 20 knots, with a depth of
+    300 metres. Its sonar is the CSU-83, the one of German U-boats, with the bow cylinder and a flank array. In
+    1988-89 Nacken alone received two Stirling engines, which need no air: the hull was lengthened to 57.5 metres and
+    the boat can stay submerged for 14 days. In the same years the Swedish navy hunts unknown submarines in its
+    archipelagos: in 1982, near the Musko base, it set off dozens of depth charges and a few mines, in an affair that
+    remains disputed.
+  uso_it: >-
+    Battello di una marina neutrale, va riconosciuto con cura. In batteria fa circa 108 dB, meno del 688 e fra i più
+    silenziosi del catalogo; a snorkel sale di 22,5 dB, con le righe dei diesel a 12,5, 25 e 75 Hz. Le righe a 12,5 e
+    25 Hz le ha anche il Kilo: a distinguerli è la rete di bordo, a 60 Hz sul Nacken (una scelta del gioco) e a 50 sul
+    sovietico. Ha gli stessi sensori del Type 206, senza schiera rimorchiata; nel gioco tocca i 20 nodi, il collaudo è a
+    300 metri e lo Stirling non c'è: per ricaricare deve salire a snorkel.
+  uso_en: >-
+    A boat of a neutral navy, it must be identified carefully. On battery it makes about 108 dB, less than the 688 and
+    among the quietest in the catalogue; on snorkel it rises by 22.5 dB, with diesel lines at 12.5, 25 and 75 Hz. The
+    Kilo has the 12.5 and 25 Hz lines too: what tells them apart is the power grid, at 60 Hz on the Nacken (a game
+    choice) and at 50 on the Soviet boat. It has the same sensors as the Type 206, with no towed array; in the game it
+    reaches 20 knots, its test depth is 300 metres and there is no Stirling: to recharge it must come up to snorkel.
+  fonti: ['dossier 35 §1 [Navypedia sw_ss_nacken] [Wikipedia], §2, §4 e §5', 'dossier 23 E15 [WP-SWE] [CSM82] [FM08]',
+          'extracted/navi/nacken/RAPPORTO.md', 'acustica.toml (firme.nacken, suite.nacken, firme.kilo)',
+          'scafi/nacken.toml (collaudo, STIMA)']
+  armi_tipiche:
+    voci: []
+    altre: ['6 tubi da 533 mm e 2 da 400 mm (tipi di siluro non precisati nei dossier)', 'mine']
+    fonte: 'libretto.toml (6 tubi da 533, 2 da 400, mine)'
+
+siluro.tp42:
+  it: >-
+    Il Tp 42 è il siluro leggero svedese da 400 mm, del 1975, prodotto dalla FFV. Il Tp 422 è la versione per gli
+    elicotteri antisom, che lo sganciano senza paracadute. Le sue prestazioni non sono mai state pubblicate: velocità,
+    portata, testata e testa acustica restano ignote nelle fonti aperte. Nella marina svedese lo porta l'elicottero
+    Hkp 4, il Vertol 107 in versione navale, che ne imbarca due e cerca i sottomarini col sonar a immersione HS-73.
+  en: >-
+    The Tp 42 is the Swedish 400 mm lightweight torpedo, from 1975, made by FFV. The Tp 422 is the version for
+    anti-submarine helicopters, which drop it without a parachute. Its performance has never been published: speed,
+    range, warhead and homing head remain unknown in open sources. In the Swedish navy it is carried by the Hkp 4
+    helicopter, the naval Vertol 107, which takes two and hunts submarines with the HS-73 dipping sonar.
+  uso_it: >-
+    Nel gioco lo sgancia l'Hkp 4, che non posa boe: prima cala l'HS-73 sul datum e pinga attorno ai 10 kHz, e quel ping
+    è l'allarme. Le cifre sono tutte stime: corre a 30 nodi per 10 km o a 20 nodi per 20 km, non è filoguidato,
+    aggancia entro 500 m in attivo e 800 m in passivo con una testa che guarda 40 gradi per lato, e non segue oltre i
+    200 metri; non lo si sgancia dove il fondale è sotto i 15 metri. La difesa: esca, virata stretta e tutta forza,
+    perché a 32 nodi il 688 è più veloce del siluro; dove il fondale lo permette, scendere sotto i 200 metri. La
+    testata è piccola, 45 kg, quasi quanto quella del Mk 46.
+  uso_en: >-
+    In the game it is dropped by the Hkp 4, which lays no buoys: first it lowers the HS-73 on the datum and pings at
+    around 10 kHz, and that ping is the alarm. The figures are all estimates: it runs at 30 knots for 10 km or at 20
+    knots for 20 km, it is not wire-guided, it acquires within 500 m active and 800 m passive with a head that looks 40
+    degrees to each side, and it does not follow below 200 metres; it is not dropped where the bottom is shallower than
+    15 metres. The defence: decoy, hard turn and full speed, because at 32 knots the 688 is faster than the torpedo;
+    where the bottom allows, go below 200 metres. The warhead is small, 45 kg, about as much as the Mk 46's.
+  fonti: ["dossier 35 §5 [Jane's, in sintesi] [Military Periscope]", 'dossier 35 §1-2 [AEROSEUM-HKP4] [AVROSYS-HKP4]',
+          'siluri.toml (siluri.tp42)', 'asw_aereo.toml (mezzi.hkp4)']

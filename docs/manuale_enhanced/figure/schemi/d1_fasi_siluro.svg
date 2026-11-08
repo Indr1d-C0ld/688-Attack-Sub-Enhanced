@@ -1,0 +1,22 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='440' viewBox='0 0 760 440' font-family='DejaVu Sans, Helvetica, Arial, sans-serif' role='img' aria-label='Le fasi del siluro viste dall&#39;alto: corsa fino all&#39;RTE, ricerca in serpentina, cono della testa, aggancio'>
+<title>Le fasi del siluro viste dall&#39;alto: corsa fino all&#39;RTE, ricerca in serpentina, cono della testa, aggancio</title>
+<rect width='760' height='440' fill='#fcfcfb'/>
+<text x='36.0' y='26.0' font-size='16' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Le fasi del siluro, viste dall&#39;alto</text>
+<text x='36.0' y='46.0' font-size='12' fill='#52514e' text-anchor='start'>Mk 48: corsa fino all&#39;RTE, ricerca in serpentina di ±30°, aggancio nel cono della testa, inseguimento.</text>
+<path d='M82.2,365.6 L77.3,371.1 L59.0,377.7 L56.6,371.2 L74.9,364.5 Z' fill='#52514e' stroke='#0b0b0b'/>
+<text x='66.0' y='392.0' font-size='11' fill='#52514e' text-anchor='middle'>il 688</text>
+<path d='M83.2,365.2 L234.4,310.1' fill='none' stroke='#2a78d6' stroke-width='2' stroke-linejoin='round' stroke-dasharray='6 4'/>
+<text x='152.2' y='358.1' font-size='11' fill='#0b0b0b' text-anchor='middle'>corsa fino all&#39;RTE, testa spenta</text>
+<circle cx='234.4' cy='310.1' r='4' fill='#2a78d6'/>
+<text x='234.4' y='300.1' font-size='11' fill='#0b0b0b' text-anchor='middle'>RTE: la testa si accende</text>
+<path d='M234.4,310.1 L268.9,316.2 L313.9,262.6 L382.8,274.8 L427.8,221.1' fill='none' stroke='#2a78d6' stroke-width='2' stroke-linejoin='round'/>
+<text x='313.9' y='250.6' font-size='11' fill='#0b0b0b' text-anchor='middle'>ricerca a serpentina ±30°</text>
+<path d='M427.84128805993134,221.13331153637864 L492.9,81.6 A154.0,154.0 0 0 1 567.4,286.2 Z' fill='#eda100' fill-opacity='0.18' stroke='#eda100'/>
+<text x='517.8' y='267.1' font-size='11' fill='#0b0b0b' text-anchor='middle'>cono della testa: ±45°, 4 km in passivo</text>
+<path d='M543.4,203.3 L542.3,196.0 L549.0,177.7 L555.6,180.1 L548.9,198.4 Z' fill='#eb6834' stroke='#0b0b0b'/>
+<text x='565.8' y='181.1' font-size='11' fill='#0b0b0b' text-anchor='start'>il bersaglio</text>
+<path d='M427.8,221.1 L527.8,201.1' fill='none' stroke='#eb6834' stroke-width='2.5' stroke-linejoin='round'/>
+<text x='487.8' y='211.1' font-size='11' fill='#0b0b0b' text-anchor='start'>aggancio e inseguimento sul punto futuro</text>
+<path d='M600.0,420.0 L670.0,420.0' fill='none' stroke='#0b0b0b' stroke-width='2' stroke-linejoin='round'/>
+<text x='635.0' y='414.0' font-size='11' fill='#52514e' text-anchor='middle'>1 km</text>
+</svg>

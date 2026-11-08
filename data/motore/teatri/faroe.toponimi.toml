@@ -1,0 +1,282 @@
+# Toponimi del teatro faroe: generato da tools/pipeline/toponimi.py, non modificare a mano.
+# x, y in metri sul piano del teatro (come il fondale); rango 1 il più importante; acqua = nome di mare.
+
+[[nome]]
+testo = "Isole Fær Øer"
+en = "Faroe Islands"
+tipo = "isole"
+acqua = false
+rango = 1
+x = 41643
+y = 22546
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Oceano Atlantico"
+en = "Atlantic Ocean"
+tipo = "oceano"
+acqua = true
+rango = 1
+x = -73600
+y = -83300
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Mare di Norvegia"
+en = "Norwegian Sea"
+tipo = "mare"
+acqua = true
+rango = 2
+x = 84400
+y = 94700
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Canale Fær Øer-Shetland"
+en = "Faroe-Shetland Channel"
+tipo = "canale"
+acqua = true
+rango = 3
+x = 117516
+y = -64876
+fonte = "dossier 03 §A1 (FSC)"
+
+[[nome]]
+testo = "Banco Fær Øer"
+en = "Faroe Bank"
+tipo = "secca"
+acqua = true
+rango = 4
+x = -70339
+y = -110735
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Canale del Banco Fær Øer"
+en = "Faroe Bank Channel"
+tipo = "canale"
+acqua = true
+rango = 4
+x = -42809
+y = -72173
+fonte = "dossier 03 §A1 (soglia del FBC)"
+
+[[nome]]
+testo = "Eysturoy"
+en = "Eysturoy"
+tipo = "isola"
+acqua = false
+rango = 4
+x = 7808
+y = 22298
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Streymoy"
+en = "Streymoy"
+tipo = "isola"
+acqua = false
+rango = 4
+x = 0
+y = 14488
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Suðuroy"
+en = "Suðuroy"
+tipo = "isola"
+acqua = false
+rango = 4
+x = 7981
+y = -52368
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Sandoy"
+en = "Sandoy"
+tipo = "isola"
+acqua = false
+rango = 5
+x = 10538
+y = -18929
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Vágar"
+en = "Vágar"
+tipo = "isola"
+acqua = false
+rango = 5
+x = -13065
+y = 8941
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Borðoy"
+en = "Borðoy"
+tipo = "isola"
+acqua = false
+rango = 6
+x = 23386
+y = 27943
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Kalsoy"
+en = "Kalsoy"
+tipo = "isola"
+acqua = false
+rango = 6
+x = 14008
+y = 33464
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Mykines"
+en = "Mykines"
+tipo = "isola"
+acqua = false
+rango = 6
+x = -33947
+y = 11315
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Nólsoy"
+en = "Nólsoy"
+tipo = "isola"
+acqua = false
+rango = 6
+x = 17291
+y = 44
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Skúvoy"
+en = "Skúvoy"
+tipo = "isola"
+acqua = false
+rango = 6
+x = 10031
+y = -25617
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Sornfelli (radar NATO)"
+en = "Sornfelli (NATO radar)"
+tipo = "base"
+acqua = false
+rango = 6
+x = 2614
+y = 7802
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Viðoy"
+en = "Viðoy"
+tipo = "isola"
+acqua = false
+rango = 6
+x = 24879
+y = 36870
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Fugloy"
+en = "Fugloy"
+tipo = "isola"
+acqua = false
+rango = 7
+x = 36281
+y = 36974
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Hestur"
+en = "Hestur"
+tipo = "isola"
+acqua = false
+rango = 7
+x = 6296
+y = -4452
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Koltur"
+en = "Koltur"
+tipo = "isola"
+acqua = false
+rango = 7
+x = 1573
+y = -2229
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Kunoy"
+en = "Kunoy"
+tipo = "isola"
+acqua = false
+rango = 7
+x = 17640
+y = 33481
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Lítla Dímun"
+en = "Lítla Dímun"
+tipo = "isola"
+acqua = false
+rango = 7
+x = 15380
+y = -41199
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Stóra Dímun"
+en = "Stóra Dímun"
+tipo = "isola"
+acqua = false
+rango = 7
+x = 13232
+y = -34522
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Svínoy"
+en = "Svínoy"
+tipo = "isola"
+acqua = false
+rango = 7
+x = 33745
+y = 31375
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Tórshavn"
+en = "Tórshavn"
+tipo = "citta"
+acqua = false
+rango = 7
+x = 9421
+y = 3359
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Vágur"
+en = "Vágur"
+tipo = "citta"
+acqua = false
+rango = 7
+x = 10661
+y = -59047
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Klaksvík"
+en = "Klaksvík"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 23967
+y = 26552
+fonte = "Natural Earth 1:10m (pubblico dominio)"

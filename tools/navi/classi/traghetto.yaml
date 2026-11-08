@@ -1,0 +1,60 @@
+# Traghetto ro-ro e passeggeri anni '80 (sul tipo della Pride of Dover, P&O, 1987), la classe `traghetto` del traffico
+# civile: lo scafo scuro alto fino al ponte garage, la prua bassa coi portelloni, la grande sovrastruttura bianca a piu'
+# ponti dalla prua alla poppa con la plancia in testa, l'albero alto a traliccio pieno sopra la plancia, il fumaiolo
+# largo a poppa coi tubi di scarico, le lance lungo i fianchi.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure della classe del traffico: 150 x 24 m (tools/pipeline/civili.py); la Pride of
+# Dover e' 169,6 x 28,3 m: posizioni e quote dalla sua foto (Calais, 1993, di sinistra quasi al traverso) riportate
+# alla classe per 0,884 (STIMA). Modello proprio approvato il 30/10/2026.
+nome: Traghetto ro-ro (tipo Pride of Dover)
+uscita: extracted/navi/traghetto
+
+scafo:
+  L: 150.0
+  B: 24.0
+  bordo: [[0, 12.3], [20, 12.0], [150.0, 11.9]]
+  slancio: 6.0
+  finezza_prua: 35
+  specchio: 0.95
+  svasatura: 0.03
+  pienezza: [0.7, 0.4]
+
+parti:
+  # ---------------- la sovrastruttura bianca: i ponti dei passeggeri, la plancia in testa
+  - {tipo: tuga, nome: ponti_passeggeri, x0: {prua: 146.6}, x1: {prua: 21.3}, y0: -11.5, y1: 11.5, z0: 11.9, z1: 24.0, rastrema: 0.995}
+  - {tipo: tuga, nome: ponti_alti, x0: {prua: 146.6}, x1: {prua: 22.0}, y0: -10.5, y1: 10.5, z0: 24.0, z1: 28.6, rastrema: 0.99}
+  - {tipo: tuga, nome: plancia, x0: {prua: 38.0}, x1: {prua: 18.8}, y0: -11.8, y1: 11.8, z0: 26.5, z1: 31.0, rastrema: 0.99}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 19.2}, x1: {prua: 18.7}, y0: -11.0, y1: 11.0, z0: 28.6, z1: 29.8, mat: nero, rastrema: 0.99}
+  # ---------------- l'albero alto sopra la plancia
+  - {tipo: tuga, nome: torre_albero, x0: {prua: 56.0}, x1: {prua: 50.0}, y0: -2.2, y1: 2.2, z0: 29.5, z1: 40.0, rastrema: 0.6}
+  - {tipo: asta, nome: albero, da: [{prua: 52.8}, 0, 40.0], a: [{prua: 52.8}, 0, 54.1], spessore: 0.6}
+  - {tipo: pennone, nome: pennone, x: {prua: 52.8}, z: 45.0, semilunghezza: 3.0}
+  # ---------------- il fumaiolo largo coi tubi di scarico
+  - {tipo: mack, nome: fumaiolo, x0: {prua: 114.7}, x1: {prua: 95.9}, y0: -5.5, y1: 5.5, z0: 29.5, z1: 36.8, cappello: 2.0, scarichi: 4, r_scarico: 0.7, z_scarichi: 42.6}
+  # ---------------- le lance lungo i fianchi
+  - {tipo: imbarcazione, nome: lance_sinistra, x0: {prua: 110.0}, x1: {prua: 58.0}, y: 11.8, z0: 22.0, larghezza: 2.5, altezza: 2.0}
+  - {tipo: imbarcazione, nome: lance_dritta, x0: {prua: 110.0}, x1: {prua: 58.0}, y: -11.8, z0: 22.0, larghezza: 2.5, altezza: 2.0}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 30/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: sinistra_dover
+    file: extracted/navi/traghetto/foto/3840px-Ferry_PRIDE_OF_DOVER,_Calais_(10509082664).jpg
+    nave: Pride of Dover, Calais, 7/8/1993 (CC0), di sinistra quasi al traverso
+    qualita: 1.0
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 3 px (contorno_modello.py --maschera)
+    maschera_file: extracted/navi/traghetto/foto/sinistra_dover_maschera.png
+    solo_punti: true
+    riquadro: [300, 600, 3840, 2000]
+    # marchi e nomi veri tolti (decisione della principale, 30/10/2026): i due P&O, il nome sullo scafo, il logo del fumaiolo
+    cancella: [[1735, 1550, 1856, 1625], [3000, 1745, 3160, 1855], [1150, 1690, 1455, 1735], [2760, 1056, 2862, 1168]]
+    fotocamera_iniziale: {posizione: [0, 1500, 20], bersaglio: [0, 0, 15], f: 20000}
+    limiti_fotocamera: {elevazione: [-5, 15], distanza: [100, 20000], focale: [1000, 400000]}
+    punti:
+      - [[{prua: 0}, 0, 12.3], [375, 1606]]          # prua in coperta
+      - [[{prua: 6.0}, 0, 0.0], [486, 1886]]         # piede del dritto al galleggiamento
+      - [[{prua: 150.0}, 0, 11.9], [3784, 1690]]     # poppa in coperta
+      - [[{prua: 18.8}, 11.8, 31.0], [803, 1181]]    # spigolo prodiero alto di sinistra della plancia
+      - [[{prua: 52.8}, 0, 54.1], [1576, 675]]       # cima dell'albero
+      - [[{prua: 95.9}, 0, 36.8], [2555, 1094]]      # spigolo prodiero del cielo del fumaiolo
+      - [[{prua: 146.6}, 10.5, 28.6], [3710, 1308]]  # spigolo poppiero alto della sovrastruttura

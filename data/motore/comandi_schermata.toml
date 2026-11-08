@@ -1,0 +1,818 @@
+# Generato da tools/pipeline/manuale_tasti.py da tasti_schermate.toml: non modificare a mano.
+
+[[scheda]]
+id = "F2"
+etichetta = "F2 RADIO"
+stazione = 2
+
+[[scheda.gruppo]]
+titolo = "Radio (F2)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["pulsanti:1-4"]
+solo = "classico"
+cosa = "periscopio, antenna, messaggio precedente e successivo"
+
+[[scheda.gruppo.riga]]
+tasti = ["pulsanti:1-9"]
+solo = "enhanced"
+cosa = "antenna, filo galleggiante, messaggio precedente e successivo, solo gli ordini, tipo di trasmissione, trasmetti, scarico via satellite (688), boa SLOT"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:valore_meno", "comando:valore_piu"]
+solo = "enhanced"
+cosa = "il ritardo della boa SLOT"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:conferma"]
+solo = "enhanced"
+cosa = "verifica l'autenticazione del messaggio scelto"
+
+[[scheda]]
+id = "F3"
+etichetta = "F3 STATO"
+stazione = 3
+
+[[scheda.gruppo]]
+titolo = "Stato (F3)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:zona_avanti", "comando:zona_indietro"]
+solo = ""
+cosa = "il compartimento ingrandito, uno dopo l'altro, poi la scelta automatica"
+
+[[scheda.gruppo.riga]]
+tasti = ["pulsanti:1-5"]
+solo = "enhanced"
+cosa = "1 isola il compartimento mostrato, poi chiude subito, a porte chiuse riapre; 5 la pagina delle squadre o di nuovo lo spaccato; nella pagina 2 e 3 scelgono un sistema, 4 lo porta in cima alle riparazioni"
+
+[[scheda]]
+id = "F4"
+etichetta = "F4 MANOVRA"
+stazione = 4
+
+[[scheda.consiglio]]
+solo = "enhanced"
+testo = "PER CAMBIARE QUOTA SERVE VELOCITÀ: SOTTO I 3 NODI I PIANI NON PORTANO SU. IL BATTELLO ACCELERA PIANO: CON {comando:telegrafo_avanti} DUE VOLTE SI ARRIVA PRIMA."
+
+[[scheda.gruppo]]
+titolo = "Manovra (F4)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:telegrafo_avanti", "comando:telegrafo_indietro"]
+solo = ""
+cosa = "il telegrafo, avanti o indietro di una posizione: è la velocità"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:timone_sinistra", "comando:timone_dritta", "comando:timone_centro"]
+solo = ""
+cosa = "il timone: a sinistra, a dritta, al centro"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:barra_su", "comando:barra_giu", "comando:barra_zero"]
+solo = ""
+cosa = "la quota: più su, più giù, tiene questa (Enhanced: a passi di 15 m)"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:quota_periscopica"]
+solo = ""
+cosa = "la quota periscopica"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:quota_150_piedi"]
+solo = ""
+cosa = "la quota di 150 piedi"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:pilota_automatico"]
+solo = ""
+cosa = "il pilota automatico sui punti di rotta della carta"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:emersione_emergenza"]
+solo = ""
+cosa = "l'emersione d'emergenza"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:immersione_emergenza"]
+solo = "enhanced"
+cosa = "l'immersione d'emergenza, avanti tutta alla quota di sicurezza"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:posati"]
+solo = "enhanced"
+cosa = "posarsi sul fondo"
+
+[[scheda]]
+id = "F5"
+etichetta = "F5 PERISCOPIO"
+stazione = 5
+
+[[scheda.consiglio]]
+solo = "enhanced"
+testo = "PRIMA DI ALZARLO: QUOTA PERISCOPICA ({comando:quota_periscopica}, CON ALMENO 3 NODI: DA FERMO NON SALE). SULLA F4 SI ACCENDE LA SPIA PERI. POI AL MASSIMO 6 NODI: OLTRE TREMA, A 10 NON SI VEDE, A 15 SI ROMPE."
+
+[[scheda.consiglio]]
+solo = "enhanced"
+testo = "UN SOLO COMANDO: {comando:periscopio} O IL PULSANTE 2 ALZANO O ABBASSANO. PREMERLI TUTTI E DUE LO RIABBASSA. SALE IN POCHI SECONDI."
+
+[[scheda.consiglio]]
+solo = "classico"
+testo = "PRIMA DI ALZARLO: QUOTA PERISCOPICA ({comando:quota_periscopica})."
+
+[[scheda.gruppo]]
+titolo = "Periscopio (F5)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:periscopio"]
+solo = ""
+cosa = "alza o abbassa il periscopio, da ogni stazione"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:Sinistra, Destra"]
+solo = ""
+cosa = "ruota il periscopio (Maiusc più veloce; ad alto ingrandimento più lento)"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:Su, Giu"]
+solo = "enhanced"
+cosa = "l'elevazione, per cercare gli aerei; si ferma ai fermi a molla"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:cambia_ingrandimento"]
+solo = "classico"
+cosa = "1,5× o 6×"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:cambia_ingrandimento"]
+solo = "enhanced"
+cosa = "dalle altre stazioni: l'ingrandimento successivo"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:ingrandisci"]
+solo = ""
+cosa = "l'ingrandimento (Enhanced: il successivo, come il pulsante 3)"
+
+[[scheda.gruppo.riga]]
+tasti = ["pulsanti:1-7"]
+solo = "enhanced"
+cosa = "l'altro periscopio, alza o abbassa, ingrandimento, modo di visione, foto, filtro; sull'Alfa la telecamera verticale"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:stadimetro"]
+solo = ""
+cosa = "lo stadimetro; coi telemetri sdoppiati apre l'immagine fantasma e poi legge la distanza"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:valore_meno", "comando:valore_piu"]
+solo = ""
+cosa = "stadimetro sdoppiato: sposta l'immagine fantasma del 2% (Maiusc del 10%)"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:Maiusc tenuto"]
+solo = ""
+cosa = "rotazione e stadimetro più veloci; negli strumenti della carta, passi più lunghi"
+
+[[scheda.gruppo]]
+titolo = "Periscopio: il libretto di riconoscimento"
+solo = "enhanced"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:libretto"]
+solo = ""
+cosa = "apre o chiude il libretto accanto alla vista; da un'altra stazione porta al Periscopio"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:zona_avanti", "comando:zona_indietro"]
+solo = ""
+cosa = "la tavola seguente o precedente"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:conferma"]
+solo = ""
+cosa = "IDENTIFICA: la classe della tavola al bersaglio designato, la sua altezza d'albero al quadrante"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:valore_meno", "comando:valore_piu"]
+solo = ""
+cosa = "a stadimetro chiuso: l'altezza sul quadrante a mano, 1 m (Maiusc 5 m)"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:filo_sinistra", "comando:filo_dritta"]
+solo = ""
+cosa = "l'angolo sulla prora, 10° a sinistra o a dritta"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:osserva_aob"]
+solo = ""
+cosa = "a periscopio alzato: l'angolo sulla prora va alla TMA"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:carta_aggancia"]
+solo = ""
+cosa = "apre o chiude la scheda del filtro (parte, tipo, «cosa vedo»); chiusa, Tab sfoglia solo le tavole che passano"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:esci"]
+solo = ""
+cosa = "chiude la scheda del filtro, poi il libretto"
+
+[[scheda.gruppo]]
+titolo = "Periscopio: la scheda del filtro del libretto"
+solo = "enhanced"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:Su, Giu"]
+solo = ""
+cosa = "la riga: la parte, il tipo, le etichette (l'elenco scorre)"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:Sinistra, Destra"]
+solo = ""
+cosa = "la parte o il tipo precedente o seguente, passando da TUTTE"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:conferma", "comando:osserva_aob"]
+solo = ""
+cosa = "il valore seguente, o segna e toglie la casella"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:Backspace"]
+solo = ""
+cosa = "la riga torna a TUTTE"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:carta_aggancia", "comando:esci"]
+solo = ""
+cosa = "chiudono la scheda; le frecce tornano al periscopio"
+
+[[scheda]]
+id = "F6"
+etichetta = "F6 CARTA"
+stazione = 6
+
+[[scheda.gruppo]]
+titolo = "Navigazione: la carta (F6; sull'Alfa il Sozh)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:ingrandisci", "comando:riduci"]
+solo = ""
+cosa = "ingrandisce o riduce"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:punto_di_rotta"]
+solo = ""
+cosa = "nuovo punto di rotta: frecce o clic per il cursore, Invio lo mette, Esc annulla; fino a nove"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:cancella_punto"]
+solo = ""
+cosa = "cancella l'ultimo punto di rotta (anche dalle altre stazioni)"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:proiezione"]
+solo = ""
+cosa = "la proiezione del battello e del bersaglio a N minuti"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:valore_meno", "comando:valore_piu"]
+solo = ""
+cosa = "i minuti della proiezione"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:sfondo"]
+solo = "classico"
+cosa = "lo sfondo uniforme"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:sfondo"]
+solo = "enhanced"
+cosa = "lo stile della carta"
+
+[[scheda.gruppo.riga]]
+tasti = ["pulsanti:1-3"]
+solo = ""
+cosa = "le scie di tutti, la scia del bersaglio, la proiezione disegnata"
+
+[[scheda.gruppo.riga]]
+tasti = ["pulsanti:4-9"]
+solo = "enhanced"
+cosa = "righello, linee di rilevamento, anelli, segni, CPA, pannello tempo-rilevamento"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:carta_evento"]
+solo = "enhanced"
+cosa = "un evento con l'ora sulla posizione del battello"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:carta_ekelund"]
+solo = "enhanced"
+cosa = "il regolo di Ekelund"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:mate"]
+solo = ""
+cosa = "il MATE della TMA: frecce rotta e distanza, Maiusc con su e giù la velocità"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:carta_pulisci"]
+solo = "enhanced"
+cosa = "pulisce il lucido (tratti, linee, eventi, datum)"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:punto_nave"]
+solo = ""
+cosa = "navigazione realistica: il menu dei punti nave; la cifra sceglie il punto nave"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:guida_punto"]
+solo = ""
+cosa = "DIRECT: il siluro filoguidato scelto verso un punto (frecce o clic, Invio)"
+
+[[scheda.gruppo]]
+titolo = "Navigazione: il quadro del fondale (Ctrl+H)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["pulsanti:1-4"]
+solo = "enhanced"
+cosa = "un ping dell'ecoscandaglio, il periodo successivo, la potenza piena o bassa, le misure sulla carta"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:esci"]
+solo = ""
+cosa = "chiude la pagina, non il gioco"
+
+[[scheda.gruppo]]
+titolo = "Carta: righello (4)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:le frecce"]
+solo = ""
+cosa = "muovono l'estremo attivo (Maiusc più veloce); anche il clic"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:zona_avanti", "comando:zona_indietro"]
+solo = ""
+cosa = "cambia estremo"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:carta_aggancia"]
+solo = ""
+cosa = "aggancia l'estremo al battello o al contatto più vicino"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:conferma"]
+solo = ""
+cosa = "fissa il tratto sul lucido; K toglie l'ultimo"
+
+[[scheda.gruppo]]
+titolo = "Carta: segni (7)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:le frecce"]
+solo = ""
+cosa = "muovono il cursore (anche il clic); Maiusc con su e giù, il raggio della zona"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:zona_avanti", "comando:zona_indietro"]
+solo = ""
+cosa = "l'affiliazione"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:valore_meno", "comando:valore_piu"]
+solo = ""
+cosa = "il tipo: subacqueo, superficie, aereo, nota, croce, zona"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:conferma"]
+solo = ""
+cosa = "mette il segno e apre la scritta; K toglie l'ultimo"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:la tastiera (si scrive)"]
+solo = ""
+cosa = "la scritta del segno (Invio o Esc la chiudono)"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:Backspace"]
+solo = ""
+cosa = "cancella l'ultima lettera della scritta"
+
+[[scheda.gruppo]]
+titolo = "Carta: regolo di Ekelund (Q)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:le frecce"]
+solo = ""
+cosa = "rotta e distanza (Maiusc più veloce)"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:valore_meno", "comando:valore_piu"]
+solo = ""
+cosa = "la velocità, mezzo nodo alla volta"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:conferma"]
+solo = ""
+cosa = "passa la soluzione al MATE"
+
+[[scheda]]
+id = "F7"
+etichetta = "F7 ARMI"
+stazione = 7
+
+[[scheda.gruppo]]
+titolo = "Armi (F7)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["pulsanti:1-7"]
+solo = ""
+cosa = "sceglie il tubo"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:pulsante_8", "comando:pulsante_9"]
+solo = "enhanced"
+cosa = "la quota del siluro scelto via filo, 15 m più su o più giù"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:zona_avanti", "comando:zona_indietro"]
+solo = "enhanced"
+cosa = "il campo delle impostazioni del tubo"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:valore_meno", "comando:valore_piu"]
+solo = "enhanced"
+cosa = "il valore del campo"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:variante_arma"]
+solo = "enhanced"
+cosa = "nel tubo scelto l'arma successiva della rastrelliera"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:filo_sinistra", "comando:filo_dritta"]
+solo = ""
+cosa = "il siluro via filo 10° a sinistra o a dritta (anche dalle altre stazioni)"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:cerca"]
+solo = "classico"
+cosa = "CERCA"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:cerca"]
+solo = "enhanced"
+cosa = "la testa attiva"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:detona"]
+solo = "classico"
+cosa = "DETONATE"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:detona"]
+solo = "enhanced"
+cosa = "lo spegnimento"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:taglia_filo"]
+solo = "enhanced"
+cosa = "taglia il filo"
+
+[[scheda.gruppo]]
+titolo = "Armi (F7): la pagina di tiro dei missili"
+solo = "enhanced"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:Su, Giu"]
+solo = ""
+cosa = "la riga della consolle (fonte, modo, scatola, missione...)"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:Sinistra, Destra"]
+solo = ""
+cosa = "il valore della riga"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:Maiusc+L"]
+solo = ""
+cosa = "alza o abbassa il coperchio del FIRE"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:lancia"]
+solo = ""
+cosa = "il lancio, solo col coperchio alzato e il tubo pronto (RDY); se no il motivo del rifiuto"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:ingrandisci", "comando:riduci"]
+solo = ""
+cosa = "la scala della carta di tiro"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:cerca"]
+solo = ""
+cosa = "rimette la carta di tiro al centro"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:zona_avanti", "comando:zona_indietro"]
+solo = ""
+cosa = "torna alla pagina dei siluri"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:clic"]
+solo = ""
+cosa = "su una riga la sceglie, sulla riga scelta cambia il valore; sul FIRE lancia"
+
+[[scheda]]
+id = "F8"
+etichetta = "F8 SONAR"
+stazione = 8
+
+[[scheda.gruppo]]
+titolo = "Sonar (F8)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["pulsanti:1-4"]
+solo = ""
+cosa = "filtro, impulso attivo, filare o recuperare l'antenna rimorchiata, ANALIZZA"
+
+[[scheda.gruppo.riga]]
+tasti = ["pulsanti:5-9"]
+solo = "enhanced"
+cosa = "sensore, fascio del LOFAR, integrazione, AUTO, modo del cursore: lettura, differenza, armonico, DEMON, RIGHE, STORIA"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:le frecce"]
+solo = "enhanced"
+cosa = "il cursore, su e giù nel tempo, sinistra e destra in frequenza (Maiusc più veloce); nel modo DEMON l'asse e le pale, nel modo RIGHE la riga, nel modo STORIA il tempo"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:filo_sinistra", "comando:filo_dritta"]
+solo = "enhanced"
+cosa = "il fascio fissato a mano, 5° a sinistra o a dritta"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:zona_avanti", "comando:zona_indietro", "comando:valore_meno", "comando:valore_piu"]
+solo = "enhanced"
+cosa = "il campo e il valore (pavimento, tetto, palette, scala dei tempi, Doppler della libreria, la maschera delle righe proprie; nel modo 1989 la persistenza del fosforo)"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:ingrandisci", "comando:riduci"]
+solo = "enhanced"
+cosa = "ingrandisce o riduce il LOFAR in frequenza"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:mate"]
+solo = "enhanced"
+cosa = "un tracker nuovo sul fascio puntato"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:cancella_punto"]
+solo = "enhanced"
+cosa = "toglie il tracker seguito"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:carta_aggancia"]
+solo = "enhanced"
+cosa = "aggancia o sgancia il verniero alla riga del cursore; nel modo DEMON la serie trovata, nel modo RIGHE il verniero alla riga scelta, nel modo STORIA «quando è comparsa»"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:carta_ekelund"]
+solo = "enhanced"
+cosa = "il modo della cuffia"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:carta_evento"]
+solo = "enhanced"
+cosa = "registra l'ascolto del fascio in un file WAV"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:punto_di_rotta", "comando:proiezione"]
+solo = "enhanced"
+cosa = "un'annotazione sulla cascata al cursore; toglie l'ultima"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:siluro", "comando:taglia_filo", "comando:cerca"]
+solo = "enhanced"
+cosa = "salva lo spettro in uno slot; lo slot successivo; il confronto"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:sfondo"]
+solo = "enhanced"
+cosa = "apre o chiude la libreria di riferimento"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:conferma"]
+solo = "enhanced"
+cosa = "toglie lo spettro della libreria sovrapposto al LOFAR"
+
+[[scheda.gruppo]]
+titolo = "Sonar: libreria di riferimento (B)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:zona_avanti", "comando:zona_indietro"]
+solo = ""
+cosa = "la scheda"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:Su, Giu"]
+solo = ""
+cosa = "la voce"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:conferma"]
+solo = ""
+cosa = "sovrappone la voce al LOFAR"
+
+[[scheda]]
+id = "OVUNQUE"
+etichetta = "OVUNQUE"
+stazione = 0
+
+[[scheda.consiglio]]
+solo = ""
+testo = "[ E ] SULLA TASTIERA ITALIANA: ALTGR+È E ALTGR++. QUI CI SONO I COMANDI DI OGNI STAZIONE: F2-F8 O TAB CAMBIANO SCHEDA."
+
+[[scheda.gruppo]]
+titolo = "Da ogni stazione"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:F2-F9"]
+solo = ""
+cosa = "la stazione; chiude anche la scelta del bersaglio"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:pausa"]
+solo = ""
+cosa = "pausa"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:compressione_piu", "comando:compressione_meno"]
+solo = ""
+cosa = "raddoppia o dimezza la compressione del tempo"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:esci"]
+solo = ""
+cosa = "annulla la scelta in corso; chiude il registro, il menu dei punti nave, la libreria del sonar; toglie la pausa; altrimenti lascia la missione"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:aiuto_comandi"]
+solo = ""
+cosa = "la schermata dei comandi, sulla scheda della stazione: F11 o Esc la chiude"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:i tasti di manovra"]
+solo = ""
+cosa = "timone, telegrafo, quota, pilota automatico, periscopio, antenna, emergenze (tabella A.1)"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:tubo_1", "comando:tubo_5", "comando:tubo_7", "comando:tubo_2", "comando:tubo_3", "comando:tubo_4", "comando:tubo_6"]
+solo = ""
+cosa = "sceglie il tubo 1, 5 o 7 (missili)"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:lancia"]
+solo = ""
+cosa = "lancia dal tubo scelto"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:siluro"]
+solo = ""
+cosa = "il siluro filoguidato successivo"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:bersaglio"]
+solo = ""
+cosa = "TARGET: ferma il tempo e fa scegliere il bersaglio fra i segni della vista (al periscopio) o della carta"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:silenzio_a_bordo"]
+solo = ""
+cosa = "silenzio a bordo, con la ricarica realistica"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:enciclopedia"]
+solo = "enhanced"
+cosa = "la scheda dell'enciclopedia di ciò che si guarda"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:verita"]
+solo = ""
+cosa = "la diagnosi dei contatti: classe, distanza e AOB veri"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:istantanea"]
+solo = ""
+cosa = "salva la schermata"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:registro_messaggi"]
+solo = "enhanced"
+cosa = "il registro dei messaggi di bordo"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:radar_giocatore"]
+solo = "enhanced"
+cosa = "il radar del battello, emerso o con l'albero su"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:bqs15"]
+solo = "688"
+cosa = "il BQS-15, il sonar per le mine"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:intercettazione"]
+solo = "enhanced"
+cosa = "la pagina dell'intercettazione e dell'allarme siluro, sulla stazione Sonar"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:quadro_fondale"]
+solo = "enhanced"
+cosa = "la pagina del quadro del fondale, sulla stazione Navigazione; di nuovo, o Esc, la chiude"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:muto"]
+solo = "classico"
+cosa = "i suoni spenti o accesi, come Ctrl-Q nel 1989"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:tan"]
+solo = "classico"
+cosa = "i suoni senza i campioni, come Ctrl-N nel 1989"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:tan"]
+solo = "alfa"
+cosa = "il Tan"
+
+[[scheda.gruppo]]
+titolo = "Scelta del bersaglio (dopo TARGET)"
+solo = ""
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:le lettere"]
+solo = ""
+cosa = "il segno con quella lettera"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:zona_avanti", "comando:zona_indietro"]
+solo = ""
+cosa = "il segno successivo o precedente, anche quelli senza lettera"
+
+[[scheda.gruppo.riga]]
+tasti = ["fisso:clic"]
+solo = ""
+cosa = "il segno più vicino al clic, e la scelta si chiude"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:conferma"]
+solo = ""
+cosa = "conferma; Esc senza bersaglio"
+
+[[scheda.gruppo]]
+titolo = "Alfa, da ogni stazione"
+solo = "alfa"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:boksit_rotta", "comando:boksit_quota"]
+solo = ""
+cosa = "Boksit: il modo della rotta o della quota (manuale, automatico, programma)"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:boksit_tappa"]
+solo = ""
+cosa = "Boksit: il programma dai punti di rotta della carta"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:sfoga"]
+solo = ""
+cosa = "ПОКС: apre gli sfoghi delle casse principali"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:compensa_piu", "comando:compensa_meno"]
+solo = ""
+cosa = "ПОКС: imbarca o espelle mezzo metro cubo nelle casse d'assetto"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:akkord_designa"]
+solo = ""
+cosa = "Akkord: designa il bersaglio in uno slot libero"
+
+[[scheda.gruppo.riga]]
+tasti = ["comando:akkord_1", "comando:akkord_2", "comando:akkord_3"]
+solo = ""
+cosa = "Akkord: sceglie il bersaglio 1, 2 o 3"

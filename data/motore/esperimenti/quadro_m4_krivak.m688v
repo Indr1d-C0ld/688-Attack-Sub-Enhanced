@@ -1,0 +1,16 @@
+# Esperimento per il quadro radio ai sottomarini (tools/re/prove/quadro_radio/proposta.md §4, M4). La scena M4: un Victor III (6)
+# di pattuglia, senza limite di salve, e a 40 km un convoglio (2, 3, 4) con una Perry (5), in guerra.
+[esperimento]
+titolo = "Il Victor e la Krivak che riferisce"
+mostra = "Una Krivak vede il convoglio e lo riferisce al teatro, ma il Victor sente gia' il convoglio da solo e il dato non gli serve"
+ipotesi = "Il Victor non va sul dato: ha un contatto suo. Misurato il 05/11: contatto solido in 10 semi su 10, dato mai usato"
+codice = "8CDXSF-P80000-04K000-0000HZ-G00295"
+semi = 10
+da = 1
+
+[[intervento]]
+tempo = 0.0
+tipo = "unita_nuova"
+punto = { x = -4500.0, y = -130000.0 }
+parametri = { rotta = 0.0, velocita_kn = 6.0 }
+testi = { classe = "krivak2", parte = "urss" }

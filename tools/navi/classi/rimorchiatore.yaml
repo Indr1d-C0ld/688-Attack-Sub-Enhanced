@@ -1,0 +1,59 @@
+# Rimorchiatore d'altura (sul tipo dei Powhatan, T-ATF, US Navy 1979-81), la classe `rimorchiatore` del traffico civile:
+# il castello alto, la sovrastruttura e la plancia a prua, il fumaiolo con l'albero, il ponte delle lance con la gru, il
+# lungo cassero basso di lavoro a poppa.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure della classe del traffico: 50 x 13,5 m (tools/pipeline/civili.py); il Powhatan e'
+# 73,2 x 12,8 m: posizioni dalla sua foto di sinistra (all'ormeggio, 1983, ~34,2 px/m) riportate alla classe per 0,683
+# in lunghezza e in altezza (STIMA: un rimorchiatore d'altura piu' piccolo con la stessa sagoma). Modello proprio
+# approvato il 30/10/2026.
+nome: Rimorchiatore d'altura (tipo Powhatan)
+uscita: extracted/navi/rimorchiatore
+
+scafo:
+  L: 50.0
+  B: 13.5
+  bordo: [[0, 6.1], [8, 4.9], [10, 3.6], [30, 3.6], [31, 2.0], [50.0, 2.0]]
+  slancio: 3.4
+  finezza_prua: 18
+  specchio: 0.85
+  svasatura: 0.06
+  pienezza: [0.7, 0.4]
+
+parti:
+  # ---------------- la sovrastruttura, la plancia
+  - {tipo: tuga, nome: sovrastruttura, x0: {prua: 30.3}, x1: {prua: 10.0}, y0: -5.5, y1: 5.5, z0: 3.6, z1: 8.4, rastrema: 0.98}
+  - {tipo: tuga, nome: plancia, x0: {prua: 17.0}, x1: {prua: 9.5}, y0: -6.2, y1: 6.2, z0: 8.4, z1: 10.5, rastrema: 0.97}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 9.9}, x1: {prua: 9.4}, y0: -5.6, y1: 5.6, z0: 9.3, z1: 10.0, mat: nero, rastrema: 0.98}
+  - {tipo: asta, nome: albero_plancia, da: [{prua: 13.0}, 0, 10.5], a: [{prua: 13.0}, 0, 13.3], spessore: 0.25}
+  # ---------------- il fumaiolo con l'albero
+  - {tipo: mack, nome: fumaiolo, x0: {prua: 23.0}, x1: {prua: 19.6}, y0: -2.0, y1: 2.0, z0: 8.4, z1: 12.7, cappello: 1.2}
+  - {tipo: albero_palo, nome: albero, x: {prua: 20.9}, z0: 12.7, z1: 20.1, r: 0.35, crocette: [[15.9, 2.0]]}
+  # ---------------- il ponte delle lance con la gru
+  - {tipo: tuga, nome: ponte_lance, x0: {prua: 30.3}, x1: {prua: 23.0}, y0: -6.0, y1: 6.0, z0: 3.6, z1: 5.8}
+  - {tipo: imbarcazione, nome: lancia, x0: {prua: 29.5}, x1: {prua: 25.5}, y: -4.0, z0: 5.8, larghezza: 2.2, altezza: 1.4}
+  - {tipo: gru, nome: gru, base: [{prua: 27.0}, 3.5, 7.2], cima: [{prua: 31.0}, 3.5, 8.0], z0: 5.8, colonna: 0.6, spessore: 0.35}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 30/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: sinistra_powhatan
+    file: extracted/navi/rimorchiatore/foto/USNS_Powhatan_port_side.jpg
+    nave: USNS Powhatan (T-ATF 166), 1/10/1983 (US Navy, pubblico dominio), di sinistra all'ormeggio
+    qualita: 1.0
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 3 px (contorno_modello.py --maschera)
+    maschera_file: extracted/navi/rimorchiatore/foto/sinistra_powhatan_maschera.png
+    solo_punti: true
+    riquadro: [100, 350, 2700, 1450]
+    # numeri, nomi e stemmi veri tolti (decisione della principale, 30/10/2026): il 166, la targa della plancia, il nome
+    # a poppa, lo stemma sul fumaiolo
+    cancella: [[497, 1257, 676, 1347], [752, 866, 854, 896], [2420, 1295, 2530, 1331], [1206, 881, 1281, 951]]
+    fotocamera_iniziale: {posizione: [0, 400, 4], bersaglio: [0, 0, 6], f: 12000}
+    limiti_fotocamera: {elevazione: [-5, 15], distanza: [40, 5000], focale: [500, 120000]}
+    punti:
+      - [[{prua: 0}, 0, 6.1], [148, 1098]]           # dritto di prua in coperta
+      - [[{prua: 3.4}, 0, 0.0], [319, 1406]]         # piede del dritto al galleggiamento
+      - [[{prua: 50.0}, 0, 2.0], [2649, 1297]]       # poppa in coperta
+      - [[{prua: 9.5}, 0, 10.5], [623, 871]]         # fronte del cielo della plancia
+      - [[{prua: 19.6}, 0, 12.7], [1128, 760]]       # spigolo prodiero del cielo del fumaiolo
+      - [[{prua: 20.9}, 0, 20.1], [1195, 389]]       # cima dell'albero
+      - [[{prua: 30.3}, 6.0, 5.8], [1662, 1101]]     # spigolo poppiero alto del ponte delle lance

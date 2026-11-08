@@ -1,0 +1,52 @@
+# Maschere delle foto del Typhoon (tools/navi/maschera_manuale.py).
+# Giardinetto di dritta 1985 (dall'alto): sagoma tracciata a mano (bordo del ponte sul lato sinistro contro il mare,
+# vela, carenatura, galleggiamento di dritta lungo la schiuma); timone, timone prodiero di dritta e alberi a parte.
+file: extracted/navi/typhoon/foto/poppa_dritta_tk202_1985.jpg
+uscita: extracted/navi/typhoon/foto/poppa_dritta_tk202_1985_maschera.png
+scafo: [[0, 862], [70, 803], [176, 744], [270, 697], [388, 638], [412, 626], [470, 568], [529, 520], [600, 491], [604, 300],
+        [618, 278], [700, 255], [780, 236], [835, 226], [845, 240], [848, 330], [856, 338], [985, 315], [1103, 309],
+        [1185, 332], [1244, 368], [1285, 415], [1303, 450], [1297, 474], [1268, 497], [1220, 568], [1162, 638], [1091, 709],
+        [1032, 779], [974, 862], [915, 944], [856, 1015], [797, 1074], [706, 1097], [588, 1097], [470, 1074], [353, 1074],
+        [270, 1062], [118, 1026], [0, 1003]]
+soglia_scafo: 256
+linea_coperta: [[0, -1], [5000, -1]]
+inviluppo: [[0, 0], [1, 0], [1, 1]]
+includi:
+  - [[162, 720], [175, 680], [200, 664], [235, 668], [248, 700], [246, 1135], [165, 1150]]   # timone
+  - [[1300, 405], [1470, 412], [1470, 428], [1300, 430]]                                       # timone prodiero di dritta
+  - [[672, 0], [686, 0], [686, 290], [672, 290]]                                               # alberi
+  - [[688, 75], [701, 75], [701, 260], [688, 260]]
+  - [[704, 0], [731, 0], [731, 245], [704, 245]]
+  - [[766, 80], [778, 80], [778, 225], [766, 225]]
+---
+# Poppa 1985 (dall'alto): sagoma tracciata a mano (scafo, vela, alberi, timoni prodieri estesi, timone).
+file: extracted/navi/typhoon/foto/poppa_1985.jpg
+uscita: extracted/navi/typhoon/foto/poppa_1985_maschera.png
+scafo: [[288, 2075], [375, 1000], [412, 875], [500, 750], [625, 688], [750, 655], [875, 655], [875, 560], [888, 540], [910, 525],
+        [1050, 525], [1150, 545], [1175, 560], [1225, 650], [1350, 712], [1475, 775], [1550, 862], [1600, 950], [1650, 1125],
+        [1725, 1300], [1800, 1500], [1875, 1750], [1900, 2000], [1875, 2100], [1750, 2150], [1500, 2150], [1250, 2175],
+        [1000, 2200], [750, 2175], [500, 2150], [325, 2112]]
+soglia_scafo: 256
+linea_coperta: [[0, -1], [5000, -1]]
+inviluppo: [[0, 0], [1, 0], [1, 1]]
+includi:
+  - [[1130, 1445], [1188, 1438], [1225, 1500], [1325, 1600], [1325, 2300], [1250, 2312], [1238, 2388], [1100, 2312], [1095, 1600]]
+  - [[980, 112], [1005, 112], [1005, 537], [980, 537]]
+  - [[1012, 100], [1075, 100], [1075, 537], [1012, 537]]
+  - [[162, 850], [475, 850], [475, 888], [162, 888]]
+  - [[1475, 825], [1762, 825], [1762, 862], [1475, 862]]
+---
+# Prua di dritta 1999 (TK-202 in disarmo, scarico): sagoma tracciata a mano fino al bordo superiore del bagnasciuga chiaro,
+# che resta fuori (il modello, tagliato al galleggiamento normale, sta 1,5 m piu' in alto: `affondamento: -1.5`);
+# timone a parte; attrezzature del cantiere sulla coperta escluse.
+file: extracted/navi/typhoon/foto/prua_dritta_tk202_1999.jpg
+uscita: extracted/navi/typhoon/foto/prua_dritta_tk202_1999_maschera.png
+scafo: [[37, 812], [75, 762], [137, 712], [225, 675], [287, 637], [325, 600], [362, 568], [365, 569], [375, 412], [400, 390],
+        [462, 377], [525, 394], [544, 425], [544, 550], [587, 581], [612, 606], [700, 594], [780, 575], [905, 550], [1030, 544],
+        [1155, 550], [1280, 569], [1380, 606], [1467, 675], [1530, 775], [1567, 862], [1580, 950], [1000, 950], [750, 937],
+        [500, 900], [250, 856], [50, 825]]
+soglia_scafo: 256
+linea_coperta: [[0, -1], [5000, -1]]
+inviluppo: [[0, 0], [1, 0], [1, 1]]
+includi:
+  - [[222, 600], [228, 592], [245, 592], [250, 605], [250, 680], [222, 690]]   # timone

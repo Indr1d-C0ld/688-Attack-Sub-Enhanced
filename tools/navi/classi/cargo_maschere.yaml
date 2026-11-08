@@ -1,0 +1,48 @@
+# Maschere tracciate a mano per le foto della nave da carico (tools/navi/maschera_manuale.py).
+# Coordinate in pixel delle miniature da 1920 px. Dentro l'inviluppo e' nave cio' che e' poco blu: il cielo ha
+# B - (R+G)/2 tra 24 e 44, torri delle gru e cassero bianchi circa 0, container verdi e case delle gru rosse
+# negativi. Lo scafo (blu scuro su una foto) e' il poligono `includi`, tra la linea di coperta e il
+# galleggiamento (o il bordo della banchina che lo copre). Foto della Hauge: metodo cielo (vedi sotto).
+---
+# Cpl. Louis J. Hauge Jr., 16/08/1990, prua di dritta da una banchina (fotocamera a ~5 m sull'acqua)
+# metodo cielo: vicino all'orizzonte il cielo velato ha B - (R+G)/2 fino a 12 e il metodo colore lo prendeva per
+# nave; la luminosita' del cielo (150-175) si separa bene da torri bianche (~250), container e scafo (< 110)
+metodo: cielo
+file: extracted/navi/cargo/foto/fianco_dritta_hauge_1990_1920.jpg
+uscita: extracted/navi/cargo/foto/fianco_dritta_hauge_1990_maschera.png
+sfocatura: 1.4
+orizzonte: [[0, 632], [1920, 716]]
+margine_orizzonte: 2
+soglia: 20
+inviluppo: [[30, 720], [30, 455], [150, 440], [205, 410], [235, 360], [280, 360], [300, 395], [460, 345], [470, 330],
+            [560, 330], [690, 230], [700, 225], [930, 170], [1040, 170], [1050, 280], [1262, 255], [1266, 110],
+            [1300, 110], [1302, 290], [1440, 460], [1520, 548], [1520, 640], [1440, 720], [1360, 826], [40, 720]]
+includi:
+  # scafo: linea di coperta dalla poppa al dritto, dritto, galleggiamento (fascia rossa) fino alla poppa
+  - [[40, 596], [140, 592], [300, 584], [600, 566], [1000, 550], [1300, 546], [1505, 553], [1470, 620], [1420, 700],
+     [1356, 822], [1200, 820], [1000, 812], [700, 776], [500, 757], [240, 714], [52, 706], [42, 640]]
+escludi:
+  - [[500, 660], [645, 660], [645, 800], [500, 800]]      # tre persone sulla banchina davanti allo scafo
+  - [[1440, 690], [1520, 690], [1520, 760], [1440, 760]]  # cavo di rimorchio e ancora fuori dallo scafo
+area_minima: 80
+buco_massimo: 2500
+---
+# 1st Lt. Alex Bonnyman, 16/07/1987, prua di sinistra in cantiere (nave scarica, galleggia piu' alta)
+metodo: colore
+file: extracted/navi/cargo/foto/prua_sinistra_bonnyman_1987_1920.jpg
+uscita: extracted/navi/cargo/foto/prua_sinistra_bonnyman_1987_maschera.png
+sfocatura: 1.0
+soglia_blu: 17
+inviluppo: [[112, 555], [330, 560], [340, 280], [410, 280], [420, 545], [650, 545], [660, 200],
+            [780, 200], [790, 470], [930, 470], [935, 300], [1040, 300], [1045, 440], [1180, 440], [1190, 445],
+            [1260, 445], [1270, 560], [1440, 560], [1470, 490], [1530, 490], [1560, 580], [1715, 600], [1715, 880],
+            [1500, 910], [1100, 950], [700, 980], [300, 1000], [140, 995], [140, 900], [265, 845], [200, 760], [118, 580]]
+escludi:
+  - [[1083, 0], [1172, 0], [1172, 470], [1083, 470]]      # gru a torre del cantiere dietro la nave
+  - [[970, 0], [1410, 0], [1410, 235], [970, 235]]        # braccio della gru a torre
+includi:
+  - [[118, 560], [400, 576], [700, 598], [1000, 622], [1300, 658], [1500, 690], [1700, 740], [1712, 770],
+     [1705, 870], [1500, 905], [1100, 945], [700, 975], [300, 995], [160, 990], [140, 940], [150, 900],
+     [265, 845], [200, 760], [118, 580]]
+area_minima: 80
+buco_massimo: 2500

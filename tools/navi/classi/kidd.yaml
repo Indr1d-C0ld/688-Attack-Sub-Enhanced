@@ -1,0 +1,171 @@
+# Cacciatorpediniere lanciamissili classe Kidd (DDG-993), scafo tipo Spruance, configurazione 1989.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua (x = L/2 - d).
+# Misure: quote ed elementi principali (dritto, specchio, cime degli alberi, torri Mk45, hangar) da
+# triangolazione su tre foto calibrate insieme (tools/navi/triangola.py: Kidd 1990 prua dritta, Chandler
+# 1988 poppa dritta, Kidd 1987 prua sinistra; errori 2,6 / 1,4 / 1,2 px). Posizioni di mack, alberi,
+# radar e sovrastrutture retroproiettate dalle foto calibrate (scala ~0,07-0,09 m/pixel sulla foto della
+# Kidd 1990). Parti specifiche (Mk26, Mk45, SPS-48, mack, Harpoon) nate per questa classe, ora in kit.py.
+nome: Kidd (DDG-993)
+uscita: extracted/navi/kidd
+
+scafo:
+  L: 171.7
+  B: 16.8
+  # coperta: castello alto a prua con forte cavallino, ponte principale ~5,1 m, ponte di poppa
+  # ribassato (~3,7 m) per gli ultimi 22 m
+  bordo: [[0, 7.3], [6, 7.1], [12, 6.8], [28, 6.1], [60, 5.3], [149.0, 5.1], [150.0, 3.7], [171.7, 3.7]]
+  slancio: 8.1
+  finezza_prua: 50
+  specchio: 0.79
+  svasatura: 0.06
+  pienezza: [0.8, 0.5]
+
+parti:
+  # --- prua: Mk45 prodiero e Mk26 prodiero
+  - {tipo: cannone_mk45, nome: mk45_prodiero, x: {prua: 32.1}, z0: 6.2, altezza: 2.8, lunghezza: 4.8, verso: 1}
+  - {tipo: tuga, nome: deposito_mk26_prodiero, x0: {prua: 50.5}, x1: {prua: 41.0}, y0: -3.5, y1: 3.5, z0: 5.3, z1: 6.0}
+  - {tipo: lanciatore_mk26, nome: mk26_prodiero, x: {prua: 45.8}, z0: 6.0, verso: 1, elevazione: 40}
+  # --- sovrastruttura continua dalla plancia all'hangar (livelli 01-03)
+  - {tipo: tuga, nome: tuga_principale, x0: {prua: 100.0}, x1: {prua: 54.0}, y0: -6.9, y1: 6.9, z0: 5.1, z1: 13.2, rastrema: 0.99}
+  - {tipo: tuga, nome: hangar, x0: {prua: 117.2}, x1: {prua: 100.0}, y0: -7.3, y1: 7.3, z0: 5.1, z1: 13.9, rastrema: 0.99}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 54.3}, x1: {prua: 53.8}, y0: -6.6, y1: 6.6, z0: 11.8, z1: 12.6, mat: nero, rastrema: 0.99}
+  - {tipo: tuga, nome: tuga_sotto_albero_prodiero, x0: {prua: 68.5}, x1: {prua: 56.0}, y0: -4.5, y1: 4.5, z0: 13.2, z1: 17.2, rastrema: 0.97}
+  # --- mack prodiero (fumaiolo spostato a sinistra) e albero prodiero con SPS-49
+  - {tipo: mack, nome: mack_prodiero, x0: {prua: 77.5}, x1: {prua: 69.0}, y0: -0.2, y1: 6.2, z0: 13.2, z1: 19.0, cappello: 1.8}
+  - {tipo: traliccio, nome: albero_prodiero, x: {prua: 62.6}, base: 5.0, cima: 1.4, z0: 17.2, z1: 31.5, piani: [24.8, 31.5]}
+  - {tipo: pennone, nome: pennone_prodiero, x: {prua: 62.6}, z: 31.5, semilunghezza: 5.5}
+  - {tipo: asta, nome: alberetto_prodiero, da: [{prua: 62.6}, 0, 31.5], a: [{prua: 62.1}, 0, 40.5], spessore: 0.5}
+  # piattaforme a sbalzo verso prua: SPS-49 sulla superiore, radome (SATCOM) sull'inferiore
+  - {tipo: scatola, nome: piattaforma_sps49, x0: {prua: 63.0}, x1: {prua: 54.0}, y0: -2.6, y1: 2.6, z0: 24.9, z1: 25.3, mat: traliccio}
+  - {tipo: asta, nome: puntone_sps49, da: [{prua: 62.0}, 0, 19.6], a: [{prua: 55.0}, 0, 24.9], spessore: 0.4}
+  - {tipo: antenna_radar, nome: sps49, x: {prua: 56.0}, z0: 25.3, larghezza: 7.3, altezza: 4.0, orientamento: 30}
+  - {tipo: scatola, nome: piattaforma_radome, x0: {prua: 62.5}, x1: {prua: 54.8}, y0: -2.2, y1: 2.2, z0: 19.2, z1: 19.6, mat: traliccio}
+  - {tipo: sfera, nome: radome_albero_prodiero, x: {prua: 56.4}, y: 0, z: 20.9, r: 1.3}
+  - {tipo: ciws, nome: phalanx_prodiero, x: {prua: 56.5}, y: -4.0, z0: 13.2}
+  # --- Harpoon tra i mack (due lanciatori quadrupli)
+  - {tipo: harpoon, nome: harpoon_dritta, x: {prua: 82.0}, y: -4.8, z0: 13.2, verso: -1}
+  - {tipo: harpoon, nome: harpoon_sinistra, x: {prua: 82.0}, y: 4.8, z0: 13.2, verso: 1}
+  # --- mack poppiero: base dell'albero e fumaiolo spostato a dritta
+  - {tipo: mack, nome: base_albero_poppiero, x0: {prua: 100.0}, x1: {prua: 87.0}, y0: -3.5, y1: 3.5, z0: 13.2, z1: 18.8, cappello: 1.8, scarichi: 0}
+  - {tipo: mack, nome: mack_poppiero, x0: {prua: 113.0}, x1: {prua: 103.5}, y0: -6.4, y1: 0.0, z0: 13.9, z1: 19.0, cappello: 2.2}
+  - {tipo: traliccio, nome: albero_poppiero, x: {prua: 91.0}, base: 4.5, cima: 1.2, z0: 18.8, z1: 35.0, piani: [27.0, 35.0]}
+  - {tipo: pennone, nome: pennone_poppiero, x: {prua: 91.0}, z: 35.0, semilunghezza: 4.5}
+  - {tipo: asta, nome: alberetto_poppiero, da: [{prua: 91.0}, 0, 35.0], a: [{prua: 91.0}, 0, 39.0], spessore: 0.6}
+  - {tipo: scatola, nome: coffa_poppiera, x0: {prua: 92.0}, x1: {prua: 90.0}, y0: -1.0, y1: 1.0, z0: 39.0, z1: 40.3, mat: traliccio}
+  # SPS-48 (antenna rotante) su piattaforma a sbalzo verso poppa; orientata a 45 gradi come compromesso
+  - {tipo: scatola, nome: piattaforma_sps48, x0: {prua: 97.0}, x1: {prua: 90.0}, y0: -2.4, y1: 2.4, z0: 26.6, z1: 27.0, mat: traliccio}
+  - {tipo: sps48, nome: sps48, x: {prua: 95.0}, z0: 28.2, larghezza: 5.4, altezza: 6.2, inclinazione: 15, verso: -1, orientamento: 45}
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 101.0}, x1: {prua: 93.5}, y: -7.4, z0: 7.4}
+  # --- hangar, Phalanx poppiero, ponte di volo
+  - {tipo: tuga, nome: piattaforma_phalanx_poppiero, x0: {prua: 119.0}, x1: {prua: 114.0}, y0: -1.0, y1: 5.5, z0: 13.9, z1: 17.3}
+  - {tipo: ciws, nome: phalanx_poppiero, x: {prua: 116.6}, y: 2.5, z0: 17.3}
+  - {tipo: tuga, nome: ponte_di_volo, x0: {prua: 137.0}, x1: {prua: 117.2}, y0: -7.6, y1: 7.6, z0: 5.1, z1: 8.3}
+  # --- poppa: Mk26 poppiero e Mk45 poppiero sul ponte ribassato
+  - {tipo: tuga, nome: deposito_mk26_poppiero, x0: {prua: 154.0}, x1: {prua: 142.0}, y0: -4.5, y1: 4.5, z0: 5.1, z1: 5.9}
+  - {tipo: lanciatore_mk26, nome: mk26_poppiero, x: {prua: 149.5}, z0: 5.9, verso: -1, elevazione: 50}
+  - {tipo: cannone_mk45, nome: mk45_poppiero, x: {prua: 158.4}, z0: 3.7, altezza: 2.8, lunghezza: 4.8, verso: -1}
+
+# Foto di riferimento (pubblico dominio, US Navy / NARA; metadati in extracted/navi/kidd/foto/fonti.json).
+# Nessuna foto al traverso esatto su Commons: le due 'di fianco' sono a circa 50 gradi dalla prua.
+foto:
+  - nome: prua_dritta
+    file: extracted/navi/kidd/foto/prua_dritta_kidd_1990_full.jpg
+    nave: USS Kidd (DDG-993), 1990
+    qualita: 1.0
+    specchiabile: true
+    qualita_speculare: 0.35
+    orizzonte_y: 858
+    soglia_cielo: 120
+    riquadro: [300, 380, 2700, 858]
+    escludi: [[1680, 700, 2010, 870]]   # nave lontana sullo sfondo
+    cancella: [[2260, 1110, 2405, 1170]]
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [168, -179, 20], bersaglio: [0, 0, 8], f: 4050}
+    punti:
+      - [[{prua: 0}, 0, 7.3], [2607, 1073]]          # dritto di prua in coperta
+      - [[{prua: 8.1}, 0, 0], [2450, 1222]]          # piede del dritto al galleggiamento
+      - [[{prua: 171.7}, -6.6, 3.7], [357, 1083]]    # specchio, spigolo di dritta in coperta
+      - [[{prua: 171.7}, -6.3, 0], [357, 1128]]      # specchio, spigolo di dritta al galleggiamento
+      - [[{prua: 62.1}, 0, 40.5], [1558, 468]]       # cima dell'alberetto prodiero
+      - [[{prua: 32.0}, 0, 9.0], [2025, 1030]]       # tetto della torre Mk45 prodiera
+      - [[{prua: 158.7}, 0, 6.5], [540, 1042]]       # tetto della torre Mk45 poppiera
+      - [[{prua: 91.0}, 0, 40.3], [1199, 506]]       # coffa dell'albero poppiero (tetto)
+  - nome: fianco_sinistro
+    file: extracted/navi/kidd/foto/fianco_sinistro_kidd_1989.jpg
+    nave: USS Kidd (DDG-993), 1989
+    maschera_file: extracted/navi/kidd/foto/fianco_sinistro_kidd_1989_maschera.png   # tracciata a mano (classi/kidd_maschera_fianco_sinistro.yaml)
+    qualita: 0.8             # unica foto quasi al traverso e del 1989, ma solo 636 px
+    specchiabile: true
+    qualita_speculare: 0.5
+    orizzonte_y: 0
+    soglia_cielo: 0
+    cancella: [[60, 260, 100, 274]]
+    fotocamera_iniziale: {posizione: [0, 600, 80], bersaglio: [0, 0, 10], f: 2000}
+    punti:
+      - [[{prua: 0}, 0, 7.3], [32, 256]]             # dritto di prua in coperta
+      - [[{prua: 171.7}, 6.6, 3.7], [583, 253]]      # specchio, spigolo di sinistra in coperta
+      - [[{prua: 62.1}, 0, 40.5], [235, 118]]        # cima dell'alberetto prodiero
+      - [[{prua: 91.0}, 0, 40.3], [323, 120]]        # coffa dell'albero poppiero (tetto)
+      - [[{prua: 32.0}, 0, 9.0], [138, 245]]         # tetto della torre Mk45 prodiera
+      - [[{prua: 117.2}, 7.2, 13.9], [420, 212]]     # hangar, spigolo poppiero di sinistra in alto
+  - nome: prua_sinistra_lontana
+    file: extracted/navi/kidd/foto/prua_sinistra_chandler_1991_full.jpg
+    nave: USS Chandler (DDG-996), 1991
+    maschera_file: extracted/navi/kidd/foto/prua_sinistra_chandler_1991_maschera.png   # tracciata a mano (classi/kidd_maschera_prua_sinistra_chandler.yaml)
+    qualita: 1.0
+    specchiabile: true
+    qualita_speculare: 0.35
+    orizzonte_y: 0
+    soglia_cielo: 0
+    cancella: [[225, 1180, 360, 1235], [2425, 1128, 2450, 1145]]
+    fotocamera_iniziale: {posizione: [0, 300, 20], bersaglio: [0, 0, 10], f: 4200}
+    punti:
+      - [[{prua: 0}, 0, 7.3], [52, 1149]]            # dritto di prua in coperta
+      - [[{prua: 171.7}, 6.6, 3.7], [2468, 1123]]    # specchio, spigolo di sinistra in coperta
+      - [[{prua: 171.7}, 6.3, 0], [2467, 1188]]      # specchio, spigolo di sinistra al galleggiamento
+      - [[{prua: 62.1}, 0, 40.5], [999, 478]]        # cima dell'alberetto prodiero
+      - [[{prua: 91.0}, 0, 40.3], [1380, 485]]       # coffa dell'albero poppiero (tetto)
+      - [[{prua: 32.0}, 0, 9.0], [562, 1099]]        # tetto della torre Mk45 prodiera
+      - [[{prua: 158.7}, 0, 6.5], [2238, 1079]]      # tetto della torre Mk45 poppiera
+      - [[{prua: 117.2}, 7.2, 13.9], [1822, 958]]    # hangar, spigolo poppiero di sinistra in alto
+  - nome: prua_sinistra
+    file: extracted/navi/kidd/foto/prua_sinistra_kidd_1987_full.jpg
+    nave: USS Kidd (DDG-993), 1987
+    qualita: 0.9
+    specchiabile: true
+    qualita_speculare: 0.35
+    maschera_file: extracted/navi/kidd/foto/prua_sinistra_kidd_1987_maschera.png   # ritoccata a mano (classi/kidd_maschera_prua_sinistra.yaml)
+    orizzonte_y: 1395
+    soglia_cielo: 195
+    cancella: [[540, 1330, 720, 1440]]
+    fotocamera_iniziale: {posizione: [297, 112, 3], bersaglio: [0, 0, 8], f: 8900}
+    punti:
+      - [[{prua: 0}, 0, 7.3], [342, 1252]]           # dritto di prua in coperta
+      - [[{prua: 171.7}, 6.6, 3.7], [2290, 1403]]    # specchio, spigolo di sinistra in coperta
+      - [[{prua: 171.7}, 6.3, 0], [2282, 1490]]      # specchio, spigolo di sinistra al galleggiamento
+      - [[{prua: 62.1}, 0, 40.5], [1224, 297]]       # cima dell'alberetto prodiero
+      # coffa dell'albero poppiero non usata: nel 1987 l'alberetto poppiero era ~3 m piu' basso
+      - [[{prua: 32.0}, 0, 9.0], [842, 1216]]        # tetto della torre Mk45 prodiera
+  - nome: poppa_dritta
+    file: extracted/navi/kidd/foto/poppa_dritta_chandler_1988_full.jpg
+    nave: USS Chandler (DDG-996), 1988
+    qualita: 0.9
+    specchiabile: true
+    qualita_speculare: 0.35
+    orizzonte_y: 890
+    soglia_cielo: 160
+    riquadro: [1500, 600, 2300, 890]
+    soglie_mare_sigma: 1.0   # lo specchio di poppa in ombra e' scuro come il mare: con 2,0 veniva scartato
+    cancella: [[285, 1640, 360, 1680]]
+    fotocamera_iniziale: {posizione: [-125, -113, 37], bersaglio: [0, 0, 8], f: 2720}
+    punti:
+      - [[{prua: 0}, 0, 7.3], [2530, 1252]]          # dritto di prua in coperta
+      - [[{prua: 171.7}, -6.6, 3.7], [257, 1625]]    # specchio, spigolo di dritta in coperta
+      - [[{prua: 171.7}, -6.3, 0], [257, 1735]]      # specchio, spigolo di dritta al galleggiamento
+      - [[{prua: 171.7}, 6.6, 3.7], [130, 1551]]     # specchio, spigolo di sinistra in coperta
+      - [[{prua: 62.1}, 0, 40.5], [2096, 757]]       # cima dell'alberetto prodiero
+      - [[{prua: 117.2}, 7.2, 13.9], [1298, 1216]]   # hangar, spigolo poppiero di sinistra in alto
+      - [[{prua: 117.2}, -7.2, 13.9], [1520, 1242]]  # hangar, spigolo poppiero di dritta in alto
+      - [[{prua: 32.0}, 0, 9.0], [2315, 1246]]       # tetto della torre Mk45 prodiera
+      - [[{prua: 158.7}, 0, 6.5], [555, 1467]]       # tetto della torre Mk45 poppiera

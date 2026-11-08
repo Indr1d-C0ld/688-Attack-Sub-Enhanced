@@ -1,0 +1,69 @@
+# Base galleggiante sovietica Progetto 1886 (NATO: Ugra), configurazione 1989: la nave appoggio dei sommergibili delle
+# eskadre (nel Mediterraneo con la 5a). Il castello lungo coi due binati da 57 mm a prua; il blocco della plancia;
+# l'albero a traliccio col radar di scoperta; il fumaiolo tondo; la grande gru a centro nave per i siluri e i missili
+# dei battelli; la tuga poppiera con l'albero poppiero e gli altri due binati da 57.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure: 141,4 x 17,7 m, 6,4 m d'immersione, 9650 t a pieno carico (Progetto 1886, STIMA
+# media); posizioni e quote dalla foto della 941 (anni '80, US Navy, di tre quarti da prua a sinistra), riportate con la
+# prospettiva e affinate con gli scarti della calibrazione (STIMA dove la foto non arriva). Modello proprio approvato il
+# 30/10/2026.
+nome: Ugra (Progetto 1886)
+uscita: extracted/navi/ugra
+
+scafo:
+  L: 141.4
+  B: 17.7
+  bordo: [[0, 9.0], [20, 8.4], [60, 8.0], [141.4, 7.5]]
+  slancio: 5.0
+  finezza_prua: 45
+  specchio: 0.75
+  svasatura: 0.05
+  pienezza: [0.7, 0.45]
+
+parti:
+  # ---------------- il castello: la tuga prodiera e i due binati da 57 mm
+  - {tipo: tuga, nome: tuga_prodiera, x0: {prua: 30.0}, x1: {prua: 22.0}, y0: -5.5, y1: 5.5, z0: 8.3, z1: 10.2}
+  - {tipo: impianto_binato, nome: ak725_prodiero_1, x: {prua: 19.3}, y: 0, z0: 8.4, verso: 1, lunghezza: 4.2, larghezza: 3.4, altezza: 1.6, canna: 3.6}
+  - {tipo: impianto_binato, nome: ak725_prodiero_2, x: {prua: 25.2}, y: 0, z0: 10.2, verso: 1, lunghezza: 4.2, larghezza: 3.4, altezza: 1.6, canna: 3.6}
+  # ---------------- il blocco della plancia, l'albero a traliccio col radar
+  - {tipo: tuga, nome: blocco_plancia, x0: {prua: 66.9}, x1: {prua: 30.0}, y0: -8.0, y1: 8.0, z0: 8.0, z1: 16.0, rastrema: 0.98}
+  - {tipo: tuga, nome: plancia, x0: {prua: 42.0}, x1: {prua: 30.3}, y0: -6.5, y1: 6.5, z0: 16.0, z1: 19.0, rastrema: 0.96}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 30.7}, x1: {prua: 30.2}, y0: -6.0, y1: 6.0, z0: 17.3, z1: 18.3, mat: nero, rastrema: 0.98}
+  - {tipo: traliccio, nome: albero, x: {prua: 51.8}, base: 3.2, cima: 1.4, z0: 16.0, z1: 23.6, piani: [23.6]}
+  - {tipo: antenna_radar, nome: strut_curve, x: {prua: 51.8}, z0: 23.8, larghezza: 3.6, altezza: 1.4, orientamento: 70}
+  - {tipo: direttore_tiro, nome: muff_cob, x: {prua: 40.0}, z0: 19.0, altezza_base: 1.0, larghezza: 2.0, disco: 1.2}
+  # ---------------- il fumaiolo tondo, la gru
+  - {tipo: fumaiolo_cilindrico, nome: fumaiolo, x: {prua: 70.4}, z0: 8.0, z1: 15.5, r: 3.5, cappello: 1.2}
+  - {tipo: gru, nome: gru, base: [{prua: 78.0}, 0, 14.0], cima: [{prua: 64.0}, 0, 19.0], z0: 8.0, colonna: 2.0, spessore: 0.9}
+  # ---------------- la tuga poppiera, l'albero poppiero, i binati poppieri, le lance
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 125.0}, x1: {prua: 80.0}, y0: -7.5, y1: 7.5, z0: 8.0, z1: 10.6, rastrema: 0.99}
+  - {tipo: traliccio, nome: albero_poppiero, x: {prua: 89.0}, base: 2.2, cima: 1.0, z0: 10.6, z1: 18.3, piani: [16.5]}
+  - {tipo: impianto_binato, nome: ak725_poppiero_1, x: {prua: 105.6}, y: 0, z0: 10.6, verso: -1, lunghezza: 4.2, larghezza: 3.4, altezza: 1.6, canna: 3.6}
+  - {tipo: impianto_binato, nome: ak725_poppiero_2, x: {prua: 112.0}, y: 0, z0: 10.6, verso: -1, lunghezza: 4.2, larghezza: 3.4, altezza: 1.6, canna: 3.6}
+  - {tipo: imbarcazione, nome: lancia_sinistra, x0: {prua: 64.0}, x1: {prua: 56.0}, y: 8.6, z0: 10.5, larghezza: 2.6, altezza: 1.6}
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 64.0}, x1: {prua: 56.0}, y: -8.6, z0: 10.5, larghezza: 2.6, altezza: 1.6}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 30/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: sinistra_941
+    file: extracted/navi/ugra/foto/Ugra-class.jpg
+    nave: Ugra 941, anni '80 (US Navy, pubblico dominio), di tre quarti da prua a sinistra, un poco dall'alto
+    qualita: 1.0
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 2 px (contorno_modello.py --maschera)
+    maschera_file: extracted/navi/ugra/foto/sinistra_941_maschera.png
+    solo_punti: true
+    orizzonte_punti: [[50, 82], [1100, 80]]
+    riquadro: [10, 70, 1140, 500]
+    cancella: [[580, 390, 620, 420]]   # 941
+    fotocamera_iniziale: {posizione: [250, 450, 60], bersaglio: [0, 0, 8], f: 1500}
+    limiti_fotocamera: {elevazione: [-3, 30], distanza: [80, 5000], focale: [300, 30000]}
+    punti:
+      - [[{prua: 0}, 0, 9.0], [25, 342]]             # dritto di prua in coperta
+      - [[{prua: 5.0}, 0, 0.0], [98, 483]]           # piede del dritto al galleggiamento
+      - [[{prua: 141.4}, 0, 7.5], [1120, 305]]       # poppa in coperta
+      - [[{prua: 30.0}, 8.0, 16.0], [455, 237]]      # spigolo prodiero alto di sinistra del blocco della plancia
+      - [[{prua: 51.8}, 0, 25.2], [598, 95]]         # cima del radar sull'albero
+      - [[{prua: 66.9}, 0, 15.5], [700, 232]]        # spigolo prodiero del cielo del fumaiolo
+      - [[{prua: 89.0}, 0, 18.3], [861, 196]]        # cima dell'albero poppiero
+      - [[{prua: 105.6}, 0, 12.6], [955, 263]]       # cielo del binato poppiero

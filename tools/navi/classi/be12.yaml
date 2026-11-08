@@ -1,0 +1,76 @@
+# Beriev Be-12 / Be-12N «Mail», configurazione 1989 (pezzo A4 di docs/13_asw_aereo.md): oggetto in volo.
+# Coordinate del kit: x verso il muso (origine a meta' lunghezza), y verso sinistra, z verso l'alto; asse a z = 10.
+# {prua: d} = punto a d metri dal muso. Misure pubbliche (Wikipedia, «Beriev Be-12»; dossier 17 §3.3): lunghezza
+# 30,11 m, apertura 29,84 m, altezza 7,94 m, superficie alare 99 m^2; scafo a barca, ala alta «a gabbiano» coi due
+# AI-20D sopra il ginocchio, galleggianti d'estremita', piano di coda col diedro e due derive d'estremita',
+# radome del radar a «ditale» in cima al muso, boma del MAD in coda. Forme riviste sulle foto del museo di Monino
+# (extracted/navi/be12/foto/fonti.json, CC BY-SA 2.0 Alan Wilson): gondole lunghe sopra il ginocchio che sporgono
+# dietro l'ala, ala esterna con un leggero anedro, derive d'estremita' ellittiche, galleggianti su montanti alti,
+# boma del MAD di ~3,5 m sull'esemplare del museo (la lunghezza
+# ufficiale di 30,11 m resta il riferimento del muso). Lo sprite deriva da foto CC BY-SA 2.0: va attribuito ed e' CC BY-SA.
+nome: Beriev Be-12 Mail (1989)
+uscita: extracted/navi/be12
+moduli_parti: [aerei_parti.py]
+vista: {volante: true, elevazioni: [0, 10, 25], centro: [0, 0, 11]}
+albedo: {traliccio: 0.72}
+tono: 0.6
+
+scafo:
+  generatore: fusoliera
+  L: 30.11
+  z: 10.0
+  # scafo a barca alto 4 m, dalla vetratura del navigatore (sotto il ditale) alla coda che sale verso il boma
+  profilo:
+    - [1.0, 0.0, 0.0, -0.3]
+    - [1.3, 0.45, 0.55, -0.3]
+    - [2.2, 1.05, 1.35, -0.2]
+    - [3.5, 1.35, 1.80, -0.1]
+    - [5.5, 1.45, 2.00, 0.0]
+    - [13.0, 1.45, 2.00, 0.0]
+    - [17.0, 1.30, 1.70, 0.30]
+    - [21.0, 1.00, 1.20, 0.75]
+    - [24.0, 0.70, 0.80, 1.15]
+    - [25.6, 0.40, 0.45, 1.40]
+    - [26.0, 0.22, 0.25, 1.45]
+
+parti:
+  # radome a ditale in cima al muso, vetratura del navigatore sotto, cabina di pilotaggio
+  - {tipo: corpo, nome: radome, x_naso: {prua: 0.0}, y: 0, z: 11.1, profilo: [[0, 0.08], [0.5, 0.42], [1.4, 0.62], [3.0, 0.62], [3.6, 0.45]]}
+  - {tipo: corpo, nome: muso_vetrato, x_naso: {prua: 1.1}, y: 0, z: 9.9, mat: scuro, profilo: [[0, 0.2], [0.6, 0.65], [1.3, 0.85], [1.6, 0.6]]}
+  - {tipo: corpo, nome: cabina, x_naso: {prua: 3.6}, y: 0, z: 11.7, mat: scuro, profilo: [[0, 0.2, 0.1], [0.6, 0.85, 0.4], [1.8, 1.0, 0.45], [2.6, 0.75, 0.2]]}
+  # boma del MAD in coda
+  - {tipo: corpo, nome: boma_mad, x_naso: {prua: 25.8}, y: 0, z: 11.45, profilo: [[0, 0.24, 0.24, 0.0], [1.7, 0.21, 0.21, 0.15], [3.1, 0.17, 0.17, 0.3], [3.5, 0.08, 0.08, 0.32]]}
+  # ala a gabbiano: tratto interno che sale fino ai motori, tratto esterno con un leggero anedro
+  - {tipo: ala, nome: ala, radice: [{prua: 10.8}, 1.2, 11.9, 4.6], sezioni: [[{prua: 11.0}, 4.6, 13.4, 4.2]], estremita: [{prua: 12.0}, 14.92, 12.9, 1.9], spessore: 0.15, spessore_estremita: 0.12}
+  # gondole lunghe degli AI-20D sopra il ginocchio, con le eliche a 4 pale
+  - {tipo: corpo, nome: gondola, x_naso: {prua: 6.6}, y: 4.6, z: 13.95, simmetrico: true, profilo: [[0, 0.12], [0.6, 0.45, 0.5], [1.4, 0.72, 0.85], [5.0, 0.72, 0.85], [8.5, 0.30, 0.35]]}
+  - {tipo: elica, nome: elica, x: {prua: 7.4}, y: 4.6, z: 13.95, r: 2.4}
+  # galleggianti sotto l'ala esterna, su montanti alti
+  - {tipo: corpo, nome: galleggiante, x_naso: {prua: 10.4}, y: 12.0, z: 11.0, simmetrico: true, profilo: [[0, 0.12, 0.12, 0.4], [0.7, 0.38, 0.38, 0.25], [2.0, 0.46, 0.46, 0.0], [4.0, 0.15, 0.15, 0.0]]}
+  - {tipo: ala, nome: montante, verticale: true, radice: [{prua: 11.6}, 12.0, 11.35, 1.3], estremita: [{prua: 12.2}, 12.0, 12.95, 1.1], spessore: 0.08}
+  # piano di coda col diedro e le due derive ellittiche d'estremita'
+  - {tipo: ala, nome: piano_coda, radice: [{prua: 24.0}, 0.4, 12.1, 3.6], estremita: [{prua: 25.0}, 5.9, 13.0, 2.2], spessore: 0.11}
+  - {tipo: ala, nome: deriva, verticale: true, radice: [{prua: 24.6}, 5.9, 11.9, 2.2], sezioni: [[{prua: 24.2}, 5.9, 12.7, 3.0], [{prua: 24.25}, 5.9, 14.3, 2.7]], estremita: [{prua: 24.7}, 5.9, 15.0, 1.4], spessore: 0.10}
+
+# Foto: museo di Monino, CC BY-SA 2.0 (Alan Wilson). Punti: punta del ditale, punta del boma, sommita' delle derive,
+# estremita' del galleggiante sinistro. Maschera: sagoma del modello calibrato ristretta (prato e altri aerei sul
+# fondo, carrello abbassato che il modello in volo non ha).
+foto:
+  - nome: fianco_sinistro_monino
+    file: extracted/navi/be12/foto/fianco_sinistro_monino.jpg
+    nave: Be-12 «25 giallo» al museo di Monino (2012), fianco sinistro da poppa
+    maschera_file: extracted/navi/be12/maschere/fianco_sinistro_monino.png
+    solo_punti: true
+    qualita: 1.0
+    specchiabile: true
+    qualita_speculare: 0.5
+    # grandangolo da vicino (museo): distanza e focale limitate a valori realistici
+    limiti_fotocamera: {distanza: [12, 60], focale: [900, 3000], elevazione: [-15, 15]}
+    fotocamera_iniziale: {posizione: [-15.0, 22.0, 9.0], bersaglio: [0.0, 0.0, 11.0], f: 1400}
+    punti:
+      - [[{prua: 0}, 0, 11.1], [295, 620]]
+      - [[{prua: 29.3}, 0, 11.77], [1893, 675]]
+      - [[{prua: 24.7}, 5.9, 15.0], [1454, 340]]
+      - [[{prua: 24.7}, -5.9, 15.0], [1564, 461]]
+      - [[{prua: 10.4}, 12.0, 11.4], [41, 604]]
+      - [[{prua: 14.4}, 12.0, 11.0], [288, 686]]

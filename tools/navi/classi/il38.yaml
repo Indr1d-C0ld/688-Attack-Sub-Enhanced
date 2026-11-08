@@ -1,0 +1,108 @@
+# Ilyushin Il-38 "May", Aviazione Navale Sovietica, configurazione 1989. Oggetto in volo.
+# Coordinate del kit: x verso il muso (origine a meta' lunghezza fuori tutto), y verso sinistra, z verso l'alto.
+# {prua: d} = punto a d metri dal muso (x = L/2 - d). Asse della fusoliera a z = 10 m.
+# Misure pubbliche: lunghezza 39,6 m (40,185 m secondo i dati della Marina russa al RIAT 1996), apertura 37,4 m,
+# superficie alare 140 m^2, altezza 10,17 m; quattro AI-20M con eliche AV-68I a 4 pale da 4,5 m; fusoliera dell'Il-18
+# (diametro ~3,5 m), ala spostata in avanti, radome ventrale del Berkut dietro il muso, boma MAD in coda.
+# Profilo della fusoliera, deriva e radome misurati sulla foto di fianco del 1986 (~47 px/m, quasi ortografica);
+# deriva, estremita' alari, piano orizzontale e ogive triangolati (tools/navi/classi/il38_triangolazione.yaml).
+nome: Ilyushin Il-38 May (1989)
+uscita: extracted/navi/il38
+moduli_parti: [aerei_parti.py]
+vista: {volante: true, elevazioni: [0, 10, 25], centro: [0, 0, 10]}
+# dischi delle eliche ('traliccio') chiari: pale sfocate contro il cielo
+albedo: {traliccio: 0.72}
+
+scafo:
+  generatore: fusoliera
+  L: 39.6
+  z: 10.0
+  # [d dal muso, semilarghezza, semialtezza, spostamento verticale del centro]
+  profilo:
+    - [0.0, 0.0, 0.0, 0.0]
+    - [0.5, 0.45, 0.43, 0.0]
+    - [1.2, 0.75, 0.69, 0.02]
+    - [2.2, 1.10, 1.14, 0.22]
+    - [3.4, 1.45, 1.49, 0.45]
+    - [5.0, 1.65, 1.60, 0.47]
+    - [7.0, 1.75, 1.73, 0.35]
+    - [9.0, 1.75, 1.75, 0.25]
+    - [23.0, 1.75, 1.75, 0.25]
+    - [26.0, 1.60, 1.57, 0.32]
+    - [29.0, 1.32, 1.30, 0.38]
+    - [32.0, 0.98, 0.96, 0.44]
+    - [34.5, 0.66, 0.64, 0.50]
+    - [36.5, 0.36, 0.36, 0.56]
+    - [39.0, 0.15, 0.14, 0.62]
+    - [39.6, 0.0, 0.0, 0.64]
+
+parti:
+  # ala bassa diritta, rastremata (corda 5,4 -> 1,8 m), diedro ~3 gradi
+  - {tipo: ala, nome: ala, radice: [{prua: 10.4}, 1.2, 9.2, 5.4], estremita: [{prua: 12.5}, 18.7, 10.0, 1.8], spessore: 0.15, spessore_estremita: 0.12}
+  # gondole degli AI-20M: davanti all'ala e oltre il bordo d'uscita
+  - {tipo: corpo, nome: gondola_interna, x_naso: {prua: 7.0}, y: 5.0, z: 9.6, simmetrico: true,
+     profilo: [[0, 0.40, 0.45], [0.6, 0.62, 0.72], [1.8, 0.68, 0.85, -0.05], [5.5, 0.68, 0.85, -0.1], [8.0, 0.45, 0.55, 0.0], [9.5, 0.18, 0.2, 0.1]]}
+  - {tipo: corpo, nome: gondola_esterna, x_naso: {prua: 8.0}, y: 10.1, z: 9.85, simmetrico: true,
+     profilo: [[0, 0.40, 0.45], [0.6, 0.60, 0.70], [1.8, 0.65, 0.80, -0.05], [5.0, 0.62, 0.75, -0.05], [7.0, 0.35, 0.40, 0.0], [8.0, 0.15, 0.18, 0.05]]}
+  - {tipo: elica, nome: elica_interna, x: {prua: 7.0}, y: 5.0, z: 9.6, r: 2.25, ogiva: [0.6, 0.38]}
+  - {tipo: elica, nome: elica_esterna, x: {prua: 8.0}, y: 10.1, z: 9.85, r: 2.25, ogiva: [0.6, 0.38]}
+  # radome ventrale del Berkut
+  - {tipo: ellissoide, nome: radome_ventrale, x: {prua: 4.7}, y: 0, z: 8.6, a: 1.45, b: 0.95, c: 0.72}
+  # impennaggi
+  - {tipo: ala, nome: piano_orizzontale, radice: [{prua: 30.2}, 0.5, 10.3, 3.9], estremita: [{prua: 33.3}, 5.9, 10.4, 1.7], spessore: 0.11, spessore_estremita: 0.09}
+  - {tipo: ala, nome: deriva, verticale: true, simmetrica: false, radice: [{prua: 29.9}, 0, 11.5, 4.9], estremita: [{prua: 33.1}, 0, 16.9, 1.7], spessore: 0.12, spessore_estremita: 0.10}
+  - {tipo: ala, nome: pinna_dorsale, verticale: true, simmetrica: false, radice: [{prua: 25.5}, 0, 11.8, 4.6], estremita: [{prua: 29.6}, 0, 12.5, 0.6], spessore: 0.08}
+
+# Foto (pubblico dominio, US Navy / DoD; metadati in extracted/navi/il38/foto/fonti.json).
+foto:
+  - nome: dritto_basso_1987
+    file: extracted/navi/il38/foto/dritto_basso_1987.jpg
+    nave: Il-38 ripreso da sotto a destra, 20 aprile 1987
+    qualita: 1.0
+    specchiabile: true
+    maschera_file: extracted/navi/il38/maschere/dritto_basso_1987.png
+    maschera_calibrazione: extracted/navi/il38/maschere/dritto_basso_1987_cal.png
+    limiti_fotocamera: {elevazione: [-70, 15], distanza: [30, 5000]}
+    fotocamera_iniziale: {posizione: [2.2, -65.5, -8.7], bersaglio: [1.6, 0.0, 11.1], f: 2723}
+    punti:
+      - [[{prua: 0}, 0, 10.0], [1689, 691]]          # muso
+      - [[{prua: 39.6}, 0, 10.64], [111, 635]]       # punta del boma MAD
+      - [[{prua: 33.1}, 0, 16.9], [388, 410]]        # sommita' della deriva, bordo d'attacco
+      - [[{prua: 34.8}, 0, 16.9], [322, 412]]        # sommita' della deriva, bordo d'uscita
+      - [[{prua: 12.5}, -18.7, 10.0], [1266, 405]]   # estremita' alare destra (vicina), bordo d'attacco
+      - [[{prua: 14.3}, -18.7, 10.0], [1169, 408]]   # estremita' alare destra, bordo d'uscita
+      - [[{prua: 33.3}, -5.9, 10.4], [305, 587]]     # piano orizzontale destro, bordo d'attacco
+      - [[{prua: 8.0}, -10.1, 9.85], [1433, 558]]    # ogiva esterna destra
+      - [[{prua: 7.0}, -5.0, 9.6], [1447, 633]]      # ogiva interna destra
+  - nome: dritto_basso_1985
+    file: extracted/navi/il38/foto/dritto_basso_1985.jpg
+    nave: Il-38 ripreso da sotto a destra (1985)
+    qualita: 0.8
+    specchiabile: true
+    maschera_file: extracted/navi/il38/maschere/dritto_basso_1985.png
+    maschera_calibrazione: extracted/navi/il38/maschere/dritto_basso_1985_cal.png
+    limiti_fotocamera: {elevazione: [-60, 15], distanza: [30, 5000]}
+    fotocamera_iniziale: {posizione: [-18.4, -185.8, -18.3], bersaglio: [0.6, 0.0, 11.7], f: 8293}
+    punti:
+      - [[{prua: 0}, 0, 10.0], [1790, 605]]
+      - [[{prua: 39.6}, 0, 10.64], [60, 533]]
+      - [[{prua: 33.1}, 0, 16.9], [350, 272]]
+      - [[{prua: 34.8}, 0, 16.9], [285, 272]]
+      - [[{prua: 12.5}, -18.7, 10.0], [1376, 458]]
+      - [[{prua: 14.3}, -18.7, 10.0], [1291, 462]]
+  - nome: sinistro_1986
+    file: extracted/navi/il38/foto/sinistro_1986.jpg
+    nave: Il-38 in volo, fianco sinistro (1986)
+    qualita: 1.0
+    specchiabile: true
+    maschera_file: extracted/navi/il38/maschere/sinistro_1986.png
+    maschera_calibrazione: extracted/navi/il38/maschere/sinistro_1986_cal.png
+    limiti_fotocamera: {elevazione: [-20, 30], distanza: [30, 8000]}
+    prior_fotocamera: {distanza: 1500, sigma_logD: 1.0}
+    fotocamera_iniziale: {posizione: [0, 1500, 30], bersaglio: [0, 0, 10], f: 70000}
+    punti:
+      - [[{prua: 0}, 0, 10.0], [45, 660]]
+      - [[{prua: 39.6}, 0, 10.64], [1905, 630]]
+      - [[{prua: 33.1}, 0, 16.9], [1597, 336]]
+      - [[{prua: 34.8}, 0, 16.9], [1675, 337]]
+      - [[{prua: 4.7}, 0, 7.88], [282, 768]]         # fondo del radome ventrale

@@ -1,0 +1,160 @@
+# Incrociatore antisommergibile classe Kara (Progetto 1134B "Berkut-B"), configurazione 1989.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua.
+# Misure: elementi principali da triangolazione su quattro foto (prua, piede del dritto, cima della torre,
+# cima dell'albero prodiero, spigoli del fumaiolo, galleggiamento); le altre quote e posizioni dalla foto di
+# fianco del Nikolayev (1986), ripresa da lontano e quasi al traverso, proiettando i pixel sul piano di
+# ciascun elemento con la fotocamera triangolata (vedi extracted/navi/kara/RAPPORTO.md).
+# Configurazione di riferimento: Nikolayev, Petropavlovsk, Tashkent (non l'Azov, con l'S-300F di prova).
+nome: Kara (Progetto 1134B)
+uscita: extracted/navi/kara
+moduli_parti: [kara_parti.py]
+
+scafo:
+  L: 173.2
+  B: 18.6
+  # coperta: castello alto a prua (8,3 m), ponte principale basso al centro (~4,2 m), fiancate che salgono
+  # fino al ponte di volo poppiero (~6 m) negli ultimi 17 m
+  bordo: [[0, 8.3], [11, 6.8], [26, 5.4], [45, 4.6], [74, 4.2], [102, 4.2], [130, 4.4], [150, 5.0], [156, 6.0], [173.2, 6.0]]
+  slancio: 8.1
+  finezza_prua: 52
+  specchio: 0.86
+  svasatura: 0.06
+  pienezza: [0.9, 0.75]
+
+parti:
+  # chiusura sotto il dritto slanciato (stessi parametri dello scafo)
+  - {tipo: chiusura_dritto, nome: chiusura_dritto, L: 173.2, B: 18.6, bordo: [[0, 8.3], [11, 6.8], [26, 5.4], [45, 4.6], [74, 4.2], [102, 4.2], [130, 4.4], [150, 5.0], [156, 6.0], [173.2, 6.0]], slancio: 8.1, finezza_prua: 52, specchio: 0.86, svasatura: 0.06, pienezza: [0.9, 0.75]}
+  # ---------------- castello di prua
+  - {tipo: lanciarazzi_rbu, nome: rbu6000_prodiero, x: {prua: 22.6}, z0: 5.6}
+  - {tipo: tuga, nome: tuga_shtorm_prodiero, x0: {prua: 46.5}, x1: {prua: 29.3}, y0: -5.0, y1: 5.0, z0: 4.4, z1: 6.4, rastrema: 0.97}
+  - {tipo: lanciarazzi_rbu, nome: rbu6000_poppiero, x: {prua: 31.7}, z0: 6.4}
+  # Shtorm (SA-N-3) prodiero: lanciatore binato B-187, bracci verso prua
+  - {tipo: shtorm, nome: shtorm_prodiero, x: {prua: 37.4}, z0: 6.4, altezza_base: 2.4, verso: 1}
+  # ---------------- plancia e sovrastruttura prodiera
+  - {tipo: tuga, nome: tuga_prodiera_01, x0: {prua: 72.0}, x1: {prua: 46.5}, y0: -5.2, y1: 5.2, z0: 4.2, z1: 7.4}
+  - {tipo: tuga, nome: plancia, x0: {prua: 58.5}, x1: {prua: 46.5}, y0: -5.0, y1: 5.0, z0: 7.4, z1: 11.8, rastrema: 0.92, smusso_prua: 0.8}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 47.6}, x1: {prua: 46.2}, y0: -4.6, y1: 4.6, z0: 10.4, z1: 11.2, mat: nero, rastrema: 0.97}
+  - {tipo: cilindro, nome: colonna_head_light_prodiero, x: {prua: 56.6}, y: 0, r: 2.2, z0: 11.8, z1: 14.0}
+  - {tipo: head_light, nome: head_light_prodiero, x: {prua: 56.6}, z0: 14.0}
+  # Rastrub (SS-N-14) ai lati della plancia, inclinati verso l'alto a prua
+  - {tipo: rastrub_inclinato, nome: rastrub_dritta, x0: {prua: 63.8}, x1: {prua: 53.8}, z0: 4.6, y: -7.0, elevazione: 12, larghezza: 3.0, altezza: 3.5}
+  - {tipo: rastrub_inclinato, nome: rastrub_sinistra, x0: {prua: 63.8}, x1: {prua: 53.8}, z0: 4.6, y: 7.0, elevazione: 12, larghezza: 3.0, altezza: 3.5}
+  # tetto sporgente sopra i vani laterali tra plancia e albero prodiero
+  - {tipo: scatola, nome: tetto_vani, x0: {prua: 69.5}, x1: {prua: 57.5}, y0: -8.2, y1: 8.2, z0: 9.2, z1: 10.0}
+  - {tipo: sfera, nome: cupola_dritta, x: {prua: 63.6}, y: -6.4, z: 4.6, r: 2.6, mat: sovrastruttura, mezza: true}
+  - {tipo: sfera, nome: cupola_sinistra, x: {prua: 63.6}, y: 6.4, z: 4.6, r: 2.6, mat: sovrastruttura, mezza: true}
+  # albero prodiero a traliccio con Head Net-C e alberetto inclinato verso poppa
+  - {tipo: tuga, nome: tuga_albero_prodiero, x0: {prua: 72.0}, x1: {prua: 61.5}, y0: -4.4, y1: 4.4, z0: 7.4, z1: 14.2, rastrema: 0.95}
+  - {tipo: traliccio, nome: albero_prodiero, x: {prua: 69.2}, base: 3.6, cima: 1.2, z0: 14.2, z1: 21.2, piani: [15.4]}
+  - {tipo: head_net, nome: head_net, x: {prua: 69.1}, z0: 21.2, larghezza: 6.4, altezza: 1.8}
+  - {tipo: asta, nome: alberetto_prodiero, da: [{prua: 71.8}, 0, 15.4], a: [{prua: 74.9}, 0, 27.0], spessore: 0.45}
+  # ---------------- centro nave: AK-726, torre con Top Sail, Osa-M, fumaiolo
+  - {tipo: tuga, nome: tuga_centrale_01, x0: {prua: 100.0}, x1: {prua: 72.0}, y0: -7.6, y1: 7.6, z0: 4.2, z1: 6.8}
+  - {tipo: impianto_binato, nome: ak726_dritta, x: {prua: 80.4}, y: -6.0, z0: 6.8, lunghezza: 4.6, larghezza: 3.2, altezza: 3.4, canna: 4.0, smusso: 1.2}
+  - {tipo: impianto_binato, nome: ak726_sinistra, x: {prua: 80.4}, y: 6.0, z0: 6.8, lunghezza: 4.6, larghezza: 3.2, altezza: 3.4, canna: 4.0, smusso: 1.2}
+  - {tipo: tuga, nome: tuga_centrale_02, x0: {prua: 98.0}, x1: {prua: 76.0}, y0: -4.2, y1: 4.2, z0: 6.8, z1: 9.0}
+  - {tipo: tronco, nome: torre, basso: [{prua: 96.5}, {prua: 87.4}, 3.0], alto: [{prua: 94.0}, {prua: 92.0}, 1.0], z0: 6.8, z1: 28.4}
+  - {tipo: albero_palo, nome: alberetto_torre, x: {prua: 93.0}, z0: 28.4, z1: 34.6, r: 0.5}
+  - {tipo: top_sail, nome: top_sail, x: {prua: 90.2}, z: 29.0, larghezza: 6.6, altezza: 7.6, inclinazione: 22, orientamento: 30}
+  - {tipo: lanciatore_scomparsa, nome: osa_m_dritta, x: {prua: 94.2}, y: -6.0, z0: 4.2, r: 2.7, altezza: 3.6}
+  - {tipo: lanciatore_scomparsa, nome: osa_m_sinistra, x: {prua: 94.2}, y: 6.0, z0: 4.2, r: 2.7, altezza: 3.6}
+  - {tipo: fumaiolo, nome: fumaiolo, x0: {prua: 109.8}, x1: {prua: 99.5}, semilarghezza: 4.0, z0: 6.8, z1: 17.8, rastrema: 0.98}
+  - {tipo: ak630, nome: ak630_dritta_av, x: {prua: 101.5}, y: -6.4, z0: 6.3}
+  - {tipo: ak630, nome: ak630_sinistra_av, x: {prua: 101.5}, y: 6.4, z0: 6.3}
+  - {tipo: ak630, nome: ak630_dritta_ad, x: {prua: 112.0}, y: -6.4, z0: 6.3}
+  - {tipo: ak630, nome: ak630_sinistra_ad, x: {prua: 112.0}, y: 6.4, z0: 6.3}
+  # ---------------- sovrastruttura poppiera: Head Light e Shtorm poppieri, hangar, ponte di volo
+  - {tipo: tuga, nome: tuga_poppiera_01, x0: {prua: 131.0}, x1: {prua: 99.0}, y0: -6.6, y1: 6.6, z0: 4.2, z1: 6.3}
+  - {tipo: tuga, nome: tuga_poppiera_02, x0: {prua: 117.0}, x1: {prua: 109.8}, y0: -4.6, y1: 4.6, z0: 6.3, z1: 10.9, rastrema: 0.96}
+  - {tipo: tuga, nome: colonna_head_light_poppiero, x0: {prua: 123.0}, x1: {prua: 117.0}, y0: -2.4, y1: 2.4, z0: 6.3, z1: 11.2, rastrema: 0.9}
+  - {tipo: head_light, nome: head_light_poppiero, x: {prua: 120.3}, z0: 11.2, orientamento: 180}
+  - {tipo: tuga, nome: tuga_shtorm_poppiero, x0: {prua: 141.0}, x1: {prua: 131.0}, y0: -5.0, y1: 5.0, z0: 4.4, z1: 6.2}
+  - {tipo: shtorm, nome: shtorm_poppiero, x: {prua: 136.6}, z0: 6.2, altezza_base: 2.0, verso: -1}
+  - {tipo: tuga, nome: hangar, x0: {prua: 153.0}, x1: {prua: 138.2}, y0: -6.0, y1: 6.0, z0: 4.6, z1: 7.8}
+  - {tipo: ponte_elicotteri, nome: ponte_volo, x0: {prua: 172.6}, x1: {prua: 153.0}, semilarghezza: 8.6, z: 6.3}
+
+foto:
+  - nome: fianco_dritta
+    file: extracted/navi/kara/foto/fianco_dritta_1986.jpg
+    nave: Nikolayev, 1986 (dritta, quasi al traverso, ripresa da ~2 km e ~7 gradi)
+    maschera_file: extracted/navi/kara/foto/fianco_dritta_1986_maschera.png   # ritoccata a mano (classi/kara_maschere.yaml)
+    qualita: 1.0
+    esponente_peso: 4
+    specchiabile: true
+    orizzonte_y: 1502          # nessun cielo: la nave scura si stacca dal mare chiaro, che fa da "cielo"
+    soglia_cielo: 170
+    riquadro: [20, 330, 1910, 760]
+    cancella: [[1410, 705, 1475, 737]]   # numero 535
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [-257, -1967, 230], bersaglio: [-0.8, 0, -2.2], f: 21200}
+    punti:
+      - [[{prua: 0}, 0, 8.3], [1882, 654]]          # dritto di prua in coperta
+      - [[{prua: 8.1}, 0, 0], [1789, 738]]          # piede del dritto al galleggiamento
+      - [[{prua: 92.9}, 0, 34.6], [918, 358]]       # cima dell'alberetto della torre
+      - [[{prua: 74.9}, 0, 27.0], [1100, 455]]      # cima dell'alberetto prodiero
+      - [[{prua: 109.8}, -4.0, 17.8], [724, 538]]   # fumaiolo, spigolo poppiero alto di dritta
+      - [[{prua: 99.5}, -4.0, 17.8], [834, 541]]    # fumaiolo, spigolo prodiero alto di dritta
+      - [[{prua: 73.6}, -9.3, 0], [1120, 743]]      # galleggiamento a dritta, centro nave
+      - [[{prua: 130.0}, -9.0, 0], [520, 733]]      # galleggiamento a dritta, a poppavia
+      - [[{prua: 80.4}, -6.0, 10.2], [1045, 627]]   # cielo dell'AK-726 di dritta
+  - nome: fianco_sinistra
+    file: extracted/navi/kara/foto/fianco_sinistro_1977.jpg
+    nave: Nikolayev, 1977 (sinistra, prua al traverso, all'ancora, ripresa vicina a ~300 m)
+    maschera_file: extracted/navi/kara/foto/fianco_sinistro_1977_maschera.png   # ritoccata a mano (classi/kara_maschere.yaml)
+    qualita: 1.0
+    esponente_peso: 4
+    specchiabile: true
+    orizzonte_y: 740           # sopra le colline della costa: solo cielo
+    soglia_cielo: 170
+    cancella: [[1025, 1040, 1180, 1132]]   # numero 539
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [245, 204, 27], bersaglio: [14.6, 0, 14.5], f: 7850}
+    punti:
+      - [[{prua: 0}, 0, 8.3], [8, 912]]             # dritto di prua in coperta
+      - [[{prua: 8.1}, 0, 0], [197, 1160]]          # piede del dritto al galleggiamento
+      - [[{prua: 92.9}, 0, 34.6], [1846, 229]]      # cima dell'alberetto della torre
+      - [[{prua: 80.4}, 6.0, 10.2], [1760, 852]]    # cielo dell'AK-726 di sinistra
+      - [[{prua: 53.8}, 7.0, 10.6], [1292, 842]]    # Rastrub di sinistra, tubi in alto a prua
+      - [[{prua: 56.6}, 0, 21.1], [1215, 535]]      # Head Light prodiero, sommita' dei riflettori piccoli
+      - [[{prua: 69.1}, 0, 22.8], [1450, 512]]      # Head Net, centro
+  - nome: prua_dritta
+    file: extracted/navi/kara/foto/prua_dritta_1983.jpg
+    nave: Petropavlovsk, 1983 (prua di dritta, ~30 gradi dal traverso, quasi a livello del mare)
+    qualita: 0.8
+    esponente_peso: 4
+    specchiabile: true
+    orizzonte_y: 876
+    soglia_cielo: 165
+    orizzonte_punti: [[60, 885], [1560, 880], [1880, 879]]
+    cancella: [[945, 965, 1015, 1018]]     # numero 565
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [1208, -698, 12], bersaglio: [26.2, 0, 24.6], f: 21100}
+    punti:
+      - [[{prua: 0}, 0, 8.3], [1450, 893]]          # dritto di prua in coperta
+      - [[{prua: 8.1}, 0, 0], [1388, 1025]]         # piede del dritto al galleggiamento
+      - [[{prua: 92.9}, 0, 34.6], [713, 498]]       # cima dell'alberetto della torre
+      - [[{prua: 74.9}, 0, 27.0], [848, 602]]       # cima dell'alberetto prodiero
+  - nome: poppa_sinistra
+    file: extracted/navi/kara/foto/poppa_sinistra_1985.jpg
+    # revisione del 23/10/2026: non e' una ripresa ravvicinata ma un forte teleobiettivo da ~6 km, ~30 gradi dalla
+    # poppa (fotocamera a ~29 m): la calibrazione "quasi ortografica" e' coerente con orizzonte (1,7 px) e punti;
+    # la triangolazione senza orizzonte trovava un minimo ravvicinato spurio (fotocamera a ~110 m)
+    nave: Tashkent, 1985 (sinistra, ~30 gradi dalla poppa, teleobiettivo da ~6 km, quasi a livello del mare)
+    qualita: 0.8
+    esponente_peso: 4
+    specchiabile: true
+    orizzonte_y: 905
+    soglia_cielo: 140
+    orizzonte_punti: [[40, 910], [1720, 910], [1880, 910]]   # orizzonte velato ma orizzontale
+    escludi: [[1410, 880, 1640, 990]]     # elicottero Ka-25 sul ponte di volo
+    cancella: [[380, 1005, 432, 1040], [1290, 1025, 1355, 1045]]   # numero 572 e nome a poppa
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [-345, 220, 11], bersaglio: [-10, 0, 15], f: 5800}
+    punti:
+      - [[{prua: 0}, 0, 8.3], [128, 947]]           # dritto di prua in coperta (il piede e' nascosto dall'onda)
+      - [[{prua: 92.9}, 0, 34.6], [880, 543]]       # cima dell'alberetto della torre
+      - [[{prua: 120.3}, 0, 18.3], [1110, 782]]     # Head Light poppiero, sommita' dei riflettori piccoli
+      - [[{prua: 56.6}, 0, 21.1], [581, 740]]       # Head Light prodiero, sommita' dei riflettori piccoli
+      - [[{prua: 69.1}, 0, 22.8], [669, 717]]       # Head Net, centro
+      - [[{prua: 172.8}, -7.5, 6.2], [1625, 975]]   # poppa, spigolo alto di dritta dello specchio (estremo destro)

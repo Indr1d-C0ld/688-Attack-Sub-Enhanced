@@ -1,0 +1,15 @@
+# Maschera ritoccata a mano della foto di prua sinistra della Kidd (1987), coordinate nell'immagine 2784 px.
+# Cielo chiaro e uniforme: sopra la coperta e' nave cio' che e' piu' scuro del cielo. Escluso il
+# rimorchiatore davanti alla parte bassa del dritto.
+file: extracted/navi/kidd/foto/prua_sinistra_kidd_1987_full.jpg
+uscita: extracted/navi/kidd/foto/prua_sinistra_kidd_1987_maschera.png
+scafo: [[342, 1250], [400, 1244], [800, 1290], [1200, 1336], [1600, 1360], [2000, 1384], [2290, 1401],
+        [2292, 1440], [2282, 1490], [1800, 1505], [1200, 1522], [800, 1535], [500, 1545], [480, 1540],
+        [385, 1330]]
+soglia_scafo: 256
+linea_coperta: [[330, 1252], [400, 1246], [800, 1292], [1200, 1338], [1600, 1362], [2000, 1386], [2295, 1403]]
+inviluppo: [[330, 1252], [330, 1130], [700, 1130], [880, 960], [1040, 260], [1660, 260], [1800, 880],
+            [2000, 1250], [2310, 1380], [2310, 1410]]
+soglia_sovrastrutture: 200
+escludi: [[[215, 1330], [378, 1330], [472, 1545], [472, 1575], [215, 1575]]]
+area_minima: 80

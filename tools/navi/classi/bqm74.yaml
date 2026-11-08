@@ -1,0 +1,59 @@
+# BQM-74C Chukar III, bersaglio aereo radiocomandato della US Navy (anni '80): il "Cruise Missile Target"
+# (tipo 0x0f) del gioco originale, che simula un missile antinave radente. In volo: razzo JATO sganciato.
+# Coordinate del kit: x verso il muso (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dal muso. Asse della fusoliera a z = 5 m.
+# Misure: lunghezza 3,87 m, apertura alare 1,76 m, altezza 0,71 m (designation-systems.net, Wikipedia);
+# diametro della fusoliera (0,36 m), gondola del motore, posizione di ali e impennaggi misurati sulla foto di fianco calibrata (1990).
+nome: BQM-74C Chukar III (bersaglio aereo)
+uscita: extracted/navi/bqm74
+moduli_parti: [missili_parti.py]
+
+vista: {volante: true, elevazioni: [0, 5, 15], centro: [0, 0, 5.0]}
+
+scafo:
+  generatore: corpo_missile
+  L: 3.87
+  B: 0.02
+  bordo: [[0, 0.02], [3.87, 0.02]]
+  z: 5.0
+  n: 16
+  # radome bianco, fusoliera cilindrica (diametro 0,36 m) che termina con un gradino sopra lo scarico
+  profilo: [[0, 0], [0.04, 0.085], [0.12, 0.135], [0.25, 0.165], [0.45, 0.18], [3.00, 0.18], [3.30, 0.16],
+            [3.46, 0.13]]
+
+parti:
+  # gondola ventrale del turbogetto J400: presa d'aria all'estremita' anteriore (a 1,55 m dal muso), cono di scarico
+  # bianco sporgente in coda (fino a 3,87 m)
+  - {tipo: gondola, nome: gondola_motore, z: 4.87, n: 12,
+     profilo: [[{prua: 1.55}, 0.125], [{prua: 1.72}, 0.15], [{prua: 3.00}, 0.15], [{prua: 3.30}, 0.10],
+               [{prua: 3.45}, 0.065], [{prua: 3.87}, 0.012]]}
+  # ali dritte, alte sulla fusoliera (sulla foto di fianco si vedono quasi di taglio sul dorso), apertura 1,76 m
+  - {tipo: pinne, nome: ali, x_ba: {prua: 1.40}, corda: 0.55, x_ba_estremo: {prua: 1.50}, corda_estremo: 0.35,
+     r0: 0.10, semiapertura: 0.88, angoli: [90, 270], spessore: 0.08, dz: 0.11}   # ala alta; spessore maggiorato (linea di testa)
+  # deriva verticale a freccia (bordo d'uscita quasi verticale)
+  - {tipo: pinna, nome: deriva, x_ba: {prua: 3.10}, corda: 0.36, x_ba_estremo: {prua: 3.36}, corda_estremo: 0.07,
+     r0: 0.12, semiapertura: 0.47, angolo: 0, spessore: 0.06}
+  # piani orizzontali di coda con forte diedro negativo
+  - {tipo: pinne, nome: piani_coda, x_ba: {prua: 3.00}, corda: 0.36, x_ba_estremo: {prua: 3.08}, corda_estremo: 0.22,
+     r0: 0.10, semiapertura: 0.50, angoli: [112, 248], spessore: 0.06}
+
+# Foto di riferimento (pubblico dominio; metadati in extracted/navi/bqm74/foto/fonti.json).
+foto:
+  - nome: chukar3_fianco
+    specchiabile: true
+    file: extracted/navi/bqm74/foto/chukar3_1990_fianco.jpg
+    nave: BQM-74C Chukar III su un autocarro, 1990 (fianco destro)
+    qualita: 1.0
+    maschera_file: extracted/navi/bqm74/maschere/chukar3_1990_fianco.png   # tools/navi/classi/missili_maschere.py
+    cancella: [[577, 537, 600, 612], [743, 530, 768, 612]]     # cinghie di fissaggio bianche
+    fotocamera_iniziale: {posizione: [-3, -15, 4], bersaglio: [0, 0, 5], f: 3000}
+    limiti_fotocamera: {elevazione: [-6, 12], distanza: [2, 300], rollio: [-30, 30]}   # ripresa da terra, all'altezza del bersaglio
+    prior_fotocamera: {elevazione: 0, sigma_el: 3}
+    punti:
+      - [[{prua: 0}, 0, 5.0], [1060, 557]]             # punta del radome
+      - [[{prua: 3.87}, 0, 4.87], [302, 615]]          # punta del cono di scarico
+      - [[{prua: 3.43}, 0, 5.47], [390, 505]]          # estremita' della deriva, bordo d'uscita
+      - [[{prua: 3.36}, 0, 5.47], [402, 505]]          # estremita' della deriva, bordo d'attacco
+      - [[{prua: 3.10}, 0, 5.15], [452, 560]]          # radice della deriva, bordo d'attacco
+      - [[{prua: 3.08}, -0.464, 4.81], [463, 652]]     # estremita' del piano di coda destro, bordo d'attacco
+      - [[{prua: 1.55}, 0, 4.745], [757, 630]]          # bocca della presa d'aria, in basso

@@ -1,0 +1,24 @@
+# Maschera tracciata a mano per la foto della Sea Isle City (tools/navi/maschera_manuale.py, metodo cielo).
+# Coordinate in pixel dell'originale 2716 x 1702. Sopra l'orizzonte (inclinato di ~0,7 gradi) la nave si
+# scosta dal cielo grigio della propria riga (sovrastruttura bianca piu' chiara, scafo e fumaiolo piu'
+# scuri); sotto l'orizzonte lo scafo e' il poligono `includi`, tracciato sulla soglia di blu
+# B - (R+G)/2 < 13 (scafo nero e opera viva chiara contro il mare blu) e sul galleggiamento senza la scia.
+metodo: cielo
+file: extracted/navi/petroliera/foto/fianco_dritta_quarto_1987.jpg
+uscita: extracted/navi/petroliera/foto/fianco_dritta_quarto_1987_maschera.png
+orizzonte: [[300, 1262], [2650, 1289]]
+margine_orizzonte: 2
+soglia: 14
+sfocatura: 1.6
+inviluppo: [[826, 1292], [850, 1150], [905, 1100], [925, 965], [1000, 950], [1005, 960], [1100, 955], [1120, 860],
+            [1185, 860], [1200, 1060], [1290, 1070], [1440, 1080], [1700, 1080], [1800, 1160], [1840, 1240],
+            [2085, 1005], [2112, 1005], [2125, 1180], [2245, 1195], [2245, 1300], [826, 1300]]
+escludi:
+  - [[1112, 925], [1151, 925], [1151, 1000], [1112, 1000]]      # bandiera nazionale a poppavia dell'albero
+includi:
+  # scafo: dall'orizzonte al galleggiamento, tra il profilo della poppa e il dritto di prua
+  - [[832, 1287], [850, 1280], [880, 1265], [1500, 1273], [2100, 1281], [2226, 1284], [2224, 1310],
+     [2221, 1330], [2217, 1350], [2214, 1370], [2212, 1390], [2208, 1410], [2100, 1412], [1900, 1415],
+     [1700, 1417], [1500, 1417], [1300, 1415], [1100, 1413], [1000, 1411], [950, 1406], [935, 1399],
+     [907, 1381], [885, 1370], [871, 1360], [860, 1350], [847, 1330], [838, 1310], [834, 1290]]
+area_minima: 60

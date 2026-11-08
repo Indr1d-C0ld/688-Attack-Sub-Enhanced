@@ -1,0 +1,16 @@
+# Maschera della foto di prua dritta della Iowa (tools/navi/maschera_manuale.py), coordinate in pixel.
+# Iowa, prua dritta 1988 (metodo cielo: parti illuminate piu' chiare del cielo; era iowa_maschera_prua.py)
+metodo: cielo
+file: extracted/navi/iowa/foto/prua_dritta_1988_full.jpg
+uscita: extracted/navi/iowa/foto/prua_dritta_1988_maschera.png
+sfocatura: 1.0
+orizzonte_y: 1446
+margine_orizzonte: 0
+soglia: 9
+inviluppo: [[600, 540], [1339, 540], [1339, 1445], [600, 1445]]
+fasce_cielo: [[200, 580], [1360, 1612]]
+filtro_cielo: 9
+includi:
+  - [[636, 1400], [880, 1390], [1000, 1350], [1060, 1268], [1135, 1262], [1210, 1440], [1300, 1440], [1300, 1518], [1130, 1528], [900, 1531], [636, 1533]]
+chiusura: 0
+area_minima: 60

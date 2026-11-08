@@ -1,0 +1,92 @@
+# Elicottero SH-3H Sea King, configurazione 1989 (pezzo A4 di docs/13_asw_aereo.md): oggetto in volo.
+# Coordinate del kit: x verso prua, y verso SINISTRA, z verso l'alto, metri; ventre dello scafo a z = 8,0.
+# {prua: d} = punto a d metri dal muso (L = 16,69 m, la fusoliera senza rotori).
+# Misure pubbliche (Wikipedia, «Sikorsky SH-3 Sea King»; dossier 17 §2.2): lunghezza della fusoliera 16,69 m,
+# rotore principale 18,90 m a 5 pale, rotore di coda 3,16 m a 5 pale sul lato sinistro del pilone, altezza 5,13 m;
+# scafo a barca con i galleggianti laterali (sponson) che portano le ruote principali; due T58 sopra la cabina;
+# radome dorsale del radar; MAD rimorchiato ASQ-81 sul fianco destro; sonar a immersione AQS-13 nella cabina.
+# Posizioni di mozzo (5,2 m dal muso), galleggianti (3,6-6,8 m) e ruotino (10,9 m) misurate sulle tre foto
+# (extracted/navi/sh3h/foto/fonti.json, pubblico dominio US Navy).
+nome: SH-3H Sea King (1989)
+uscita: extracted/navi/sh3h
+moduli_parti: [elicotteri_parti.py]
+vista: {volante: true, elevazioni: [0, 10, 25], centro: [0.0, 0.0, 9.6]}
+albedo: {traliccio: 0.6}
+tono: 0.55
+
+scafo:
+  generatore: fusoliera
+  L: 16.69
+  z0: 8.0
+  # [d dal muso, z basso, z alto, semilarghezza, esponente]: muso tondo della cabina di pilotaggio, scafo a barca
+  # alto e diritto, cono di coda che sale verso il pilone
+  sezioni:
+    - [0.00, 0.70, 1.30, 0.15, 2.0]
+    - [0.40, 0.35, 1.70, 0.60, 2.4]
+    - [1.20, 0.10, 2.05, 0.90, 2.8]
+    - [2.20, 0.00, 2.30, 1.02, 3.2]
+    - [9.00, 0.00, 2.30, 1.02, 3.2]
+    - [10.00, 0.25, 2.20, 0.85, 3.0]
+    - [12.00, 0.90, 2.15, 0.50, 2.6]
+    - [14.20, 1.40, 2.15, 0.30, 2.2]
+    - [15.20, 1.60, 2.20, 0.25, 2.0]
+
+parti:
+  # carenatura dei motori e della trasmissione sopra la cabina, prese d'aria davanti
+  - {tipo: fusoliera, nome: carenatura, L: 16.69, z0: 8.0, sezioni: [[1.4, 2.25, 2.35, 0.5, 3], [2.0, 2.25, 2.85, 0.8, 3], [7.0, 2.25, 2.85, 0.8, 3], [8.2, 2.25, 2.5, 0.45, 2.5]]}
+  - {tipo: tubo, nome: presa_sinistra, x0: {prua: 2.2}, x1: {prua: 1.7}, y: 0.5, z: 10.5, r: 0.28, mat: scuro}
+  - {tipo: tubo, nome: presa_destra, x0: {prua: 2.2}, x1: {prua: 1.7}, y: -0.5, z: 10.5, r: 0.28, mat: scuro}
+  # radome dorsale del radar dietro il rotore
+  - {tipo: ellissoide, nome: radome, x: {prua: 9.0}, y: 0, z: 10.4, rx: 0.9, ry: 0.65, rz: 0.35}
+  # pilone del rotore di coda e stabilizzatore sul lato destro
+  - {tipo: deriva_y, nome: pilone, y: 0.0, spessore: 0.35, profilo: [[{prua: 14.6}, 10.0], [{prua: 16.0}, 10.1], [{prua: 16.69}, 12.4], [{prua: 16.4}, 12.9], [{prua: 15.6}, 12.9]]}
+  - {tipo: piano, nome: stabilizzatore, z: 11.6, spessore: 0.12, profilo: [[{prua: 15.6}, -0.2], [{prua: 15.6}, -1.9], [{prua: 16.3}, -1.9], [{prua: 16.3}, -0.2]]}
+  # albero e testa del rotore principale
+  - {tipo: cilindro, nome: albero_rotore, x: {prua: 5.2}, y: 0, r: 0.25, z0: 10.8, z1: 12.25}
+  - {tipo: cilindro, nome: testa_rotore, x: {prua: 5.2}, y: 0, r: 0.7, z0: 12.15, z1: 12.45, mat: scuro}
+  # galleggianti laterali con le ruote principali, ruotino di coda
+  - {tipo: ellissoide, nome: sponson_sinistro, x: {prua: 5.2}, y: 1.75, z: 8.75, rx: 1.6, ry: 0.72, rz: 0.4}
+  - {tipo: ellissoide, nome: sponson_destro, x: {prua: 5.2}, y: -1.75, z: 8.75, rx: 1.6, ry: 0.72, rz: 0.4}
+  - {tipo: ruota, nome: ruota_sinistra, x: {prua: 6.2}, y: 1.95, z: 7.95, r: 0.38, larghezza: 0.22}
+  - {tipo: ruota, nome: ruota_destra, x: {prua: 6.2}, y: -1.95, z: 7.95, r: 0.38, larghezza: 0.22}
+  - {tipo: ruota, nome: ruotino, x: {prua: 10.9}, y: 0, z: 7.7, r: 0.25, larghezza: 0.15}
+  - {tipo: tubo_inclinato, nome: gamba_ruotino, da: [{prua: 10.9}, 0, 7.7], a: [{prua: 10.7}, 0, 8.6], r: 0.07, mat: scuro}
+  # MAD rimorchiato (ASQ-81) sul fianco destro, dietro il galleggiante
+  - {tipo: tubo_inclinato, nome: mad, da: [{prua: 7.2}, -1.45, 8.6], a: [{prua: 8.5}, -1.4, 8.6], r: 0.16, r_fine: 0.11}
+  # rotori in moto: dischi puntinati
+  - {tipo: disco_rotore, nome: rotore_principale, x: {prua: 5.2}, y: 0, z: 12.35, raggio: 9.45, normale: [0.052, 0, 0.9986], conicita: 3, densita: 0.22, lato: 0.12, raggio_interno: 0.75, seme: 5, mat: traliccio, spessore: 0.25, inclinazione: 25}
+  - {tipo: disco_rotore, nome: rotore_coda, x: {prua: 16.1}, y: 0.45, z: 12.0, raggio: 1.58, normale: [0, 1, 0], conicita: 0, densita: 0.25, lato: 0.08, raggio_interno: 0.2, seme: 6, mat: traliccio}
+
+# Maschere: tools/navi/maschera_colore_modello.py --solo-sagoma (sagoma calibrata senza i dischi, ristretta di 3 px:
+# la vernice grigio-azzurra non si separa dal mare per colore).
+# Punti: muso, mozzo del rotore principale, mozzo del rotore di coda (sul lato sinistro del pilone), ruotino,
+# estremita' dei galleggianti, ruota principale sinistra.
+foto:
+  - nome: fianco_dritto_hs17_1990
+    file: extracted/navi/sh3h/foto/fianco_dritto_hs17_1990.jpg
+    nave: SH-3H dell'HS-17 (1990), fianco destro di profilo, in hovering col verricello
+    maschera_file: extracted/navi/sh3h/maschere/fianco_dritto_hs17_1990.png
+    qualita: 1.0
+    specchiabile: true
+    qualita_speculare: 0.5
+    fotocamera_iniziale: {posizione: [0.0, -40.0, 12.0], bersaglio: [0.0, 0.0, 9.6], f: 2900}
+    punti:
+      - [[{prua: 0}, 0, 9.0], [1606, 627]]
+      - [[{prua: 5.2}, 0, 12.3], [1214, 419]]
+      - [[{prua: 16.1}, 0.45, 12.0], [426, 522]]
+      - [[{prua: 10.9}, 0, 7.7], [801, 799]]
+      - [[{prua: 3.6}, -1.75, 8.75], [1311, 673]]
+      - [[{prua: 6.8}, -1.75, 8.75], [1094, 690]]
+  - nome: fianco_sinistro_alto_hs17_1986
+    file: extracted/navi/sh3h/foto/fianco_sinistro_alto_hs17_1986.jpg
+    nave: SH-3H dell'HS-17 (aprile 1986, Mediterraneo), fianco sinistro dall'alto
+    maschera_file: extracted/navi/sh3h/maschere/fianco_sinistro_alto_hs17_1986.png
+    qualita: 0.9
+    fotocamera_iniziale: {posizione: [0.0, 40.0, 25.0], bersaglio: [0.0, 0.0, 9.6], f: 2600}
+    punti:
+      - [[{prua: 0}, 0, 9.0], [527, 610]]
+      - [[{prua: 5.2}, 0, 12.3], [842, 405]]
+      - [[{prua: 16.1}, 0.45, 12.0], [1575, 471]]
+      - [[{prua: 10.9}, 0, 7.7], [1222, 709]]
+      - [[{prua: 3.6}, 1.75, 8.75], [754, 643]]
+      - [[{prua: 6.8}, 1.75, 8.75], [964, 693]]

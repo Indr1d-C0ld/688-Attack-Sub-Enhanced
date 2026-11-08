@@ -1,0 +1,97 @@
+# Elicottero britannico Westland Lynx HAS.3 della Royal Navy (configurazione 1989): l'elicottero imbarcato delle
+# fregate Type 22, due per nave (docs/ricerca/38_type22_lynx_stingray.md §2). Oggetto in volo (vista: volante).
+# Coordinate del kit: x verso prua, y verso sinistra, z verso l'alto, metri; il modello sta tutto sopra z = 0, col
+# ventre della fusoliera a z = 8,0. {prua: d} = punto a d metri dal muso.
+# Misure: rotore principale 12,8 m a 4 pale, rotore di coda 2,21 m a 4 pale sul lato sinistro della deriva, lunghezza
+# fuori tutto coi rotori in moto ~15,2 m (dati del Lynx; fonti secondarie). Lunghezza dal muso alla punta della
+# carenatura di coda 13,2 m, posizioni dei rotori e del carrello, quote: STIMA, dal profilo disegnato (Greg Goebel,
+# ~29,6 px/m) e dalla foto di dritta del 1988 (in volo sul ponte della USS Forrestal, CV-59), su cui il modello e'
+# calibrato (gli spigoli della coda, della gobba e della trave retroproiettati dalla fotocamera calibrata).
+nome: Westland Lynx HAS.3
+uscita: extracted/navi/lynx
+moduli_parti: [elicotteri_parti.py]
+vista: {volante: true, elevazioni: [0, 10, 25], centro: [0.0, 0.0, 9.2]}
+albedo: {traliccio: 0.6}
+
+# la fusoliera: sezioni [d dal muso, z basso, z alto, semilarghezza, esponente], quote dal ventre. Il muso e' il
+# radome del Seaspray (fino a ~1 m), poi il parabrezza alto, la cabina squadrata, il cono e la trave di coda sottile
+scafo:
+  generatore: fusoliera
+  L: 13.2
+  z0: 8.0
+  sezioni:
+    - [0.00, 0.44, 0.64, 0.10, 2.0]
+    - [0.15, 0.20, 0.71, 0.38, 2.2]
+    - [0.45, 0.10, 0.91, 0.60, 2.4]
+    - [1.00, 0.03, 1.03, 0.80, 2.6]
+    - [1.40, 0.00, 1.39, 0.88, 2.8]
+    - [1.75, 0.00, 1.76, 0.92, 3.0]
+    - [2.10, 0.00, 1.90, 0.95, 3.3]
+    - [3.00, 0.00, 1.98, 0.97, 3.5]
+    - [5.30, 0.00, 1.95, 0.97, 3.5]
+    - [5.80, 0.18, 1.92, 0.90, 3.2]
+    - [6.50, 0.50, 1.85, 0.68, 2.8]
+    - [7.20, 0.95, 1.78, 0.42, 2.4]
+    - [7.80, 1.10, 1.70, 0.32, 2.2]
+    - [9.20, 1.15, 1.60, 0.27, 2.1]
+    - [10.80, 1.18, 1.56, 0.24, 2.0]
+    - [11.70, 1.20, 1.52, 0.20, 2.0]
+
+parti:
+  # il pilone del rotore principale: la gobba sopra la cabina con la trasmissione e i due Gem dietro l'albero
+  - {tipo: fusoliera, nome: pilone, L: 13.2, z0: 8.0, sezioni: [[2.6, 1.85, 1.96, 0.50, 3], [3.4, 1.80, 2.15, 0.70, 3], [4.2, 1.80, 2.42, 0.78, 3], [5.0, 1.80, 2.50, 0.78, 3], [6.0, 1.75, 2.48, 0.70, 3], [6.5, 1.70, 2.35, 0.55, 2.6], [7.2, 1.65, 2.00, 0.35, 2.2], [7.8, 1.60, 1.72, 0.20, 2.0]]}
+  # le prese dei motori ai lati della gobba, dietro l'albero, e gli scarichi tondi («gli occhi») piu' a poppa
+  - {tipo: tubo, nome: presa_sinistra, x0: {prua: 5.9}, x1: {prua: 4.9}, y: 0.68, z: 10.15, r: 0.22}
+  - {tipo: tubo, nome: presa_destra, x0: {prua: 5.9}, x1: {prua: 4.9}, y: -0.68, z: 10.15, r: 0.22}
+  - {tipo: tubo_inclinato, nome: scarico_sinistro, da: [{prua: 6.5}, 0.40, 9.9], a: [{prua: 6.5}, 0.72, 9.9], r: 0.2, mat: scuro}
+  - {tipo: tubo_inclinato, nome: scarico_destro, da: [{prua: 6.5}, -0.40, 9.9], a: [{prua: 6.5}, -0.72, 9.9], r: 0.2, mat: scuro}
+  # la deriva a freccia in fondo alla trave di coda; in cima la carenatura della scatola del rotore di coda col
+  # fanale, lo stabilizzatore sul lato destro
+  - {tipo: deriva_y, nome: deriva, y: 0.0, spessore: 0.26, profilo: [[{prua: 10.55}, 9.58], [{prua: 11.9}, 10.5], [{prua: 12.75}, 10.5], [{prua: 12.75}, 10.2], [{prua: 11.85}, 9.1], [{prua: 11.2}, 9.15]]}
+  - {tipo: tubo_inclinato, nome: carenatura_coda, da: [{prua: 11.8}, 0, 10.55], a: [{prua: 13.2}, 0, 10.5], r: 0.15, r_fine: 0.07}
+  - {tipo: piano, nome: stabilizzatore, z: 10.45, spessore: 0.1, beccheggio: 0, profilo: [[{prua: 12.45}, -0.12], [{prua: 12.95}, -0.12], [{prua: 12.92}, -1.6], [{prua: 12.5}, -1.5]]}
+  # albero e testa del rotore principale (testa rigida a 4 pale)
+  - {tipo: cilindro, nome: albero_rotore, x: {prua: 4.42}, y: 0, r: 0.2, z0: 10.4, z1: 10.63}
+  - {tipo: cilindro, nome: testa_rotore, x: {prua: 4.42}, y: 0, r: 0.5, z0: 10.53, z1: 10.73, mat: scuro}
+  # il mozzo del rotore di coda sul lato sinistro della carenatura
+  - {tipo: tubo_inclinato, nome: mozzo_coda, da: [{prua: 12.1}, 0.1, 10.6], a: [{prua: 12.1}, 0.42, 10.6], r: 0.09, mat: scuro}
+  # carrello a triciclo fisso: ruotino doppio sotto il muso, ruote principali sulle gambe ai lati della cabina
+  - {tipo: ruota, nome: ruotino_destro, x: {prua: 2.45}, y: -0.17, z: 7.56, r: 0.21, larghezza: 0.14}
+  - {tipo: ruota, nome: ruotino_sinistro, x: {prua: 2.45}, y: 0.17, z: 7.56, r: 0.21, larghezza: 0.14}
+  - {tipo: tubo_inclinato, nome: gamba_ruotino, da: [{prua: 2.45}, 0, 7.56], a: [{prua: 2.35}, 0, 8.1], r: 0.07, mat: scuro}
+  - {tipo: ellissoide, nome: sponsone_destro, x: {prua: 5.35}, y: -0.95, z: 8.3, rx: 0.5, ry: 0.25, rz: 0.2}
+  - {tipo: ellissoide, nome: sponsone_sinistro, x: {prua: 5.35}, y: 0.95, z: 8.3, rx: 0.5, ry: 0.25, rz: 0.2}
+  - {tipo: tubo_inclinato, nome: gamba_destra, da: [{prua: 5.42}, -1.2, 7.65], a: [{prua: 5.35}, -1.0, 8.3], r: 0.08, mat: scuro}
+  - {tipo: tubo_inclinato, nome: gamba_sinistra, da: [{prua: 5.42}, 1.2, 7.65], a: [{prua: 5.35}, 1.0, 8.3], r: 0.08, mat: scuro}
+  - {tipo: ruota, nome: ruota_destra, x: {prua: 5.42}, y: -1.28, z: 7.65, r: 0.22, larghezza: 0.18}
+  - {tipo: ruota, nome: ruota_sinistra, x: {prua: 5.42}, y: 1.28, z: 7.65, r: 0.22, larghezza: 0.18}
+  # l'antenna sul muso, sopra il radome del Seaspray
+  - {tipo: cilindro, nome: antenna_muso, x: {prua: 0.64}, y: 0, r: 0.04, z0: 8.9, z1: 9.18, mat: scuro}
+  # rotori in moto: dischi puntinati; albero inclinato in avanti di 3 gradi
+  - {tipo: disco_rotore, nome: rotore_principale, x: {prua: 4.42}, y: 0, z: 10.63, raggio: 6.4, normale: [0.052, 0, 0.9986], conicita: 3, densita: 0.22, lato: 0.12, raggio_interno: 0.5, seme: 1, mat: traliccio, spessore: 0.22, inclinazione: 25}
+  - {tipo: disco_rotore, nome: rotore_coda, x: {prua: 12.1}, y: 0.45, z: 10.6, raggio: 1.1, normale: [0, 1, 0], conicita: 0, densita: 0.25, lato: 0.08, raggio_interno: 0.12, seme: 2, mat: traliccio}
+
+foto:
+  - nome: dritta_1988
+    file: extracted/navi/lynx/foto/2400px-SeaLynxHAS3_CV-59_1988.jpeg
+    nave: Lynx HAS.3 «405» della Royal Navy sul ponte di volo della USS Forrestal (CV-59), 1988 (US Navy, pubblico dominio), di dritta
+    qualita: 1.0
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti senza i rotori, erosa di 2 px (contorno_modello.py)
+    maschera_file: extracted/navi/lynx/foto/dritta_1988_maschera.png
+    solo_punti: true
+    # le sigle vere tolte (come sulle altre classi): la matricola XZ228 e ROYAL NAVY sulla trave, il 405 sulla cabina;
+    # le coccarde e la Union Jack restano, come le bandiere sulle navi
+    cancella: [[1015, 638, 1210, 702], [884, 688, 952, 716], [1836, 645, 1902, 684]]
+    riquadro: [380, 300, 2250, 950]
+    fotocamera_iniziale: {posizione: [-17, -47, 19], bersaglio: [0, 0, 9.3], f: 6600}
+    limiti_fotocamera: {elevazione: [-5, 35], distanza: [10, 2000], focale: [500, 200000]}
+    punti:
+      - [[{prua: 0}, 0, 8.54], [2178, 613]]             # punta del muso (radome del Seaspray)
+      - [[{prua: 4.42}, 0, 10.63], [1600, 420]]          # mozzo del rotore principale
+      - [[{prua: 2.45}, -0.17, 7.56], [1879, 795]]       # mozzo del ruotino (destro)
+      - [[{prua: 5.42}, -1.28, 7.65], [1557, 867]]      # mozzo della ruota principale di dritta
+      - [[{prua: 5.42}, 1.28, 7.65], [1430, 802]]       # mozzo della ruota principale di sinistra
+      - [[{prua: 6.5}, -0.72, 9.9], [1375, 572]]       # scarico tondo del motore di dritta
+      - [[{prua: 11.85}, 0, 9.1], [663, 766]]           # spigolo basso del bordo d'uscita della deriva
+      - [[{prua: 13.2}, 0, 10.5], [475, 605]]           # punta della carenatura di coda

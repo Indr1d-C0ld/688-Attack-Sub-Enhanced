@@ -1,0 +1,78 @@
+# Sottomarino lanciamissili Progetto 949A "Antey" (NATO: Oscar II), configurazione 1989 (K-148, K-173, K-132):
+# scafo doppio molto largo e basso (sezione ellittica, 18,2 m di larghezza), coperta piatta sui 24 contenitori
+# dei P-700 Granit, vela lunga a fianchi verticali, timone verticale a freccia con la carenatura orizzontale in cima.
+# Rispetto all'Oscar I (Progetto 949) lo scafo e' piu' lungo di ~10 m a poppavia della vela: prua e vela uguali.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua. Quote assolute rispetto al galleggiamento in emersione normale.
+nome: Oscar II (Progetto 949A)
+uscita: extracted/navi/oscar2
+tono: 0.22
+contrasto: 0.12
+peso_ombra: 0.03
+
+scafo:
+  generatore: scafo_sottomarino
+  L: 154.0
+  B: 18.2
+  ellitticita: 0.753       # altezza dello scafo 13,7 m su 18,2 di larghezza
+  esponente_sezione: 2.4   # fianchi un po' squadrati
+  raggio: [[0.0, 0.0], [1.2, 4.8], [2.8, 6.9], [5.2, 8.0], [9.3, 8.8], [17.3, 9.1], [100.0, 9.1], [106.0, 8.45],
+           [122.0, 7.75], [130.0, 6.65], [134.3, 5.6], [138.3, 4.0], [142.3, 2.65], [146.4, 1.45], [150.4, 0.65], [154.0, 0.0]]
+  bordo_libero: 4.5
+  stazioni: 110
+  punti_sezione: 56
+
+parti:
+  # vela: fianchi verticali, fronte e retro quasi verticali con gli spigoli arrotondati, cielo a 4,2 m sulla coperta
+  - tipo: vela
+    nome: vela
+    pianta: ovale
+    esponente: 5.0
+    livelli:
+      - [3.0, {prua: 30.0}, {prua: 59.6}, 3.0]
+      - [4.5, {prua: 30.2}, {prua: 59.3}, 3.0]
+      - [8.0, {prua: 30.3}, {prua: 59.1}, 2.9]
+      - [8.5, {prua: 30.6}, {prua: 58.8}, 2.7]
+      - [8.75, {prua: 31.2}, {prua: 58.2}, 2.3]
+  - {tipo: cilindro, nome: albero, x: {prua: 40.0}, y: 0, r: 0.2, z0: 8.0, z1: 13.0, n: 6, mat: scuro}
+  # timone verticale a forte freccia raccordato allo scafo, con la carenatura orizzontale in cima
+  - {tipo: timone_verticale, nome: timone, x: {prua: 126.2}, z0: 1.0, z1: 5.6, corda: 16.9, corda_estremita: 5.2, spessore: 1.0, freccia: 12.1, pod: [{prua: 137.5}, 5.8, 8.5, 1.2], muso_pod: 0.25, coda_pod: 0.4}
+
+foto:
+  - nome: poppa_dritta_aerea
+    file: extracted/navi/oscar2/foto/poppa_dritta_omsk_1994.jpg
+    maschera_file: extracted/navi/oscar2/foto/poppa_dritta_omsk_1994_maschera.png   # classi/oscar2_maschere.yaml
+    nave: K-186 Omsk (Oscar II), Mare di Bering, 5/9/1994
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    fotocamera_iniziale: {posizione: [-400, -500, 450], bersaglio: [0, 0, 3], f: 1500}
+    prior_fotocamera: {elevazione: 35, sigma_el: 4, distanza: 1500, sigma_logD: 0.4}
+    limiti_fotocamera: {azimut: [-175, -95], elevazione: [15, 65], rollio: [-15, 15], mira_z: [-40, 40]}
+    punti:
+      - [[{prua: 1.0}, 0, 0.0], [592, 196]]       # prua al galleggiamento
+      - [[{prua: 30.6}, 0, 8.75], [457, 160]]     # spigolo prodiero del cielo della vela
+      - [[{prua: 58.8}, 0, 8.75], [361, 177]]     # spigolo poppiero del cielo della vela
+      - [[{prua: 138.3}, 0, 6.0], [40, 302]]      # estremita' prodiera della carenatura sul timone
+  - nome: prua_dritta
+    file: extracted/navi/oscar2/foto/prua_dritta_oscar1_1987.jpg
+    maschera_file: extracted/navi/oscar2/foto/prua_dritta_oscar1_1987_maschera.png   # classi/oscar2_maschere.yaml
+    nave: K-525 (Oscar I, Progetto 949), 1987; usata solo per prua e vela
+    esponente_peso: 1.0
+    qualita: 0.8
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    escludi_parti: [timone, albero]
+    fotocamera_iniziale: {posizione: [300, -350, 20], bersaglio: [-20, 0, 3], f: 1500}
+    prior_fotocamera: {elevazione: 5, sigma_el: 4}
+    limiti_fotocamera: {azimut: [-90, -10], elevazione: [0, 20], rollio: [-10, 10], mira_z: [-40, 40]}
+    escludi: [[0, 0, 262, 304]]      # parte poppiera dell'Oscar I (piu' corta) esclusa dalla calibrazione
+    punti:
+      - [[{prua: 1.0}, 0, 0.0], [508, 200]]       # prua al galleggiamento
+      - [[{prua: 30.6}, 0, 8.75], [371, 106]]     # spigolo prodiero del cielo della vela
+      - [[{prua: 58.8}, 0, 8.75], [276, 98]]      # spigolo poppiero del cielo della vela
+      - [[{prua: 59.3}, 0, 4.5], [274, 140]]      # piede del retro della vela
+      - [[{prua: 30.2}, 0, 4.5], [376, 150]]      # piede del fronte della vela

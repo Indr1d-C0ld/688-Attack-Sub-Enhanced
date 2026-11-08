@@ -1,0 +1,17 @@
+# Esperimento pronto del vetrino di Dio (docs/28 §5, D3; formato: nota trailer1-d2-forma-m688v.md). La scena S5 del
+# convoglio: tre Perry di scorta (8, 9, 10), il Victor III (12) che lancia fra 598 e 758 s. Al primo minuto un falso
+# ordine di rientro alla NATO, credibile a meta': chi ci crede si allontana dal nemico che conosce.
+[esperimento]
+titolo = "Il falso ordine di rientro"
+mostra = "Al primo minuto la NATO riceve un falso ordine di rientro, credibile a meta': chi dubita chiede conferma per radio"
+ipotesi = "Le Perry che ci credono lasciano il convoglio, e il Victor colpisce di piu'"
+codice = "8FZD3Q-4G0000-04K000-0000HZ-G002QH"
+semi = 10
+da = 1
+
+[[intervento]]
+tempo = 60.0
+tipo = "ordine_falso"
+durata_s = 1800.0
+parametri = { autenticazione = 0.5 }
+testi = { parte = "usa", ordine = "rientro" }

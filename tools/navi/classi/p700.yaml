@@ -1,0 +1,47 @@
+# P-700 Granit (3M45, NATO SS-N-19 "Shipwreck") in volo dopo lo sgancio del booster: ali e alette di coda aperte.
+# Coordinate del kit: x verso il muso (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dal muso. Asse del corpo a z = 5 m.
+#
+# Nessuna foto di pubblico dominio del missile in volo o da vicino: modello dalle misure pubblicate e dai disegni,
+# solo ombreggiatura (foto: []).
+# Misure (Wikipedia RU/EN, dossier 01 e 05): lunghezza 10 m, diametro 0,85 m, apertura alare 2,6 m.
+# Disposizione (frazioni della lunghezza) dal disegno a due viste "P700Granit.jpg" (Wikimedia Commons, CC BY-SA 3.0,
+# solo consultato, non copiato ne' proiettato) e dal profilo "P-700-Granit sketch.svg" (CC BY-SA 3.0): presa d'aria
+# anulare in prua con cono centrale sporgente, corpo cilindrico, ali a freccia (bordo d'uscita diritto) poco dietro
+# meta' lunghezza, quattro alette di coda a croce '+'. Il disegno e' stilizzato (corpo e ali troppo larghi rispetto
+# alle misure pubblicate): se ne usano le posizioni in lunghezza, mentre larghezze e aperture sono riportate alle misure.
+nome: P-700 Granit (SS-N-19 Shipwreck, crociera)
+uscita: extracted/navi/p700
+moduli_parti: [missili_parti.py]
+
+vista: {volante: true, elevazioni: [0, 5, 15], centro: [0, 0, 5.0]}
+
+scafo:
+  generatore: corpo_missile
+  L: 10.0
+  B: 0.02
+  bordo: [[0, 0.02], [10.0, 0.02]]
+  z: 5.0
+  n: 20
+  # cono centrale (0,6 m), labbro della presa anulare, corpo cilindrico, coda rastremata
+  profilo: [[0, 0], [0.30, 0.09], [0.60, 0.16], [0.601, 0.285], [1.20, 0.36], [2.00, 0.405], [3.30, 0.425],
+            [8.00, 0.425], [9.00, 0.37], [9.70, 0.30], [10.0, 0.27]]
+
+parti:
+  # bocca scura della presa d'aria anulare, tra il cono centrale e il labbro
+  - {tipo: anello, nome: presa_anulare, x: {prua: 0.595}, r_interno: 0.165, r_esterno: 0.28}
+  # ali a freccia (bordo d'attacco ~60 gradi, bordo d'uscita diritto), apertura 2,6 m
+  - {tipo: pinne, nome: ali, x_ba: {prua: 5.08}, corda: 2.82, x_ba_estremo: {prua: 7.28}, corda_estremo: 0.62,
+     r0: 0.35, semiapertura: 1.30, angoli: [90, 270], spessore: 0.10}
+  # alette di coda verticali (sopra e sotto)
+  - {tipo: pinne, nome: alette_verticali, x_ba: {prua: 8.40}, corda: 1.40, x_ba_estremo: {prua: 9.10}, corda_estremo: 0.30,
+     r0: 0.25, semiapertura: 0.95, angoli: [0, 180], spessore: 0.09}
+  # alette di coda orizzontali
+  - {tipo: pinne, nome: alette_orizzontali, x_ba: {prua: 8.78}, corda: 1.00, x_ba_estremo: {prua: 9.30}, corda_estremo: 0.45,
+     r0: 0.25, semiapertura: 0.74, angoli: [90, 270], spessore: 0.09}
+
+# solo ombreggiatura: albedo del corpo alzata (0,62 -> 0,80) perche' il tono medio degli sprite sia quello delle
+# classi con foto (indice medio ~150 invece di ~148 sulla rampa 144-158; vernice grigio chiaro)
+albedo: {sovrastruttura: 0.80}
+
+foto: []

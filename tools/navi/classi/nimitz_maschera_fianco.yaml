@@ -1,0 +1,18 @@
+# Maschera ritoccata a mano della foto di fianco della USS Theodore Roosevelt (CVN-71), 9/10/1986,
+# file originale Commons da 2955 px, ritagliato (righe 231-1216) per centrare la nave in verticale. La nave sta tutta contro l'acqua (ripresa da circa 5 gradi).
+file: extracted/navi/nimitz/foto/fianco_dritta_roosevelt_1986_full_ritaglio.jpg
+uscita: extracted/navi/nimitz/foto/fianco_dritta_roosevelt_1986_full_ritaglio_maschera.png
+# scafo: bordo lontano del ponte di volo (visto dall'alto), prua, galleggiamento, poppa
+scafo: [[289, 408], [616, 408], [1539, 405], [1924, 408], [2001, 412], [2563, 414], [2583, 422], [2583, 448], [2543, 462], [2509, 482],
+        [2486, 511], [2479, 549], [2232, 559], [1847, 566], [1385, 569], [923, 568], [616, 563],
+        [339, 557], [302, 551], [292, 526], [255, 525], [254, 492], [277, 486], [280, 446], [286, 422]]
+soglia_scafo: 230          # tutto lo scafo (nessuna schiuma rilevante)
+linea_coperta: [[286, 411], [2583, 411]]
+# isola con albero, traliccio poppiero, asta a prua
+inviluppo: [[854, 411], [854, 274], [920, 274], [920, 311], [979, 311], [997, 172], [1003, 132], [1062, 132],
+            [1077, 172], [1085, 274], [1120, 274], [1164, 317], [1173, 411]]
+soglia_sovrastrutture: 128
+includi:
+  - [[1933, 351], [1944, 351], [1944, 411], [1933, 411]]   # asta sul bordo del ponte
+area_minima: 140
+buco_massimo: 470

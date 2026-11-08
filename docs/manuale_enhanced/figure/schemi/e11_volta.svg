@@ -1,0 +1,33 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='760' height='440' viewBox='0 0 760 440' font-family='DejaVu Sans, Helvetica, Arial, sans-serif' role='img' aria-label='Taglio verticale della volta di ghiaccio con chiglie di 4 e 15 m, polynya e nilas; sotto il 688 col sondatore verso l&#39;alto e la spazzata del BQS-15 a prua'>
+<title>Taglio verticale della volta di ghiaccio con chiglie di 4 e 15 m, polynya e nilas; sotto il 688 col sondatore verso l&#39;alto e la spazzata del BQS-15 a prua</title>
+<rect width='760' height='440' fill='#fcfcfb'/>
+<text x='60.0' y='26.0' font-size='16' fill='#0b0b0b' text-anchor='start' font-weight='bold'>Sotto la volta: un taglio del ghiaccio</text>
+<text x='60.0' y='46.0' font-size='12' fill='#52514e' text-anchor='start'>La scala verticale è esagerata 6 volte. Pescaggi delle chiglie e del ghiaccio in metri.</text>
+<line x1='60' y1='85.2' x2='720' y2='85.2' stroke='#e1e0d9'/>
+<text x='52.0' y='89.2' font-size='11' fill='#898781' text-anchor='end'>0 m</text>
+<line x1='60' y1='161.4' x2='720' y2='161.4' stroke='#e1e0d9'/>
+<text x='52.0' y='165.4' font-size='11' fill='#898781' text-anchor='end'>20 m</text>
+<line x1='60' y1='237.6' x2='720' y2='237.6' stroke='#e1e0d9'/>
+<text x='52.0' y='241.6' font-size='11' fill='#898781' text-anchor='end'>40 m</text>
+<line x1='60' y1='313.8' x2='720' y2='313.8' stroke='#e1e0d9'/>
+<text x='52.0' y='317.8' font-size='11' fill='#898781' text-anchor='end'>60 m</text>
+<line x1='60' y1='390.0' x2='720' y2='390.0' stroke='#e1e0d9'/>
+<text x='52.0' y='394.0' font-size='11' fill='#898781' text-anchor='end'>80 m</text>
+<rect x='60' y='70.0' width='660' height='320.0' fill='none' stroke='#c3c2b7'/>
+<path d='M60.0,89.0 L119.4,89.0 L145.8,100.5 L172.2,89.0 L258.0,89.0 L258.0,83.0 L172.2,83.0 L145.8,83.0 L119.4,83.0 L60.0,83.0 Z' fill='#a9c7e6' stroke='#52514e' stroke-width='1'/>
+<path d='M363.6,89.0 L429.6,89.0 L469.2,142.4 L515.4,89.0 L561.6,89.0 L581.4,85.6 L667.2,85.6 L687.0,89.0 L720.0,89.0 L720.0,83.0 L687.0,83.0 L667.2,83.0 L581.4,83.0 L561.6,83.0 L515.4,83.0 L469.2,83.0 L429.6,83.0 L363.6,83.0 Z' fill='#a9c7e6' stroke='#52514e' stroke-width='1'/>
+<line x1='60' y1='85.2' x2='720' y2='85.2' stroke='#2a78d6' stroke-width='1' stroke-dasharray='4 3'/>
+<text x='145.8' y='116.5' font-size='11' fill='#0b0b0b' text-anchor='middle'>chiglia di 4 m</text>
+<text x='310.8' y='79.2' font-size='11' fill='#0b0b0b' text-anchor='middle'>polynya (acqua libera)</text>
+<text x='469.2' y='158.4' font-size='11' fill='#0b0b0b' text-anchor='middle'>chiglia di 15 m</text>
+<text x='624.3' y='101.2' font-size='11' fill='#0b0b0b' text-anchor='middle'>nilas, 10 cm</text>
+<text x='99.6' y='101.2' font-size='11' fill='#0b0b0b' text-anchor='middle'>livellato, 1 m</text>
+<path d='M300.9,256.7 Q300.9,243.3 310.8,243.3 L365.6,243.3 Q373.5,243.3 373.5,256.7 Q373.5,270.0 365.6,270.0 L310.8,270.0 Q300.9,270.0 300.9,256.7 Z' fill='#52514e' stroke='#0b0b0b'/>
+<rect x='340.5' y='222.4' width='9.9' height='21.0' fill='#52514e' stroke='#0b0b0b'/>
+<path d='M345.1,222.4 L342.6,89.0 L347.6,89.0 Z' fill='#1baf7a' fill-opacity='0.35' stroke='#1baf7a'/>
+<text x='336.6' y='191.9' font-size='11' fill='#0b0b0b' text-anchor='end'>sondatore verso l&#39;alto, cono di 12°</text>
+<path d='M373.5,256.7 L602.1,383.7 L608.7,372.0 L614.7,360.0 L620.0,347.7 L624.6,335.1 L628.5,322.4 L631.7,309.5 L634.2,296.4 L636.1,283.2 L637.1,270.0 L637.5,256.7 L637.1,243.4 L636.1,230.1 L634.2,216.9 L631.7,203.9 L628.5,190.9 L624.6,178.2 L620.0,165.7 L614.7,153.4 L608.7,141.4 L602.1,129.7 Z' fill='#eda100' fill-opacity='0.25' stroke='#eda100'/>
+<text x='505.5' y='260.7' font-size='11' fill='#0b0b0b' text-anchor='middle'>BQS-15 a prua: chiglie e mine</text>
+<text x='337.2' y='286.0' font-size='11' fill='#52514e' text-anchor='middle'>688 a 45 m</text>
+<text x='390.0' y='424.0' font-size='12' fill='#52514e' text-anchor='middle'>distanza lungo il taglio (1 km in tutto)</text>
+</svg>

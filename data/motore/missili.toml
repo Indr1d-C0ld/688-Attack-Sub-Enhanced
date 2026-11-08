@@ -1,0 +1,641 @@
+# Classi di missile dell'Enhanced (generato da tools/pipeline/missili.py: non modificare a mano).
+
+[missili.harpoon_84a]
+nome = "UGM-84A Harpoon (Block 1)"
+ruolo = "antinave"
+uscita = "capsula"
+velocita_m_s = 240.0
+quota_crociera_m = 15.0
+portata_m = 111000.0
+distanza_min_m = 5556.0
+quota_lancio_max_m = 60.0
+velocita_lancio_max_kn = 10.0
+quota_lancio_min_m = 20.0
+salita_s = 20.0
+boost_s = 3.0
+discesa_s = 15.0
+terminale = "pop_up"
+pop_up_m = 1800.0
+acquisizione_m = [12000.0, 18000.0, 23000.0]
+semiapertura_gradi = 45.0
+mare_max = 5
+p_acquisizione_scorta = 0.4
+esm = false
+esm_radar = []
+radar_seeker = "dsq28"
+quota_ricerca_m = 0.0
+testata_kg = 221.0
+affidabilita = 0.95
+accensione_s = 30.0
+allineamento_s = 30.0
+preparazione_primo_s = 0.0
+preparazione_altri_s = 0.0
+anno_dal = 1981
+anno_al = 1997
+fonte = "dossier 05 §1 e 27 §1-§3; portata GAO C-MASAD-81-11 (circa 60 nmi)"
+confidenza = "media"
+esplosivo_kg = 100.0
+fonte_esplosivo = "testata 221 kg (dossier 01 §6.4), esplosivo 0,45 STIMA (il kit, depositi)"
+nota = "pop-up a 1.800 m (Block 1); il terminale non si sceglie sui sottomarini nel 1989 (dossier 27 §0.1 punto 5). Quota e velocita' di lancio, distanza minima, tempi di salita, accensione e allineamento STIMA (dossier 05 §1.2-§1.3, 27 §2); acquisizione del seeker STIMA; affidabilita' come il Tomahawk (GAO 1995), STIMA"
+
+[missili.harpoon_84c]
+nome = "UGM-84C Harpoon (Block 1B)"
+ruolo = "antinave"
+uscita = "capsula"
+velocita_m_s = 240.0
+quota_crociera_m = 5.0
+portata_m = 111000.0
+distanza_min_m = 5556.0
+quota_lancio_max_m = 60.0
+velocita_lancio_max_kn = 10.0
+quota_lancio_min_m = 20.0
+salita_s = 20.0
+boost_s = 3.0
+discesa_s = 15.0
+terminale = "radente"
+pop_up_m = 0.0
+acquisizione_m = [12000.0, 18000.0, 23000.0]
+semiapertura_gradi = 45.0
+mare_max = 5
+p_acquisizione_scorta = 0.4
+esm = false
+esm_radar = []
+radar_seeker = "dsq28"
+quota_ricerca_m = 0.0
+testata_kg = 221.0
+affidabilita = 0.95
+accensione_s = 30.0
+allineamento_s = 30.0
+preparazione_primo_s = 0.0
+preparazione_altri_s = 0.0
+anno_dal = 1982
+anno_al = 1997
+fonte = "dossier 05 §1 e 27 §1-§3; portata GAO C-MASAD-81-11 (circa 60 nmi)"
+confidenza = "media"
+esplosivo_kg = 100.0
+fonte_esplosivo = "come il Block 1"
+nota = "consegne dal giugno 1982, solo radente e piu' basso del Block 1 (designation-systems); il resto come l'84A"
+
+[missili.tasm]
+nome = "UGM-109B Tomahawk antinave (TASM)"
+ruolo = "antinave"
+uscita = "booster_subacqueo"
+velocita_m_s = 245.0
+quota_crociera_m = 15.0
+portata_m = 460000.0
+distanza_min_m = 9260.0
+quota_lancio_max_m = 60.0
+velocita_lancio_max_kn = 10.0
+quota_lancio_min_m = 0.0
+salita_s = 0.0
+boost_s = 12.0
+discesa_s = 20.0
+terminale = "radente"
+pop_up_m = 0.0
+acquisizione_m = [15000.0, 25000.0, 35000.0]
+semiapertura_gradi = 45.0
+mare_max = 5
+p_acquisizione_scorta = 0.4
+esm = true
+esm_radar = ["top_sail", "head_net_c"]
+radar_seeker = "dsq28"
+quota_ricerca_m = 100.0
+testata_kg = 454.0
+affidabilita = 0.95
+accensione_s = 600.0
+allineamento_s = 600.0
+preparazione_primo_s = 0.0
+preparazione_altri_s = 0.0
+anno_dal = 1983
+anno_al = 1994
+fonte = "dossier 05 §2.3 e 27 §3.2; portata operativa 250 nmi (GAO C-MASAD-81-11); affidabilita' GAO 1995"
+confidenza = "media"
+esplosivo_kg = 205.0
+fonte_esplosivo = "testata 454 kg (dossier 01 §6.4), esplosivo 0,45 STIMA (il kit)"
+nota = "booster Mk 106 per 12 s sott'acqua; sale a ~100 m per cercare (forum, bassa) con l'ESM sulle emissioni del bersaglio voluto (Naval Gazing): i radar dell'ESM sono una STIMA da concordare col disassemblatore; accensione e allineamento 8-12 min STIMA (si prende 10, divisi in due); testata 454 kg come nel danno (manuale D3 §2.3); distanza minima 5 miglia come nell'originale"
+
+[missili.tlam_c]
+nome = "UGM-109C Tomahawk d'attacco a terra (TLAM-C)"
+ruolo = "attacco_terra"
+uscita = "booster_subacqueo"
+velocita_m_s = 245.0
+quota_crociera_m = 40.0
+portata_m = 875000.0
+distanza_min_m = 0.0
+quota_lancio_max_m = 60.0
+velocita_lancio_max_kn = 10.0
+quota_lancio_min_m = 0.0
+salita_s = 0.0
+boost_s = 12.0
+discesa_s = 20.0
+terminale = "radente"
+pop_up_m = 0.0
+acquisizione_m = [0.0, 0.0, 0.0]
+semiapertura_gradi = 0.0
+mare_max = 9
+p_acquisizione_scorta = 0.0
+esm = false
+esm_radar = []
+radar_seeker = ""
+quota_ricerca_m = 0.0
+testata_kg = 450.0
+affidabilita = 0.95
+accensione_s = 0.0
+allineamento_s = 0.0
+preparazione_primo_s = 900.0
+preparazione_altri_s = 240.0
+anno_dal = 1986
+anno_al = 9999
+fonte = "dossier 05 §2.4, 27 §4.2 e appunti OTH §4; affidabilita' GAO 1995 (95% in crociera)"
+confidenza = "media"
+esplosivo_kg = 205.0
+fonte_esplosivo = "testata 450 kg, come il TASM (il kit)"
+nota = "portata da sottomarino ~875 km (1.250 km meno il 30% del booster, GAO 1995); quota 30-50 m sul terreno; preparazione del primo missile 15 min e poi 3-5 min ciascuno, STIMA su Gruner 1987 (10-20 min) e GAO 1995 (circa un'ora per la piattaforma)"
+
+[missili.p700]
+nome = "P-700 Granit (SS-N-19)"
+ruolo = "antinave"
+uscita = "contenitore"
+velocita_m_s = 500.0
+quota_crociera_m = 25.0
+portata_m = 550000.0
+distanza_min_m = 20000.0
+quota_lancio_max_m = 50.0
+velocita_lancio_max_kn = 5.0
+quota_lancio_min_m = 0.0
+salita_s = 0.0
+boost_s = 5.0
+discesa_s = 10.0
+terminale = "radente"
+pop_up_m = 0.0
+acquisizione_m = [25000.0, 35000.0, 45000.0]
+semiapertura_gradi = 45.0
+mare_max = 6
+p_acquisizione_scorta = 0.2
+esm = false
+esm_radar = []
+radar_seeker = "granit"
+quota_ricerca_m = 0.0
+testata_kg = 750.0
+affidabilita = 0.9
+accensione_s = 60.0
+allineamento_s = 120.0
+preparazione_primo_s = 0.0
+preparazione_altri_s = 0.0
+anno_dal = 1983
+anno_al = 9999
+fonte = "dossier 05 §3.1 e §3.3; lancio fino a 50 m e 5 kn, 5 s fra i missili (Pavlov, appunti sovietici §0)"
+confidenza = "media"
+esplosivo_kg = 518.0
+fonte_esplosivo = "dossier 05 §3.1: 518-750 kg HE"
+nota = "il profilo alto (14-17 km per la gran parte del volo) qui e' semplificato in uno basso a Mach 1,5; la salva in rete che riconosce i bersagli per dimensione e' resa con una p_acquisizione_scorta bassa (0,2), STIMA; portata del seeker, tempi e affidabilita' STIMA"
+
+[missili.p500]
+nome = "P-500 Bazalt (SS-N-12)"
+ruolo = "antinave"
+uscita = "contenitore"
+velocita_m_s = 450.0
+quota_crociera_m = 25.0
+portata_m = 550000.0
+distanza_min_m = 20000.0
+quota_lancio_max_m = 0.0
+velocita_lancio_max_kn = 30.0
+quota_lancio_min_m = 0.0
+salita_s = 0.0
+boost_s = 5.0
+discesa_s = 10.0
+terminale = "radente"
+pop_up_m = 0.0
+acquisizione_m = [25000.0, 35000.0, 45000.0]
+semiapertura_gradi = 45.0
+mare_max = 6
+p_acquisizione_scorta = 0.3
+esm = false
+esm_radar = []
+radar_seeker = ""
+quota_ricerca_m = 0.0
+testata_kg = 1000.0
+affidabilita = 0.9
+accensione_s = 60.0
+allineamento_s = 120.0
+preparazione_primo_s = 0.0
+preparazione_altri_s = 0.0
+anno_dal = 1977
+anno_al = 9999
+fonte = "manuale D3 §2.3 (Slava, 1.000 kg); profilo come il Granit"
+confidenza = "bassa"
+esplosivo_kg = 600.0
+fonte_esplosivo = "testata 1.000 kg (manuale D3 §2.3), esplosivo 0,6 STIMA (il kit)"
+nota = "imbarcato su navi (Slava) e sugli Echo II: lancio di superficie; numeri del seeker, tempi e affidabilita' STIMA; manca un emettitore della testa in emettitori.toml"
+
+[missili.p120]
+nome = "P-120 Malakhit (SS-N-9)"
+ruolo = "antinave"
+uscita = "contenitore"
+velocita_m_s = 300.0
+quota_crociera_m = 60.0
+portata_m = 120000.0
+distanza_min_m = 10000.0
+quota_lancio_max_m = 50.0
+velocita_lancio_max_kn = 5.0
+quota_lancio_min_m = 0.0
+salita_s = 0.0
+boost_s = 7.0
+discesa_s = 10.0
+terminale = "radente"
+pop_up_m = 0.0
+acquisizione_m = [15000.0, 20000.0, 25000.0]
+semiapertura_gradi = 45.0
+mare_max = 5
+p_acquisizione_scorta = 0.5
+esm = false
+esm_radar = []
+radar_seeker = ""
+quota_ricerca_m = 0.0
+testata_kg = 840.0
+affidabilita = 0.85
+accensione_s = 60.0
+allineamento_s = 120.0
+preparazione_primo_s = 0.0
+preparazione_altri_s = 0.0
+anno_dal = 1972
+anno_al = 9999
+fonte = "dossier 05 §3.1 e §3.4 (lancio umido fino a 50 m, dati dal sonar Rubikon)"
+confidenza = "media"
+esplosivo_kg = 500.0
+fonte_esplosivo = "manuale D3 §2.3 (500 kg nel danno, scelta della principale 31/10/2026); 0,6 della testata di 840 kg"
+nota = "testata 840 kg (Wikipedia); il danno dell'IA usa 500 kg per classe (manuale D3 §2.3): da allineare col runtime; 10-15% di guasto al lancio (prove del 1974), si prende 0,85; seeker e tempi STIMA"
+
+[missili.p70]
+nome = "P-70 Ametist (SS-N-7)"
+ruolo = "antinave"
+uscita = "contenitore"
+velocita_m_s = 320.0
+quota_crociera_m = 60.0
+portata_m = 65000.0
+distanza_min_m = 8000.0
+quota_lancio_max_m = 30.0
+velocita_lancio_max_kn = 5.0
+quota_lancio_min_m = 0.0
+salita_s = 0.0
+boost_s = 7.0
+discesa_s = 10.0
+terminale = "radente"
+pop_up_m = 0.0
+acquisizione_m = [12000.0, 18000.0, 22000.0]
+semiapertura_gradi = 45.0
+mare_max = 5
+p_acquisizione_scorta = 0.5
+esm = false
+esm_radar = []
+radar_seeker = ""
+quota_ricerca_m = 0.0
+testata_kg = 530.0
+affidabilita = 0.85
+accensione_s = 60.0
+allineamento_s = 120.0
+preparazione_primo_s = 0.0
+preparazione_altri_s = 0.0
+anno_dal = 1968
+anno_al = 9999
+fonte = "dossier 05 §3.1 (lancio fino a 30 m, boost di 7 s)"
+confidenza = "media"
+esplosivo_kg = 320.0
+fonte_esplosivo = "testata 530 kg (Wikipedia), esplosivo 0,6 STIMA come il Malakhit"
+nota = "testata 530 kg HE (Wikipedia; 1.000 kg nella versione speciale): da allineare col danno dell'IA come il Malakhit; seeker e tempi STIMA"
+
+[[arma]]
+arma = "harpoon"
+missile = "harpoon_84a"
+dal = 1981
+al = 1981
+
+[[arma]]
+arma = "harpoon"
+missile = "harpoon_84c"
+dal = 1982
+al = 9999
+
+[[arma]]
+arma = "tasm"
+missile = "tasm"
+dal = 1983
+al = 9999
+
+[[arma]]
+arma = "tlam_c"
+missile = "tlam_c"
+dal = 1986
+al = 9999
+
+[[lanciatore]]
+classe = "oscar"
+missile = "p700"
+dal = 1980
+al = 9999
+salva = 4
+riserva = 24
+
+[[lanciatore]]
+classe = "kirov"
+missile = "p700"
+dal = 1980
+al = 9999
+salva = 4
+riserva = 20
+
+[[lanciatore]]
+classe = "slava"
+missile = "p500"
+dal = 1982
+al = 9999
+salva = 4
+riserva = 16
+
+[[lanciatore]]
+classe = "charlie2"
+missile = "p120"
+dal = 1973
+al = 9999
+salva = 2
+riserva = 8
+
+[[lanciatore]]
+classe = "nanuchka"
+missile = "p120"
+dal = 1969
+al = 9999
+salva = 3
+riserva = 6
+
+[[lanciatore]]
+classe = "los_angeles"
+missile = "harpoon_84a"
+dal = 1981
+al = 1981
+salva = 2
+riserva = 0
+
+[[lanciatore]]
+classe = "los_angeles"
+missile = "harpoon_84c"
+dal = 1982
+al = 9999
+salva = 2
+riserva = 0
+
+[[lanciatore]]
+classe = "sturgeon"
+missile = "harpoon_84a"
+dal = 1981
+al = 1981
+salva = 2
+riserva = 0
+
+[[lanciatore]]
+classe = "sturgeon"
+missile = "harpoon_84c"
+dal = 1982
+al = 9999
+salva = 2
+riserva = 0
+
+[[lanciatore]]
+classe = "trafalgar"
+missile = "harpoon_84c"
+dal = 1983
+al = 9999
+salva = 2
+riserva = 0
+
+[[lanciatore]]
+classe = "perry"
+missile = "harpoon_84a"
+dal = 1977
+al = 1981
+salva = 2
+riserva = 4
+
+[[lanciatore]]
+classe = "perry"
+missile = "harpoon_84c"
+dal = 1982
+al = 9999
+salva = 2
+riserva = 4
+
+[[lanciatore]]
+classe = "spruance"
+missile = "harpoon_84a"
+dal = 1979
+al = 1981
+salva = 2
+riserva = 8
+
+[[lanciatore]]
+classe = "spruance"
+missile = "harpoon_84c"
+dal = 1982
+al = 9999
+salva = 2
+riserva = 8
+
+[[lanciatore]]
+classe = "kidd"
+missile = "harpoon_84a"
+dal = 1981
+al = 1981
+salva = 2
+riserva = 8
+
+[[lanciatore]]
+classe = "kidd"
+missile = "harpoon_84c"
+dal = 1982
+al = 9999
+salva = 2
+riserva = 8
+
+[[lanciatore]]
+classe = "iowa"
+missile = "harpoon_84c"
+dal = 1982
+al = 9999
+salva = 4
+riserva = 16
+
+[[difesa_nave]]
+classe = "perry"
+phalanx = 1
+canali = 1
+block1_dal = 0
+fonte = "Phalanx: dossier 01 §4.1 e 22; canali: Mk 13"
+confidenza = "media"
+
+[[difesa_nave]]
+classe = "knox"
+phalanx = 1
+canali = 1
+block1_dal = 0
+fonte = "Phalanx: enciclopedia (il modello del kit non lo disegna); canali: BPDMS"
+confidenza = "media"
+
+[[difesa_nave]]
+classe = "spruance"
+phalanx = 2
+canali = 1
+block1_dal = 0
+fonte = "Phalanx: solo il modello del kit, i dossier non la elencano; canali: Sea Sparrow Mk 29"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "kidd"
+phalanx = 2
+canali = 2
+block1_dal = 0
+fonte = "Phalanx: dossier 01 §4.1 e 22; canali: 2 Mk 26"
+confidenza = "media"
+
+[[difesa_nave]]
+classe = "ticonderoga"
+phalanx = 2
+canali = 2
+block1_dal = 0
+fonte = "Phalanx: enciclopedia e kit; canali: 2 Mk 26 o lancio verticale"
+confidenza = "media"
+
+[[difesa_nave]]
+classe = "nimitz"
+phalanx = 3
+canali = 3
+block1_dal = 0
+fonte = "Phalanx: dossier 01 (3-4) e kit (3); canali: 3 Mk 29"
+confidenza = "media"
+
+[[difesa_nave]]
+classe = "kitty_hawk"
+phalanx = 3
+canali = 3
+block1_dal = 0
+fonte = "Phalanx: enciclopedia senza numero, kit (3); canali come la Nimitz"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "iowa"
+phalanx = 4
+canali = 1
+block1_dal = 1988
+fonte = "Phalanx: dossier 01 §4.1, enciclopedia, kit; Block 1 dal 1988 (dossier 05 §4.1); nessun missile antiaereo"
+confidenza = "media"
+
+[[difesa_nave]]
+classe = "sacramento"
+phalanx = 2
+canali = 1
+block1_dal = 0
+fonte = "Phalanx: dossier 01 §4.1 e kit; canali: Sea Sparrow"
+confidenza = "media"
+
+[[difesa_nave]]
+classe = "krivak2"
+phalanx = 0
+canali = 2
+block1_dal = 0
+fonte = "canali: 2 Osa-M (dossier 05 §4.2)"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "kara"
+phalanx = 0
+canali = 4
+block1_dal = 0
+fonte = "canali: 2 Shtorm, 2 Osa-M"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "kirov"
+phalanx = 0
+canali = 3
+block1_dal = 0
+fonte = "canali: S-300F, 2 Osa-M"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "slava"
+phalanx = 0
+canali = 3
+block1_dal = 0
+fonte = "canali: S-300F, 2 Osa-M"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "udaloy"
+phalanx = 0
+canali = 4
+block1_dal = 0
+fonte = "canali: Kinzhal, 4 bersagli (dossier 05 §4.2)"
+confidenza = "media"
+
+[[difesa_nave]]
+classe = "koni"
+phalanx = 0
+canali = 1
+block1_dal = 0
+fonte = "canali: 1 Osa-M"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "nanuchka"
+phalanx = 0
+canali = 1
+block1_dal = 0
+fonte = "canali: 1 Osa-M"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "grisha3"
+phalanx = 0
+canali = 1
+block1_dal = 0
+fonte = "canali: 1 Osa-M"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "type22"
+phalanx = 0
+canali = 2
+block1_dal = 0
+fonte = "canali: 2 Sea Wolf"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "type22b2"
+phalanx = 0
+canali = 2
+block1_dal = 0
+fonte = "canali: 2 Sea Wolf"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "oslo"
+phalanx = 0
+canali = 1
+block1_dal = 0
+fonte = "canali: Sea Sparrow"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "hauk"
+phalanx = 0
+canali = 1
+block1_dal = 0
+fonte = "nessun missile antiaereo: i cannoni"
+confidenza = "STIMA"
+
+[[difesa_nave]]
+classe = "stockholm"
+phalanx = 0
+canali = 1
+block1_dal = 0
+fonte = "nessun missile antiaereo: i cannoni"
+confidenza = "STIMA"

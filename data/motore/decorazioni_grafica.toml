@@ -1,0 +1,183 @@
+# Parte grafica delle decorazioni (M4, engine/grafica/decorazioni.hpp), scritta a mano: forma della medaglia, metallo,
+# classe, ordini a vite. Gli id, i nomi, la precedenza e i colori dei nastrini vengono da carriera.toml (M3,
+# tools/pipeline/carriera.py), l'unica fonte: qui ci sono gli stessi id, e una prova controlla che coincidano.
+#
+# forma: nessuna (solo nastrino), distintivo (si disegna sull'uniforme), attestato (citazione incorniciata),
+#        croce_patente, stella_capovolta, medaglione, stella_con_corona, stella, legione, ottagono, cuore,
+#        stella_raggiata, esagono, quadrato, tondo, stella_oro, ordine_lenin, bandiera_rossa, stella_rossa,
+#        servizio_patria, stella_otto, ordine_usakov
+# metallo: oro, argento, bronzo.  lettera: dispositivo fisso sul nastrino ("E" del Navy «E» Ribbon)
+
+[medal_of_honor]
+forma = "stella_capovolta"
+metallo = "bronzo"
+
+[navy_cross]
+forma = "croce_patente"
+metallo = "bronzo"
+
+[navy_dsm]
+forma = "medaglione"
+metallo = "oro"
+
+[silver_star]
+forma = "stella_con_corona"
+metallo = "oro"
+
+[legion_of_merit]
+forma = "legione"
+metallo = "oro"
+
+[navy_marine_corps_medal]
+forma = "ottagono"
+metallo = "bronzo"
+
+[bronze_star]
+forma = "stella"
+metallo = "bronzo"
+
+[purple_heart]
+forma = "cuore"
+metallo = "oro"
+
+[meritorious_service]
+forma = "stella_raggiata"
+metallo = "bronzo"
+
+[navy_commendation]
+forma = "esagono"
+metallo = "bronzo"
+
+[navy_achievement]
+forma = "quadrato"
+metallo = "bronzo"
+
+[combat_action_ribbon]
+forma = "nessuna"
+
+[presidential_unit_citation]
+forma = "nessuna"
+
+[navy_unit_commendation]
+forma = "nessuna"
+
+[meritorious_unit_commendation]
+forma = "nessuna"
+
+[navy_e_ribbon]
+forma = "nessuna"
+lettera = "E"
+
+[navy_expeditionary]
+forma = "tondo"
+metallo = "bronzo"
+
+[national_defense]
+forma = "tondo"
+metallo = "bronzo"
+
+[sea_service_deployment]
+forma = "nessuna"
+
+[arctic_service]
+forma = "nessuna"
+
+[dolphins]
+forma = "distintivo"
+metallo = "oro"
+
+[command_at_sea]
+forma = "distintivo"
+metallo = "oro"
+
+[submarine_combat_patrol]
+forma = "distintivo"
+metallo = "argento"
+
+[eroe_urss]
+forma = "stella_oro"
+metallo = "oro"
+
+[lenin]
+forma = "ordine_lenin"
+metallo = "oro"
+
+[bandiera_rossa]
+forma = "bandiera_rossa"
+metallo = "oro"
+
+[usakov_2]
+forma = "ordine_usakov"
+metallo = "argento"
+classe = 2
+
+[stella_rossa]
+forma = "stella_rossa"
+metallo = "argento"
+a_vite = true
+
+[servizio_patria_1]
+forma = "servizio_patria"
+metallo = "oro"
+classe = 1
+a_vite = true
+
+[servizio_patria_2]
+forma = "servizio_patria"
+metallo = "oro"
+classe = 2
+a_vite = true
+
+[servizio_patria_3]
+forma = "servizio_patria"
+metallo = "argento"
+classe = 3
+a_vite = true
+
+[coraggio_personale]
+forma = "stella_otto"
+metallo = "oro"
+
+[merito_combattimento]
+forma = "tondo"
+metallo = "argento"
+
+[distinzione_1]
+forma = "stella"
+metallo = "oro"
+classe = 1
+
+[distinzione_2]
+forma = "stella"
+metallo = "argento"
+classe = 2
+
+[giubilare_70]
+forma = "tondo"
+metallo = "oro"
+
+[servizio_impeccabile_3]
+forma = "tondo"
+metallo = "argento"
+classe = 3
+
+[servizio_impeccabile_2]
+forma = "tondo"
+metallo = "argento"
+classe = 2
+
+[servizio_impeccabile_1]
+forma = "tondo"
+metallo = "oro"
+classe = 1
+
+[encomio_comandante]
+forma = "attestato"
+
+[bandiera_rossa_battello]
+forma = "bandiera_rossa"
+metallo = "oro"
+
+[comandante_sottomarino]
+forma = "distintivo"
+metallo = "argento"

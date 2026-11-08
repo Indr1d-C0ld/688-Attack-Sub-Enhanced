@@ -1,0 +1,118 @@
+{
+  "fonte": "indice mappa dai briefing SCENE*.LZA (token 0B 00 0E nn); posizione da Spearman su ETOPO 2022",
+  "mappe": {
+    "SURFA": {
+      "teatro": "otranto",
+      "indice_mappa": 0,
+      "spearman": 0.907,
+      "orientamento": "diritta",
+      "altezza_nm": 75,
+      "larghezza_nm": 119,
+      "aspetto_pixel": 1.0,
+      "bbox_lat_lon": [
+        39.81,
+        41.061,
+        17.36,
+        19.996
+      ],
+      "affidabilita_posizione": "media"
+    },
+    "SURFB": {
+      "teatro": "baltico",
+      "indice_mappa": 1,
+      "spearman": 0.805,
+      "orientamento": "diritta",
+      "altezza_nm": 22,
+      "larghezza_nm": 36,
+      "aspetto_pixel": 1.0,
+      "bbox_lat_lon": [
+        54.729,
+        55.101,
+        13.124,
+        14.154
+      ],
+      "affidabilita_posizione": "bassa"
+    },
+    "SURFC": {
+      "teatro": "barents",
+      "indice_mappa": 2,
+      "spearman": 0.941,
+      "orientamento": "diritta",
+      "altezza_nm": 20,
+      "larghezza_nm": 26,
+      "aspetto_pixel": 1.2,
+      "bbox_lat_lon": [
+        69.79,
+        70.12,
+        31.826,
+        33.142
+      ],
+      "affidabilita_posizione": "bassa"
+    },
+    "SURFD": {
+      "teatro": "gibilterra",
+      "indice_mappa": 3,
+      "spearman": 0.963,
+      "orientamento": "diritta",
+      "altezza_nm": 96,
+      "larghezza_nm": 127,
+      "aspetto_pixel": 1.2,
+      "bbox_lat_lon": [
+        34.969,
+        36.562,
+        -7.148,
+        -4.541
+      ],
+      "affidabilita_posizione": "alta"
+    },
+    "SURFE": {
+      "teatro": "kunashir",
+      "indice_mappa": 4,
+      "spearman": 0.75,
+      "orientamento": "diritta",
+      "altezza_nm": 85,
+      "larghezza_nm": 112,
+      "aspetto_pixel": 1.2,
+      "bbox_lat_lon": [
+        43.174,
+        44.586,
+        144.009,
+        146.629
+      ],
+      "affidabilita_posizione": "media"
+    },
+    "SURFF": {
+      "teatro": "celtica",
+      "indice_mappa": 5,
+      "spearman": 0.865,
+      "orientamento": "diritta",
+      "altezza_nm": 20,
+      "larghezza_nm": 26,
+      "aspetto_pixel": 1.2,
+      "bbox_lat_lon": [
+        46.778,
+        47.108,
+        -10.097,
+        -9.44
+      ],
+      "affidabilita_posizione": "bassa"
+    },
+    "SURFG": {
+      "teatro": "faroe",
+      "indice_mappa": 6,
+      "spearman": 0.69,
+      "orientamento": "diritta",
+      "altezza_nm": 46,
+      "larghezza_nm": 61,
+      "aspetto_pixel": 1.2,
+      "bbox_lat_lon": [
+        60.452,
+        61.223,
+        -9.945,
+        -7.771
+      ],
+      "affidabilita_posizione": "bassa"
+    }
+  },
+  "nota": "Teatro certo per tutte (dal codice). Posizione: alta solo per SURFD; media per SURFA e SURFE; bassa per le altre (miglior finestra alla scala minima di 20 nm: mappe probabilmente stilizzate)."
+}

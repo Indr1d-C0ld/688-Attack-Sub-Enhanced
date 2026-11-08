@@ -1,0 +1,1478 @@
+# ASW aereo dell'Enhanced (generato da tools/pipeline/asw_aereo.py: non modificare a mano).
+# Dati dal dossier docs/ricerca/17_asw_aereo.md (paragrafi e sigle delle fonti del §11).
+# conf: alta, media, bassa; stime: i campi STIMA da tarare (pezzo A6); fonti: le fonti per campo.
+
+pensiero_s = 5.0
+
+[dislocamenti.los_angeles]
+dislocamento_t = 6900.0
+fattore = 1.0
+fonte = "§6.3"
+
+[dislocamenti.victor3]
+dislocamento_t = 7000.0
+fattore = 1.0
+fonte = "§6.3"
+
+[dislocamenti.akula]
+dislocamento_t = 13000.0
+fattore = 1.0
+fonte = "§6.3"
+
+[dislocamenti.typhoon]
+dislocamento_t = 25000.0
+fattore = 1.0
+fonte = "§6.3"
+
+[dislocamenti.kilo]
+dislocamento_t = 3000.0
+fattore = 1.0
+fonte = "§6.3 (2-3,2 kt)"
+
+[dislocamenti.foxtrot]
+dislocamento_t = 2500.0
+fattore = 1.0
+fonte = "§6.3 (2-3,2 kt)"
+
+[dislocamenti.alfa]
+dislocamento_t = 3200.0
+fattore = 0.65
+fonte = "§6.3: scafo in titanio, restano macchinari e reattore (0,6-0,7 STIMA)"
+
+[dislocamenti.oscar]
+dislocamento_t = 24000.0
+fattore = 1.0
+fonte = "STIMA (schede pubbliche)"
+
+[dislocamenti.charlie2]
+dislocamento_t = 5500.0
+fattore = 1.0
+fonte = "STIMA (schede pubbliche)"
+
+[dislocamenti.sturgeon]
+dislocamento_t = 4800.0
+fattore = 1.0
+fonte = "STIMA (schede pubbliche)"
+
+[dislocamenti.trafalgar]
+dislocamento_t = 5200.0
+fattore = 1.0
+fonte = "STIMA (schede pubbliche)"
+
+[boe.ssq41b]
+nome = "AN/SSQ-41B (LOFAR)"
+parte = "usa"
+funzione = "passiva_omni"
+sensore = "ssq41b"
+quote_m = [18.3, 304.8]
+vite_s = [3600.0, 10800.0, 28800.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.05
+sigma_rilevamento_deg = 0.0
+portata_m = 5556.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 9.0
+falsi_allarmi_h = 0.03
+frequenze_hz = [10.0, 10000.0]
+sl_db = 0.0
+fonte = "§4.1 [FASSSQ41] [HOLLER]"
+conf = "media"
+stime = ["guasto", "portata_m", "falsi_allarmi_h"]
+fonti = { caduta_m_s = "§4.1 [U53D]" }
+
+[boe.ssq53b]
+nome = "AN/SSQ-53B (DIFAR)"
+parte = "usa"
+funzione = "passiva_dir"
+sensore = "ssq53b"
+quote_m = [27.4, 304.8]
+vite_s = [3600.0, 10800.0, 28800.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.05
+sigma_rilevamento_deg = 7.0
+portata_m = 7408.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 6.0
+falsi_allarmi_h = 0.03
+frequenze_hz = [10.0, 2400.0]
+sl_db = 0.0
+fonte = "§4.1 [HOLLER] [AAD-DIFAR]"
+conf = "alta"
+stime = ["quote_m", "guasto", "portata_m", "falsi_allarmi_h", "frequenze_hz", "mare_max"]
+fonti = { mare_max = "dossier 21 §8 punto 4 (SSQ-53D fino a SS6; nessun dato per la B)" }
+
+[boe.ssq77a]
+nome = "AN/SSQ-77A (VLAD)"
+parte = "usa"
+funzione = "passiva_dir"
+sensore = "ssq77a"
+quote_m = [152.4, 304.8]
+vite_s = [3600.0, 14400.0, 28800.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.05
+sigma_rilevamento_deg = 7.0
+portata_m = 9260.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 9.0
+falsi_allarmi_h = 0.02
+frequenze_hz = [10.0, 2400.0]
+sl_db = 0.0
+fonte = "§4.1 [HOLLER] [FASSSQ77]"
+conf = "alta"
+stime = ["guasto", "portata_m", "falsi_allarmi_h", "sigma_rilevamento_deg", "frequenze_hz"]
+fonti = {  }
+
+[boe.ssq57a]
+nome = "AN/SSQ-57A (tarata)"
+parte = "usa"
+funzione = "tarata"
+sensore = "ssq57a"
+quote_m = [27.4, 121.9]
+vite_s = [3600.0, 10800.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.05
+sigma_rilevamento_deg = 0.0
+portata_m = 0.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 9.0
+falsi_allarmi_h = 0.0
+frequenze_hz = []
+sl_db = 0.0
+fonte = "§4.1 [HOLLER]"
+conf = "alta"
+stime = ["vite_s", "guasto"]
+fonti = {  }
+
+[boe.ssq47b]
+nome = "AN/SSQ-47B (attiva, distanza)"
+parte = "usa"
+funzione = "attiva_distanza"
+sensore = "ssq47b"
+quote_m = [18.3, 243.8]
+vite_s = [1800.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.05
+sigma_rilevamento_deg = 0.0
+portata_m = 1500.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 10.0
+ping_secondi = 0.0
+impulso_s = 0.1
+mare_max = 9.0
+falsi_allarmi_h = 0.0
+frequenze_hz = [13000.0, 14200.0, 15400.0, 16600.0, 17800.0, 19000.0]
+sl_db = 195.0
+fonte = "§4.1 [HOLLER]"
+conf = "alta"
+stime = ["portata_m", "sl_db", "guasto", "frequenze_hz"]
+fonti = {  }
+
+[boe.ssq62b]
+nome = "AN/SSQ-62B (DICASS)"
+parte = "usa"
+funzione = "attiva_dir"
+sensore = "ssq62b"
+quote_m = [27.4, 121.9, 457.2]
+vite_s = [1800.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.05
+sigma_rilevamento_deg = 5.0
+portata_m = 1800.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 100.0
+impulso_s = 0.25
+mare_max = 9.0
+falsi_allarmi_h = 0.0
+frequenze_hz = [6500.0, 7500.0, 8500.0, 9500.0]
+sl_db = 200.0
+fonte = "§4.1 [FASSSQ62] [U62G]"
+conf = "alta"
+stime = ["vite_s", "portata_m", "sigma_rilevamento_deg", "guasto"]
+fonti = { sl_db = "§8.3 [CALC]", portata_m = "§8.3 [CALC]" }
+
+[boe.ssq36]
+nome = "AN/SSQ-36 (batitermografo)"
+parte = "usa"
+funzione = "batitermografo"
+sensore = ""
+quote_m = [304.8, 800.1]
+vite_s = [600.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.05
+sigma_rilevamento_deg = 0.0
+portata_m = 0.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 9.0
+falsi_allarmi_h = 0.0
+frequenze_hz = []
+sl_db = 0.0
+fonte = "§4.1 [FASSSQ36]"
+conf = "media"
+stime = ["vite_s", "guasto"]
+fonti = {  }
+
+[boe.rgb_nm]
+nome = "RGB-NM «Chinara»"
+parte = "urss"
+funzione = "passiva_omni"
+sensore = "rgb_nm"
+quote_m = [20.0]
+vite_s = [21600.0]
+caduta_m_s = 30.0
+attivazione_s = 90.0
+guasto = 0.25
+sigma_rilevamento_deg = 0.0
+portata_m = 2700.0
+soglia = true
+soglia_s = 12.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 3.0
+falsi_allarmi_h = 0.25
+frequenze_hz = [7000.0, 10000.0]
+sl_db = 0.0
+fonte = "§4.2 [ART-Be12] [CIA72]"
+conf = "alta"
+stime = ["falsi_allarmi_h"]
+fonti = { guasto = "§4.2 (affidabilita' 0,7-0,8) e §7.4" }
+
+[boe.rgb_nm1]
+nome = "RGB-NM-1 «Zheton»"
+parte = "urss"
+funzione = "passiva_omni"
+sensore = "rgb_nm"
+quote_m = [20.0, 40.0, 100.0]
+vite_s = [21600.0]
+caduta_m_s = 30.0
+attivazione_s = 90.0
+guasto = 0.25
+sigma_rilevamento_deg = 0.0
+portata_m = 2700.0
+soglia = true
+soglia_s = 12.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 3.0
+falsi_allarmi_h = 0.25
+frequenze_hz = [7000.0, 10000.0]
+sl_db = 0.0
+fonte = "§4.2 [ART-Be12] [CIA72]"
+conf = "alta"
+stime = ["falsi_allarmi_h"]
+fonti = {  }
+
+[boe.rgb1]
+nome = "RGB-1"
+parte = "urss"
+funzione = "passiva_omni"
+sensore = "rgb1"
+quote_m = [35.0, 70.0]
+vite_s = [10800.0]
+caduta_m_s = 34.0
+attivazione_s = 0.0
+guasto = 0.25
+sigma_rilevamento_deg = 0.0
+portata_m = 2800.0
+soglia = true
+soglia_s = 10.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 9.0
+falsi_allarmi_h = 0.25
+frequenze_hz = [100.0, 10000.0]
+sl_db = 0.0
+fonte = "§4.2 [ART-Il38] [RW-Il38]"
+conf = "alta"
+stime = ["vite_s", "falsi_allarmi_h", "frequenze_hz", "soglia_s"]
+fonti = { guasto = "§3.4 e §7.4 (fino al 30% guaste a terra)" }
+
+[boe.rgb2]
+nome = "RGB-2"
+parte = "urss"
+funzione = "passiva_dir"
+sensore = "rgb2"
+quote_m = [20.0]
+vite_s = [2700.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.2
+sigma_rilevamento_deg = 6.0
+portata_m = 1750.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 9.0
+falsi_allarmi_h = 0.15
+frequenze_hz = [300.0, 5000.0]
+sl_db = 0.0
+fonte = "§4.2 [ART-Il38] [ART-Be12N]"
+conf = "alta"
+stime = ["guasto", "falsi_allarmi_h", "frequenze_hz"]
+fonti = {  }
+
+[boe.rgb75]
+nome = "RGB-75 (infrasonora)"
+parte = "urss"
+funzione = "passiva_omni"
+sensore = "rgb75"
+quote_m = [150.0]
+vite_s = [18000.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.2
+sigma_rilevamento_deg = 0.0
+portata_m = 1000.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 2.0
+falsi_allarmi_h = 0.5
+frequenze_hz = [2.0, 60.0]
+sl_db = 0.0
+fonte = "§4.2 [ART-Tu142]"
+conf = "alta"
+stime = ["quote_m", "guasto", "falsi_allarmi_h"]
+fonti = { falsi_allarmi_h = "§9 (Korshun 1985: 50% di falsi allarmi)" }
+
+[boe.rgb15]
+nome = "RGB-15"
+parte = "urss"
+funzione = "passiva_omni"
+sensore = "rgb15"
+quote_m = [150.0]
+vite_s = [7200.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.2
+sigma_rilevamento_deg = 0.0
+portata_m = 750.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 9.0
+falsi_allarmi_h = 0.4
+frequenze_hz = [2.0, 5000.0]
+sl_db = 0.0
+fonte = "§4.2 [ART-Tu142]"
+conf = "alta"
+stime = ["quote_m", "guasto", "falsi_allarmi_h"]
+fonti = {  }
+
+[boe.rgb25]
+nome = "RGB-25"
+parte = "urss"
+funzione = "passiva_dir"
+sensore = "rgb25"
+quote_m = [150.0, 50.0]
+vite_s = [3600.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.2
+sigma_rilevamento_deg = 6.0
+portata_m = 2000.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 2.0
+falsi_allarmi_h = 0.3
+frequenze_hz = [100.0, 5000.0]
+sl_db = 0.0
+fonte = "§4.2 [ART-Tu142]"
+conf = "alta"
+stime = ["quote_m", "vite_s", "guasto", "sigma_rilevamento_deg", "portata_m", "falsi_allarmi_h", "frequenze_hz"]
+fonti = {  }
+
+[boe.rgb55a]
+nome = "RGB-55A (attiva)"
+parte = "urss"
+funzione = "attiva_omni"
+sensore = "rgb55a"
+quote_m = [150.0]
+vite_s = [3600.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.2
+sigma_rilevamento_deg = 0.0
+portata_m = 5000.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.1
+mare_max = 9.0
+falsi_allarmi_h = 0.0
+frequenze_hz = [7000.0, 8000.0, 9000.0, 10000.0]
+sl_db = 200.0
+fonte = "§4.2 [ART-Tu142]"
+conf = "alta"
+stime = ["quote_m", "guasto", "frequenze_hz", "sl_db"]
+fonti = {  }
+
+[boe.mgab]
+nome = "MGAB (sorgente esplosiva)"
+parte = "urss"
+funzione = "esplosiva"
+sensore = ""
+quote_m = [25.0, 150.0, 400.0]
+vite_s = [0.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.05
+sigma_rilevamento_deg = 0.0
+portata_m = 0.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 9.0
+falsi_allarmi_h = 0.0
+frequenze_hz = []
+sl_db = 215.0
+fonte = "§4.2 [ART-Tu142]"
+conf = "alta"
+stime = ["guasto", "sl_db"]
+fonti = {  }
+
+[boe.rlb]
+nome = "RLB «Poplavok-1A» (radar-faro)"
+parte = "urss"
+funzione = "radar_faro"
+sensore = ""
+quote_m = [0.0]
+vite_s = [1200.0]
+caduta_m_s = 30.0
+attivazione_s = 0.0
+guasto = 0.1
+sigma_rilevamento_deg = 0.0
+portata_m = 0.0
+soglia = false
+soglia_s = 0.0
+periodo_ping_s = 0.0
+ping_secondi = 0.0
+impulso_s = 0.0
+mare_max = 9.0
+falsi_allarmi_h = 0.0
+frequenze_hz = []
+sl_db = 0.0
+fonte = "§4.2 [RW-Ka25]"
+conf = "alta"
+stime = ["guasto"]
+fonti = {  }
+
+[marcatori.mk25]
+nome = "Mk 25 (fumogeno e fiamma)"
+parte = "usa"
+durata_s = 900.0
+visibile_m = 7400.0
+fonte = "§4.3 [AUS-MK25]"
+conf = "alta"
+stime = ["visibile_m"]
+
+[marcatori.mk58]
+nome = "Mk 58 (due candele)"
+parte = "usa"
+durata_s = 3000.0
+visibile_m = 4700.0
+fonte = "§4.3 [AUS-MK58]"
+conf = "alta"
+stime = []
+
+[marcatori.mk84]
+nome = "Mk 84 SUS (segnalatore acustico)"
+parte = "usa"
+durata_s = 80.0
+acustico = true
+frequenza_hz = 3000.0
+fonte = "§4.3 [PRC68SUS]"
+conf = "media"
+stime = []
+
+[marcatori.omab]
+nome = "OMAB-25-12D/-8N"
+parte = "urss"
+durata_s = 1800.0
+visibile_m = 5000.0
+fonte = "§4.3 [RW-Ka25] [ART-Il38]"
+conf = "alta"
+stime = ["durata_s", "visibile_m"]
+
+[sonar_immersione.aqs13b]
+nome = "AN/AQS-13B"
+sensore = "aqs13b"
+hover_m = 12.2
+cavo_max_m = 137.2
+avvicinamento_s = 45.0
+calata_m_s = 2.0
+recupero_m_s = 2.0
+ascolto_min_s = 30.0
+ascolto_max_s = 60.0
+ping_min = 3
+ping_max = 4
+periodo_ping_s = 8.0
+p_attivo = 1.0
+dip_ricerca_s = 900.0
+salto_ricerca_m = 18520.0
+salto_inseguimento_m = 9260.0
+salto_velocita_kn = 114.0
+frequenza_hz = 10000.0
+sl_db = 211.0
+notte = true
+mare_max = 5.0
+hs_max_m = 3.0
+vento_max_kn = 35.0
+fonte = "§6.4 [RUDZIS] [MILAQS13B]"
+conf = "alta"
+stime = ["avvicinamento_s", "calata_m_s", "recupero_m_s", "ascolto_min_s", "ascolto_max_s", "periodo_ping_s", "mare_max"]
+fonti = { mare_max = "dossier 21 §8 punto 6 (N fino a 3, D 4, D/X 5 con onde oltre 10 ft, X da 6)", vento_max_kn = "dossier 02 §7.7; dossier 21 §8 punto 6" }
+
+[sonar_immersione.aqs13f]
+nome = "AN/AQS-13F"
+sensore = "aqs13f"
+hover_m = 18.3
+cavo_max_m = 442.0
+avvicinamento_s = 45.0
+calata_m_s = 2.9
+recupero_m_s = 2.9
+ascolto_min_s = 30.0
+ascolto_max_s = 60.0
+ping_min = 3
+ping_max = 4
+periodo_ping_s = 8.0
+p_attivo = 1.0
+dip_ricerca_s = 900.0
+salto_ricerca_m = 18520.0
+salto_inseguimento_m = 9260.0
+salto_velocita_kn = 130.0
+frequenza_hz = 10000.0
+sl_db = 215.0
+notte = true
+mare_max = 5.0
+hs_max_m = 3.0
+vento_max_kn = 35.0
+fonte = "§2.3 [WPAQS13] [SIKS70B]"
+conf = "media"
+stime = ["cavo_max_m", "calata_m_s", "recupero_m_s", "sl_db", "avvicinamento_s", "ascolto_min_s", "ascolto_max_s", "salto_velocita_kn", "mare_max"]
+
+[sonar_immersione.hs73]
+nome = "HS-73"
+sensore = "hs73"
+hover_m = 15.0
+cavo_max_m = 100.0
+avvicinamento_s = 45.0
+calata_m_s = 2.0
+recupero_m_s = 2.0
+ascolto_min_s = 60.0
+ascolto_max_s = 120.0
+ping_min = 3
+ping_max = 4
+periodo_ping_s = 8.0
+p_attivo = 1.0
+dip_ricerca_s = 600.0
+salto_ricerca_m = 5556.0
+salto_inseguimento_m = 3704.0
+salto_velocita_kn = 100.0
+frequenza_hz = 10000.0
+sl_db = 205.0
+notte = true
+mare_max = 5.0
+vento_max_kn = 35.0
+fonte = "35: HS-73 dell'Hkp 4 (aeroseum, avrosys: 5,6 km)"
+conf = "bassa"
+stime = ["hover_m", "cavo_max_m", "avvicinamento_s", "calata_m_s", "recupero_m_s", "ascolto_min_s", "ascolto_max_s", "periodo_ping_s", "frequenza_hz", "sl_db", "mare_max"]
+
+[sonar_immersione.vgs3]
+nome = "VGS-3 «Ros'-V»"
+sensore = "vgs3"
+hover_m = 30.0
+cavo_max_m = 150.0
+avvicinamento_s = 45.0
+calata_m_s = 2.0
+recupero_m_s = 2.0
+ascolto_min_s = 180.0
+ascolto_max_s = 240.0
+ping_min = 2
+ping_max = 3
+periodo_ping_s = 15.0
+p_attivo = 0.1
+dip_ricerca_s = 420.0
+salto_ricerca_m = 5000.0
+salto_inseguimento_m = 5000.0
+salto_velocita_kn = 32.0
+frequenza_hz = 8500.0
+sl_db = 205.0
+notte = false
+mare_max = 5.0
+vento_max_kn = 35.0
+fonte = "§3.2 §6.5 [ART-Ka27]"
+conf = "media"
+stime = ["avvicinamento_s", "calata_m_s", "recupero_m_s", "p_attivo", "frequenza_hz", "sl_db", "mare_max"]
+fonti = { mare_max = "dossier 21 §7.1 e §8 punto 6 (Ka-27 fino a 5 баллов)", ascolto_min_s = "§6.5 (3-10 min, stretto sul ciclo di 10-12 min)", salto_velocita_kn = "§6.5 (ricerca a 50-60 km/h)" }
+
+[sonar_immersione.vgs2]
+nome = "VGS-2 «Oka»"
+sensore = "vgs2"
+hover_m = 25.0
+cavo_max_m = 125.0
+avvicinamento_s = 80.0
+calata_m_s = 1.5
+recupero_m_s = 1.5
+ascolto_min_s = 240.0
+ascolto_max_s = 330.0
+ping_min = 2
+ping_max = 4
+periodo_ping_s = 15.0
+p_attivo = 0.3
+dip_ricerca_s = 540.0
+salto_ricerca_m = 5000.0
+salto_inseguimento_m = 5000.0
+salto_velocita_kn = 24.0
+frequenza_hz = 8000.0
+sl_db = 200.0
+notte = false
+mare_max = 5.0
+vento_max_kn = 30.0
+fonte = "§3.1 [RW-Ka25] [CIA72] [ART-Ka27]"
+conf = "media"
+stime = ["hover_m", "avvicinamento_s", "calata_m_s", "recupero_m_s", "ascolto_min_s", "ascolto_max_s", "ping_min", "ping_max", "periodo_ping_s", "p_attivo", "dip_ricerca_s", "frequenza_hz", "sl_db", "mare_max", "vento_max_kn"]
+fonti = { dip_ricerca_s = "§3.1 (ciclo 13-15 min, STIMA)", mare_max = "dossier 21 §7.1 (Ka-25/Ka-27: D a 5, X da 6)" }
+
+[mezzi.sh60b]
+nome = "SH-60B Seahawk (LAMPS III)"
+parte = "usa"
+elicottero = true
+dal_anno = 0
+radar = "aps124"
+sonar = ""
+canali_boe = 8
+velocita_transito_kn = 125.0
+velocita_ricerca_kn = 100.0
+velocita_posa_kn = 100.0
+quota_transito_m = 304.8
+quota_ricerca_m = 304.8
+quota_posa_m = 152.4
+quota_attacco_m = 45.7
+tos_base_h = 4.0
+tos_nm_per_h = 50.0
+riserva_h = 0.5
+equipaggio = "medio"
+gruppo_tipico = 1
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 0.0
+fonte = "§2.1 [GAOALFS] [SIKS70B] [FASSH60] [NHHCSH60B]"
+conf = "media"
+stime = ["carichi", "canali_boe", "velocita_ricerca_kn", "velocita_posa_kn", "quota_transito_m", "quota_ricerca_m", "quota_posa_m"]
+fonti = { tos_base_h = "§6.8 [NHHCSH60B] [CALC]", quota_attacco_m = "§6.7 [JPROC]" }
+carico_predefinito = "asw"
+
+[mezzi.sh60b.mad]
+fattore = 1.0
+quota_giorno_m = 45.7
+quota_notte_m = 45.7
+velocita_kn = 90.0
+cavo_m = 54.9
+fonte = "§2.1 §6.3 [SBIRMAD]"
+conf = "media"
+
+[mezzi.sh60b.carichi.asw]
+boe = { ssq53b = 15, ssq62b = 5, ssq41b = 4, ssq36 = 1 }
+armi = { mk46 = 2 }
+marcatori = { mk25 = 6 }
+
+[mezzi.sh2f]
+nome = "SH-2F Seasprite (LAMPS I)"
+parte = "usa"
+elicottero = true
+dal_anno = 0
+radar = ""
+sonar = ""
+canali_boe = 4
+velocita_transito_kn = 120.0
+velocita_ricerca_kn = 100.0
+velocita_posa_kn = 100.0
+quota_transito_m = 304.8
+quota_ricerca_m = 304.8
+quota_posa_m = 152.4
+quota_attacco_m = 45.7
+tos_base_h = 2.5
+tos_nm_per_h = 50.0
+riserva_h = 0.5
+equipaggio = "medio"
+gruppo_tipico = 1
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 0.0
+fonte = "§2.1b [FASSH2] [GSSH2] [ACSH2F]"
+conf = "media"
+stime = ["carichi", "canali_boe", "velocita_ricerca_kn", "velocita_posa_kn", "quota_transito_m", "quota_ricerca_m", "quota_posa_m", "quota_attacco_m", "tos_base_h", "tos_nm_per_h"]
+fonti = { tos_base_h = "§2.1b (autonomia 3,5-4,5 h nelle fonti, STIMA)" }
+carico_predefinito = "asw"
+
+[mezzi.sh2f.mad]
+fattore = 1.0
+quota_giorno_m = 45.7
+quota_notte_m = 45.7
+velocita_kn = 90.0
+cavo_m = 54.9
+fonte = "§2.1b §6.3 [FASSH2] [GSSH2]"
+conf = "media"
+
+[mezzi.sh2f.carichi.asw]
+boe = { ssq41b = 9, ssq47b = 5, ssq36 = 1 }
+armi = { mk46 = 2 }
+marcatori = { mk25 = 6 }
+
+[mezzi.sh3h]
+nome = "SH-3H Sea King"
+parte = "usa"
+elicottero = true
+dal_anno = 0
+radar = ""
+sonar = "aqs13b"
+canali_boe = 4
+velocita_transito_kn = 114.0
+velocita_ricerca_kn = 100.0
+velocita_posa_kn = 100.0
+quota_transito_m = 45.7
+quota_ricerca_m = 45.7
+quota_posa_m = 45.7
+quota_attacco_m = 45.7
+tos_base_h = 3.0
+tos_nm_per_h = 57.0
+riserva_h = 0.5
+equipaggio = "medio"
+gruppo_tipico = 2
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 0.0
+fonte = "§2.2 §6.4 [RUDZIS] [MILAQS13B]"
+conf = "alta"
+stime = ["carichi", "canali_boe", "velocita_ricerca_kn", "velocita_posa_kn"]
+fonti = { tos_base_h = "§6.8 [CALC] da [RUDZIS]", gruppo_tipico = "§5.3 (2 in zona interna)" }
+carico_predefinito = "asw"
+
+[mezzi.sh3h.mad]
+fattore = 1.0
+quota_giorno_m = 45.7
+quota_notte_m = 45.7
+velocita_kn = 90.0
+cavo_m = 54.9
+fonte = "§2.2 §6.3 [RUDZIS]"
+conf = "media"
+
+[mezzi.sh3h.carichi.asw]
+boe = { ssq53b = 6, ssq62b = 2, ssq41b = 2 }
+armi = { mk46 = 2 }
+marcatori = { mk25 = 12 }
+
+[mezzi.hkp4]
+nome = "Hkp 4 (Vertol 107)"
+parte = "usa"
+elicottero = true
+dal_anno = 0
+radar = ""
+sonar = "hs73"
+canali_boe = 0
+velocita_transito_kn = 120.0
+velocita_ricerca_kn = 90.0
+velocita_posa_kn = 90.0
+quota_transito_m = 150.0
+quota_ricerca_m = 50.0
+quota_posa_m = 50.0
+quota_attacco_m = 50.0
+tos_base_h = 2.5
+tos_nm_per_h = 60.0
+riserva_h = 0.5
+equipaggio = "medio"
+gruppo_tipico = 2
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 0.0
+fonte = "35 [AEROSEUM-HKP4] [AVROSYS-HKP4]"
+conf = "bassa"
+stime = ["carichi", "velocita_transito_kn", "velocita_ricerca_kn", "velocita_posa_kn", "quota_transito_m", "quota_ricerca_m", "quota_posa_m", "quota_attacco_m", "tos_base_h", "tos_nm_per_h", "gruppo_tipico"]
+fonti = {  }
+carico_predefinito = "asw"
+
+[mezzi.hkp4.carichi.asw]
+boe = {  }
+armi = { tp42 = 2 }
+marcatori = { mk25 = 4 }
+
+[mezzi.hkp4.carichi.bombe]
+boe = {  }
+armi = { sjunkbomb51 = 6 }
+marcatori = { mk25 = 4 }
+
+[mezzi.lynx]
+nome = "Lynx HAS.3"
+parte = "usa"
+elicottero = true
+dal_anno = 0
+radar = "seaspray"
+sonar = ""
+canali_boe = 0
+velocita_transito_kn = 125.0
+velocita_ricerca_kn = 100.0
+velocita_posa_kn = 100.0
+quota_transito_m = 304.8
+quota_ricerca_m = 152.4
+quota_posa_m = 152.4
+quota_attacco_m = 45.7
+tos_base_h = 2.0
+tos_nm_per_h = 50.0
+riserva_h = 0.5
+equipaggio = "medio"
+gruppo_tipico = 1
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 0.0
+fonte = "38 [WP-LYNX] [NAVYLOOKOUT] [REVELL-HAS3]"
+conf = "media"
+stime = ["carichi", "velocita_transito_kn", "velocita_ricerca_kn", "velocita_posa_kn", "quota_transito_m", "quota_ricerca_m", "quota_posa_m", "quota_attacco_m", "tos_base_h", "tos_nm_per_h"]
+fonti = {  }
+carico_predefinito = "asw"
+
+[mezzi.lynx.mad]
+fattore = 1.0
+quota_giorno_m = 45.7
+quota_notte_m = 45.7
+velocita_kn = 90.0
+cavo_m = 54.9
+fonte = "38 (Navy Lookout): tipo e dati come l'SH-2F, STIMA"
+conf = "bassa"
+
+[mezzi.lynx.carichi.asw]
+boe = {  }
+armi = { stingray = 2 }
+marcatori = { mk25 = 2 }
+
+[mezzi.lynx.carichi.mk46]
+boe = {  }
+armi = { mk46 = 2 }
+marcatori = { mk25 = 2 }
+
+[mezzi.sh60f]
+nome = "SH-60F Ocean Hawk"
+parte = "usa"
+elicottero = true
+dal_anno = 1990
+radar = ""
+sonar = "aqs13f"
+canali_boe = 4
+velocita_transito_kn = 130.0
+velocita_ricerca_kn = 110.0
+velocita_posa_kn = 110.0
+quota_transito_m = 45.7
+quota_ricerca_m = 45.7
+quota_posa_m = 45.7
+quota_attacco_m = 45.7
+tos_base_h = 3.5
+tos_nm_per_h = 57.0
+riserva_h = 0.5
+equipaggio = "medio"
+gruppo_tipico = 2
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 0.0
+fonte = "§2.3 [WPAQS13] [SIKS70B] [WPSH60]"
+conf = "media"
+stime = ["carichi", "canali_boe", "velocita_transito_kn", "velocita_ricerca_kn", "velocita_posa_kn", "tos_base_h", "tos_nm_per_h"]
+fonti = {  }
+carico_predefinito = "asw"
+
+[mezzi.sh60f.carichi.asw]
+boe = { ssq53b = 4, ssq62b = 2 }
+armi = { mk46 = 2 }
+marcatori = { mk25 = 6 }
+
+[mezzi.p3c]
+nome = "P-3C Orion"
+parte = "usa"
+elicottero = false
+dal_anno = 0
+radar = "aps115"
+sonar = ""
+canali_boe = 16
+velocita_transito_kn = 330.0
+velocita_ricerca_kn = 206.0
+velocita_posa_kn = 225.0
+quota_transito_m = 7620.0
+quota_ricerca_m = 457.2
+quota_posa_m = 457.2
+quota_attacco_m = 121.9
+tos_base_h = 8.1
+tos_nm_per_h = 165.0
+riserva_h = 0.5
+equipaggio = "esperto"
+gruppo_tipico = 1
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 0.0
+fonte = "§2.4 §6.2 [FASP3] [HARP3] [HOLLER]"
+conf = "media"
+stime = ["carichi", "canali_boe", "velocita_posa_kn", "quota_attacco_m"]
+fonti = { tos_base_h = "§6.8 [CALC] su [FASP3]", equipaggio = "§7.4 (Update III)", quota_attacco_m = "§6.7 [HARPHAAWC] (300-1000 ft, di norma sotto i 500)" }
+carico_predefinito = "sosus"
+
+[mezzi.p3c.mad]
+fattore = 1.0
+quota_giorno_m = 76.2
+quota_notte_m = 76.2
+velocita_kn = 200.0
+cavo_m = 0.0
+fonte = "§2.4 §6.3 [FASP3] [DMNP3]"
+conf = "media"
+
+[mezzi.p3c.carichi.sosus]
+boe = { ssq53b = 45, ssq41b = 10, ssq77a = 5, ssq62b = 9, ssq36 = 3, ssq57a = 3 }
+armi = { mk46 = 4 }
+marcatori = { mk25 = 12, mk58 = 6, mk84 = 6 }
+
+[mezzi.p3c.carichi.barriera]
+boe = { ssq53b = 40, ssq41b = 20, ssq77a = 10, ssq62b = 4, ssq36 = 2, ssq57a = 2 }
+armi = { mk46 = 4 }
+marcatori = { mk25 = 12, mk58 = 6, mk84 = 6 }
+
+[mezzi.p3c.carichi.guerra]
+boe = { ssq53b = 45, ssq41b = 8, ssq77a = 4, ssq62b = 10, ssq36 = 2 }
+armi = { mk46 = 8 }
+marcatori = { mk25 = 12, mk58 = 6 }
+
+[mezzi.s3a]
+nome = "S-3A Viking"
+parte = "usa"
+elicottero = false
+dal_anno = 0
+radar = "aps116"
+sonar = ""
+canali_boe = 16
+velocita_transito_kn = 345.0
+velocita_ricerca_kn = 180.0
+velocita_posa_kn = 200.0
+quota_transito_m = 10972.8
+quota_ricerca_m = 457.2
+quota_posa_m = 457.2
+quota_attacco_m = 121.9
+tos_base_h = 5.0
+tos_nm_per_h = 170.0
+riserva_h = 0.5
+equipaggio = "medio"
+gruppo_tipico = 1
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 0.0
+fonte = "§2.5 [WPS3] [TWZS3] [USNIS3]"
+conf = "media"
+stime = ["carichi", "velocita_ricerca_kn", "velocita_posa_kn", "quota_ricerca_m", "quota_posa_m", "quota_attacco_m", "tos_base_h", "tos_nm_per_h"]
+fonti = {  }
+carico_predefinito = "asw"
+
+[mezzi.s3a.mad]
+fattore = 1.0
+quota_giorno_m = 91.4
+quota_notte_m = 91.4
+velocita_kn = 200.0
+cavo_m = 0.0
+fonte = "§2.5 §6.3 [WPS3] [TWZS3]"
+conf = "media"
+
+[mezzi.s3a.carichi.asw]
+boe = { ssq53b = 40, ssq41b = 6, ssq62b = 8, ssq36 = 2, ssq57a = 3 }
+armi = { mk46 = 4 }
+marcatori = { mk25 = 8, mk58 = 4, mk84 = 4 }
+
+[mezzi.s3b]
+nome = "S-3B Viking"
+parte = "usa"
+elicottero = false
+dal_anno = 0
+radar = "aps137"
+sonar = ""
+canali_boe = 16
+velocita_transito_kn = 345.0
+velocita_ricerca_kn = 180.0
+velocita_posa_kn = 200.0
+quota_transito_m = 10972.8
+quota_ricerca_m = 457.2
+quota_posa_m = 457.2
+quota_attacco_m = 121.9
+tos_base_h = 5.0
+tos_nm_per_h = 170.0
+riserva_h = 0.5
+equipaggio = "esperto"
+gruppo_tipico = 1
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 0.0
+fonte = "§2.5 [FASS3] [TWZS3]"
+conf = "media"
+stime = ["carichi", "velocita_ricerca_kn", "velocita_posa_kn", "quota_ricerca_m", "quota_posa_m", "quota_attacco_m", "tos_base_h", "tos_nm_per_h"]
+fonti = { equipaggio = "§7.4" }
+carico_predefinito = "asw"
+
+[mezzi.s3b.mad]
+fattore = 1.0
+quota_giorno_m = 91.4
+quota_notte_m = 91.4
+velocita_kn = 200.0
+cavo_m = 0.0
+fonte = "§2.5 §6.3 [WPS3] [TWZS3]"
+conf = "media"
+
+[mezzi.s3b.carichi.asw]
+boe = { ssq53b = 38, ssq41b = 4, ssq77a = 4, ssq62b = 8, ssq36 = 2, ssq57a = 3 }
+armi = { mk46 = 4 }
+marcatori = { mk25 = 8, mk58 = 4, mk84 = 4 }
+
+[mezzi.ka25]
+nome = "Ka-25PL Hormone-A"
+parte = "urss"
+elicottero = true
+dal_anno = 0
+radar = "initsiativa2k"
+sonar = "vgs2"
+canali_boe = 18
+velocita_transito_kn = 105.3
+velocita_ricerca_kn = 21.6
+velocita_posa_kn = 80.0
+quota_transito_m = 300.0
+quota_ricerca_m = 150.0
+quota_posa_m = 150.0
+quota_attacco_m = 150.0
+tos_base_h = 1.33
+tos_nm_per_h = 81.0
+riserva_h = 0.5
+equipaggio = "scarso"
+gruppo_tipico = 2
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 0.0
+fonte = "§3.1 [RW-Ka25] [AW-Ka25] [ART-Ka27]"
+conf = "media"
+stime = ["velocita_posa_kn", "quota_transito_m", "quota_ricerca_m", "quota_posa_m", "quota_attacco_m", "tos_base_h", "tos_nm_per_h"]
+fonti = { equipaggio = "§7.4", gruppo_tipico = "§3.1 (coppie ricerca-attacco)", quota_attacco_m = "§6.7 (elicotteri sovietici a 100-300 m, STIMA)" }
+carico_predefinito = "ricerca"
+
+[mezzi.ka25.carichi.ricerca]
+boe = { rgb_nm = 36, rlb = 3 }
+armi = {  }
+marcatori = { omab = 4 }
+
+[mezzi.ka25.carichi.attacco]
+boe = { rlb = 3 }
+armi = { at1 = 1 }
+marcatori = { omab = 4 }
+
+[mezzi.ka27]
+nome = "Ka-27PL Helix-A"
+parte = "urss"
+elicottero = true
+dal_anno = 0
+radar = "initsiativa2km"
+sonar = "vgs3"
+canali_boe = 18
+velocita_transito_kn = 120.0
+velocita_ricerca_kn = 29.7
+velocita_posa_kn = 90.0
+quota_transito_m = 300.0
+quota_ricerca_m = 100.0
+quota_posa_m = 100.0
+quota_attacco_m = 150.0
+tos_base_h = 2.0
+tos_nm_per_h = 108.0
+riserva_h = 0.5
+equipaggio = "medio"
+gruppo_tipico = 4
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 0.0
+fonte = "§3.2 §6.5 [ART-Ka27] [RW-Ka27]"
+conf = "media-alta"
+stime = ["velocita_transito_kn", "velocita_posa_kn", "quota_transito_m", "quota_ricerca_m", "quota_posa_m", "quota_attacco_m", "carichi"]
+fonti = { tos_base_h = "§6.8 (1,5 h a 100 km, 1 h a 200 km)", gruppo_tipico = "§6.5 (4-6 dal Kiev)" }
+carico_predefinito = "ricerca"
+
+[mezzi.ka27.mad]
+fattore = 0.9
+quota_giorno_m = 70.0
+quota_notte_m = 70.0
+velocita_kn = 60.0
+cavo_m = 85.0
+fonte = "§3.2 §6.3 [ART-Ka27]"
+conf = "media"
+
+[mezzi.ka27.carichi.ricerca]
+boe = { rgb_nm1 = 36 }
+armi = {  }
+marcatori = { omab = 4 }
+
+[mezzi.ka27.carichi.attacco]
+boe = { rgb_nm1 = 8 }
+armi = { apr2 = 1 }
+marcatori = { omab = 4 }
+
+[mezzi.ka27.carichi.kiev_1987]
+boe = { rgb_nm1 = 18 }
+armi = {  }
+marcatori = { omab = 4 }
+
+[mezzi.be12]
+nome = "Be-12 Mail"
+parte = "urss"
+elicottero = false
+dal_anno = 0
+radar = "initsiativa2b"
+sonar = ""
+canali_boe = 18
+velocita_transito_kn = 243.0
+velocita_ricerca_kn = 167.4
+velocita_posa_kn = 202.5
+quota_transito_m = 2000.0
+quota_ricerca_m = 85.0
+quota_posa_m = 500.0
+quota_attacco_m = 500.0
+tos_base_h = 5.5
+tos_nm_per_h = 108.0
+riserva_h = 0.5
+equipaggio = "medio"
+gruppo_tipico = 2
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 120.0
+fonte = "§3.3 §6.6 [ART-Be12] [ART-Be12N]"
+conf = "alta"
+stime = ["carichi", "velocita_posa_kn", "quota_attacco_m", "tos_base_h", "tos_nm_per_h"]
+fonti = { quota_transito_m = "§3.3 (controllo radar da 2000 m)", gruppo_tipico = "§3.3 (sempre in coppia)" }
+carico_predefinito = "ricerca_attacco"
+
+[mezzi.be12.mad]
+fattore = 0.7
+quota_giorno_m = 85.0
+quota_notte_m = 85.0
+velocita_kn = 167.4
+cavo_m = 0.0
+fonte = "§3.3 §6.3 [ART-Be12]"
+conf = "media"
+
+[mezzi.be12.carichi.ricerca_attacco]
+boe = { rgb_nm = 32 }
+armi = { at1 = 1 }
+marcatori = { omab = 6 }
+
+[mezzi.be12.carichi.ricerca]
+boe = { rgb_nm = 40 }
+armi = {  }
+marcatori = { omab = 6 }
+
+[mezzi.il38]
+nome = "Il-38 May"
+parte = "urss"
+elicottero = false
+dal_anno = 0
+radar = "wet_eye"
+sonar = ""
+canali_boe = 24
+velocita_transito_kn = 246.2
+velocita_ricerca_kn = 189.0
+velocita_posa_kn = 202.5
+quota_transito_m = 8000.0
+quota_ricerca_m = 1000.0
+quota_posa_m = 1000.0
+quota_attacco_m = 500.0
+tos_base_h = 10.3
+tos_nm_per_h = 162.0
+riserva_h = 0.5
+equipaggio = "scarso"
+gruppo_tipico = 1
+conferma = 0.08
+falsi_allarmi = 3.0
+intervallo_posa_s = 0.0
+fonte = "§3.4 §6.6 [ART-Il38] [RW-Il38]"
+conf = "alta"
+stime = ["quota_transito_m", "quota_attacco_m", "tos_base_h", "tos_nm_per_h", "carichi", "conferma", "falsi_allarmi"]
+fonti = { equipaggio = "§7.4 (Berkut)", tos_base_h = "§6.8 (7 h a 1000 km, 3 h a 2200 km)", conferma = "§9 e taratura A6.2", falsi_allarmi = "§9 e taratura A6.2" }
+carico_predefinito = "ricerca_attacco"
+
+[mezzi.il38.mad]
+fattore = 0.9
+quota_giorno_m = 100.0
+quota_notte_m = 200.0
+velocita_kn = 189.0
+cavo_m = 0.0
+fonte = "§3.4 §6.3 [ART-Il38]"
+conf = "media"
+
+[mezzi.il38.carichi.ricerca_attacco]
+boe = { rgb1 = 144, rgb2 = 10 }
+armi = { at2 = 2, plab250 = 10 }
+marcatori = { omab = 8 }
+
+[mezzi.tu142]
+nome = "Tu-142MK Bear-F"
+parte = "urss"
+elicottero = false
+dal_anno = 0
+radar = "korshun"
+sonar = ""
+canali_boe = 24
+velocita_transito_kn = 396.9
+velocita_ricerca_kn = 243.0
+velocita_posa_kn = 243.0
+quota_transito_m = 7750.0
+quota_ricerca_m = 600.0
+quota_posa_m = 600.0
+quota_attacco_m = 600.0
+tos_base_h = 14.0
+tos_nm_per_h = 180.0
+riserva_h = 0.5
+equipaggio = "medio"
+gruppo_tipico = 1
+conferma = 1.0
+falsi_allarmi = 1.0
+intervallo_posa_s = 0.0
+fonte = "§3.5 §6.6 [ART-Tu142] [RW-Tu142]"
+conf = "alta"
+stime = ["canali_boe", "quota_ricerca_m", "quota_posa_m", "quota_attacco_m", "tos_base_h", "tos_nm_per_h", "mad"]
+fonti = { tos_base_h = "§6.8 (8 h a 2000 km, 2 h a 4000 km)" }
+carico_predefinito = "ricerca_attacco"
+
+[mezzi.tu142.mad]
+fattore = 0.75
+quota_giorno_m = 200.0
+quota_notte_m = 200.0
+velocita_kn = 243.0
+cavo_m = 0.0
+fonte = "§3.5 §6.3 [ART-Tu142]"
+conf = "media"
+
+[mezzi.tu142.carichi.ricerca_attacco]
+boe = { rgb75 = 66, rgb15 = 44, rgb25 = 10, rgb55a = 10 }
+armi = { at2 = 3 }
+marcatori = { omab = 8 }
+
+[mezzi.tu142.carichi.eco]
+boe = { rgb15 = 44, rgb25 = 10, mgab = 200 }
+armi = { at2 = 1 }
+marcatori = { omab = 8 }
+
+[equipaggi.esperto]
+errore_posa_m = 91.0
+falsi_allarmi = 0.7
+ritardo = 0.7
+perdita_contatto = 0.7
+
+[equipaggi.medio]
+errore_posa_m = 183.0
+falsi_allarmi = 1.0
+ritardo = 1.0
+perdita_contatto = 1.0
+
+[equipaggi.scarso]
+errore_posa_m = 366.0
+falsi_allarmi = 1.5
+ritardo = 1.5
+perdita_contatto = 1.5
+
+[difficolta.facile]
+scoperta = 0.5
+scoperta_urss = 1.0
+equipaggio = "scarso"
+notte = false
+guasti = false
+deriva = false
+
+[difficolta.normale]
+scoperta = 1.0
+scoperta_urss = 1.0
+equipaggio = "medio"
+notte = true
+guasti = true
+deriva = false
+
+[difficolta.realistico]
+scoperta = 1.0
+scoperta_urss = 1.0
+equipaggio = ""
+notte = true
+guasti = true
+deriva = true
+
+[difficolta.minaccia_percepita]
+scoperta = 1.0
+scoperta_urss = 5.0
+equipaggio = ""
+notte = true
+guasti = true
+deriva = true
+
+[probabilita.usa]
+falso_allarme = 0.2
+conferma = 0.7
+finestra_conferma_s = 600.0
+fix = 0.7
+finestra_fix_s = 600.0
+mad_bassa = 0.6
+mad_alta = 0.3
+passaggio_contatto = 0.5
+riacquisizione = 0.4
+finestra_riacquisizione_s = 1800.0
+perdita_s = 600.0
+rinuncia_s = 3600.0
+scarta_vero = 0.05
+crede_falso = 0.03
+perso_spirale = 0.5
+attacco_hover = 0.4
+attacco_altro = 0.0
+fonte = "§7.2 §7.3 [NPS-FD00] [ART-Be12] [ART-Tu142]"
+conf = "bassa"
+stime = ["tutti"]
+
+[probabilita.urss]
+falso_allarme = 0.42
+conferma = 0.5
+finestra_conferma_s = 600.0
+fix = 0.5
+finestra_fix_s = 600.0
+mad_bassa = 0.48
+mad_alta = 0.24
+passaggio_contatto = 0.16
+riacquisizione = 0.3
+finestra_riacquisizione_s = 1800.0
+perdita_s = 600.0
+rinuncia_s = 3600.0
+scarta_vero = 0.1
+crede_falso = 0.15
+perso_spirale = 0.6
+attacco_hover = 0.0
+attacco_altro = 0.7
+fonte = "§7.2 §7.3 [NPS-FD00] [ART-Be12] [ART-Tu142]"
+conf = "bassa"
+stime = ["tutti"]
+
+[schemi.usa.datum_fresco_rotta_ignota]
+scelte = [{ schema = "cerchio", p = 0.6, funzione = "passiva_dir", boe = 8 }, { schema = "cuneo", p = 0.4, funzione = "passiva_dir", boe = 6 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.usa.datum_fresco_rotta_nota]
+scelte = [{ schema = "chevron", p = 0.6, funzione = "passiva_dir", boe = 6 }, { schema = "trappola", p = 0.4, funzione = "passiva_dir", boe = 4 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.usa.datum_medio]
+scelte = [{ schema = "cerchio", p = 0.3, funzione = "passiva_dir", boe = 8 }, { schema = "trappola", p = 0.5, funzione = "passiva_dir", boe = 5 }, { schema = "barriera", p = 0.2, funzione = "passiva_dir", boe = 6 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.usa.datum_vecchio]
+scelte = [{ schema = "barriera", p = 0.7, funzione = "passiva_dir", boe = 8 }, { schema = "campo", p = 0.3, funzione = "passiva_omni", boe = 12 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.usa.difar_singolo]
+scelte = [{ schema = "cuneo", p = 0.5, funzione = "passiva_dir", boe = 5 }, { schema = "incrocio", p = 0.5, funzione = "passiva_dir", boe = 2 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.usa.difar_lontano]
+scelte = [{ schema = "lungo_rilevamento", p = 1.0, funzione = "passiva_dir", boe = 6 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.usa.fix]
+scelte = [{ schema = "box_dicass", p = 0.7, funzione = "attiva_dir", boe = 4 }, { schema = "passaggio_mad", p = 0.3, funzione = "passiva_dir", boe = 0 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.usa.perso]
+scelte = [{ schema = "cerchio", p = 0.5, funzione = "passiva_dir", boe = 6 }, { schema = "trappola", p = 0.5, funzione = "passiva_dir", boe = 4 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.usa.ricerca]
+scelte = [{ schema = "barriera", p = 0.6, funzione = "passiva_dir", boe = 8 }, { schema = "campo", p = 0.4, funzione = "passiva_omni", boe = 12 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.urss.arrivo]
+scelte = [{ schema = "barriera", p = 0.7, funzione = "passiva_omni", boe = 10 }, { schema = "scacchiera", p = 0.3, funzione = "passiva_omni", boe = 16 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.urss.arrivo_campo]
+scelte = [{ schema = "campo", p = 1.0, funzione = "passiva_omni", boe = 12 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.urss.immersione]
+scelte = [{ schema = "spirale", p = 1.0, funzione = "passiva_omni", boe = 10 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.urss.boa_reagisce]
+scelte = [{ schema = "barriera_circolare", p = 0.6, funzione = "passiva_omni", boe = 10 }, { schema = "barriera_stretta", p = 0.4, funzione = "passiva_dir", boe = 4 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.urss.rotta_stimata]
+scelte = [{ schema = "intercettazione", p = 1.0, funzione = "passiva_omni", boe = 10 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.urss.silenzioso]
+scelte = [{ schema = "eco_esplosiva", p = 0.6, funzione = "esplosiva", boe = 3 }, { schema = "attiva", p = 0.4, funzione = "attiva_omni", boe = 2 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.urss.perso]
+scelte = [{ schema = "barriera_circolare", p = 0.6, funzione = "passiva_omni", boe = 10 }, { schema = "intercettazione", p = 0.4, funzione = "passiva_omni", boe = 10 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"
+
+[schemi.urss.datum]
+scelte = [{ schema = "barriera_circolare", p = 1.0, funzione = "passiva_omni", boe = 10 }]
+fonte = "§6.1 §6.6 §7.3"
+conf = "bassa"

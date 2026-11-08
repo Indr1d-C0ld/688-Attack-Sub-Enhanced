@@ -1,0 +1,72 @@
+# Elicottero svedese Hkp 4 (Boeing Vertol 107-II, Hkp 4B della marina, anni '70-'80): la fusoliera a scafo stagno, i due
+# rotori in tandem a tre pale, il pilone prodiero sopra la cabina e quello poppiero alto coi motori, le gondole laterali
+# a poppa col carrello principale, il ruotino sotto la cabina. Oggetto in volo (vista: volante). Prima usava lo sprite
+# dell'SH-3H (S18).
+# Coordinate del kit: x verso prua, y verso sinistra, z verso l'alto, metri; il modello sta tutto sopra z = 0, col
+# ventre della fusoliera a z = 8,0. {prua: d} = punto a d metri dal muso.
+# Misure: fusoliera 13,66 m, rotori di 15,24 m a 3 pale, interasse 10,16 m, altezza al rotore poppiero 5,09 m (dati del
+# CH-46/107-II; STIMA dove le fonti divergono); il profilo dalla foto di sinistra dell'Hkp 4B «64» (1981, in volo
+# radente, di tre quarti da prua, ~65 px/m).
+nome: Hkp 4 (Vertol 107)
+uscita: extracted/navi/hkp4
+moduli_parti: [elicotteri_parti.py]
+vista: {volante: true, elevazioni: [0, 10, 25], centro: [0.0, 0.0, 10.0]}
+albedo: {traliccio: 0.6}
+
+# la fusoliera: sezioni [d dal muso, z basso, z alto, semilarghezza, esponente], quote dal ventre
+scafo:
+  generatore: fusoliera
+  L: 13.66
+  z0: 8.0
+  sezioni:
+    - [0.00, 0.55, 0.90, 0.20, 2.0]
+    - [0.50, 0.15, 1.55, 0.75, 2.3]
+    - [1.30, 0.05, 2.30, 1.00, 2.8]
+    - [2.50, 0.00, 2.75, 1.10, 3.5]
+    - [9.00, 0.00, 2.80, 1.10, 3.5]
+    - [11.50, 0.30, 2.80, 1.00, 3.0]
+    - [13.00, 1.00, 2.70, 0.90, 2.5]
+    - [13.66, 1.60, 2.50, 0.70, 2.0]
+
+parti:
+  # i piloni dei rotori: il prodiero basso sopra la cabina, il poppiero alto coi motori ai lati
+  - {tipo: fusoliera, nome: pilone_prodiero, L: 13.66, z0: 8.0, sezioni: [[1.2, 2.5, 2.8, 0.5, 3], [1.8, 2.6, 3.1, 0.6, 3], [3.4, 2.6, 3.2, 0.6, 3], [4.6, 2.6, 2.85, 0.4, 2.5]]}
+  - {tipo: fusoliera, nome: pilone_poppiero, L: 13.66, z0: 8.0, sezioni: [[10.0, 2.6, 2.85, 0.6, 3], [11.4, 2.6, 4.0, 0.8, 3], [13.0, 2.4, 4.4, 0.8, 3], [13.66, 2.4, 4.2, 0.6, 2.5]]}
+  - {tipo: tubo, nome: motore_sinistro, x0: {prua: 12.6}, x1: {prua: 10.4}, y: 0.95, z: 11.2, r: 0.4}
+  - {tipo: tubo, nome: motore_destro, x0: {prua: 12.6}, x1: {prua: 10.4}, y: -0.95, z: 11.2, r: 0.4}
+  # le teste dei rotori
+  - {tipo: cilindro, nome: albero_prodiero, x: {prua: 2.4}, y: 0, r: 0.22, z0: 11.1, z1: 11.6}
+  - {tipo: cilindro, nome: testa_prodiera, x: {prua: 2.4}, y: 0, r: 0.55, z0: 11.5, z1: 11.8, mat: scuro}
+  - {tipo: cilindro, nome: albero_poppiero, x: {prua: 12.56}, y: 0, r: 0.22, z0: 12.3, z1: 12.8}
+  - {tipo: cilindro, nome: testa_poppiera, x: {prua: 12.56}, y: 0, r: 0.55, z0: 12.7, z1: 13.0, mat: scuro}
+  # le gondole laterali col carrello principale, il ruotino sotto la cabina
+  - {tipo: ellissoide, nome: gondola_sinistra, x: {prua: 10.3}, y: 1.55, z: 8.55, rx: 1.9, ry: 0.55, rz: 0.55}
+  - {tipo: ellissoide, nome: gondola_destra, x: {prua: 10.3}, y: -1.55, z: 8.55, rx: 1.9, ry: 0.55, rz: 0.55}
+  - {tipo: ruota, nome: ruota_sinistra, x: {prua: 10.9}, y: 1.6, z: 7.2, r: 0.35, larghezza: 0.25}
+  - {tipo: ruota, nome: ruota_destra, x: {prua: 10.9}, y: -1.6, z: 7.2, r: 0.35, larghezza: 0.25}
+  - {tipo: ruota, nome: ruotino, x: {prua: 2.4}, y: 0, z: 7.1, r: 0.3, larghezza: 0.2}
+  - {tipo: tubo_inclinato, nome: gamba_ruotino, da: [{prua: 2.4}, 0, 7.1], a: [{prua: 2.4}, 0, 8.1], r: 0.08, mat: scuro}
+  # i rotori in moto: dischi puntinati, il poppiero piu' alto
+  - {tipo: disco_rotore, nome: rotore_prodiero, x: {prua: 2.4}, y: 0, z: 11.7, raggio: 7.62, normale: [0.052, 0, 0.9986], conicita: 3, densita: 0.2, lato: 0.12, raggio_interno: 0.55, seme: 1, mat: traliccio, spessore: 0.22, inclinazione: 25}
+  - {tipo: disco_rotore, nome: rotore_poppiero, x: {prua: 12.56}, y: 0, z: 12.9, raggio: 7.62, normale: [0.052, 0, 0.9986], conicita: 3, densita: 0.2, lato: 0.12, raggio_interno: 0.55, seme: 2, mat: traliccio, spessore: 0.22, inclinazione: 25}
+
+foto:
+  - nome: sinistra_4b
+    file: extracted/navi/hkp4/foto/Hkp_4B_01.jpg
+    nave: Hkp 4B «64» della marina svedese, 1981 (CC BY-SA 3.0), di sinistra di tre quarti da prua, in volo radente
+    qualita: 0.8
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti senza i rotori, erosa di 3 px (contorno_modello.py)
+    maschera_file: extracted/navi/hkp4/foto/sinistra_4b_maschera.png
+    solo_punti: true
+    # il numero e la scritta veri tolti (come sulle altre classi): il 64 sul pilone, MARINEN sulla gondola
+    cancella: [[1025, 180, 1068, 225], [912, 412, 1022, 446]]
+    riquadro: [200, 30, 1186, 620]
+    fotocamera_iniziale: {posizione: [-15, 60, 9], bersaglio: [0, 0, 10], f: 3000}
+    limiti_fotocamera: {elevazione: [-15, 15], distanza: [10, 500], focale: [300, 50000]}
+    punti:
+      - [[{prua: 0}, 0, 8.7], [255, 469]]             # punta del muso
+      - [[{prua: 2.4}, 0, 11.7], [380, 225]]          # testa del rotore prodiero
+      - [[{prua: 12.56}, 0, 12.9], [1008, 95]]        # testa del rotore poppiero
+      - [[{prua: 8.4}, 1.55, 8.6], [842, 415]]        # punta della gondola di sinistra
+      - [[{prua: 10.9}, 1.6, 7.2], [1020, 504]]       # mozzo della ruota di sinistra

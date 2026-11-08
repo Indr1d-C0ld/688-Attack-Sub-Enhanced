@@ -1,0 +1,33 @@
+# Maschere tracciate a mano per le foto della classe "mercantile" (tools/navi/maschera_manuale.py).
+# Coordinate in pixel della foto.
+---
+# Ravenstvo (tipo Leninskiy Komsomol), giugno 1979, Conakry, mascone di dritta, 2760 x 1500.
+# Cielo grigio e granuloso: sovrastruttura bianca PIU' chiara del cielo, scafo, gru e alberi piu' scuri.
+# Metodo cielo (scarto dal cielo della propria riga) sopra l'orizzonte; sotto l'orizzonte (riga 1155) lo
+# scafo, nero, si aggiunge con un poligono che segue il galleggiamento.
+metodo: cielo
+file: extracted/navi/mercantile/foto/fianco_dritto_ravenstvo_1979.jpg
+uscita: extracted/navi/mercantile/foto/fianco_dritto_ravenstvo_1979_maschera.png
+sfocatura: 2.2
+orizzonte_y: 1155
+margine_orizzonte: 2
+soglia: 22
+filtro_cielo: 25
+# inviluppo: sagoma larga di scafo, sovrastruttura, gru e alberi (stralli e bighi lunghi dell'albero
+# poppiero esclusi: non sono nel modello)
+inviluppo: [[0, 1160], [0, 905], [290, 905], [290, 320], [495, 320], [495, 850], [790, 850], [790, 800],
+            [1135, 800], [1135, 645], [1262, 645], [1262, 445], [1322, 445], [1322, 600], [1395, 600],
+            [1395, 515], [1490, 515], [1490, 765], [1572, 765], [1572, 822], [1960, 822], [1960, 390],
+            [2065, 390], [2065, 815], [2205, 815], [2205, 870], [2490, 870], [2490, 745], [2535, 745],
+            [2535, 870], [2578, 878], [2578, 1160]]
+includi:
+  # scafo sotto l'orizzonte, fino al galleggiamento (poppa: volta e timone)
+  - [[0, 1140], [2450, 1140], [2440, 1170], [2425, 1215], [2409, 1282], [2350, 1282], [1850, 1275],
+     [1250, 1265], [650, 1254], [150, 1246], [100, 1247], [52, 1246], [48, 1230], [30, 1185], [12, 1158],
+     [0, 1150]]
+escludi:
+  - [[101, 1196], [123, 1196], [126, 1247], [101, 1247]]     # luce dell'elica tra timone e dritto di poppa
+  - [[1130, 645], [1150, 645], [1150, 700], [1130, 700]]     # bandiera a poppavia del fumaiolo (fuori modello)
+area_minima: 120
+buco_massimo: 300
+chiusura: 3

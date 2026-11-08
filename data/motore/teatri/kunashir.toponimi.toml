@@ -1,0 +1,132 @@
+# Toponimi del teatro kunashir: generato da tools/pipeline/toponimi.py, non modificare a mano.
+# x, y in metri sul piano del teatro (come il fondale); rango 1 il più importante; acqua = nome di mare.
+
+[[nome]]
+testo = "Mare di Okhotsk"
+en = "Sea of Okhotsk"
+tipo = "mare"
+acqua = true
+rango = 1
+x = -80700
+y = 61300
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Oceano Pacifico"
+en = "Pacific Ocean"
+tipo = "oceano"
+acqua = true
+rango = 1
+x = 97300
+y = -77700
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Iturup"
+en = "Iturup"
+tipo = "isola"
+acqua = false
+rango = 2
+x = 86730
+y = 61704
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Kunašir"
+en = "Kunashir"
+tipo = "isola"
+acqua = false
+rango = 2
+x = -64056
+y = -38579
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Hokkaidō"
+en = "Hokkaidō"
+tipo = "isola"
+acqua = false
+rango = 3
+x = -137373
+y = -98581
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Stretto di Ekaterina"
+en = "Yekaterina Strait"
+tipo = "stretto"
+acqua = true
+rango = 3
+x = -3963
+y = 27782
+fonte = "dossier 03 §A5"
+
+[[nome]]
+testo = "Bacino delle Curili"
+en = "Kuril Basin"
+tipo = "mare"
+acqua = true
+rango = 4
+x = -51073
+y = 83550
+fonte = "dossier 03 §A5"
+
+[[nome]]
+testo = "Stretto Izmeny"
+en = "Izmeny Strait"
+tipo = "stretto"
+acqua = true
+rango = 4
+x = -112756
+y = -76819
+fonte = "dossier 03 §A5"
+
+[[nome]]
+testo = "Šikotan"
+en = "Shikotan"
+tipo = "isola"
+acqua = false
+rango = 4
+x = 8048
+y = -72220
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Južno-Kuril'sk"
+en = "Yuzhno-Kurilsk"
+tipo = "citta"
+acqua = false
+rango = 5
+x = -63331
+y = -46364
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Kuril'sk"
+en = "Kurilsk"
+tipo = "citta"
+acqua = false
+rango = 5
+x = 96592
+y = 87410
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Nemuro"
+en = "Nemuro"
+tipo = "citta"
+acqua = false
+rango = 5
+x = -86784
+y = -123880
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Stretto delle Curili meridionali"
+en = "South Kuril Strait"
+tipo = "stretto"
+acqua = true
+rango = 5
+x = -32164
+y = -66591
+fonte = "a mano, coordinate al chilometro (curatore kit)"

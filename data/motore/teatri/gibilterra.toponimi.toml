@@ -1,0 +1,192 @@
+# Toponimi del teatro gibilterra: generato da tools/pipeline/toponimi.py, non modificare a mano.
+# x, y in metri sul piano del teatro (come il fondale); rango 1 il più importante; acqua = nome di mare.
+
+[[nome]]
+testo = "Oceano Atlantico"
+en = "Atlantic Ocean"
+tipo = "oceano"
+acqua = true
+rango = 1
+x = -110000
+y = -3600
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Stretto di Gibilterra"
+en = "Strait of Gibraltar"
+tipo = "stretto"
+acqua = true
+rango = 2
+x = -4510
+y = 6659
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Golfo di Cadice"
+en = "Gulf of Cádiz"
+tipo = "golfo"
+acqua = true
+rango = 3
+x = -134470
+y = 62066
+fonte = "dossier 03 §A3"
+
+[[nome]]
+testo = "Rota (base USA)"
+en = "Rota (US base)"
+tipo = "base"
+acqua = false
+rango = 4
+x = -76026
+y = 81336
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Capo Spartel"
+en = "Cape Spartel"
+tipo = "capo"
+acqua = false
+rango = 5
+x = -37969
+y = -12124
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Capo Trafalgar"
+en = "Cape Trafalgar"
+tipo = "capo"
+acqua = false
+rango = 5
+x = -47678
+y = 31198
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Punta Tarifa"
+en = "Tarifa Point"
+tipo = "capo"
+acqua = false
+rango = 5
+x = -9918
+y = 11101
+fonte = "dossier 03 §A3"
+
+[[nome]]
+testo = "Punta Europa"
+en = "Europa Point"
+tipo = "capo"
+acqua = false
+rango = 6
+x = 13506
+y = 23312
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Soglia di Camarinal"
+en = "Camarinal Sill"
+tipo = "secca"
+acqua = true
+rango = 6
+x = -22561
+y = 3358
+fonte = "dossier 03 §A3 (Camarinal 284 m)"
+
+[[nome]]
+testo = "Cadice"
+en = "Cádiz"
+tipo = "citta"
+acqua = false
+rango = 7
+x = -64925
+y = 70703
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Ceuta"
+en = "Ceuta"
+tipo = "citta"
+acqua = false
+rango = 7
+x = 17426
+y = -1205
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Gibilterra"
+en = "Gibraltar"
+tipo = "citta"
+acqua = false
+rango = 7
+x = 10975
+y = 25798
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Mare di Alborán"
+en = "Alboran Sea"
+tipo = "mare"
+acqua = true
+rango = 7
+x = 104000
+y = -2600
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Tangeri"
+en = "Tangier"
+tipo = "citta"
+acqua = false
+rango = 7
+x = -30093
+y = -16893
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Ksar El Kebir"
+en = "Ksar el-Kebir"
+tipo = "citta"
+acqua = false
+rango = 8
+x = -37419
+y = -97515
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Larache"
+en = "Larache"
+tipo = "citta"
+acqua = false
+rango = 8
+x = -60106
+y = -77417
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Malaga"
+en = "Málaga"
+tipo = "citta"
+acqua = false
+rango = 8
+x = 96485
+y = 91573
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Algeciras"
+en = "Algeciras"
+tipo = "citta"
+acqua = false
+rango = 9
+x = 3013
+y = 25156
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Marbella"
+en = "Marbella"
+tipo = "citta"
+acqua = false
+rango = 9
+x = 55237
+y = 68597
+fonte = "Natural Earth 1:10m (pubblico dominio)"

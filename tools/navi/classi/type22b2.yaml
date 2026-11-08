@@ -1,0 +1,82 @@
+# Fregata Type 22 Batch 2 (classe Boxer, Royal Navy), configurazione 1989: lo scafo allungato a 146,5 m per la schiera
+# Type 2031Z, con la prua alta e slanciata; come la Batch 1 niente cannone, il Sea Wolf a sestuplo sul castello e
+# sull'hangar, i quattro Exocet MM38 a prua, la torre prodiera col Type 967/968, il fumaiolo largo, l'albero poppiero
+# nero in cima; l'hangar piu' grande e la coperta di volo un ponte piu' in basso.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure: 146,5 x 14,8 m (dossier docs/ricerca/32_firme_lotto2.md); posizioni e quote
+# misurate sulla foto di dritta della HMS Beaver a RIMPAC '86 (DoD, quasi al traverso e in piano, ~12,4 px/m), affinate
+# con gli scarti della calibrazione (STIMA dove la foto non arriva). Modello proprio approvato il 30/10/2026.
+nome: Type 22 Boxer (Batch 2)
+uscita: extracted/navi/type22b2
+
+scafo:
+  L: 146.5
+  B: 14.8
+  bordo: [[0, 12.3], [8, 11.0], [25, 10.0], [45, 9.0], [70, 8.0], [100, 7.5], [122.5, 7.4], [124.5, 4.2], [146.5, 4.0]]
+  slancio: 11.5
+  finezza_prua: 52
+  specchio: 0.8
+  svasatura: 0.07
+  pienezza: [0.8, 0.45]
+
+parti:
+  # ---------------- castello: gli Exocet, il Sea Wolf prodiero
+  - {tipo: harpoon, nome: exocet_dritta_1, x: {prua: 33.0}, y: -3.6, z0: 9.6, verso: 1, lunghezza: 5.6, elevazione: 12}
+  - {tipo: harpoon, nome: exocet_dritta_2, x: {prua: 33.0}, y: -2.2, z0: 9.6, verso: 1, lunghezza: 5.6, elevazione: 12}
+  - {tipo: harpoon, nome: exocet_sinistra_1, x: {prua: 33.0}, y: 2.2, z0: 9.6, verso: 1, lunghezza: 5.6, elevazione: 12}
+  - {tipo: harpoon, nome: exocet_sinistra_2, x: {prua: 33.0}, y: 3.6, z0: 9.6, verso: 1, lunghezza: 5.6, elevazione: 12}
+  - {tipo: tuga, nome: basamento_sea_wolf_prodiero, x0: {prua: 44.0}, x1: {prua: 39.5}, y0: -1.8, y1: 1.8, z0: 8.9, z1: 10.0}
+  - {tipo: scatola, nome: sea_wolf_prodiero, x0: {prua: 43.4}, x1: {prua: 40.0}, y0: -1.4, y1: 1.4, z0: 10.0, z1: 12.4, mat: bianco}
+  # ---------------- la sovrastruttura prodiera, la plancia, il Type 910 prodiero
+  - {tipo: tuga, nome: tuga_prodiera, x0: {prua: 84.0}, x1: {prua: 48.7}, y0: -6.4, y1: 6.4, z0: 7.6, z1: 14.0, rastrema: 0.98}
+  - {tipo: tuga, nome: plancia, x0: {prua: 62.0}, x1: {prua: 50.7}, y0: -5.6, y1: 5.6, z0: 14.0, z1: 16.6, rastrema: 0.96}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 51.1}, x1: {prua: 50.6}, y0: -5.0, y1: 5.0, z0: 15.2, z1: 16.0, mat: nero, rastrema: 0.98}
+  - {tipo: tuga, nome: piattaforma_910_prodiero, x0: {prua: 70.0}, x1: {prua: 62.0}, y0: -3.5, y1: 3.5, z0: 14.0, z1: 16.0}
+  - {tipo: direttore_tiro, nome: type910_prodiero, x: {prua: 67.3}, z0: 16.0, altezza_base: 1.4, larghezza: 2.2, disco: 1.3}
+  # ---------------- la torre prodiera col Type 967/968
+  - {tipo: tuga, nome: torre_prodiera, x0: {prua: 86.6}, x1: {prua: 82.4}, y0: -2.4, y1: 2.4, z0: 14.0, z1: 26.0, rastrema: 0.9}
+  - {tipo: pennone, nome: pennone_prodiero, x: {prua: 84.5}, z: 25.0, semilunghezza: 6.0}
+  - {tipo: cilindro, nome: colonna_967, x: {prua: 84.5}, y: 0, r: 0.8, z0: 26.0, z1: 29.6}
+  - {tipo: cilindro, nome: piattaforma_967, x: {prua: 84.5}, y: 0, r: 1.4, z0: 29.6, z1: 30.6}
+  - {tipo: antenna_radar, nome: type967_968, x: {prua: 84.5}, z0: 30.6, larghezza: 3.6, altezza: 1.3, orientamento: 90}
+  # ---------------- il fumaiolo largo e i radomi del SCOT
+  - {tipo: tuga, nome: tuga_centrale, x0: {prua: 115.0}, x1: {prua: 84.0}, y0: -6.0, y1: 6.0, z0: 7.4, z1: 11.8}
+  - {tipo: mack, nome: fumaiolo, x0: {prua: 106.7}, x1: {prua: 95.2}, y0: -3.6, y1: 3.6, z0: 11.8, z1: 17.8, cappello: 1.4}
+  - {tipo: radome, nome: scot_prodiero, x: {prua: 90.0}, y: -4.5, z: 13.4, r: 1.0}
+  - {tipo: radome, nome: scot_poppiero, x: {prua: 108.5}, y: 4.5, z: 13.4, r: 1.0}
+  # ---------------- l'albero poppiero, grigio con la cima nera a traliccio
+  - {tipo: tuga, nome: albero_poppiero, x0: {prua: 113.0}, x1: {prua: 110.0}, y0: -1.4, y1: 1.4, z0: 11.8, z1: 20.5, rastrema: 0.9}
+  - {tipo: traliccio, nome: albero_poppiero_nero, x: {prua: 111.5}, base: 2.2, cima: 0.9, z0: 20.5, z1: 26.5, piani: [24.5], mat: scuro}
+  - {tipo: pennone, nome: pennone_poppiero, x: {prua: 111.5}, z: 24.5, semilunghezza: 5.5}
+  - {tipo: asta, nome: alberetto_poppiero, da: [{prua: 111.5}, 0, 26.5], a: [{prua: 111.5}, 0, 32.1], spessore: 0.35}
+  # ---------------- l'hangar col Sea Wolf poppiero, la coperta di volo un ponte piu' in basso
+  - {tipo: tuga, nome: hangar, x0: {prua: 125.0}, x1: {prua: 115.0}, y0: -6.6, y1: 6.6, z0: 4.2, z1: 12.9}
+  - {tipo: scatola, nome: sea_wolf_poppiero, x0: {prua: 120.7}, x1: {prua: 118.0}, y0: -1.4, y1: 1.4, z0: 12.9, z1: 15.6, mat: bianco}
+  - {tipo: direttore_tiro, nome: type910_poppiero, x: {prua: 116.5}, z0: 12.9, altezza_base: 1.4, larghezza: 2.2, disco: 1.3}
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 104.0}, x1: {prua: 97.0}, y: -6.2, z0: 9.2}
+  - {tipo: imbarcazione, nome: lancia_sinistra, x0: {prua: 104.0}, x1: {prua: 97.0}, y: 6.2, z0: 9.2}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 30/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: dritta_traverso
+    file: "extracted/navi/type22b2/foto/A_starboard_beam_view_of_the_British_frigate_HMS_BEAVER_(F_93)_entering_port_during_Exercise_RIMPAC_'86_-_DPLA_-_397f244859eaba6b9adeb6c9b8b1d259.jpeg"
+    nave: HMS Beaver (F93), RIMPAC 1986 (DoD, pubblico dominio), al traverso di dritta, quasi in piano
+    qualita: 1.0
+    specchiabile: true
+    # sfondo di terra e di mare: la maschera e' la sagoma del modello calibrato sui punti, erosa di 3 px
+    # (tools/navi/contorno_modello.py --maschera --erodi 3)
+    maschera_file: extracted/navi/type22b2/foto/dritta_traverso_1986_maschera.png
+    solo_punti: true
+    riquadro: [250, 750, 2200, 1300]
+    cancella: [[1440, 1150, 1570, 1200]]   # F93
+    fotocamera_iniziale: {posizione: [0, -1500, 6], bersaglio: [0, 0, 8], f: 12000}
+    limiti_fotocamera: {elevazione: [-3, 10], distanza: [300, 6000], focale: [2000, 60000]}
+    punti:
+      - [[{prua: 0}, 0, 12.3], [2125, 1077]]          # dritto di prua in coperta
+      - [[{prua: 11.5}, 0, 0.0], [1982, 1231]]        # piede del dritto al galleggiamento
+      - [[{prua: 146.5}, -5.9, 4.0], [313, 1174]]     # specchio, spigolo di dritta in coperta
+      - [[{prua: 111.5}, 0, 32.1], [746, 828]]        # cima dell'albero poppiero
+      - [[{prua: 84.5}, 0, 31.9], [1080, 830]]        # il Type 967/968 in cima alla torre
+      - [[{prua: 125.0}, -6.6, 12.9], [579, 1066]]    # spigolo poppiero alto di dritta dell'hangar
+      - [[{prua: 50.7}, -5.6, 16.6], [1498, 1023]]    # spigolo prodiero alto di dritta della plancia
+      - [[{prua: 95.2}, 0, 17.8], [947, 1005]]        # spigolo prodiero del cappello del fumaiolo

@@ -1,0 +1,1451 @@
+# Gradi, carriera, decorazioni, soglie e motivazioni (generato da tools/pipeline/carriera.py: non modificare a mano).
+
+[regole]
+mesi_per_missione = 2
+mesi_per_missione_al_comando = 3
+media_su = 6
+missioni_fra_commissioni = 3
+mancate_per_congedo = 2
+anni_pensione = 20
+soglia_mediocre = 150
+mediocri_per_trasferimento = 3
+rendimenti = [1.0, 0.5, 0.25, 0.0]
+ripetizione = [1.0, 1.5, 2.0]
+zampolit = 0.1
+data_inizio = "1989-06"
+anno_nomina_breve_usn = 1973
+anno_nomina_breve_vmf = 1978
+
+[punteggio]
+riuscita = 400.0
+completezza = 150.0
+discrezione = 150.0
+ordini = 100.0
+efficienza = 100.0
+danni_min = -300.0
+violazioni_min = -200.0
+squalifica_sotto = -400.0
+peso_completezza = 0.5
+peso_classificazioni = 0.3
+peso_rapporti = 0.2
+esposizione_piena = 100.0
+infrazione_roe = 30.0
+peso_ordini = 0.6
+peso_serie = 0.4
+peso_colpi = 0.7
+peso_carico = 0.3
+senza_lanci = 0.7
+arma_incoerente = 10.0
+danno_scafo = 150.0
+ferito = 20.0
+morto = 50.0
+arma_persa = 10.0
+battello_perso = -300.0
+neutrale = 150.0
+amico = 200.0
+fuoco_senza_ordine = 100.0
+zona_vietata = 50.0
+fuoco_senza_ordine_ordini = 50.0
+acque_territoriali = 30.0
+acque_scoperto = 150.0
+pericolo_max = 0.25
+siluro_vicino_m = 5000.0
+contatto_asw_s = 1800.0
+margine_collasso = 0.2
+
+[esposizione]
+ping = 5.0
+fix = 25.0
+avvistamento = 20.0
+esm = 15.0
+transitorio = 2.0
+boa = 10.0
+ecoscandaglio = 3.0
+radar = 8.0
+missile = 15.0
+luci = 10.0
+
+[moltiplicatori]
+situazione = { pace = 1.0, crisi = 1.3, guerra = 1.6 }
+avversario = { impreparato = 0.8, regolare = 1.0, veterano = 1.25, elite = 1.5 }
+realismo_min = 0.5
+
+[gradi.usn."O-1"]
+ordine = 0
+sigla = "ENS"
+nome = "Ensign"
+nome_it = "guardiamarina"
+nato = "OF-1"
+
+[gradi.usn."O-2"]
+ordine = 1
+sigla = "LTJG"
+nome = "Lieutenant junior grade"
+nome_it = "sottotenente di vascello"
+nato = "OF-1"
+
+[gradi.usn."O-3"]
+ordine = 2
+sigla = "LT"
+nome = "Lieutenant"
+nome_it = "tenente di vascello"
+nato = "OF-2"
+
+[gradi.usn."O-4"]
+ordine = 3
+sigla = "LCDR"
+nome = "Lieutenant Commander"
+nome_it = "capitano di corvetta"
+nato = "OF-3"
+
+[gradi.usn."O-5"]
+ordine = 4
+sigla = "CDR"
+nome = "Commander"
+nome_it = "capitano di fregata"
+nato = "OF-4"
+
+[gradi.usn."O-6"]
+ordine = 5
+sigla = "CAPT"
+nome = "Captain"
+nome_it = "capitano di vascello"
+nato = "OF-5"
+
+[gradi.usn."O-7"]
+ordine = 6
+sigla = "RDML"
+nome = "Rear Admiral (lower half)"
+nome_it = "contrammiraglio"
+nato = "OF-6"
+
+[gradi.vmf."lt"]
+ordine = 0
+sigla = "л-т"
+nome = "lejtenant"
+nome_it = "tenente"
+nato = "OF-1"
+
+[gradi.vmf."st_lt"]
+ordine = 1
+sigla = "ст. л-т"
+nome = "staršij lejtenant"
+nome_it = "tenente anziano"
+nato = "OF-1"
+
+[gradi.vmf."kap_lt"]
+ordine = 2
+sigla = "к-л"
+nome = "kapitan-lejtenant"
+nome_it = "capitano-tenente"
+nato = "OF-2"
+
+[gradi.vmf."kap3"]
+ordine = 3
+sigla = "к3р"
+nome = "kapitan 3-go ranga"
+nome_it = "capitano di 3° rango"
+nato = "OF-3"
+
+[gradi.vmf."kap2"]
+ordine = 4
+sigla = "к2р"
+nome = "kapitan 2-go ranga"
+nome_it = "capitano di 2° rango"
+nato = "OF-4"
+
+[gradi.vmf."kap1"]
+ordine = 5
+sigla = "к1р"
+nome = "kapitan 1-go ranga"
+nome_it = "capitano di 1° rango"
+nato = "OF-5"
+
+[gradi.vmf."kontr_adm"]
+ordine = 6
+sigla = "к-адм"
+nome = "kontr-admiral"
+nome_it = "contrammiraglio"
+nato = "OF-6"
+
+[[fasi.usn]]
+grado = "O-1"
+incarico = "scuola e prototipo"
+incarico_en = "school and prototype"
+missioni = 2
+uscita = "missioni"
+
+[[fasi.usn]]
+grado = "O-2"
+incarico = "ufficiale di guardia in addestramento"
+incarico_en = "officer of the deck under instruction"
+missioni = 3
+uscita = "qualifica"
+media_minima = 150
+qualifica = "dolphins"
+
+[[fasi.usn]]
+grado = "O-3"
+incarico = "ufficiale di guardia in immersione"
+incarico_en = "officer of the deck"
+missioni = 4
+uscita = "commissione"
+in_zona = 250
+sotto_zona = 400
+
+[[fasi.usn]]
+grado = "O-4"
+incarico = "ufficiale in seconda"
+incarico_en = "executive officer"
+missioni = 4
+uscita = "commissione"
+in_zona = 300
+sotto_zona = 450
+qualifica = "comando"
+
+[[fasi.usn]]
+grado = "O-5"
+incarico = "comandante"
+incarico_en = "commanding officer"
+missioni = 10
+uscita = "commissione"
+in_zona = 400
+sotto_zona = 550
+
+[[fasi.usn]]
+grado = "O-6"
+incarico = "comandante di squadriglia"
+incarico_en = "squadron commander"
+missioni = 0
+uscita = "fine"
+
+[[fasi.vmf]]
+grado = "lt"
+incarico = "comandante del gruppo siluri"
+incarico_en = "torpedo group commander"
+missioni = 1
+uscita = "missioni"
+
+[[fasi.vmf]]
+grado = "st_lt"
+incarico = "comandante della БЧ-3"
+incarico_en = "BCh-3 department head"
+missioni = 2
+uscita = "qualifica"
+media_minima = 150
+qualifica = "esami_guardia"
+
+[[fasi.vmf]]
+grado = "kap_lt"
+incarico = "pomoščnik"
+incarico_en = "assistant commander"
+missioni = 3
+uscita = "commissione"
+in_zona = 250
+sotto_zona = 400
+
+[[fasi.vmf]]
+grado = "kap3"
+incarico = "starpom"
+incarico_en = "first officer"
+missioni = 3
+uscita = "commissione"
+in_zona = 300
+sotto_zona = 450
+qualifica = "vsok"
+
+[[fasi.vmf]]
+grado = "kap2"
+incarico = "comandante"
+incarico_en = "commanding officer"
+missioni = 10
+uscita = "commissione"
+in_zona = 400
+sotto_zona = 550
+
+[[fasi.vmf]]
+grado = "kap1"
+incarico = "comandante anziano di brigata"
+incarico_en = "senior brigade commander"
+missioni = 0
+uscita = "fine"
+
+[decorazioni.medal_of_honor]
+tipo = "personale"
+righe = [["#5b9bd5", 36]]
+orizzontale = false
+motivo = "stelle_bianche"
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [alta]"
+marina = "usn"
+nome = "Medal of Honor"
+nome_it = "Medal of Honor"
+precedenza = 1
+
+[decorazioni.navy_cross]
+tipo = "personale"
+righe = [["#1f2f5c", 16], ["#f2f2f2", 4], ["#1f2f5c", 16]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [alta]"
+marina = "usn"
+nome = "Navy Cross"
+nome_it = "Navy Cross"
+precedenza = 2
+
+[decorazioni.navy_dsm]
+tipo = "personale"
+righe = [["#0b1a3a", 15], ["#ffc72c", 6], ["#0b1a3a", 15]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [alta]"
+marina = "usn"
+nome = "Navy Distinguished Service Medal"
+nome_it = "Navy Distinguished Service Medal"
+precedenza = 4
+
+[decorazioni.silver_star]
+tipo = "personale"
+righe = [["#1f2f5c", 4], ["#f2f2f2", 1], ["#1f2f5c", 1], ["#f2f2f2", 1], ["#1f2f5c", 3], ["#f2f2f2", 3], ["#c8102e", 10], ["#f2f2f2", 3], ["#1f2f5c", 3], ["#f2f2f2", 1], ["#1f2f5c", 1], ["#f2f2f2", 1], ["#1f2f5c", 4]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [alta]"
+marina = "usn"
+nome = "Silver Star"
+nome_it = "Silver Star"
+precedenza = 5
+
+[decorazioni.legion_of_merit]
+tipo = "personale"
+righe = [["#f2f2f2", 2], ["#9b1b30", 32], ["#f2f2f2", 2]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella", "v"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [alta]"
+marina = "usn"
+nome = "Legion of Merit"
+nome_it = "Legion of Merit"
+precedenza = 7
+
+[decorazioni.navy_marine_corps_medal]
+tipo = "personale"
+righe = [["#1f2f5c", 12], ["#ffc72c", 12], ["#c8102e", 12]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "bassa"
+fonte = "§3.1; nastrino non descritto nel dossier"
+marina = "usn"
+nome = "Navy and Marine Corps Medal"
+nome_it = "Navy and Marine Corps Medal"
+precedenza = 9
+
+[decorazioni.bronze_star]
+tipo = "personale"
+righe = [["#f2f2f2", 1], ["#c8102e", 15], ["#f2f2f2", 1], ["#1f2f5c", 2], ["#f2f2f2", 1], ["#c8102e", 15], ["#f2f2f2", 1]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella", "v"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [alta]"
+marina = "usn"
+nome = "Bronze Star Medal"
+nome_it = "Bronze Star Medal"
+precedenza = 10
+
+[decorazioni.purple_heart]
+tipo = "personale"
+righe = [["#f2f2f2", 2], ["#5b2c83", 32], ["#f2f2f2", 2]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [media]"
+marina = "usn"
+nome = "Purple Heart"
+nome_it = "Purple Heart"
+precedenza = 11
+
+[decorazioni.meritorious_service]
+tipo = "personale"
+righe = [["#9b1b30", 6], ["#f2f2f2", 4], ["#9b1b30", 16], ["#f2f2f2", 4], ["#9b1b30", 6]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [alta]"
+marina = "usn"
+nome = "Meritorious Service Medal"
+nome_it = "Meritorious Service Medal"
+precedenza = 13
+
+[decorazioni.navy_commendation]
+tipo = "personale"
+righe = [["#1e6b3a", 3], ["#f2f2f2", 2], ["#1e6b3a", 26], ["#f2f2f2", 2], ["#1e6b3a", 3]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella", "v"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [alta]"
+marina = "usn"
+nome = "Navy Commendation Medal"
+nome_it = "Navy Commendation Medal"
+precedenza = 16
+
+[decorazioni.navy_achievement]
+tipo = "personale"
+righe = [["#e87722", 3], ["#1e6b3a", 30], ["#e87722", 3]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = "O-4"
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [alta]"
+marina = "usn"
+nome = "Navy Achievement Medal"
+nome_it = "Navy Achievement Medal"
+precedenza = 18
+
+[decorazioni.combat_action_ribbon]
+tipo = "servizio"
+righe = [["#1f2f5c", 3], ["#ffc72c", 14], ["#1f2f5c", 1], ["#f2f2f2", 1], ["#c8102e", 1], ["#f2f2f2", 1], ["#1f2f5c", 1], ["#ffc72c", 11], ["#c8102e", 3]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [media]"
+marina = "usn"
+nome = "Combat Action Ribbon"
+nome_it = "Combat Action Ribbon"
+precedenza = 19
+
+[decorazioni.presidential_unit_citation]
+tipo = "reparto"
+righe = [["#1f2f5c", 12], ["#ffc72c", 12], ["#c8102e", 12]]
+orizzontale = true
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [alta]"
+marina = "usn"
+nome = "Presidential Unit Citation (Navy)"
+nome_it = "Presidential Unit Citation"
+precedenza = 20
+
+[decorazioni.navy_unit_commendation]
+tipo = "reparto"
+righe = [["#1f2f5c", 1], ["#ffc72c", 1], ["#c8102e", 1], ["#1e6b3a", 30], ["#c8102e", 1], ["#ffc72c", 1], ["#1f2f5c", 1]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [media]"
+marina = "usn"
+nome = "Navy Unit Commendation"
+nome_it = "Navy Unit Commendation"
+precedenza = 21
+
+[decorazioni.meritorious_unit_commendation]
+tipo = "reparto"
+righe = [["#1e6b3a", 15], ["#c8102e", 1], ["#ffc72c", 1], ["#1f2f5c", 2], ["#ffc72c", 1], ["#c8102e", 1], ["#1e6b3a", 15]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.1 [media]"
+marina = "usn"
+nome = "Meritorious Unit Commendation"
+nome_it = "Meritorious Unit Commendation"
+precedenza = 22
+
+[decorazioni.navy_e_ribbon]
+tipo = "servizio"
+righe = [["#0b1a3a", 30], ["#ffc72c", 3], ["#f2f2f2", 3]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.2 [media]"
+marina = "usn"
+nome = "Navy \"E\" Ribbon"
+nome_it = "Navy «E» Ribbon"
+precedenza = 23
+
+[decorazioni.navy_expeditionary]
+tipo = "servizio"
+righe = [["#1f2f5c", 12], ["#ffc72c", 4], ["#1f2f5c", 4], ["#ffc72c", 4], ["#1f2f5c", 12]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.2 [media]"
+marina = "usn"
+nome = "Navy Expeditionary Medal"
+nome_it = "Navy Expeditionary Medal"
+precedenza = 24
+
+[decorazioni.national_defense]
+tipo = "servizio"
+righe = [["#c8102e", 14], ["#ffc72c", 1], ["#c8102e", 1], ["#f2f2f2", 1], ["#1f2f5c", 2], ["#f2f2f2", 1], ["#c8102e", 1], ["#ffc72c", 1], ["#c8102e", 14]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.2 [alta]"
+marina = "usn"
+nome = "National Defense Service Medal"
+nome_it = "National Defense Service Medal"
+precedenza = 25
+
+[decorazioni.sea_service_deployment]
+tipo = "servizio"
+righe = [["#0b1a3a", 9], ["#c8102e", 3], ["#ffc72c", 3], ["#5b9bd5", 6], ["#ffc72c", 3], ["#c8102e", 3], ["#0b1a3a", 9]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.2 [media]"
+marina = "usn"
+nome = "Sea Service Deployment Ribbon"
+nome_it = "Sea Service Deployment Ribbon"
+precedenza = 26
+
+[decorazioni.arctic_service]
+tipo = "servizio"
+righe = [["#f2f2f2", 12], ["#5b9bd5", 12], ["#f2f2f2", 12]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "bassa"
+fonte = "§3.2; colori da verificare"
+marina = "usn"
+nome = "Navy Arctic Service Ribbon"
+nome_it = "Navy Arctic Service Ribbon"
+precedenza = 27
+
+[decorazioni.dolphins]
+tipo = "distintivo"
+righe = []
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§1.3 [alta]"
+marina = "usn"
+nome = "Submarine Warfare Insignia (officer)"
+nome_it = "dolphins d'oro"
+precedenza = 90
+
+[decorazioni.command_at_sea]
+tipo = "distintivo"
+righe = []
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.2 [alta]"
+marina = "usn"
+nome = "Command at Sea Insignia"
+nome_it = "distintivo Command at Sea"
+precedenza = 91
+
+[decorazioni.submarine_combat_patrol]
+tipo = "distintivo"
+righe = []
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.2 [alta]; PROPOSTA per la guerra"
+marina = "usn"
+nome = "Submarine Combat Patrol Insignia"
+nome_it = "distintivo di pattuglia di combattimento"
+precedenza = 92
+
+[decorazioni.eroe_urss]
+tipo = "personale"
+righe = [["#c8102e", 36]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = "lenin"
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.4 [alta]"
+marina = "vmf"
+nome = "Hero of the Soviet Union"
+nome_it = "Eroe dell'Unione Sovietica"
+precedenza = 1
+
+[decorazioni.lenin]
+tipo = "personale"
+righe = [["#ffc72c", 1], ["#c8102e", 1], ["#ffc72c", 1], ["#c8102e", 30], ["#ffc72c", 1], ["#c8102e", 1], ["#ffc72c", 1]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.4 [alta]"
+marina = "vmf"
+nome = "Order of Lenin"
+nome_it = "Ordine di Lenin"
+precedenza = 2
+
+[decorazioni.bandiera_rossa]
+tipo = "personale"
+righe = [["#f2f2f2", 2], ["#c8102e", 13], ["#f2f2f2", 6], ["#c8102e", 13], ["#f2f2f2", 2]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.4 [alta]"
+marina = "vmf"
+nome = "Order of the Red Banner"
+nome_it = "Ordine della Bandiera Rossa"
+precedenza = 4
+
+[decorazioni.usakov_2]
+tipo = "personale"
+righe = [["#f2f2f2", 6], ["#5b9bd5", 24], ["#f2f2f2", 6]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "bassa"
+fonte = "§3.4; PROPOSTA per la guerra, nastrino da verificare"
+marina = "vmf"
+nome = "Order of Ushakov, 2nd class"
+nome_it = "Ordine di Ušakov di 2ª classe"
+precedenza = 5
+
+[decorazioni.stella_rossa]
+tipo = "personale"
+righe = [["#8b0000", 15], ["#c0c0c0", 6], ["#8b0000", 15]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.4 [alta]"
+marina = "vmf"
+nome = "Order of the Red Star"
+nome_it = "Ordine della Stella Rossa"
+precedenza = 6
+
+[decorazioni.servizio_patria_1]
+tipo = "personale"
+righe = [["#5b9bd5", 16], ["#ffc72c", 4], ["#5b9bd5", 16]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.4 [alta]"
+marina = "vmf"
+nome = "Order \"For Service to the Homeland\", 1st class"
+nome_it = "Ordine «Per il servizio alla Patria» di 1ª classe"
+precedenza = 7
+
+[decorazioni.servizio_patria_2]
+tipo = "personale"
+righe = [["#5b9bd5", 13], ["#ffc72c", 3], ["#5b9bd5", 4], ["#ffc72c", 3], ["#5b9bd5", 13]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = "servizio_patria_1"
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.4 [alta]"
+marina = "vmf"
+nome = "Order \"For Service to the Homeland\", 2nd class"
+nome_it = "Ordine «Per il servizio alla Patria» di 2ª classe"
+precedenza = 8
+
+[decorazioni.servizio_patria_3]
+tipo = "personale"
+righe = [["#5b9bd5", 10], ["#ffc72c", 3], ["#5b9bd5", 3], ["#ffc72c", 4], ["#5b9bd5", 3], ["#ffc72c", 3], ["#5b9bd5", 10]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = "servizio_patria_2"
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.4 [alta]"
+marina = "vmf"
+nome = "Order \"For Service to the Homeland\", 3rd class"
+nome_it = "Ordine «Per il servizio alla Patria» di 3ª classe"
+precedenza = 9
+
+[decorazioni.coraggio_personale]
+tipo = "personale"
+righe = [["#c8102e", 14], ["#f2f2f2", 8], ["#c8102e", 14]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "bassa"
+fonte = "§3.4; dal 28/12/1988, nastrino da verificare"
+marina = "vmf"
+nome = "Order \"For Personal Courage\""
+nome_it = "Ordine «Per il coraggio personale»"
+precedenza = 10
+
+[decorazioni.merito_combattimento]
+tipo = "personale"
+righe = [["#ffc72c", 3], ["#8a8d8f", 30], ["#ffc72c", 3]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "bassa"
+fonte = "§3.4"
+marina = "vmf"
+nome = "Medal \"For Battle Merit\""
+nome_it = "Medaglia «Per merito in combattimento»"
+precedenza = 12
+
+[decorazioni.distinzione_1]
+tipo = "personale"
+righe = [["#c8102e", 3], ["#1e6b3a", 4], ["#c8102e", 22], ["#1e6b3a", 4], ["#c8102e", 3]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.4 [alta]"
+marina = "vmf"
+nome = "Medal \"For Distinction in Military Service\", 1st class"
+nome_it = "Medaglia «Per distinzione nel servizio militare» di 1ª classe"
+precedenza = 13
+
+[decorazioni.distinzione_2]
+tipo = "personale"
+righe = [["#c8102e", 3], ["#1e6b3a", 4], ["#c8102e", 22], ["#1e6b3a", 4], ["#c8102e", 3]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = "distinzione_1"
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.4 [alta]"
+marina = "vmf"
+nome = "Medal \"For Distinction in Military Service\", 2nd class"
+nome_it = "Medaglia «Per distinzione nel servizio militare» di 2ª classe"
+precedenza = 14
+
+[decorazioni.giubilare_70]
+tipo = "servizio"
+righe = [["#c8102e", 10], ["#ffc72c", 4], ["#c8102e", 8], ["#ffc72c", 4], ["#c8102e", 10]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "bassa"
+fonte = "§3.4 [media]"
+marina = "vmf"
+nome = "Jubilee Medal \"70 Years of the Armed Forces of the USSR\""
+nome_it = "Medaglia «70 anni delle Forze armate dell'URSS»"
+precedenza = 20
+
+[decorazioni.servizio_impeccabile_3]
+tipo = "servizio"
+righe = [["#1e6b3a", 4], ["#c8102e", 12], ["#ffc72c", 4], ["#c8102e", 12], ["#1e6b3a", 4]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 10
+confidenza = "media"
+fonte = "§3.4 [alta]"
+marina = "vmf"
+nome = "Medal \"For Impeccable Service\", 3rd class"
+nome_it = "Medaglia «Per il servizio impeccabile» di 3ª classe"
+precedenza = 23
+
+[decorazioni.servizio_impeccabile_2]
+tipo = "servizio"
+righe = [["#1e6b3a", 4], ["#c8102e", 11], ["#ffc72c", 2], ["#c8102e", 2], ["#ffc72c", 2], ["#c8102e", 11], ["#1e6b3a", 4]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 15
+confidenza = "media"
+fonte = "§3.4 [alta]"
+marina = "vmf"
+nome = "Medal \"For Impeccable Service\", 2nd class"
+nome_it = "Medaglia «Per il servizio impeccabile» di 2ª classe"
+precedenza = 22
+
+[decorazioni.servizio_impeccabile_1]
+tipo = "servizio"
+righe = [["#1e6b3a", 4], ["#c8102e", 8], ["#ffc72c", 2], ["#c8102e", 2], ["#ffc72c", 2], ["#c8102e", 2], ["#ffc72c", 2], ["#c8102e", 10], ["#1e6b3a", 4]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 20
+confidenza = "media"
+fonte = "§3.4 [alta]"
+marina = "vmf"
+nome = "Medal \"For Impeccable Service\", 1st class"
+nome_it = "Medaglia «Per il servizio impeccabile» di 1ª classe"
+precedenza = 21
+
+[decorazioni.encomio_comandante]
+tipo = "reparto"
+righe = []
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.7 PROPOSTA (senza nastrino)"
+marina = "vmf"
+nome = "Commendation of the Commander-in-Chief of the Navy"
+nome_it = "encomio del Comandante in capo della Marina"
+precedenza = 40
+
+[decorazioni.bandiera_rossa_battello]
+tipo = "reparto"
+righe = [["#f2f2f2", 2], ["#c8102e", 13], ["#f2f2f2", 6], ["#c8102e", 13], ["#f2f2f2", 2]]
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.7 PROPOSTA"
+marina = "vmf"
+nome = "Order of the Red Banner (ship)"
+nome_it = "Ordine della Bandiera Rossa al battello"
+precedenza = 41
+
+[decorazioni.comandante_sottomarino]
+tipo = "distintivo"
+righe = []
+orizzontale = false
+motivo = ""
+dispositivi = ["stella"]
+con = ""
+successiva = ""
+grado_max = ""
+anni = 0
+confidenza = "media"
+fonte = "§3.5 [alta]"
+marina = "vmf"
+nome = "Submarine Commander badge"
+nome_it = "distintivo «Comandante di sottomarino»"
+precedenza = 90
+
+[[soglie.usn.pace]]
+punti = 250
+decorazione = "navy_achievement"
+dispositivo = ""
+condizione = ""
+
+[[soglie.usn.pace]]
+punti = 400
+decorazione = "navy_commendation"
+dispositivo = ""
+condizione = ""
+
+[[soglie.usn.pace]]
+punti = 600
+decorazione = "meritorious_service"
+dispositivo = ""
+condizione = ""
+
+[[soglie.usn.pace]]
+punti = 850
+decorazione = "legion_of_merit"
+dispositivo = ""
+condizione = ""
+
+[[soglie.usn.guerra]]
+punti = 250
+decorazione = "navy_commendation"
+dispositivo = "v"
+condizione = ""
+
+[[soglie.usn.guerra]]
+punti = 400
+decorazione = "bronze_star"
+dispositivo = "v"
+condizione = ""
+
+[[soglie.usn.guerra]]
+punti = 600
+decorazione = "silver_star"
+dispositivo = ""
+condizione = ""
+
+[[soglie.usn.guerra]]
+punti = 850
+decorazione = "navy_cross"
+dispositivo = ""
+condizione = ""
+
+[[soglie.usn.guerra]]
+punti = 1100
+decorazione = "medal_of_honor"
+dispositivo = ""
+condizione = "pericolo"
+
+[[soglie.vmf.pace]]
+punti = 250
+decorazione = "distinzione_2"
+dispositivo = ""
+condizione = ""
+
+[[soglie.vmf.pace]]
+punti = 400
+decorazione = "servizio_patria_3"
+dispositivo = ""
+condizione = ""
+
+[[soglie.vmf.pace]]
+punti = 600
+decorazione = "stella_rossa"
+dispositivo = ""
+condizione = ""
+
+[[soglie.vmf.pace]]
+punti = 850
+decorazione = "bandiera_rossa"
+dispositivo = ""
+condizione = ""
+
+[[soglie.vmf.pace]]
+punti = 1100
+decorazione = "lenin"
+dispositivo = ""
+condizione = "speciale"
+
+[[soglie.vmf.guerra]]
+punti = 250
+decorazione = "merito_combattimento"
+dispositivo = ""
+condizione = ""
+
+[[soglie.vmf.guerra]]
+punti = 400
+decorazione = "stella_rossa"
+dispositivo = ""
+condizione = ""
+
+[[soglie.vmf.guerra]]
+punti = 600
+decorazione = "bandiera_rossa"
+dispositivo = ""
+condizione = ""
+
+[[soglie.vmf.guerra]]
+punti = 850
+decorazione = "usakov_2"
+dispositivo = ""
+condizione = ""
+
+[[soglie.vmf.guerra]]
+punti = 1100
+decorazione = "eroe_urss"
+dispositivo = ""
+condizione = "pericolo"
+
+[[reparto.usn]]
+punti = 500
+decorazione = "meritorious_unit_commendation"
+condizione = ""
+
+[[reparto.usn]]
+punti = 700
+decorazione = "navy_unit_commendation"
+condizione = ""
+
+[[reparto.usn]]
+punti = 1000
+decorazione = "presidential_unit_citation"
+condizione = "guerra_speciale"
+
+[[reparto.vmf]]
+punti = 700
+decorazione = "encomio_comandante"
+condizione = ""
+
+[[reparto.vmf]]
+punti = 1000
+decorazione = "bandiera_rossa_battello"
+condizione = "guerra_speciale"
+
+[[fine_comando.usn]]
+media = 250
+decorazione = "navy_commendation"
+
+[[fine_comando.usn]]
+media = 400
+decorazione = "meritorious_service"
+
+[[fine_comando.usn]]
+media = 600
+decorazione = "legion_of_merit"
+
+[[fine_comando.vmf]]
+media = 250
+decorazione = "servizio_patria_3"
+
+[[fine_comando.vmf]]
+media = 400
+decorazione = "servizio_patria_2"
+
+[[fine_comando.vmf]]
+media = 600
+decorazione = "servizio_patria_1"
+
+[coraggio]
+usn = "navy_marine_corps_medal"
+vmf = "coraggio_personale"
+
+[[giudizi.livelli]]
+punti = 850
+it = "eccezionale"
+en = "outstanding"
+
+[[giudizi.livelli]]
+punti = 600
+it = "ottimo"
+en = "excellent"
+
+[[giudizi.livelli]]
+punti = 400
+it = "buono"
+en = "good"
+
+[[giudizi.livelli]]
+punti = 250
+it = "adeguato"
+en = "satisfactory"
+
+[[giudizi.livelli]]
+punti = 150
+it = "mediocre"
+en = "marginal"
+
+[[giudizi.livelli]]
+punti = 0
+it = "insufficiente"
+en = "unsatisfactory"
+
+[giudizi.voci.riuscita]
+forte_it = "obiettivi pienamente raggiunti"
+debole_it = "obiettivi mancati"
+forte_en = "objectives fully achieved"
+debole_en = "objectives missed"
+
+[giudizi.voci.completezza]
+forte_it = "quadro tattico completo"
+debole_it = "quadro tattico lacunoso"
+forte_en = "complete tactical picture"
+debole_en = "incomplete tactical picture"
+
+[giudizi.voci.discrezione]
+forte_it = "ottima discrezione"
+debole_it = "discrezione da migliorare"
+forte_en = "excellent stealth"
+debole_en = "stealth needs improvement"
+
+[giudizi.voci.ordini]
+forte_it = "ordini e regole d'ingaggio rispettati"
+debole_it = "ordini e regole d'ingaggio trascurati"
+forte_en = "orders and rules of engagement followed"
+debole_en = "orders and rules of engagement neglected"
+
+[giudizi.voci.efficienza]
+forte_it = "uso esemplare delle armi"
+debole_it = "uso delle armi da migliorare"
+forte_en = "exemplary use of weapons"
+debole_en = "weapons employment needs improvement"
+
+[motivazioni.usn]
+conferisce_it = { alta = "Il Presidente degli Stati Uniti ha il piacere di conferire", media = "Il Segretario della Marina ha il piacere di conferire", bassa = "Il Comandante della Flotta ha il piacere di conferire" }
+conferisce_en = { alta = "The President of the United States takes pleasure in presenting", media = "The Secretary of the Navy takes pleasure in presenting", bassa = "The Commander in Chief of the Fleet takes pleasure in presenting" }
+formula_it = { valore = "per lo straordinario eroismo dimostrato", merito = "per la condotta eccezionalmente meritoria", servizio = "per il servizio meritorio prestato", soccorso = "per l'eroismo dimostrato nel soccorso di uomini in mare" }
+formula_en = { valore = "for extraordinary heroism", merito = "for exceptionally meritorious conduct", servizio = "for meritorious service", soccorso = "for heroism in the rescue of men at sea" }
+apertura_it = "{da} la {decorazione} al {grado} {nome}, Marina degli Stati Uniti,"
+apertura_en = "{da} the {decorazione} to {grado} {nome}, United States Navy,"
+incarico_it = "{formula} come {incarico} dell'USS {battello} durante operazioni nel {teatro}, {periodo}."
+incarico_en = "{formula} as {incarico} of USS {battello} during operations in the {teatro}, {periodo}."
+chiusura_it = "Il suo coraggio, il suo giudizio e la sua dedizione al dovere furono all'altezza delle più alte tradizioni della Marina degli Stati Uniti."
+chiusura_en = "The courage, judgment and devotion to duty displayed were in keeping with the highest traditions of the United States Naval Service."
+reparto_it = "{da} la {decorazione} all'equipaggio dell'USS {battello} {formula} durante operazioni nel {teatro}, {periodo}."
+reparto_en = "{da} the {decorazione} to the crew of USS {battello} {formula} during operations in the {teatro}, {periodo}."
+postuma_it = "alla memoria"
+postuma_en = "posthumously"
+segreto_it = "I particolari dell'operazione restano coperti dal segreto."
+segreto_en = "The details of the operation remain classified."
+
+[motivazioni.vmf]
+intestazione_it = "Decreto del Presidium del Soviet Supremo dell'URSS."
+intestazione_en = "Decree of the Presidium of the Supreme Soviet of the USSR."
+formula_it = { valore = "Per il coraggio e l'eroismo dimostrati nell'adempimento del dovere militare", speciale = "Per il coraggio e l'audacia dimostrati nell'esecuzione di un incarico speciale del comando", merito = "Per i successi nell'addestramento al combattimento e politico", servizio = "Per il servizio esemplare", soccorso = "Per il coraggio e l'abnegazione dimostrati nel salvataggio di vite umane in mare" }
+formula_en = { valore = "For courage and heroism displayed in the performance of military duty", speciale = "For courage and daring displayed in carrying out a special assignment of the command", merito = "For success in combat and political training", servizio = "For exemplary service", soccorso = "For courage and selflessness displayed in saving human lives at sea" }
+dispositivo_it = "{formula}, decorare con {decorazione} il {grado} {nome}, {incarico} del {battello}."
+dispositivo_en = "{formula}, to award the {decorazione} to {grado} {nome}, {incarico} of {battello}."
+eroe_it = "{formula}, conferire il titolo di Eroe dell'Unione Sovietica con la consegna dell'Ordine di Lenin e della medaglia Stella d'oro al {grado} {nome}, {incarico} del {battello}."
+eroe_en = "{formula}, to confer the title of Hero of the Soviet Union, with the Order of Lenin and the Gold Star medal, on {grado} {nome}, {incarico} of {battello}."
+reparto_it = "{formula}, decorare con {decorazione} il sottomarino {battello}."
+reparto_en = "{formula}, to award the {decorazione} to the submarine {battello}."
+postuma_it = "alla memoria"
+postuma_en = "posthumously"
+chiusura_it = "Mosca, Cremlino, {data}."
+chiusura_en = "Moscow, the Kremlin, {data}."
+segreto_it = "Non per la stampa."
+segreto_en = "Not for publication."
+
+[formule]
+medal_of_honor = ["alta", "valore"]
+navy_cross = ["alta", "valore"]
+silver_star = ["alta", "valore"]
+legion_of_merit = ["alta", "merito"]
+navy_marine_corps_medal = ["media", "valore"]
+bronze_star = ["media", "valore"]
+meritorious_service = ["media", "servizio"]
+navy_commendation = ["media", "servizio"]
+navy_achievement = ["bassa", "servizio"]
+presidential_unit_citation = ["alta", "valore"]
+navy_unit_commendation = ["media", "merito"]
+meritorious_unit_commendation = ["media", "servizio"]
+eroe_urss = ["", "valore"]
+lenin = ["", "speciale"]
+bandiera_rossa = ["", "valore"]
+usakov_2 = ["", "valore"]
+stella_rossa = ["", "merito"]
+servizio_patria_1 = ["", "merito"]
+servizio_patria_2 = ["", "merito"]
+servizio_patria_3 = ["", "merito"]
+coraggio_personale = ["", "valore"]
+merito_combattimento = ["", "valore"]
+distinzione_1 = ["", "merito"]
+distinzione_2 = ["", "merito"]
+bandiera_rossa_battello = ["", "valore"]
+
+[missioni_originali.SCENE0A]
+situazione = "guerra"
+avversario = "regolare"
+difficolta = 4
+operazione_speciale = true
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE1A]
+situazione = "pace"
+avversario = "impreparato"
+difficolta = 1
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE1B]
+situazione = "pace"
+avversario = "impreparato"
+difficolta = 1
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE1C]
+situazione = "pace"
+avversario = "impreparato"
+difficolta = 1
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE2A]
+situazione = "crisi"
+avversario = "veterano"
+difficolta = 2
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = [3, 7]
+
+[missioni_originali.SCENE2B]
+situazione = "crisi"
+avversario = "veterano"
+difficolta = 2
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = [3]
+
+[missioni_originali.SCENE2C]
+situazione = "crisi"
+avversario = "veterano"
+difficolta = 2
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = [4, 18]
+
+[missioni_originali.SCENE3B]
+situazione = "pace"
+avversario = "regolare"
+difficolta = 2
+operazione_speciale = false
+artico = true
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE4A]
+situazione = "crisi"
+avversario = "regolare"
+difficolta = 3
+operazione_speciale = true
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE5A]
+situazione = "crisi"
+avversario = "veterano"
+difficolta = 3
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = [10]
+
+[missioni_originali.SCENE5B]
+situazione = "crisi"
+avversario = "veterano"
+difficolta = 3
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE5C]
+situazione = "crisi"
+avversario = "veterano"
+difficolta = 3
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE6A]
+situazione = "crisi"
+avversario = "regolare"
+difficolta = 3
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE7A]
+situazione = "guerra"
+avversario = "veterano"
+difficolta = 4
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE7B]
+situazione = "guerra"
+avversario = "veterano"
+difficolta = 4
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE7C]
+situazione = "guerra"
+avversario = "veterano"
+difficolta = 4
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE8A]
+situazione = "guerra"
+avversario = "regolare"
+difficolta = 4
+operazione_speciale = false
+artico = true
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE8B]
+situazione = "guerra"
+avversario = "regolare"
+difficolta = 4
+operazione_speciale = false
+artico = true
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE8C]
+situazione = "guerra"
+avversario = "regolare"
+difficolta = 4
+operazione_speciale = false
+artico = true
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE9A]
+situazione = "guerra"
+avversario = "elite"
+difficolta = 5
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE9B]
+situazione = "guerra"
+avversario = "elite"
+difficolta = 5
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = []
+
+[missioni_originali.SCENE9C]
+situazione = "guerra"
+avversario = "elite"
+difficolta = 5
+operazione_speciale = false
+artico = false
+esiti_fuoco_senza_ordine = []

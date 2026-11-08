@@ -1,0 +1,3 @@
+# R5: periscopio su subito e ingrandimento alto (PROVA_T1_EMERSIONE)
+0 periscopio
+1 cambia_ingrandimento

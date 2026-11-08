@@ -1,0 +1,154 @@
+# Portaerei convenzionale Kitty Hawk (CV-63), come nel 1984: la variante della nimitz del kit. Lo scafo, il ponte
+# angolato, gli elevatori, gli sponsoni e i velivoli sono quelli della Nimitz riportati alla lunghezza della Kitty Hawk
+# (323,6 m invece di 332,8: x per 0,972); l'isola, l'albero e il traliccio poppiero stanno dove li mette la foto di
+# dritta della Kitty Hawk (l'isola piu' a proravia, da 183 a 215 m dalla prua), col fumaiolo sul cielo dell'isola.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Le sezioni della Nimitz, i velivoli e le armi: STIMA per la Kitty Hawk. Modello proprio
+# (blocco H del kit, 30/10/2026): prima la classe S17 usava la nimitz.
+nome: Kitty Hawk (CV-63)
+uscita: extracted/navi/kitty_hawk
+moduli_parti: [nimitz_parti.py]
+
+# Lo scafo del kit e' ridotto a una lamina invisibile (alta 2 cm): lo scafo vero e' la parte
+# scafo_profilato (nimitz_parti.py), con il profilo concavo della prua svasata misurato sulla foto.
+# L resta 323,6 perche' definisce l'origine delle posizioni {prua: d}.
+scafo:
+  L: 323.6
+  B: 0.1
+  bordo: [[0, 0.02], [323.6, 0.02]]
+  stazioni: 2
+  bagnasciuga: 0.01
+
+parti:
+  - tipo: scafo_profilato
+    nome: scafo
+    L: 323.6
+    B: 40.8
+    bordo: [[0, 16.8], [323.6, 16.8]]   # sommita' dello scafo (sotto la lastra del ponte di volo)
+    # profilo del dritto [distanza dalla prua, quota]: piede a 14,6 m dietro la punta del ponte
+    profilo_prua: [[0, 16.5], [5.8, 14.8], [10.3, 11.9], [13.7, 7.6], [14.6, 0]]
+    finezza_prua: 85
+    specchio: 0.50         # specchio stretto al galleggiamento...
+    specchio_alto: 0.95    # ...e largo in coperta (foto di giardinetto della Eisenhower)
+    lunghezza_poppa: 70
+    svasatura: 0.12
+    pienezza: [0.75, 0.40]
+  # sbalzi di poppa sotto il ponte di volo (piattaforme del fantail), oltre lo specchio
+  - {tipo: scatola, nome: poppa_bassa, x0: {prua: 329.1}, x1: {prua: 320.9}, y0: -12.0, y1: 12.0, z0: 3.5, z1: 9.1}
+  - {tipo: scatola, nome: poppa_alta, x0: {prua: 327.2}, x1: {prua: 320.9}, y0: -15.0, y1: 15.0, z0: 9.1, z1: 15.0}
+  # ---------------------------------------------------------------- ponte di volo e sbalzi
+  - tipo: ponte_volo
+    nome: ponte_di_volo
+    z0: 16.8
+    z1: 18.8
+    caduta: 4.0
+    # pianta misurata per retroproiezione sul piano del ponte dalla ripresa aerea di sinistra (Roosevelt 1986)
+    # e dalla foto di prua calibrata (Eisenhower 1987)
+    stazioni:                       # [x, bordo di dritta, bordo di sinistra]
+      - [{prua: 0.0}, -12.0, 11.5]
+      - [{prua: 19.4}, -15.5, 11.5]
+      - [{prua: 43.8}, -19.0, 12.5]
+      - [{prua: 72.9}, -21.5, 16.0]
+      - [{prua: 81.7}, -24.0, 22.0]     # inizio dello sbalzo del ponte angolato
+      - [{prua: 95.3}, -26.0, 40.0]     # spigolo prodiero del ponte angolato (anche dalla foto di prua)
+      - [{prua: 108.9}, -27.0, 39.5]
+      - [{prua: 177.9}, -30.0, 33.0]
+      - [{prua: 260.6}, -31.0, 31.0]
+      - [{prua: 276.1}, -31.0, 30.5]
+      - [{prua: 278.1}, -31.0, 20.0]    # gradino a poppavia dell'elevatore 4
+      - [{prua: 301.4}, -27.0, 18.0]
+      - [{prua: 323.6}, -22.0, 16.5]
+    scafo:                          # semilarghezza dello scafo alla quota z0 - caduta
+      - [{prua: 0.0}, 2.0]
+      - [{prua: 24.3}, 11.0]
+      - [{prua: 58.3}, 18.0]
+      - [{prua: 87.5}, 22.5]
+      - [{prua: 291.7}, 22.5]
+      - [{prua: 323.6}, 19.0]
+  # elevatori: tre a dritta (due a proravia e uno a poppavia dell'isola), uno a sinistra a poppa
+  - {tipo: elevatore, nome: elevatore_1, x0: {prua: 151.7}, x1: {prua: 129.2}, y0: -26.5, y1: -42.0, z: 18.8, spessore: 2.0}
+  - {tipo: elevatore, nome: elevatore_2, x0: {prua: 181.2}, x1: {prua: 155.4}, y0: -28.5, y1: -44.0, z: 18.8, spessore: 2.0}
+  - {tipo: elevatore, nome: elevatore_3, x0: {prua: 273.5}, x1: {prua: 251.1}, y0: -28.5, y1: -44.0, z: 18.8, spessore: 2.0}
+  - {tipo: elevatore, nome: elevatore_4, x0: {prua: 277.1}, x1: {prua: 254.8}, y0: 29.0, y1: 38.0, z: 18.8, spessore: 2.0}
+  # ---------------------------------------------------------------- isola (sul bordo di dritta)
+  # lunghezza e quote dalla foto di fianco; larghezza (circa 18 m) dalla foto di prua
+  - {tipo: tuga, nome: isola_bassa, x0: {prua: 211.3}, x1: {prua: 184.3}, y0: -36.0, y1: -20.0, z0: 18.8, z1: 27.1, rastrema: 0.99}
+  - {tipo: tuga, nome: isola_alta, x0: {prua: 214.6}, x1: {prua: 183.0}, y0: -37.0, y1: -19.0, z0: 27.1, z1: 32.2, rastrema: 0.99}
+  - {tipo: tuga, nome: isola_superiore, x0: {prua: 205.3}, x1: {prua: 183.0}, y0: -37.0, y1: -19.0, z0: 32.2, z1: 36.8, rastrema: 0.98}
+  - {tipo: tuga, nome: isola_cielo, x0: {prua: 203.3}, x1: {prua: 187.3}, y0: -33.0, y1: -23.0, z0: 36.8, z1: 38.2}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 183.5}, x1: {prua: 182.8}, y0: -36.5, y1: -19.5, z0: 32.0, z1: 33.2, mat: nero}
+  - {tipo: antenna_piana, nome: sps48, x: {prua: 191.7}, y: -28.0, z0: 38.2, larghezza: 5.0, altezza: 4.9, sostegno: 0.5, orientamento: 30}
+  # albero principale (cima a 63 m), pennoni
+  - {tipo: traliccio, nome: albero_principale, x: {prua: 194.4}, y: -28.0, base: 2.6, cima: 0.9, z0: 38.2, z1: 52.4, piani: [44.5, 48.0]}
+  - {tipo: asta, nome: alberetto, da: [{prua: 194.4}, -28.0, 52.4], a: [{prua: 194.4}, -28.0, 61.6], spessore: 0.45}
+  - {tipo: pennone, nome: pennone_alto, x: {prua: 194.4}, y: -28.0, z: 52.4, semilunghezza: 9.0}
+  - {tipo: asta, nome: braccio_alto, da: [{prua: 202.8}, -28.0, 52.4], a: [{prua: 192.8}, -28.0, 52.4], spessore: 0.3}
+  - {tipo: pennone, nome: pennone_basso, x: {prua: 194.4}, y: -28.0, z: 48.0, semilunghezza: 6.0}
+  - {tipo: asta, nome: braccio_basso, da: [{prua: 204.3}, -28.0, 48.0], a: [{prua: 191.3}, -28.0, 48.0], spessore: 0.3}
+  # il fumaiolo della Kitty Hawk (convenzionale) sul cielo dell'isola, a poppavia dell'albero (STIMA dalla foto)
+  - {tipo: tuga, nome: fumaiolo, x0: {prua: 214.0}, x1: {prua: 205.5}, y0: -33.0, y1: -25.0, z0: 32.2, z1: 41.2, rastrema: 0.92}
+  - {tipo: scatola, nome: cappello_fumaiolo, x0: {prua: 213.6}, x1: {prua: 205.9}, y0: -32.6, y1: -25.4, z0: 41.2, z1: 41.8, mat: nero}
+  # traliccio poppiero sul bordo di dritta, con antenna radar in cima (cima a 41,3 m)
+  - {tipo: traliccio, nome: traliccio_poppiero, x: {prua: 228.0}, y: -36.0, base: 2.8, cima: 1.2, z0: 18.8, z1: 39.7, piani: [28.0, 33.5]}
+  - {tipo: antenna_radar, nome: radar_poppiero, x: {prua: 228.0}, y: -36.0, z0: 39.7, larghezza: 5.5, altezza: 3.0, orientamento: 60}
+  # asta sul bordo di dritta a proravia (lato confermato dalla ripresa aerea di sinistra; cima a 31,8 m)
+  - {tipo: asta, nome: asta_prodiera, da: [{prua: 90.4}, -28.0, 18.8], a: [{prua: 90.4}, -28.0, 31.8], spessore: 0.5}
+  # ---------------------------------------------------------------- sponsoni e armi
+  - {tipo: sponsone, nome: sponsone_prodiero_dritta, x0: {prua: 75.8}, x1: {prua: 52.5}, y0: -20.0, y1: -27.0, z: 13.9, mensola: 7.0, lato: -1}
+  - {tipo: sea_sparrow, nome: sea_sparrow_prodiero_dritta, x: {prua: 64.2}, y: -24.0, z0: 13.9}
+  # posizioni tipiche della configurazione 1989 (3 Mk29, 3 Phalanx): non misurate sulle foto
+  - {tipo: sponsone, nome: sponsone_prodiero_sinistra, x0: {prua: 95.3}, x1: {prua: 83.6}, y0: 24.0, y1: 32.0, z: 13.5, mensola: 5.0, lato: 1}
+  - {tipo: ciws, nome: phalanx_prodiero_sinistra, x: {prua: 89.5}, y: 29.0, z0: 13.5}
+  - {tipo: sponsone, nome: sponsone_poppiero_dritta, x0: {prua: 317.0}, x1: {prua: 285.9}, y0: -21.0, y1: -30.0, z: 13.5, mensola: 5.0, lato: -1}
+  - {tipo: ciws, nome: phalanx_poppiero_dritta, x: {prua: 289.8}, y: -26.0, z0: 13.5}
+  - {tipo: sea_sparrow, nome: sea_sparrow_poppiero_dritta, x: {prua: 309.2}, y: -25.0, z0: 13.5, orientamento: 180}
+  - {tipo: sponsone, nome: sponsone_poppiero_sinistra, x0: {prua: 318.9}, x1: {prua: 283.9}, y0: 16.0, y1: 26.0, z: 13.0, mensola: 5.0, lato: 1}
+  - {tipo: sea_sparrow, nome: sea_sparrow_poppiero_sinistra, x: {prua: 289.8}, y: 21.5, z0: 13.0, orientamento: 180}
+  - {tipo: ciws, nome: phalanx_poppiero_sinistra, x: {prua: 311.2}, y: 21.0, z0: 13.0}
+
+  # ---------------------------------------------------------------- velivoli parcheggiati (carico tipico
+  # in navigazione, dalle foto della Eisenhower 1982 e 1987): sagome basse, muso [x, y, orientamento]
+  - tipo: aerei
+    nome: aerei_prua
+    z0: 18.8
+    posizioni: [[{prua: 21.4}, -14.0, 60], [{prua: 35.0}, -17.0, 60], [{prua: 48.6}, -19.0, 60], [{prua: 62.2}, -19.5, 60],
+                [{prua: 75.8}, -19.5, 60], [{prua: 89.5}, -19.5, 60], [{prua: 31.1}, -1.0, 45], [{prua: 46.7}, -3.0, 45],
+                [{prua: 62.2}, -4.0, 45], [{prua: 77.8}, -4.0, 45]]
+  - tipo: aerei
+    nome: aerei_dritta
+    z0: 18.8
+    posizioni: [[{prua: 116.7}, -19.5, 90], [{prua: 157.5}, -21.0, 90], [{prua: 184.7}, -21.0, 90],
+                [{prua: 245.0}, -21.0, 100], [{prua: 258.6}, -21.0, 100], [{prua: 272.3}, -21.0, 100], [{prua: 285.9}, -20.0, 100]]
+  - tipo: aerei
+    nome: aerei_poppa
+    z0: 18.8
+    posizioni: [[{prua: 313.1}, -15.0, 0], [{prua: 313.1}, -5.0, 0], [{prua: 313.1}, 5.0, 0], [{prua: 313.1}, 15.0, 0]]
+  - tipo: aerei
+    nome: aerei_sinistra
+    z0: 18.8
+    posizioni: [[{prua: 108.9}, 31.0, -60], [{prua: 122.5}, 32.0, -60]]
+
+
+# la foto da Wikimedia Commons (permesso dell'utente del 30/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: dritta_aerea
+    file: extracted/navi/kitty_hawk/foto/2400px-An_aerial_starboard_beam_view_of_the_aircraft_carrier_USS_KITTY_HAWK_(CV_63)_underway_-_DPLA_-_6f603b2a3c6b7844547858feeafc59b2.jpg
+    nave: USS Kitty Hawk (CV-63), 30/1/1985 circa (US Navy, pubblico dominio), di dritta al traverso, dall'alto
+    qualita: 1.0
+    esponente_peso: 4
+    specchiabile: false     # riflessa porterebbe a sinistra gli elevatori e l'isola di dritta
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 2 px (contorno_modello.py --maschera)
+    maschera_file: extracted/navi/kitty_hawk/foto/dritta_aerea_maschera.png
+    # il numero vero tolto (come sulle altre classi): il 63 sull'isola
+    cancella: [[990, 976, 1054, 1022]]
+    orizzonte_punti: [[300, 850], [2200, 845]]   # nella foschia, a +-10 px
+    solo_punti: true
+    riquadro: [380, 780, 2120, 1150]
+    fotocamera_iniziale: {posizione: [0, -4000, 600], bersaglio: [0, 0, 12], f: 15000}
+    limiti_fotocamera: {elevazione: [0.0, 30], distanza: [500, 20000], focale: [1000, 200000]}
+    punti:
+      - [[{prua: 0}, 0, 18.8], [2074, 1043]]          # punta del ponte di volo
+      - [[{prua: 323.6}, 0, 18.8], [438, 1033]]       # estremita' poppiera del ponte di volo
+      - [[{prua: 183.0}, -37.0, 36.8], [1148, 944]]   # isola, spigolo prodiero alto (lato dritto)
+      - [[{prua: 194.4}, -28.0, 61.6], [1093, 818]]   # cima dell'alberetto
+      - [[{prua: 228.0}, -36.0, 42.7], [918, 914]]    # cima del radar del traliccio poppiero

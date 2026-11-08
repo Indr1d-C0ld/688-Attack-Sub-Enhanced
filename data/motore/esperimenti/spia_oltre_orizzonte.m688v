@@ -1,0 +1,17 @@
+# Esperimento pronto del vetrino di Dio (docs/28 §5, D3; formato: nota trailer1-d2-forma-m688v.md). La scena M3: uno Slava
+# (2) con una Krivak (3) e, a 120 km, due Perry (4, 5), in guerra. Una spia da' al Patto, ogni minuto e per tutta la partita,
+# il quadro vero della NATO. Slava e Krivak lo ricevono subito; verso i sottomarini passa dal canale (nave_spia.m688v), e qui
+# l'unico sottomarino e' il giocatore: per il quadro ai sottomarini questa scena fa da controllo. La caccia sul dato si misura nella M4.
+[esperimento]
+titolo = "La spia oltre l'orizzonte"
+mostra = "Lo Slava non vede le Perry a 120 km: con la spia riceve ogni minuto dove sono"
+ipotesi = "Senza spia lo Slava non ha un bersaglio e non lancia; con la spia lancia oltre l'orizzonte"
+codice = "8CGVJJ-KR0000-04K000-00009Z-G0003T"
+semi = 10
+da = 1
+
+[[intervento]]
+tempo = 0.0
+tipo = "spia"
+durata_s = 0.0
+testi = { parte = "urss", altra = "usa" }

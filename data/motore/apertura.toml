@@ -1,0 +1,234 @@
+# Il video d'apertura (docs/29_video_apertura.md): la regia che il motore recita all'avvio, sulle scene di data/motore/apertura.
+# Battute a 72 alla semiminima (3,33 s). `compressione`: s di missione per secondo di film (0: la scena aspetta).
+# `ritaglio`: x, y, l, a sulla tela: resta solo lo strumento, nel nero, senza le scritte d'aiuto delle stazioni; `scala` lo ingrandisce.
+# `cuffia`: il volume del mare in cuffia, che fa la crescita fra i quattro tempi. `tramonto`: il sole basso nella palette del film.
+# Le navi lontane entrano a 112 s, quelle dei periscopi a 162 s; il 688 lancia a 243,6 s e l'Alfa a 247 s: gli stessi istanti di scene_interazioni --apertura.
+bpm = 72.0
+preriscaldo_s = 30.0
+seme = 3   # nessuna sorgente ambientale sopra il rumore nel silenzio (col seme 1, un peschereccio a 6,9 km faceva una banda a 160 gradi); la riga della nave resta uguale
+brano = "apertura"
+anno = 1989
+mese = 6
+giorno = 12
+ora_utc = 21.55
+latitudine = 60.9
+longitudine = -7.0
+
+# --- il silenzio ---
+[[inquadratura]]   # 01: nero; un ping lontanissimo e il suo eco
+ping = true
+[[inquadratura]]   # 02: la cascata del 688, rumore di mare
+battello = "688"
+stazione = 8
+cifre = [8]
+compressione = 4.0
+ritaglio = [5, 40, 315, 238]
+scala = 2.0
+cuffia = 0.25
+entra_s = 1.0
+[[inquadratura]]   # 03: lo strumento dell'Alfa, rumore di mare
+battello = "alfa"
+stazione = 8
+cifre = [8]
+compressione = 4.0
+ritaglio = [8, 2, 304, 284]
+scala = 1.65
+cuffia = 0.09
+entra_s = 1.0
+[[inquadratura]]   # 04: la carta del 688 vuota
+battello = "688"
+stazione = 6
+compressione = 4.0
+ritaglio = [0, 18, 640, 332]
+luce = 0.55
+entra_s = 1.0
+
+# --- la traccia ---
+[[inquadratura]]   # 05: sulla cascata del 688 nasce una riga debole
+battello = "688"
+stazione = 8
+compressione = 4.0
+ritaglio = [5, 40, 315, 238]
+scala = 2.0
+cuffia = 0.3
+[[inquadratura]]   # 06: sull'Alfa nasce una riga debole
+battello = "alfa"
+stazione = 8
+compressione = 4.0
+ritaglio = [8, 2, 304, 284]
+scala = 1.65
+cuffia = 0.11
+[[inquadratura]]   # 07: il periscopio del 688 al tramonto: la Krivak
+battello = "688"
+stazione = 5
+compressione = 1.0
+guarda = 2
+cifre = [3]
+ritaglio = [165, 30, 310, 292]
+scala = 1.5
+tramonto = 1.0
+[[inquadratura]]   # 08: il periscopio dell'Alfa: la Perry, in specchio
+battello = "alfa"
+stazione = 5
+compressione = 1.0
+guarda = 3
+cifre = [3]
+ritaglio = [165, 30, 310, 292]
+scala = 1.5
+tramonto = 1.0
+
+# --- la caccia ---
+[[inquadratura]]   # 09: le due carte affiancate
+battello = "doppia"
+stazione = 6
+compressione = 4.0
+colonna_688 = 160
+colonna_alfa = 160
+ritaglio = [0, 18, 640, 332]
+[[inquadratura]]   # 10a: il 688 accosta: la bussola del timoniere
+battute = 1.0
+battello = "688"
+stazione = 4
+compressione = 4.0
+pannello = true
+ritaglio = [8, 377, 170, 86]
+scala = 3.0
+[[inquadratura]]   # 10b: l'Alfa scende: il profilo di quota
+battute = 1.0
+battello = "alfa"
+stazione = 4
+compressione = 4.0
+pannello = true
+ritaglio = [6, 30, 414, 322]
+scala = 1.4
+[[inquadratura]]   # 11: le Armi del 688: un tubo che si allaga (armato dopo 20 s, in tempo per il lancio)
+effetto = "tubo_allaga"
+volume_effetto = 0.4
+battello = "688"
+stazione = 7
+compressione = 1.0
+pannello = true
+ritaglio = [240, 377, 396, 86]
+scala = 1.6
+[[inquadratura]]   # 12: le Armi dell'Alfa: lo stesso
+effetto = "tubo_allaga"
+volume_effetto = 0.4
+battello = "alfa"
+stazione = 7
+compressione = 1.0
+pannello = true
+ritaglio = [240, 377, 396, 86]
+scala = 1.6
+
+# --- il culmine ---
+[[inquadratura]]   # 13a: il lancio e il transitorio sulla cascata del 688
+effetto = "tubo_lancio"
+volume_effetto = 0.3
+bordo = 0.5
+battute = 1.0
+battello = "688"
+stazione = 8
+compressione = 1.0
+ritaglio = [5, 40, 315, 238]
+scala = 2.0
+cuffia = 0.25
+[[inquadratura]]   # 13b: subito dopo, quello dell'Alfa
+effetto = "tubo_lancio"
+volume_effetto = 0.3
+battute = 1.0
+battello = "alfa"
+stazione = 8
+compressione = 1.0
+ritaglio = [8, 2, 304, 284]
+scala = 1.65
+cuffia = 0.12
+[[inquadratura]]   # 14: i due strumenti affiancati che si riempiono del rumore dei siluri
+battello = "doppia"
+stazione = 8
+compressione = 4.0
+ritaglio = [0, 35, 640, 250]
+cuffia = 0.4
+[[inquadratura]]   # 15: nero e silenzio
+battute = 1.0
+[[inquadratura]]   # 16: il titolo esce dal nero
+titolo = true
+
+# --- gli ordini, al posto del giocatore ---
+[[ordine]]
+battello = "688"
+t = 0.0
+tipo = "quota_periscopica"
+[[ordine]]
+battello = "alfa"
+t = 0.0
+tipo = "quota_periscopica"
+[[ordine]]
+battello = "688"
+t = 140.0
+tipo = "periscopio"
+n = 1
+[[ordine]]
+battello = "alfa"
+t = 140.0
+tipo = "periscopio"
+n = 1
+[[ordine]]
+battello = "688"
+t = 177.0
+tipo = "periscopio"
+[[ordine]]
+battello = "alfa"
+t = 177.0
+tipo = "periscopio"
+[[ordine]]
+battello = "688"
+t = 178.0
+tipo = "giri"
+a = 0.6
+[[ordine]]
+battello = "alfa"
+t = 178.0
+tipo = "giri"
+a = 0.5
+[[ordine]]
+battello = "688"
+t = 204.0
+tipo = "accosta_per"
+a = 240.0
+b = 35.0
+[[ordine]]
+battello = "alfa"
+t = 185.0
+tipo = "quota_con_angolo"
+a = 150.0
+b = 12.0
+[[ordine]]
+battello = "688"
+t = 225.0
+tipo = "designa_bersaglio"
+n = 1
+[[ordine]]
+battello = "alfa"
+t = 225.0
+tipo = "designa_bersaglio"
+n = 1
+[[ordine]]
+battello = "688"
+t = 223.0
+tipo = "carica_tubo"
+n = 1
+[[ordine]]
+battello = "alfa"
+t = 226.5
+tipo = "carica_tubo"
+n = 1
+[[ordine]]
+battello = "688"
+t = 243.6
+tipo = "lancia"
+n = 1
+[[ordine]]
+battello = "alfa"
+t = 247.0
+tipo = "lancia"
+n = 1

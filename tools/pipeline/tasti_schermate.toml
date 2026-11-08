@@ -1,0 +1,516 @@
+# I tasti di ogni schermata, per il volume 1, appendice A (tools/pipeline/manuale_tasti.py, che spiega le voci).
+# Scritto a mano: la spiegazione. Dal codice: i tasti (tasti_predefiniti.toml e applica() in finestra.cpp) e il
+# controllo (manuale.py --controlla), che segnala ogni tasto delle `funzioni` che qui manca e ogni `uso` che il codice
+# non ha piu'. Le righe con lo stesso `gruppo`, una dopo l'altra, fanno una tabella.
+
+# --- il menu ---------------------------------------------------------------------------------------------------------
+
+[[schermata]]
+titolo = "Classico o Enhanced (solo al primo avvio)"
+funzioni = ["schermata_modo.cpp:SchermataModo::comandi"]
+tasto = [
+    { uso = ["campo:ruota"], cosa = "il pannello a sinistra (classico) o a destra (Enhanced)" },
+    { uso = ["campo:cifre"], tasti = ["pulsanti:1-2"], cosa = "1 classico, 2 Enhanced" },
+    { uso = ["campo:invio"], cosa = "conferma" },
+    { uso = ["campo:esc"], cosa = "esce dal gioco" },
+    { uso = ["campo:clic"], cosa = "sceglie il pannello, un secondo clic conferma; i tasti del piede" },
+]
+
+[[schermata]]
+titolo = "Scelta della missione"
+funzioni = ["scelta_missione.cpp:SchermataScelta::comandi", "scelta_missione.cpp:SchermataScelta::comandi_originali"]
+nota = "Le opzioni della partita e i tasti di passaggio valgono in tutte e tre le schede (cap. 1, §1.5)."
+tasto = [
+    { gruppo = "In tutte le schede", uso = ["lettera:O"], cosa = "il modo di gioco: Enhanced o classico (anche col clic sul primo tasto in alto); la scelta resta nelle preferenze" },
+    { gruppo = "In tutte le schede", uso = ["lettera:R"], cosa = "la scheda successiva: missioni originali, missione rapida, editor" },
+    { gruppo = "In tutte le schede", uso = ["lettera:P"], cosa = "digita un codice: partita, missione rapida o sandbox (§11.4, §12.7)" },
+    { gruppo = "In tutte le schede", uso = ["lettera:V"], cosa = "la sandbox, il vetrino dell'IA, sulla missione scelta: le regolazioni, poi la partita senza giocatore (§12); nella scheda editor vale come G" },
+    { gruppo = "In tutte le schede", uso = ["campo:tab"], tasti = ["comando:zona_avanti"], cosa = "stazioni 1989 o moderne (§1.4)" },
+    { gruppo = "In tutte le schede", uso = ["lettera:D", "campo:minuti"], tasti = ["fisso:D"], cosa = "carta d'epoca o fondale vero (anche `[` e `]`, dove la tastiera li ha); ogni riga delle opzioni si può anche cliccare" },
+    { gruppo = "In tutte le schede", uso = ["campo:cancella_punto"], cosa = "nemici (ASW aereo e cannoni): facile, normale, realistico, minaccia percepita" },
+    { gruppo = "In tutte le schede", uso = ["campo:siluro"], cosa = "il sonarista dell'equipaggio: nessuno, recluta, medio, esperto" },
+    { gruppo = "In tutte le schede", uso = ["lettera:N"], cosa = "navigazione: perfetta, realistica, o realistica col GPS 1990+ (cap. 5)" },
+    { gruppo = "In tutte le schede", uso = ["lettera:M"], cosa = "la musica del menu: il tema dell'Enhanced in FM o con l'MT-32 (i WAV resi dalle ROM dell'utente, dove ci sono), i titoli del 1989 in AdLib, Tandy o Covox, o spenta (§1.6)" },
+    { gruppo = "In tutte le schede", uso = ["lettera:A"], cosa = "il video d'apertura: sempre, la prima volta, mai (§1.5)" },
+    { gruppo = "In tutte le schede", uso = ["campo:enciclopedia"], cosa = "il Museo" },
+    { gruppo = "In tutte le schede", uso = ["campo:cerca"], cosa = "l'albo dei comandanti" },
+    { gruppo = "Missioni originali", uso = ["campo:su_giu"], cosa = "la missione sopra o sotto" },
+    { gruppo = "Missioni originali", uso = ["campo:cifre"], tasti = ["pulsanti:1-9"], cosa = "la missione di quella riga" },
+    { gruppo = "Missioni originali", uso = ["campo:ruota"], cosa = "il battello: 688 a sinistra, Alfa a destra (se la missione li ha tutti e due)" },
+    { gruppo = "Missioni originali", uso = ["campo:punto"], cosa = "meteo del teatro e della stagione, o mare 3 e sereno" },
+    { gruppo = "Missioni originali", uso = ["campo:invio"], cosa = "la missione scelta: apre il briefing" },
+    { gruppo = "Missioni originali", uso = ["campo:esc"], cosa = "esce dal gioco" },
+    { gruppo = "Missioni originali", uso = ["campo:clic"], cosa = "sceglie la missione nella colonna del battello; sulle linguette la scheda; nel piede conferma o esce" },
+]
+
+[[schermata]]
+titolo = "Scelta della missione: missione rapida"
+funzioni = ["scelta_missione.cpp:SchermataScelta::comandi_rapida"]
+nota = "Valgono anche i tasti di tutte le schede (sopra)."
+tasto = [
+    { uso = ["campo:su_giu"], cosa = "il parametro sopra o sotto" },
+    { uso = ["campo:ruota"], cosa = "il valore del parametro; sulla riga del seme, un seme nuovo" },
+    { uso = ["campo:punto"], cosa = "meteo del teatro e della stagione, o fisso" },
+    { uso = ["lettera:E"], cosa = "apre la missione generata nell'editor" },
+    { uso = ["campo:invio"], cosa = "gioca la missione; sulla riga del codice, digita un codice" },
+    { uso = ["campo:esc"], cosa = "esce dal gioco" },
+    { uso = ["campo:clic"], cosa = "sceglie il parametro; nel piede gioca o esce" },
+]
+
+[[schermata]]
+titolo = "Scelta della missione: editor"
+funzioni = ["scelta_missione.cpp:SchermataScelta::comandi_editor"]
+nota = "Valgono anche i tasti di tutte le schede (sopra)."
+tasto = [
+    { uso = ["campo:su_giu"], cosa = "la riga: missione nuova, da una originale, i vetrini pronti dell'IA (in verde, §12.8), le missioni salvate" },
+    { uso = ["campo:ruota"], cosa = "sulla riga «da una originale»: quale missione convertire" },
+    { uso = ["campo:invio"], cosa = "apre l'editor sulla riga scelta; su un vetrino pronto, le sue regolazioni" },
+    { uso = ["lettera:G"], cosa = "gioca subito la missione salvata, senza aprire l'editor; su un vetrino pronto, le sue regolazioni" },
+    { uso = ["lettera:I"], cosa = "importa un pacchetto" },
+    { uso = ["campo:esc"], cosa = "esce dal gioco" },
+    { uso = ["campo:clic"], cosa = "sceglie la riga, un secondo clic la apre; nel piede apre o esce" },
+]
+
+[[schermata]]
+titolo = "Scelta della missione: codice"
+funzioni = ["scelta_missione.cpp:SchermataScelta::comandi_codice"]
+nota = "Dopo P, in ogni scheda (§11.4)."
+tasto = [
+    { uso = ["campo:testo"], cosa = "lettere, cifre e trattini del codice" },
+    { uso = ["campo:cancella"], cosa = "cancella l'ultimo carattere" },
+    { uso = ["campo:invio"], cosa = "legge il codice: una rapida va alla sua scheda, una partita parte subito, un codice sandbox riapre le regolazioni già compilate" },
+    { uso = ["campo:esc"], cosa = "annulla" },
+]
+
+[[schermata]]
+titolo = "Sandbox: regolazioni"
+funzioni = ["regolazioni_sandbox.cpp:SchermataRegolazioni::comandi"]
+nota = "Dopo V nella scelta della missione (§12.3)."
+tasto = [
+    { uso = ["campo:su_giu"], cosa = "la riga" },
+    { uso = ["campo:ruota"], cosa = "il valore della riga" },
+    { uso = ["campo:invio"], cosa = "avvia la partita senza giocatore" },
+    { uso = ["lettera:S"], cosa = "una serie di 10 semi senza finestra, poi la sua schermata (§12.8)" },
+    { uso = ["campo:tab"], cosa = "la seconda pagina, gli interventi programmati del vetrino di Dio (anche col clic sulla scheda in alto a destra); Tab o Esc tornano alle regolazioni" },
+    { uso = ["campo:esc"], cosa = "torna alla scelta della missione" },
+    { uso = ["campo:clic"], cosa = "sceglie la riga, un secondo clic cambia il valore; nel piede avvia (a destra), fa la serie (al centro) o torna indietro (a sinistra)" },
+]
+
+[[schermata]]
+titolo = "Albo dei comandanti"
+funzioni = ["albo.cpp:SchermataAlbo::comandi"]
+tasto = [
+    { uso = ["campo:ruota"], cosa = "il cartellino precedente o successivo" },
+    { uso = ["campo:su_giu"], cosa = "la fila sopra o sotto" },
+    { uso = ["campo:invio"], cosa = "mette in carica il comandante scelto; sul cartellino vuoto, una carriera nuova. Nel modulo: il campo seguente; sull'ultimo apre il fascicolo" },
+    { gruppo = "Il modulo della carriera nuova", uso = ["campo:tab"], tasti = ["comando:zona_avanti"], cosa = "il campo seguente o precedente (anche su e giù; sinistra e destra cambiano la scelta; ogni casella si clicca)" },
+    { uso = ["lettera:F"], cosa = "il fascicolo del comandante" },
+    { uso = ["lettera:B"], cosa = "la bacheca dei riconoscimenti (senza un comandante scelto, i globali)" },
+    { uso = ["lettera:O"], cosa = "l'albo d'onore" },
+    { uso = ["lettera:S"], cosa = "le statistiche cumulate (senza un comandante scelto, le globali)" },
+    { uso = ["lettera:E", "campo:cancella"], tasti = ["fisso:E o Backspace"], cosa = "elimina la carriera del comandante scelto: una prima volta chiede conferma, la seconda è definitiva (anche coi tasti del piede); Esc la annulla" },
+    { uso = ["campo:esc"], cosa = "annulla l'eliminazione, o torna al menu" },
+    { uso = ["campo:clic"], cosa = "sceglie un cartellino, un secondo clic come Invio; nel piede: menu, albo d'onore (fascicolo con un comandante), statistiche, Invio" },
+    { gruppo = "Carriera nuova", uso = ["campo:testo"], cosa = "il nome" },
+    { gruppo = "Carriera nuova", uso = ["campo:cancella"], cosa = "cancella l'ultima lettera del nome" },
+    { gruppo = "Carriera nuova", uso = ["campo:su_giu"], cosa = "il campo: nome, marina, carriera breve o completa, indulgenza" },
+    { gruppo = "Carriera nuova", uso = ["campo:ruota"], cosa = "il valore del campo" },
+    { gruppo = "Carriera nuova", uso = ["campo:invio"], cosa = "crea la carriera" },
+    { gruppo = "Carriera nuova", uso = ["campo:esc"], cosa = "annulla" },
+]
+
+[[schermata]]
+titolo = "Fascicolo"
+funzioni = ["albo.cpp:SchermataFascicolo::comandi"]
+tasto = [
+    { uso = ["campo:ruota"], cosa = "la pagina: copertina, stato di servizio, note caratteristiche, decorazioni, provvedimenti" },
+    { uso = ["campo:invio"], cosa = "la pagina successiva" },
+    { uso = ["campo:su_giu"], cosa = "scorre il testo; nelle note caratteristiche, la missione sopra o sotto" },
+    { uso = ["lettera:P"], cosa = "nelle note caratteristiche: il replay della missione scelta, se c'è" },
+    { uso = ["campo:clic"], cosa = "i tasti del piede: indietro, replay, pagina prima e dopo" },
+    { uso = ["campo:esc"], cosa = "torna all'albo" },
+]
+
+[[schermata]]
+titolo = "Bacheca dei riconoscimenti"
+funzioni = ["bacheca.cpp:SchermataBacheca::comandi"]
+tasto = [
+    { uso = ["campo:cifre"], tasti = ["pulsanti:1-7"], cosa = "la scheda: tattici, stealth, tecnici, storici, carriera, editor, nascosti" },
+    { uso = ["campo:tab"], cosa = "la scheda successiva o precedente" },
+    { uso = ["campo:ruota", "campo:su_giu"], cosa = "il medaglione" },
+    { uso = ["lettera:G"], cosa = "i riconoscimenti del comandante o quelli globali" },
+    { uso = ["campo:clic"], cosa = "sceglie la scheda o il medaglione; i tasti del piede: indietro, comandante o globali, scheda successiva" },
+    { uso = ["campo:esc"], cosa = "torna indietro" },
+]
+
+[[schermata]]
+titolo = "Albo d'onore"
+funzioni = ["albo_onore.cpp:SchermataAlboOnore::comandi"]
+tasto = [
+    { uso = ["campo:cifre"], tasti = ["pulsanti:1-3"], cosa = "la scheda: migliori missioni, migliori carriere, comandanti storici" },
+    { uso = ["campo:tab"], cosa = "la scheda successiva o precedente" },
+    { uso = ["campo:su_giu"], cosa = "scorre il registro" },
+    { uso = ["campo:clic"], cosa = "sceglie la scheda dalla linguetta" },
+    { uso = ["campo:esc"], cosa = "torna indietro" },
+]
+
+[[schermata]]
+titolo = "Statistiche cumulate"
+funzioni = ["statistiche.cpp:SchermataStatisticheCumulate::comandi"]
+nota = "Due pagine: le statistiche (abitudini, armi, la carta dei teatri) e le imprese (ghiaccio, notte, pedinamento, soccorso, riconoscimento, mine, ASW aereo, armi e navigazione)."
+tasto = [
+    { uso = ["campo:cifre"], tasti = ["pulsanti:1-2"], cosa = "la pagina: 1 le statistiche, 2 le imprese" },
+    { uso = ["campo:tab"], cosa = "il teatro successivo o precedente; dalle imprese, torna alle statistiche" },
+    { uso = ["campo:clic"], cosa = "sulla carta: il teatro successivo; nel piede: altro teatro (dalle imprese: le statistiche) o indietro" },
+    { uso = ["campo:invio", "campo:esc"], tasti = ["campo:invio", "campo:esc"], cosa = "torna indietro" },
+]
+
+[[schermata]]
+titolo = "Museo"
+funzioni = ["museo.cpp:SchermataMuseo::comandi"]
+tasto = [
+    { uso = ["campo:ruota"], cosa = "la sezione accanto, una per pressione; dopo l'ultima si torna alla prima" },
+    { uso = ["campo:su_giu"], cosa = "la voce (tenuto, scorre); nell'indice, la sezione" },
+    { uso = ["campo:invio"], cosa = "apre l'indice delle sezioni; dall'indice, apre la sezione scelta" },
+    { uso = ["campo:tab"], cosa = "l'immagine successiva o precedente della voce" },
+    { uso = ["campo:compressione"], cosa = "gira la pagina del testo («(SEGUE) 1/3»)" },
+    { uso = ["campo:lancia"], cosa = "italiano o inglese" },
+    { uso = ["campo:cifre"], tasti = ["pulsanti:1-9"], cosa = "apre la voce del riferimento con quel numero" },
+    { uso = ["campo:esc"], cosa = "chiude l'indice; se no torna alla voce di prima; dalla prima, esce dal Museo" },
+    { uso = ["campo:clic"], cosa = "`<` e `>`: la sezione accanto; il nome della sezione: l'indice; una riga: la voce, o nell'indice la sezione; i tasti del piede: indietro, l'immagine, la pagina del testo" },
+]
+
+# --- prima della missione ----------------------------------------------------------------------------------------------
+
+[[schermata]]
+titolo = "Briefing"
+funzioni = ["briefing.cpp:SchermataBriefing::comandi"]
+tasto = [
+    { uso = ["campo:cifre"], tasti = ["pulsanti:1-8"], cosa = "accende o spegne un livello d'informazione della carta" },
+    { uso = ["campo:cifre"], tasti = ["comando:pulsante_9"], cosa = "tutti i livelli, o nessuno" },
+    { uso = ["campo:tab"], tasti = ["comando:zona_avanti"], cosa = "apre o chiude gli ordini a telescrivente" },
+    { uso = ["campo:veloce"], cosa = "la telescrivente scrive sei volte più in fretta" },
+    { uso = ["campo:su_giu"], cosa = "con gli ordini aperti, la pagina precedente o seguente («(SEGUE) n/m», «(FINE)»)" },
+    { uso = ["campo:ruota", "campo:su_giu"], tasti = ["fisso:le frecce"], cosa = "spostano la carta (con gli ordini chiusi)" },
+    { uso = ["campo:ingrandisci", "campo:riduci"], cosa = "ingrandisce o riduce la carta" },
+    { uso = ["campo:rotella"], tasti = ["fisso:rotella"], cosa = "sopra la carta la ingrandisce o la riduce, attorno al punto sotto il cursore; trascinare sposta la carta" },
+    { uso = ["campo:stazione"], tasti = ["comando:stazione_armi"], cosa = "la sala siluri: il carico (cap. 6)" },
+    { uso = ["campo:invio"], cosa = "in mare" },
+    { uso = ["campo:esc"], cosa = "rifiuta la missione" },
+    { uso = ["campo:clic"], cosa = "accende o spegne un livello dal pannello dei livelli; nel piede i tre pulsanti" },
+]
+
+[[schermata]]
+titolo = "Sala siluri"
+funzioni = ["schermata_siluri.cpp:SchermataSiluri::comandi", "schermata_siluri.cpp:SchermataSiluri::comandi_elenco"]
+tasto = [
+    { uso = ["campo:su_giu"], cosa = "l'arma del deposito" },
+    { uso = ["campo:ruota"], cosa = "destra la mette (in rastrelliera, nei pozzi o fra le esche), sinistra la toglie" },
+    { uso = ["campo:cifre"], tasti = ["pulsanti:1-6"], cosa = "la mette in quel tubo, o la toglie se c'è già" },
+    { uso = ["lettera:C"], cosa = "apre l'elenco dei carichi per compito (anche col clic sul pulsante del carico): frecce e Invio o il clic sulla riga lo applicano, Esc o un clic fuori chiudono senza cambiare" },
+    { uso = ["campo:tab"], cosa = "il carico successivo" },
+    { uso = ["lettera:S"], cosa = "applica il carico scelto" },
+    { uso = ["lettera:X"], cosa = "svuota" },
+    { uso = ["lettera:D"], cosa = "la dotazione dell'originale" },
+    { uso = ["campo:invio"], cosa = "in mare; con degli avvisi chiede conferma (Invio parte, Esc resta)" },
+    { uso = ["campo:esc"], cosa = "torna al briefing" },
+    { uso = ["campo:clic"], cosa = "sceglie l'arma del deposito; nel piede i pulsanti; nell'elenco, la riga" },
+]
+
+# --- in mare -----------------------------------------------------------------------------------------------------------
+
+[[schermata]]
+titolo = "In mare"
+funzioni = ["interfaccia.cpp:InterfacciaMissione::comandi", "interfaccia.cpp:InterfacciaMissione::comandi_stazioni",
+            "interfaccia.cpp:InterfacciaMissione::periscopi_vista", "interfaccia.cpp:InterfacciaMissione::comando_alfa",
+            "interfaccia.cpp:InterfacciaMissione::comandi_libretto",
+            "interfaccia.cpp:InterfacciaMissione::comandi_schermata"]
+nota = """
+I tasti che valgono da ogni stazione, uno per comando, sono nella tabella A.1; qui ci sono quelli che cambiano secondo
+la stazione. Le cifre sono i pulsanti della stazione. I capitoli 2-7 spiegano ogni comando.
+"""
+tasto = [
+    { gruppo = "Da ogni stazione", uso = ["campo:stazione"], tasti = ["fisso:`F2`-`F9`"], cosa = "la stazione (cap. 2); chiude anche la scelta del bersaglio" },
+    { gruppo = "Da ogni stazione", uso = ["campo:pausa"], cosa = "pausa" },
+    { gruppo = "Da ogni stazione", uso = ["campo:compressione"], cosa = "raddoppia o dimezza la compressione del tempo" },
+    { gruppo = "Da ogni stazione", uso = ["campo:esc"], cosa = "annulla la scelta in corso; chiude il registro, il menu dei punti nave, la libreria del sonar; toglie la pausa; altrimenti lascia la missione" },
+    { gruppo = "Da ogni stazione", uso = ["comando:aiuto_comandi"], cosa = "la schermata dei comandi, sulla scheda della stazione: F11 o Esc la chiude" },
+    { gruppo = "Da ogni stazione", uso = ["campo:azioni"], tasti = ["fisso:i tasti di manovra"], cosa = "timone, telegrafo, quota, pilota automatico, periscopio, antenna, emergenze (tabella A.1)" },
+    { gruppo = "Da ogni stazione", uso = ["campo:tubi"], cosa = "sceglie il tubo 1, 5 o 7 (missili)" },
+    { gruppo = "Da ogni stazione", uso = ["campo:lancia"], cosa = "lancia dal tubo scelto" },
+    { gruppo = "Da ogni stazione", uso = ["campo:siluro"], cosa = "il siluro filoguidato successivo" },
+    { gruppo = "Da ogni stazione", uso = ["campo:bersaglio"], cosa = "TARGET: ferma il tempo e fa scegliere il bersaglio fra i segni della vista (al periscopio) o della carta" },
+    { gruppo = "Da ogni stazione", uso = ["campo:silenzio"], cosa = "silenzio a bordo, con la ricarica realistica (cap. 6)" },
+    { gruppo = "Da ogni stazione", uso = ["campo:enciclopedia"], cosa = "Enhanced: la scheda dell'enciclopedia di ciò che si guarda" },
+    { gruppo = "Da ogni stazione", uso = ["campo:verita"], cosa = "la diagnosi dei contatti: classe, distanza e AOB veri" },
+    { gruppo = "Da ogni stazione", uso = ["campo:istantanea"], cosa = "salva la schermata" },
+    { gruppo = "Da ogni stazione", uso = ["comando:registro_messaggi"], cosa = "Enhanced: il registro dei messaggi di bordo" },
+    { gruppo = "Da ogni stazione", uso = ["comando:radar_giocatore"], cosa = "Enhanced: il radar del battello, emerso o con l'albero su" },
+    { gruppo = "Da ogni stazione", uso = ["comando:bqs15"], cosa = "Enhanced, 688: il BQS-15, il sonar per le mine" },
+    { gruppo = "Da ogni stazione", uso = ["comando:intercettazione"], cosa = "Enhanced: la pagina dell'intercettazione e dell'allarme siluro, sulla stazione Sonar" },
+    { gruppo = "Da ogni stazione", uso = ["comando:quadro_fondale"], cosa = "Enhanced: la pagina del quadro del fondale, sulla stazione Navigazione (§5.5); di nuovo, o Esc, la chiude" },
+    { gruppo = "Da ogni stazione", uso = ["comando:muto"], cosa = "classico: i suoni spenti o accesi, come Ctrl-Q nel 1989" },
+    { gruppo = "Da ogni stazione", uso = ["comando:tan"], cosa = "classico: i suoni senza i campioni, come Ctrl-N nel 1989; Enhanced, Alfa: il Tan" },
+    { gruppo = "Scelta del bersaglio (dopo TARGET)", uso = ["campo:lettere"], tasti = ["campo:lettere"], cosa = "il segno con quella lettera" },
+    { gruppo = "Scelta del bersaglio (dopo TARGET)", uso = ["campo:tab"], cosa = "il segno successivo o precedente, anche quelli senza lettera" },
+    { gruppo = "Scelta del bersaglio (dopo TARGET)", uso = ["campo:clic"], cosa = "il segno più vicino al clic, e la scelta si chiude" },
+    { gruppo = "Scelta del bersaglio (dopo TARGET)", uso = ["campo:invio"], cosa = "conferma; Esc senza bersaglio" },
+    { gruppo = "Alfa (Enhanced), da ogni stazione", uso = ["comando:boksit_rotta", "comando:boksit_quota"], cosa = "Boksit: il modo della rotta o della quota (manuale, automatico, programma)" },
+    { gruppo = "Alfa (Enhanced), da ogni stazione", uso = ["comando:boksit_tappa"], cosa = "Boksit: il programma dai punti di rotta della carta" },
+    { gruppo = "Alfa (Enhanced), da ogni stazione", uso = ["comando:sfoga"], cosa = "ПОКС: apre gli sfoghi delle casse principali" },
+    { gruppo = "Alfa (Enhanced), da ogni stazione", uso = ["comando:compensa_piu", "comando:compensa_meno"], cosa = "ПОКС: imbarca o espelle mezzo metro cubo nelle casse d'assetto" },
+    { gruppo = "Alfa (Enhanced), da ogni stazione", uso = ["comando:akkord_designa"], cosa = "Akkord: designa il bersaglio in uno slot libero" },
+    { gruppo = "Alfa (Enhanced), da ogni stazione", uso = ["comando:akkord_1", "comando:akkord_2", "comando:akkord_3"], cosa = "Akkord: sceglie il bersaglio 1, 2 o 3" },
+    { gruppo = "Stato (F3)", uso = ["campo:tab"], cosa = "il compartimento ingrandito, uno dopo l'altro, poi la scelta automatica" },
+    { gruppo = "Stato (F3)", uso = ["campo:cifre"], tasti = ["pulsanti:1-5"], cosa = "Enhanced: 1 isola il compartimento mostrato, poi chiude subito, a porte chiuse riapre; 5 la pagina delle squadre o di nuovo lo spaccato; nella pagina 2 e 3 scelgono un sistema, 4 lo porta in cima alle riparazioni (§7.3)" },
+    { gruppo = "Manovra (F4)", uso = ["campo:azioni"], tasti = ["comando:telegrafo_avanti", "comando:telegrafo_indietro"], cosa = "il telegrafo, avanti o indietro di una posizione: è la velocità" },
+    { gruppo = "Manovra (F4)", uso = ["campo:azioni"], tasti = ["comando:timone_sinistra", "comando:timone_dritta", "comando:timone_centro"], cosa = "il timone: a sinistra, a dritta, al centro" },
+    { gruppo = "Manovra (F4)", uso = ["campo:azioni"], tasti = ["comando:barra_su", "comando:barra_giu", "comando:barra_zero"], cosa = "la quota: più su, più giù, tiene questa (Enhanced: a passi di 15 m)" },
+    { gruppo = "Manovra (F4)", uso = ["campo:azioni"], tasti = ["comando:quota_periscopica"], cosa = "la quota periscopica" },
+    { gruppo = "Manovra (F4)", uso = ["campo:azioni"], tasti = ["comando:quota_150_piedi"], cosa = "la quota di 150 piedi" },
+    { gruppo = "Manovra (F4)", uso = ["campo:azioni"], tasti = ["comando:pilota_automatico"], cosa = "il pilota automatico sui punti di rotta della carta" },
+    { gruppo = "Manovra (F4)", uso = ["campo:azioni"], tasti = ["comando:emersione_emergenza"], cosa = "l'emersione d'emergenza" },
+    { gruppo = "Manovra (F4)", uso = ["campo:azioni"], tasti = ["comando:immersione_emergenza"], cosa = "Enhanced: l'immersione d'emergenza, avanti tutta alla quota di sicurezza" },
+    { gruppo = "Manovra (F4)", uso = ["campo:azioni"], tasti = ["comando:posati"], cosa = "Enhanced: posarsi sul fondo" },
+    { gruppo = "Periscopio (F5)", uso = ["campo:azioni"], tasti = ["comando:periscopio"], cosa = "alza o abbassa il periscopio, da ogni stazione" },
+    { gruppo = "Periscopio (F5)", uso = ["campo:ruota"], cosa = "ruota il periscopio (Maiusc più veloce; ad alto ingrandimento più lento)" },
+    { gruppo = "Periscopio (F5)", uso = ["campo:su_giu"], cosa = "Enhanced: l'elevazione, per cercare gli aerei; si ferma ai fermi a molla" },
+    { gruppo = "Periscopio (F5)", uso = ["campo:cambia_ingrandimento"], cosa = "classico: 1,5× o 6×; Enhanced, dalle altre stazioni: l'ingrandimento successivo" },
+    { gruppo = "Periscopio (F5)", uso = ["campo:ingrandisci"], cosa = "l'ingrandimento (Enhanced: il successivo, come il pulsante 3)" },
+    { gruppo = "Periscopio (F5)", uso = ["campo:cifre"], tasti = ["pulsanti:1-7"], cosa = "Enhanced: l'altro periscopio, alza o abbassa, ingrandimento, modo di visione, foto, filtro (§4.1); sull'Alfa la telecamera verticale (§4.4)" },
+    { gruppo = "Periscopio (F5)", uso = ["campo:stadimetro"], cosa = "lo stadimetro; coi telemetri sdoppiati apre l'immagine fantasma e poi legge la distanza (§4.3)" },
+    { gruppo = "Periscopio (F5)", uso = ["campo:minuti"], cosa = "stadimetro sdoppiato: sposta l'immagine fantasma del 2% (Maiusc del 10%)" },
+    { gruppo = "Periscopio (F5)", uso = ["campo:veloce"], cosa = "rotazione e stadimetro più veloci; negli strumenti della carta, passi più lunghi" },
+    { gruppo = "Periscopio: il libretto di riconoscimento (Enhanced, §4.3)", uso = ["comando:libretto"], cosa = "apre o chiude il libretto accanto alla vista; da un'altra stazione porta al Periscopio" },
+    { gruppo = "Periscopio: il libretto di riconoscimento (Enhanced, §4.3)", uso = ["campo:tab"], cosa = "la tavola seguente o precedente" },
+    { gruppo = "Periscopio: il libretto di riconoscimento (Enhanced, §4.3)", uso = ["campo:invio"], cosa = "IDENTIFICA: la classe della tavola al bersaglio designato, la sua altezza d'albero al quadrante" },
+    { gruppo = "Periscopio: il libretto di riconoscimento (Enhanced, §4.3)", uso = ["campo:minuti"], cosa = "a stadimetro chiuso: l'altezza sul quadrante a mano, 1 m (Maiusc 5 m)" },
+    { gruppo = "Periscopio: il libretto di riconoscimento (Enhanced, §4.3)", uso = ["campo:filo_rotta"], cosa = "l'angolo sulla prora, 10° a sinistra o a dritta" },
+    { gruppo = "Periscopio: il libretto di riconoscimento (Enhanced, §4.3)", uso = ["comando:osserva_aob"], cosa = "a periscopio alzato: l'angolo sulla prora va alla TMA" },
+    { gruppo = "Periscopio: il libretto di riconoscimento (Enhanced, §4.3)", uso = ["campo:aggancia"], cosa = "apre o chiude la scheda del filtro (parte, tipo, «cosa vedo»); chiusa, Tab sfoglia solo le tavole che passano" },
+    { gruppo = "Periscopio: il libretto di riconoscimento (Enhanced, §4.3)", uso = ["campo:esc"], cosa = "chiude la scheda del filtro, poi il libretto" },
+    { gruppo = "Periscopio: la scheda del filtro del libretto (Enhanced, §4.3)", uso = ["campo:su_giu"], cosa = "la riga: la parte, il tipo, le etichette (l'elenco scorre)" },
+    { gruppo = "Periscopio: la scheda del filtro del libretto (Enhanced, §4.3)", uso = ["campo:ruota"], cosa = "la parte o il tipo precedente o seguente, passando da TUTTE" },
+    { gruppo = "Periscopio: la scheda del filtro del libretto (Enhanced, §4.3)", uso = ["campo:invio", "comando:osserva_aob"], cosa = "il valore seguente, o segna e toglie la casella" },
+    { gruppo = "Periscopio: la scheda del filtro del libretto (Enhanced, §4.3)", uso = ["campo:cancella"], cosa = "la riga torna a TUTTE" },
+    { gruppo = "Periscopio: la scheda del filtro del libretto (Enhanced, §4.3)", uso = ["campo:aggancia", "campo:esc"], cosa = "chiudono la scheda; le frecce tornano al periscopio" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["campo:ingrandisci", "campo:riduci"], cosa = "ingrandisce o riduce" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["campo:punto"], cosa = "nuovo punto di rotta: frecce o clic per il cursore, Invio lo mette, Esc annulla; fino a nove" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["campo:cancella_punto"], cosa = "cancella l'ultimo punto di rotta (anche dalle altre stazioni)" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["campo:proiezione"], cosa = "la proiezione del battello e del bersaglio a N minuti" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["campo:minuti"], cosa = "i minuti della proiezione" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["campo:sfondo"], cosa = "classico: lo sfondo uniforme; Enhanced: lo stile della carta" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["campo:cifre"], tasti = ["pulsanti:1-3"], cosa = "le scie di tutti, la scia del bersaglio, la proiezione disegnata" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["campo:cifre"], tasti = ["pulsanti:4-9"], cosa = "Enhanced: righello, linee di rilevamento, anelli, segni, CPA, pannello tempo-rilevamento (§5.3)" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["campo:evento"], cosa = "Enhanced: un evento con l'ora sulla posizione del battello" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["campo:ekelund"], cosa = "Enhanced: il regolo di Ekelund" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["campo:tma"], cosa = "il MATE della TMA: frecce rotta e distanza, Maiusc con su e giù la velocità" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["campo:pulisci"], cosa = "Enhanced: pulisce il lucido (tratti, linee, eventi, datum)" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["comando:punto_nave"], cosa = "navigazione realistica: il menu dei punti nave; la cifra sceglie il punto nave" },
+    { gruppo = "Navigazione: la carta (F6; sull'Alfa il Sozh)", uso = ["comando:guida_punto"], cosa = "DIRECT: il siluro filoguidato scelto verso un punto (frecce o clic, Invio)" },
+    { gruppo = "Navigazione: il quadro del fondale (Ctrl+H)", uso = ["campo:cifre"], tasti = ["pulsanti:1-4"], cosa = "Enhanced: un ping dell'ecoscandaglio, il periodo successivo, la potenza piena o bassa, le misure sulla carta (§5.5)" },
+    { gruppo = "Navigazione: il quadro del fondale (Ctrl+H)", uso = ["campo:esc"], cosa = "chiude la pagina, non il gioco" },
+    { gruppo = "Carta: righello (4)", uso = ["campo:ruota", "campo:su_giu"], tasti = ["fisso:le frecce"], cosa = "muovono l'estremo attivo (Maiusc più veloce); anche il clic" },
+    { gruppo = "Carta: righello (4)", uso = ["campo:tab"], cosa = "cambia estremo" },
+    { gruppo = "Carta: righello (4)", uso = ["campo:aggancia"], cosa = "aggancia l'estremo al battello o al contatto più vicino" },
+    { gruppo = "Carta: righello (4)", uso = ["campo:invio"], cosa = "fissa il tratto sul lucido; K toglie l'ultimo" },
+    { gruppo = "Carta: segni (7)", uso = ["campo:ruota", "campo:su_giu"], tasti = ["fisso:le frecce"], cosa = "muovono il cursore (anche il clic); Maiusc con su e giù, il raggio della zona" },
+    { gruppo = "Carta: segni (7)", uso = ["campo:tab"], cosa = "l'affiliazione" },
+    { gruppo = "Carta: segni (7)", uso = ["campo:minuti"], cosa = "il tipo: subacqueo, superficie, aereo, nota, croce, zona" },
+    { gruppo = "Carta: segni (7)", uso = ["campo:invio"], cosa = "mette il segno e apre la scritta; K toglie l'ultimo" },
+    { gruppo = "Carta: segni (7)", uso = ["campo:testo"], cosa = "la scritta del segno (Invio o Esc la chiudono)" },
+    { gruppo = "Carta: segni (7)", uso = ["campo:cancella"], cosa = "cancella l'ultima lettera della scritta" },
+    { gruppo = "Carta: regolo di Ekelund (Q)", uso = ["campo:ruota", "campo:su_giu"], tasti = ["fisso:le frecce"], cosa = "rotta e distanza (Maiusc più veloce)" },
+    { gruppo = "Carta: regolo di Ekelund (Q)", uso = ["campo:minuti"], cosa = "la velocità, mezzo nodo alla volta" },
+    { gruppo = "Carta: regolo di Ekelund (Q)", uso = ["campo:invio"], cosa = "passa la soluzione al MATE" },
+    { gruppo = "Armi (F7)", uso = ["campo:cifre"], tasti = ["pulsanti:1-7"], cosa = "sceglie il tubo" },
+    { gruppo = "Armi (F7)", uso = ["campo:cifre"], tasti = ["comando:pulsante_8", "comando:pulsante_9"], cosa = "Enhanced: la quota del siluro scelto via filo, 15 m più su o più giù" },
+    { gruppo = "Armi (F7)", uso = ["campo:tab"], cosa = "Enhanced: il campo delle impostazioni del tubo" },
+    { gruppo = "Armi (F7)", uso = ["campo:minuti"], cosa = "Enhanced: il valore del campo" },
+    { gruppo = "Armi (F7)", uso = ["campo:variante_arma"], cosa = "Enhanced: nel tubo scelto l'arma successiva della rastrelliera" },
+    { gruppo = "Armi (F7)", uso = ["campo:filo_rotta"], cosa = "il siluro via filo 10° a sinistra o a dritta (anche dalle altre stazioni)" },
+    { gruppo = "Armi (F7)", uso = ["campo:cerca"], cosa = "classico: CERCA; Enhanced: la testa attiva" },
+    { gruppo = "Armi (F7)", uso = ["campo:detona"], cosa = "classico: DETONATE; Enhanced: lo spegnimento" },
+    { gruppo = "Armi (F7)", uso = ["campo:taglia_filo"], cosa = "Enhanced: taglia il filo" },
+    { gruppo = "Armi (F7): la pagina di tiro dei missili (Enhanced)", uso = ["campo:su_giu"], cosa = "la riga della consolle (fonte, modo, scatola, missione...)" },
+    { gruppo = "Armi (F7): la pagina di tiro dei missili (Enhanced)", uso = ["campo:ruota"], cosa = "il valore della riga" },
+    { gruppo = "Armi (F7): la pagina di tiro dei missili (Enhanced)", uso = ["campo:veloce", "campo:lancia"], tasti = ["fisso:`Maiusc+L`"], cosa = "alza o abbassa il coperchio del FIRE" },
+    { gruppo = "Armi (F7): la pagina di tiro dei missili (Enhanced)", uso = ["campo:lancia"], cosa = "il lancio, solo col coperchio alzato e il tubo pronto (RDY); se no il motivo del rifiuto" },
+    { gruppo = "Armi (F7): la pagina di tiro dei missili (Enhanced)", uso = ["campo:ingrandisci", "campo:riduci"], cosa = "la scala della carta di tiro" },
+    { gruppo = "Armi (F7): la pagina di tiro dei missili (Enhanced)", uso = ["campo:cerca"], cosa = "rimette la carta di tiro al centro" },
+    { gruppo = "Armi (F7): la pagina di tiro dei missili (Enhanced)", uso = ["campo:tab"], cosa = "torna alla pagina dei siluri" },
+    { gruppo = "Armi (F7): la pagina di tiro dei missili (Enhanced)", uso = ["campo:clic"], cosa = "su una riga la sceglie, sulla riga scelta cambia il valore; sul FIRE lancia" },
+    { gruppo = "Sonar (F8)", uso = ["campo:cifre"], tasti = ["pulsanti:1-4"], cosa = "filtro, impulso attivo, filare o recuperare l'antenna rimorchiata, ANALIZZA" },
+    { gruppo = "Sonar (F8)", uso = ["campo:cifre"], tasti = ["pulsanti:5-9"], cosa = "Enhanced: sensore, fascio del LOFAR, integrazione, AUTO, modo del cursore: lettura, differenza, armonico, DEMON, RIGHE, STORIA (§3.3-3.4)" },
+    { gruppo = "Sonar (F8)", uso = ["campo:ruota", "campo:su_giu"], tasti = ["fisso:le frecce"], cosa = "Enhanced: il cursore, su e giù nel tempo, sinistra e destra in frequenza (Maiusc più veloce); nel modo DEMON l'asse e le pale, nel modo RIGHE la riga, nel modo STORIA il tempo" },
+    { gruppo = "Sonar (F8)", uso = ["campo:filo_rotta"], cosa = "Enhanced: il fascio fissato a mano, 5° a sinistra o a dritta" },
+    { gruppo = "Sonar (F8)", uso = ["campo:tab", "campo:minuti"], tasti = ["campo:tab", "campo:minuti"], cosa = "Enhanced: il campo e il valore (pavimento, tetto, palette, scala dei tempi, Doppler della libreria, la maschera delle righe proprie; nel modo 1989 la persistenza del fosforo)" },
+    { gruppo = "Sonar (F8)", uso = ["campo:ingrandisci", "campo:riduci"], cosa = "Enhanced: ingrandisce o riduce il LOFAR in frequenza" },
+    { gruppo = "Sonar (F8)", uso = ["campo:tma"], cosa = "Enhanced: un tracker nuovo sul fascio puntato" },
+    { gruppo = "Sonar (F8)", uso = ["campo:cancella_punto"], cosa = "Enhanced: toglie il tracker seguito" },
+    { gruppo = "Sonar (F8)", uso = ["campo:aggancia"], cosa = "Enhanced: aggancia o sgancia il verniero alla riga del cursore; nel modo DEMON la serie trovata, nel modo RIGHE il verniero alla riga scelta, nel modo STORIA «quando è comparsa»" },
+    { gruppo = "Sonar (F8)", uso = ["campo:ekelund"], cosa = "Enhanced: il modo della cuffia" },
+    { gruppo = "Sonar (F8)", uso = ["campo:evento"], cosa = "Enhanced: registra l'ascolto del fascio in un file WAV" },
+    { gruppo = "Sonar (F8)", uso = ["campo:punto", "campo:proiezione"], cosa = "Enhanced: un'annotazione sulla cascata al cursore; toglie l'ultima" },
+    { gruppo = "Sonar (F8)", uso = ["campo:siluro", "campo:taglia_filo", "campo:cerca"], cosa = "Enhanced: salva lo spettro in uno slot; lo slot successivo; il confronto (§3.9)" },
+    { gruppo = "Sonar (F8)", uso = ["campo:sfondo"], cosa = "Enhanced: apre o chiude la libreria di riferimento" },
+    { gruppo = "Sonar (F8)", uso = ["campo:invio"], cosa = "Enhanced: toglie lo spettro della libreria sovrapposto al LOFAR" },
+    { gruppo = "Sonar: libreria di riferimento (B)", uso = ["campo:tab"], cosa = "la scheda" },
+    { gruppo = "Sonar: libreria di riferimento (B)", uso = ["campo:su_giu"], cosa = "la voce" },
+    { gruppo = "Sonar: libreria di riferimento (B)", uso = ["campo:invio"], cosa = "sovrappone la voce al LOFAR" },
+    { gruppo = "Radio (F2)", uso = ["campo:cifre"], tasti = ["pulsanti:1-4"], cosa = "classico: periscopio, antenna, messaggio precedente e successivo" },
+    { gruppo = "Radio (F2)", uso = ["campo:cifre"], tasti = ["pulsanti:1-9"], cosa = "Enhanced: antenna, filo galleggiante, messaggio precedente e successivo, solo gli ordini, tipo di trasmissione, trasmetti, scarico via satellite (688), boa SLOT (§4.7)" },
+    { gruppo = "Radio (F2)", uso = ["campo:minuti"], cosa = "Enhanced: il ritardo della boa SLOT" },
+    { gruppo = "Radio (F2)", uso = ["campo:invio"], cosa = "Enhanced: verifica l'autenticazione del messaggio scelto" },
+]
+
+[[schermata]]
+titolo = "In mare, nella sandbox"
+funzioni = ["replay.cpp:SchermataReplay::comandi_vivo", "trascina_carta.hpp:rotella_carta"]
+nota = "La vista dal vivo (§12.5): lo spettatore guarda e non comanda. È la carta del replay mentre la partita va avanti, con a destra il registro dell'IA e la scheda dell'unità scelta. La partita finisce da sola alla durata scelta o all'esito; poi c'è il debriefing con tutti gli eventi e la verità, fuori carriera."
+tasto = [
+    { uso = ["campo:pausa"], cosa = "pausa" },
+    { uso = ["campo:compressione", "campo:azioni"], tasti = ["campo:compressione", "comando:telegrafo_avanti", "comando:telegrafo_indietro"], cosa = "raddoppia o dimezza la compressione del tempo, fino a 256×" },
+    { uso = ["campo:verita"], cosa = "la lettura: la verità, il quadro della NATO, il quadro del Patto, il quadro dell'unità scelta; il filtro del registro segue la parte" },
+    { uso = ["lettera:C"], cosa = "nel quadro di una parte, la verità delle altre in grigio sotto, per confronto" },
+    { uso = ["campo:tab"], cosa = "l'unità successiva o precedente (le armi no)" },
+    { uso = ["lettera:S"], cosa = "la carta segue l'unità scelta" },
+    { uso = ["campo:ruota"], cosa = "l'evento precedente o successivo del registro filtrato (tenuto, continua); dopo l'ultimo si torna al vivo" },
+    { uso = ["campo:invio"], cosa = "torna al vivo dopo aver guardato indietro" },
+    { uso = ["campo:ingrandisci", "campo:riduci"], cosa = "ingrandisce o riduce la carta" },
+    { uso = ["campo:rotella"], tasti = ["fisso:rotella"], cosa = "sopra la carta la ingrandisce o la riduce, attorno al punto sotto il cursore" },
+    { uso = ["lettera:G"], cosa = "il pannello degli interventi del vetrino di Dio (§12.5): il gruppo, l'intervento, l'unità o il punto (un clic sulla carta), i parametri, quando; Tab scorre, le frecce cambiano il valore, Invio sceglie, Esc torna indietro (dal primo passo chiude il pannello)" },
+    { uso = ["campo:cancella"], cosa = "annulla l'ultimo intervento dato dal pannello: la partita si rigioca dall'inizio senza" },
+    { uso = ["campo:esc"], cosa = "lascia la partita (col pannello aperto, torna indietro nel pannello)" },
+    { uso = ["campo:clic"], cosa = "sulla linea del tempo, guarda indietro a quell'istante (ADESSO torna al vivo); sulla riga in alto del registro, il filtro per parte (a sinistra) e per tipo (a destra); ADESSO a destra nella fascia del tempo e i tre tasti del piede (FINE, CONFRONTO, ADESSO); su una riga del registro, la carta va all'evento e sceglie l'unità; sul titolo della scheda, segue l'unità; trascinare sposta la carta" },
+    { uso = ["campo:veloce"], cosa = "tenuto mentre si clicca una riga del registro: anche il tempo va a quell'evento" },
+]
+
+# --- dopo la missione --------------------------------------------------------------------------------------------------
+
+[[schermata]]
+titolo = "Debriefing"
+funzioni = ["debriefing.cpp:SchermataDebriefing::comandi"]
+tasto = [
+    { uso = ["campo:ruota"], cosa = "l'evento precedente o successivo" },
+    { uso = ["campo:invio"], cosa = "l'evento successivo; dall'esito, il rapporto ACINT (se c'è) o chiude" },
+    { uso = ["campo:evento"], cosa = "va all'esito" },
+    { uso = ["campo:tab"], tasti = ["comando:zona_avanti"], cosa = "tutti gli eventi, o i soli momenti salienti" },
+    { uso = ["campo:verita"], cosa = "la verità (le unità com'erano davvero, gli eventi non noti allora) o il quadro di bordo" },
+    { uso = ["campo:ingrandisci", "campo:riduci"], cosa = "ingrandisce o riduce la carta" },
+    { uso = ["campo:rotella"], tasti = ["fisso:rotella"], cosa = "sopra la carta la ingrandisce o la riduce, attorno al punto sotto il cursore" },
+    { uso = ["lettera:R"], cosa = "riprende la missione dall'evento scelto (Invio conferma, Esc annulla)" },
+    { uso = ["lettera:P"], cosa = "il replay completo" },
+    { uso = ["lettera:S"], cosa = "le statistiche della missione" },
+    { uso = ["campo:esc"], cosa = "chiude il debriefing" },
+    { uso = ["campo:clic"], cosa = "i quattro tasti del piede (Esc, R, P, E); una riga dell'elenco va a quell'evento; trascinare sposta la carta" },
+]
+
+[[schermata]]
+titolo = "Esito"
+funzioni = ["esito.cpp:SchermateEsito::comandi"]
+tasto = [
+    { uso = ["campo:invio"], cosa = "la pagina successiva (rapporto, decorazioni, promozioni); dall'ultima, chiude" },
+    { uso = ["campo:esc"], cosa = "la pagina precedente; dalla prima, torna al debriefing" },
+    { uso = ["campo:clic"], cosa = "i due tasti del piede: indietro (o il debriefing) e avanti (o fine)" },
+]
+
+[[schermata]]
+titolo = "Statistiche della missione"
+funzioni = ["statistiche.cpp:SchermataStatistiche::comandi"]
+nota = "Due pagine: il report della missione e le sue imprese (ghiaccio, notte, pedinamento, soccorso, riconoscimento, mine, ASW aereo, armi e navigazione)."
+tasto = [
+    { uso = ["campo:tab"], cosa = "il report o le imprese" },
+    { uso = ["campo:clic"], cosa = "nel piede delle imprese: il report o indietro" },
+    { uso = ["campo:invio", "campo:esc"], tasti = ["campo:invio", "campo:esc"], cosa = "torna al debriefing" },
+]
+
+[[schermata]]
+titolo = "Statistiche della sandbox"
+funzioni = ["statistiche.cpp:SchermataStatisticheSandbox::comandi"]
+nota = "S dal debriefing dello spettatore (§12.6)."
+tasto = [
+    { uso = ["campo:tab"], tasti = ["comando:zona_avanti"], cosa = "la scheda successiva o precedente" },
+    { uso = ["campo:su_giu"], cosa = "scorre la tabella" },
+    { uso = ["campo:invio", "campo:esc"], tasti = ["campo:invio", "campo:esc"], cosa = "torna al debriefing" },
+    { uso = ["campo:clic"], cosa = "sulle linguette, la scheda; su una riga con l'ora, il replay da quell'istante" },
+]
+
+[[schermata]]
+titolo = "Serie della sandbox"
+funzioni = ["schermata_serie.cpp:SchermataSerie::comandi"]
+nota = "Dopo S nelle regolazioni, o con --serie (§12.8)."
+tasto = [
+    { uso = ["campo:tab"], tasti = ["comando:zona_avanti"], cosa = "la pagina: esiti, per parte, istogrammi" },
+    { uso = ["campo:su_giu"], cosa = "per parte: scorre la tabella; istogrammi: il numero da mostrare" },
+    { uso = ["campo:invio", "campo:esc"], tasti = ["campo:invio", "campo:esc"], cosa = "torna alle regolazioni" },
+    { uso = ["campo:clic"], cosa = "sulle linguette, la pagina; nel piede, la pagina seguente o indietro; negli istogrammi, su una barra di partita, il suo replay" },
+]
+
+[[schermata]]
+titolo = "Replay"
+funzioni = ["replay.cpp:SchermataReplay::comandi", "trascina_carta.hpp:rotella_carta"]
+tasto = [
+    { uso = ["campo:pausa"], cosa = "ferma o riprende" },
+    { uso = ["campo:compressione", "campo:azioni"], tasti = ["campo:compressione", "comando:telegrafo_avanti", "comando:telegrafo_indietro"], cosa = "raddoppia o dimezza la velocità" },
+    { uso = ["campo:ruota"], cosa = "salta di 30 s indietro o avanti (tenuto, continua)" },
+    { uso = ["campo:tab"], cosa = "l'evento successivo o precedente" },
+    { uso = ["lettera:G"], cosa = "l'intervento del vetrino di Dio successivo (i triangoli magenta sopra la linea del tempo)" },
+    { uso = ["campo:veloce"], cosa = "tenuto con G: l'intervento precedente" },
+    { uso = ["campo:verita"], cosa = "la lettura: la verità o il quadro del comandante" },
+    { uso = ["campo:ingrandisci", "campo:riduci"], cosa = "ingrandisce o riduce la carta" },
+    { uso = ["campo:rotella"], tasti = ["fisso:rotella"], cosa = "sopra la carta la ingrandisce o la riduce, attorno al punto sotto il cursore" },
+    { uso = ["campo:invio"], cosa = "riprende la missione da quell'istante" },
+    { uso = ["campo:esc"], cosa = "chiude il replay" },
+    { uso = ["campo:clic"], cosa = "sulla linea del tempo, quell'istante; SEGUI torna a seguire il battello; trascinare sposta la carta" },
+]
+
+# --- editor ------------------------------------------------------------------------------------------------------------
+
+[[schermata]]
+titolo = "Editor di missione"
+funzioni = ["editor_missione.cpp:SchermataEditor::comandi"]
+tasto = [
+    { uso = ["campo:cifre"], tasti = ["pulsanti:1-8"], cosa = "la scheda: missione, unità, rotte, zone, obiettivi, regole, briefing, prova (cap. 11)" },
+    { uso = ["lettera:S"], cosa = "salva" },
+    { uso = ["lettera:E"], cosa = "esporta il pacchetto da scambiare" },
+    { uso = ["lettera:G"], cosa = "salva e prova in mare (prima vanno corretti gli errori)" },
+    { uso = ["lettera:X"], cosa = "nella scheda unità toglie l'unità scelta; nella scheda rotte, l'ultimo punto" },
+    { uso = ["campo:ingrandisci", "campo:riduci"], cosa = "ingrandisce o riduce la carta" },
+    { uso = ["campo:ruota", "campo:su_giu"], tasti = ["fisso:le frecce"], cosa = "spostano la carta (Maiusc più veloce); col puntatore sulle schede, su e giù scorrono" },
+    { uso = ["campo:veloce"], cosa = "la carta si sposta più in fretta" },
+    { uso = ["campo:clic"], cosa = "sulla carta sceglie (trascinare sposta l'unità, la zona o la carta); nelle schede cambia il campo in avanti; negli avvisi mostra l'unità; nel piede: indietro, salva, esporta, prova in mare" },
+    { uso = ["campo:clic_destro"], cosa = "sulla carta aggiunge (unità, punto di rotta, zona, centro dell'obiettivo); nelle schede cambia il campo all'indietro" },
+    { uso = ["campo:esc"], cosa = "torna al menu; con modifiche non salvate, la prima volta avvisa" },
+    { gruppo = "Mentre si scrive un testo", uso = ["campo:testo"], cosa = "il testo" },
+    { gruppo = "Mentre si scrive un testo", uso = ["campo:cancella"], cosa = "cancella l'ultima lettera" },
+    { gruppo = "Mentre si scrive un testo", uso = ["campo:invio"], cosa = "conferma" },
+    { gruppo = "Mentre si scrive un testo", uso = ["campo:esc"], cosa = "annulla" },
+]
+
+# --- la schermata dei comandi in partita (F11; manuale_tasti.py la genera in data/motore/comandi_schermata.toml) -------
+# I consigli, in evidenza in cima alla scheda. {comando:NOME} si scrive coi tasti di quel comando.
+
+[[consiglio]]
+scheda = "F5"
+solo = "enhanced"
+testo = "PRIMA DI ALZARLO: QUOTA PERISCOPICA ({comando:quota_periscopica}, CON ALMENO 3 NODI: DA FERMO NON SALE). SULLA F4 SI ACCENDE LA SPIA PERI. POI AL MASSIMO 6 NODI: OLTRE TREMA, A 10 NON SI VEDE, A 15 SI ROMPE."
+
+[[consiglio]]
+scheda = "F5"
+solo = "enhanced"
+testo = "UN SOLO COMANDO: {comando:periscopio} O IL PULSANTE 2 ALZANO O ABBASSANO. PREMERLI TUTTI E DUE LO RIABBASSA. SALE IN POCHI SECONDI."
+
+[[consiglio]]
+scheda = "F5"
+solo = "classico"
+testo = "PRIMA DI ALZARLO: QUOTA PERISCOPICA ({comando:quota_periscopica})."
+
+[[consiglio]]
+scheda = "F4"
+solo = "enhanced"
+testo = "PER CAMBIARE QUOTA SERVE VELOCITÀ: SOTTO I 3 NODI I PIANI NON PORTANO SU. IL BATTELLO ACCELERA PIANO: CON {comando:telegrafo_avanti} DUE VOLTE SI ARRIVA PRIMA."
+
+[[consiglio]]
+scheda = "OVUNQUE"
+testo = "[ E ] SULLA TASTIERA ITALIANA: ALTGR+È E ALTGR++. QUI CI SONO I COMANDI DI OGNI STAZIONE: F2-F8 O TAB CAMBIANO SCHEDA."

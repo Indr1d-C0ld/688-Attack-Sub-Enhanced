@@ -1,0 +1,111 @@
+# Comandanti storici dell'albo d'onore (generato da tools/pipeline/achievement.py: non modificare a mano). Fatti documentati, senza punteggi (dossier 15 §7.10).
+
+[storici.nautilus_1958]
+marina = "usn"
+anno = 1958
+battello = "USS Nautilus (SSN-571)"
+comandante = "W. R. Anderson"
+impresa_it = "Primo passaggio sotto il Polo Nord"
+impresa_en = "First transit under the North Pole"
+decorazione_it = "Legion of Merit; all'equipaggio la Presidential Unit Citation"
+fonte = "dossier 13 §3.3 [WP-Anderson], [WP-PUC]"
+confidenza = "alta"
+
+[storici.triton_1960]
+marina = "usn"
+anno = 1960
+battello = "USS Triton (SSRN-586)"
+comandante = "E. L. Beach"
+impresa_it = "Prima circumnavigazione del globo in immersione"
+impresa_en = "First submerged circumnavigation"
+decorazione_it = "Legion of Merit; all'equipaggio la Presidential Unit Citation"
+fonte = "dossier 13 §3.3 [UCSB-Beach], [WP-PUC]"
+confidenza = "alta"
+
+[storici.halibut_1968]
+marina = "usn"
+anno = 1968
+battello = "USS Halibut (SSN-587)"
+comandante = ""
+impresa_it = "Ricerche e operazioni speciali; motivazione volutamente vaga nel 1972"
+impresa_en = "Search and special operations; deliberately vague citation in 1972"
+decorazione_it = "Presidential Unit Citation (1968 e 1972)"
+fonte = "dossier 13 §3.3 [WP-Halibut]"
+confidenza = "media"
+
+[storici.parche_1979]
+marina = "usn"
+anno = 1979
+battello = "USS Parche (SSN-683)"
+comandante = ""
+impresa_it = "Operazioni speciali dal 1979: la nave piu' decorata della storia americana"
+impresa_en = "Special operations from 1979: the most decorated US ship"
+decorazione_it = "9 Presidential Unit Citation, 10 Navy Unit Commendation, 13 Navy Expeditionary Medal"
+fonte = "dossier 13 §3.3 [WP-Parche]"
+confidenza = "media"
+
+[storici.k3_1962]
+marina = "vmf"
+anno = 1962
+battello = "K-3 «Leninskij Komsomol»"
+comandante = "L. M. Žil'cov"
+impresa_it = "Il primo sottomarino nucleare sovietico al Polo Nord"
+impresa_en = "First Soviet nuclear submarine at the North Pole"
+decorazione_it = "Eroe dell'Unione Sovietica"
+fonte = "dossier 13 §3.6 [WP-Zhiltsov]"
+confidenza = "alta"
+
+[storici.k178_1964]
+marina = "vmf"
+anno = 1964
+battello = "K-178"
+comandante = "I. R. Dubjaga, A. P. Michajlovskij"
+impresa_it = "Primo transito artico di gruppo da Zapadnaja Lica alla Kamčatka"
+impresa_en = "First group Arctic transit from Zapadnaya Litsa to Kamchatka"
+decorazione_it = "Eroi dell'Unione Sovietica"
+fonte = "dossier 13 §3.6 [NM-K178]"
+confidenza = "media"
+
+[storici.k325_1978]
+marina = "vmf"
+anno = 1978
+battello = "K-325"
+comandante = "V. P. Lušin"
+impresa_it = "Transito sotto il Polo; nessuna ricompensa trovata"
+impresa_en = "Transit under the Pole; no award found"
+decorazione_it = ""
+fonte = "dossier 13 §3.6 [CYCLO-Lushin]"
+confidenza = "media"
+
+[storici.k8_1970]
+marina = "vmf"
+anno = 1970
+battello = "K-8"
+comandante = "V. B. Bessonov"
+impresa_it = "Prove di armi; il battello si perde nel golfo di Biscaglia"
+impresa_en = "Weapons trials; the boat was lost in the Bay of Biscay"
+decorazione_it = "Bandiera Rossa; Eroe dell'Unione Sovietica postumo"
+fonte = "dossier 13 §3.6 [WP-Bessonov]"
+confidenza = "alta"
+
+[storici.k219_1986]
+marina = "vmf"
+anno = 1986
+battello = "K-219"
+comandante = "I. A. Britanov"
+impresa_it = "Dopo l'esplosione nel tubo 6 il marinaio S. A. Preminin spegne a mano il secondo reattore e muore nel compartimento; il battello affonda il 6 ottobre"
+impresa_en = "After the explosion in tube 6 seaman S. A. Preminin shuts down the second reactor by hand and dies in the compartment; the boat sinks on 6 October"
+decorazione_it = "A Preminin la Stella Rossa postuma (1987) e, nel 1997, Eroe della Federazione Russa"
+fonte = "[WP-K219], [WP-Preminin]"
+confidenza = "alta"
+
+[storici.k278_1989]
+marina = "vmf"
+anno = 1989
+battello = "K-278 «Komsomolec»"
+comandante = "E. A. Vanin"
+impresa_it = "Incendio a poppa a 335 m: il battello emerge e affonda dopo circa quattro ore; 27 salvati su 69, molti morti di freddo nell'acqua a 2 °C"
+impresa_en = "Fire aft at 335 m: the boat surfaced and sank about four hours later; 27 of 69 saved, many died of cold in water at 2 °C"
+decorazione_it = "Ordine della Bandiera Rossa all'equipaggio"
+fonte = "[WP-K278]"
+confidenza = "alta"

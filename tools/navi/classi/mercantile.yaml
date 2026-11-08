@@ -1,0 +1,100 @@
+# Nave da carico generale ("Merchant Ship", tipo 0x01 del gioco): turbonave sovietica Ravenstvo (1963),
+# tipo Leninskiy Komsomol (progetto 567), Black Sea Shipping Company, nella configurazione con gru.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua (x = L/2 - d).
+# Lunghezza fuori tutto e larghezza della serie (169,9 x 21,8 m, Wikipedia); quote, posizioni e larghezza
+# della sovrastruttura misurate sulla foto di fianco calibrata (fotocamera a ~44 gradi dalla prua, ~5 m di
+# quota, ~295 m; orizzonte e galleggiamento). La nave e' fotografata scarica (in zavorra, appoppata): bordo
+# libero ~10 m al centro, 13,7 m al dritto. Dettagli in extracted/navi/mercantile/RAPPORTO.md.
+# Parti proprie (scafo con poppa a incrociatore, gru KE-26, alberi dei bighi pesanti, boccaporti) in
+# classi/mercantile_parti.py; maschera della foto in classi/mercantile_maschere.yaml.
+nome: Mercantile (Ravenstvo, tipo Leninskiy Komsomol)
+uscita: extracted/navi/mercantile
+moduli_parti: [mercantile_parti.py]
+
+# scafo del kit ridotto a una lamina invisibile al galleggiamento: lo scafo vero e' la parte scafo_composto
+# (il generatore del kit ha solo lo specchio di poppa verticale). Serve solo L per le distanze {prua: d}.
+scafo:
+  # poppa a incrociatore: generatore scafo_composto del kit (nato con questa classe); orlo della murata con il
+  # castello fino a 23,5 m, ponte di coperta con insellatura e assetto appoppato
+  generatore: scafo_composto
+  L: 169.9
+  B: 21.8
+  bordo: [[0, 13.7], [8, 12.8], [16, 12.3], [23.0, 12.1], [24.0, 9.8], [40, 9.8], [60, 9.5], [86, 9.5],
+            [116, 10.0], [133, 10.3], [149, 10.8], [160, 11.3], [169.9, 11.9]]
+  profilo_prua: [[0, 13.5], [1.2, 11.7], [2.6, 9.9], [3.9, 8.2], [5.3, 4.6], [6.0, 2.5], [6.8, 0]]
+  profilo_poppa: [[0, 5.6], [1.4, 4.6], [3.9, 3.5], [6.5, 0]]   # dalla poppa: volta sopra il timone
+  finezza_prua: 45
+  finezza_poppa: 22
+  pienezza_prua: [0.75, 0.45]
+  pienezza_poppa: [0.7, 0.3]
+  svasatura: 0.02
+  bagnasciuga: 1.0
+
+parti:
+  # asta di prua con il pallone nero (nave alla fonda)
+  - {tipo: asta, nome: asta_prua, da: [{prua: 1.9}, 0, 13.2], a: [{prua: 1.9}, 0, 18.5], spessore: 0.25, mat: scuro}
+  - {tipo: sfera, nome: pallone, x: {prua: 1.9}, y: 0, z: 17.8, r: 0.5, mat: nero}
+  # boccaporti (mastre 10 x 10 m)
+  - {tipo: boccaporto, nome: boccaporto_1, x0: {prua: 19.0}, x1: {prua: 9.0}, semilarghezza: 5.0, z0: 12.2}
+  - {tipo: boccaporto, nome: boccaporto_2, x0: {prua: 39.0}, x1: {prua: 29.0}, semilarghezza: 5.0, z0: 9.8}
+  - {tipo: boccaporto, nome: boccaporto_3, x0: {prua: 54.0}, x1: {prua: 44.0}, semilarghezza: 5.0, z0: 9.6}
+  - {tipo: boccaporto, nome: boccaporto_4, x0: {prua: 104.0}, x1: {prua: 94.0}, semilarghezza: 5.0, z0: 9.6}
+  - {tipo: boccaporto, nome: boccaporto_5, x0: {prua: 125.0}, x1: {prua: 111.0}, semilarghezza: 5.0, z0: 10.1}
+  - {tipo: boccaporto, nome: boccaporto_6, x0: {prua: 148.0}, x1: {prua: 137.0}, semilarghezza: 5.0, z0: 10.7}
+  # sovrastruttura centrale: blocco prodiero (due ponti), blocco poppiero (ponte delle lance), timoneria
+  - {tipo: tuga, nome: sovrastruttura_prodiera, x0: {prua: 70.5}, x1: {prua: 57.7}, y0: -7.6, y1: 7.6, z0: 9.3, z1: 16.8, rastrema: 0.99}
+  - {tipo: tuga, nome: sovrastruttura_poppiera, x0: {prua: 92.0}, x1: {prua: 70.5}, y0: -7.6, y1: 7.6, z0: 9.3, z1: 15.4, rastrema: 0.99}
+  - {tipo: tuga, nome: timoneria, x0: {prua: 66.0}, x1: {prua: 60.4}, y0: -7.1, y1: 7.1, z0: 16.8, z1: 19.2, rastrema: 0.99}
+  - {tipo: tuga, nome: cassa_fumaiolo, x0: {prua: 80.0}, x1: {prua: 66.0}, y0: -6.0, y1: 6.0, z0: 15.4, z1: 18.4, rastrema: 0.98}
+  - {tipo: fumaiolo_cilindrico, nome: fumaiolo, x: {prua: 70.6}, z0: 18.4, z1: 26.5, r: 2.3, cappello: 1.2, allungamento: 1.2,
+     materiali: {sovrastruttura: scuro}}
+  - {tipo: albero_palo, nome: albero_radar, x: {prua: 66.0}, z0: 19.2, z1: 33.6, r: 0.9, crocette: [[30.0, 2.2], [27.0, 1.6]]}
+  - {tipo: asta, nome: antenna_1, da: [{prua: 66.1}, 6.8, 19.2], a: [{prua: 66.1}, 6.8, 31.1], spessore: 0.15, mat: traliccio}
+  - {tipo: asta, nome: antenna_2, da: [{prua: 62.5}, 6.8, 19.2], a: [{prua: 62.5}, 6.8, 30.2], spessore: 0.15, mat: traliccio}
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 87.7}, x1: {prua: 76.1}, y: -6.6, z0: 15.4, larghezza: 2.8, altezza: 2.5}
+  - {tipo: imbarcazione, nome: lancia_sinistra, x0: {prua: 87.7}, x1: {prua: 76.1}, y: 6.6, z0: 15.4, larghezza: 2.8, altezza: 2.5}
+  # alberi dei bighi pesanti da 60 t (bigo a riposo quasi verticale)
+  - {tipo: albero_carico, nome: albero_prodiero, x: {prua: 24.8}, z0: 12.1, z_crocetta: 24.8, z_cima: 32.8, r: 0.75,
+     bigo: [[{prua: 25.6}, 0, 13.5], [{prua: 26.4}, 0, 30.6]]}
+  - {tipo: albero_carico, nome: albero_poppiero, x: {prua: 128.4}, z0: 10.3, z_crocetta: 27.4, z_cima: 39.4, r: 0.8,
+     bigo: [[{prua: 127.6}, 0, 12.0], [{prua: 127.2}, 0, 35.0]]}
+  # gru KE-26 da 5 t, a coppie affiancate (dritta / sinistra), bracci a riposo verso poppa (quasi orizzontali a
+  # proravia, un po' alzati a poppavia, come nella foto); la sesta coppia, poppiera, e' fuori dalla foto
+  - {tipo: gru_ke26, nome: gru_1d, x: {prua: 24.3}, y: -4.8, z0: 12.1, colonna: 1.4, verso: -1, inclinazione: -3}
+  - {tipo: gru_ke26, nome: gru_1s, x: {prua: 24.3}, y: 4.8, z0: 12.1, colonna: 1.4, verso: -1, inclinazione: -3}
+  - {tipo: gru_ke26, nome: gru_2d, x: {prua: 41.2}, y: -4.3, z0: 9.8, colonna: 3.6, verso: -1, inclinazione: -3}
+  - {tipo: gru_ke26, nome: gru_2s, x: {prua: 41.2}, y: 4.3, z0: 9.8, colonna: 3.6, verso: -1, inclinazione: -3}
+  - {tipo: gru_ke26, nome: gru_3d, x: {prua: 56.8}, y: -4.2, z0: 9.6, colonna: 3.9, verso: -1, inclinazione: -3}
+  - {tipo: gru_ke26, nome: gru_3s, x: {prua: 56.8}, y: 4.2, z0: 9.6, colonna: 3.9, verso: -1, inclinazione: -3}
+  - {tipo: gru_ke26, nome: gru_4d, x: {prua: 106.6}, y: -4.5, z0: 9.6, colonna: 3.7, verso: -1, inclinazione: 6}
+  - {tipo: gru_ke26, nome: gru_4s, x: {prua: 106.6}, y: 4.5, z0: 9.6, colonna: 3.7, verso: -1, inclinazione: 6}
+  - {tipo: gru_ke26, nome: gru_5d, x: {prua: 132.0}, y: -4.5, z0: 10.3, colonna: 3.4, verso: -1, inclinazione: 6}
+  - {tipo: gru_ke26, nome: gru_5s, x: {prua: 132.0}, y: 4.5, z0: 10.3, colonna: 3.4, verso: -1, inclinazione: 6}
+  - {tipo: gru_ke26, nome: gru_6d, x: {prua: 151.0}, y: -4.5, z0: 10.8, colonna: 3.2, verso: -1, inclinazione: 6}
+  - {tipo: gru_ke26, nome: gru_6s, x: {prua: 151.0}, y: 4.5, z0: 10.8, colonna: 3.2, verso: -1, inclinazione: 6}
+
+foto:
+  - nome: fianco_dritto
+    file: extracted/navi/mercantile/foto/fianco_dritto_ravenstvo_1979.jpg
+    nave: Ravenstvo, giugno 1979 (Conakry, esercitazione Unitas XX)
+    maschera_file: extracted/navi/mercantile/foto/fianco_dritto_ravenstvo_1979_maschera.png
+    qualita: 1.0
+    esponente_peso: 2
+    specchiabile: true
+    cancella: [[1990, 965, 2200, 1030], [846, 1140, 936, 1256], [1012, 1140, 1068, 1258]]
+    # primo riquadro: nome "РАВЕНСТВО" a prua (apparirebbe rovesciato nella copia speculare);
+    # gli altri due riquadri: getti d'acqua di scarico bianchi sulla murata (negli sprite sembravano strisce dipinte)
+    orizzonte_punti: [[2470, 1155], [2600, 1155], [2740, 1155]]
+    fotocamera_iniziale: {posizione: [223, -188, 4.7], bersaglio: [24.6, 0, 21.4], f: 6500}
+    punti:
+      - [[{prua: 0}, 0, 13.7], [2558, 893]]          # dritto di prua all'orlo della murata
+      - [[{prua: 6.8}, 0, 0], [2409, 1281]]          # piede del dritto al galleggiamento
+      - [[{prua: 163.4}, 0, 0], [50, 1243]]          # spigolo poppiero del timone al galleggiamento
+      - [[{prua: 1.9}, 0, 18.5], [2512, 760]]        # cima dell'asta di prua
+      - [[{prua: 24.8}, 0, 32.8], [2020, 410]]       # cima dell'albero prodiero
+      - [[{prua: 128.6}, 0, 39.4], [437, 450]]       # cima dell'albero poppiero
+      - [[{prua: 66.0}, 0, 33.6], [1290, 470]]       # cima dell'albero radar
+      - [[{prua: 60.4}, -7.1, 19.2], [1255, 802]]    # timoneria, spigolo prodiero di DRITTA in alto
+      - [[{prua: 60.4}, 7.1, 19.2], [1500, 802]]     # timoneria, spigolo prodiero di SINISTRA in alto
+      - [[{prua: 57.7}, -7.6, 10.4], [1290, 1010]]   # sovrastruttura, spigolo prodiero di dritta alla base

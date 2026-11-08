@@ -1,0 +1,68 @@
+# Corvetta svedese classe Stockholm (K11, 1985): la prua alta, la torre del 57/70 Bofors a prua, la tuga bassa con i
+# lanciatori dei disturbatori, la plancia col direttore, la torre dell'albero col radar di scoperta e l'alberetto, il
+# casotto centrale coi lanciatori degli RBS-15, la tuga poppiera col radome e il cassero libero.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure: 50,0 x 7,5 m (Jane's); posizioni e quote dalla foto di sinistra della HMS
+# Stockholm (2010, ~39 px/m), affinate con gli scarti della calibrazione. La foto e' dopo l'ammodernamento del
+# 2000-2002 (la torre dell'albero): la sagoma degli anni '80 aveva un albero piu' sottile (STIMA). Modello proprio
+# (blocco E del kit, 30/10/2026).
+nome: Stockholm (K11)
+uscita: extracted/navi/stockholm
+
+scafo:
+  L: 50.0
+  B: 7.5
+  bordo: [[0, 4.5], [10, 3.4], [20, 2.9], [50.0, 2.8]]
+  slancio: 3.4
+  finezza_prua: 35
+  specchio: 0.9
+  svasatura: 0.08
+  pienezza: [0.7, 0.4]
+
+parti:
+  # ---------------- la torre del 57 a prua
+  - {tipo: torre_singola, nome: bofors57, x: {prua: 14.1}, z0: 3.5, lunghezza: 5.4, larghezza: 3.0, altezza: 4.1, canna: 3.0}
+  # ---------------- la tuga bassa, i disturbatori, la plancia col direttore
+  - {tipo: tuga, nome: tuga_bassa, x0: {prua: 30.3}, x1: {prua: 16.8}, y0: -3.2, y1: 3.2, z0: 2.8, z1: 6.5, rastrema: 0.98}
+  - {tipo: scatola, nome: disturbatori, x0: {prua: 18.3}, x1: {prua: 16.6}, y0: -1.5, y1: 1.5, z0: 6.5, z1: 8.3}
+  - {tipo: tuga, nome: plancia, x0: {prua: 30.3}, x1: {prua: 18.3}, y0: -3.0, y1: 3.0, z0: 6.5, z1: 9.7, rastrema: 0.97}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 18.6}, x1: {prua: 18.2}, y0: -2.6, y1: 2.6, z0: 8.8, z1: 9.4, mat: nero, rastrema: 0.98}
+  - {tipo: direttore_tiro, nome: direttore, x: {prua: 23.4}, z0: 9.7, altezza_base: 1.7, larghezza: 1.6, disco: 1.0}
+  # ---------------- la torre dell'albero, il radar di scoperta, l'alberetto
+  - {tipo: tuga, nome: torre_albero, x0: {prua: 30.2}, x1: {prua: 26.4}, y0: -1.6, y1: 1.6, z0: 9.7, z1: 17.1, rastrema: 0.7}
+  - {tipo: scatola, nome: piattaforma, x0: {prua: 31.0}, x1: {prua: 25.0}, y0: -2.0, y1: 2.0, z0: 14.4, z1: 14.8}
+  - {tipo: cilindro, nome: colonna_radar, x: {prua: 28.8}, y: 0, r: 0.3, z0: 17.1, z1: 18.1}
+  - {tipo: antenna_radar, nome: sea_giraffe, x: {prua: 28.8}, z0: 18.1, larghezza: 2.4, altezza: 1.0, orientamento: 30}
+  - {tipo: asta, nome: alberetto, da: [{prua: 30.2}, 0, 16.0], a: [{prua: 31.2}, 0, 23.1], spessore: 0.3}
+  # ---------------- il casotto centrale coi lanciatori, la tuga poppiera col radome
+  - {tipo: tuga, nome: casotto_centrale, x0: {prua: 34.1}, x1: {prua: 30.3}, y0: -2.5, y1: 2.5, z0: 2.8, z1: 6.0}
+  - {tipo: scatola, nome: lanciatori_rbs15, x0: {prua: 34.1}, x1: {prua: 31.0}, y0: -1.4, y1: 1.4, z0: 6.0, z1: 8.8, rastrema: 0.9}
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 42.0}, x1: {prua: 35.0}, y0: -3.0, y1: 3.0, z0: 2.8, z1: 7.5}
+  - {tipo: tuga, nome: tuga_poppiera_bassa, x0: {prua: 46.0}, x1: {prua: 42.0}, y0: -3.0, y1: 3.0, z0: 2.8, z1: 6.3}
+  - {tipo: radome, nome: radome, x: {prua: 37.9}, z: 10.8, r: 0.75}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 30/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: sinistra_stockholm
+    file: extracted/navi/stockholm/foto/2400px-HMS_Stockholm.JPG
+    nave: HMS Stockholm (K11), 14/4/2010 (CC BY-SA 3.0), di sinistra quasi al traverso
+    qualita: 1.0
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 3 px (contorno_modello.py --maschera)
+    maschera_file: extracted/navi/stockholm/foto/sinistra_stockholm_maschera.png
+    solo_punti: true
+    # numero e nome veri tolti (come sulle altre classi): il K 11 a prua, la targa sulla plancia
+    cancella: [[560, 905, 690, 985], [1214, 720, 1258, 740]]
+    riquadro: [100, 50, 2250, 1100]
+    fotocamera_iniziale: {posizione: [0, 600, 5], bersaglio: [0, 0, 4], f: 20000}
+    limiti_fotocamera: {elevazione: [-5, 15], distanza: [50, 5000], focale: [1000, 200000]}
+    punti:
+      - [[{prua: 0}, 0, 4.5], [153, 852]]            # dritto di prua in coperta
+      - [[{prua: 3.4}, 0, 0.0], [286, 1030]]         # piede del dritto al galleggiamento
+      - [[{prua: 50.0}, 3.0, 2.8], [2120, 915]]      # specchio, spigolo di sinistra in coperta
+      - [[{prua: 16.8}, 1.5, 7.6], [815, 726]]       # spigolo poppiero alto di sinistra della torre del 57
+      - [[{prua: 18.3}, 3.0, 9.7], [872, 645]]       # spigolo prodiero alto di sinistra della plancia
+      - [[{prua: 28.8}, 0, 19.1], [1285, 272]]       # cima del radar di scoperta
+      - [[{prua: 31.2}, 0, 23.1], [1378, 118]]       # cima dell'alberetto
+      - [[{prua: 37.9}, 0, 11.55], [1642, 573]]      # cima del radome
+      - [[{prua: 46.0}, 3.0, 6.3], [1959, 781]]      # spigolo poppiero alto di sinistra della tuga poppiera

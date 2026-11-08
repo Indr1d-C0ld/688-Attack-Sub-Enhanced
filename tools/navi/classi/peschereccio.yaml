@@ -1,0 +1,122 @@
+# Peschereccio d'altura civile (NATO generico): peschereccio a rampa poppiera ("hekktråler") di tipo norvegese
+# degli anni '80, nave civile dei mari del Nord per la libreria di missioni (e futuri ostacoli: reti e cavi).
+# Modello sull'Atlantic Peace (BX 786, costruita nel 1987, IMO 8704999; 57 x 13 m, pescaggio estivo 4,99 m,
+# 865 t di portata lorda), l'unico peschereccio a rampa poppiera dell'epoca con foto libere (CC0) su Commons:
+# scafo a ponte di riparo, castello alto, sovrastruttura e plancia a proravia, ponte di lavoro a poppa con tamburi
+# delle reti e gru, portale (gantry) sulla rampa poppiera.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua (x = L/2 - d).
+# Misure: lunghezza e larghezza ufficiali; quote e posizioni dalla triangolazione su due foto
+# (extracted/navi/peschereccio/triangolazione/) e dai raggi della fotocamera calibrata intersecati con i piani
+# della murata e dell'asse. Galleggiamento delle foto (2012, nave leggera: bordo libero di circa 5,7 m a poppa).
+# Dettagli in extracted/navi/peschereccio/RAPPORTO.md. Parti proprie in classi/peschereccio_parti.py.
+nome: Peschereccio a rampa poppiera (tipo norvegese anni '80, Atlantic Peace 1987)
+uscita: extracted/navi/peschereccio
+moduli_parti: [peschereccio_parti.py]
+
+# Colori della livrea (per la futura passata a colori; gli sprite e il modello del motore sono a 16 grigi e usano
+# l'albedo qui sotto): scafo blu scuro sotto e fascia bianca in alto, come l'Atlantic Peace e molti pescherecci
+# norvegesi; sovrastruttura e portale bianchi; ponte di lavoro grigio; casse del portale blu; antivegetativa rossa.
+colori: {scafo: [28, 62, 128], fascia_alta: [232, 232, 226], bagnasciuga: [150, 48, 32], sovrastruttura: [236, 236, 232],
+         bianco: [240, 240, 236], ponte: [128, 128, 124], scuro: [52, 56, 62], nero: [24, 24, 24], traliccio: [90, 94, 100]}
+# albedo dei materiali per l'ombreggiatura di ripiego (facce che nessuna foto vede): scafo blu scuro,
+# sovrastrutture bianche, ponte di lavoro grigio
+albedo: {scafo: 0.30, bagnasciuga: 0.22, sovrastruttura: 0.85, ponte: 0.45}
+
+scafo:
+  L: 57.0
+  B: 13.0
+  # orlo della murata: castello alto a prua (8,9 m al dritto), poi la murata del ponte di riparo a 5,7 m
+  bordo: [[0, 8.9], [2, 8.3], [6, 7.6], [11, 7.2], [17, 6.9], [21, 5.8], [57, 5.7]]
+  # dritto slanciato e un po' convesso: piede a 5,8 m dalla prua (triangolato)
+  profilo_prua: [[0, 8.7], [2.0, 6.6], [4.0, 3.6], [5.2, 1.3], [5.8, 0]]
+  prua_segue_dritto: true
+  finezza_prua: 16
+  pienezza: [0.7, 0.35]   # prua piena e svasata (castello largo), fine al galleggiamento
+  svasatura: 0.03
+  specchio: 0.88
+  lunghezza_poppa: 12
+  bagnasciuga: 0.6
+
+parti:
+  # sovrastruttura sul ponte di riparo (un ponte, tutta larghezza): fronte a 17,5 m dalla prua (spigolo prodiero di
+  # sinistra visto in due foto), estremita' poppiera a 32,5 m
+  - {tipo: tuga, nome: tuga, x0: {prua: 32.5}, x1: {prua: 17.5}, y0: -6.1, y1: 6.1, z0: 5.6, z1: 8.5, mat: bianco}
+  # ponte di comando (secondo livello) e timoneria con le finestre e il tetto sporgente (spigolo prodiero del tetto
+  # triangolato a 17,2-17,8 m dalla prua e 12,5 m di quota)
+  - {tipo: tuga, nome: ponte_comando, x0: {prua: 26.0}, x1: {prua: 17.6}, y0: -5.5, y1: 5.5, z0: 8.5, z1: 10.9, mat: bianco}
+  - {tipo: tuga, nome: timoneria, x0: {prua: 25.3}, x1: {prua: 18.3}, y0: -4.6, y1: 4.6, z0: 10.9, z1: 12.3, mat: bianco}
+  - {tipo: scatola, nome: finestre_prua, x0: {prua: 18.4}, x1: {prua: 18.2}, y0: -4.3, y1: 4.3, z0: 11.2, z1: 12.0, mat: scuro}
+  - {tipo: scatola, nome: finestre_fianchi, x0: {prua: 25.0}, x1: {prua: 18.6}, y0: -4.7, y1: 4.7, z0: 11.2, z1: 12.0, mat: scuro}
+  - {tipo: scatola, nome: tetto_timoneria, x0: {prua: 25.6}, x1: {prua: 17.6}, y0: -4.9, y1: 4.9, z0: 12.3, z1: 12.6, mat: bianco}
+  # radar di navigazione sul tetto e albero dei fanali (cima triangolata a 21 m, 27 m dalla prua)
+  - {tipo: cilindro, nome: radar_colonna, x: {prua: 21.0}, y: 0.0, r: 0.3, z0: 12.6, z1: 13.6, mat: bianco}
+  - {tipo: scatola, nome: radar, x0: {prua: 21.2}, x1: {prua: 20.8}, y0: -2.0, y1: 2.0, z0: 13.6, z1: 13.9, mat: scuro}
+  - {tipo: albero_palo, nome: albero_radar, x: {prua: 26.8}, z0: 10.8, z1: 21.0, r: 0.35, mat: bianco,
+     piattaforme: [[15.0, 1.6]], crocette: [[19.8, 1.8], [17.3, 1.3]]}
+  # struttura a pi greco all'estremita' poppiera della sovrastruttura (bozzelli delle manovre)
+  - {tipo: palo_carico, nome: palo_carico, x: {prua: 30.0}, y: 1.2, z0: 8.5, z1: 17.2}
+  # albero di prua sul castello (10,2 m dalla prua, cima a 11 m)
+  - {tipo: asta, nome: albero_prua, da: [{prua: 10.2}, 0, 7.2], a: [{prua: 10.2}, 0, 11.0], spessore: 0.25, mat: scuro}
+  # ponte di lavoro: tamburi delle reti e gru di coperta
+  - {tipo: tamburo_rete, nome: tamburo_prodiero, x: {prua: 36.0}, y: 0.0, z0: 4.6, lunghezza: 4.4, r: 0.7, r_flangia: 1.1}
+  - {tipo: tamburo_rete, nome: tamburo_poppiero, x: {prua: 41.5}, y: 0.0, z0: 4.6, lunghezza: 4.4, r: 0.7, r_flangia: 1.1}
+  # gru di dritta con il braccio disteso verso poppa (come nelle foto, a ~8,7 m)
+  - {tipo: gru_articolata, nome: gru_dritta, x: {prua: 43.3}, y: -4.8, z0: 5.7, colonna: 1.4, verso: -1,
+     braccio1: [0.8, 90], braccio2: [9.5, -90]}
+  # portale di poppa (cima della traversa triangolata a 15,3 m, 52,9 m dalla prua, a +-3,9 m dall'asse) sulle casse
+  # gambe inclinate verso l'asse e verso poppa: base sulle casse a 50,6 m, cima sotto la traversa a 52,9 m
+  - {tipo: portale_poppiero, nome: portale, x: {prua: 52.9}, x_base: {prua: 50.6}, x_casse: {prua: 52.65}, z0: 5.6,
+     z_casse: 8.4, z_traversa: 15.3, y_base: 5.0, y_cima: 3.35, z_albero: 18.7, z_frusta: 22.2,
+     mat_casse: ponte}
+  # specchio di poppa chiaro (con 'scafo', blu scuro, nelle viste di poppa che la foto vede solo di sbieco
+  # diventava un blocco nero, come sulla Nanuchka)
+  - {tipo: pannello_specchio, nome: pannello_specchio, mat: bianco, L: 57.0, B: 13.0, bordo: [[0, 8.9], [2, 8.3], [6, 7.6], [11, 7.2], [17, 6.9], [21, 5.8], [57, 5.7]],
+     profilo_prua: [[0, 8.7], [2.0, 6.6], [4.0, 3.6], [5.2, 1.3], [5.8, 0]], prua_segue_dritto: true, finezza_prua: 16,
+     pienezza: [0.7, 0.35], svasatura: 0.03, specchio: 0.88, lunghezza_poppa: 12, bagnasciuga: 0.6}
+  # rampa poppiera (apertura nello specchio, dal piede della rampa al ponte di lavoro)
+  - {tipo: rampa_poppiera, nome: rampa, x_poppa: {prua: 57.0}, semilarghezza: 1.8, z_basso: 1.0, z_ponte: 5.7}
+
+foto:
+  # Fotocamere iniziali dalla triangolazione (extracted/navi/peschereccio/triangolazione/). Spigoli della traversa del
+  # portale: la traversa va da 52,4 a 53,4 m dalla prua, fino a +-3,9 m dall'asse, cielo a 15,3 m.
+  - nome: prua_dritta
+    file: extracted/navi/peschereccio/foto/prua_dritta_atlantic_peace_2012.jpg
+    nave: Atlantic Peace (1987), 6/4/2012, arrivo a Bremerhaven, 3/4 di prua dritta dalla banchina
+    maschera_file: extracted/navi/peschereccio/foto/prua_dritta_atlantic_peace_2012_maschera.png   # classi/peschereccio_maschere.yaml
+    qualita: 1.0
+    esponente_peso: 1.5
+    specchiabile: true
+    cancella: [[1020, 560, 1150, 600], [215, 630, 275, 655], [250, 548, 300, 585]]   # nome e sigla a prua, nome a poppa, logo sulla cassa
+    orizzonte_punti: [[20, 640], [100, 640], [180, 640]]
+    limiti_fotocamera: {distanza: [20, 3000]}
+    fotocamera_iniziale: {posizione: [98.7, -153.4, 3.8], bersaglio: [1.0, 0.0, 6.5], f: 3814}
+    punti:
+      - [[{prua: 0}, 0, 8.9], [1295, 515]]           # dritto all'orlo del castello
+      - [[{prua: 5.8}, 0, 0], [1182, 714]]           # piede del dritto al galleggiamento
+      - [[{prua: 57.0}, -5.83, 5.7], [198, 598]]     # specchio, spigolo di dritta all'orlo della murata
+      - [[{prua: 57.0}, -5.72, 0], [203, 710]]       # specchio, spigolo di dritta al galleggiamento
+      - [[{prua: 52.4}, -3.9, 15.3], [299, 411]]     # traversa del portale, spigolo prodiero di dritta in alto
+      - [[{prua: 52.4}, 3.9, 15.3], [388, 412]]      # traversa del portale, spigolo prodiero di sinistra in alto
+      - [[{prua: 17.6}, 4.9, 12.6], [988, 447]]      # tetto della timoneria, spigolo prodiero di sinistra
+      - [[{prua: 26.8}, 0, 21.0], [772, 272]]        # cima dell'albero dei fanali
+      - [[{prua: 30.0}, 0, 17.2], [712, 355]]        # struttura a pi greco, centro della traversa
+  - nome: poppa_dritta
+    file: extracted/navi/peschereccio/foto/poppa_dritta_atlantic_peace_2012.jpg
+    nave: Atlantic Peace (1987), 6/4/2012, giardinetto di dritta dalla banchina; maschera e punti solo nel terzo poppiero
+    maschera_file: extracted/navi/peschereccio/foto/poppa_dritta_atlantic_peace_2012_maschera.png
+    escludi: [[720, 0, 1536, 1152]]                 # meta' prodiera fuori dalla calibrazione (non coerente)
+    qualita: 0.8
+    esponente_peso: 1.5
+    specchiabile: true
+    cancella: [[420, 640, 530, 672], [505, 545, 575, 585]]   # nome e porto a poppa, logo sulla cassa
+    # orizzonte stimato: la banchina dietro la poppa (a qualche centinaio di metri) tocca l'acqua a y = 663; con la
+    # fotocamera a ~5 m sull'acqua l'orizzonte vero sta circa 15 px piu' in alto
+    orizzonte_punti: [[20, 648], [150, 648], [280, 648]]
+    limiti_fotocamera: {distanza: [20, 3000], elevazione: [-10, 15]}
+    fotocamera_iniziale: {posizione: [-47.2, -64.3, 8.9], bersaglio: [-6.7, 0.0, 7.7], f: 1476}
+    punti:
+      - [[{prua: 57.0}, -5.83, 5.7], [381, 609]]     # specchio, spigolo di dritta all'orlo della murata
+      - [[{prua: 57.0}, -5.72, 0], [381, 747]]       # specchio, spigolo di dritta al galleggiamento
+      - [[{prua: 52.4}, -3.9, 15.3], [505, 384]]     # traversa del portale, spigolo prodiero di dritta in alto
+      - [[{prua: 53.4}, 3.9, 15.3], [440, 395]]      # traversa del portale, spigolo poppiero di sinistra in alto

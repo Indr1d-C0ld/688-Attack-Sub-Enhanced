@@ -1,0 +1,68 @@
+# Rompighiaccio diesel-elettrico classe Kapitan Sorokin (Progetto 1191: Kapitan Sorokin, Kapitan Nikolayev, Kapitan
+# Dranitsyn, Kapitan Khlebnikov, 1977-1981), la classe `rompighiaccio` del traffico civile: lo scafo corto e largo con
+# la prua da ghiaccio molto slanciata, il castello alto, il grande blocco bianco degli alloggi a prua del mezzo con la
+# plancia sopra, il fumaiolo dietro, la tuga delle lance e l'albero, il cassero basso a poppa.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri; {prua: d} =
+# punto a d metri dalla prua. Misure della classe del traffico: 130 x 26 m (tools/pipeline/civili.py; la classe vera
+# 132 x 26,5 m). Posizioni e quote dalla foto della Kapitan Dranitsyn (2006, di sinistra un poco da prua), affinate con
+# gli scarti della calibrazione (STIMA dove la foto non arriva). Modello proprio approvato il 30/10/2026.
+nome: Rompighiaccio (classe Kapitan Sorokin)
+uscita: extracted/navi/rompighiaccio
+
+scafo:
+  L: 130.0
+  B: 26.0
+  bordo: [[0, 10.3], [60, 10.2], [105, 10.2], [107, 6.0], [130.0, 6.0]]
+  slancio: 5.5
+  finezza_prua: 38
+  specchio: 0.7
+  svasatura: 0.05
+  pienezza: [0.6, 0.4]
+
+parti:
+  # ---------------- il castello: la gru di prua
+  - {tipo: gru, nome: gru_prodiera, base: [{prua: 30.0}, 0, 13.7], cima: [{prua: 18.0}, 0, 15.7], z0: 10.3}
+  # ---------------- il blocco degli alloggi, la plancia, l'albero di plancia
+  - {tipo: tuga, nome: alloggi, x0: {prua: 84.3}, x1: {prua: 50.6}, y0: -10.0, y1: 10.0, z0: 10.2, z1: 21.6, rastrema: 0.99}
+  - {tipo: tuga, nome: plancia_bassa, x0: {prua: 60.0}, x1: {prua: 50.6}, y0: -7.5, y1: 7.5, z0: 21.6, z1: 25.2, rastrema: 0.97}
+  - {tipo: tuga, nome: plancia, x0: {prua: 58.0}, x1: {prua: 50.8}, y0: -6.0, y1: 6.0, z0: 25.2, z1: 28.8, rastrema: 0.96}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 51.2}, x1: {prua: 50.7}, y0: -5.5, y1: 5.5, z0: 26.8, z1: 28.0, mat: nero, rastrema: 0.98}
+  - {tipo: asta, nome: albero_plancia, da: [{prua: 55.0}, 0, 27.6], a: [{prua: 55.0}, 0, 32.0], spessore: 0.4}
+  - {tipo: radome, nome: radome_plancia, x: {prua: 57.0}, z: 29.7, r: 0.9}
+  # ---------------- il fumaiolo dietro il blocco, la tuga delle lance, l'albero
+  - {tipo: mack, nome: fumaiolo, x0: {prua: 87.4}, x1: {prua: 78.4}, y0: -3.8, y1: 3.8, z0: 16.2, z1: 26.7, cappello: 1.8}
+  - {tipo: tuga, nome: tuga_lance, x0: {prua: 105.0}, x1: {prua: 84.3}, y0: -9.0, y1: 9.0, z0: 10.2, z1: 16.2}
+  - {tipo: imbarcazione, nome: lancia_sinistra, x0: {prua: 98.0}, x1: {prua: 89.0}, y: 9.6, z0: 14.2, larghezza: 3.0, altezza: 2.2}
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 98.0}, x1: {prua: 89.0}, y: -9.6, z0: 14.2, larghezza: 3.0, altezza: 2.2}
+  - {tipo: albero_palo, nome: albero, x: {prua: 94.5}, z0: 17.4, z1: 33.0, r: 0.6, crocette: [[28.0, 3.5]]}
+  # ---------------- il cassero basso a poppa
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 126.0}, x1: {prua: 107.0}, y0: -8.5, y1: 8.5, z0: 6.0, z1: 9.6}
+
+# le foto da Wikimedia Commons (permesso dell'utente del 30/10/2026; crediti in foto/crediti.json e nel RAPPORTO)
+foto:
+  - nome: sinistra_dranitsyn
+    # la foto e' un grandangolo col barilotto forte (il galleggiamento curvo di 100 px): si usa la copia raddrizzata
+    # (distorsione radiale k = 0,464 sulla mezza diagonale, stimata perche' il galleggiamento torni dritto, 2 px rms; tela
+    # allargata a 3700 x 2300, il centro spostato di 314, 126)
+    file: extracted/navi/rompighiaccio/foto/KAPITAN_DRANITSYN_Icebreaker_raddrizzata.jpg
+    nave: Kapitan Dranitsyn, 21/8/2006 (pubblico dominio), di sinistra un poco da prua, da vicino
+    qualita: 1.0
+    specchiabile: true
+    # la maschera e' la sagoma del modello calibrato sui punti, erosa di 4 px (contorno_modello.py --maschera)
+    maschera_file: extracted/navi/rompighiaccio/foto/sinistra_dranitsyn_maschera.png
+    solo_punti: true
+    riquadro: [200, 450, 3700, 1750]
+    # nomi e marchi veri tolti (decisione della principale, 30/10/2026): il nome a prua e a poppa, la targa sul blocco,
+    # l'orso sul fumaiolo (coordinate della copia raddrizzata)
+    cancella: [[624, 1395, 990, 1469], [2031, 982, 2202, 1021], [2328, 918, 2450, 1017], [3437, 1559, 3579, 1621]]
+    fotocamera_iniziale: {posizione: [150, 220, 10], bersaglio: [0, 0, 10], f: 2500}
+    limiti_fotocamera: {elevazione: [-5, 20], distanza: [40, 4000], focale: [500, 90000]}
+    # la poppa (all'estremita' destra) e' il rigonfio vicino all'acqua, non la coperta: non e' un punto
+    punti:
+      - [[{prua: 0}, 0, 10.3], [287, 1307]]           # dritto di prua in coperta
+      - [[{prua: 5.5}, 0, 0.0], [433, 1601]]         # piede del dritto al galleggiamento
+      - [[{prua: 50.6}, 10.0, 21.6], [1445, 1029]]   # spigolo prodiero alto di sinistra del blocco degli alloggi
+      - [[{prua: 84.3}, 10.0, 21.6], [2325, 1037]]   # spigolo poppiero alto di sinistra del blocco
+      - [[{prua: 50.8}, 0, 28.8], [1560, 814]]       # fronte del cielo della plancia
+      - [[{prua: 78.4}, 0, 26.7], [2293, 875]]       # spigolo prodiero del cappello del fumaiolo
+      - [[{prua: 94.5}, 0, 33.0], [2708, 692]]       # cima dell'albero

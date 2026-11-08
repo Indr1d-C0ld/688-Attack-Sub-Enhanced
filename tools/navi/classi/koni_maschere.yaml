@@ -1,0 +1,62 @@
+# Maschere ritoccate a mano delle foto di fianco del Koni (tools/navi/maschera_manuale.py).
+# Foto della 356 cubana (1984), 2988 x 1974 px. La nave e' chiara quanto il mare all'orizzonte (foschia):
+# sotto l'orizzonte (y 1384) la sagoma e' tracciata a mano (`includi`), sopra vale la soglia sul cielo.
+# A destra la portaerei classe Kiev sullo sfondo resta fuori dall'inviluppo (x > 2375).
+file: extracted/navi/koni/foto/fianco_sinistro_cuba356_1984_full.jpg
+uscita: extracted/navi/koni/foto/fianco_sinistro_cuba356_1984_maschera.png
+# scafo: linea di coperta (orlo della murata), dritto, galleggiamento (sopra l'onda)
+scafo: [[2988, 1604], [2300, 1601], [1500, 1597], [1100, 1582], [738, 1561], [540, 1513], [385, 1494], [208, 1481], [77, 1464],
+        [130, 1580], [181, 1668], [210, 1708], [700, 1712], [1500, 1710], [2300, 1712], [2988, 1712]]
+soglia_scafo: 175
+linea_coperta: [[77, 1463], [208, 1480], [385, 1493], [540, 1512], [738, 1560], [1100, 1581], [1500, 1596], [2300, 1600], [2988, 1603]]
+# sopra l'orizzonte: inviluppo largo attorno a plancia, albero, fumaiolo e Pop Group
+inviluppo: [[60, 1377], [60, 1300], [950, 1300], [1000, 1180], [1250, 1180], [1300, 1100], [1310, 890], [1610, 890],
+            [1625, 1230], [1720, 1230], [1730, 1330], [2000, 1330], [2280, 1330], [2280, 1290], [2375, 1290], [2375, 1377]]
+soglia_sovrastrutture: 222
+includi:
+  # sotto l'orizzonte: contorno superiore tracciato a mano, dalla prua alla poppa e ritorno lungo la coperta
+  # (RBU-6000 a x 750-927, torretta poppiera a x 2271-2336, Pop Group sopra l'orizzonte fino a x 2367)
+  - [[77, 1463], [208, 1481], [385, 1493], [540, 1511], [542, 1440], [552, 1412], [575, 1403], [727, 1403], [733, 1420],
+     [738, 1455], [750, 1455], [750, 1378], [835, 1378], [838, 1400], [842, 1382], [927, 1382], [930, 1455], [940, 1455],
+     [942, 1392], [1040, 1390], [1040, 1377], [1990, 1377], [1992, 1395], [1996, 1498], [2175, 1498], [2180, 1448],
+     [2228, 1448], [2228, 1440], [2271, 1440], [2271, 1385], [2290, 1385], [2290, 1377], [2340, 1377], [2340, 1385],
+     [2336, 1440], [2417, 1440], [2420, 1503], [2700, 1503], [2705, 1472], [2720, 1463], [2893, 1463],
+     [2898, 1559], [2988, 1559], [2988, 1604], [1500, 1597], [738, 1561], [540, 1513], [385, 1494], [208, 1481]]
+  # numero 356 (bianco: la soglia dello scafo lo escluderebbe)
+  - [[566, 1592], [726, 1592], [726, 1684], [566, 1684]]
+area_minima: 120
+---
+# Foto del Del'fin (Progetto 1159, 1982), anteprima 1920 x 1428 px. Cielo e mare sono chiari (195-240), la
+# nave scura: la soglia separa la nave anche sotto l'orizzonte. Escluso il tratto tra fumaiolo e torretta
+# poppiera, dove il 1159 non ha la tuga della versione 1159T modellata: li' la foto mostrerebbe il ponte
+# scoperto e il mare, e la tessitura viene dalla foto della 356 riflessa.
+file: extracted/navi/koni/foto/fianco_dritto_delfin_1982.jpg
+uscita: extracted/navi/koni/foto/fianco_dritto_delfin_1982_maschera.png
+scafo: [[34, 839], [700, 839], [1300, 826], [1520, 800], [1700, 775], [1818, 759], [1916, 752],
+        [1880, 820], [1840, 880], [1820, 903], [1700, 912], [1000, 916], [300, 916], [60, 916], [36, 905]]
+soglia_scafo: 150
+linea_coperta: [[34, 838], [700, 838], [1300, 825], [1520, 799], [1700, 774], [1818, 758], [1916, 751]]
+inviluppo: [[15, 839], [15, 750], [200, 750], [220, 700], [480, 700], [500, 640], [620, 640], [640, 690], [750, 690],
+            [800, 660], [930, 600], [990, 430], [1060, 430], [1180, 520], [1300, 560], [1330, 640], [1420, 690],
+            [1520, 690], [1650, 700], [1916, 700], [1916, 845], [15, 845]]
+soglia_sovrastrutture: 185
+escludi:
+  - [[632, 690], [806, 690], [806, 837], [632, 837]]
+area_minima: 60
+---
+# Foto di prua del Del'fin (1982), anteprima 1920 x 1200 px. Fondo chiaro (foschia, 186-250), nave scura:
+# basta la soglia. Escluse le bandiere di segnalazione a poppavia dell'alberetto e, come per la foto di
+# fianco, la zona tra fumaiolo e torretta poppiera dove il 1159 non ha la tuga della versione 1159T.
+file: extracted/navi/koni/foto/prua_sinistra_delfin_1982.jpg
+uscita: extracted/navi/koni/foto/prua_sinistra_delfin_1982_maschera.png
+scafo: [[57, 792], [300, 830], [600, 870], [1100, 930], [1500, 950], [1875, 968], [1882, 1040], [1700, 1066],
+        [1000, 1066], [400, 1058], [160, 1050], [110, 960]]
+soglia_scafo: 175
+linea_coperta: [[57, 791], [300, 829], [600, 869], [1100, 929], [1500, 949], [1882, 967]]
+inviluppo: [[40, 800], [40, 700], [300, 700], [500, 560], [700, 540], [850, 330], [1100, 330], [1200, 600],
+            [1450, 680], [1900, 900], [1900, 1000], [40, 1000]]
+soglia_sovrastrutture: 178
+escludi:
+  - [[995, 380], [1095, 380], [1095, 545], [995, 545]]
+  - [[1189, 862], [1390, 872], [1390, 966], [1240, 964], [1189, 900]]
+area_minima: 80

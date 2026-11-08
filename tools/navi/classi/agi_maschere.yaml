@@ -1,0 +1,112 @@
+# Maschere ritoccate a mano delle foto della LINZA (tools/navi/maschera_manuale.py, metodo `cielo`).
+# Sopra l'orizzonte: nave = cio' che si scosta dal cielo della propria riga (alberi grigi e bianchi, gabbie
+# sferiche); sotto l'orizzonte la nave ha quasi il tono del mare e la sagoma e' tracciata a mano (`includi`).
+# Gli spruzzi dell'onda di prua restano fuori: quella zona la dipingono le altre foto.
+#
+# Foto 1: fianco di dritta a colori (2800 x 1860), orizzonte inclinato da y 1027 (x 30) a y 971 (x 2780).
+metodo: cielo
+file: extracted/navi/agi/foto/fianco_dritta_linza_1986.jpg
+uscita: extracted/navi/agi/foto/fianco_dritta_linza_1986_maschera.png
+orizzonte: [[30, 1027], [2780, 971]]
+margine_orizzonte: 2
+banda_orizzonte: 3
+inviluppo: [[180, 1030], [180, 560], [2060, 560], [2060, 1000], [1200, 1012]]
+soglia: 22
+includi:
+  - [[95, 1300], [130, 1245], [240, 1232], [300, 1188], [430, 1178], [500, 1150], [560, 1160], [840, 1168], [905, 1150],
+     [930, 1040], [1064, 1030], [1072, 1060], [1157, 1062], [1165, 1143], [1308, 1143], [1345, 1288], [1700, 1300],
+     [1702, 1395], [1790, 1392], [1798, 1350], [1868, 1352], [1872, 1388], [1925, 1385], [1928, 1012], [1975, 1010],
+     [1972, 1370], [2100, 1352], [2160, 1305], [2440, 1290], [2605, 1281], [2560, 1310], [2350, 1335], [2300, 1420],
+     [2200, 1445], [2100, 1470], [2000, 1488], [1900, 1500], [1700, 1513], [1500, 1523], [1200, 1531], [900, 1538],
+     [600, 1545], [300, 1550], [150, 1548], [120, 1510], [104, 1450]]
+escludi:
+  - [[1100, 975], [1580, 970], [1580, 1003], [1100, 1008]]     # residui dell'orizzonte
+area_minima: 60
+---
+# Foto 2: fianco di dritta in bianco e nero (2901 x 1945), a ~70 gradi dalla prua; sopra la linea mare/costa
+# (y 1029) ci sono le montagne: inviluppo stretto attorno agli alberi e alla cupola radar.
+metodo: cielo
+file: extracted/navi/agi/foto/fianco_dritta_2_linza_1986.jpg
+uscita: extracted/navi/agi/foto/fianco_dritta_2_linza_1986_maschera.png
+orizzonte_y: 1029
+margine_orizzonte: 2
+banda_orizzonte: 3
+inviluppo: [[500, 1032], [500, 720], [660, 720], [660, 950], [1000, 950], [1000, 900], [1080, 900], [1080, 960], [1480, 960], [1480, 700], [1620, 700], [1620, 1032]]
+soglia: 25
+includi:
+  - [[352, 1217], [373, 1202], [466, 1191], [492, 1098], [523, 1093], [528, 1171], [591, 1171], [596, 1036], [616, 1036],
+     [622, 1150], [736, 1150], [741, 1098], [772, 1098], [777, 1140], [875, 1129], [881, 1036], [932, 1036], [974, 1038],
+     [1026, 1036], [1036, 1088], [1078, 1093], [1098, 1124], [1140, 1191], [1295, 1233], [1523, 1212], [1523, 1036],
+     [1554, 1036], [1564, 1098], [1616, 1202], [1761, 1191], [1973, 1181], [1927, 1264], [1896, 1326], [1865, 1352],
+     [1761, 1353], [1347, 1349], [932, 1344], [518, 1339], [373, 1333], [357, 1285]]
+area_minima: 60
+---
+# Foto 3: mascone di dritta in bianco e nero (2913 x 1908), orizzonte a y 716.
+metodo: cielo
+file: extracted/navi/agi/foto/prua_dritta_linza_1986.jpg
+uscita: extracted/navi/agi/foto/prua_dritta_linza_1986_maschera.png
+orizzonte: [[40, 718], [2850, 715]]
+margine_orizzonte: 2
+banda_orizzonte: 3
+inviluppo: [[420, 720], [420, 120], [1950, 120], [1950, 720]]
+soglia: 22
+includi:
+  - [[256, 1238], [267, 1207], [325, 1185], [362, 952], [415, 936], [415, 1005], [506, 1037], [580, 1005], [580, 727],
+     [628, 727], [633, 941], [697, 931], [750, 931], [760, 1026], [877, 1005], [893, 803], [909, 787], [1068, 787],
+     [1164, 803], [1174, 941], [1193, 941], [1193, 727], [1233, 727], [1233, 952], [1280, 957], [1333, 994], [1349, 1037],
+     [1386, 1196], [1567, 1212], [1615, 727], [1668, 727], [1673, 1180], [1928, 1207], [2129, 1204], [2235, 1220],
+     [2209, 1313], [2172, 1408], [2097, 1493], [1991, 1516], [1779, 1536], [1461, 1551], [1142, 1562], [824, 1551],
+     [506, 1536], [357, 1504], [293, 1472], [267, 1408], [257, 1323]]
+area_minima: 60
+---
+# Foto 4: mascone di dritta a colori (2936 x 1948), orizzonte inclinato da y 847 (x 40) a y 741 (x 2900).
+metodo: cielo
+file: extracted/navi/agi/foto/prua_dritta_2_linza_1986.jpg
+uscita: extracted/navi/agi/foto/prua_dritta_2_linza_1986_maschera.png
+orizzonte: [[40, 847], [2900, 741]]
+margine_orizzonte: 2
+banda_orizzonte: 3
+inviluppo: [[450, 860], [450, 30], [1950, 30], [1950, 860]]
+soglia: 22
+includi:
+  - [[238, 1521], [249, 1409], [305, 1386], [328, 1162], [395, 1145], [406, 1218], [462, 1240], [597, 1218], [608, 850],
+     [659, 848], [676, 1162], [698, 1184], [799, 1184], [821, 1128], [889, 1128], [906, 960], [934, 943], [1237, 943],
+     [1253, 954], [1259, 1094], [1270, 1094], [1270, 870], [1315, 870], [1315, 1117], [1394, 1100], [1450, 1184],
+     [1500, 1409], [1540, 1431], [1635, 1409], [1638, 803], [1697, 801], [1705, 1330], [2033, 1386], [2258, 1369],
+     [2325, 1392], [2308, 1498], [2258, 1611], [2190, 1734], [2123, 1792], [2033, 1799], [1697, 1824], [1360, 1846],
+     [1023, 1852], [687, 1841], [406, 1824], [294, 1790], [249, 1723], [227, 1611]]
+area_minima: 60
+---
+# Foto 5: quasi di prua, foto verticale (1880 x 2800), orizzonte da y 1106 (x 40) a y 1073 (x 1850).
+metodo: cielo
+file: extracted/navi/agi/foto/prua_dritta_verticale_linza_1986.jpg
+uscita: extracted/navi/agi/foto/prua_dritta_verticale_linza_1986_maschera.png
+orizzonte: [[40, 1106], [1850, 1073]]
+margine_orizzonte: 2
+banda_orizzonte: 3
+inviluppo: [[500, 1110], [500, 500], [1350, 500], [1350, 1110]]
+soglia: 22
+includi:
+  - [[540, 1780], [545, 1640], [550, 1580], [560, 1510], [610, 1430], [650, 1310], [700, 1310], [750, 1340], [800, 1320],
+     [805, 1104], [845, 1104], [845, 1160], [880, 1170], [1020, 1170], [1055, 1104], [1115, 1104], [1115, 1200],
+     [1150, 1220], [1200, 1320], [1260, 1480], [1300, 1500], [1350, 1530], [1375, 1620], [1365, 1720], [1345, 1780],
+     [1280, 1802], [1100, 1785], [900, 1775], [750, 1785], [600, 1792], [550, 1795]]
+area_minima: 60
+---
+# Foto 6: mascone di sinistra a colori (2800 x 1830); sopra la linea mare/costa (y 724) ci sono le colline:
+# inviluppo stretto attorno ad alberi, casotto e cupola radar.
+metodo: cielo
+file: extracted/navi/agi/foto/prua_sinistra_linza_1986.jpg
+uscita: extracted/navi/agi/foto/prua_sinistra_linza_1986_maschera.png
+orizzonte_y: 724
+margine_orizzonte: 2
+banda_orizzonte: 3
+inviluppo: [[850, 727], [850, 150], [1100, 150], [1100, 600], [1550, 600], [1550, 560], [1950, 560], [1950, 600], [2150, 600], [2150, 220], [2380, 220], [2380, 727]]
+soglia: 25
+includi:
+  - [[302, 1104], [511, 1110], [646, 1104], [769, 1117], [855, 1147], [923, 732], [993, 732], [1000, 1147], [1101, 1135],
+     [1310, 1147], [1347, 963], [1396, 944], [1654, 926], [1654, 756], [1802, 756], [1802, 732], [1829, 732], [1829, 756],
+     [1937, 756], [1950, 926], [2011, 1024], [2085, 914], [2159, 901], [2196, 732], [2257, 732], [2270, 914], [2405, 914],
+     [2454, 988], [2552, 1074], [2577, 1197], [2592, 1320], [2577, 1354], [2528, 1434], [1716, 1452], [978, 1464],
+     [461, 1483], [424, 1415], [388, 1354], [363, 1280]]
+area_minima: 60

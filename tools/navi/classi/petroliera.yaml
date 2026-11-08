@@ -1,0 +1,99 @@
+# Petroliera civile: Sea Isle City (ex Umm al Maradem), Mitsubishi Heavy Industries 1981 (scafo n. 1867), per la
+# Kuwait Oil Tanker Company; battente bandiera USA dal 1987 (operazione Earnest Will), colpita da un Silkworm
+# iraniano il 16/10/1987. 96.888 tpl, petroliera da greggio con sovrastruttura a poppa.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua (x = L/2 - d).
+# Misure: larghezza 44,0 m e lunghezza 222,0 m (fonti pubbliche: e' la lunghezza tra le perpendicolari);
+# lunghezza fuori tutto 231,8 m dalla gemella di cantiere Umm al Aish (poi Surf City); altezza di costruzione
+# 18,6 m (il "61 ft" delle schede, che per una 97.000 tpl e' l'altezza di costruzione, non il pescaggio).
+# Tutto il resto e' misurato sull'unica foto (quarto di dritta, 1987) calibrata con orizzonte, punti dello scafo
+# e punte simmetriche delle alette di plancia (fotocamera a ~1,2 km, quota ~12 m, ~25 gradi dalla poppa):
+# casa larga 24,8 m tra 216 e 198 m dalla prua, alette fino a 22,5 m dall'asse, fumaiolo a 213 m (cima 30,5 m),
+# pali dei bighi a 151 e 106,5 m, albero prodiero a 27,7 m. Nave in zavorra come nella foto: appoppata, bordo
+# libero 8,7 m a poppa e ~15 m a prua (dettagli in extracted/navi/petroliera/RAPPORTO.md).
+# Parti proprie (passerella, tubolature, poppa arrotondata dello scafo) in classi/petroliera_parti.py;
+# maschera in classi/petroliera_maschera.yaml.
+nome: Petroliera (Sea Isle City, 1981)
+uscita: extracted/navi/petroliera
+moduli_parti: [petroliera_parti.py]
+
+scafo:
+  L: 231.8
+  B: 44.0
+  bordo: [[0, 15.9], [6, 15.6], [15, 15.1], [30, 14.3], [45, 13.3], [67, 12.1], [115, 10.5], [151, 9.8], [193, 9.1], [231.8, 8.7]]
+  slancio: 4.7
+  prua_segue_dritto: true
+  finezza_prua: 70
+  specchio: 0.36
+  svasatura: 0.0
+  pienezza: [0.9, 0.9]
+  bagnasciuga: 0.4
+  poppa_tonda: {lunghezza: 40, pendenza: 1.6, soglia: 0.15}   # opzione di kit.scafo (nata con questa classe)
+
+parti:
+  # sovrastruttura poppiera: casa alloggi a cinque ponti, timoneria, alette di plancia fino alla murata
+  - {tipo: tuga, nome: casa, x0: {prua: 216.2}, x1: {prua: 198.0}, y0: -12.4, y1: 12.4, z0: 8.5, z1: 21.0}
+  - {tipo: tuga, nome: timoneria, x0: {prua: 207.0}, x1: {prua: 197.5}, y0: -11.0, y1: 11.0, z0: 21.0, z1: 23.7}
+  - {tipo: scatola, nome: finestre_timoneria, x0: {prua: 197.7}, x1: {prua: 197.3}, y0: -10.5, y1: 10.5, z0: 22.0, z1: 23.2, mat: scuro}
+  - {tipo: scatola, nome: aletta_dritta, x0: {prua: 201.0}, x1: {prua: 197.5}, y0: -22.5, y1: -11.0, z0: 19.6, z1: 22.1}
+  # torrette delle scale sotto le alette e ponte delle lance (fino alla murata, su colonne)
+  - {tipo: scatola, nome: torretta_dritta, x0: {prua: 206.0}, x1: {prua: 198.0}, y0: -16.5, y1: -12.4, z0: 12.0, z1: 19.6}
+  - {tipo: scatola, nome: torretta_sinistra, x0: {prua: 206.0}, x1: {prua: 198.0}, y0: 12.4, y1: 16.5, z0: 12.0, z1: 19.6}
+  - {tipo: scatola, nome: ponte_lance, x0: {prua: 222.0}, x1: {prua: 197.0}, y0: -21.5, y1: 21.5, z0: 11.4, z1: 12.0}
+  - {tipo: asta, nome: colonna_200_dritta, da: [{prua: 200.0}, -21.0, 9.0], a: [{prua: 200.0}, -21.0, 11.4], spessore: 0.4, mat: bianco}
+  - {tipo: asta, nome: colonna_200_sinistra, da: [{prua: 200.0}, 21.0, 9.0], a: [{prua: 200.0}, 21.0, 11.4], spessore: 0.4, mat: bianco}
+  - {tipo: asta, nome: colonna_210_dritta, da: [{prua: 210.0}, -21.0, 9.0], a: [{prua: 210.0}, -21.0, 11.4], spessore: 0.4, mat: bianco}
+  - {tipo: asta, nome: colonna_210_sinistra, da: [{prua: 210.0}, 21.0, 9.0], a: [{prua: 210.0}, 21.0, 11.4], spessore: 0.4, mat: bianco}
+  - {tipo: asta, nome: colonna_220_dritta, da: [{prua: 220.0}, -21.0, 9.0], a: [{prua: 220.0}, -21.0, 11.4], spessore: 0.4, mat: bianco}
+  - {tipo: asta, nome: colonna_220_sinistra, da: [{prua: 220.0}, 21.0, 9.0], a: [{prua: 220.0}, 21.0, 11.4], spessore: 0.4, mat: bianco}
+  - {tipo: scatola, nome: aletta_sinistra, x0: {prua: 201.0}, x1: {prua: 197.5}, y0: 11.0, y1: 22.5, z0: 19.6, z1: 22.1}
+  # fumaiolo cilindrico bianco con cappello nero e due scarichi
+  - {tipo: fumaiolo_cilindrico, nome: fumaiolo, x: {prua: 213.0}, z0: 21.0, z1: 30.5, r: 3.05, cappello: 1.8, rastrema: 1.0}
+  - {tipo: cilindro, nome: scarico_1, x: {prua: 213.6}, y: 0.9, r: 0.55, z0: 30.5, z1: 32.0, mat: nero}
+  - {tipo: cilindro, nome: scarico_2, x: {prua: 212.4}, y: -0.9, r: 0.55, z0: 30.5, z1: 32.0, mat: nero}
+  # albero radar sul cielo della timoneria, radome, alberetto di segnalazione a sinistra
+  - {tipo: albero_palo, nome: albero_radar, x: {prua: 197.2}, z0: 23.7, z1: 38.3, r: 0.8, crocette: [[34.8, 2.2]], mat: sovrastruttura}
+  - {tipo: asta, nome: supporto_radome, da: [{prua: 201.2}, 0, 23.7], a: [{prua: 201.2}, 0, 25.9], spessore: 0.4, mat: bianco}
+  - {tipo: sfera, nome: radome, x: {prua: 201.2}, y: 0.0, z: 26.6, r: 0.85, mat: bianco}
+  - {tipo: asta, nome: alberetto_sinistro, da: [{prua: 204.0}, 13.0, 21.0], a: [{prua: 204.0}, 13.0, 30.0], spessore: 0.3}
+  # lance di salvataggio sotto le gruette, una per lato
+  - {tipo: imbarcazione, nome: lancia_dritta, x0: {prua: 201.0}, x1: {prua: 192.0}, y: -14.6, z0: 13.6, larghezza: 3.2, altezza: 1.8}
+  - {tipo: imbarcazione, nome: lancia_sinistra, x0: {prua: 201.0}, x1: {prua: 192.0}, y: 14.6, z0: 13.6, larghezza: 3.2, altezza: 1.8}
+  # zona del manifold: due pali dei bighi per le manichette, bighi, fanale, casotto
+  - {tipo: cilindro, nome: palo_poppiero, x: {prua: 151.0}, y: 0.0, r: 0.75, z0: 9.7, z1: 22.8, n: 10}
+  - {tipo: cilindro, nome: testa_palo_poppiero, x: {prua: 151.0}, y: 0.0, r: 1.0, z0: 21.6, z1: 22.4, n: 10}
+  - {tipo: cilindro, nome: palo_prodiero, x: {prua: 106.5}, y: 0.0, r: 0.85, z0: 10.7, z1: 23.8, n: 10}
+  - {tipo: cilindro, nome: testa_palo_prodiero, x: {prua: 106.5}, y: 0.0, r: 1.1, z0: 22.6, z1: 23.4, n: 10}
+  - {tipo: asta, nome: bigo_poppiero, da: [{prua: 148.5}, 0, 20.5], a: [{prua: 135.4}, 0, 13.2], spessore: 0.4, mat: scuro}
+  - {tipo: asta, nome: bigo_prodiero, da: [{prua: 104.4}, 0, 22.5], a: [{prua: 86.3}, 0, 14.5], spessore: 0.4, mat: scuro}
+  - {tipo: asta, nome: fanale, da: [{prua: 86.3}, 0, 11.4], a: [{prua: 86.3}, 0, 17.1], spessore: 0.4, mat: bianco}
+  - {tipo: scatola, nome: casotto_manifold, x0: {prua: 89.4}, x1: {prua: 77.2}, y0: -2.5, y1: 2.5, z0: 11.2, z1: 13.1}
+  # castello: albero prodiero con piattaforma e casotto alla base
+  - {tipo: albero_palo, nome: albero_prodiero, x: {prua: 27.7}, z0: 14.3, z1: 30.7, r: 0.45, piattaforme: [[22.7, 2.2]], mat: sovrastruttura}
+  - {tipo: scatola, nome: casotto_prodiero, x0: {prua: 27.2}, x1: {prua: 20.6}, y0: -2.2, y1: 2.2, z0: 14.3, z1: 17.2}
+  # coperta del carico: passerella sull'asse e fascio delle tubolature (seguono la coperta inclinata)
+  - {tipo: passerella, nome: passerella, x0: {prua: 197.0}, z0: 9.05, x1: {prua: 28.0}, z1: 14.3, altezza: 0.6}
+  - {tipo: tubolature, nome: tubolature, x0: {prua: 190.0}, z0: 9.15, x1: {prua: 40.0}, z1: 13.3, altezza: 0.8}
+
+foto:
+  - nome: quarto_dritta
+    file: extracted/navi/petroliera/foto/fianco_dritta_quarto_1987.jpg
+    nave: Sea Isle City, 8 agosto 1987 (DN-SC-87-11127)
+    maschera_file: extracted/navi/petroliera/foto/fianco_dritta_quarto_1987_maschera.png   # classi/petroliera_maschera.yaml
+    qualita: 3.0           # unica foto: deve prevalere sull'ombreggiatura di ripiego anche dove e' vista di scorcio
+    esponente_peso: 1      # foto unica, vista di tre quarti (~25 gradi dalla poppa): le murate sono viste di scorcio
+    specchiabile: true
+    cancella: [[872, 1298, 988, 1322], [896, 1336, 975, 1352], [1074, 1016, 1100, 1066]]   # nome e porto a poppa, "C" sul fumaiolo
+    fotocamera_iniziale: {posizione: [-1092, -518, 12], bersaglio: [-45, 0, 15], f: 15700}
+    orizzonte_punti: [[300, 1262], [700, 1266], [2400, 1286], [2650, 1289]]
+    punti:
+      - [[{prua: 231.8}, 0, 8.7], [928, 1285]]         # poppa sull'asse, in coperta (centro del nome a poppa)
+      - [[{prua: 0}, 0, 15.9], [2233, 1207]]           # dritto di prua, falchetta
+      - [[{prua: 4.7}, 0, 0], [2210, 1397]]            # dritto di prua al galleggiamento
+      - [[{prua: 198.6}, -22.5, 22.1], [1425, 1102]]   # punta dell'aletta di plancia di dritta
+      - [[{prua: 198.6}, 22.5, 21.4], [870, 1118]]     # punta dell'aletta di plancia di sinistra
+      - [[{prua: 216.2}, -12.4, 9.0], [1185, 1282]]    # casa: spigolo poppiero di dritta, in coperta
+      - [[{prua: 216.2}, 12.4, 9.0], [876, 1279]]      # casa: spigolo poppiero di sinistra, in coperta
+      - [[{prua: 213.0}, 0, 30.0], [1052, 987]]        # cima del fumaiolo (orlo del cappello), asse
+      - [[{prua: 106.5}, 0, 23.8], [1688, 1093]]       # cima del palo prodiero dei bighi
+      - [[{prua: 27.7}, 0, 30.7], [2098, 1022]]        # cima dell'albero prodiero

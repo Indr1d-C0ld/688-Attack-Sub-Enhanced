@@ -1,0 +1,103 @@
+# Sottomarino d'attacco classe Trafalgar (Royal Navy), configurazione 1989 (Trafalgar, Turbulent, Tireless, Torbay,
+# Trenchant in servizio): scafo a goccia con coperta piatta, prua tonda, vela bassa a pianta rettangolare con il fronte
+# arrotondato e senza timoni (timoni prodieri a scafo, retratti in emersione), lungo cono di poppa con il pump-jet
+# sommerso e il timone superiore che emerge staccato. L'unica differenza visibile del capoclasse (elica a 7 pale invece
+# del pump-jet) e' sotto l'acqua.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua. Quote assolute rispetto al galleggiamento in emersione normale.
+# Misure: lunghezza 85,4 m e diametro 9,8 m (dossier, [WPTraf]); vela, albero prodiero e timone triangolati su due
+# foto di fianco (extracted/navi/trafalgar/lavoro/triangola_trafalgar.yaml).
+nome: Trafalgar (Royal Navy)
+uscita: extracted/navi/trafalgar
+tono: 0.22
+contrasto: 0.12
+peso_ombra: 0.03
+
+scafo:
+  generatore: scafo_sottomarino
+  L: 85.4
+  B: 9.8
+  # prua tonda, cono di poppa lungo fino alla carenatura del pump-jet (raggio finale 0,9 m)
+  forma: {prua: 11.0, poppa: 34.0, esponente_prua: 2.2, esponente_poppa: 1.45, raggio_coda: 0.9}
+  bordo_libero: 2.45       # coperta al piede della vela (triangolata: 2,4-2,5 m)
+  # coperta piatta larga ~4 m sul tratto cilindrico
+  cassero: [[7.0, 2.2, 1.2], [12.0, 2.4, 2.0], [55.0, 2.4, 2.0], [62.0, 2.1, 1.6]]
+  stazioni: 90
+  punti_sezione: 48
+
+parti:
+  # vela: pianta rettangolare con il fronte arrotondato, cielo piatto a 7,0 m (triangolata: da 27,6 a 36,6 m dalla prua)
+  - tipo: vela
+    nome: vela
+    pianta: ovale
+    esponente: 5.0
+    livelli:
+      - [1.5, {prua: 27.3}, {prua: 36.6}, 1.35]
+      - [6.7, {prua: 27.4}, {prua: 36.6}, 1.35]
+      - [7.0, {prua: 27.8}, {prua: 36.5}, 1.2]
+  # albero a cupola a proravia della vela (triangolato: 21,0 m dalla prua, cima a 3,7 m)
+  - {tipo: cilindro, nome: albero_prua, x: {prua: 21.0}, y: 0, r: 0.35, z0: 2.0, z1: 3.5, n: 10, mat: scafo}
+  - {tipo: sfera, nome: cupola_albero, x: {prua: 21.0}, y: 0, z: 3.5, r: 0.4, n: 8, mezza: true, mat: scafo}
+  # timone superiore: bordo d'attacco da 77,2 m (al galleggiamento) a 77,9 m (in cima), cima a 4,2 m, d'uscita a 81,5 m
+  - {tipo: timone_verticale, nome: timone, x: {prua: 77.1}, z0: -2.0, z1: 4.2, corda: 4.2, corda_estremita: 3.6, spessore: 0.6, freccia: 0.8}
+
+foto:
+  - nome: fianco_dritta
+    file: extracted/navi/trafalgar/foto/fianco_dritta_torbay_2011.jpg
+    maschera_file: extracted/navi/trafalgar/foto/fianco_dritta_torbay_2011_maschera.png   # classi/trafalgar_maschere.yaml
+    nave: HMS Torbay (S90), Saxon Warrior 2011
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    fotocamera_iniziale: {posizione: [-224.0, -227.9, 46.7], bersaglio: [-1.7, 0.0, 7.7], f: 9324}
+    prior_fotocamera: {elevazione: 7, sigma_el: 4, distanza: 330, sigma_logD: 0.5}
+    punti:
+      - [[{prua: 1.0}, 0, 0.0], [1775, 848]]       # piede della prua al galleggiamento
+      - [[{prua: 81.5}, 0, 4.2], [110, 838]]       # cima del timone, spigolo poppiero
+      - [[{prua: 77.9}, 0, 4.2], [199, 835]]       # cima del timone, spigolo prodiero
+      - [[{prua: 27.8}, 0, 7.0], [1292, 692]]      # cielo della vela, fronte
+      - [[{prua: 36.6}, 0, 7.0], [1117, 697]]      # cielo della vela, spigolo poppiero
+      - [[{prua: 27.4}, 0, 2.45], [1296, 811]]     # piede prodiero della vela
+      - [[{prua: 36.6}, 0, 2.45], [1115, 819]]     # piede poppiero della vela
+      - [[{prua: 21.0}, 0, 3.8], [1417, 773]]      # cima dell'albero a cupola
+  - nome: fianco_sinistra
+    file: extracted/navi/trafalgar/foto/fianco_sinistra_trenchant_2017.jpg
+    maschera_file: extracted/navi/trafalgar/foto/fianco_sinistra_trenchant_2017_maschera.png   # classi/trafalgar_maschere.yaml
+    nave: HMS Trenchant (S91), Saxon Warrior 2017
+    esponente_peso: 1.0
+    qualita: 1.0
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    fotocamera_iniziale: {posizione: [30.0, 533.6, 253.3], bersaglio: [2.2, 0.0, 1.8], f: 13289}
+    prior_fotocamera: {elevazione: 25, sigma_el: 6, distanza: 590, sigma_logD: 0.5}
+    punti:
+      - [[{prua: 1.0}, 0, 0.0], [75, 732]]         # piede della prua al galleggiamento
+      - [[{prua: 81.5}, 0, 4.2], [1872, 489]]      # cima del timone, spigolo poppiero
+      - [[{prua: 77.9}, 0, 4.2], [1791, 492]]      # cima del timone, spigolo prodiero
+      - [[{prua: 77.2}, 0, 0.8], [1778, 567]]      # bordo d'attacco del timone sull'acqua
+      - [[{prua: 27.4}, 1.35, 2.45], [664, 640]]   # piede prodiero della vela, lato sinistro
+      - [[{prua: 36.6}, 1.35, 2.45], [866, 625]]   # piede poppiero della vela, lato sinistro
+      - [[{prua: 21.0}, 0, 3.8], [518, 618]]       # cima dell'albero a cupola
+      - [[{prua: 36.6}, 1.35, 7.0], [866, 525]]    # cielo della vela, spigolo poppiero sinistro
+  - nome: poppa_dritta
+    file: extracted/navi/trafalgar/foto/poppa_torbay_2011.jpg
+    maschera_file: extracted/navi/trafalgar/foto/poppa_torbay_2011_maschera.png   # classi/trafalgar_maschere.yaml
+    nave: HMS Torbay (S90), Saxon Warrior 2011
+    esponente_peso: 1.0
+    qualita: 0.8
+    specchiabile: true
+    orizzonte_y: 0
+    soglia_cielo: 0
+    fotocamera_iniziale: {posizione: [-450, -200, 30], bersaglio: [0, 0, 3], f: 6000}
+    orizzonte_punti: [[300, 809], [1000, 810], [1500, 811]]
+    limiti_fotocamera: {azimut: [-175, -110]}
+    punti:
+      - [[{prua: 81.5}, 0, 4.2], [682, 1040]]      # cima del timone, spigolo poppiero
+      - [[{prua: 77.9}, 0, 4.2], [714, 1040]]      # cima del timone, spigolo prodiero
+      - [[{prua: 36.6}, -1.35, 7.0], [975, 967]]   # cielo della vela, spigolo poppiero di dritta
+      - [[{prua: 27.6}, -1.2, 7.0], [1026, 970]]   # cielo della vela, estremita' prodiera (lato dritto)
+      - [[{prua: 36.6}, -1.35, 2.45], [975, 1030]] # piede poppiero della vela, lato dritto
+      - [[{prua: 21.0}, 0, 3.8], [1056, 1001]]     # cima dell'albero a cupola

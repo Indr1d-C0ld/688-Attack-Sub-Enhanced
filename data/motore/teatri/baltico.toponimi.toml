@@ -1,0 +1,382 @@
+# Toponimi del teatro baltico: generato da tools/pipeline/toponimi.py, non modificare a mano.
+# x, y in metri sul piano del teatro (come il fondale); rango 1 il più importante; acqua = nome di mare.
+
+[[nome]]
+testo = "Mar Baltico"
+en = "Baltic Sea"
+tipo = "mare"
+acqua = true
+rango = 2
+x = 82800
+y = -67300
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Bornholm"
+en = "Bornholm"
+tipo = "isola"
+acqua = false
+rango = 3
+x = 100137
+y = -1101
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Rügen"
+en = "Rügen"
+tipo = "isola"
+acqua = false
+rango = 3
+x = 3246
+y = -81262
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Zelanda"
+en = "Zealand"
+tipo = "isola"
+acqua = false
+rango = 3
+x = -94907
+y = 34420
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Copenaghen"
+en = "Copenhagen"
+tipo = "citta"
+acqua = false
+rango = 4
+x = -49599
+y = 59343
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Fehmarn"
+en = "Fehmarn"
+tipo = "isola"
+acqua = false
+rango = 4
+x = -142652
+y = -74569
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Lolland"
+en = "Lolland"
+tipo = "isola"
+acqua = false
+rango = 4
+x = -125548
+y = -42778
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Bacino di Arkona"
+en = "Arkona Basin"
+tipo = "mare"
+acqua = true
+rango = 5
+x = 22454
+y = -27775
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Bacino di Bornholm"
+en = "Bornholm Basin"
+tipo = "mare"
+acqua = true
+rango = 5
+x = 152216
+y = 24884
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Baia di Pomerania"
+en = "Pomeranian Bay"
+tipo = "baia"
+acqua = true
+rango = 5
+x = 58807
+y = -110940
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Capo Arkona"
+en = "Cape Arkona"
+tipo = "capo"
+acqua = false
+rango = 5
+x = 5160
+y = -52318
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Falster"
+en = "Falster"
+tipo = "isola"
+acqua = false
+rango = 5
+x = -90031
+y = -38062
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Kattegat"
+en = "Kattegat"
+tipo = "mare"
+acqua = true
+rango = 5
+x = -84200
+y = 121700
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Malmö"
+en = "Malmö"
+tipo = "citta"
+acqua = false
+rango = 5
+x = -19972
+y = 48289
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Møn"
+en = "Møn"
+tipo = "isola"
+acqua = false
+rango = 5
+x = -64040
+y = -19580
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Peenemünde"
+en = "Peenemünde"
+tipo = "base"
+acqua = false
+rango = 5
+x = 27451
+y = -112348
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Warnemünde"
+en = "Warnemünde"
+tipo = "base"
+acqua = false
+rango = 5
+x = -82921
+y = -107227
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Świnoujście"
+en = "Świnoujście"
+tipo = "base"
+acqua = false
+rango = 5
+x = 59148
+y = -137651
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Dranske"
+en = "Dranske"
+tipo = "base"
+acqua = false
+rango = 6
+x = -8396
+y = -57879
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Fehmarn Belt"
+en = "Fehmarn Belt"
+tipo = "stretto"
+acqua = true
+rango = 6
+x = -132538
+y = -61511
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Kadetrinne"
+en = "Kadetrinne"
+tipo = "stretto"
+acqua = true
+rango = 6
+x = -74595
+y = -77311
+fonte = "dossier 03 §A7 (soglia di Darss e Kadetrinne)"
+
+[[nome]]
+testo = "Kołobrzeg"
+en = "Kołobrzeg"
+tipo = "citta"
+acqua = false
+rango = 6
+x = 145585
+y = -105662
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Rønne"
+en = "Rønne"
+tipo = "citta"
+acqua = false
+rango = 6
+x = 86172
+y = -4733
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Sassnitz"
+en = "Sassnitz"
+tipo = "citta"
+acqua = false
+rango = 6
+x = 18780
+y = -70093
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Trelleborg"
+en = "Trelleborg"
+tipo = "citta"
+acqua = false
+rango = 6
+x = -12681
+y = 24510
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Ystad"
+en = "Ystad"
+tipo = "citta"
+acqua = false
+rango = 6
+x = 29755
+y = 31272
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Gedser"
+en = "Gedser"
+tipo = "citta"
+acqua = false
+rango = 7
+x = -91814
+y = -62521
+fonte = "a mano, coordinate al chilometro (curatore kit)"
+
+[[nome]]
+testo = "Golfo di Meclemburgo"
+en = "Bay of Mecklenburg"
+tipo = "baia"
+acqua = true
+rango = 7
+x = -108200
+y = -85300
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Øresund (Sund)"
+en = "Øresund"
+tipo = "stretto"
+acqua = true
+rango = 7
+x = -51200
+y = 34700
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Helsingborg"
+en = "Helsingborg"
+tipo = "citta"
+acqua = false
+rango = 8
+x = -40501
+y = 100445
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Kristianstad"
+en = "Kristianstad"
+tipo = "citta"
+acqua = false
+rango = 8
+x = 48830
+y = 98658
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Rostock"
+en = "Rostock"
+tipo = "citta"
+acqua = false
+rango = 8
+x = -78559
+y = -119507
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Stralsund"
+en = "Stralsund"
+tipo = "citta"
+acqua = false
+rango = 8
+x = -16275
+y = -94545
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Svendborg"
+en = "Svendborg"
+tipo = "citta"
+acqua = false
+rango = 8
+x = -174567
+y = -5442
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Roskilde"
+en = "Roskilde"
+tipo = "citta"
+acqua = false
+rango = 9
+x = -79740
+y = 56387
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Hillerød"
+en = "Hillerød"
+tipo = "citta"
+acqua = false
+rango = 10
+x = -64581
+y = 87687
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Karlskrona"
+en = "Karlskrona"
+tipo = "citta"
+acqua = false
+rango = 10
+x = 120770
+y = 118927
+fonte = "Natural Earth 1:10m (pubblico dominio)"
+
+[[nome]]
+testo = "Sorø"
+en = "Sorø"
+tipo = "citta"
+acqua = false
+rango = 10
+x = -112876
+y = 32949
+fonte = "Natural Earth 1:10m (pubblico dominio)"

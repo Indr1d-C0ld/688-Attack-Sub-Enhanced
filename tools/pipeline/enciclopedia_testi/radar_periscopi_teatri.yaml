@@ -1,0 +1,875 @@
+# Testi dell'enciclopedia: radar, periscopi e teatri (docs/00_ROADMAP.md, requisito 14; formato di campioni.yaml).
+# Scritti a mano, in parafrasi dai dossier di docs/ricerca (nessun testo copiato), con le fonti: il paragrafo del
+# dossier e, dove serve, la sigla della fonte del dossier. Dati di gioco da data/motore/emettitori.toml,
+# periscopi.toml, meteo.toml e tools/pipeline/teatri.yaml.
+# Campi: it, en (2-6 frasi); uso_it, uso_en (radar e periscopi: che cosa significa o come si usa nel gioco; teatri:
+# consigli pratici); fonti (elenco).
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Radar
+# ---------------------------------------------------------------------------------------------------------------------
+
+radar.aps116:
+  it: >-
+    Il radar del Viking S-3A, l'aereo antisommergibile delle portaerei, in banda X. Ha un modo pensato apposta per i
+    periscopi: l'antenna gira a 300 giri al minuto con 2000 impulsi al secondo, un fascio di 2,4 gradi e una risoluzione
+    di un piede, e un rivelatore automatico conferma il bersaglio se compare in 13 giri su 25. Era la risposta americana
+    all'ESM dei sottomarini: tanti giri in pochi secondi per cogliere anche un'alzata brevissima. Nel 1989 vola ancora
+    sulle portaerei del Pacifico; su quelle atlantiche le S-3A lasciano il posto alle S-3B.
+  en: >-
+    The X-band radar of the S-3A Viking, the carrier's anti-submarine aircraft. It has a mode built for periscopes: the
+    antenna turns at 300 rpm with 2,000 pulses per second, a 2.4-degree beam and one-foot resolution, and an automatic
+    detector confirms a target that appears in 13 sweeps out of 25. It was the American answer to submarine ESM: many
+    sweeps in a few seconds to catch even a very short exposure. In 1989 it still flies from Pacific carriers; on the
+    Atlantic ones the S-3As are giving way to S-3Bs.
+  uso_it: >-
+    All'ESM la sua firma non si confonde con nessun'altra: un ronzio quasi continuo, un giro ogni 0,2 secondi. Contro
+    questo radar anche cinque secondi d'esposizione valgono 25 occasioni di essere visti: se lo senti, abbassa tutto e
+    scendi. Il Viking lo accende a colpi brevi, uno o due giri, poi tace per minuti.
+  uso_en: >-
+    On the ESM its signature is unmistakable: an almost continuous buzz, one sweep every 0.2 seconds. Against this radar
+    even five seconds of exposure mean 25 chances of being seen: if you hear it, lower everything and go deep. The
+    Viking switches it on in short bursts, one or two sweeps, then stays silent for minutes.
+  fonti: ['dossier 11 §3.3 e §5.1 [APL97]', 'dossier 17 §2.5 [WPS3] [TWZS3] e §8.2', 'emettitori.toml (radar.aps116)']
+
+radar.aps124:
+  it: >-
+    Il radar di ricerca di superficie dell'SH-60B Seahawk, l'elicottero LAMPS III della US Navy, in servizio dal 1983.
+    Lavora in banda X con 350 kW di picco e un fascio stretto di 1,2 gradi, e l'antenna può girare fino a 120 giri al
+    minuto; la portata strumentale è di 160 miglia. Serve soprattutto a scoprire le navi e a designarle oltre
+    l'orizzonte della nave madre; nella caccia ai sottomarini l'elicottero lavora con boe e MAD.
+  en: >-
+    The surface search radar of the SH-60B Seahawk, the US Navy's LAMPS III helicopter, in service from 1983. It works
+    in X band with 350 kW peak power and a narrow 1.2-degree beam, and the antenna can turn at up to 120 rpm;
+    instrumented range is 160 miles. Its main job is finding ships and designating them beyond the mother ship's
+    horizon; when hunting submarines the helicopter works with sonobuoys and MAD.
+  uso_it: >-
+    All'ESM è una firma rapida e riconoscibile, un giro ogni mezzo secondo o poco più: un elicottero è vicino. Lo
+    accende per 30-60 secondi e poi lo spegne per qualche minuto, quindi un silenzio non vuol dire che se ne sia andato.
+    Con mare calmo vede un periscopio a circa 5 miglia, con mare 4 a 2.
+  uso_en: >-
+    On the ESM it is a fast, recognisable signature, one sweep every half second or so: a helicopter is close. It is
+    switched on for 30-60 seconds and then off for a few minutes, so silence does not mean it has gone. In a calm sea it
+    sees a periscope at about 5 miles, in sea state 4 at 2.
+  fonti: ['dossier 11 §1.4 [ARMSAPS124] [MPAPS124], §3.3 e §6.1-6.2', 'dossier 17 §8.2', 'emettitori.toml (radar.aps124)']
+
+radar.aps137:
+  it: >-
+    Il radar ISAR del Viking S-3B, operativo dal luglio 1988: oltre alla ricerca forma l'immagine di una nave per
+    classificarla. Eredita dall'APS-116 il modo periscopio, con 300 giri al minuto e 2000 impulsi al secondo. Nel 1989 è
+    sulle S-3B delle portaerei atlantiche; i P-3C lo riceveranno solo con gli aggiornamenti della fine degli anni '90,
+    quindi in questo periodo l'Orion monta ancora l'APS-115.
+  en: >-
+    The ISAR radar of the S-3B Viking, operational from July 1988: besides searching, it forms an image of a ship to
+    classify it. It inherits the APS-116's periscope mode, with 300 rpm and 2,000 pulses per second. In 1989 it is on
+    the S-3Bs of Atlantic carriers; P-3Cs will only receive it with the upgrades of the late 1990s, so in this period
+    the Orion still carries the APS-115.
+  uso_it: >-
+    È il radar più pericoloso del gioco per un periscopio: con mare calmo ti vede a circa 10 miglia, e il giro da 0,2
+    secondi accumula occasioni a ogni secondo d'esposizione. La sua firma all'ESM è unica: quando compare l'aereo sta
+    cercando proprio i periscopi. Abbassa tutto e cambia quota.
+  uso_en: >-
+    It is the most dangerous radar in the game for a periscope: in a calm sea it sees you at about 10 miles, and the
+    0.2-second sweep piles up chances with every second of exposure. Its ESM signature is unique: when it appears the
+    aircraft is hunting periscopes specifically. Lower everything and change depth.
+  fonti: ['dossier 11 §1.4 e §2 [APL97]', 'dossier 17 §1 e §2.5 [FASS3] [FASP3]', 'emettitori.toml (radar.aps137)']
+
+radar.bps15:
+  it: >-
+    Il radar di navigazione e di ricerca di superficie dei 688. Lavora in banda X con 35 kW di picco ma appena 13 W
+    medi, impulsi brevissimi e una risoluzione di circa 30 metri. Serve alla navigazione e a una ricerca di superficie
+    rapida: dalla quota periscopica o in emersione vede le navi a 10-12 miglia. Nel gioco lo stesso modello vale anche
+    per gli Sturgeon e le Trafalgar.
+  en: >-
+    The navigation and surface search radar of the 688s. It works in X band with 35 kW peak but barely 13 W average,
+    very short pulses and a resolution of about 30 metres. It is used for navigation and for a quick surface search:
+    from periscope depth or surfaced it sees ships at 10-12 miles. In the game the same model also serves the Sturgeon
+    and Trafalgar classes.
+  uso_it: >-
+    Accenderlo in pattuglia è quasi sempre un errore: la sua emissione arriva molto più lontano di quanto il radar veda,
+    e le grandi navi sovietiche hanno stazioni d'intercettazione dedicate. Vicino a un gruppo antisommergibile sovietico
+    verrebbe intercettato quasi di sicuro. Usalo per pochi giri, quando il quadro di superficie vale il rischio.
+  uso_en: >-
+    Switching it on while on patrol is almost always a mistake: its emission travels much further than the radar can
+    see, and large Soviet ships carry dedicated intercept stations. Near a Soviet anti-submarine group it would be
+    intercepted almost certainly. Use it for a few sweeps, when the surface picture is worth the risk.
+  fonti: ['dossier 11 §1.5 [NAVYBPS15] [ARMSBPS] [NT688], §3.4 e §6.1', 'emettitori.toml (radar.bps15)']
+
+radar.dsq28:
+  it: >-
+    La testa radar attiva AN/DSQ-28 della Texas Instruments, il seeker dell'Harpoon (Block 1B e 1C) e del Tomahawk
+    antinave. Lavora in banda J, è agile in frequenza e muove l'antenna su due assi. Si accende a una distanza impostata
+    prima del lancio oppure subito, con una ricerca in un settore di 45 gradi per lato; il Tomahawk antinave aggiunge un
+    ricevitore passivo e accende la testa solo nella fase finale. Una nave che la sente sa che il missile è già vicino.
+  en: >-
+    The Texas Instruments AN/DSQ-28 active radar head, the seeker of the Harpoon (Block 1B and 1C) and the anti-ship
+    Tomahawk. It works in J band, is frequency agile and moves its antenna on two axes. It switches on at a range set
+    before launch or immediately, searching a sector of 45 degrees each side; the anti-ship Tomahawk adds a passive
+    receiver and turns its head on only in the final phase. A ship that hears it knows the missile is already close.
+  uso_it: >-
+    Quando il missile è tuo, la testa si accende da sola alla distanza scelta: un'accensione tardiva lascia al nemico
+    meno tempo per reagire. Se giochi dall'altra parte, una firma in banda J che cerca a settore e poi si ferma su di te
+    è un missile in arrivo, non un contatto.
+  uso_en: >-
+    When the missile is yours, the head switches on by itself at the chosen range: a late switch-on leaves the enemy
+    less time to react. If you play the other side, a J-band signature that scans a sector and then settles on you is an
+    incoming missile, not a contact.
+  fonti: ['dossier 11 §1.6 [DSHARP] [PROC77] e §2', 'dossier 05 [DS84] [DS109]', 'emettitori.toml (radar.dsq28)']
+
+radar.fc:
+  it: >-
+    Sotto questa voce il gioco raccoglie tutti i radar di tiro e d'illuminazione: americani come l'SPG-60, lo STIR e
+    l'SPG-51, sovietici come Pop Group, Head Light, Eye Bowl, Top Dome, Front Door, Kite Screech e Bass Tilt. Lavorano
+    nelle bande alte, dalla G alla K, e non ruotano: puntano un bersaglio già scoperto per guidare cannoni e missili.
+    Restano spenti finché non c'è un ingaggio, e la loro portata utile è di 10-40 miglia. L'Eye Bowl delle Krivak e
+    della Kirov guida l'SS-N-14, il missile antisommergibile.
+  en: >-
+    Under this entry the game groups all fire-control and illumination radars: American ones such as the SPG-60, STIR
+    and SPG-51, Soviet ones such as Pop Group, Head Light, Eye Bowl, Top Dome, Front Door, Kite Screech and Bass Tilt.
+    They work in the high bands, from G to K, and do not rotate: they point at a target already detected to guide guns
+    and missiles. They stay off until an engagement begins, and their useful range is 10-40 miles. The Eye Bowl of the
+    Krivaks and the Kirov guides the SS-N-14 anti-submarine missile.
+  uso_it: >-
+    Un radar di tiro acceso vuol dire ingaggio in corso: all'ESM è un allarme di minaccia, non un semplice contatto. Se
+    il fascio è puntato su di te sei già scoperto, qualunque sia la distanza; abbassa tutto e scendi.
+  uso_en: >-
+    A fire-control radar switched on means an engagement in progress: on the ESM it is a threat alarm, not a mere
+    contact. If the beam is pointed at you, you are already detected, whatever the range; lower everything and go deep.
+  fonti: ['dossier 11 §1.1-1.2, §2 e §6.1-6.3', 'emettitori.toml (radar.fc)']
+
+radar.granit:
+  it: >-
+    La testa radar attiva del P-700 Granit (SS-N-19), il grande missile antinave degli Oscar e della Kirov. Ha anche la
+    capacità di dirigersi sulla sorgente di un disturbo elettronico. Si accende nella fase finale del volo; le fonti
+    descrivono una salva in rete in cui un missile sale per cercare e designare mentre gli altri volano bassi, ma la
+    stessa letteratura avverte che su questa meccanica ci sono dubbi. La banda J è una stima.
+  en: >-
+    The active radar head of the P-700 Granit (SS-N-19), the big anti-ship missile of the Oscars and the Kirov. It can
+    also home on the source of electronic jamming. It switches on in the final phase of flight; sources describe a
+    networked salvo in which one missile climbs to search and designate while the others fly low, but the same
+    literature warns that this mechanism is doubtful. The J band is an estimate.
+  uso_it: >-
+    Per il 688 conta come allarme: una firma da seeker in banda J vuol dire che una salva di Granit è già in volo verso
+    le navi che stai scortando. A quel punto il lanciatore è da qualche parte sotto di te: cercalo col sonar.
+  uso_en: >-
+    For the 688 it is an alarm: a J-band seeker signature means a Granit salvo is already flying towards the ships you
+    are escorting. By then the launcher is somewhere below you: look for it with the sonar.
+  fonti: ['dossier 11 §1.6 [WPGRANIT] e §2', 'dossier 05 §3.3 [RWP700] [WPGranit]', 'emettitori.toml (radar.granit)']
+
+radar.head_net_c:
+  it: >-
+    Il radar MR-310A «Angara-A», per la NATO Head Net-C: ricerca aerea e di superficie degli incrociatori Kara e delle
+    fregate Krivak II, con una portata di circa 200 km. Sulla banda le fonti non sono d'accordo, E/F per alcune, L per
+    altre. Nel gioco la stessa voce copre lo Strut Curve (MR-302 «Rubka») delle fregate Koni. Contro un periscopio vede
+    poco: è fatto per gli aerei.
+  en: >-
+    The MR-310A «Angara-A» radar, NATO name Head Net-C: air and surface search for the Kara cruisers and Krivak II
+    frigates, with a range of about 200 km. Sources disagree on the band, E/F for some, L for others. In the game the
+    same entry covers the Strut Curve (MR-302 «Rubka») of the Koni frigates. Against a periscope it sees little: it is
+    built for aircraft.
+  uso_it: >-
+    All'ESM rivela una nave sovietica di scorta o un gruppo antisommergibile, che lo tiene acceso quasi sempre. Si può
+    confondere con l'SPS-48 americano, che sta nella stessa banda. Contro il periscopio è poco pericoloso, circa 1,5
+    miglia con mare calmo, ma la nave che lo porta ha anche radar di navigazione più adatti a vederti.
+  uso_en: >-
+    On the ESM it reveals a Soviet escort or anti-submarine group, which keeps it on almost all the time. It can be
+    confused with the American SPS-48, which shares the band. Against the periscope it is not very dangerous, about 1.5
+    miles in a calm sea, but the ship carrying it also has navigation radars better suited to seeing you.
+  fonti: ['dossier 11 §1.2 [RW1134B] [RW1135] [MPHEAD] [RTHEAD], §2, §3.4 e §6.1', 'emettitori.toml (radar.head_net_c)']
+
+radar.initsiativa2b:
+  it: >-
+    Il radar centimetrico in banda X dell'anfibio Be-12 «Mail», l'aereo antisommergibile della zona vicina alle coste
+    sovietiche. Il Be-12 lo usa per studiare la superficie prima di posare le boe, che lancia da 500 metri dopo un
+    controllo radar da 2000, per leggere i transponder delle boe e per mirare. Vola sempre in coppia e nel Barents parte
+    da Safonovo.
+  en: >-
+    The centimetric X-band radar of the Be-12 «Mail» amphibian, the anti-submarine aircraft of the zone close to the
+    Soviet coasts. The Be-12 uses it to study the surface before laying buoys, which it drops from 500 metres after a
+    radar check from 2,000, to read the buoys' transponders and to aim. It always flies in pairs and in the Barents it
+    operates from Safonovo.
+  uso_it: >-
+    All'ESM arriva a intervalli ma spesso, e somiglia agli altri radar aerei in banda X. È il meno capace dei radar
+    antisommergibile del gioco: con mare calmo vede un periscopio a 3,5 miglia circa. Se lo senti, aspettati boe in
+    acqua e un passaggio col MAD a bassa quota.
+  uso_en: >-
+    On the ESM it comes at intervals but often, and it resembles the other X-band airborne radars. It is the least
+    capable anti-submarine radar in the game: in a calm sea it sees a periscope at about 3.5 miles. If you hear it,
+    expect buoys in the water and a low MAD pass.
+  fonti: ['dossier 17 §3.3 [ART-Be12], §5 e §8.2', 'emettitori.toml (radar.initsiativa2b)']
+
+radar.initsiativa2k:
+  it: >-
+    Il radar del Ka-25PL «Hormone-A», parte del sistema «Baikal»: centimetrico in banda X, 55 kW di picco. I dati
+    sovietici gli danno navi e aerei grandi fino a 220 km e un periscopio a 10-20 km. Il nome NATO è incerto: alcune
+    fonti lo chiamano Puff Ball, la CIA nel 1972 Short Horn. Nelle coppie di ricerca e attacco l'elicottero d'attacco
+    raggiunge col radar il punto segnato dal compagno.
+  en: >-
+    The radar of the Ka-25PL «Hormone-A», part of the «Baikal» system: centimetric X band, 55 kW peak. Soviet data
+    credit it with ships and large aircraft out to 220 km and a periscope at 10-20 km. The NATO name is uncertain: some
+    sources call it Puff Ball, the CIA in 1972 Short Horn. In search-and-attack pairs the attack helicopter uses the
+    radar to reach the point marked by its partner.
+  uso_it: >-
+    È acceso di continuo nelle tratte di ricerca e spento quando l'elicottero è fermo in volo col sonar a immersione: se
+    il segnale sparisce, forse sta ascoltando sopra di te. All'ESM si confonde con un radar di navigazione.
+  uso_en: >-
+    It stays on throughout the search legs and goes off when the helicopter hovers with its dipping sonar: if the signal
+    disappears, it may be listening right above you. On the ESM it is easily confused with a navigation radar.
+  fonti: ['dossier 11 §1.4 [RWKA25] [MPPUFF], §3.4 e §5.1', 'dossier 17 §1 [CIA72] e §3.1', 'emettitori.toml (radar.initsiativa2k)']
+
+radar.initsiativa2km:
+  it: >-
+    Il radar del Ka-27PL «Helix-A», l'elicottero antisommergibile entrato in servizio nel 1981 col sistema «Osminog». Da
+    100-500 metri di quota vede un bersaglio di 250 m² oltre 25 km e uno di 2 m² oltre 5 km. Imbarcato in gruppi sugli
+    incrociatori portaerei Kiev e Minsk, e in uno o pochi esemplari su Udaloy, Kirov, Slava e Sovremennyj.
+  en: >-
+    The radar of the Ka-27PL «Helix-A», the anti-submarine helicopter that entered service in 1981 with the «Osminog»
+    system. From 100-500 metres it sees a 250 m² target beyond 25 km and a 2 m² target beyond 5 km. It is embarked in
+    groups on the Kiev and Minsk aviation cruisers, and in ones or a few on Udaloy, Kirov, Slava and Sovremenny.
+  uso_it: >-
+    Come quello del Ka-25 resta acceso in volo e tace quando l'elicottero si ferma a calare il sonar. Il Ka-27 usa
+    raramente il sonar attivo: se il radar si spegne e poi senti un impulso, è probabile che abbia già un contatto.
+  uso_en: >-
+    Like the Ka-25's it stays on in flight and falls silent when the helicopter stops to lower its sonar. The Ka-27
+    rarely uses active sonar: if the radar goes off and then you hear a ping, it probably already has a contact.
+  fonti: ['dossier 17 §3.2 [RW-Ka27] [ART-Ka27] e §8.2', 'emettitori.toml (radar.initsiativa2km)']
+
+radar.korshun:
+  it: >-
+    Il radar del sistema di ricerca e attacco «Korshun-K» del Tu-142M «Bear-F», l'antisommergibile a lungo raggio della
+    Flotta del Nord, che parte da Kipelovo verso l'Atlantico settentrionale e il Mar di Norvegia. Sta in un radome sotto
+    la fusoliera e cambia frequenza da un impulso all'altro, il che lo rende difficile da identificare. Il Tu-142M porta
+    anche un ricevitore ELINT: sente a sua volta il radar di un sottomarino.
+  en: >-
+    The radar of the «Korshun-K» search-and-attack system of the Tu-142M «Bear-F», the Northern Fleet's long-range
+    anti-submarine aircraft, flying from Kipelovo towards the North Atlantic and the Norwegian Sea. It sits in a radome
+    under the fuselage and changes frequency from one pulse to the next, which makes it hard to identify. The Tu-142M
+    also carries an ELINT receiver: it can hear a submarine's radar in turn.
+  uso_it: >-
+    All'ESM l'identificazione è lenta e spesso resta generica, «radar ASW aereo in banda X». Lo tiene acceso a lungo,
+    minuti alla volta; quando si spegne, l'aereo sta lavorando con boe e MAD. Non accendere il BPS-15 con un Bear in
+    zona.
+  uso_en: >-
+    On the ESM identification is slow and often stays generic, «X-band ASW airborne radar». It is kept on for long
+    periods, minutes at a time; when it goes off, the aircraft is working with buoys and MAD. Do not switch on the
+    BPS-15 with a Bear in the area.
+  fonti: ['dossier 11 §1.4 [RWTU142] [MPWETEYE] e §3.4', 'dossier 17 §3.5 [ART-Tu142] [RW-Tu142] e §8.2', 'emettitori.toml (radar.korshun)']
+
+radar.mk92_cas:
+  it: >-
+    Il radar combinato di ricerca e inseguimento del sistema di tiro Mk 92 delle fregate Oliver Hazard Perry, derivato
+    dall'olandese WM-25, che lavora insieme all'illuminatore STIR. La banda, probabilmente I/J, e la portata, stimata in
+    20-30 miglia, non sono confermate dalle fonti aperte.
+  en: >-
+    The combined search and tracking radar of the Mk 92 fire-control system on the Oliver Hazard Perry frigates, derived
+    from the Dutch WM-25, working together with the STIR illuminator. Its band, probably I/J, and its range, estimated
+    at 20-30 miles, are not confirmed by open sources.
+  uso_it: >-
+    Gira molto in fretta, un giro al secondo, e nel gioco ha una firma propria: all'ESM indica una Perry pronta al tiro.
+    Contro un periscopio vede circa 4 miglia con mare calmo; se lo senti, la fregata è in allerta.
+  uso_en: >-
+    It rotates very fast, one sweep per second, and in the game it has a signature of its own: on the ESM it points to a
+    Perry ready to fire. Against a periscope it sees about 4 miles in a calm sea; if you hear it, the frigate is on
+    alert.
+  fonti: ['dossier 11 §1.1 [FASMK92], §2 e §6.1', 'emettitori.toml (radar.mk92_cas)']
+
+radar.nav_civ:
+  it: >-
+    I radar di navigazione delle navi mercantili: quasi sempre uno in banda X, e sulle navi più grandi e sulle
+    petroliere un secondo in banda S. Hanno potenze modeste, l'antenna a 25-40 metri sull'acqua e una rotazione veloce,
+    un giro ogni 2,5-3 secondi. Restano sempre accesi in navigazione. L'operatore di un mercantile non cerca periscopi,
+    ma lo schermo li mostra comunque.
+  en: >-
+    The navigation radars of merchant ships: almost always one in X band, and on larger ships and tankers a second in S
+    band. They have modest power, the antenna 25-40 metres above the water and a fast rotation, one sweep every 2.5-3
+    seconds. They stay on whenever the ship is under way. A merchant's operator is not looking for periscopes, but the
+    screen shows them anyway.
+  uso_it: >-
+    Sono il rumore di fondo dell'ESM nelle rotte trafficate, e i radar di navigazione sovietici, Don-2 e Palm Frond,
+    stanno nella stessa banda: un contatto «radar di navigazione banda I» può essere un cargo o un incrociatore. Sono
+    poco pericolosi per il periscopio, circa 2 miglia con mare calmo.
+  uso_en: >-
+    They are the ESM's background noise on busy routes, and Soviet navigation radars, Don-2 and Palm Frond, share the
+    same band: a «band I navigation radar» contact may be a freighter or a cruiser. They pose little danger to the
+    periscope, about 2 miles in a calm sea.
+  fonti: ['dossier 11 §1.3, §2 e §6.1-6.4', 'emettitori.toml (radar.nav_civ)']
+
+radar.nav_sov:
+  it: >-
+    I radar di navigazione delle navi sovietiche: il Don-2 e il Don Kay («Volga») su Kara, Krivak II e Koni, il Palm
+    Frond (MR-212 «Vaygach») su Kirov e Slava. Lavorano in banda I, intorno ai 9,4 GHz, e girano in 2,5-3 secondi. Le
+    navi sovietiche li tengono accesi quasi sempre, e i gruppi antisommergibile ci aggiungono la ricerca aerea.
+  en: >-
+    The navigation radars of Soviet ships: the Don-2 and Don Kay («Volga») on Kara, Krivak II and Koni, the Palm Frond
+    (MR-212 «Vaygach») on Kirov and Slava. They work in band I, around 9.4 GHz, and turn in 2.5-3 seconds. Soviet ships
+    keep them on almost all the time, and anti-submarine groups add their air search radars.
+  uso_it: >-
+    All'ESM si confondono con i radar civili: serve qualche giro per capire se è un mercantile o una nave da guerra.
+    Contro il periscopio sono fra i radar navali più pericolosi, circa 4 miglia con mare calmo e 1,5 con mare 4: tieni
+    le alzate brevi.
+  uso_en: >-
+    On the ESM they are confused with civilian radars: it takes a few sweeps to tell a merchant from a warship. Against
+    the periscope they are among the most dangerous shipborne radars, about 4 miles in a calm sea and 1.5 in sea state
+    4: keep exposures short.
+  fonti: ['dossier 11 §1.2 [RW1134B] [QSL] [WPNATO], §2, §3.4 e §6.1', 'emettitori.toml (radar.nav_sov)']
+
+radar.peel_pair:
+  it: >-
+    Il radar di superficie delle corvette lanciamissili Nanuchka III, in banda I/J fra 8 e 10 GHz. Nel gioco la voce
+    copre anche il Plank Shave («Garpun»), in servizio dal 1979, che oltre alla ricerca designa i bersagli ai missili e
+    ha un canale passivo. A designare gli SS-N-9 provvede però un altro radar, il Band Stand.
+  en: >-
+    The surface radar of the Nanuchka III missile corvettes, in band I/J between 8 and 10 GHz. In the game the entry
+    also covers the Plank Shave («Garpun»), in service from 1979, which besides searching designates targets for
+    missiles and has a passive channel. Designation for the SS-N-9s, however, comes from another radar, the Band Stand.
+  uso_it: >-
+    All'ESM somiglia a un radar di navigazione: una Nanuchka può passare per un peschereccio. Contro il periscopio vale
+    come i radar di navigazione sovietici, circa 4 miglia con mare calmo.
+  uso_en: >-
+    On the ESM it resembles a navigation radar: a Nanuchka can pass for a fishing boat. Against the periscope it rates
+    like Soviet navigation radars, about 4 miles in a calm sea.
+  fonti: ['dossier 11 §1.2 [MPPEEL] [MPPLANK] [WPNAN], §2 e §6.1', 'emettitori.toml (radar.peel_pair)']
+
+radar.snoop:
+  it: >-
+    La famiglia di radar di superficie dei sottomarini sovietici, in banda I, montati su un albero: da Snoop Tray
+    (RLK-101 «Albatros») a Snoop Pair (MRK-50 «Kaskad»), in uso dai Whiskey dei primi anni '50 in poi. Li portano Victor
+    III, Charlie II, Oscar e Typhoon; i diesel Kilo e Foxtrot hanno versioni simili. L'Alfa e l'Akula montano il
+    «Chibis», che nel gioco è trattato allo stesso modo. Le fonti abbinano i nomi alle classi in modo incoerente.
+  en: >-
+    The family of Soviet submarine surface radars, in band I, mounted on a mast: from Snoop Tray (RLK-101 «Albatros») to
+    Snoop Pair (MRK-50 «Kaskad»), used from the Whiskeys of the early 1950s onwards. Victor III, Charlie II, Oscar and
+    Typhoon carry them; the diesel Kilo and Foxtrot have similar versions. The Alfa and Akula mount the «Chibis», which
+    the game treats the same way. Sources match names to classes inconsistently.
+  uso_it: >-
+    Un sottomarino sovietico in pattuglia non accende quasi mai il radar: se lo senti all'ESM, c'è un battello a quota
+    periscopica o in emersione entro una decina di miglia. Il segnale ti dà un rilevamento senza che tu debba fare
+    rumore.
+  uso_en: >-
+    A Soviet submarine on patrol almost never switches on its radar: if you hear it on the ESM, there is a boat at
+    periscope depth or surfaced within about ten miles. The signal gives you a bearing without making any noise.
+  fonti: ['dossier 11 §1.5 [MPSNOOP] [WPORANGE] [NAVYP387] [DSRM705], §3.4 e §6.1', 'emettitori.toml (radar.snoop)']
+
+radar.spq9:
+  it: >-
+    Il radar di ricerca e tiro di superficie dei cacciatorpediniere Spruance e Kidd: lavora in banda I/J con una
+    rotazione rapida e una portata utile di 10-20 miglia. Banda, potenza e periodo esatti non sono pubblicati.
+  en: >-
+    The surface search and fire-control radar of the Spruance and Kidd destroyers: it works in band I/J with a fast
+    rotation and a useful range of 10-20 miles. Exact band, power and period are not published.
+  uso_it: >-
+    All'ESM ha una firma propria, un giro al secondo, e indica un cacciatorpediniere americano. Proprio perché guarda la
+    superficie da vicino, con mare calmo vede un periscopio a circa 4 miglia.
+  uso_en: >-
+    On the ESM it has its own signature, one sweep per second, and points to an American destroyer. Precisely because it
+    watches the nearby surface, in a calm sea it sees a periscope at about 4 miles.
+  fonti: ['dossier 11 §1.1 [WPKIDD] [WPSPRU], §2 e §6.1', 'emettitori.toml (radar.spq9)']
+
+radar.sps10_67:
+  it: >-
+    I radar di ricerca di superficie in banda G della US Navy: il vecchio SPS-10, da 190-280 kW e 43 miglia di portata,
+    e il suo sostituto SPS-67, da 280 kW e 56 miglia. Li montano le corazzate Iowa, le portaerei Nimitz e le navi
+    rifornimento Sacramento. L'antenna fa un giro ogni 4 secondi; l'SPS-67 anche ogni 2.
+  en: >-
+    The US Navy's G-band surface search radars: the old SPS-10, of 190-280 kW and 43 miles' range, and its replacement
+    the SPS-67, of 280 kW and 56 miles. They are fitted to the Iowa battleships, the Nimitz carriers and the Sacramento
+    replenishment ships. The antenna turns once every 4 seconds; the SPS-67 also every 2.
+  uso_it: >-
+    Nel gioco la banda G è solo loro: all'ESM vuol dire una grande nave americana, quasi sempre il cuore di un gruppo.
+    Con mare calmo vedono un periscopio a circa 4 miglia, con mare 4 a 1,5.
+  uso_en: >-
+    In the game the G band belongs to them alone: on the ESM it means a large American ship, almost always the heart of
+    a group. In a calm sea they see a periscope at about 4 miles, in sea state 4 at 1.5.
+  fonti: ['dossier 11 §1.1 [WPSPS10] [WPSPS67] [NAVYSPS67], §2 e §6.1', 'emettitori.toml (radar.sps10_67)']
+
+radar.sps40:
+  it: >-
+    Il radar di ricerca aerea bidimensionale dei cacciatorpediniere Spruance e delle navi rifornimento Sacramento: in
+    banda B, fra 0,40 e 0,45 GHz, con 200-300 kW e circa 250 miglia di portata contro gli aerei. L'antenna fa 7,5 o 15
+    giri al minuto. A fine anni '80 su alcune Spruance l'SPS-49 lo sostituisce.
+  en: >-
+    The two-dimensional air search radar of the Spruance destroyers and the Sacramento replenishment ships: in B band,
+    between 0.40 and 0.45 GHz, with 200-300 kW and about 250 miles' range against aircraft. The antenna turns at 7.5 or
+    15 rpm. In the late 1980s the SPS-49 replaces it on some Spruances.
+  uso_it: >-
+    Con la sua lunghezza d'onda non vede un periscopio, e uno snorkel solo a un paio di miglia: per te è soprattutto un
+    segnale. All'ESM la firma in banda B è inconfondibile e vuol dire che il gruppo ha rinunciato al silenzio radar.
+  uso_en: >-
+    With its wavelength it does not see a periscope, and a snorkel only at a couple of miles: for you it is mostly a
+    signal. On the ESM the B-band signature is unmistakable and means the group has given up radar silence.
+  fonti: ['dossier 11 §1.1 [WPSPS40] [WPSPRU], §2, §3.2 e §6.1', 'emettitori.toml (radar.sps40)']
+
+radar.sps48:
+  it: >-
+    Il radar di ricerca aerea tridimensionale della US Navy: in banda E/F, scansione elettronica in elevazione, oltre
+    250 miglia di portata. Nel 1989 lo montano i cacciatorpediniere Kidd, nella versione SPS-48C che fra il 1988 e il
+    1990 diventa SPS-48E con il programma New Threat Upgrade, e le portaerei Nimitz.
+  en: >-
+    The US Navy's three-dimensional air search radar: in E/F band, with electronic scanning in elevation and more than
+    250 miles' range. In 1989 it is fitted to the Kidd destroyers, in the SPS-48C version that becomes the SPS-48E
+    between 1988 and 1990 with the New Threat Upgrade, and to the Nimitz carriers.
+  uso_it: >-
+    All'ESM si può scambiare per l'Head Net sovietico, che sta nella stessa banda. Per il periscopio è poco pericoloso,
+    circa 1,5 miglia con mare calmo; acceso, dice che il gruppo è già stato scoperto o teme un attacco aereo.
+  uso_en: >-
+    On the ESM it can be mistaken for the Soviet Head Net, which shares the band. For the periscope it is not very
+    dangerous, about 1.5 miles in a calm sea; when on, it says the group has already been detected or fears an air
+    attack.
+  fonti: ['dossier 11 §1.1 [WPSPS48] [WPKIDD], §2, §3.2 e §6.1', 'emettitori.toml (radar.sps48)']
+
+radar.sps49:
+  it: >-
+    Il radar di ricerca aerea bidimensionale a lungo raggio della US Navy: in banda C, fra 0,85 e 0,94 GHz, 360 kW di
+    picco e fino a 256 miglia di portata. L'antenna fa un giro ogni 5 o 10 secondi. Lo montano le fregate Perry, le
+    corazzate Iowa e le portaerei Nimitz.
+  en: >-
+    The US Navy's long-range two-dimensional air search radar: in C band, between 0.85 and 0.94 GHz, 360 kW peak and up
+    to 256 miles' range. The antenna turns once every 5 or 10 seconds. It is fitted to the Perry frigates, the Iowa
+    battleships and the Nimitz carriers.
+  uso_it: >-
+    La sua firma all'ESM è chiara e si identifica bene. Contro un periscopio vede poco, circa un miglio con mare calmo e
+    niente con mare 4; uno snorkel lo vede a 4 miglia. Acceso, segnala un gruppo che non si nasconde più.
+  uso_en: >-
+    Its ESM signature is clear and easy to identify. Against a periscope it sees little, about a mile in a calm sea and
+    nothing in sea state 4; a snorkel it sees at 4 miles. When on, it marks a group that is no longer hiding.
+  fonti: ['dossier 11 §1.1 [WPSPS49], §2, §3.2 e §6.1', 'emettitori.toml (radar.sps49)']
+
+radar.sps55:
+  it: >-
+    Il radar di ricerca di superficie delle fregate Perry e dei cacciatorpediniere Spruance e Kidd: in banda I/J, fra
+    9,05 e 10 GHz, con almeno 130 kW e un fascio di 1,5 gradi. L'antenna fa un giro ogni 3,75 secondi. Anche quando il
+    gruppo tace, la nave sotto attacco lo accende per cercare il periscopio di chi le ha lanciato contro un siluro.
+  en: >-
+    The surface search radar of the Perry frigates and the Spruance and Kidd destroyers: in band I/J, between 9.05 and
+    10 GHz, with at least 130 kW and a 1.5-degree beam. The antenna turns once every 3.75 seconds. Even when the group
+    is silent, a ship under attack switches it on to look for the periscope of whoever fired a torpedo at it.
+  uso_it: >-
+    È il radar navale americano più pericoloso per il periscopio: circa 5 miglia con mare calmo, 2 con mare 4. All'ESM
+    si confonde con i radar di navigazione civili e sovietici. Dopo un lancio aspettati che si accenda.
+  uso_en: >-
+    It is the American shipborne radar most dangerous to the periscope: about 5 miles in a calm sea, 2 in sea state 4.
+    On the ESM it is confused with civilian and Soviet navigation radars. After you fire, expect it to come on.
+  fonti: ['dossier 11 §1.1 [FASSPS55], §2, §3.2 e §6.1', 'emettitori.toml (radar.sps55)']
+
+radar.top_sail:
+  it: >-
+    I grandi radar tridimensionali di ricerca aerea delle unità maggiori sovietiche: il Top Sail (MR-600 «Voskhod»)
+    degli incrociatori Kara, in banda D e con circa 300 km di portata; il Top Pair (MR-800), che unisce un Top Sail e un
+    Big Net schiena contro schiena, e il Top Steer (MR-700 «Fregat») della Kirov e delle Slava. Nel gioco sono una sola
+    voce.
+  en: >-
+    The big three-dimensional air search radars of the major Soviet units: the Top Sail (MR-600 «Voskhod») of the Kara
+    cruisers, in D band with about 300 km of range; the Top Pair (MR-800), which joins a Top Sail and a Big Net back to
+    back, and the Top Steer (MR-700 «Fregat») of the Kirov and the Slavas. In the game they are a single entry.
+  uso_it: >-
+    All'ESM la firma è unica e lenta, un giro ogni 6-10 secondi: c'è un incrociatore sovietico all'orizzonte. Al
+    periscopio fa poco danno, circa un miglio con mare calmo, ma la nave porta anche radar di navigazione e di tiro.
+  uso_en: >-
+    On the ESM the signature is unique and slow, one sweep every 6-10 seconds: there is a Soviet cruiser on the horizon.
+    It does little harm to the periscope, about a mile in a calm sea, but the ship also carries navigation and
+    fire-control radars.
+  fonti: ['dossier 11 §1.2 [RW1134B] [QSL] [MPTOPSAIL] [WPSLAVA] [RTTOP], §2 e §6.1', 'emettitori.toml (radar.top_sail)']
+
+radar.wet_eye:
+  it: >-
+    Il radar di ricerca di superficie dell'Il-38 «May», parte del sistema «Berkut-38», in servizio dal 1959: radome
+    sotto la fusoliera, giro completo o settori di 60 e 150 gradi, e un modo che esplora un quadrato di 20 km di lato.
+    Lo stesso radar è sul Tu-142 di base. Giudicato arcaico nelle fonti russe, secondo la CIA scopriva un albero esposto
+    a 25 miglia nelle condizioni migliori; la banda I è una stima.
+  en: >-
+    The surface search radar of the Il-38 «May», part of the «Berkut-38» system, in service since 1959: a radome under
+    the fuselage, full rotation or sectors of 60 and 150 degrees, and a mode that explores a square 20 km on a side. The
+    same radar is on the basic Tu-142. Judged archaic in Russian sources, according to the CIA it could detect an
+    exposed mast at 25 miles in the best conditions; band I is an estimate.
+  uso_it: >-
+    All'ESM si confonde con l'APS-115 del P-3C. L'Il-38 lo tiene acceso a lungo, per minuti, e lo usa anche prima di
+    posare le boe: un segnale frequente vuol dire che l'aereo sta preparando un campo. Con mare calmo vede un periscopio
+    a circa 4 miglia.
+  uso_en: >-
+    On the ESM it is confused with the P-3C's APS-115. The Il-38 keeps it on for long stretches, minutes at a time, and
+    also uses it before laying buoys: a frequent signal means the aircraft is preparing a field. In a calm sea it sees a
+    periscope at about 4 miles.
+  fonti: ['dossier 11 §1.4 [MPWETEYE] [WPIL38] [RWIL38], §3.4 e §6.1', 'dossier 17 §3.4 [ART-Il38] [CIA72] e §8.2', 'emettitori.toml (radar.wet_eye)']
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Periscopi
+# ---------------------------------------------------------------------------------------------------------------------
+
+periscopio.type2:
+  it: >-
+    Il periscopio d'attacco dei 688 e degli Sturgeon: è lo stesso progetto descritto nel manuale della US Navy del 1946,
+    aggiornato e ancora in servizio negli anni '90. La testa è sottilissima, poco più di 6 centimetri nella versione 2D
+    del 1959, e lascia poca piuma e poca eco radar. Ha due ingrandimenti, 1,5× con 32 gradi di campo e 6× con 8, lo
+    stadimetro a immagine sdoppiata e una linea di mira che sale fino a 74,5 gradi, cioè tutto il cielo. Non ha né
+    visione notturna né ESM.
+  en: >-
+    The attack periscope of the 688 and Sturgeon classes: it is the same design described in the US Navy's 1946 manual,
+    updated and still in service in the 1990s. The head is very slim, little more than 6 centimetres in the 1959 2D
+    version, and leaves little feather and little radar echo. It has two magnifications, 1.5× with a 32-degree field and
+    6× with 8, the split-image stadimeter and a line of sight that rises to 74.5 degrees, that is the whole sky. It has
+    neither night vision nor ESM.
+  uso_it: >-
+    Nella stazione Periscopio si sceglie il Type 2 e lo si alza (6 secondi). Per la ricerca aerea si gira tre volte a
+    basso ingrandimento, ai fermi di 14 e 44 gradi e al massimo; per la distanza si porta il galleggiamento
+    dell'immagine fantasma sulla testa d'albero e si legge lo stadimetro. Di notte vede solo ciò che è illuminato. È il
+    periscopio per l'ultimo tratto dell'attacco: esposizioni di una decina di secondi, sotto i 6 nodi.
+  uso_en: >-
+    At the Periscope station select the Type 2 and raise it (6 seconds). For an air search turn three times at low
+    power, at the 14 and 44 degree stops and at maximum elevation; for range bring the ghost image's waterline onto the
+    masthead and read the stadimeter. At night it sees only what is lit. It is the periscope for the last stage of an
+    attack: exposures of about ten seconds, below 6 knots.
+  fonti: ['dossier 20 §2.1 [PSM] [NSL2] [NOVA-P] [KOL], §7 e §8.1', 'periscopi.toml (periscopi.type2)']
+
+periscopio.ch84:
+  it: >-
+    Il periscopio d'attacco delle Trafalgar britanniche, della Barr & Stroud: con il CK34 fu presentato come uno dei
+    primi periscopi elettronici, nel 1983. Rispetto al predecessore CH83 ha di serie l'intensificatore d'immagine, la TV
+    e la camera termica, un tubo più largo e un'ottica che smorza le vibrazioni. Ingrandimenti e campi non sono noti; il
+    gioco usa 1,5× e 6× come gli altri periscopi dell'epoca.
+  en: >-
+    The attack periscope of the British Trafalgar class, by Barr & Stroud: together with the CK34 it was presented as
+    one of the first electronic periscopes, in 1983. Compared with its CH83 predecessor it has an image intensifier, TV
+    and thermal camera as standard, a wider tube and optics that damp vibration. Magnifications and fields are not
+    known; the game uses 1.5× and 6× like the other periscopes of the period.
+  uso_it: >-
+    Nel 1989 è l'unico periscopio con la camera termica: di notte una Trafalgar vede meglio di qualunque altro battello
+    del gioco. Se giochi l'Alfa contro un battello britannico, il buio non ti protegge.
+  uso_en: >-
+    In 1989 it is the only periscope with a thermal camera: at night a Trafalgar sees better than any other boat in the
+    game. If you play the Alfa against a British boat, darkness does not protect you.
+  fonti: ['dossier 20 §1, §3 [RNS] e §8.3', 'periscopi.toml (periscopi.ch84)']
+
+periscopio.ck34:
+  it: >-
+    Il periscopio di ricerca delle Trafalgar, della Barr & Stroud: binoculare, con l'ESM «Morthoe» nella testa, la
+    fotocamera, la TV a bassa luminosità e la finestra riscaldata. Il comando a distanza arriverà solo con la coppia
+    CH85 e CK35 degli Upholder. Ingrandimenti e dimensioni non sono noti; un racconto più recente parla di una testa
+    enorme piena di sensori, forse un allestimento successivo.
+  en: >-
+    The search periscope of the Trafalgars, by Barr & Stroud: binocular, with the «Morthoe» ESM in the head, a camera,
+    low-light TV and a heated window. Remote control only came with the CH85 and CK35 pair of the Upholders.
+    Magnifications and dimensions are not known; a more recent account describes a huge head full of sensors, perhaps a
+    later fit.
+  uso_it: >-
+    Come il Type 18, ascolta i radar mentre è alzato e paga questo con una testa grossa: più eco radar e più piuma del
+    periscopio d'attacco. Una Trafalgar a quota periscopica, intorno ai 18 metri, ti sente se accendi il radar.
+  uso_en: >-
+    Like the Type 18, it listens for radars while raised and pays for it with a large head: more radar echo and more
+    feather than the attack periscope. A Trafalgar at periscope depth, around 18 metres, will hear you if you switch on
+    your radar.
+  fonti: ['dossier 20 §3 [RNS] [SD] e §5', 'periscopi.toml (periscopi.ck34)']
+
+periscopio.signal:
+  it: >-
+    Il «Signal» è l'unico periscopio dell'Alfa: universale e automatizzato, in servizio dal 1972, fa parte del sistema
+    televisivo TV-1. Il comandante vede l'esterno su uno schermo del suo pulto e muove il periscopio a distanza; una
+    telecamera verticale nella vela mostra il cielo anche a periscopio abbassato. Una volta il periscopio gelò
+    nell'Artico e si navigò col solo radar. I dati ottici non sono noti: il canale notturno raffreddato esisteva sui
+    sovietici dal 1965 ed è plausibile anche qui.
+  en: >-
+    The «Signal» is the Alfa's only periscope: universal and automated, in service since 1972, it is part of the TV-1
+    television system. The commander sees the outside on a screen at his console and moves the periscope remotely; a
+    vertical camera in the sail shows the sky even with the periscope lowered. Once the periscope froze in the Arctic
+    and the boat went on by radar alone. Optical data are not known: the cooled night channel existed on Soviet
+    periscopes from 1965 and is plausible here too.
+  uso_it: >-
+    Con l'Alfa, nella stazione Periscopio, si alza il Signal (8 secondi): ingrandimenti 1,5× e 6×, di notte
+    l'intensificatore dall'immagine verde giallina. La distanza si stima col reticolo, scegliendo l'altezza del
+    bersaglio e contando le divisioni: è meno precisa dello stadimetro americano. La procedura sovietica vuole prima
+    l'antenna dell'avvisatore radar e poi il periscopio, a velocità bassa.
+  uso_en: >-
+    With the Alfa, at the Periscope station, raise the Signal (8 seconds): magnifications 1.5× and 6×, and at night the
+    intensifier with its yellow-green image. Range is estimated with the graticule, choosing the target's height and
+    counting divisions: it is less precise than the American stadimeter. Soviet procedure wants the radar warning
+    antenna up first and then the periscope, at low speed.
+  fonti: ['dossier 20 §4.1 e §4.4 [APA] [DS705] [SOB] [KOL705] [MM], §7 e §8.2', 'periscopi.toml (periscopi.signal)']
+
+periscopio.signal3:
+  it: >-
+    Il «Signal-3» è il periscopio universale con la televisione dei sottomarini nucleari sovietici di terza generazione:
+    Akula I, Oscar II e Typhoon. Lavora in coppia con un periscopio del comandante, il «Lebed» o il PZNS-10. Ruolo noto,
+    dati ottici no; per il gioco ha due ingrandimenti, l'intensificatore notturno e la TV.
+  en: >-
+    The «Signal-3» is the universal television periscope of the Soviet third-generation nuclear submarines: Akula I,
+    Oscar II and Typhoon. It works alongside a commander's periscope, the «Lebed» or the PZNS-10. Its role is known, its
+    optics are not; for the game it has two magnifications, a night intensifier and TV.
+  uso_it: >-
+    Una testa di ricerca nemica è grossa, quindi visibile al tuo periscopio e al tuo radar con le stesse regole che
+    valgono per te. I sovietici alzano prima l'antenna dell'avvisatore radar: se accendi il BPS-15, lo sanno.
+  uso_en: >-
+    An enemy search head is large, so it is visible to your periscope and radar by the same rules that apply to you. The
+    Soviets raise the radar warning antenna first: if you switch on the BPS-15, they know.
+  fonti: ['dossier 20 §4.1-4.2 [APA] [RW-971] [RW-949] e §8.3', 'periscopi.toml (periscopi.signal3)']
+
+periscopio.lebed:
+  it: >-
+    Il «Lebed-11» e il «Lebed-21» sono i periscopi del comandante, cioè d'attacco, dei sottomarini sovietici di terza
+    generazione: l'Akula I ha l'uno o l'altro, il Typhoon il 21. Accompagnano il periscopio televisivo «Signal-3».
+    Ingrandimenti, campo e testa non sono pubblicati; nel gioco hanno la testa sottile, due ingrandimenti e
+    l'intensificatore notturno.
+  en: >-
+    The «Lebed-11» and «Lebed-21» are the commander's, that is attack, periscopes of the Soviet third-generation
+    submarines: the Akula I has one or the other, the Typhoon the 21. They accompany the «Signal-3» television
+    periscope. Magnifications, field and head are not published; in the game they have a slim head, two magnifications
+    and a night intensifier.
+  uso_it: >-
+    È la testa più difficile da vedere fra quelle sovietiche: poca piuma e poca eco radar. Un Akula che ti attacca
+    guarda con questo, per una decina di secondi ogni pochi minuti.
+  uso_en: >-
+    It is the hardest Soviet head to see: little feather and little radar echo. An Akula attacking you looks through
+    this one, for about ten seconds every few minutes.
+  fonti: ['dossier 20 §4.1-4.2 [APA] [RW-971] e §8.3', 'periscopi.toml (periscopi.lebed)']
+
+periscopio.pzns10:
+  it: >-
+    Il PZNS-10 discende dal primo periscopio universale sovietico, il PZNS entrato in servizio nel 1965 sui battelli
+    della seconda generazione, con un intensificatore raffreddato nel canale notturno. La sigla non è sciolta con
+    certezza: probabilmente zenitale e di navigazione. Lo montano il Charlie II, con il complesso TV MT-70, e nella
+    versione PZNS-10S l'Oscar II come periscopio del comandante.
+  en: >-
+    The PZNS-10 descends from the first Soviet universal periscope, the PZNS that entered service in 1965 on
+    second-generation boats, with a cooled intensifier in the night channel. The abbreviation is not certainly
+    explained: probably zenithal and navigation. It is fitted to the Charlie II, with the MT-70 TV system, and in the
+    PZNS-10S version to the Oscar II as the commander's periscope.
+  uso_it: >-
+    Guarda fino allo zenit e di notte ha l'intensificatore: un Charlie II o un Oscar a quota periscopica vede anche gli
+    aerei e anche col buio. La testa è grossa: col tuo periscopio e il tuo radar la puoi scoprire.
+  uso_en: >-
+    It looks up to the zenith and has an intensifier at night: a Charlie II or Oscar at periscope depth also sees
+    aircraft, even in darkness. The head is large: your periscope and radar can find it.
+  fonti: ['dossier 20 §4.1-4.2 [APA] [MM] [RW-949]', 'periscopi.toml (periscopi.pzns10)']
+
+periscopio.pzng10m:
+  it: >-
+    Il periscopio zenitale e di navigazione del Victor III, accompagnato dal periscopio del complesso televisivo
+    MT-70-10. Se ne conosce il ruolo, non i dati ottici. Per ordine di grandezza, i periscopi zenitali sovietici di
+    guerra avevano 1,5× e 6× con 40 e 10 gradi di campo e guardavano fino alla verticale, con una testa più grossa di
+    quella del comandante.
+  en: >-
+    The zenithal and navigation periscope of the Victor III, accompanied by the periscope of the MT-70-10 television
+    system. Its role is known, its optics are not. For scale, wartime Soviet zenithal periscopes had 1.5× and 6× with 40
+    and 10 degree fields and looked straight up, with a bigger head than the commander's.
+  uso_it: >-
+    Prima di alzare il periscopio un battello sovietico fa un giro col sonar passivo e alza l'avvisatore radar; poi
+    espone una testa grossa, che col mare calmo il tuo radar e il tuo periscopio possono cogliere.
+  uso_en: >-
+    Before raising the periscope a Soviet boat sweeps with passive sonar and raises the radar warning antenna; then it
+    exposes a large head, which in a calm sea your radar and periscope can catch.
+  fonti: ['dossier 20 §4.1-4.2 [APA] [PAT-RU], §7 [SPR74] e §8.3', 'periscopi.toml (periscopi.pzng10m)']
+
+periscopio.mt70:
+  it: >-
+    L'MT-70 è il complesso televisivo dei sottomarini nucleari sovietici di seconda generazione, Victor III (MT-70-10) e
+    Charlie II: una telecamera per guardare la superficie e il ghiaccio. Con tempo buono funziona fino a una cinquantina
+    di metri di profondità, guardando la superficie e il ghiaccio da sotto. Forse è lo stesso sistema chiamato «Kefal».
+  en: >-
+    The MT-70 is the television system of the Soviet second-generation nuclear submarines, the Victor III (MT-70-10) and
+    Charlie II: a camera for watching the surface and the ice. In good weather it works down to some fifty metres of
+    depth, looking at the surface and the ice from below. It may be the same system called «Kefal».
+  uso_it: >-
+    Di giorno e col tempo buono un Victor III o un Charlie II può guardare la superficie e il cielo senza alzare niente:
+    non vedrai il suo periscopio, ma lui può vedere una sagoma in superficie. Contro di loro non affidarti al fatto che
+    il mare sia sgombro di alberi.
+  uso_en: >-
+    By day and in good weather a Victor III or Charlie II can watch the surface and sky without raising anything: you
+    will not see its periscope, but it can see a silhouette on the surface. Against them do not rely on the sea being
+    clear of masts.
+  fonti: ['dossier 20 §4.1-4.2 [APA] [PAV] e §8.3', 'periscopi.toml (periscopi.mt70)']
+
+periscopio.pk85:
+  it: >-
+    Il PK-8,5 è il periscopio del comandante, cioè d'attacco, dei sottomarini diesel sovietici Kilo e Foxtrot, in coppia
+    col periscopio zenitale e di navigazione PZNG-8. I dati ottici non sono pubblicati; nel gioco ha la testa sottile e
+    due ingrandimenti, solo diurni. Come gli altri periscopi sovietici misura la distanza col reticolo graduato, non con
+    l'immagine sdoppiata.
+  en: >-
+    The PK-8.5 is the commander's, that is attack, periscope of the Soviet Kilo and Foxtrot diesel submarines, paired
+    with the PZNG-8 zenithal and navigation periscope. Its optics are not published; in the game it has a slim head and
+    two magnifications, daylight only. Like other Soviet periscopes it measures range with a graduated graticule, not
+    with a split image.
+  uso_it: >-
+    Una testa sottile, poca piuma: un Kilo in agguato è difficile da vedere quando guarda. Nel gioco questo periscopio è
+    cieco di notte, e il Kilo guarda col PZNG-8M, che ha l'intensificatore.
+  uso_en: >-
+    A slim head, little feather: a Kilo lying in wait is hard to see when it looks. In the game this periscope is blind
+    at night, and the Kilo looks through the PZNG-8M, which has an intensifier.
+  fonti: ['dossier 20 §4.1-4.3 [APA] [KP]', 'periscopi.toml (periscopi.pk85)']
+
+periscopio.pzng8:
+  it: >-
+    Il periscopio zenitale e di navigazione dei Foxtrot, il secondo dopo il PK-8,5 d'attacco. I dati ottici non sono
+    noti; per ordine di grandezza i periscopi zenitali di guerra avevano 1,5× e 6× e guardavano fino alla verticale, con
+    una testa più grossa di quella del comandante. Nel gioco è solo diurno.
+  en: >-
+    The zenithal and navigation periscope of the Foxtrots, second to the PK-8.5 attack periscope. Its optics are not
+    known; for scale, wartime zenithal periscopes had 1.5× and 6× and looked straight up, with a bigger head than the
+    commander's. In the game it is daylight only.
+  uso_it: >-
+    È il periscopio con cui un Foxtrot guarda il cielo, e la sua testa grossa si vede più di quella d'attacco. Il diesel
+    deve poi ricaricare con lo snorkel, che al radar si scopre a 12-15 miglia contro le 4-5 di un periscopio.
+  uso_en: >-
+    It is the periscope a Foxtrot uses to watch the sky, and its large head is easier to see than the attack one. The
+    diesel boat must also recharge on the snorkel, which radar detects at 12-15 miles against 4-5 for a periscope.
+  fonti: ['dossier 20 §4.1-4.2 [APA] e §5 [RW-OBN]', 'periscopi.toml (periscopi.pzng8)']
+
+periscopio.pzng8m:
+  it: >-
+    La versione PZNG-8M del periscopio zenitale e di navigazione, montata sui Kilo accanto al PK-8,5 d'attacco. I dati
+    ottici non sono pubblicati; nel gioco, rispetto al PZNG-8 del Foxtrot, ha l'intensificatore notturno.
+  en: >-
+    The PZNG-8M version of the zenithal and navigation periscope, fitted to the Kilos alongside the PK-8.5 attack
+    periscope. Its optics are not published; in the game, compared with the Foxtrot's PZNG-8, it has a night
+    intensifier.
+  uso_it: >-
+    Di notte un Kilo vede col periscopio grande, quindi espone la testa più visibile. Dal punto di vista sovietico la
+    testa dello snorkel si scopre al radar a 12-15 miglia, un periscopio a 4-5: il momento buono per trovare un Kilo è
+    quando ricarica le batterie.
+  uso_en: >-
+    At night a Kilo looks through the big periscope, so it exposes the more visible head. From the Soviet point of view
+    a snorkel head is detected by radar at 12-15 miles, a periscope at 4-5: the best moment to find a Kilo is while it
+    is charging its batteries.
+  fonti: ['dossier 20 §4.1-4.2 [APA] e §5 [RW-OBN]', 'periscopi.toml (periscopi.pzng8m)']
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Teatri
+# ---------------------------------------------------------------------------------------------------------------------
+
+teatro.barents:
+  it: >-
+    Gli approcci alla Penisola di Kola, cuore della Flotta del Nord: Severomorsk, la base degli Alfa e dei Victor a
+    Zapadnaya Litsa, le basi dei sottomarini lanciamissili. Per l'intelligence occidentale era il «bastione» dei Delta e
+    dei Typhoon, e gli SSN americani vi spiavano e pedinavano, a volte fino alla collisione. Il fondo è basso, 100-350
+    metri, misto di fango, sabbia e roccia sotto la costa ripida del Murman; la corrente atlantica tiene libera dal
+    ghiaccio la costa di Kola tutto l'anno. D'inverno notte polare, neve e improvvisi cicloni polari.
+  en: >-
+    The approaches to the Kola Peninsula, heart of the Northern Fleet: Severomorsk, the Alfa and Victor base at
+    Zapadnaya Litsa, the ballistic-missile submarine bases. Western intelligence saw it as the «bastion» of the Deltas
+    and Typhoons, and American SSNs spied and trailed there, sometimes to the point of collision. The bottom is shallow,
+    100-350 metres, a mix of mud, sand and rock below the steep Murman coast; the Atlantic current keeps the Kola coast
+    ice-free all year. In winter there is polar night, snow and sudden polar lows.
+  uso_it: >-
+    D'inverno l'acqua è mescolata fino al fondo e non c'è uno strato sotto cui nascondersi; d'estate uno strato caldo di
+    20-40 metri crea una zona d'ombra sotto. Il fondo è vicino e riflettente: niente zone di convergenza, e occhio alla
+    quota.
+  uso_en: >-
+    In winter the water is mixed to the bottom and there is no layer to hide under; in summer a warm layer of 20-40
+    metres creates a shadow zone beneath it. The bottom is close and reflective: no convergence zones, and watch your
+    depth.
+  fonti: ['dossier 03 §A2', 'dossier 02 §3.6', 'dossier 21 §3.1-3.3', 'teatri.yaml (barents)']
+
+teatro.gibilterra:
+  it: >-
+    Lo stretto fra Atlantico e Mediterraneo, chokepoint della NATO con la base americana di Rota; secondo alcune fonti
+    la 5ª Squadra sovietica ancorava presso l'isola di Alborán. Il fondo risale fino alla soglia di Camarinal, a 284
+    metri, con lo stretto di Tarifa oltre gli 800; l'acqua atlantica entra in superficie verso est, quella mediterranea,
+    più salata, esce sotto verso ovest. Onde interne di oltre cento metri e uno dei traffici più fitti del mondo, circa
+    300 passaggi al giorno. Il vento alterna Levante e Poniente, con nebbie di Levante d'estate.
+  en: >-
+    The strait between the Atlantic and the Mediterranean, a NATO chokepoint with the American base at Rota; according
+    to some sources the Soviet 5th Squadron anchored near Alborán island. The bottom rises to the Camarinal sill, at 284
+    metres, with the Tarifa narrows deeper than 800; Atlantic water flows east at the surface, while the saltier
+    Mediterranean water flows west beneath it. There are internal waves over a hundred metres high and some of the
+    densest traffic in the world, about 300 transits a day. The wind alternates Levante and Poniente, with Levante fogs
+    in summer.
+  uso_it: >-
+    Per uscire verso ovest stai sotto l'interfaccia fra le due acque, oltre i 150-200 metri, dove la corrente
+    mediterranea ti spinge; attento alle soglie. Il rumore del traffico copre anche te: la scia di un mercantile è un
+    buon nascondiglio.
+  uso_en: >-
+    To exit westwards stay below the interface between the two waters, beyond 150-200 metres, where the Mediterranean
+    current pushes you; mind the sills. Traffic noise covers you too: a merchant's wake is a good hiding place.
+  fonti: ['dossier 03 §A3', 'dossier 02 §3.6', 'dossier 21 §3.1-3.2', 'teatri.yaml (gibilterra)']
+
+teatro.otranto:
+  it: >-
+    L'imboccatura dell'Adriatico, larga una settantina di chilometri, fra le basi italiane di Taranto e Brindisi e la
+    costa albanese, dove fra il 1958 e il 1961 i Whiskey sovietici ebbero una base. La soglia è a circa 780 metri, oltre
+    si apre la Fossa Sud-Adriatica, a circa 1200; il fondo è quasi tutto fango e argilla, che assorbe il suono. Già fra
+    il 1915 e il 1918 il canale fu sbarrato contro i sommergibili. D'inverno Bora e Scirocco, d'estate un mare calmo e
+    limpido.
+  en: >-
+    The mouth of the Adriatic, some seventy kilometres wide, between the Italian bases of Taranto and Brindisi and the
+    Albanian coast, where Soviet Whiskeys had a base between 1958 and 1961. The sill lies at about 780 metres, beyond it
+    opens the South Adriatic Pit, at about 1,200; the bottom is almost all mud and clay, which absorbs sound. Between
+    1915 and 1918 the channel was already barred against submarines. In winter Bora and Scirocco, in summer a calm,
+    clear sea.
+  uso_it: >-
+    D'estate il termoclino a 20-50 metri è violento: sotto i 50 metri sei ben nascosto da chi ascolta sopra, ma il mare
+    calmo aiuta i radar a vedere il periscopio. D'inverno l'acqua si mescola in profondità e lo strato sparisce.
+  uso_en: >-
+    In summer the thermocline at 20-50 metres is violent: below 50 metres you are well hidden from anyone listening
+    above, but the calm sea helps radars spot the periscope. In winter the water mixes deep and the layer disappears.
+  fonti: ['dossier 03 §A4', 'dossier 21 §3.1-3.2', 'teatri.yaml (otranto)']
+
+teatro.kunashir:
+  it: >-
+    Il passaggio fra le Curili meridionali verso il Mare di Okhotsk, il bastione dei sottomarini lanciamissili della
+    Flotta del Pacifico. Qui l'URSS rimilitarizzò le isole nel 1978, e nell'Okhotsk il sottomarino americano Halibut
+    posò nel 1971 il dispositivo d'intercettazione del cavo sovietico, l'operazione Ivy Bells. I fondali vanno da
+    stretti di poche centinaia di metri al Bacino delle Curili, oltre 3000, e alla fossa del Pacifico, oltre 9000; lo
+    stretto di Nemuro verso Hokkaido è troppo basso per un sottomarino. Le correnti di marea negli stretti arrivano a 6
+    nodi e mezzo; d'estate c'è la nebbia più frequente del mondo, d'inverno il pack dell'Okhotsk.
+  en: >-
+    The passage through the southern Kurils into the Sea of Okhotsk, the bastion of the Pacific Fleet's
+    ballistic-missile submarines. Here the USSR remilitarised the islands in 1978, and in the Okhotsk the American
+    submarine Halibut laid in 1971 the device that tapped the Soviet cable, Operation Ivy Bells. Depths range from
+    straits a few hundred metres deep to the Kuril Basin, over 3,000, and the Pacific trench, over 9,000; the Nemuro
+    Strait towards Hokkaido is too shallow for a submarine. Tidal currents in the straits reach 6.5 knots; in summer
+    there is the most frequent fog in the world, in winter the Okhotsk pack ice.
+  uso_it: >-
+    Nell'Okhotsk un canale sonoro con l'asse a 80-100 metri porta i suoni molto lontano: chi ci sta dentro sente e si fa
+    sentire. D'inverno il pack impedisce di emergere; d'estate la nebbia nasconde il periscopio agli occhi, non al
+    radar.
+  uso_en: >-
+    In the Okhotsk a sound channel with its axis at 80-100 metres carries sounds very far: whoever is inside it hears
+    and is heard. In winter the pack ice prevents surfacing; in summer the fog hides the periscope from eyes, not from
+    radar.
+  fonti: ['dossier 03 §A5', 'dossier 02 §3.6 e §4', 'dossier 21 §3.1-3.3', 'teatri.yaml (kunashir)']
+
+teatro.celtica:
+  it: >-
+    Il margine della piattaforma celtica, le Western Approaches: di qui passavano le linee di comunicazione fra Stati
+    Uniti ed Europa e i convogli dei rinforzi REFORGER, sorvegliati dal SOSUS di Brawdy e dai Nimrod, e qui uscivano i
+    sottomarini lanciamissili francesi da Brest. La piattaforma è a 100-180 metri, con lunghe creste di sabbia; al
+    ciglio, a 200 metri, la scarpata precipita oltre i 4000 in 50-100 km, incisa da canyon come il Whittard. Il traffico
+    è altissimo; d'inverno le burrasche atlantiche arrivano una dopo l'altra, quasi come alle Faroe.
+  en: >-
+    The edge of the Celtic shelf, the Western Approaches: here ran the sea lanes between the United States and Europe
+    and the REFORGER reinforcement convoys, watched by the SOSUS station at Brawdy and by Nimrods, and here French
+    ballistic-missile submarines sailed from Brest. The shelf lies at 100-180 metres, with long sand ridges; at its
+    edge, at 200 metres, the slope plunges beyond 4,000 in 50-100 km, cut by canyons such as the Whittard. Traffic is
+    extremely heavy; in winter Atlantic gales come one after another, almost as at the Faroes.
+  uso_it: >-
+    D'estate, sulla piattaforma, sotto il termoclino a 30-50 metri sei invisibile a chi trasmette dalla superficie; le
+    onde interne al ciglio fanno andare e venire i contatti. Al largo, in acqua profonda, cerca le zone di convergenza a
+    30-35 miglia.
+  uso_en: >-
+    In summer, on the shelf, below the thermocline at 30-50 metres you are invisible to anyone pinging from the surface;
+    internal waves at the shelf edge make contacts come and go. Offshore, in deep water, look for convergence zones at
+    30-35 miles.
+  fonti: ['dossier 03 §A6', 'dossier 21 §3.1-3.2', 'teatri.yaml (celtica)']
+
+teatro.baltico:
+  it: >-
+    Il Baltico sud-occidentale, fra la costa della Germania Est, la Danimarca e Bornholm: il mare del Patto di Varsavia,
+    con la Flotta del Baltico sovietica, la Volksmarine e la marina polacca, contro le marine danese e tedesca della
+    NATO. Gli SSN americani di fatto non ci entravano. È bassissimo: la soglia di Darss è a 18 metri, quella di Drogden
+    nell'Øresund a 7-9, e i bacini arrivano a 50 metri ad Arkona e a 100 a Bornholm; il fondo è sabbia, till glaciale e
+    massi. In superficie l'acqua è salmastra; ghiaccio negli inverni rigidi del 1985-1987, e mare corto con le burrasche
+    da ovest.
+  en: >-
+    The south-western Baltic, between the East German coast, Denmark and Bornholm: the Warsaw Pact's sea, with the
+    Soviet Baltic Fleet, the Volksmarine and the Polish navy, against NATO's Danish and German navies. American SSNs
+    effectively did not go there. It is extremely shallow: the Darss sill is at 18 metres, the Drogden sill in the
+    Øresund at 7-9, and the basins reach 50 metres at Arkona and 100 at Bornholm; the bottom is sand, glacial till and
+    boulders. The surface water is brackish; there was ice in the hard winters of 1985-1987, and a short, steep sea with
+    westerly gales.
+  uso_it: >-
+    Un 688 ha bisogno di 25-30 metri d'acqua per stare a quota periscopica con margine: negli stretti si passa a quota
+    periscopica o in superficie. Nei bacini profondi abbastanza c'è un canale sonoro a 30-50 metri sopra l'alocline, un
+    buon nascondiglio; altrove guarda il fondo.
+  uso_en: >-
+    A 688 needs 25-30 metres of water to stay at periscope depth with a margin: the straits must be crossed at periscope
+    depth or on the surface. In basins deep enough there is a sound channel at 30-50 metres above the halocline, a good
+    hiding place; elsewhere watch the bottom.
+  fonti: ['dossier 03 §A7', 'dossier 21 §3.1-3.2', 'teatri.yaml (baltico)']

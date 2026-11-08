@@ -1,0 +1,453 @@
+# Testi dell'enciclopedia: navi di superficie, mercantili e bersaglio aereo (docs/00_ROADMAP.md, requisito 14).
+# Stesso formato di campioni.yaml: it, en (storia e impiego), uso_it, uso_en (che cosa significa per il sottomarino
+# del giocatore), fonti; armi_tipiche solo per le navi militari. Scritti a mano, in parafrasi dai dossier di
+# docs/ricerca e dai dati di data/motore; nessun testo copiato.
+
+nave.kidd:
+  it: >-
+    I cacciatorpediniere lanciamissili della classe Kidd (DDG-993), 9.570 tonnellate a pieno carico, filano a 33
+    nodi con quattro turbine a gas LM2500 e hanno un armamento antiaereo pesante: due lanciatori Mk 26 per missili
+    SM-2MR e razzi ASROC, otto Harpoon, due cannoni da 127 mm e due Phalanx. Contro i sottomarini contano il grande
+    sonar di prua SQS-53A, l'ASROC, i tubi Mk 32 per il siluro leggero Mk 46 e un elicottero SH-2F (LAMPS I). La
+    schiera rimorchiata SQR-19 fu solo valutata nel 1987: nel 1989 i Kidd ne sono privi. Fra il 1988 e il 1990 la
+    New Threat Upgrade porta i radar SPS-48E e SPS-49. Che imbarcasse l'SH-60B è solo una stima del dossier 17.
+  en: >-
+    The Kidd class guided missile destroyers (DDG-993), 9,570 tonnes at full load, make 33 knots on four LM2500 gas
+    turbines and carry a heavy anti-air battery: two Mk 26 launchers for SM-2MR missiles and ASROC rockets, eight
+    Harpoons, two 127 mm guns and two Phalanx. Against submarines what matters is the large SQS-53A bow sonar,
+    ASROC, the Mk 32 tubes for the Mk 46 light torpedo and one SH-2F helicopter (LAMPS I). The SQR-19 towed array
+    was only considered in 1987: in 1989 the Kidds lack it. Between 1988 and 1990 the New Threat Upgrade brings the
+    SPS-48E and SPS-49 radars. That it carried the SH-60B is only an estimate in dossier 17.
+  uso_it: >-
+    Nel gioco ha il sonar SQS-53 in passivo e in attivo a circa 3,5 kHz, il più potente fra le navi (235 dB): il suo
+    ping si sente da molto lontano e avverte che vi sta cercando. Senza schiera rimorchiata ascolta male a poppa e
+    quando corre; l'ASROC e il Mk 46 arrivano a una decina di chilometri, quindi conviene attaccarlo da lontano col
+    Mk 48. Due siluri pesanti dovrebbero bastare.
+  uso_en: >-
+    In the game it has the SQS-53 sonar in passive and active mode at about 3.5 kHz, the most powerful among ships
+    (235 dB): its ping carries very far and warns you that it is searching. Without a towed array it hears poorly
+    astern and when running fast; ASROC and the Mk 46 reach about ten kilometres, so attack it from range with the
+    Mk 48. Two heavyweight torpedoes should be enough.
+  fonti: ['dossier 01 §4.1 e §8.2', 'dossier 04 §4 [FI-SQR19] [USNI87]', 'dossier 11 §1.1 [WPKIDD] [WPSPS48]',
+    'dossier 02 §1.5 [SQS53]', 'dossier 07 §6.4', 'acustica.toml (firme.kidd, suite.kidd, sensori.sqs53_attivo)',
+    'emettitori.toml (suite.kidd)', 'dossier 17 §2 (SH-60B sui DDG-993: STIMA)']
+  armi_tipiche:
+    voci: [siluro.mk46, missile.harpoon]
+    altre: ['ASROC (Mk 26)', 'SM-2MR', '2 × 127 mm Mk 45', '2 Phalanx', '1 SH-2F (LAMPS I)']
+    fonte: 'dossier 01 §4.1, §6.2-6.4'
+
+nave.spruance:
+  it: >-
+    I cacciatorpediniere della classe Spruance (DD-963) sono nel 1989 le navi che hanno preso il posto delle vecchie
+    Forrest Sherman, radiate nel 1982-83. Lunghi quasi 172 metri, filano a 32,5 nodi con turbine a gas LM2500 e
+    portano il sistema Prairie-Masker, che soffia aria attorno allo scafo e alle pale per smorzare le righe di
+    macchina. Il sonar di prua è l'SQS-53; dall'anno fiscale 1987 due unità ricevono la schiera rimorchiata SQR-19,
+    collaudata nel 1982 sulla Moosbrugger, e il ponte può imbarcare elicotteri SH-60B. Per la difesa aerea hanno il
+    Sea Sparrow e il radar SPS-40.
+  en: >-
+    In 1989 the Spruance class destroyers (DD-963) are the ships that replaced the old Forrest Shermans, stricken in
+    1982-83. Almost 172 metres long, they make 32.5 knots on LM2500 gas turbines and carry the Prairie-Masker
+    system, which blows air around the hull and propeller blades to dampen machinery lines. The bow sonar is the
+    SQS-53; from fiscal year 1987 two ships receive the SQR-19 towed array, trialled in 1982 aboard Moosbrugger, and
+    the deck can embark SH-60B helicopters. For air defence they have Sea Sparrow and the SPS-40 radar.
+  uso_it: >-
+    Nel gioco è acusticamente un gemello del Kidd: SQS-53 in passivo e un attivo da 235 dB che si sente lontano. Col
+    mare forza 5 regge ancora 28 nodi, ma col mare grosso e oltre i 18 nodi il sonar di prua diventa quasi inutile.
+    Per una nave di 8.000 tonnellate servono uno o due siluri pesanti.
+  uso_en: >-
+    In the game it is acoustically a twin of the Kidd: SQS-53 in passive and a 235 dB active mode that carries far.
+    In sea state 5 it still holds 28 knots, but in heavy seas and above 18 knots its bow sonar becomes almost
+    useless. For an 8,000-tonne ship one or two heavyweight torpedoes are needed.
+  fonti: ['dossier 01 §1 (anacronismi: Forrest Sherman)', 'dossier 09 §5.1 [Masker]', 'dossier 02 §1.5 [SQS53]',
+    'dossier 04 §4 e §7 [FI-SQR19]', 'dossier 17 §2.1', 'dossier 05 §4.1', 'dossier 11 §1.1 [WPSPS40] [WPSPRU]',
+    'dossier 21 §7.2', 'dossier 07 §3.3 e §6.4', 'classi.toml [spruance]',
+    'acustica.toml (firme.spruance, suite.spruance)']
+  armi_tipiche:
+    voci: []
+    altre: ['Sea Sparrow (RIM-7M, Mk 29)', 'SH-60B LAMPS III con Mk 46 (imbarco stimato)']
+    fonte: 'dossier 05 §4.1; dossier 17 §2.1 (armamento proprio non riportato nel dossier 01)'
+
+nave.iowa:
+  it: >-
+    Le quattro corazzate della classe Iowa furono riattivate fra il 1982 e il 1988 e ammodernate: ai nove cannoni da
+    406 mm e ai dodici da 127 mm si aggiunsero 32 Tomahawk in otto lanciatori corazzati, 16 Harpoon e quattro
+    Phalanx. Il 19 aprile 1989 un'esplosione devastò la torre II della Iowa. Non hanno sonar né armi
+    antisommergibile; la protezione subacquea a quattro compartimenti era calcolata per circa 317 kg di tritolo. La
+    Wisconsin fu nel 1988 la prima nave a ricevere il Phalanx Block 1.
+  en: >-
+    The four Iowa class battleships were reactivated between 1982 and 1988 and modernised: to the nine 406 mm and
+    twelve 127 mm guns were added 32 Tomahawks in eight armoured launchers, 16 Harpoons and four Phalanx. On 19
+    April 1989 an explosion wrecked Iowa's turret II. They have no sonar and no anti-submarine weapons; the
+    four-compartment underwater protection was designed for about 317 kg of TNT. Wisconsin was in 1988 the first
+    ship to receive the Phalanx Block 1.
+  uso_it: >-
+    Non ha sonar: da sola non vi sente, ma viaggia sempre scortata. È fra le navi più rumorose del gioco (180 dB
+    alla massima) e si sente da molto lontano. Per affondarla le stime parlano di 4-8 siluri pesanti, perché la sua
+    protezione subacquea è fatta per reggere cariche di quella taglia: preparate una salva.
+  uso_en: >-
+    It has no sonar: on its own it cannot hear you, but it always sails escorted. It is among the loudest ships in
+    the game (180 dB at full speed) and can be heard from very far. Estimates call for 4-8 heavyweight torpedoes to
+    sink it, because its underwater protection is built to withstand charges of that size: prepare a salvo.
+  fonti: ['dossier 01 §1 e §4.1', 'dossier 05 §4.1 [NWPhal]', 'dossier 07 §6.2 [Navypedia] e §6.4',
+    'dossier 11 §1.1 [WPSPS49] [WPSPS67]', 'acustica.toml (firme.iowa)', 'emettitori.toml (suite.iowa)']
+  armi_tipiche:
+    voci: [missile.harpoon, missile.tlam_c]
+    altre: ['9 × 406 mm', '12 × 127 mm', 'Tomahawk TASM', '4 Phalanx']
+    fonte: 'dossier 01 §4.1 e §6.4'
+
+nave.nimitz:
+  it: >-
+    Le portaerei nucleari della classe Nimitz (CVN-68) sono le navi più grandi della US Navy: oltre 330 metri, circa
+    95.000 tonnellate, due reattori A4W su quattro assi e più di 30 nodi. Imbarcano un gruppo aereo di 85-90
+    velivoli; per la caccia ai sottomarini contano uno squadrone di 8-10 S-3 Viking, che coprono le zone media ed
+    esterna, e sei elicotteri SH-3H col sonar a immersione nella zona interna. Nel 1989 una portaerei atlantica può
+    già avere gli S-3B col radar APS-137. La nave non ha sonar e si difende con Sea Sparrow e Phalanx.
+  en: >-
+    The Nimitz class nuclear carriers (CVN-68) are the US Navy's largest ships: over 330 metres, about 95,000
+    tonnes, two A4W reactors on four shafts and over 30 knots. They embark an air wing of 85-90 aircraft; for
+    submarine hunting what counts is a squadron of 8-10 S-3 Vikings, covering the middle and outer zones, and six
+    SH-3H helicopters with dipping sonar in the inner zone. In 1989 an Atlantic carrier may already have S-3Bs with
+    the APS-137 radar. The ship has no sonar and defends itself with Sea Sparrow and Phalanx.
+  uso_it: >-
+    La portaerei non vi sente, ma il suo schermo sì: elicotteri col sonar a immersione fino a 15-20 miglia, scorte e
+    S-3 sui campi di boe più fuori. Rumorosissima, si sente da lontano; le stime chiedono 3-6 siluri pesanti per
+    affondarla, quindi bisogna arrivare in silenzio sotto lo schermo e lanciare una salva.
+  uso_en: >-
+    The carrier cannot hear you, but its screen can: dipping-sonar helicopters out to 15-20 miles, escorts and S-3s
+    on sonobuoy fields farther out. Very loud, it can be heard from afar; estimates call for 3-6 heavyweight
+    torpedoes to sink it, so you must slip quietly under the screen and fire a salvo.
+  fonti: ['dossier 01 §4.1 e §8.2', 'dossier 17 §1, §2.2, §2.5 [HARPCVW] e §5.3', 'dossier 07 §6.1 e §6.4',
+    'dossier 11 §1.1', 'acustica.toml (firme.nimitz)', 'emettitori.toml (suite.nimitz)']
+  armi_tipiche:
+    voci: []
+    altre: ['Sea Sparrow (Mk 29)', '3-4 Phalanx', 'gruppo aereo: S-3 e SH-3H con Mk 46']
+    fonte: 'dossier 01 §4.1; dossier 17 §2.2 e §2.5'
+
+nave.sacramento:
+  it: >-
+    Le rifornitrici veloci della classe Sacramento (AOE-1) sono grandi navi di supporto: 241 metri, circa 53.600
+    tonnellate a pieno carico, turbine a vapore da 100.000 cavalli e 26 nodi, con circa 600 uomini. Imbarcano due
+    elicotteri UH-46. Non hanno sonar; per difendersi contano sul Sea Sparrow e su due Phalanx.
+  en: >-
+    The Sacramento class fast combat support ships (AOE-1) are large support vessels: 241 metres, about 53,600
+    tonnes at full load, 100,000 hp steam turbines and 26 knots, with about 600 men. They embark two UH-46
+    helicopters. They have no sonar; for defence they rely on Sea Sparrow and two Phalanx.
+  uso_it: >-
+    Nave grande, lenta e rumorosa (177 dB alla massima) e senza sonar: un bersaglio facile se si passa lo schermo
+    della scorta, che però non la lascia mai sola.
+  uso_en: >-
+    A big, slow and noisy ship (177 dB at full speed) with no sonar: an easy target once you are past the escort
+    screen, which however never leaves it alone.
+  fonti: ['dossier 01 §4.1 e §8.2', 'dossier 11 §1.1 [WPSAC]', 'acustica.toml (firme.sacramento)',
+    'classi.toml [sacramento]']
+  armi_tipiche:
+    voci: []
+    altre: ['Sea Sparrow', '2 Phalanx']
+    fonte: 'dossier 01 §4.1'
+
+nave.krivak2:
+  it: >-
+    Le fregate del Progetto 1135M (Krivak II per la NATO) sono navi antisommergibile da circa 3.500 tonnellate,
+    spinte da turbine a gas su due assi fino a 32 nodi. L'arma principale è il lanciatore quadruplo del sistema
+    Metel (SS-N-14), che porta a circa 50 km un siluro AT-2U; a questo si aggiungono due lanciarazzi RBU-6000, otto
+    tubi da 533 mm, due cannoni da 100 mm e le mine. Sotto la prua c'è il sonar Titan-2, a poppa il sonar a
+    profondità variabile Vega, calato fino a 100 metri. Non imbarcano elicotteri.
+  en: >-
+    The Project 1135M frigates (Krivak II to NATO) are anti-submarine ships of about 3,500 tonnes, driven by gas
+    turbines on two shafts to 32 knots. The main weapon is the quadruple launcher of the Metel system (SS-N-14),
+    which carries an AT-2U torpedo out to about 50 km; to this are added two RBU-6000 rocket launchers, eight 533 mm
+    tubes, two 100 mm guns and mines. Under the bow is the Titan-2 sonar, astern the Vega variable depth sonar,
+    lowered to 100 metres. They carry no helicopters.
+  uso_it: >-
+    Una cacciatrice vera: sonar di prua in passivo e attivo (Titan-2, 228 dB) e lo SS-N-14 che vi raggiunge ben
+    oltre il raggio delle sue RBU-6000 (circa 5 km). Senza elicotteri dipende dal proprio sonar: avvicinatevi lenti
+    e tiratele da lontano; un siluro pesante basta per una nave di questa stazza.
+  uso_en: >-
+    A true hunter: bow sonar in passive and active mode (Titan-2, 228 dB) and the SS-N-14, which reaches you well
+    beyond the range of its RBU-6000s (about 5 km). With no helicopters it depends on its own sonar: approach slowly
+    and fire from range; one heavyweight torpedo is enough for a ship of this size.
+  fonti: ['dossier 01 §4.2, §6.3, §6.5 e §7.3 [WPKrivak] [RWRBU6000]', 'dossier 11 §1.2 [RW1135]', 'dossier 07 §6.4',
+    'acustica.toml (firme.krivak2, suite.krivak2, sensori.titan2_attivo)']
+  armi_tipiche:
+    voci: [siluro.at2]
+    altre: ['SS-N-14 (Metel/Rastrub)', '2 RBU-6000', '2 × 4 tubi da 533 mm', 'mine', '2 × 100 mm AK-100']
+    fonte: 'dossier 01 §4.2 e §6.2-6.3'
+
+nave.kara:
+  it: >-
+    Gli incrociatori antisommergibile del Progetto 1134B (Kara) dislocano quasi 10.000 tonnellate a pieno carico e
+    con le turbine a gas toccano i 34 nodi. Contro i sottomarini schierano otto missili Metel (SS-N-14) con siluro
+    AT-2U, due RBU-6000 e due RBU-1000, dieci tubi da 533 mm caricati con siluri 53-65K e SET-65, e un elicottero
+    Ka-25PL. I sensori sono il sonar di scafo Titan-2 e il sonar a profondità variabile Vega; la difesa aerea conta
+    sui sistemi Shtorm e Osa-M.
+  en: >-
+    The Project 1134B anti-submarine cruisers (Kara) displace almost 10,000 tonnes at full load and reach 34 knots
+    on gas turbines. Against submarines they field eight Metel missiles (SS-N-14) with the AT-2U torpedo, two
+    RBU-6000 and two RBU-1000, ten 533 mm tubes loaded with 53-65K and SET-65 torpedoes, and one Ka-25PL helicopter.
+    The sensors are the Titan-2 hull sonar and the Vega variable depth sonar; air defence relies on the Shtorm and
+    Osa-M systems.
+  uso_it: >-
+    Fra le navi sovietiche è la minaccia più completa: sonar attivo Titan-2, missili SS-N-14 a lunga portata, RBU
+    sotto i 5 km e l'elicottero. Il 53-65K segue la scia ed è inutile contro di voi immersi, mentre il SET-65 vi
+    cerca col sonar. Col mare forza 5 tiene ancora 28 nodi; servono uno o due siluri pesanti.
+  uso_en: >-
+    Among Soviet ships it is the most complete threat: Titan-2 active sonar, long-range SS-N-14 missiles, RBUs
+    inside 5 km and the helicopter. The 53-65K follows wakes and is useless against you submerged, while the SET-65
+    hunts you with its sonar. In sea state 5 it still holds 28 knots; it takes one or two heavyweight torpedoes.
+  fonti: ['dossier 01 §4.2, §6.1-6.3, §6.5 e §7.3 [WPKara]', 'dossier 11 §1.2 [RW1134B]', 'dossier 17 §3.1',
+    'dossier 07 §6.4', 'dossier 21 §7.2', 'acustica.toml (firme.kara, suite.kara)']
+  armi_tipiche:
+    voci: [siluro.at2, siluro.type53_65k, siluro.set65]
+    altre: ['SS-N-14 (Metel), 8 missili', '2 RBU-6000', '2 RBU-1000', '2 × 5 tubi da 533 mm', '1 Ka-25PL']
+    fonte: 'dossier 01 §4.2 e §6.1-6.3'
+
+nave.kirov:
+  it: >-
+    Gli incrociatori a propulsione nucleare del Progetto 1144 (Kirov) sono giganti da circa 24.000 tonnellate,
+    lunghi 252 metri e veloci 32 nodi. L'arma principale sono 20 missili antinave P-700 Granit (SS-N-19), con 96
+    missili antiaerei S-300F, dieci tubi da 533 mm e tre elicotteri Ka-25 o Ka-27. Le tre unità del 1989 non sono
+    uguali: la Kirov (1980) ha l'SS-N-14 e le RBU, la Frunze (1984) e la Kalinin (1988) il Vodopad-NK (SS-N-16) e
+    l'antisiluro Udav-1. Il grande sonar di scafo Polinom può ascoltare nelle zone di convergenza.
+  en: >-
+    The Project 1144 nuclear-powered cruisers (Kirov) are giants of about 24,000 tonnes, 252 metres long and good
+    for 32 knots. The main weapon is 20 P-700 Granit anti-ship missiles (SS-N-19), with 96 S-300F anti-air missiles,
+    ten 533 mm tubes and three Ka-25 or Ka-27 helicopters. The three ships of 1989 are not identical: Kirov (1980)
+    has the SS-N-14 and RBUs, Frunze (1984) and Kalinin (1988) the Vodopad-NK (SS-N-16) and the Udav-1 anti-torpedo
+    system. The large Polinom hull sonar can listen in convergence zones.
+  uso_it: >-
+    La nave sovietica più rumorosa del gioco (177 dB alla massima): la sentirete prima di tutte le altre, insieme
+    alla sua scorta. Ha sonar attivo, armi antisommergibile a distanza e tre elicotteri; il Granit minaccia le navi
+    amiche, non voi immersi. Nessuna nave di questo tipo è mai stata colpita: per una nave così grande preparate una
+    salva di siluri pesanti.
+  uso_en: >-
+    The loudest Soviet ship in the game (177 dB at full speed): you will hear it before all others, together with
+    its escort. It has active sonar, stand-off anti-submarine weapons and three helicopters; the Granit threatens
+    friendly ships, not you submerged. No ship of this kind has ever been hit: for such a large ship prepare a salvo
+    of heavyweight torpedoes.
+  fonti: ['dossier 01 §1, §4.2-4.3, §6.3-6.4 e §7.3 [WPKirov]', 'dossier 05 §5.5 [WPRBU12000]', 'dossier 07 §6.3',
+    'dossier 17 §3.2', 'dossier 11 §1.2', 'acustica.toml (firme.kirov, suite.kirov)']
+  armi_tipiche:
+    voci: [missile.p700, siluro.at2, siluro.umgt1]
+    altre: ['20 P-700 Granit (SS-N-19)', 'SS-N-14 Metel (Kirov)', 'SS-N-16 Vodopad-NK (Frunze, Kalinin)',
+      'RBU-6000 e 2 RBU-1000 (Kirov)', 'Udav-1 (Frunze, Kalinin)', '10 tubi da 533 mm']
+    fonte: 'dossier 01 §4.2-4.3 e §6.3; dossier 05 §5.5'
+
+nave.slava:
+  it: >-
+    Gli incrociatori lanciamissili del Progetto 1164 (Slava) sono navi antinave da circa 11.500 tonnellate a pieno
+    carico, 32 nodi con turbine a gas. Portano 16 grandi missili P-500 Bazalt (SS-N-12), con 64 missili antiaerei
+    S-300F, un cannone binato da 130 mm, due RBU-6000, dieci tubi da 533 mm e un elicottero. Nel 1989 ne sono in
+    servizio tre: Slava (1982), Ustinov (1986) e Chervona Ukraina (1989). Il sonar è il Titan-2T di scafo con un
+    sonar a profondità variabile.
+  en: >-
+    The Project 1164 guided missile cruisers (Slava) are anti-ship vessels of about 11,500 tonnes at full load, 32
+    knots on gas turbines. They carry 16 large P-500 Bazalt missiles (SS-N-12), with 64 S-300F anti-air missiles, a
+    twin 130 mm gun, two RBU-6000, ten 533 mm tubes and one helicopter. In 1989 three are in service: Slava (1982),
+    Ustinov (1986) and Chervona Ukraina (1989). The sonar is the Titan-2T hull set with a variable depth sonar.
+  uso_it: >-
+    È armata soprattutto contro le navi: ha sonar attivo e RBU, ma niente missili antisommergibile. Se scorta un
+    gruppo, la minaccia per voi viene dal suo elicottero e dalle navi vicine; per lei bastano uno o due siluri
+    pesanti.
+  uso_en: >-
+    It is armed mainly against ships: it has active sonar and RBUs, but no anti-submarine missiles. If it escorts a
+    group, the threat to you comes from its helicopter and nearby ships; one or two heavyweight torpedoes are enough
+    for it.
+  fonti: ['dossier 01 §4.2, §6.4 e §7.3 [WPSlava]', 'dossier 11 §1.2 [WPSLAVA]', 'dossier 07 §6.4',
+    'acustica.toml (firme.slava, suite.slava)']
+  armi_tipiche:
+    voci: []
+    altre: ['16 P-500 Bazalt (SS-N-12)', '2 RBU-6000', '2 × 5 tubi da 533 mm', 'S-300F (SA-N-6)']
+    fonte: 'dossier 01 §4.2 e §6.4'
+
+nave.koni:
+  it: >-
+    Le fregate del Progetto 1159 (Koni) furono costruite per l'esportazione: nella marina sovietica ne resta una
+    sola, la Delfin, usata per addestrare gli equipaggi stranieri, mentre le altre servono nelle marine di DDR,
+    Bulgaria, Cuba, Libia, Algeria e Jugoslavia. Sono navi piccole, 1.900 tonnellate e 27 nodi con un apparato misto
+    diesel e turbina a gas su tre assi. Contro i sottomarini hanno solo il sonar di scafo Herkules, due RBU-6000 e
+    le bombe di profondità; portano anche 20 mine.
+  en: >-
+    The Project 1159 frigates (Koni) were built for export: the Soviet navy keeps only one, Delfin, used to train
+    foreign crews, while the others serve in the navies of East Germany, Bulgaria, Cuba, Libya, Algeria and
+    Yugoslavia. They are small ships, 1,900 tonnes and 27 knots with a mixed diesel and gas turbine plant on three
+    shafts. Against submarines they have only the Herkules hull sonar, two RBU-6000 and depth charges; they also
+    carry 20 mines.
+  uso_it: >-
+    Una minaccia modesta: le sue armi arrivano a circa 5 km, anche se nel gioco ha lo stesso sonar delle altre navi
+    sovietiche, e i diesel la tradiscono con righe basse a 14 e 28 Hz. Tenetevi oltre il raggio delle RBU; un solo
+    siluro pesante la spezza.
+  uso_en: >-
+    A modest threat: its weapons reach about 5 km, although in the game it has the same sonar as the other Soviet
+    ships, and its diesels give it away with low lines at 14 and 28 Hz. Stay beyond RBU range; a single heavyweight
+    torpedo breaks it.
+  fonti: ['dossier 01 §1, §4.2, §6.5 e §7.3 [WPKoni]', 'dossier 07 §6.4', 'acustica.toml (firme.koni, suite.koni)']
+  armi_tipiche:
+    voci: []
+    altre: ['2 RBU-6000', 'bombe di profondità', '20 mine', 'SA-N-4 (Osa-M)']
+    fonte: 'dossier 01 §4.2 e §6.5'
+
+nave.nanuchka:
+  it: >-
+    Le piccole corvette lanciamissili del Progetto 1234 (Nanuchka I) dislocano appena 660 tonnellate ma portano sei
+    missili antinave P-120 Malakhit (SS-N-9), con una portata di 110-120 km. Tre diesel per 30.000 cavalli le
+    spingono a 32-35 nodi; per difendersi hanno l'Osa-M e un binato da 57 mm. Non hanno sonar né armi
+    antisommergibile. Il radar Band Stand serve a designare i bersagli per gli SS-N-9.
+  en: >-
+    The small Project 1234 missile corvettes (Nanuchka I) displace just 660 tonnes but carry six P-120 Malakhit
+    anti-ship missiles (SS-N-9), with a range of 110-120 km. Three diesels totalling 30,000 hp drive them to 32-35
+    knots; for self-defence they have Osa-M and a twin 57 mm gun. They have no sonar and no anti-submarine weapons.
+    The Band Stand radar serves to designate targets for the SS-N-9s.
+  uso_it: >-
+    Per voi immersi è innocua: nel gioco ha solo un ascolto passivo e nessuna arma antisommergibile, ma minaccia le
+    navi amiche. All'ESM la si riconosce dal radar di superficie Peel Pair. Col mare forza 6 cerca riparo e
+    rallenta: è il momento per colpirla, e un siluro basta.
+  uso_en: >-
+    To you submerged it is harmless: in the game it has only passive listening and no anti-submarine weapon, but it
+    threatens friendly ships. On ESM it is recognised by its Peel Pair surface radar. In sea state 6 it seeks
+    shelter and slows down: that is the time to hit it, and one torpedo is enough.
+  fonti: ['dossier 01 §4.2 e §6.4 [WPNanu]', 'dossier 11 §1.2 e §2 [WPNAN]', 'dossier 21 §7.2', 'dossier 07 §6.4',
+    'acustica.toml (firme.nanuchka, suite.nanuchka)', 'emettitori.toml (suite.nanuchka)']
+  armi_tipiche:
+    voci: []
+    altre: ['6 P-120 Malakhit (SS-N-9)', 'SA-N-4 (Osa-M)', '2 × 57 mm AK-257']
+    fonte: 'dossier 01 §4.2 e §6.4'
+
+nave.petroliera:
+  it: >-
+    La petroliera del gioco è la Sea Isle City, costruita nel 1981 da Mitsubishi per la compagnia petrolifera
+    kuwaitiana: una petroliera da greggio di medie dimensioni, quasi 97.000 tonnellate di portata, con la
+    sovrastruttura e le macchine a poppa. Nel 1987 passò sotto bandiera americana per l'operazione Earnest Will e il
+    16 ottobre di quell'anno un missile Silkworm iraniano ne colpì la plancia. Nella «guerra delle petroliere» del
+    Golfo (1980-88) le petroliere furono il 61% delle navi attaccate, ma meno di un quarto di quelle colpite andò
+    perduta.
+  en: >-
+    The game's tanker is Sea Isle City, built in 1981 by Mitsubishi for the Kuwaiti oil tanker company: a
+    medium-size crude carrier, almost 97,000 tonnes deadweight, with superstructure and machinery aft. In 1987 it
+    was reflagged American for Operation Earnest Will and on 16 October of that year an Iranian Silkworm missile hit
+    its bridge. In the Gulf «Tanker War» (1980-88) tankers were 61% of the ships attacked, but less than a quarter
+    of those hit were lost.
+  uso_it: >-
+    Disarmata e senza sonar, è la nave più rumorosa del gioco (fino a 186 dB): il suo fragore può coprire un
+    sottomarino che le naviga vicino. Carica è durissima da affondare (2-4 siluri pesanti), perché il greggio pesa
+    quasi quanto l'acqua; in zavorra le cisterne piene di vapori possono esplodere.
+  uso_en: >-
+    Unarmed and without sonar, it is the loudest ship in the game (up to 186 dB): its roar can mask a submarine
+    sailing close by. Loaded, it is very hard to sink (2-4 heavyweight torpedoes), because crude weighs almost as
+    much as water; in ballast, tanks full of vapour can explode.
+  fonti: ['extracted/navi/petroliera/RAPPORTO.md (classi.toml [petroliera])', 'dossier 07 §5.1-5.3 [CSIS] [Strauss]',
+    'dossier 07 §6.4', 'dossier 01 §4.4', 'acustica.toml (firme.petroliera)']
+
+nave.mercantile:
+  it: >-
+    Il mercantile del gioco è la Ravenstvo, turbonave da carico generale sovietica consegnata dal cantiere di
+    Kherson nel 1963 alla Compagnia di navigazione del Mar Nero di Odessa. È una delle 25 unità del tipo Leninskiy
+    Komsomol (Progetto 567, 1959-1968), la serie di mercantili sovietici più nota: ne facevano parte anche navi
+    della crisi di Cuba come la Metallurg Anosov. Tre isole, sei stive, dodici gru elettriche e due bighi pesanti da
+    60 tonnellate, circa 16.000 tonnellate di portata e 18 nodi; nel 1989 navi così sono ancora in servizio.
+  en: >-
+    The game's merchant ship is Ravenstvo, a Soviet general cargo turbine ship delivered by the Kherson yard in 1963
+    to the Black Sea Shipping Company of Odessa. It is one of the 25 ships of the Leninskiy Komsomol type (Project
+    567, 1959-1968), the best-known series of Soviet merchant ships: it also included Cuban crisis ships such as
+    Metallurg Anosov. Three islands, six holds, twelve electric cranes and two 60-tonne heavy derricks, about 16,000
+    tonnes deadweight and 18 knots; in 1989 ships like this are still in service.
+  uso_it: >-
+    Non ha armi né sensori antisommergibile, e il suo radar di navigazione sempre acceso riempie l'ESM di segnali
+    innocui. Rumorosa (fino a 183 dB), può coprire il vostro avvicinamento; se è un bersaglio, servono uno o due
+    siluri pesanti.
+  uso_en: >-
+    It has no anti-submarine weapons or sensors, and its always-on navigation radar fills the ESM with harmless
+    signals. Noisy (up to 183 dB), it can mask your approach; if it is a target, it takes one or two heavyweight
+    torpedoes.
+  fonti: ['extracted/navi/mercantile/RAPPORTO.md (classi.toml [mercantile])', 'dossier 01 §4.4', 'dossier 11 §1.3',
+    'dossier 07 §5.5 e §6.4', 'acustica.toml (firme.mercantile)']
+
+nave.cargo:
+  it: >-
+    La portacontainer del gioco è la Cpl. Louis J. Hauge Jr. (T-AK 3000), già Estelle Maersk: una delle cinque navi
+    portacontainer e ro-ro costruite per la Maersk dal cantiere di Odense nel 1979-80. Dal 1984 il Military Sealift
+    Command le noleggia come navi di preposizionamento, con equipaggi civili della Maersk. Scafo nero, cassero
+    bianco a poppa con un ponte per elicotteri, tre torri gru e container in coperta; lunga 230 metri, fila a 16,4
+    nodi.
+  en: >-
+    The game's container ship is Cpl. Louis J. Hauge Jr. (T-AK 3000), formerly Estelle Maersk: one of five container
+    and ro-ro ships built for Maersk by the Odense yard in 1979-80. From 1984 the Military Sealift Command charters
+    them as prepositioning ships, with civilian Maersk crews. Black hull, white superstructure aft with a helicopter
+    deck, three crane towers and containers on deck; 230 metres long, it makes 16.4 knots.
+  uso_it: >-
+    Disarmata e lenta, si sente molto bene (fino a 183 dB) e il suo radar di navigazione è sempre acceso. I grandi
+    ponti garage senza paratie la espongono ad allagamenti rapidi e al capovolgimento: uno o due siluri pesanti
+    dovrebbero bastare.
+  uso_en: >-
+    Unarmed and slow, it is very easy to hear (up to 183 dB) and its navigation radar is always on. The large
+    vehicle decks without bulkheads expose it to rapid flooding and capsizing: one or two heavyweight torpedoes
+    should be enough.
+  fonti: ['extracted/navi/cargo/RAPPORTO.md (classi.toml [cargo])', 'dossier 07 §5.5 e §6.4', 'dossier 11 §1.3',
+    'acustica.toml (firme.cargo)']
+
+nave.agi:
+  it: >-
+    La nave raccolta informazioni del gioco è la LINZA, un'unità sovietica della classe Okean: pescherecci a
+    fiancate trasformati in navi spia, con due alberi carichi di antenne, la cupola di un radar sulla plancia e fili
+    d'antenna tesi fra gli alberi. Lunga circa 51 metri, 760 tonnellate a pieno carico, un solo diesel da 540 cavalli:
+    fila a 11 o 12 nodi. Nel settembre 1986 la US Navy la fotografò mentre seguiva le navi della NATO
+    nell'esercitazione Northern Wedding.
+  en: >-
+    The game's intelligence collection ship is LINZA, a Soviet unit of the Okean class: side trawlers turned into spy
+    ships, with two masts loaded with antennas, a radar dome on the bridge and antenna wires strung between the masts.
+    About 51 metres long, 760 tonnes at full load, a single 540 horsepower diesel: it makes 11 or 12 knots. In
+    September 1986 the US Navy photographed her shadowing NATO ships during exercise Northern Wedding.
+  uso_it: >-
+    Non ha armi antisommergibile, solo missili portatili contro gli aerei, ma ascolta: segue i gruppi navali e le
+    esercitazioni, intercetta le radio e i radar e riferisce. Va lenta col radar di navigazione acceso, e ferma in
+    deriva si sente quasi solo il generatore. Per le regole d'ingaggio è una nave della Marina sovietica, non un
+    peschereccio.
+  uso_en: >-
+    It has no anti-submarine weapons, only shoulder-launched missiles against aircraft, but it listens: it follows
+    naval groups and exercises, intercepts radio and radar and reports. It moves slowly with its navigation radar on,
+    and when drifting you hear almost nothing but the generator. Under the rules of engagement it is a Soviet Navy
+    ship, not a fishing boat.
+  fonti: ['extracted/navi/agi/RAPPORTO.md (classi.toml [agi]; foto US Navy 1986)', 'acustica.toml (firme.agi)']
+
+nave.peschereccio:
+  it: >-
+    Il peschereccio d'altura del gioco è l'Atlantic Peace, un peschereccio a rampa poppiera del 1987: scafo blu con
+    la fascia bianca, castello alto, plancia a proravia e a poppa il portale sopra la rampa da cui la rete scende in
+    mare. Lungo 57 metri e largo 13, circa 2.000 tonnellate a pieno carico, un diesel su un'elica a passo variabile:
+    14 nodi. Navi come questa pescavano nel Mare di Norvegia e nel Barents, dove pattugliavano i sottomarini.
+  en: >-
+    The game's deep-sea trawler is Atlantic Peace, a 1987 stern trawler: blue hull with a white band, high
+    forecastle, bridge forward and aft the gantry over the ramp from which the net goes into the sea. 57 metres long
+    and 13 wide, about 2,000 tonnes at full load, one diesel on a controllable-pitch propeller: 14 knots. Ships like
+    this fished in the Norwegian Sea and the Barents, where the submarines patrolled.
+  uso_it: >-
+    È una nave civile, fuori dalle regole d'ingaggio. Fra 2 e 5 nodi è al lavoro: tira la rete a strascico quasi a
+    piena potenza, con i cavi che vibrano e i verricelli, e fa molto rumore. Il pericolo è la rete, centinaia di metri
+    dietro la poppa: negli anni '80 i sottomarini britannici ne agganciarono una quindicina, e nel 1990 l'Antares
+    affondò con quattro uomini. Restate lontani dalla sua scia.
+  uso_en: >-
+    It is a civilian ship, outside the rules of engagement. Between 2 and 5 knots it is at work: it tows the trawl at
+    nearly full power, with vibrating warps and winches, and makes a lot of noise. The danger is the net, hundreds of
+    metres astern: in the 1980s British submarines snagged about fifteen, and in 1990 Antares sank with four men.
+    Keep clear of her wake.
+  fonti: ['extracted/navi/peschereccio/RAPPORTO.md (classi.toml [peschereccio]; foto CC0 2012)',
+    'dossier 16 §1.3 [WP-Antares]', 'acustica.toml (firme.peschereccio)']
+
+bersaglio.bqm74:
+  it: >-
+    Il BQM-74C Chukar è il bersaglio radiocomandato della US Navy che negli anni '80 imitava i missili antinave a
+    volo radente. È un piccolo aereo senza pilota con un turbogetto J400 in una gondola sotto la fusoliera: lungo
+    3,87 metri e con 1,76 metri di apertura alare, decolla con un razzo ausiliario e si recupera col paracadute. Non
+    ha un radar proprio, ma può portare amplificatori, passivi o attivi, della sua eco radar.
+  en: >-
+    The BQM-74C Chukar is the US Navy's radio-controlled target drone that in the 1980s imitated sea-skimming
+    anti-ship missiles. It is a small unmanned aircraft with a J400 turbojet in a pod under the fuselage: 3.87
+    metres long with a 1.76 metre wingspan, it takes off with a booster rocket and is recovered by parachute. It has
+    no radar of its own, but can carry passive or active augmenters of its radar echo.
+  uso_it: >-
+    Nel gioco compare nella missione «Colpisci e fuggi» come bersaglio non combattente: non ha armi né radar e non
+    fa rumore, quindi il sonar non lo sente. Non è una minaccia.
+  uso_en: >-
+    In the game it appears in the «Hit and Run» mission as a non-combatant target: it has no weapons or radar and
+    makes no noise, so the sonar cannot hear it. It is not a threat.
+  fonti: ['extracted/navi/bqm74/RAPPORTO.md (classi.toml [bqm74])', 'dossier 11 §1.6 [DSBQM74]',
+    'data/missioni/SCENE0A.lua']

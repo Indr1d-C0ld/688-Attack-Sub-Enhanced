@@ -1,0 +1,212 @@
+# Timbri FM a due operatori (generato da tools/pipeline/timbri_fm.py: non modificare a mano). Originali del
+# progetto (CC0). programmi: programma General MIDI 0-based; ritmo: nota del canale 10.
+
+programma_riserva = 48
+
+[programmi.0]
+nome = "pianoforte"
+retro = 3
+connessione = 0
+nota_fissa = -1
+mod = { mult = 1, tl = 28, ar = 15, dr = 3, sl = 7, rr = 5, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 1 }
+por = { mult = 1, tl = 0, ar = 15, dr = 2, sl = 6, rr = 5, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+
+[programmi.8]
+nome = "celesta"
+retro = 1
+connessione = 0
+nota_fissa = -1
+mod = { mult = 4, tl = 30, ar = 15, dr = 4, sl = 6, rr = 4, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 15, dr = 3, sl = 6, rr = 4, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+
+[programmi.11]
+nome = "vibrafono"
+retro = 0
+connessione = 0
+nota_fissa = -1
+mod = { mult = 4, tl = 34, ar = 15, dr = 2, sl = 5, rr = 4, onda = 0, vib = false, am = true, tenuta = false, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 15, dr = 2, sl = 5, rr = 4, onda = 0, vib = false, am = true, tenuta = false, ksr = false, ksl = 0 }
+
+[programmi.14]
+nome = "campane tubolari"
+retro = 2
+connessione = 0
+nota_fissa = -1
+mod = { mult = 7, tl = 26, ar = 15, dr = 3, sl = 6, rr = 3, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+por = { mult = 2, tl = 0, ar = 15, dr = 2, sl = 5, rr = 3, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+
+[programmi.19]
+nome = "organo"
+retro = 0
+connessione = 1
+nota_fissa = -1
+mod = { mult = 1, tl = 12, ar = 15, dr = 0, sl = 0, rr = 8, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 2, tl = 0, ar = 15, dr = 0, sl = 0, rr = 8, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.33]
+nome = "basso elettrico"
+retro = 4
+connessione = 0
+nota_fissa = -1
+mod = { mult = 0, tl = 22, ar = 15, dr = 3, sl = 4, rr = 7, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 1 }
+por = { mult = 1, tl = 0, ar = 15, dr = 2, sl = 4, rr = 7, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.38]
+nome = "basso sintetico"
+retro = 6
+connessione = 0
+nota_fissa = -1
+mod = { mult = 0, tl = 16, ar = 15, dr = 2, sl = 3, rr = 8, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 15, dr = 2, sl = 4, rr = 8, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.43]
+nome = "contrabbassi"
+retro = 5
+connessione = 0
+nota_fissa = -1
+mod = { mult = 0, tl = 20, ar = 15, dr = 4, sl = 3, rr = 7, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 1 }
+por = { mult = 0, tl = 0, ar = 15, dr = 3, sl = 2, rr = 7, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.47]
+nome = "timpani"
+retro = 4
+connessione = 0
+nota_fissa = -1
+mod = { mult = 0, tl = 18, ar = 15, dr = 5, sl = 8, rr = 6, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+por = { mult = 0, tl = 0, ar = 15, dr = 4, sl = 7, rr = 4, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+
+[programmi.48]
+nome = "archi"
+retro = 6
+connessione = 0
+nota_fissa = -1
+mod = { mult = 1, tl = 24, ar = 7, dr = 1, sl = 1, rr = 6, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 6, dr = 1, sl = 1, rr = 6, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.52]
+nome = "coro"
+retro = 3
+connessione = 0
+nota_fissa = -1
+mod = { mult = 1, tl = 30, ar = 5, dr = 2, sl = 2, rr = 5, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 5, dr = 1, sl = 1, rr = 5, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.56]
+nome = "tromba"
+retro = 5
+connessione = 0
+nota_fissa = -1
+mod = { mult = 1, tl = 20, ar = 12, dr = 1, sl = 1, rr = 8, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 13, dr = 1, sl = 1, rr = 8, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.60]
+nome = "corni"
+retro = 4
+connessione = 0
+nota_fissa = -1
+mod = { mult = 1, tl = 26, ar = 10, dr = 2, sl = 2, rr = 7, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 11, dr = 2, sl = 2, rr = 7, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.61]
+nome = "ottoni"
+retro = 6
+connessione = 0
+nota_fissa = -1
+mod = { mult = 1, tl = 18, ar = 11, dr = 2, sl = 2, rr = 8, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 13, dr = 2, sl = 2, rr = 8, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.71]
+nome = "clarinetto"
+retro = 4
+connessione = 0
+nota_fissa = -1
+mod = { mult = 2, tl = 26, ar = 12, dr = 1, sl = 1, rr = 8, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 12, dr = 1, sl = 1, rr = 8, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.73]
+nome = "flauto"
+retro = 0
+connessione = 0
+nota_fissa = -1
+mod = { mult = 1, tl = 40, ar = 10, dr = 1, sl = 0, rr = 7, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 9, dr = 1, sl = 0, rr = 7, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.80]
+nome = "onda quadra"
+retro = 7
+connessione = 0
+nota_fissa = -1
+mod = { mult = 1, tl = 22, ar = 15, dr = 0, sl = 0, rr = 7, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 15, dr = 0, sl = 0, rr = 7, onda = 2, vib = false, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.88]
+nome = "pad caldo"
+retro = 2
+connessione = 0
+nota_fissa = -1
+mod = { mult = 1, tl = 32, ar = 4, dr = 1, sl = 1, rr = 4, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 3, dr = 1, sl = 1, rr = 3, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.89]
+nome = "pad freddo"
+retro = 3
+connessione = 0
+nota_fissa = -1
+mod = { mult = 3, tl = 34, ar = 3, dr = 1, sl = 2, rr = 3, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 3, dr = 1, sl = 1, rr = 3, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[programmi.95]
+nome = "pad scuro"
+retro = 5
+connessione = 0
+nota_fissa = -1
+mod = { mult = 0, tl = 30, ar = 3, dr = 1, sl = 1, rr = 3, onda = 0, vib = false, am = false, tenuta = true, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 0, ar = 2, dr = 1, sl = 1, rr = 3, onda = 0, vib = true, am = false, tenuta = true, ksr = false, ksl = 0 }
+
+[ritmo.36]
+nome = "grancassa"
+retro = 7
+connessione = 0
+nota_fissa = 28
+mod = { mult = 0, tl = 8, ar = 15, dr = 7, sl = 15, rr = 8, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+por = { mult = 0, tl = 0, ar = 15, dr = 6, sl = 15, rr = 7, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+
+[ritmo.38]
+nome = "rullante"
+retro = 7
+connessione = 0
+nota_fissa = 55
+mod = { mult = 15, tl = 0, ar = 15, dr = 8, sl = 15, rr = 8, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+por = { mult = 1, tl = 4, ar = 15, dr = 8, sl = 15, rr = 8, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+
+[ritmo.39]
+nome = "battimani"
+retro = 7
+connessione = 0
+nota_fissa = 62
+mod = { mult = 15, tl = 4, ar = 15, dr = 9, sl = 15, rr = 9, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+por = { mult = 3, tl = 6, ar = 15, dr = 9, sl = 15, rr = 9, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+
+[ritmo.41]
+nome = "taiko"
+retro = 6
+connessione = 0
+nota_fissa = 33
+mod = { mult = 0, tl = 12, ar = 15, dr = 6, sl = 15, rr = 6, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+por = { mult = 0, tl = 0, ar = 15, dr = 5, sl = 15, rr = 6, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+
+[ritmo.42]
+nome = "charleston chiuso"
+retro = 7
+connessione = 1
+nota_fissa = 90
+mod = { mult = 15, tl = 0, ar = 15, dr = 10, sl = 15, rr = 10, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+por = { mult = 14, tl = 8, ar = 15, dr = 10, sl = 15, rr = 10, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+
+[ritmo.49]
+nome = "piatto"
+retro = 7
+connessione = 1
+nota_fissa = 84
+mod = { mult = 15, tl = 0, ar = 15, dr = 3, sl = 15, rr = 4, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }
+por = { mult = 13, tl = 6, ar = 15, dr = 3, sl = 15, rr = 4, onda = 0, vib = false, am = false, tenuta = false, ksr = false, ksl = 0 }

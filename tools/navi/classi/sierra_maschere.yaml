@@ -1,0 +1,15 @@
+# Maschera ritoccata a mano della foto della Sierra (tools/navi/maschera_manuale.py), coordinate in pixel.
+# Sierra I di fianco dall'alto (3000 x 2039 px): la coperta illuminata e' grigio chiaro come il mare e la maschera
+# automatica la perdeva (coincidenza 0,72, la coperta dipinta col tono di base). Lo scafo e la vela sono un poligono
+# pieno, meno la schiuma bianca della prua; gli alberi, scuri, si staccano dal mare dentro l'inviluppo.
+file: extracted/navi/sierra/foto/Sierra_class_submarine.jpg
+uscita: extracted/navi/sierra/foto/fianco_sinistra_aerea_maschera.png
+scafo: [[210, 1100], [300, 950], [430, 885], [660, 852], [1830, 842], [1840, 740], [1880, 692], [1920, 680],
+        [2780, 680], [2840, 740], [2870, 834], [3000, 830], [3000, 1132], [1500, 1135], [800, 1135], [400, 1128],
+        [260, 1124]]
+soglia_scafo: 195       # la schiuma della prua e della scia e' piu' chiara della coperta al sole
+linea_coperta: [[0, 690], [3000, 690]]
+inviluppo: [[1980, 80], [2560, 80], [2560, 690], [1980, 690]]
+soglia_sovrastrutture: 105
+area_minima: 40
+buco_massimo: 800

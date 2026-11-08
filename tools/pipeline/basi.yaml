@@ -1,0 +1,488 @@
+# Catalogo delle basi dell'enciclopedia (docs/00_ROADMAP.md, requisito 14): basi navali, basi sottomarini, basi aeree e
+# porti legati ai 7 teatri (tools/pipeline/teatri.yaml) nel 1985-1990. Letto da tools/pipeline/enciclopedia.py
+# (categoria «base»); i testi stanno in enciclopedia_testi/basi_sistemi.yaml (voci «base.<id>").
+# Solo basi citate nei dossier di docs/ricerca (soprattutto 03, Parte A, «Significato operativo»); nessun fatto dal web.
+# Campi:
+#   teatro: id di teatri.yaml a cui la base serve (anche se cade fuori dal riquadro della carta);
+#   tipo: base navale | base sottomarini | base aerea | porto;
+#   nazione: lo schieramento, non la bandiera: usa, uk, nato (alleati NATO, Francia compresa), urss (Unione Sovietica e
+#            marine del Patto di Varsavia: RDT, Polonia), jp (Giappone, schierato con gli USA), neutrale (fuori dai
+#            blocchi: Jugoslavia, Albania);
+#   lat, lon: gradi decimali (lon negative = Ovest). Quasi nessuna coordinata e' nei dossier: il dato «posizione» di
+#            ogni base dice da dove viene e, se stimata, ha conf STIMA;
+#   dati: righe della scheda (campo, nome_it, nome_en, testo_it, testo_en, fonte, conf);
+#   fonte, conf: la fonte principale della base e la confidenza sul suo ruolo nel periodo.
+# Lacune: Faslane e Holy Loch, Plymouth/Devonport, Swinoujscie, Yuzhno-Kurilsk e Nemuro non compaiono nei dossier come
+# basi; Karlskrona compare solo per l'incidente dell'U 137 (03 §A7), non come base. Delle basi giapponesi ci sono solo
+# quelle che il dossier 03 §A5 cita per la sorveglianza dello stretto di Soya (Wakkanai, Hachinohe, Misawa): niente su
+# Hakodate e Ominato.
+
+# --- Faroe - Mar di Norvegia ---
+
+keflavik:
+  nome: Keflavík
+  nome_en: Keflavík
+  teatro: faroe
+  tipo: base aerea
+  nazione: usa
+  lat: 63.98
+  lon: -22.61
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "63,98°N 22,61°W (Islanda sud-occidentale, fuori dalla carta del teatro)", testo_en: "63.98°N 22.61°W (south-west Iceland, outside the theatre chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: sosus, nome_it: Ascolto SOSUS, nome_en: SOSUS listening, testo_it: "stazione NAVFAC del SOSUS attiva dal 1966", testo_en: "SOSUS NAVFAC station active from 1966", fonte: "dossier 03 §A1", conf: alta}
+    - {campo: pattugliatori, nome_it: Pattugliatori, nome_en: Patrol aircraft, testo_it: "uno squadrone VP di P-3 a rotazione, con base madre a Brunswick (Maine); per esempio il VP-11 dal novembre 1988", testo_en: "a rotating VP squadron of P-3s, home-based at Brunswick (Maine); for example VP-11 from November 1988", fonte: "dossier 17 §5.1 [WPVP11]", conf: media}
+    - {campo: tempo_in_zona, nome_it: Tempo in zona dal varco, nome_en: Time on station in the gap, testo_it: "varco Islanda-Faroe a 250-400 nm: circa 6-7 ore in zona per un P-3", testo_en: "Iceland-Faroe gap 250-400 nm away: about 6-7 hours on station for a P-3", fonte: "dossier 17 §5.1 [CALC]", conf: media}
+    - {campo: radio, nome_it: Broadcast VLF, nome_en: VLF broadcast, testo_it: "vicino, a Grindavík, la stazione NRK/TFK a 37,5 kHz per il varco GIUK e il Mar di Norvegia", testo_en: "nearby at Grindavík, the NRK/TFK station on 37.5 kHz for the GIUK gap and the Norwegian Sea", fonte: "dossier 08 §2.1 [REEVE] [WPVLFL]", conf: media}
+  fonte: 'dossier 03 §A1; dossier 17 §5.1'
+  conf: alta
+
+kinloss:
+  nome: Kinloss
+  nome_en: Kinloss
+  teatro: faroe
+  tipo: base aerea
+  nazione: uk
+  lat: 57.65
+  lon: -3.56
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "57,65°N 3,56°W (Scozia nord-orientale, fuori dalla carta del teatro)", testo_en: "57.65°N 3.56°W (north-east Scotland, outside the theatre chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: pattugliatori, nome_it: Pattugliatori, nome_en: Patrol aircraft, testo_it: "Nimrod della RAF, anello della catena di scoperta del varco GIUK", testo_en: "RAF Nimrods, a link in the GIUK gap detection chain", fonte: "dossier 03 §A1 (Cote, The Third Battle)", conf: alta}
+    - {campo: piattaforma_celtica, nome_it: Anche a sud, nome_en: Also southwards, testo_it: "i suoi Nimrod coprono anche i Western Approaches, insieme a quelli di St Mawgan", testo_en: "its Nimrods also cover the Western Approaches, together with those from St Mawgan", fonte: "dossier 03 §A6", conf: media}
+  fonte: 'dossier 03 §A1, §A6'
+  conf: alta
+
+# --- Mare di Barents (approcci a Kola) ---
+
+severomorsk:
+  nome: Severomorsk
+  nome_en: Severomorsk
+  teatro: barents
+  tipo: base navale
+  nazione: urss
+  lat: 69.07
+  lon: 33.42
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "69,07°N 33,42°E, sulla sponda est della baia di Kola", testo_en: "69.07°N 33.42°E, on the east shore of the Kola Gulf", fonte: "tools/pipeline/teatri.yaml (latitudine, controllata sulla heightmap, docs/02_pipeline_dati.md); longitudine STIMA", conf: STIMA}
+    - {campo: comando, nome_it: Ruolo, nome_en: Role, testo_it: "sede del comando della Flotta del Nord", testo_en: "headquarters of the Northern Fleet", fonte: "dossier 03 §A2 (Polmar & Moore 2004)", conf: alta}
+    - {campo: aerei, nome_it: Aerei ASW, nome_en: ASW aircraft, testo_it: "Il-38 del 24° reggimento all'aeroporto di Severomorsk-1", testo_en: "Il-38s of the 24th regiment at the Severomorsk-1 airfield", fonte: "dossier 17 §3.4 [RW-Il38]", conf: alta}
+    - {campo: zevs, nome_it: Trasmettitore ELF, nome_en: ELF transmitter, testo_it: "presso Severomorsk-3 il trasmettitore ZEVS a 82 Hz, ricevibile anche a 100-160 m di quota", testo_en: "near Severomorsk-3 the 82 Hz ZEVS transmitter, receivable even at 100-160 m depth", fonte: "dossier 08 §6.1 [WPZEVS] [RUCOM]", conf: media}
+    - {campo: missione, nome_it: Nel gioco, nome_en: In the game, testo_it: "missione 3 «Sub Ops»: l'Alfa protegge gli approcci del porto prima del rientro a Severomorsk", testo_en: "mission 3 «Sub Ops»: the Alfa guards the port approaches before returning to Severomorsk", fonte: "dossier 03 §0 (manuale, cap. 3)", conf: alta}
+  fonte: 'dossier 03 §A2'
+  conf: alta
+
+polyarny:
+  nome: Poljarnyj
+  nome_en: Polyarny
+  teatro: barents
+  tipo: base navale
+  nazione: urss
+  lat: 69.20
+  lon: 33.45
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "69,20°N 33,45°E, sulla sponda ovest della baia di Kola, verso l'imboccatura", testo_en: "69.20°N 33.45°E, on the west shore of the Kola Gulf, towards the entrance", fonte: "STIMA: coordinate non nei dossier (la heightmap conferma solo che il porto e' sulla costa)", conf: STIMA}
+    - {campo: traffico, nome_it: Traffico, nome_en: Traffic, testo_it: "uno dei porti da cui viene l'intenso traffico militare sovietico degli approcci di Kola", testo_en: "one of the ports feeding the heavy Soviet military traffic of the Kola approaches", fonte: "dossier 03 §A2", conf: media}
+    - {campo: missione, nome_it: Nel gioco, nome_en: In the game, testo_it: "missione 3: l'Alfa cerca intrusi lungo la costa di Poljarnyj", testo_en: "mission 3: the Alfa searches for intruders along the Polyarny coast", fonte: "data/missioni/SCENE3B.lua (testo del briefing); dossier 10 radio §5.4", conf: alta}
+  fonte: 'dossier 03 §A2'
+  conf: media
+
+gadzhievo:
+  nome: Gadžievo
+  nome_en: Gadzhiyevo
+  teatro: barents
+  tipo: base sottomarini
+  nazione: urss
+  lat: 69.25
+  lon: 33.33
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "69,25°N 33,33°E, in una baia laterale a ovest dell'imboccatura di Kola", testo_en: "69.25°N 33.33°E, in a side bay west of the Kola entrance", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base dei sottomarini lanciamissili balistici (SSBN) della Flotta del Nord", testo_en: "base of the Northern Fleet's ballistic missile submarines (SSBNs)", fonte: "dossier 03 §A2 (Polmar & Moore 2004)", conf: alta}
+    - {campo: bastione, nome_it: Bastione, nome_en: Bastion, testo_it: "i suoi SSBN pattugliano il Barents, il «bastione» difeso con aerei, navi e SSN", testo_en: "its SSBNs patrol the Barents, the «bastion» defended by aircraft, ships and SSNs", fonte: "dossier 03 §A2 (CIA 2017); dossier 17 §5.6", conf: alta}
+  fonte: 'dossier 03 §A2'
+  conf: alta
+
+zapadnaya_litsa:
+  nome: Zapadnaja Lica
+  nome_en: Zapadnaya Litsa
+  teatro: barents
+  tipo: base sottomarini
+  nazione: urss
+  lat: 69.43
+  lon: 32.43
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "69,43°N 32,43°E, nel fiordo della Zapadnaja Lica, a ovest della baia di Kola", testo_en: "69.43°N 32.43°E, in the Zapadnaya Litsa fjord, west of the Kola Gulf", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base degli Alfa (Progetto 705) e dei Victor", testo_en: "base of the Alfas (Project 705) and the Victors", fonte: "dossier 03 §A2 (Polmar & Moore 2004)", conf: alta}
+    - {campo: alfa_1989, nome_it: Gli Alfa nel 1989, nome_en: The Alfas in 1989, testo_it: "quasi tutti in riserva o fermi; cinque radiati nel 1990", testo_en: "almost all in reserve or laid up; five struck off in 1990", fonte: "dossier 01 §2.4 [DS705]", conf: media}
+  fonte: 'dossier 03 §A2'
+  conf: alta
+
+gremikha:
+  nome: Gremicha
+  nome_en: Gremikha
+  teatro: barents
+  tipo: base sottomarini
+  nazione: urss
+  lat: 68.07
+  lon: 39.47
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "68,07°N 39,47°E, sulla costa orientale della penisola di Kola (fuori dalla carta del teatro)", testo_en: "68.07°N 39.47°E, on the eastern coast of the Kola Peninsula (outside the theatre chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base di SSBN della Flotta del Nord", testo_en: "Northern Fleet SSBN base", fonte: "dossier 03 §A2 (Polmar & Moore 2004)", conf: alta}
+  fonte: 'dossier 03 §A2'
+  conf: alta
+
+murmansk:
+  nome: Murmansk
+  nome_en: Murmansk
+  teatro: barents
+  tipo: porto
+  nazione: urss
+  lat: 68.97
+  lon: 33.08
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "68,97°N 33,08°E, in fondo alla baia di Kola", testo_en: "68.97°N 33.08°E, at the head of the Kola Gulf", fonte: "tools/pipeline/teatri.yaml (latitudine); longitudine STIMA", conf: STIMA}
+    - {campo: ghiaccio, nome_it: Ghiaccio, nome_en: Ice, testo_it: "libero dai ghiacci tutto l'anno, grazie alla Corrente di Capo Nord e a quella costiera del Murman", testo_en: "ice-free all year, thanks to the North Cape Current and the Murman coastal current", fonte: "dossier 03 §A2", conf: alta}
+    - {campo: traffico, nome_it: Traffico, nome_en: Traffic, testo_it: "flottiglie da pesca e rompighiaccio, che si sommano al traffico militare degli approcci", testo_en: "fishing flotillas and icebreakers, adding to the military traffic of the approaches", fonte: "dossier 03 §A2; dossier 09 (rumore per teatro)", conf: media}
+    - {campo: luce, nome_it: Notte polare, nome_en: Polar night, testo_it: "circa dal 2 dicembre all'11 gennaio; sole di mezzanotte da fine maggio a fine luglio", testo_en: "roughly 2 December to 11 January; midnight sun from late May to late July", fonte: "dossier 03 §A2", conf: alta}
+    - {campo: nebbia, nome_it: Nebbia, nome_en: Fog, testo_it: "nebbia nel 15-16% dei giorni di agosto e settembre", testo_en: "fog on 15-16% of days in August and September", fonte: "dossier 21 §3 (tabella dei teatri)", conf: media}
+  fonte: 'dossier 03 §A2'
+  conf: alta
+
+# --- Stretto di Gibilterra ---
+
+gibilterra:
+  nome: Gibilterra
+  nome_en: Gibraltar
+  teatro: gibilterra
+  tipo: base navale
+  nazione: uk
+  lat: 36.14
+  lon: -5.35
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "36,14°N 5,35°W, sul lato nord dello stretto", testo_en: "36.14°N 5.35°W, on the north side of the strait", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: comando, nome_it: Comando NATO, nome_en: NATO command, testo_it: "sede del comando NATO GIBMED, sul chokepoint fra Atlantico e Mediterraneo", testo_en: "seat of the NATO GIBMED command, on the chokepoint between the Atlantic and the Mediterranean", fonte: "dossier 03 §A3", conf: media}
+    - {campo: traffico, nome_it: Traffico, nome_en: Traffic, testo_it: "circa 300 transiti al giorno nello stretto, piu' i traghetti per Tangeri da Algeciras e Tarifa", testo_en: "about 300 transits a day through the strait, plus the ferries to Tangier from Algeciras and Tarifa", fonte: "dossier 03 §A3", conf: media}
+  fonte: 'dossier 03 §A3'
+  conf: media
+
+rota:
+  nome: Rota
+  nome_en: Rota
+  teatro: gibilterra
+  tipo: base navale
+  nazione: usa
+  lat: 36.62
+  lon: -6.33
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "36,62°N 6,33°W, nel Golfo di Cadice, sul margine nord-occidentale della carta", testo_en: "36.62°N 6.33°W, in the Gulf of Cadiz, on the north-west edge of the chart", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ssbn, nome_it: SSBN, nome_en: SSBNs, testo_it: "sito degli SSBN americani fino al 1979", testo_en: "US SSBN site until 1979", fonte: "dossier 03 §A3", conf: media}
+    - {campo: meteo, nome_it: Meteo di flotta, nome_en: Fleet weather, testo_it: "sede di uno dei Fleet Weather Central che preparavano rotte e previsioni per le unita' in mare", testo_en: "home of one of the Fleet Weather Centrals that prepared routes and forecasts for units at sea", fonte: "dossier 21 §5.2", conf: media}
+  fonte: 'dossier 03 §A3'
+  conf: media
+
+alboran:
+  nome: Ancoraggio di Alborán
+  nome_en: Alborán anchorage
+  teatro: gibilterra
+  tipo: base navale
+  nazione: urss
+  lat: 35.94
+  lon: -3.03
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "presso l'isola di Alborán, 35,94°N 3,03°W, appena a est della carta", testo_en: "near Alborán island, 35.94°N 3.03°W, just east of the chart", fonte: "dossier 03 §A3 (posizione dell'isola)", conf: media}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "ancoraggio della 5ª Eskadra sovietica del Mediterraneo, non una base a terra", testo_en: "anchorage of the Soviet 5th Eskadra in the Mediterranean, not a shore base", fonte: "dossier 03 §A3 (fonte amatoriale, da verificare)", conf: bassa}
+  fonte: 'dossier 03 §A3'
+  conf: bassa
+
+# --- Canale d'Otranto ---
+
+taranto:
+  nome: Taranto
+  nome_en: Taranto
+  teatro: otranto
+  tipo: base navale
+  nazione: nato
+  lat: 40.47
+  lon: 17.23
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "40,47°N 17,23°E, sul bordo occidentale della carta del teatro", testo_en: "40.47°N 17.23°E, on the western edge of the theatre chart", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base della Marina Militare italiana", testo_en: "Italian Navy base", fonte: "dossier 03 §A4", conf: alta}
+  fonte: 'dossier 03 §A4'
+  conf: alta
+
+brindisi:
+  nome: Brindisi
+  nome_en: Brindisi
+  teatro: otranto
+  tipo: base navale
+  nazione: nato
+  lat: 40.65
+  lon: 17.95
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "40,65°N 17,95°E, sulla costa pugliese dell'Adriatico", testo_en: "40.65°N 17.95°E, on the Apulian Adriatic coast", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base della Marina Militare italiana", testo_en: "Italian Navy base", fonte: "dossier 03 §A4", conf: alta}
+    - {campo: traffico, nome_it: Traffico, nome_en: Traffic, testo_it: "traghetti per la Grecia, insieme a quelli di Bari: traffico medio-alto nel canale", testo_en: "ferries to Greece, together with those from Bari: medium-high traffic in the channel", fonte: "dossier 03 §A4", conf: media}
+  fonte: 'dossier 03 §A4'
+  conf: alta
+
+tivat:
+  nome: Tivat (Bocche di Cattaro)
+  nome_en: Tivat (Bay of Kotor)
+  teatro: otranto
+  tipo: base navale
+  nazione: neutrale
+  lat: 42.43
+  lon: 18.70
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "42,43°N 18,70°E, nelle Bocche di Cattaro", testo_en: "42.43°N 18.70°E, in the Bay of Kotor", fonte: "dossier 03 §A4", conf: media}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base della marina jugoslava, paese non allineato", testo_en: "Yugoslav navy base, a non-aligned country", fonte: "dossier 03 §A4", conf: alta}
+    - {campo: missione, nome_it: Nel gioco, nome_en: In the game, testo_it: "missione 6 «Goulash»: destinazione dei sei mercantili scortati (nel manuale «Trivat»); il blocco sovietico e' finzione", testo_en: "mission 6 «Goulash»: destination of the six escorted merchantmen (spelled «Trivat» in the manual); the Soviet blockade is fiction", fonte: "dossier 03 §0, §A4", conf: alta}
+  fonte: 'dossier 03 §A4'
+  conf: alta
+
+pasha_liman:
+  nome: Pasha Liman (Valona)
+  nome_en: Pasha Liman (Vlorë)
+  teatro: otranto
+  tipo: base sottomarini
+  nazione: neutrale
+  lat: 40.33
+  lon: 19.45
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "40,33°N 19,45°E, nella baia di Valona dietro Saseno", testo_en: "40.33°N 19.45°E, in the Bay of Vlorë behind Sazan", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: storia, nome_it: Storia, nome_en: History, testo_it: "base sovietica di sottomarini Whiskey dal 1958 al 1961", testo_en: "Soviet Whiskey submarine base from 1958 to 1961", fonte: "dossier 03 §A4", conf: alta}
+    - {campo: rottura, nome_it: Dopo la rottura, nome_en: After the split, testo_it: "con la rottura fra Mosca e Tirana l'Albania tenne quattro battelli", testo_en: "when Moscow and Tirana split, Albania kept four boats", fonte: "dossier 03 §A4", conf: alta}
+  fonte: 'dossier 03 §A4'
+  conf: alta
+
+# --- Passo di Kunashir - Mare di Okhotsk ---
+
+vladivostok:
+  nome: Vladivostok
+  nome_en: Vladivostok
+  teatro: kunashir
+  tipo: base navale
+  nazione: urss
+  lat: 43.11
+  lon: 131.88
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "43,11°N 131,88°E, sul Mar del Giappone (molto lontano dalla carta del teatro)", testo_en: "43.11°N 131.88°E, on the Sea of Japan (far from the theatre chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: missione, nome_it: Nel gioco, nome_en: In the game, testo_it: "missione 7 «Cat Walk»: l'SSBN da proteggere o da cacciare e' uscito da Vladivostok", testo_en: "mission 7 «Cat Walk»: the SSBN to protect or hunt has sailed from Vladivostok", fonte: "dossier 03 §0", conf: alta}
+    - {campo: errore, nome_it: Errore del manuale, nome_en: Manual error, testo_it: "dal Mar del Giappone si esce da La Pérouse, Tsugaru o Tsushima; gli stretti di Kunashir portano invece dall'Okhotsk al Pacifico", testo_en: "the Sea of Japan is left through La Pérouse, Tsugaru or Tsushima; the Kunashir straits lead instead from the Okhotsk to the Pacific", fonte: "dossier 03 §0 (errori storico-geografici, punto 1)", conf: alta}
+  fonte: 'dossier 03 §0'
+  conf: alta
+
+rybachiy:
+  nome: Rybačij (Kamčatka)
+  nome_en: Rybachiy (Kamchatka)
+  teatro: kunashir
+  tipo: base sottomarini
+  nazione: urss
+  lat: 52.92
+  lon: 158.49
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "52,92°N 158,49°E, nella baia di Avača (molto lontano dalla carta del teatro)", testo_en: "52.92°N 158.49°E, in Avacha Bay (far from the theatre chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base dei Delta della Flotta del Pacifico, che pattugliano il bastione dell'Okhotsk", testo_en: "base of the Pacific Fleet Deltas that patrol the Okhotsk bastion", fonte: "dossier 03 §A5 (CIA 2017)", conf: alta}
+  fonte: 'dossier 03 §A5'
+  conf: alta
+
+wakkanai:
+  nome: Wakkanai (radar)
+  nome_en: Wakkanai (radar)
+  teatro: kunashir
+  tipo: base aerea
+  nazione: jp
+  lat: 45.41
+  lon: 141.67
+  dati:
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "radar giapponese che sorvegliava lo stretto di Sōya, all'uscita dell'Okhotsk verso il Mar del Giappone", testo_en: "Japanese radar watching the Sōya Strait, the Okhotsk's exit towards the Sea of Japan", fonte: "dossier 03 §A5", conf: media}
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "punta settentrionale dell'Hokkaido, fuori dal riquadro del teatro", testo_en: "northern tip of Hokkaido, outside the theatre box", fonte: "coordinate STIMA", conf: STIMA}
+  fonte: 'dossier 03 §A5'
+  conf: media
+
+hachinohe:
+  nome: Hachinohe
+  nome_en: Hachinohe
+  teatro: kunashir
+  tipo: base aerea
+  nazione: jp
+  lat: 40.55
+  lon: 141.47
+  dati:
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base dei P-3 giapponesi che pattugliavano lo stretto di Sōya", testo_en: "base of the Japanese P-3s patrolling the Sōya Strait", fonte: "dossier 03 §A5", conf: media}
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "Honshu settentrionale, fuori dal riquadro del teatro", testo_en: "northern Honshu, outside the theatre box", fonte: "coordinate STIMA", conf: STIMA}
+  fonte: 'dossier 03 §A5'
+  conf: media
+
+misawa:
+  nome: Misawa
+  nome_en: Misawa
+  teatro: kunashir
+  tipo: base aerea
+  nazione: jp
+  lat: 40.70
+  lon: 141.37
+  dati:
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base da cui partivano i P-3 di sorveglianza dello stretto di Sōya", testo_en: "base of the P-3s watching the Sōya Strait", fonte: "dossier 03 §A5", conf: media}
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "Honshu settentrionale, fuori dal riquadro del teatro", testo_en: "northern Honshu, outside the theatre box", fonte: "coordinate STIMA", conf: STIMA}
+  fonte: 'dossier 03 §A5'
+  conf: media
+
+# --- Margine della Piattaforma Celtica ---
+
+ile_longue:
+  nome: Île Longue (Brest)
+  nome_en: Île Longue (Brest)
+  teatro: celtica
+  tipo: base sottomarini
+  nazione: nato
+  lat: 48.31
+  lon: -4.51
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "48,31°N 4,51°W, nella rada di Brest (fuori dalla carta del teatro)", testo_en: "48.31°N 4.51°W, in the Brest roadstead (outside the theatre chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base degli SSBN francesi, le cui uscite erano sorvegliate da SSN sovietici", testo_en: "base of the French SSBNs, whose sorties were watched by Soviet SSNs", fonte: "dossier 03 §A6", conf: media}
+  fonte: 'dossier 03 §A6'
+  conf: media
+
+brawdy:
+  nome: Brawdy
+  nome_en: Brawdy
+  teatro: celtica
+  tipo: base navale
+  nazione: usa
+  lat: 51.88
+  lon: -5.12
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "51,88°N 5,12°W, nel Galles sud-occidentale (fuori dalla carta del teatro)", testo_en: "51.88°N 5.12°W, in south-west Wales (outside the theatre chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: sosus, nome_it: Ascolto SOSUS, nome_en: SOSUS listening, testo_it: "stazione NAVFAC del SOSUS, attiva circa dal 1974 al 1995", testo_en: "SOSUS NAVFAC station, active roughly from 1974 to 1995", fonte: "dossier 03 §A6 (globalsecurity)", conf: media}
+  fonte: 'dossier 03 §A6'
+  conf: alta
+
+st_mawgan:
+  nome: St Mawgan
+  nome_en: St Mawgan
+  teatro: celtica
+  tipo: base aerea
+  nazione: uk
+  lat: 50.44
+  lon: -5.00
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "50,44°N 5,00°W, in Cornovaglia (fuori dalla carta del teatro)", testo_en: "50.44°N 5.00°W, in Cornwall (outside the theatre chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: pattugliatori, nome_it: Pattugliatori, nome_en: Patrol aircraft, testo_it: "Nimrod della RAF sui Western Approaches", testo_en: "RAF Nimrods over the Western Approaches", fonte: "dossier 03 §A6", conf: media}
+  fonte: 'dossier 03 §A6'
+  conf: media
+
+lann_bihoue:
+  nome: Lann-Bihoué
+  nome_en: Lann-Bihoué
+  teatro: celtica
+  tipo: base aerea
+  nazione: nato
+  lat: 47.76
+  lon: -3.44
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "47,76°N 3,44°W, in Bretagna meridionale (fuori dalla carta del teatro)", testo_en: "47.76°N 3.44°W, in southern Brittany (outside the theatre chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: pattugliatori, nome_it: Pattugliatori, nome_en: Patrol aircraft, testo_it: "Atlantic della marina francese sulla piattaforma celtica, accanto ai Nimrod britannici", testo_en: "French navy Atlantics over the Celtic shelf, alongside the British Nimrods", fonte: "dossier 03 §A6", conf: media}
+  fonte: 'dossier 03 §A6'
+  conf: media
+
+# --- Mar Baltico sud-occidentale ---
+
+baltijsk:
+  nome: Baltijsk
+  nome_en: Baltiysk
+  teatro: baltico
+  tipo: base navale
+  nazione: urss
+  lat: 54.65
+  lon: 19.90
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "54,65°N 19,90°E, all'ingresso della laguna della Vistola (fuori dalla carta del teatro)", testo_en: "54.65°N 19.90°E, at the entrance of the Vistula Lagoon (outside the theatre chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base principale della Flotta del Baltico sovietica", testo_en: "main base of the Soviet Baltic Fleet", fonte: "dossier 03 §A7", conf: alta}
+  fonte: 'dossier 03 §A7'
+  conf: alta
+
+peenemunde:
+  nome: Peenemünde
+  nome_en: Peenemünde
+  teatro: baltico
+  tipo: base navale
+  nazione: urss
+  lat: 54.14
+  lon: 13.77
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "54,14°N 13,77°E, sull'isola di Usedom", testo_en: "54.14°N 13.77°E, on the island of Usedom", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base della Volksmarine, la marina della RDT nel Patto di Varsavia", testo_en: "base of the Volksmarine, the GDR navy in the Warsaw Pact", fonte: "dossier 03 §A7", conf: alta}
+  fonte: 'dossier 03 §A7'
+  conf: alta
+
+warnemunde:
+  nome: Warnemünde (Rostock)
+  nome_en: Warnemünde (Rostock)
+  teatro: baltico
+  tipo: base navale
+  nazione: urss
+  lat: 54.18
+  lon: 12.08
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "54,18°N 12,08°E, alla foce del fiume che porta a Rostock", testo_en: "54.18°N 12.08°E, at the river mouth leading to Rostock", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base della Volksmarine sulla costa della RDT", testo_en: "Volksmarine base on the GDR coast", fonte: "dossier 03 §A7", conf: alta}
+    - {campo: traffico, nome_it: Traffico, nome_en: Traffic, testo_it: "i traghetti veloci Rostock-Gedser incrociano qui su rotte e orari fissi", testo_en: "the fast Rostock-Gedser ferries cross here on fixed routes and timetables", fonte: "dossier 03 §A7; dossier 09 (sorgenti di rumore)", conf: media}
+  fonte: 'dossier 03 §A7'
+  conf: alta
+
+sassnitz:
+  nome: Sassnitz
+  nome_en: Sassnitz
+  teatro: baltico
+  tipo: base navale
+  nazione: urss
+  lat: 54.51
+  lon: 13.64
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "54,51°N 13,64°E, sulla costa orientale di Rügen", testo_en: "54.51°N 13.64°E, on the east coast of Rügen", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base della Volksmarine", testo_en: "Volksmarine base", fonte: "dossier 03 §A7", conf: alta}
+    - {campo: traffico, nome_it: Traffico, nome_en: Traffic, testo_it: "capolinea dei traghetti per Trelleborg", testo_en: "terminal of the ferries to Trelleborg", fonte: "dossier 03 §A7", conf: media}
+  fonte: 'dossier 03 §A7'
+  conf: alta
+
+gdynia:
+  nome: Gdynia
+  nome_en: Gdynia
+  teatro: baltico
+  tipo: base navale
+  nazione: urss
+  lat: 54.53
+  lon: 18.55
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "54,53°N 18,55°E, nel golfo di Danzica (fuori dalla carta del teatro)", testo_en: "54.53°N 18.55°E, in the Gulf of Gdańsk (outside the theatre chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base della marina polacca, nel Patto di Varsavia", testo_en: "Polish navy base, in the Warsaw Pact", fonte: "dossier 03 §A7", conf: alta}
+  fonte: 'dossier 03 §A7'
+  conf: alta
+
+kiel:
+  nome: Kiel
+  nome_en: Kiel
+  teatro: baltico
+  tipo: base navale
+  nazione: nato
+  lat: 54.32
+  lon: 10.14
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "54,32°N 10,14°E, in fondo al fiordo di Kiel (appena a ovest della carta)", testo_en: "54.32°N 10.14°E, at the head of the Kiel fjord (just west of the chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base della marina tedesca occidentale sotto il comando NATO BALTAP", testo_en: "West German navy base under the NATO BALTAP command", fonte: "dossier 03 §A7", conf: alta}
+    - {campo: stretti, nome_it: Gli stretti, nome_en: The straits, testo_it: "la NATO pianificava di minare gli stretti danesi, dove la soglia di Drogden ha solo 7-9 m d'acqua", testo_en: "NATO planned to mine the Danish straits, where the Drogden sill has only 7-9 m of water", fonte: "dossier 03 §A7", conf: alta}
+  fonte: 'dossier 03 §A7'
+  conf: alta
+
+eckernforde:
+  nome: Eckernförde
+  nome_en: Eckernförde
+  teatro: baltico
+  tipo: base sottomarini
+  nazione: nato
+  lat: 54.47
+  lon: 9.84
+  dati:
+    - {campo: posizione, nome_it: Posizione, nome_en: Position, testo_it: "54,47°N 9,84°E, a nord-ovest di Kiel (fuori dalla carta del teatro)", testo_en: "54.47°N 9.84°E, north-west of Kiel (outside the theatre chart)", fonte: "STIMA: coordinate non nei dossier", conf: STIMA}
+    - {campo: ruolo, nome_it: Ruolo, nome_en: Role, testo_it: "base degli U-Boot tedeschi Type 205 e 206", testo_en: "base of the German Type 205 and 206 U-boats", fonte: "dossier 03 §A7", conf: alta}
+  fonte: 'dossier 03 §A7'
+  conf: alta

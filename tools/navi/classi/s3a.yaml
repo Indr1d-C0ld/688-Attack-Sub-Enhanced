@@ -1,0 +1,85 @@
+# Lockheed S-3A Viking, configurazione 1989 (pezzo A4 di docs/13_asw_aereo.md): oggetto in volo.
+# Coordinate del kit: x verso il muso (origine a meta' lunghezza), y verso sinistra, z verso l'alto; asse a z = 10.
+# {prua: d} = punto a d metri dal muso. Misure pubbliche (Wikipedia, «Lockheed S-3 Viking»; dossier 17 §2.5):
+# lunghezza 16,26 m (dal muso alla punta della deriva, il punto piu' a poppa), apertura 20,93 m, altezza 6,93 m,
+# superficie alare 55,56 m^2; due General Electric TF34-GE-2 in gondole sotto l'ala alta; deriva alta e molto a
+# freccia; boma del MAD estensibile in coda (qui esteso, in caccia); pod d'estremita' alare.
+# Proporzioni misurate sulle foto (extracted/navi/s3a/foto/fonti.json, scala dal muso alla punta della deriva):
+# cono di coda a 14,9 m, deriva alta 5,0 m sull'asse con l'attacco a 10,6 m, gondole sotto l'asse di 1,0 m e
+# lunghe 3,6 m dal muso a 3,2 m, bordo d'attacco dell'ala a 4,9 m.
+nome: Lockheed S-3A Viking (1989)
+uscita: extracted/navi/s3a
+moduli_parti: [aerei_parti.py]
+vista: {volante: true, elevazioni: [0, 10, 25], centro: [0, 0, 10]}
+albedo: {traliccio: 0.72}
+tono: 0.6
+
+scafo:
+  generatore: fusoliera
+  L: 16.26
+  z: 10.0
+  # [d dal muso, semilarghezza, semialtezza, spostamento verticale del centro]: muso tondo del radome, fusoliera
+  # alta e larga (equipaggio di quattro e vano armi), cono di coda che sale verso la deriva
+  profilo:
+    - [0.0, 0.0, 0.0, -0.36]
+    - [0.25, 0.50, 0.50, -0.34]
+    - [0.8, 0.88, 0.92, -0.25]
+    - [1.7, 1.10, 1.25, -0.10]
+    - [3.0, 1.18, 1.38, 0.0]
+    - [8.5, 1.18, 1.38, 0.0]
+    - [10.5, 1.05, 1.15, 0.10]
+    - [12.5, 0.75, 0.80, 0.20]
+    - [14.2, 0.45, 0.45, 0.05]
+    - [14.9, 0.20, 0.20, -0.07]
+
+parti:
+  # vetratura della cabina (scura) sopra il muso
+  - {tipo: corpo, nome: cabina, x_naso: {prua: 1.2}, y: 0, z: 10.75, mat: scuro,
+     profilo: [[0, 0.2, 0.08], [0.6, 0.75, 0.35], [1.6, 0.95, 0.42], [2.6, 0.9, 0.3], [3.0, 0.6, 0.1]]}
+  # ala alta a spalla, a freccia (~15 gradi), rastremata; pod d'estremita'
+  - {tipo: ala, nome: ala, radice: [{prua: 4.9}, 1.0, 11.3, 3.7], estremita: [{prua: 7.45}, 10.46, 11.45, 1.4], spessore: 0.15, spessore_estremita: 0.12}
+  - {tipo: corpo, nome: pod_estremita, x_naso: {prua: 7.1}, y: 10.46, z: 11.25, simmetrico: true, mat: scuro,
+     profilo: [[0, 0.06], [0.3, 0.17], [1.5, 0.17], [1.9, 0.08]]}
+  # gondole dei TF34 sotto l'ala, coi piloni
+  - {tipo: corpo, nome: gondola, x_naso: {prua: 3.2}, y: 3.0, z: 9.0, simmetrico: true,
+     profilo: [[0, 0.46, 0.48], [0.25, 0.54, 0.56], [2.2, 0.54, 0.56], [3.3, 0.40, 0.42], [3.6, 0.26, 0.28]]}
+  - {tipo: ala, nome: pilone, verticale: true, radice: [{prua: 4.4}, 3.0, 9.5, 2.0], estremita: [{prua: 5.4}, 3.0, 11.2, 2.0], spessore: 0.08}
+  # impennaggi: piano orizzontale e deriva alta molto a freccia (la punta sporge oltre il cono di coda)
+  - {tipo: ala, nome: piano_orizzontale, radice: [{prua: 12.0}, 0.4, 10.5, 2.6], estremita: [{prua: 13.6}, 4.1, 10.7, 1.3], spessore: 0.11}
+  - {tipo: ala, nome: deriva, verticale: true, simmetrica: false, radice: [{prua: 10.6}, 0, 11.0, 4.1], estremita: [{prua: 14.6}, 0, 14.96, 1.66], spessore: 0.11}
+  # boma del MAD esteso dietro il cono di coda
+  - {tipo: corpo, nome: boma_mad, x_naso: {prua: 14.6}, y: 0, z: 10.1, mat: scuro, profilo: [[0, 0.14], [4.85, 0.12], [5.25, 0.08]]}
+
+# Foto: pubblico dominio (US Navy), metadati in extracted/navi/s3a/foto/fonti.json. Punti: muso, punta della deriva
+# (bordo d'attacco e d'uscita), attacco della deriva, gondola sinistra (centro della presa), estremita' alari (centro
+# del pod), punta del boma del MAD. Maschere: tools/navi/maschera_colore_modello.py (sagoma calibrata e fondo blu).
+foto:
+  - nome: fianco_sinistro_vs33_1985
+    file: extracted/navi/s3a/foto/fianco_sinistro_vs33_1985.jpg
+    nave: S-3A del VS-33 (USS Kitty Hawk), 1985, fianco sinistro sul mare (MAD retratto)
+    escludi_parti: [boma_mad]
+    maschera_file: extracted/navi/s3a/maschere/fianco_sinistro_vs33_1985.png
+    qualita: 1.0
+    specchiabile: true
+    qualita_speculare: 0.5
+    fotocamera_iniziale: {posizione: [0.0, 40.0, 11.0], bersaglio: [0.0, 0.0, 10.0], f: 4000}
+    punti:
+      - [[{prua: 0}, 0, 9.64], [174, 757]]
+      - [[{prua: 14.6}, 0, 14.96], [1605, 236]]
+      - [[{prua: 16.26}, 0, 14.96], [1767, 244]]
+      - [[{prua: 10.6}, 0, 11.2], [1214, 603]]
+      - [[{prua: 3.2}, 3.0, 9.0], [487, 823]]
+      - [[{prua: 14.9}, 0, 10.1], [1635, 734]]
+  - nome: sotto_vs31_1983
+    file: extracted/navi/s3a/foto/sotto_vs31_1983.jpg
+    nave: S-3A del VS-31, Mediterraneo, 21 maggio 1983, da sotto e da destra, MAD esteso
+    maschera_file: extracted/navi/s3a/maschere/sotto_vs31_1983.png
+    qualita: 0.8
+    fotocamera_iniziale: {posizione: [0.0, -30.0, -10.0], bersaglio: [0.0, 0.0, 10.0], f: 3000}
+    punti:
+      - [[{prua: 0}, 0, 9.64], [1630, 693]]
+      - [[{prua: 19.85}, 0, 10.1], [103, 702]]
+      - [[{prua: 8.1}, 10.46, 11.25], [816, 196]]
+      - [[{prua: 8.1}, -10.46, 11.25], [1207, 1091]]
+      - [[{prua: 14.6}, 0, 14.96], [600, 364]]
+      - [[{prua: 16.26}, 0, 14.96], [487, 368]]

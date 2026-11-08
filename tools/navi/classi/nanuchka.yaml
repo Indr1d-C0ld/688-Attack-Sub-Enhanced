@@ -1,0 +1,117 @@
+# Piccola nave missilistica classe Nanuchka I (Progetto 1234 "Ovod"), configurazione 1989.
+# Coordinate del kit: x verso prua (origine a meta' lunghezza), y verso sinistra, z verso l'alto, metri.
+# {prua: d} = punto a d metri dalla prua.
+# Misure: scafo, lanciatori e sovrastruttura prodiera dalla foto di fianco calibrata del Mirazh (1985,
+# Nanuchka III, 49,4 pixel/m); radome, albero, Osa-M, Muff Cob e torre da 57 mm triangolati sulle due foto
+# della Nanuchka I (Vikhr 1988 e unita' 610 del 1982) con tools/navi/triangola.py
+# (extracted/navi/nanuchka/triangolazione/triangola.yaml). Nella Nanuchka III plancia e radome sono piu' a
+# prua e l'albero e' diverso: la foto del Mirazh dipinge solo le parti comuni (maschera ritoccata).
+nome: Nanuchka I (Progetto 1234)
+uscita: extracted/navi/nanuchka
+moduli_parti: [nanuchka_parti.py]
+
+scafo:
+  L: 59.3
+  B: 11.2
+  bordo: [[0, 4.2], [10, 3.8], [25, 3.4], [40, 3.2], [59.3, 3.15]]
+  slancio: 3.8
+  finezza_prua: 24
+  specchio: 0.85
+  svasatura: 0.12
+  pienezza: [1.1, 0.5]
+
+parti:
+  # chiusura sotto il dritto slanciato, materiale chiaro (vedi nanuchka_parti.py)
+  - {tipo: chiusura_chiara, nome: chiusura_dritto, mat: bianco, L: 59.3, B: 11.2, bordo: [[0, 4.2], [10, 3.8], [25, 3.4], [40, 3.2], [59.3, 3.15]], slancio: 3.8, finezza_prua: 24, specchio: 0.85, svasatura: 0.12, pienezza: [1.1, 0.5]}
+  # specchio di poppa piu' chiaro (nessuna foto lo vede: vedi nanuchka_parti.py)
+  - {tipo: pannello_specchio, nome: pannello_specchio, mat: bianco, L: 59.3, B: 11.2, bordo: [[0, 4.2], [10, 3.8], [25, 3.4], [40, 3.2], [59.3, 3.15]], slancio: 3.8, finezza_prua: 24, specchio: 0.85, svasatura: 0.12, pienezza: [1.1, 0.5]}
+  # Osa-M (SA-N-4) a scomparsa sul castello (portello circolare; cima triangolata a 13,3 m dalla prua)
+  - {tipo: lanciatore_scomparsa, nome: osa_m, x: {prua: 13.3}, z0: 3.7, r: 1.4, altezza: 0.2}
+  # sovrastruttura prodiera centrale (tra i lanciatori), fronte inclinato. Materiale 'bianco' per tuga e
+  # plancia: i fronti verso prua non sono visti da nessuna foto e con 'sovrastruttura' l'ombreggiatura del
+  # modello risultava molto piu' scura delle parti dipinte dalle foto.
+  - {tipo: tuga, nome: tuga_prodiera, x0: {prua: 34.5}, x1: {prua: 16.1}, y0: -2.6, y1: 2.6, z0: 3.2, z1: 7.4, smusso_prua: 0.8, mat: bianco}
+  # lanciatori tripli P-120 Malakhit (SS-N-9), testata prodiera in alto a 8,0 m, coda a 6,7 m
+  - {tipo: lanciatore_malakhit, nome: malakhit_sinistra, x0: {prua: 30.9}, x1: {prua: 20.7}, y_int: 2.6, y_est: 5.5, z0: 3.3, elevazione: 7.3, z_base: 0.2}
+  - {tipo: lanciatore_malakhit, nome: malakhit_dritta, x0: {prua: 30.9}, x1: {prua: 20.7}, y_int: -2.6, y_est: -5.5, z0: 3.3, elevazione: 7.3, z_base: 0.2}
+  # direttore Pop Group (MPZ-301) dell'Osa-M sulla piattaforma prodiera (cima triangolata 9,5 m)
+  - {tipo: direttore_tiro, nome: pop_group, x: {prua: 18.8}, z0: 7.4, altezza_base: 0.5, larghezza: 1.6, disco: 1.0}
+  # plancia (Nanuchka I: dal centro dei lanciatori fino all'albero) e radome Band Stand sulla parte poppiera
+  - {tipo: tuga, nome: plancia, x0: {prua: 31.4}, x1: {prua: 25.0}, y0: -2.4, y1: 2.4, z0: 7.4, z1: 11.0, rastrema: 0.95, smusso_prua: 1.0, mat: bianco}
+  - {tipo: scatola, nome: finestre_plancia, x0: {prua: 26.0}, x1: {prua: 25.6}, y0: -2.0, y1: 2.0, z0: 10.1, z1: 10.5, mat: nero}
+  - {tipo: band_stand, nome: band_stand, x: {prua: 29.9}, z0: 11.0, altezza: 1.95, r: 1.55}
+  # radar di navigazione sul tetto della plancia
+  - {tipo: cilindro, nome: radar_nav_colonna, x: {prua: 26.5}, y: 0.0, r: 0.3, z0: 11.0, z1: 11.8}
+  - {tipo: scatola, nome: radar_nav, x0: {prua: 26.7}, x1: {prua: 26.3}, y0: -1.5, y1: 1.5, z0: 11.8, z1: 12.1, mat: scuro}
+  # albero a traliccio subito dietro il radome e palo (cima triangolata a 19,7 m, 34,3 m dalla prua)
+  - {tipo: traliccio, nome: albero, x: {prua: 32.6}, base: 2.0, cima: 0.9, z0: 7.4, z1: 16.5, piani: [12.0, 16.5]}
+  - {tipo: asta, nome: palo, da: [{prua: 32.7}, 0, 16.5], a: [{prua: 33.8}, 0, 19.7], spessore: 0.4, mat: scuro}
+  - {tipo: pennone, nome: crocetta, x: {prua: 33.1}, z: 17.8, semilunghezza: 1.6}
+  # tuga poppiera bassa con un rialzo dietro l'albero
+  - {tipo: tuga, nome: tuga_poppiera, x0: {prua: 50.5}, x1: {prua: 34.5}, y0: -2.9, y1: 2.9, z0: 3.1, z1: 4.9}
+  - {tipo: tuga, nome: rialzo_poppiero, x0: {prua: 38.5}, x1: {prua: 34.5}, y0: -2.2, y1: 2.2, z0: 4.9, z1: 6.2}
+  # direttore Muff Cob (MR-103) per il 57 mm, all'estremita' poppiera della tuga (cima triangolata 7,7 m)
+  - {tipo: direttore_tiro, nome: muff_cob, x: {prua: 49.0}, z0: 4.9, altezza_base: 1.2, larghezza: 1.6, disco: 1.0, orientamento: 180}
+  # impianto binato AK-257 (AK-725) da 57 mm a poppa (cima triangolata 5,4 m, 54,0 m dalla prua)
+  - {tipo: impianto_chiaro, nome: ak257, mat: bianco, x: {prua: 54.0}, y: 0.0, z0: 3.1, verso: 1, lunghezza: 4.5, larghezza: 2.9, altezza: 2.3, canna: 2.8, smusso: 1.0}
+
+foto:
+  - nome: fianco_sinistro
+    file: extracted/navi/nanuchka/foto/fianco_sinistro_mirazh_1985.jpg
+    nave: Mirazh (Nanuchka III), 1985
+    qualita: 1.0
+    specchiabile: true
+    maschera_file: extracted/navi/nanuchka/foto/fianco_sinistro_mirazh_1985_maschera.png   # ritoccata a mano (classi/nanuchka_maschera_fianco.yaml)
+    orizzonte_y: 840
+    soglia_cielo: 200
+    cancella: [[620, 1610, 800, 1700]]
+    soglia_schiuma: 200
+    fotocamera_iniziale: {posizione: [0, 900, 18], bersaglio: [0, 0, 5], f: 44700}
+    orizzonte_punti: [[60, 848], [600, 844], [2200, 822], [2900, 809]]
+    punti:
+      - [[{prua: 0}, 0, 4.2], [40, 1542]]           # dritto di prua in coperta
+      - [[{prua: 3.8}, 0, 0], [230, 1748]]          # piede del dritto al galleggiamento
+      - [[{prua: 59.3}, 5.15, 3.15], [2967, 1550]]  # specchio, spigolo di sinistra in coperta
+      - [[{prua: 20.7}, 5.5, 8.0], [1045, 1340]]    # lanciatore di sinistra, testata in alto
+      - [[{prua: 30.9}, 5.5, 6.7], [1555, 1400]]    # lanciatore di sinistra, estremita' poppiera in alto
+      - [[{prua: 18.8}, 0, 9.5], [967, 1267]]       # cima del Pop Group
+  - nome: prua_sinistra
+    file: extracted/navi/nanuchka/foto/prua_sinistra_vikhr_1988.jpg
+    nave: Vikhr (Nanuchka I), 1988
+    maschera_file: extracted/navi/nanuchka/foto/prua_sinistra_vikhr_1988_maschera.png   # ritoccata a mano (classi/nanuchka_maschera_fianco.yaml)
+    qualita: 0.9
+    specchiabile: true
+    orizzonte_y: 0            # nessun cielo: la nave sta tutta contro il mare
+    soglia_cielo: 0
+    cancella: [[216, 430, 280, 472]]      # numero 432
+    fotocamera_iniziale: {posizione: [-34, 101, 25], bersaglio: [0, 0, 5], f: 2100}
+    punti:
+      - [[{prua: 0}, 0, 4.2], [30, 367]]            # dritto di prua in coperta
+      - [[{prua: 29.9}, 0, 14.5], [549, 204]]       # sommita' del radome Band Stand
+      - [[{prua: 33.8}, 0, 19.7], [635, 103]]       # cima del palo
+      - [[{prua: 18.8}, 0, 9.5], [346, 292]]        # cima del Pop Group
+      - [[{prua: 20.7}, 5.5, 8.0], [343, 342]]      # lanciatore di sinistra, testata in alto
+      - [[{prua: 30.9}, 5.5, 6.7], [527, 373]]      # lanciatore di sinistra, estremita' poppiera in alto
+      - [[{prua: 13.3}, 0, 4.4], [248, 378]]        # Osa-M, centro della cupola
+      - [[{prua: 49.0}, 0, 7.7], [923, 363]]        # cima del Muff Cob
+      - [[{prua: 54.0}, 0, 5.4], [1027, 417]]       # cima della torre da 57 mm
+      - [[{prua: 59.3}, 5.15, 3.15], [1133, 492]]   # specchio, spigolo di sinistra in coperta
+  - nome: fianco_dritta_aereo
+    file: extracted/navi/nanuchka/foto/fianco_dritta_aereo_1982.jpg
+    nave: unita' 610 (Nanuchka I), 1982 (ripresa aerea)
+    qualita: 0.7
+    specchiabile: true
+    maschera_file: extracted/navi/nanuchka/foto/fianco_dritta_aereo_1982_maschera.png   # per colore (classi/nanuchka_maschera_fianco.yaml)
+    orizzonte_y: 0            # nessun cielo
+    soglia_cielo: 0
+    cancella: [[885, 405, 937, 430]]      # numero 610
+    fotocamera_iniziale: {posizione: [-27, -132, 51], bersaglio: [0, 0, 5], f: 2180}
+    punti:
+      - [[{prua: 0}, 0, 4.2], [1087, 352]]          # dritto di prua in coperta
+      - [[{prua: 59.3}, -5.15, 3.15], [205, 424]]   # specchio, spigolo di dritta in coperta
+      - [[{prua: 59.3}, 5.15, 3.15], [207, 362]]    # specchio, spigolo di sinistra in coperta
+      - [[{prua: 33.8}, 0, 19.7], [597, 136]]       # cima del palo
+      - [[{prua: 20.7}, -5.5, 8.0], [818, 343]]     # lanciatore di dritta, testata in alto
+      - [[{prua: 30.9}, -5.5, 6.7], [667, 344]]     # lanciatore di dritta, estremita' poppiera in alto
+      - [[{prua: 13.3}, 0, 4.4], [898, 358]]        # Osa-M, centro della cupola
+      - [[{prua: 29.9}, 0, 14.5], [664, 215]]       # sommita' del radome (contorno visto dall'alto)
