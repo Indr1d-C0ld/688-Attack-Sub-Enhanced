@@ -1,6 +1,6 @@
 # 688 Attack Sub Enhanced
 
-[![Complete tour of the simulation, v0.1.0 preview](https://www.youtube.com/watch?v=CFubJLEGWzI&list=PLQ1YFt-p0Fok)]
+[![Enhanced Edition: complete tour of the simulation, v0.1.0 preview](https://img.youtube.com/vi/PLQ1YFt-p0Fok/hqdefault.jpg)](https://www.youtube.com/watch?v=PLQ1YFt-p0Fok)   
 
 
 
