@@ -1,7 +1,5 @@
 # 688 Attack Sub Enhanced
 
-
-
 > **In English, in short.** A fan-made, non-commercial remake of *688 Attack Sub* (1989), written from scratch in
 > C++20 with SDL3 and Lua 5.4. It has two modes. **Classic** replays the 1989 game: the same 22 missions, rules and
 > screens, rebuilt from a study of the original executable. **Enhanced** keeps those missions and adds 41 new ones,
