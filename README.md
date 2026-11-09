@@ -3,6 +3,8 @@
 Enhanced Edition: complete tour of the simulation, v0.1.0 preview:
 https://www.youtube.complq1yft-p0fok/watch?v=CFubJLEGWzI&list=PLQ1YFt-p0Fok
 
+[![Listed on Reversed with AI](https://reversedwithai.com/badge.svg)](https://reversedwithai.com/p/688-attack-sub-9a1d49f9?utm_source=badge&utm_medium=readme (https://reversedwithai.com/p/688-attack-sub-9a1d49f9))
+
 > **In English, in short.** A fan-made, non-commercial remake of *688 Attack Sub* (1989), written from scratch in
 > C++20 with SDL3 and Lua 5.4. It has two modes. **Classic** replays the 1989 game: the same 22 missions, rules and
 > screens, rebuilt from a study of the original executable. **Enhanced** keeps those missions and adds 41 new ones,
